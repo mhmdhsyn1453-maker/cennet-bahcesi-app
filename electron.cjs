@@ -19,7 +19,7 @@ function createWindow() {
       preload: path.join(__dirname, 'preload.cjs'),
       devTools: isDev,
     },
-    show: true,
+    show: false,
   });
 
   if (isDev) {
@@ -40,6 +40,8 @@ function createWindow() {
   // Akıllı tahta çözünürlüğü için tam ekran başlat
   mainWindow.once('ready-to-show', () => {
     mainWindow.maximize();
+    mainWindow.show();
+    mainWindow.focus();
   });
 
   // Jestleri ve zoom seviyelerini sabitle
