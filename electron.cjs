@@ -19,11 +19,19 @@ function createWindow() {
       preload: path.join(__dirname, 'preload.cjs'),
       devTools: isDev,
     },
-    show: false,
+    show: true,
   });
 
   if (isDev) {
-    mainWindow.loadURL('http://localhost:3000');
+    // Vite sunucusunun başlatılması için kısa bir gecikme ekliyoruz
+    setTimeout(() => {
+      mainWindow.loadURL('http://127.0.0.1:3000').catch((err) => {
+        console.log("Vite baglantisi kurulamadi, 1 saniye sonra tekrar deneniyor...");
+        setTimeout(() => {
+          mainWindow.loadURL('http://127.0.0.1:3000').catch(e => console.error("Vite baglantisi basarisiz:", e));
+        }, 1000);
+      });
+    }, 1500);
     mainWindow.webContents.openDevTools();
   } else {
     mainWindow.loadFile(path.join(__dirname, 'dist', 'index.html'));
@@ -32,7 +40,6 @@ function createWindow() {
   // Akıllı tahta çözünürlüğü için tam ekran başlat
   mainWindow.once('ready-to-show', () => {
     mainWindow.maximize();
-    mainWindow.show();
   });
 
   // Jestleri ve zoom seviyelerini sabitle
