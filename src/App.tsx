@@ -11,9 +11,28 @@ import { SirAyeti } from './components/SirAyeti';
 import { SoruEditoru } from './components/SoruEditoru';
 import { BuzzerAndTimer } from './components/BuzzerAndTimer';
 import { playSound } from './components/BuzzerAndTimer';
-import { Compass, Sparkles, BookOpen, Clock, Trophy, Award, RotateCcw, Volume2, VolumeX, Shield, Hammer, Gamepad2, Landmark, BookOpenCheck, Home, Sun, Moon, Eye, EyeOff, Pencil } from 'lucide-react';
+import { Compass, Sparkles, BookOpen, Clock, Trophy, Award, RotateCcw, Volume2, VolumeX, Shield, Hammer, Gamepad2, Landmark, BookOpenCheck, Home, Sun, Moon, Eye, EyeOff, Pencil, GraduationCap } from 'lucide-react';
 import Lottie from 'lottie-react';
+import { motion } from 'motion/react';
 
+const ElifBaIcon: React.FC<{ className?: string }> = ({ className = "w-5 h-5" }) => {
+  return (
+    <span 
+      className={`${className} inline-flex items-center justify-center font-bold select-none`} 
+      style={{ 
+        direction: 'rtl',
+        fontFamily: "'Amiri', 'Traditional Arabic', 'Noto Naskh Arabic', serif",
+        fontSize: '1.1rem',
+        lineHeight: '1',
+        gap: '1px',
+        marginTop: '-1px'
+      }}
+    >
+      <span style={{ transform: 'translateY(-1px)' }}>أ</span>
+      <span style={{ transform: 'translateY(1px)' }}>ب</span>
+    </span>
+  );
+};
 
 // Modular child-friendly portals
 import { KuranElifba } from './components/KuranElifba';
@@ -294,20 +313,20 @@ export default function App() {
     setActiveZone(null);
   };
 
-  // Render Home Dashboard containing launchers for 3 Portals
+  // Render Home Dashboard containing launchers for 5 Portals
   const renderHomeView = () => {
     return (
-      <div className="max-w-6xl mx-auto px-4 w-full relative z-10 py-4 flex flex-col justify-between min-h-[calc(100vh-12rem)]" id="home-landing-dashboard">
+      <div className="max-w-6xl mx-auto px-4 w-full relative z-10 py-3 flex flex-col justify-between min-h-[calc(100vh-12rem)]" id="home-landing-dashboard">
         {/* Premium Brand Card - matching portal card design */}
-        <div className="text-center mb-8 mt-4 flex flex-col items-center select-none">
-          <div className="group bg-gradient-to-br from-white to-emerald-50/40 dark:from-slate-800 dark:to-emerald-950/30 border-2 border-slate-200 dark:border-slate-700 hover:border-emerald-400 dark:hover:border-emerald-600 rounded-[2rem] px-8 py-8 sm:px-12 sm:py-10 shadow-lg hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-500 relative overflow-hidden max-w-lg w-full">
+        <div className="text-center mb-4 mt-2 flex flex-col items-center select-none">
+          <div className="group bg-gradient-to-br from-white to-emerald-50/40 dark:from-slate-800 dark:to-emerald-950/30 border-2 border-slate-200 dark:border-slate-700 hover:border-emerald-400 dark:hover:border-emerald-600 rounded-[1.75rem] px-6 py-6 sm:px-10 sm:py-8 shadow-lg hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-500 relative overflow-hidden max-w-lg w-full">
             {/* Subtle gradient overlay on hover */}
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-transparent dark:from-emerald-900/10 dark:to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
             {/* Logo Calligraphy */}
             <div className="relative z-10 flex flex-col items-center">
               <svg
-                className="w-64 sm:w-72 h-auto drop-shadow-sm"
+                className="w-56 sm:w-60 h-auto drop-shadow-sm"
                 viewBox="0 0 752.922 323.72"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -326,21 +345,21 @@ export default function App() {
               </svg>
  
               {/* Divider line */}
-              <div className="w-24 h-0.5 bg-emerald-500/30 dark:bg-emerald-400/30 rounded-full mt-5 mb-4" />
+              <div className="w-24 h-0.5 bg-emerald-500/30 dark:bg-emerald-400/30 rounded-full mt-4 mb-3" />
  
               {/* Title - clean, solid colors, no gradient clipping */}
-              <h2 className="font-display font-black text-3xl sm:text-4xl tracking-[0.15em] uppercase text-emerald-800 dark:text-emerald-300">
+              <h2 className="font-display font-black text-2xl sm:text-3xl tracking-[0.15em] uppercase text-emerald-800 dark:text-emerald-300">
                 CENNET BAHÇESİ
               </h2>
  
               {/* Subtitle */}
-              <p className="text-slate-500 dark:text-slate-400 font-bold text-[10px] sm:text-xs mt-3 uppercase tracking-[0.25em]">
-                ELİF-BA  •  KUR'AN-I KERİM  •  DERSLER  •  OYUNLAR
+              <p className="text-slate-500 dark:text-slate-400 font-bold text-[10px] sm:text-xs mt-2 uppercase tracking-[0.25em]">
+                ELİF-BA  •  KUR'AN-I KERİM  •  EZBER  •  DERSLER  •  OYUNLAR
               </p>
             </div>
 
             {/* Audio & Visual Controllers - inside card */}
-            <div className="mt-6 flex gap-3 justify-center relative z-10">
+            <div className="mt-4 flex gap-3 justify-center relative z-10">
               <button
                 onClick={togglePlayMusic}
                 className={`flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-black tracking-wide uppercase transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-sm border-2 ${isMusicPlaying
@@ -380,23 +399,20 @@ export default function App() {
           </div>
         </div>
 
-        {/* 4 Main Portals in 2x2 Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full max-w-5xl mx-auto items-stretch">
+        {/* 5 Main Portals in 3+2 Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-4 w-full max-w-5xl mx-auto items-stretch">
 
           {/* Portal 1: Elif-Ba */}
           <div
             onClick={() => { setActiveTab('elifba'); playSound('tick'); }}
-            className="group bg-gradient-to-br from-white to-emerald-50/30 border-2 border-slate-200 hover:border-emerald-350 rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg hover:shadow-emerald-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-4 relative overflow-hidden"
+            className="group bg-gradient-to-br from-white to-emerald-50/30 border-2 border-slate-200 hover:border-emerald-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-emerald-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             <div className="flex items-center gap-4 relative z-10 flex-1 min-w-0">
-              <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
-                <BookOpenCheck className="w-7 h-7" />
+              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <ElifBaIcon className="w-6 h-6" />
               </div>
-              <div className="min-w-0">
-                <span className="inline-block px-2 py-0.5 bg-emerald-50 text-emerald-800 rounded-md text-[8px] font-black uppercase tracking-wider border border-emerald-250 mb-0.5">
-                  Temel Elif-Ba
-                </span>
+              <div className="flex flex-col justify-center min-w-0">
                 <h3 className="font-display font-black text-base text-slate-800 group-hover:text-emerald-700 transition-colors tracking-tight uppercase">
                   ELİF-BA
                 </h3>
@@ -413,17 +429,14 @@ export default function App() {
           {/* Portal 2: Quran */}
           <div
             onClick={() => { setActiveTab('quran'); playSound('tick'); }}
-            className="group bg-gradient-to-br from-white to-teal-50/30 border-2 border-slate-200 hover:border-teal-350 rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg hover:shadow-teal-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-4 relative overflow-hidden"
+            className="group bg-gradient-to-br from-white to-teal-50/30 border-2 border-slate-200 hover:border-teal-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-teal-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-teal-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             <div className="flex items-center gap-4 relative z-10 flex-1 min-w-0">
-              <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-emerald-650 rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
-                <BookOpen className="w-7 h-7" />
+              <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-emerald-650 rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <BookOpen className="w-6 h-6" />
               </div>
-              <div className="min-w-0">
-                <span className="inline-block px-2 py-0.5 bg-teal-50 text-teal-800 rounded-md text-[8px] font-black uppercase tracking-wider border border-teal-250 mb-0.5">
-                  Mushaf-ı Şerif
-                </span>
+              <div className="flex flex-col justify-center min-w-0">
                 <h3 className="font-display font-black text-base text-slate-800 group-hover:text-teal-700 transition-colors tracking-tight uppercase">
                   KUR'AN-I KERİM
                 </h3>
@@ -437,20 +450,41 @@ export default function App() {
             </div>
           </div>
 
-          {/* Portal 3: Interactive Lessons */}
+          {/* Portal 3: Ezber */}
+          <div
+            onClick={() => { setActiveTab('ezber'); playSound('tick'); }}
+            className="group bg-gradient-to-br from-white to-violet-50/30 border-2 border-slate-200 hover:border-violet-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-violet-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-violet-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <div className="flex items-center gap-4 relative z-10 flex-1 min-w-0">
+              <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-fuchsia-600 rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <Award className="w-6 h-6" />
+              </div>
+              <div className="flex flex-col justify-center min-w-0">
+                <h3 className="font-display font-black text-base text-slate-800 group-hover:text-violet-750 transition-colors tracking-tight uppercase">
+                  EZBER LİSTESİ
+                </h3>
+                <p className="text-[11px] text-slate-500 font-semibold leading-snug line-clamp-1">
+                  Sözlü sınavlar, sûre ezber takibi ve ezber gelişim tablosu.
+                </p>
+              </div>
+            </div>
+            <div className="w-9 h-9 bg-violet-50 text-violet-600 group-hover:bg-violet-500 group-hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm shrink-0 relative z-10">
+              ➔
+            </div>
+          </div>
+
+          {/* Portal 4: Interactive Lessons */}
           <div
             onClick={() => { setActiveTab('lessons'); playSound('tick'); }}
-            className="group bg-gradient-to-br from-white to-amber-50/30 border-2 border-slate-200 hover:border-amber-350 rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg hover:shadow-amber-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-4 relative overflow-hidden"
+            className="group bg-gradient-to-br from-white to-amber-50/30 border-2 border-slate-200 hover:border-amber-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-amber-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-3"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-amber-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             <div className="flex items-center gap-4 relative z-10 flex-1 min-w-0">
-              <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
-                <Landmark className="w-7 h-7" />
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <GraduationCap className="w-6 h-6" />
               </div>
-              <div className="min-w-0">
-                <span className="inline-block px-2 py-0.5 bg-amber-50 text-amber-800 rounded-md text-[8px] font-black uppercase tracking-wider border border-amber-200 mb-0.5">
-                  Hikmet Sınıfı
-                </span>
+              <div className="flex flex-col justify-center min-w-0">
                 <h3 className="font-display font-black text-base text-slate-800 group-hover:text-amber-700 transition-colors tracking-tight uppercase">
                   DERS İÇERİKLERİ
                 </h3>
@@ -464,20 +498,17 @@ export default function App() {
             </div>
           </div>
 
-          {/* Portal 4: Classroom Games Tourney */}
+          {/* Portal 5: Classroom Games Tourney */}
           <div
             onClick={() => { setActiveTab('games'); playSound('tick'); }}
-            className="group bg-gradient-to-br from-white to-sky-50/30 border-2 border-slate-200 hover:border-sky-350 rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg hover:shadow-sky-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-4 relative overflow-hidden"
+            className="group bg-gradient-to-br from-white to-sky-50/30 border-2 border-slate-200 hover:border-sky-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-sky-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-3"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-sky-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             <div className="flex items-center gap-4 relative z-10 flex-1 min-w-0">
-              <div className="w-14 h-14 bg-gradient-to-br from-sky-500 to-indigo-650 rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
-                <Gamepad2 className="w-7 h-7" />
+              <div className="w-12 h-12 bg-gradient-to-br from-sky-500 to-indigo-650 rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <Gamepad2 className="w-6 h-6" />
               </div>
-              <div className="min-w-0">
-                <span className="inline-block px-2 py-0.5 bg-sky-50 text-sky-800 rounded-md text-[8px] font-black uppercase tracking-wider border border-sky-200 mb-0.5">
-                  Takım Yarışması
-                </span>
+              <div className="flex flex-col justify-center min-w-0">
                 <h3 className="font-display font-black text-base text-slate-800 group-hover:text-sky-700 transition-colors tracking-tight uppercase">
                   OYUNLAR
                 </h3>
@@ -669,7 +700,7 @@ export default function App() {
       </div>
 
       {/* Glassmorphic Background Video for Homepage and lessons tab fullscreen */}
-      {((activeTab === 'home') || (activeTab === 'lessons' && isFocused)) && isAnimatedBg && (
+      {((activeTab === 'home') || ((activeTab === 'lessons' || activeTab === 'ezber') && isFocused)) && isAnimatedBg && (
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <video
             ref={videoRef}
@@ -690,7 +721,7 @@ export default function App() {
       )}
 
       {/* Flat Background when animation is off, or lessons full screen */}
-      {((activeTab === 'home') || (activeTab === 'lessons' && isFocused)) && !isAnimatedBg && (
+      {((activeTab === 'home') || ((activeTab === 'lessons' || activeTab === 'ezber') && isFocused)) && !isAnimatedBg && (
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#f3ede2] to-[#c7b99a] dark:from-[#0d1e3d] dark:to-[#0a192f] pointer-events-none animate-fade-in" />
       )}
 
@@ -742,7 +773,7 @@ export default function App() {
               }`}
             title="Elif-Ba"
           >
-            <BookOpenCheck className="w-5 h-5" />
+            <ElifBaIcon className="w-5 h-5" />
           </button>
 
           {/* Kur'an-ı Kerim button */}
@@ -757,6 +788,18 @@ export default function App() {
             <BookOpen className="w-5 h-5" />
           </button>
 
+          {/* Ezber Listesi button */}
+          <button
+            onClick={() => { setActiveTab('ezber'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
+            className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-md cursor-pointer transition-all hover:scale-115 active:scale-95 border-3 ${activeTab === 'ezber'
+                ? 'bg-emerald-500 border-emerald-600 text-white shadow-md'
+                : 'bg-white border-slate-200 text-slate-600 hover:text-violet-750 hover:border-violet-300'
+              }`}
+            title="Ezber Listesi"
+          >
+            <Award className="w-5 h-5" />
+          </button>
+
           {/* Ders İçerikleri button */}
           <button
             onClick={() => { setActiveTab('lessons'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
@@ -766,7 +809,7 @@ export default function App() {
               }`}
             title="Ders İçerikleri"
           >
-            <Landmark className="w-5 h-5" />
+            <GraduationCap className="w-5 h-5" />
           </button>
 
           {/* Oyunlar button */}
@@ -779,18 +822,6 @@ export default function App() {
             title="Oyunlar"
           >
             <Gamepad2 className="w-5 h-5" />
-          </button>
-
-          {/* Ezber Portalı button */}
-          <button
-            onClick={() => { setActiveTab('ezber'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
-            className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-md cursor-pointer transition-all hover:scale-115 active:scale-95 border-3 ${activeTab === 'ezber'
-                ? 'bg-emerald-500 border-emerald-600 text-white shadow-md'
-                : 'bg-white border-slate-200 text-slate-600 hover:text-emerald-700 hover:border-emerald-300'
-              }`}
-            title="Ezber Portalı"
-          >
-            <Award className="w-5 h-5" />
           </button>
 
           {/* Theme Toggle button */}
@@ -816,11 +847,37 @@ export default function App() {
         }`}>
         {phase !== 'custom_editor' && phase !== 'victory' && (
           <>
-            {activeTab === 'home' && renderHomeView()}
+            {activeTab === 'home' && (
+              <motion.div
+                key="home-tab"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                className="w-full"
+              >
+                {renderHomeView()}
+              </motion.div>
+            )}
 
-            {activeTab === 'elifba' && <KuranElifba initialTab="elifba" isDarkMode={isDarkMode} />}
+            {activeTab === 'elifba' && (
+              <KuranElifba 
+                initialTab="elifba" 
+                isDarkMode={isDarkMode} 
+                toggleDarkMode={toggleDarkMode}
+                isFocused={isFocused}
+                setIsFocused={setIsFocused}
+              />
+            )}
 
-            {activeTab === 'quran' && <KuranElifba initialTab="kuran" isDarkMode={isDarkMode} />}
+            {activeTab === 'quran' && (
+              <KuranElifba 
+                initialTab="kuran" 
+                isDarkMode={isDarkMode} 
+                toggleDarkMode={toggleDarkMode}
+                isFocused={isFocused}
+                setIsFocused={setIsFocused}
+              />
+            )}
 
             {activeTab === 'lessons' && (
               <DersPortal
@@ -835,74 +892,37 @@ export default function App() {
               />
             )}
 
-            {activeTab === 'ezber' && <EzberPortali isDarkMode={isDarkMode} />}
+            {activeTab === 'ezber' && (
+              <motion.div
+                key="ezber-tab"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                className="w-full"
+              >
+                <EzberPortali
+                  isDarkMode={isDarkMode}
+                  toggleDarkMode={toggleDarkMode}
+                  isMusicPlaying={isMusicPlaying}
+                  togglePlayMusic={togglePlayMusic}
+                  isAnimatedBg={isAnimatedBg}
+                  toggleAnimatedBg={toggleAnimatedBg}
+                  isFocused={isFocused}
+                  setIsFocused={setIsFocused}
+                />
+              </motion.div>
+            )}
 
             {activeTab === 'games' && (
-              <>
-                {(teams.length === 0 || phase === 'intro') ? (
-                  <TeamSelector onTeamsSelected={handleTeamsSelected} />
-                ) : (
-                  <>
-                    {phase === 'map' && (
-                      <GameHub
-                        teams={teams}
-                        onModifyScore={handleModifyScoreManual}
-                        onSelectZone={handleSelectZone}
-                        onOpenExistingAtlas={() => setPhase('map_atlas')}
-                        onResetGame={resetWholeGame}
-                      />
-                    )}
-
-                    {phase === 'map_atlas' && (
-                      <QuestMap
-                        teams={teams}
-                        onSelectZone={handleSelectZone}
-                        onModifyScore={handleModifyScoreManual}
-                        onSwitchActiveTeam={handleSwitchActiveTeam}
-                        completedZones={completedZones}
-                        onOpenEditor={() => setPhase('custom_editor')}
-                        onResetGame={resetWholeGame}
-                      />
-                    )}
-
-                    {phase === 'gameplay' && (
-                      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 max-w-7xl mx-auto px-4 w-full">
-                        {/* Gameplay Panel */}
-                        <div className="lg:col-span-9">
-                          {renderGameplayStation()}
-                        </div>
-
-                        {/* Smart Board Side Timer & Control */}
-                        <div className="lg:col-span-3">
-                          <div className="sticky top-24 flex flex-col gap-4">
-                            <BuzzerAndTimer
-                              durationSeconds={activeZone === GameZone.KronolojiMatrisi || activeZone === GameZone.EsmaKevn ? 90 : 60}
-                              teamName={teams.find((t) => t.active)?.name || 'Aktif Takım'}
-                              onTimeUp={() => { }}
-                            />
-
-                            {/* Active Meclis Puan Tablosu */}
-                            <div className="bg-white border-2 border-slate-250 p-4 rounded-3xl shadow-sm">
-                              <span className="text-[11px] uppercase font-black text-slate-500 block mb-3">Meclis Puan Durumu</span>
-                              <div className="space-y-1.5 text-xs">
-                                {teams.map((t) => (
-                                  <div key={t.id} className="flex justify-between items-center p-2.5 rounded-xl bg-slate-50 border-2 border-slate-100">
-                                    <span className="flex items-center gap-1.5 font-bold truncate max-w-[120px]">
-                                      <span className={`w-2.5 h-2.5 rounded-full ${t.color}`} />
-                                      {t.name}
-                                    </span>
-                                    <span className="font-display font-black text-slate-800">{t.score} Puan</span>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </>
-                )}
-              </>
+              <motion.div
+                key="games-tab"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                className="w-full"
+              >
+                <GameHub isDarkMode={isDarkMode} />
+              </motion.div>
             )}
           </>
         )}

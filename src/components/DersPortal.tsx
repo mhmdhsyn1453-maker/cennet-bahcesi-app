@@ -22,7 +22,7 @@ import {
   Minimize2,
   EyeOff,
   Eye,
-  Landmark,
+  GraduationCap,
   Sun,
   Moon,
   Volume2,
@@ -30,15 +30,16 @@ import {
 } from 'lucide-react';
 import { playSound } from './BuzzerAndTimer';
 import { WEEKLY_CURRICULUM, WeekCurriculum, DayTopics, Lesson, Slide, lessonToSlides } from '../data/curriculumData';
+import { EZBER_ITEMS } from './EzberPortali';
 
 // Helper function to dynamically map week & day to real academic calendar dates
 export function getDayDate(weekNum: number, dayName: string): string {
   const mapping: Record<number, Record<string, string>> = {
-    1: { "Pazartesi": "6 Temmuz", "Salı": "7 Temmuz", "Çarşamba": "8 Temmuz", "Perşembe": "9 Temmuz" },
-    2: { "Pazartesi": "13 Temmuz", "Salı": "14 Temmuz", "Çarşamba": "15 Temmuz", "Perşembe": "16 Temmuz" },
-    3: { "Pazartesi": "20 Temmuz", "Salı": "21 Temmuz", "Çarşamba": "22 Temmuz", "Perşembe": "23 Temmuz" },
-    4: { "Pazartesi": "27 Temmuz", "Salı": "28 Temmuz", "Çarşamba": "29 Temmuz", "Perşembe": "30 Temmuz" },
-    5: { "Pazartesi": "3 Ağustos", "Salı": "4 Ağustos", "Çarşamba": "5 Ağustos", "Perşembe": "6 Ağustos" },
+    1: { "Pazartesi": "6 Temmuz", "Salı": "7 Temmuz", "Çarşamba": "8 Temmuz", "Perşembe": "9 Temmuz", "Cuma": "10 Temmuz" },
+    2: { "Pazartesi": "13 Temmuz", "Salı": "14 Temmuz", "Çarşamba": "15 Temmuz", "Perşembe": "16 Temmuz", "Cuma": "17 Temmuz" },
+    3: { "Pazartesi": "20 Temmuz", "Salı": "21 Temmuz", "Çarşamba": "22 Temmuz", "Perşembe": "23 Temmuz", "Cuma": "24 Temmuz" },
+    4: { "Pazartesi": "27 Temmuz", "Salı": "28 Temmuz", "Çarşamba": "29 Temmuz", "Perşembe": "30 Temmuz", "Cuma": "31 Temmuz" },
+    5: { "Pazartesi": "3 Ağustos", "Salı": "4 Ağustos", "Çarşamba": "5 Ağustos", "Perşembe": "6 Ağustos", "Cuma": "7 Ağustos" },
   };
   return mapping[weekNum]?.[dayName] || "";
 }
@@ -69,15 +70,47 @@ export const DersPortal: React.FC<DersPortalProps> = ({
   
   // Persistent local storage curriculum state
   const [curriculum, setCurriculum] = useState<WeekCurriculum[]>(() => {
+    let loaded: WeekCurriculum[] = WEEKLY_CURRICULUM;
     try {
       const saved = localStorage.getItem('cennet_bahcesi_mufredat_v4');
       if (saved) {
-        return JSON.parse(saved);
+        loaded = JSON.parse(saved);
       }
     } catch (e) {
       console.error('Müfredat yüklenirken hata oluştu:', e);
     }
-    return WEEKLY_CURRICULUM;
+
+    // Her haftada Cuma günü var mı kontrol et, yoksa ekle!
+    let updated = false;
+    const finalCurriculum = loaded.map(week => {
+      const hasFriday = week.days.some(d => d.dayName === 'Cuma');
+      if (!hasFriday) {
+        updated = true;
+        const newFriday: DayTopics = {
+          dayName: "Cuma",
+          discipline: "EZBER",
+          bgGrad: "from-violet-500 to-fuchsia-600",
+          badgeColor: "bg-violet-100 text-violet-850",
+          lessons: [
+            { id: `w${week.weekNum}_d5_l1`, lessonNumber: 1, title: "Ezber Seçilmedi" },
+            { id: `w${week.weekNum}_d5_l2`, lessonNumber: 2, title: "Ezber Seçilmedi" },
+            { id: `w${week.weekNum}_d5_l3`, lessonNumber: 3, title: "Ezber Seçilmedi" }
+          ]
+        };
+        return {
+          ...week,
+          days: [...week.days, newFriday]
+        };
+      }
+      return week;
+    });
+
+    if (updated) {
+      try {
+        localStorage.setItem('cennet_bahcesi_mufredat_v4', JSON.stringify(finalCurriculum));
+      } catch (e) {}
+    }
+    return finalCurriculum;
   });
 
   // Active interactive presentation states
@@ -156,11 +189,16 @@ export const DersPortal: React.FC<DersPortalProps> = ({
     }
   };
 
+  const [selectingEzberForLessonId, setSelectingEzberForLessonId] = useState<string | null>(null);
+  const [fridayTab, setFridayTab] = useState<'arabic' | 'turkish' | 'meaning'>('arabic');
+  const [ezberCategoryFilter, setEzberCategoryFilter] = useState<'hepsi' | 'dualar' | 'sureler' | 'muezzinlik'>('hepsi');
+
   const disciplineLabels: Record<string, { desc: string; icon: any; color: string; bg: string; text: string }> = {
     'İTİKAD': { desc: 'İnanç Esasları', icon: Shield, color: 'emerald', bg: 'bg-emerald-50 border-emerald-205 text-emerald-800', text: 'text-emerald-700' },
     'İBADET': { desc: 'Amel ve Fıkıh', icon: Star, color: 'amber', bg: 'bg-amber-50 border-amber-205 text-amber-850', text: 'text-amber-805' },
     'SİYER': { desc: 'Peygamberimiz\'in Hayatı', icon: Compass, color: 'indigo', bg: 'bg-indigo-50 border-indigo-205 text-indigo-850', text: 'text-indigo-805' },
     'AHLAK': { desc: 'Güzel Değerler', icon: Heart, color: 'rose', bg: 'bg-rose-50 border-rose-250 text-rose-850', text: 'text-rose-805' },
+    'EZBER': { desc: 'Ezber ve Kıraat Takibi', icon: Award, color: 'violet', bg: 'bg-violet-50 border-violet-250 text-violet-850', text: 'text-violet-805' },
   };
 
   function Shield(props: any) {
@@ -175,6 +213,63 @@ export const DersPortal: React.FC<DersPortalProps> = ({
     } catch (e) {
       console.error('Müfredat kaydedilemedi:', e);
     }
+  };
+
+  const handleSelectEzber = (ezberId: string) => {
+    const ezberItem = EZBER_ITEMS.find(item => item.id === ezberId);
+    if (!ezberItem) return;
+    
+    const updatedCurriculum = curriculum.map(week => {
+      return {
+        ...week,
+        days: week.days.map(day => {
+          return {
+            ...day,
+            lessons: day.lessons.map(lesson => {
+              if (lesson.id === selectingEzberForLessonId) {
+                return {
+                  ...lesson,
+                  ezberItemId: ezberId,
+                  title: ezberItem.baslik
+                };
+              }
+              return lesson;
+            })
+          };
+        })
+      };
+    });
+    
+    saveCurriculum(updatedCurriculum);
+    setSelectingEzberForLessonId(null);
+    playSound('success');
+  };
+
+  const handleClearEzber = () => {
+    const updatedCurriculum = curriculum.map(week => {
+      return {
+        ...week,
+        days: week.days.map(day => {
+          return {
+            ...day,
+            lessons: day.lessons.map(lesson => {
+              if (lesson.id === selectingEzberForLessonId) {
+                return {
+                  ...lesson,
+                  ezberItemId: undefined,
+                  title: "Ezber Seçilmedi"
+                };
+              }
+              return lesson;
+            })
+          };
+        })
+      };
+    });
+    
+    saveCurriculum(updatedCurriculum);
+    setSelectingEzberForLessonId(null);
+    playSound('tick');
   };
 
 
@@ -195,7 +290,7 @@ export const DersPortal: React.FC<DersPortalProps> = ({
               <div className="absolute -top-12 -left-12 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
               <div className="relative z-10 flex items-center gap-4">
                 <div className="w-14 h-14 bg-white/20 backdrop-blur-md border-2 border-white rounded-3xl flex items-center justify-center text-white shadow-inner shrink-0 animate-fade-in">
-                  <Landmark className="w-7 h-7" />
+                  <GraduationCap className="w-7 h-7" />
                 </div>
                 <div>
                   <h2 className="font-display font-black text-2xl tracking-normal uppercase">DERS İÇERİKLERİ</h2>
@@ -254,6 +349,7 @@ export const DersPortal: React.FC<DersPortalProps> = ({
                       'İBADET': { border: 'border-amber-250', bg: 'bg-amber-50/50', text: 'text-amber-850', accent: 'bg-amber-500' },
                       'SİYER': { border: 'border-indigo-250', bg: 'bg-indigo-50/50', text: 'text-indigo-850', accent: 'bg-indigo-500' },
                       'AHLAK': { border: 'border-rose-250', bg: 'bg-rose-50/50', text: 'text-rose-850', accent: 'bg-rose-500' },
+                      'EZBER': { border: 'border-violet-250', bg: 'bg-violet-50/50', text: 'text-violet-850', accent: 'bg-violet-500' },
                     };
                     const colors = disciplineColors[d.discipline] || { border: 'border-slate-250', bg: 'bg-slate-50/50', text: 'text-slate-800', accent: 'bg-slate-500' };
 
@@ -336,6 +432,7 @@ export const DersPortal: React.FC<DersPortalProps> = ({
                         'İBADET': 'from-amber-500 to-orange-500',
                         'SİYER': 'from-indigo-500 to-blue-500',
                         'AHLAK': 'from-rose-500 to-pink-500',
+                        'EZBER': 'from-violet-500 to-fuchsia-600',
                       };
                       const gradient = disciplineGradients[activeDay.discipline] || 'from-slate-500 to-slate-650';
                       return (
@@ -380,17 +477,41 @@ export const DersPortal: React.FC<DersPortalProps> = ({
                           )}
 
                           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-3 border-t border-slate-100">
-                            <div className="flex items-center gap-2 text-[10.5px] text-amber-700 font-extrabold">
-                              <span className="p-1 bg-amber-50 rounded animate-pulse">📝</span>
-                              <span>40 Dakikalık Akıllı Tahta Akışı & Sunum Notları Hazır</span>
+                            <div className="flex items-center gap-2 text-[10.5px] text-amber-700 dark:text-amber-400 font-extrabold">
+                              <span className="p-1 bg-amber-50 dark:bg-amber-950/40 rounded animate-pulse">📝</span>
+                              <span>{activeDay.dayName === 'Cuma' ? "Cuma Günü Özel Ezber ve Kıraat Sunumu" : "40 Dakikalık Akıllı Tahta Akışı & Sunum Notları Hazır"}</span>
                             </div>
                             
                             <div className="flex items-center gap-2 w-full sm:w-auto">
+                              {activeDay.dayName === 'Cuma' && (
+                                <button
+                                  onClick={() => setSelectingEzberForLessonId(lesson.id)}
+                                  className="w-full sm:w-auto flex items-center justify-center gap-1.5 py-3 px-4 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 rounded-2xl text-xs font-black transition-all cursor-pointer"
+                                >
+                                  {lesson.ezberItemId ? 'Ezberi Değiştir ⚙️' : 'Ezber Seç ➕'}
+                                </button>
+                              )}
+                              
                               <button
-                                onClick={() => handleStartLesson(lesson)}
-                                className="w-full sm:w-auto flex items-center justify-center gap-2 py-3 px-6 bg-slate-900 hover:bg-emerald-600 text-white rounded-2xl font-display text-xs font-black shadow-sm shrink-0 transition-all duration-300 hover:shadow-md active:scale-95 cursor-pointer"
+                                onClick={() => {
+                                  if (activeDay.dayName === 'Cuma' && !lesson.ezberItemId) {
+                                    setSelectingEzberForLessonId(lesson.id);
+                                    playSound('tick');
+                                  } else {
+                                    handleStartLesson(lesson);
+                                  }
+                                }}
+                                className={`w-full sm:w-auto flex items-center justify-center gap-2 py-3 px-6 rounded-2xl font-display text-xs font-black shadow-sm shrink-0 transition-all duration-300 hover:shadow-md active:scale-95 cursor-pointer ${
+                                  activeDay.dayName === 'Cuma' && !lesson.ezberItemId
+                                    ? 'bg-amber-500 hover:bg-amber-600 text-white animate-pulse'
+                                    : 'bg-slate-900 hover:bg-emerald-600 dark:bg-slate-700 dark:hover:bg-emerald-650 text-white'
+                                }`}
                               >
-                                İnteraktif Sınıf Sunumunu Aç <ArrowRight className="w-4 h-4 shrink-0 group-hover:translate-x-1 transition-transform" />
+                                {activeDay.dayName === 'Cuma' && !lesson.ezberItemId ? (
+                                  <>Ezber Seç ve Başlat <ArrowRight className="w-4 h-4" /></>
+                                ) : (
+                                  <>İnteraktif Sınıf Sunumunu Aç <ArrowRight className="w-4 h-4 shrink-0 group-hover:translate-x-1 transition-transform" /></>
+                                )}
                               </button>
                             </div>
                           </div>
@@ -411,7 +532,9 @@ export const DersPortal: React.FC<DersPortalProps> = ({
             exit={{ opacity: 0, x: -25 }}
             className={isFocused ? "" : "w-full max-w-5xl mx-auto"}
           >
-            {isFocused ? (
+            {activeDay.dayName === 'Cuma' ? (
+              renderFridayStudyView()
+            ) : isFocused ? (
               // Immersive cinematic full screen presentation
               <div className={`fixed inset-0 z-50 flex flex-col justify-between p-6 sm:p-10 overflow-y-auto transition-colors duration-500 ${
                 isDarkMode ? 'text-white' : 'text-slate-900'
@@ -727,8 +850,544 @@ export const DersPortal: React.FC<DersPortalProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* ── FRIDAY EZBER SELECTOR MODAL ────────────────────────────────────── */}
+      <AnimatePresence>
+        {selectingEzberForLessonId !== null && (
+          <div className="fixed inset-0 z-55 flex items-center justify-center p-4">
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectingEzberForLessonId(null)}
+              className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
+            />
+            
+            {/* Modal Box */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              className={`relative z-10 w-full max-w-2xl max-h-[85vh] overflow-y-auto p-6 rounded-[2.5rem] border-4 border-violet-500 shadow-2xl transition-colors duration-300 ${
+                isDarkMode ? 'bg-slate-900 text-white' : 'bg-white text-slate-900'
+              }`}
+            >
+              {/* Close button */}
+              <button
+                onClick={() => setSelectingEzberForLessonId(null)}
+                className={`absolute top-5 right-5 p-2 rounded-full border transition-all cursor-pointer ${
+                  isDarkMode 
+                    ? 'border-slate-800 hover:bg-slate-800 text-slate-400 hover:text-white' 
+                    : 'border-slate-200 hover:bg-slate-100 text-slate-500 hover:text-slate-800'
+                }`}
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              <div className="mb-6 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-violet-500/20 text-violet-500 flex items-center justify-center font-black">
+                  🕌
+                </div>
+                <div>
+                  <h3 className="font-display font-black text-xl tracking-tight leading-none uppercase">Cuma Günü Ezberi Seç</h3>
+                  <p className="text-xs font-semibold text-slate-450 mt-1">Öğrenciye atanacak ezber veya dua konusunu belirleyin.</p>
+                </div>
+              </div>
+
+              {/* Category Filters */}
+              <div className="flex flex-wrap gap-2 mb-6 bg-slate-100/80 dark:bg-slate-950 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-800">
+                {(['hepsi', 'dualar', 'sureler', 'muezzinlik'] as const).map((cat) => {
+                  const label = cat === 'hepsi' ? 'Hepsi' : cat === 'dualar' ? 'Dualar' : cat === 'sureler' ? 'Sureler' : 'Müezzinlik';
+                  const isSelected = ezberCategoryFilter === cat;
+                  return (
+                    <button
+                      key={cat}
+                      onClick={() => { setEzberCategoryFilter(cat); playSound('tick'); }}
+                      className={`py-2 px-4 rounded-xl text-xs font-black transition cursor-pointer ${
+                        isSelected
+                          ? 'bg-violet-500 text-white shadow-sm'
+                          : 'text-slate-600 dark:text-slate-405 hover:bg-white/65 dark:hover:bg-slate-900'
+                      }`}
+                    >
+                      {label}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Items Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                {EZBER_ITEMS.filter(item => ezberCategoryFilter === 'hepsi' || item.kategori === ezberCategoryFilter)
+                  .map((item) => {
+                    const isAssignedToThis = (() => {
+                      for (const week of curriculum) {
+                        for (const day of week.days) {
+                          const matchingLesson = day.lessons.find(l => l.id === selectingEzberForLessonId);
+                          if (matchingLesson) {
+                            return matchingLesson.ezberItemId === item.id;
+                          }
+                        }
+                      }
+                      return false;
+                    })();
+
+                    return (
+                      <button
+                        key={item.id}
+                        onClick={() => handleSelectEzber(item.id)}
+                        className={`p-4 rounded-2xl border-2 text-left transition-all hover:scale-[1.01] cursor-pointer flex flex-col justify-between min-h-[90px] ${
+                          isAssignedToThis
+                            ? 'bg-violet-50 dark:bg-violet-950/40 border-violet-500 text-violet-950 dark:text-violet-100 shadow-md'
+                            : isDarkMode
+                            ? 'bg-slate-950 hover:bg-slate-850 border-slate-800 text-slate-200'
+                            : 'bg-white hover:bg-slate-50 border-slate-200 text-slate-700 shadow-sm'
+                        }`}
+                      >
+                        <div>
+                          <span className={`text-[9px] font-black uppercase px-2 py-0.5 rounded-md border tracking-wider ${
+                            item.kategori === 'dualar'
+                              ? 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800 text-emerald-700'
+                              : item.kategori === 'sureler'
+                              ? 'bg-indigo-50 dark:bg-indigo-950/30 border-indigo-200 dark:border-indigo-800 text-indigo-700'
+                              : 'bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800 text-amber-700'
+                          }`}>
+                            {item.kategori === 'dualar' ? 'Dua' : item.kategori === 'sureler' ? 'Sure' : 'Müezzinlik'}
+                          </span>
+                          <h4 className="font-display font-black text-sm mt-2">{item.baslik}</h4>
+                        </div>
+                        <p className="text-[10px] text-slate-400 mt-1 font-semibold">{item.satirlar.length} satır içeriyor</p>
+                      </button>
+                    );
+                  })}
+              </div>
+
+              {/* Action Footer */}
+              <div className="flex justify-between items-center border-t pt-4 border-slate-100 dark:border-slate-800">
+                <button
+                  onClick={handleClearEzber}
+                  className="px-4 py-2 text-xs font-black text-rose-500 hover:text-rose-600 cursor-pointer"
+                >
+                  Dersi Temizle (Seçimi Kaldır)
+                </button>
+                <button
+                  onClick={() => setSelectingEzberForLessonId(null)}
+                  className={`px-5 py-2.5 rounded-xl text-xs font-black transition cursor-pointer border ${
+                    isDarkMode 
+                      ? 'bg-slate-800 border-slate-700 text-slate-200 hover:bg-slate-750' 
+                      : 'bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200'
+                  }`}
+                >
+                  Vazgeç
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
+
+  function renderFridayStudyView() {
+    const ezberItem = EZBER_ITEMS.find(item => item.id === activeLesson?.ezberItemId);
+    
+    if (!ezberItem) {
+      return (
+        <div className="text-center p-8 bg-white dark:bg-slate-900 rounded-[2.5rem] border-4 border-rose-500 shadow-xl max-w-md mx-auto">
+          <p className="text-rose-500 font-bold mb-4">Ezber konusu bulunamadı. Lütfen panelden bir ezber konusu seçin.</p>
+          <button 
+            onClick={() => { setActiveLesson(null); setIsFocused(false); }}
+            className="px-6 py-2 bg-slate-900 text-white dark:bg-slate-800 dark:text-slate-200 rounded-xl font-bold cursor-pointer transition active:scale-95"
+          >
+            Geri Dön
+          </button>
+        </div>
+      );
+    }
+
+    if (isFocused) {
+      return (
+        <div className={`fixed inset-0 z-50 flex flex-col justify-between p-6 sm:p-10 overflow-y-auto transition-colors duration-500 ${
+          isDarkMode ? 'text-white bg-slate-950' : 'text-slate-900 bg-slate-50'
+        }`}>
+          {/* Background tint overlay */}
+          <div className={`absolute inset-0 z-0 pointer-events-none transition-colors duration-500 ${
+            isDarkMode 
+              ? 'bg-slate-950/70 backdrop-blur-[2px]' 
+              : 'bg-white/40 backdrop-blur-[2px]'
+          }`} />
+          
+          {/* Immersive Floating particles */}
+          <div className="absolute top-10 left-15 w-44 h-44 bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-10 right-15 w-56 h-56 bg-fuchsia-500/5 rounded-full blur-3xl pointer-events-none" />
+
+          {/* Cinematic Top controls */}
+          <div className={`relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b pb-4 transition-colors duration-500 ${
+            isDarkMode ? 'border-slate-800' : 'border-slate-200'
+          }`}>
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="px-3 py-1.5 bg-violet-600 text-white rounded-xl text-[10px] font-black uppercase shadow-md tracking-wider">
+                {activeDay.dayName.toUpperCase()} • CUMA EZBERİ
+              </span>
+              <span className={`text-xs sm:text-sm font-black tracking-tight leading-none uppercase ${
+                isDarkMode ? 'text-slate-200' : 'text-slate-800'
+              }`}>
+                ➔ {ezberItem.baslik}
+              </span>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-2.5">
+              <button
+                onClick={togglePlayMusic}
+                className={`px-3 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider transition-all hover:scale-105 active:scale-95 cursor-pointer border-2 flex items-center gap-1.5 ${
+                  isMusicPlaying
+                    ? 'bg-violet-500 hover:bg-violet-600 text-white border-violet-600 shadow-md shadow-violet-500/20'
+                    : isDarkMode
+                    ? 'bg-slate-850 hover:bg-slate-800 text-slate-300 border-slate-700'
+                    : 'bg-white hover:bg-slate-50 text-slate-600 border-slate-200'
+                }`}
+              >
+                {isMusicPlaying ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+                {isMusicPlaying ? "Sesi Kapat" : "Sesi Aç"}
+              </button>
+
+              <button
+                onClick={toggleDarkMode}
+                className={`px-3 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider transition-all hover:scale-105 active:scale-95 cursor-pointer border-2 flex items-center gap-1.5 ${
+                  isDarkMode
+                    ? 'bg-slate-850 hover:bg-slate-800 text-slate-350 border-slate-700'
+                    : 'bg-white hover:bg-slate-50 text-slate-600 border-slate-200'
+                }`}
+              >
+                {isDarkMode ? (
+                  <>
+                    <Sun className="w-4 h-4 text-amber-500 animate-spin-slow" />
+                    Aydınlık Mod
+                  </>
+                ) : (
+                  <>
+                    <Moon className="w-4 h-4 text-indigo-500" />
+                    Karanlık Mod
+                  </>
+                )}
+              </button>
+
+              <button
+                onClick={() => { setIsFocused(false); playSound('tick'); }}
+                className="px-3 py-2 bg-rose-600 hover:bg-rose-700 text-white text-[10px] font-black uppercase tracking-wider rounded-xl transition-all hover:scale-105 active:scale-95 flex items-center gap-1.5 cursor-pointer shadow-md shadow-rose-600/20 border-2 border-rose-700"
+              >
+                <Minimize2 className="w-4 h-4" /> Tam Ekrandan Çık
+              </button>
+            </div>
+          </div>
+
+          {/* Main content viewport */}
+          <div className="relative z-10 flex-grow flex flex-col items-center justify-center py-6 w-full">
+            {/* Title & Category info */}
+            <div className="text-center mb-6">
+              <span className="text-xs font-black uppercase px-3 py-1 bg-violet-100 dark:bg-violet-950 text-violet-750 dark:text-violet-300 rounded-full border border-violet-200 dark:border-violet-800">
+                {ezberItem.kategori === 'dualar' ? 'Dua Ezberi' : ezberItem.kategori === 'sureler' ? 'Sure Ezberi' : 'Müezzinlik Duası'}
+              </span>
+              <h1 className="font-display font-black text-3xl sm:text-5xl mt-3 tracking-tight text-slate-800 dark:text-white">
+                {ezberItem.baslik}
+              </h1>
+            </div>
+
+            {/* Tabs */}
+            <div className="flex bg-slate-100 dark:bg-slate-900 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-800 mb-8 max-w-md w-full shadow-inner">
+              <button
+                onClick={() => { setFridayTab('arabic'); playSound('tick'); }}
+                className={`flex-1 py-3 px-4 rounded-xl text-xs font-black uppercase transition-all duration-300 cursor-pointer ${
+                  fridayTab === 'arabic'
+                    ? 'bg-gradient-to-r from-violet-500 to-fuchsia-600 text-white shadow-md'
+                    : 'text-slate-650 dark:text-slate-400 hover:bg-white/60 dark:hover:bg-slate-800'
+                }`}
+              >
+                🕌 Arapça Metin
+              </button>
+              <button
+                onClick={() => { setFridayTab('turkish'); playSound('tick'); }}
+                className={`flex-1 py-3 px-4 rounded-xl text-xs font-black uppercase transition-all duration-300 cursor-pointer ${
+                  fridayTab === 'turkish'
+                    ? 'bg-gradient-to-r from-violet-500 to-fuchsia-600 text-white shadow-md'
+                    : 'text-slate-650 dark:text-slate-400 hover:bg-white/60 dark:hover:bg-slate-800'
+                }`}
+              >
+                📝 Türkçe Okunuşu
+              </button>
+              <button
+                onClick={() => { setFridayTab('meaning'); playSound('tick'); }}
+                className={`flex-1 py-3 px-4 rounded-xl text-xs font-black uppercase transition-all duration-300 cursor-pointer ${
+                  fridayTab === 'meaning'
+                    ? 'bg-gradient-to-r from-violet-500 to-fuchsia-600 text-white shadow-md'
+                    : 'text-slate-650 dark:text-slate-400 hover:bg-white/60 dark:hover:bg-slate-800'
+                }`}
+              >
+                🌟 Meali / Anlamı
+              </button>
+            </div>
+
+            {/* Lines Container */}
+            <div className="w-full flex-grow overflow-y-auto max-h-[50vh] px-4 flex flex-col justify-start">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={fridayTab}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -15 }}
+                  transition={{ duration: 0.3 }}
+                  className="w-full"
+                >
+                  {fridayTab === 'arabic' && (
+                    <div className="space-y-6 w-full max-w-4xl mx-auto py-2 animate-fade-in">
+                      {ezberItem.satirlar.map((line, idx) => (
+                        <div key={idx} className={`p-6 rounded-[2rem] border-3 text-center transition-all ${
+                          isDarkMode
+                            ? 'bg-slate-900/50 border-violet-500/20 text-white shadow-lg'
+                            : 'bg-white border-violet-200 text-slate-800 shadow-md shadow-violet-100/40'
+                        }`}>
+                          <p className="text-3xl sm:text-5xl font-bold leading-loose tracking-wide" dir="rtl" style={{ fontFamily: "'Noto Naskh Arabic', 'Amiri', serif" }}>
+                            {line.arapca}
+                          </p>
+                          <span className="text-[9px] font-extrabold text-violet-400 mt-2 block tracking-wider">SATIR {idx + 1}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {fridayTab === 'turkish' && (
+                    <div className="space-y-4 w-full max-w-3xl mx-auto py-2 text-left">
+                      {ezberItem.satirlar.map((line, idx) => (
+                        <div key={idx} className={`p-5 rounded-2xl border-2 flex gap-4 items-center transition-all ${
+                          isDarkMode
+                            ? 'bg-slate-900/60 border-slate-800 text-slate-200'
+                            : 'bg-white border-slate-205 text-slate-700 shadow-sm'
+                        }`}>
+                          <span className="w-8 h-8 rounded-xl bg-violet-500/20 text-violet-600 dark:text-violet-300 border border-violet-500/30 font-black text-sm flex items-center justify-center shrink-0">
+                            {idx + 1}
+                          </span>
+                          <p className="text-sm sm:text-lg font-bold leading-relaxed">
+                            {line.okunusu}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {fridayTab === 'meaning' && (
+                    <div className="space-y-4 w-full max-w-3xl mx-auto py-2 text-left">
+                      {ezberItem.satirlar.map((line, idx) => (
+                        <div key={idx} className={`p-5 rounded-2xl border-2 flex gap-4 items-center transition-all ${
+                          isDarkMode
+                            ? 'bg-slate-900/60 border-slate-800 text-slate-205'
+                            : 'bg-white border-slate-205 text-slate-705 shadow-sm'
+                        }`}>
+                          <span className="w-8 h-8 rounded-xl bg-fuchsia-500/20 text-fuchsia-600 dark:text-fuchsia-300 border border-fuchsia-500/30 font-black text-sm flex items-center justify-center shrink-0">
+                            {idx + 1}
+                          </span>
+                          <p className="text-sm sm:text-base font-semibold leading-relaxed">
+                            {line.anlami}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
+
+          {/* Cinematic Foot Controls */}
+          <div className={`relative z-10 flex justify-between items-center border-t pt-4 transition-colors duration-500 ${
+            isDarkMode ? 'border-slate-800' : 'border-slate-200'
+          }`}>
+            <button
+              onClick={() => { setActiveLesson(null); setIsFocused(false); playSound('tick'); }}
+              className={`flex items-center gap-1.5 px-6 py-3 border-2 rounded-xl font-display text-xs font-black shadow-lg transition active:scale-95 cursor-pointer ${
+                isDarkMode
+                  ? 'bg-slate-900 border-slate-800 text-slate-200 hover:bg-slate-800'
+                  : 'bg-slate-900 border-slate-950 text-white hover:bg-slate-800'
+              }`}
+            >
+              <ArrowLeft className="w-4 h-4" /> Kapat ve Geri Dön
+            </button>
+            <span className="text-[10px] font-extrabold text-slate-400 dark:text-slate-500">HİKMET ATLASI CUMA DERS SUNUMU</span>
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div className="w-full space-y-6">
+        <div className={`border-4 rounded-[2.5rem] p-6 sm:p-8 shrink-0 shadow-sm flex flex-col justify-between min-h-[460px] relative overflow-hidden transition-colors duration-500 ${
+          isDarkMode 
+            ? 'bg-slate-900/65 border-slate-850 text-slate-100' 
+            : 'bg-white border-slate-200 text-slate-800'
+        }`}>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-50/5 via-white/5 to-slate-50/10 pointer-events-none" />
+          
+          {/* Header bar */}
+          <div className={`relative z-10 flex flex-wrap justify-between items-center gap-2 pb-4 border-b ${
+            isDarkMode ? 'border-slate-800' : 'border-slate-100'
+          }`}>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => { setActiveLesson(null); playSound('tick'); }}
+                className={`flex items-center gap-1.5 px-3 py-1.5 border rounded-xl text-xs font-black transition cursor-pointer ${
+                  isDarkMode
+                    ? 'bg-slate-800 border-slate-700 text-slate-300 hover:text-white'
+                    : 'bg-slate-50 border-slate-200 text-slate-500 hover:text-slate-800'
+                }`}
+              >
+                <ArrowLeft className="w-3.5 h-3.5" /> Geri Dön
+              </button>
+
+              <button
+                onClick={() => { setIsFocused(true); playSound('tick'); }}
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-violet-500 hover:bg-violet-605 text-white border-2 border-violet-605 rounded-xl text-xs font-black shadow-sm transition cursor-pointer"
+              >
+                <Maximize2 className="w-3.5 h-3.5" /> Tam Ekran Odak Modu
+              </button>
+            </div>
+
+            <span className="text-[10px] font-black tracking-widest text-slate-405 dark:text-slate-500 uppercase">
+              Cuma Günü Özel Ezber Takibi
+            </span>
+          </div>
+
+          {/* Main Content Area */}
+          <div className="relative z-10 flex-grow py-8 max-w-3xl mx-auto flex flex-col justify-center text-center w-full">
+            {/* Title */}
+            <div className="mb-6">
+              <span className="text-[10px] font-black uppercase px-2.5 py-1 bg-violet-100 dark:bg-violet-955/40 text-violet-755 dark:text-violet-400 rounded-full border border-violet-200 dark:border-violet-800 inline-block">
+                {ezberItem.kategori === 'dualar' ? 'Dua Ezberi' : ezberItem.kategori === 'sureler' ? 'Sure Ezberi' : 'Müezzinlik Duası'}
+              </span>
+              <h1 className="font-display font-black text-2xl sm:text-3xl mt-2 text-slate-800 dark:text-white">
+                {ezberItem.baslik}
+              </h1>
+            </div>
+
+            {/* Tabs */}
+            <div className="flex bg-slate-100 dark:bg-slate-900/80 p-1 rounded-2xl border border-slate-200 dark:border-slate-800 mb-6 max-w-sm mx-auto w-full shadow-inner">
+              <button
+                onClick={() => { setFridayTab('arabic'); playSound('tick'); }}
+                className={`flex-1 py-2 px-3 rounded-xl text-[11px] font-black uppercase transition-all duration-300 cursor-pointer ${
+                  fridayTab === 'arabic'
+                    ? 'bg-gradient-to-r from-violet-500 to-fuchsia-600 text-white shadow'
+                    : 'text-slate-600 dark:text-slate-400 hover:bg-white/60 dark:hover:bg-slate-800'
+                }`}
+              >
+                Arapça
+              </button>
+              <button
+                onClick={() => { setFridayTab('turkish'); playSound('tick'); }}
+                className={`flex-1 py-2 px-3 rounded-xl text-[11px] font-black uppercase transition-all duration-300 cursor-pointer ${
+                  fridayTab === 'turkish'
+                    ? 'bg-gradient-to-r from-violet-500 to-fuchsia-600 text-white shadow'
+                    : 'text-slate-600 dark:text-slate-400 hover:bg-white/60 dark:hover:bg-slate-800'
+                }`}
+              >
+                Okunuşu
+              </button>
+              <button
+                onClick={() => { setFridayTab('meaning'); playSound('tick'); }}
+                className={`flex-1 py-2 px-3 rounded-xl text-[11px] font-black uppercase transition-all duration-300 cursor-pointer ${
+                  fridayTab === 'meaning'
+                    ? 'bg-gradient-to-r from-violet-500 to-fuchsia-600 text-white shadow'
+                    : 'text-slate-600 dark:text-slate-400 hover:bg-white/60 dark:hover:bg-slate-800'
+                }`}
+              >
+                Meali
+              </button>
+            </div>
+
+            <div className="w-full max-h-[40vh] overflow-y-auto px-2 flex flex-col justify-start">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={fridayTab}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.2 }}
+                  className="w-full space-y-4"
+                >
+                  {fridayTab === 'arabic' && (
+                    <div className="space-y-4 w-full">
+                      {ezberItem.satirlar.map((line, idx) => (
+                        <div key={idx} className={`p-5 rounded-2xl border-2 text-center transition-all ${
+                          isDarkMode
+                            ? 'bg-slate-950/40 border-violet-500/10 text-white'
+                            : 'bg-violet-50/30 border-violet-200 text-slate-800'
+                        }`}>
+                          <p className="text-2xl sm:text-4xl font-bold leading-loose tracking-wide" dir="rtl" style={{ fontFamily: "'Noto Naskh Arabic', 'Amiri', serif" }}>
+                            {line.arapca}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {fridayTab === 'turkish' && (
+                    <div className="space-y-3 w-full text-left">
+                      {ezberItem.satirlar.map((line, idx) => (
+                        <div key={idx} className={`p-4 rounded-xl border flex gap-3 items-center transition-all ${
+                          isDarkMode
+                            ? 'bg-slate-900/40 border-slate-800 text-slate-200'
+                            : 'bg-white border-slate-200 text-slate-700'
+                        }`}>
+                          <span className="w-6 h-6 rounded-lg bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20 font-black text-xs flex items-center justify-center shrink-0">
+                            {idx + 1}
+                          </span>
+                          <p className="text-xs sm:text-sm font-bold leading-relaxed">
+                            {line.okunusu}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {fridayTab === 'meaning' && (
+                    <div className="space-y-3 w-full text-left">
+                      {ezberItem.satirlar.map((line, idx) => (
+                        <div key={idx} className={`p-4 rounded-xl border flex gap-3 items-center transition-all ${
+                          isDarkMode
+                            ? 'bg-slate-900/40 border-slate-800 text-slate-200'
+                            : 'bg-white border-slate-200 text-slate-700'
+                        }`}>
+                          <span className="w-6 h-6 rounded-lg bg-fuchsia-500/10 text-fuchsia-600 dark:text-fuchsia-400 border border-fuchsia-500/20 font-black text-xs flex items-center justify-center shrink-0">
+                            {idx + 1}
+                          </span>
+                          <p className="text-xs sm:text-sm font-semibold leading-relaxed">
+                            {line.anlami}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
+
+          {/* Footer Navigation */}
+          <div className={`relative z-10 flex justify-end items-center border-t pt-5 ${
+            isDarkMode ? 'border-slate-800' : 'border-slate-105'
+          }`}>
+            <button
+              onClick={() => { setActiveLesson(null); playSound('tick'); }}
+              className={`flex items-center gap-1.5 px-5 py-2.5 border-2 rounded-2xl font-display text-xs font-black shadow-sm transition active:scale-95 cursor-pointer ${
+                isDarkMode
+                  ? 'bg-slate-850 border-slate-700 text-slate-200 hover:bg-slate-800'
+                  : 'bg-slate-900 border-slate-950 text-white hover:bg-slate-800'
+              }`}
+            >
+              Dersi Tamamla ✓
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   // ─── Slide Renderer ───────────────────────────────────────────────────
   function renderSlide(slide: Slide, isCinematic: boolean) {

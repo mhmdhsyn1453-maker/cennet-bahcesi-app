@@ -18,6 +18,7 @@ export interface Lesson {
   id: string;
   lessonNumber: number;
   title: string;
+  ezberItemId?: string; // Optional reference to custom Friday ezber items
   // New slide-based format
   slides?: Slide[];
   // Legacy fields (kept for backward compat with existing 59 lessons)
@@ -98,7 +99,7 @@ export function lessonToSlides(lesson: Lesson): Slide[] {
 
 export interface DayTopics {
   dayName: string;
-  discipline: 'İTİKAD' | 'İBADET' | 'SİYER' | 'AHLAK';
+  discipline: 'İTİKAD' | 'İBADET' | 'SİYER' | 'AHLAK' | 'EZBER';
   bgGrad: string;
   badgeColor: string;
   lessons: Lesson[];

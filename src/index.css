@@ -153,7 +153,8 @@ input, textarea, [contenteditable="true"] {
 .dark .text-amber-900,
 .dark .text-amber-850,
 .dark .text-amber-800,
-.dark .text-amber-700 {
+.dark .text-amber-700,
+.dark .text-amber-600 {
   color: #fbbf24 !important;
 }
 .dark .text-indigo-950,
@@ -173,7 +174,8 @@ input, textarea, [contenteditable="true"] {
 .dark .text-teal-955,
 .dark .text-teal-900,
 .dark .text-teal-800,
-.dark .text-teal-700 {
+.dark .text-teal-700,
+.dark .text-teal-600 {
   color: #2dd4bf !important;
 }
 .dark .text-sky-955,
@@ -192,11 +194,21 @@ input, textarea, [contenteditable="true"] {
 .dark .text-purple-600 {
   color: #c084fc !important;
 }
+.dark .text-violet-955,
+.dark .text-violet-900,
+.dark .text-violet-850,
+.dark .text-violet-800,
+.dark .text-violet-750,
+.dark .text-violet-700,
+.dark .text-violet-600 {
+  color: #a78bfa !important;
+}
 .dark .text-red-955,
 .dark .text-red-900,
 .dark .text-red-850,
 .dark .text-red-800,
 .dark .text-red-700,
+.dark .text-red-650,
 .dark .text-red-600 {
   color: #f87171 !important;
 }
@@ -259,6 +271,15 @@ input, textarea, [contenteditable="true"] {
 .dark .bg-rose-200 {
   background-color: rgba(251, 113, 133, 0.12) !important;
   border-color: rgba(251, 113, 133, 0.25) !important;
+}
+.dark .bg-violet-50,
+.dark .bg-violet-55,
+.dark .bg-violet-50\/50,
+.dark .bg-violet-50\/70,
+.dark .bg-violet-100,
+.dark .bg-violet-200 {
+  background-color: rgba(167, 139, 250, 0.12) !important;
+  border-color: rgba(167, 139, 250, 0.25) !important;
 }
 .dark .bg-sky-50,
 .dark .bg-sky-55,
@@ -323,6 +344,9 @@ input, textarea, [contenteditable="true"] {
 .dark .border-purple-200 {
   border-color: rgba(168, 85, 247, 0.4) !important;
 }
+.dark .border-violet-250 {
+  border-color: rgba(167, 139, 250, 0.4) !important;
+}
 .dark .border-teal-250 {
   border-color: rgba(20, 184, 166, 0.4) !important;
 }
@@ -373,13 +397,27 @@ input, textarea, [contenteditable="true"] {
   background: #1d2d50 !important;
 }
 
-.dark .group:hover {
-  border-color: rgba(52, 211, 153, 0.4) !important;
+.dark .group.hover\:border-emerald-350:hover {
+  border-color: rgba(52, 211, 153, 0.5) !important;
 }
+.dark .group.hover\:border-teal-350:hover {
+  border-color: rgba(20, 184, 166, 0.5) !important;
+}
+.dark .group.hover\:border-violet-350:hover {
+  border-color: rgba(167, 139, 250, 0.5) !important;
+}
+.dark .group.hover\:border-amber-350:hover {
+  border-color: rgba(251, 191, 36, 0.5) !important;
+}
+.dark .group.hover\:border-sky-350:hover {
+  border-color: rgba(56, 189, 248, 0.5) !important;
+}
+
 .dark .bg-gradient-to-br.from-white.to-emerald-50\/30,
 .dark .bg-gradient-to-br.from-white.to-teal-50\/30,
 .dark .bg-gradient-to-br.from-white.to-amber-50\/30,
-.dark .bg-gradient-to-br.from-white.to-sky-50\/30 {
+.dark .bg-gradient-to-br.from-white.to-sky-50\/30,
+.dark .bg-gradient-to-br.from-white.to-violet-50\/30 {
   background-image: linear-gradient(to bottom right, #112240, #0f2444) !important;
 }
 

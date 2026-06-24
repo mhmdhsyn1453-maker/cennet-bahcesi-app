@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Book, Play, Pause, Search, RefreshCw, Volume2, Sparkles, BookOpen, Heart, Award, ArrowRight, ArrowLeft, BookOpenCheck, ChevronLeft, ChevronRight, Layers, GraduationCap, Puzzle, Eye, EyeOff, RotateCcw, Trophy, Zap, Target, CheckCircle, XCircle, Star, Grid3X3, FlipHorizontal, Shuffle, SortAsc, Maximize2, Minimize2, X } from 'lucide-react';
+import { Book, Play, Pause, Search, RefreshCw, Volume2, Sparkles, BookOpen, Heart, Award, ArrowRight, ArrowLeft, BookOpenCheck, ChevronLeft, ChevronRight, Layers, GraduationCap, Puzzle, Eye, EyeOff, RotateCcw, Trophy, Zap, Target, CheckCircle, XCircle, Star, Grid3X3, FlipHorizontal, Shuffle, SortAsc, Maximize2, Minimize2, X, Sun, Moon } from 'lucide-react';
 import { playSound } from './BuzzerAndTimer';
 import Lottie from 'lottie-react';
 import {
@@ -247,6 +247,9 @@ const SURAH_START_PAGES: Record<number, number> = {
 interface KuranElifbaProps {
   initialTab?: 'elifba' | 'kuran';
   isDarkMode?: boolean;
+  toggleDarkMode?: () => void;
+  isFocused?: boolean;
+  setIsFocused?: (focused: boolean) => void;
 }
 
 // ─── DERS MODU ALT BİLEŞENLERİ ───────────────────────────────────
@@ -689,7 +692,13 @@ const PageRenderer: React.FC<{ page: ElifbaPage }> = ({ page }) => {
 
 // ─── ANA BİLEŞEN ─────────────────────────────────────────────────
 
-export const KuranElifba: React.FC<KuranElifbaProps> = ({ initialTab = 'elifba', isDarkMode = false }) => {
+export const KuranElifba: React.FC<KuranElifbaProps> = ({ 
+  initialTab = 'elifba', 
+  isDarkMode = false,
+  toggleDarkMode,
+  isFocused = false,
+  setIsFocused 
+}) => {
   const [activeTab, setActiveTab] = useState<'elifba' | 'kuran'>(initialTab);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -903,6 +912,86 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({ initialTab = 'elifba',
       if (basmalaSafetyTimerRef.current) clearTimeout(basmalaSafetyTimerRef.current);
     };
   }, []);
+
+  // Sync isFullscreenQuran state with the parent isFocused state
+  useEffect(() => {
+    if (setIsFocused) {
+      setIsFocused(isFullscreenQuran);
+    }
+  }, [isFullscreenQuran, setIsFocused]);
+
+  const [isElifbaDropdownOpen, setIsElifbaDropdownOpen] = useState(false);
+  const elifbaDropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (elifbaDropdownRef.current && !elifbaDropdownRef.current.contains(event.target as Node)) {
+        setIsElifbaDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Swipe / Drag Gestures for Page Navigation (RTL: Drag Left -> Next Page, Drag Right -> Prev Page)
+  const swipeStartX = useRef<number | null>(null);
+  const swipeEndX = useRef<number | null>(null);
+  const isSwipeDragging = useRef<boolean>(false);
+
+  const handleSwipeStart = (clientX: number) => {
+    swipeStartX.current = clientX;
+    isSwipeDragging.current = true;
+  };
+
+  const handleSwipeMove = (clientX: number) => {
+    if (!isSwipeDragging.current) return;
+    swipeEndX.current = clientX;
+  };
+
+  const handleSwipeEnd = (type: 'elifba' | 'kuran') => {
+    if (!isSwipeDragging.current || swipeStartX.current === null || swipeEndX.current === null) {
+      isSwipeDragging.current = false;
+      return;
+    }
+    const diffX = swipeStartX.current - swipeEndX.current;
+    const threshold = 65; // minimum drag distance
+    if (Math.abs(diffX) > threshold) {
+      if (diffX > 0) {
+        // Dragged LEFT -> Go to PREVIOUS page (RTL: page decreases)
+        if (type === 'elifba') {
+          if (currentPageIndex > 0) {
+            setCurrentPageIndex(prev => prev - 1);
+            playSound('tick');
+          }
+        } else {
+          if (isMobile) {
+            if (mushafPage > 1) handleSelectMushafPage(mushafPage - 1);
+          } else {
+            if (rightPageNum > 1) handleSelectMushafPage(rightPageNum - 2);
+          }
+          playSound('tick');
+        }
+      } else {
+        // Dragged RIGHT -> Go to NEXT page (RTL: page increases)
+        if (type === 'elifba') {
+          if (currentPageIndex < totalPages - 1) {
+            setCurrentPageIndex(prev => prev + 1);
+            playSound('tick');
+          }
+        } else {
+          if (isMobile) {
+            if (mushafPage < 604) handleSelectMushafPage(mushafPage + 1);
+          } else {
+            if (leftPageNum < 604) handleSelectMushafPage(rightPageNum + 2);
+          }
+          playSound('tick');
+        }
+      }
+    }
+    swipeStartX.current = null;
+    swipeEndX.current = null;
+    isSwipeDragging.current = false;
+  };
 
   // Fetch Lottie JSONs
   useEffect(() => {
@@ -1348,44 +1437,33 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({ initialTab = 'elifba',
             exit={{ opacity: 0, y: -15 }}
           >
             {/* Elifba Sub-Mode Selector */}
-            <div className="bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-600 rounded-[2rem] p-4 shadow-sm mb-6">
-              <div className="flex flex-col sm:flex-row items-center gap-3">
-                <span className="text-xs font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest pl-1 flex items-center gap-2 shrink-0">
-                  📚 ÇALIŞMA MODU:
-                </span>
-                <div className="flex gap-2 flex-wrap">
+            <div className="flex flex-row gap-1 bg-slate-100/80 dark:bg-slate-700/50 p-1.5 rounded-full border border-slate-200 dark:border-slate-600 w-full shadow-inner mb-6">
+              {[
+                { id: 'ders', label: 'DİYANET DERSLERİ', icon: GraduationCap, activeBg: 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md' },
+                { id: 'memory', label: 'HAFIZA OYUNU', icon: Grid3X3, activeBg: 'bg-gradient-to-r from-indigo-500 to-violet-500 text-white shadow-md', action: initMemoryGame },
+                { id: 'quiz', label: 'HARF BULMACASI', icon: Target, activeBg: 'bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-md', action: resetQuiz }
+              ].map((item) => {
+                const isSelected = elifbaSubMode === item.id;
+                const IconComponent = item.icon;
+                return (
                   <button
-                    onClick={() => setElifbaSubMode('ders')}
-                    className={`px-5 py-2.5 rounded-xl text-xs font-black transition-all cursor-pointer border-2 flex items-center gap-2 ${
-                      elifbaSubMode === 'ders'
-                        ? 'bg-teal-50 dark:bg-teal-900/30 border-teal-500 text-teal-800 dark:text-teal-200 shadow-[0_2px_0px_#14b8a6]'
-                        : 'bg-white dark:bg-slate-700 hover:bg-slate-50 dark:hover:bg-slate-600 text-slate-500 dark:text-slate-300 border-slate-200 dark:border-slate-500'
+                    key={item.id}
+                    onClick={() => {
+                      setElifbaSubMode(item.id as any);
+                      if (item.action) item.action();
+                      playSound('tick');
+                    }}
+                    className={`py-2.5 px-4 rounded-full text-[10px] sm:text-xs font-black tracking-wide transition-all uppercase cursor-pointer flex-1 flex items-center justify-center gap-2 ${
+                      isSelected
+                        ? `${item.activeBg} transform scale-[1.01]`
+                        : 'bg-transparent text-slate-600 dark:text-slate-350 hover:text-slate-900 dark:hover:text-white hover:bg-white/60 dark:hover:bg-slate-700/60'
                     }`}
                   >
-                    <GraduationCap className="w-4 h-4" /> DİYANET ELİF-BA DERSLERİ
+                    <IconComponent className={`w-3.5 h-3.5 shrink-0 ${isSelected ? 'text-white' : 'text-slate-450 dark:text-slate-400'}`} />
+                    <span className="font-extrabold">{item.label}</span>
                   </button>
-                  <button
-                    onClick={() => { setElifbaSubMode('memory'); initMemoryGame(); }}
-                    className={`px-5 py-2.5 rounded-xl text-xs font-black transition-all cursor-pointer border-2 flex items-center gap-2 ${
-                      elifbaSubMode === 'memory'
-                        ? 'bg-indigo-50 dark:bg-indigo-900/30 border-indigo-500 text-indigo-800 dark:text-indigo-200 shadow-[0_2px_0px_#6366f1]'
-                        : 'bg-white dark:bg-slate-700 hover:bg-slate-50 dark:hover:bg-slate-600 text-slate-500 dark:text-slate-300 border-slate-200 dark:border-slate-500'
-                    }`}
-                  >
-                    <Grid3X3 className="w-4 h-4" /> 🧠 HARF HAFIZA OYUNU
-                  </button>
-                  <button
-                    onClick={() => { setElifbaSubMode('quiz'); resetQuiz(); }}
-                    className={`px-5 py-2.5 rounded-xl text-xs font-black transition-all cursor-pointer border-2 flex items-center gap-2 ${
-                      elifbaSubMode === 'quiz'
-                        ? 'bg-amber-50 dark:bg-amber-900/30 border-amber-500 text-amber-800 dark:text-amber-200 shadow-[0_2px_0px_#f59e0b]'
-                        : 'bg-white dark:bg-slate-700 hover:bg-slate-50 dark:hover:bg-slate-600 text-slate-500 dark:text-slate-300 border-slate-200 dark:border-slate-500'
-                    }`}
-                  >
-                    <Target className="w-4 h-4" /> 🧩 HARF BULMACASI
-                  </button>
-                </div>
-              </div>
+                );
+              })}
             </div>
 
             {/* ════════════════════════════════════════════════ */}
@@ -1401,30 +1479,60 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({ initialTab = 'elifba',
                 {/* Navigation Bar */}
                 <div className="bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-600 rounded-[2rem] p-4 shadow-sm mb-6">
                   <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                    {/* Page selector dropdown */}
-                    <div className="flex items-center gap-3">
+                    {/* Page selector custom dropdown */}
+                    <div className="flex items-center gap-3 relative" ref={elifbaDropdownRef}>
                       <Layers className="w-5 h-5 text-teal-600 dark:text-teal-400" />
-                      <select
-                        value={currentPageIndex}
-                        onChange={(e) => { setCurrentPageIndex(Number(e.target.value)); playSound('tick'); }}
-                        className="bg-slate-50 dark:bg-slate-700 border-2 border-slate-200 dark:border-slate-500 text-slate-800 dark:text-slate-100 font-display font-bold text-xs py-2.5 px-4 rounded-xl focus:border-teal-500 focus:outline-none cursor-pointer min-w-[250px]"
+                      <button
+                        onClick={() => { setIsElifbaDropdownOpen(!isElifbaDropdownOpen); playSound('tick'); }}
+                        className="bg-slate-50 dark:bg-slate-700 border-2 border-slate-200 dark:border-slate-500 text-slate-800 dark:text-slate-100 font-display font-bold text-xs py-2.5 px-4 rounded-xl focus:border-teal-500 focus:outline-none cursor-pointer min-w-[280px] flex items-center justify-between gap-2 shadow-sm"
                       >
-                        {ELIF_BA_PAGES.map((p, idx) => (
-                          <option key={p.id} value={idx}>
-                            {p.konuNo}. Konu (Sf. {p.sayfaNo}) — {p.baslik}
-                          </option>
-                        ))}
-                      </select>
+                        <span>{currentPage.konuNo}. Konu — {currentPage.baslik}</span>
+                        <span className={`transition-transform duration-200 text-[10px] ${isElifbaDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
+                      </button>
+                      
+                      <AnimatePresence>
+                        {isElifbaDropdownOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 10 }}
+                            className="absolute top-full left-0 right-0 mt-2 max-h-[300px] overflow-y-auto bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 rounded-xl shadow-xl z-50 scrollbar-thin"
+                          >
+                            {ELIF_BA_PAGES.map((p, idx) => {
+                              const isSelected = currentPageIndex === idx;
+                              return (
+                                <button
+                                  key={p.id}
+                                  onClick={() => {
+                                    setCurrentPageIndex(idx);
+                                    setIsElifbaDropdownOpen(false);
+                                    playSound('tick');
+                                  }}
+                                  className={`w-full text-left px-4 py-3 text-xs font-semibold hover:bg-slate-50 dark:hover:bg-slate-700/50 border-b border-slate-100 dark:border-slate-700/40 flex items-center justify-between ${
+                                    isSelected 
+                                      ? 'bg-teal-50/50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-400 font-bold' 
+                                      : 'text-slate-700 dark:text-slate-200'
+                                  }`}
+                                >
+                                  <span>{p.konuNo}. Konu (Sf. {p.sayfaNo}) — {p.baslik}</span>
+                                  {isSelected && <span className="text-teal-600 dark:text-teal-400">✓</span>}
+                                </button>
+                              );
+                            })}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
 
-                    {/* Navigation buttons */}
+                    {/* Navigation buttons (RTL order: Next on Left, Prev on Right) */}
                     <div className="flex items-center gap-2">
                       <button
-                        onClick={goPrevPage}
-                        disabled={currentPageIndex === 0}
-                        className="px-4 py-2.5 rounded-xl border-2 border-slate-200 dark:border-slate-500 text-slate-700 dark:text-slate-200 font-black text-xs flex items-center gap-1.5 transition-all cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-600 disabled:opacity-30 disabled:cursor-not-allowed"
+                        onClick={goNextPage}
+                        disabled={currentPageIndex === totalPages - 1}
+                        className="px-4 py-2.5 rounded-xl border-2 border-slate-200 dark:border-slate-500 text-slate-700 dark:text-slate-200 font-black text-xs flex items-center gap-1.5 transition-all cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-650 disabled:opacity-30 disabled:cursor-not-allowed"
+                        title="Sonraki Konu (Sola Doğru)"
                       >
-                        <ChevronLeft className="w-4 h-4" /> ÖNCEKİ
+                        <ChevronLeft className="w-4 h-4" /> SONRAKİ
                       </button>
 
                       <div className="bg-teal-50 dark:bg-teal-900/30 border-2 border-teal-200 dark:border-teal-700 text-teal-800 dark:text-teal-200 font-display font-black text-xs px-4 py-2.5 rounded-xl">
@@ -1432,18 +1540,28 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({ initialTab = 'elifba',
                       </div>
 
                       <button
-                        onClick={goNextPage}
-                        disabled={currentPageIndex === totalPages - 1}
-                        className="px-4 py-2.5 rounded-xl border-2 border-slate-200 dark:border-slate-500 text-slate-700 dark:text-slate-200 font-black text-xs flex items-center gap-1.5 transition-all cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-600 disabled:opacity-30 disabled:cursor-not-allowed"
+                        onClick={goPrevPage}
+                        disabled={currentPageIndex === 0}
+                        className="px-4 py-2.5 rounded-xl border-2 border-slate-200 dark:border-slate-500 text-slate-700 dark:text-slate-200 font-black text-xs flex items-center gap-1.5 transition-all cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-650 disabled:opacity-30 disabled:cursor-not-allowed"
+                        title="Önceki Konu (Sağa Doğru)"
                       >
-                        SONRAKİ <ChevronRight className="w-4 h-4" />
+                        ÖNCEKİ <ChevronRight className="w-4 h-4" />
                       </button>
                     </div>
                   </div>
                 </div>
 
-                {/* Page Content */}
-                <div className="bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-600 rounded-[2rem] p-6 shadow-sm">
+                {/* Page Content with Swipe / Drag Gestures */}
+                <div 
+                  onTouchStart={(e) => handleSwipeStart(e.touches[0].clientX)}
+                  onTouchMove={(e) => handleSwipeMove(e.touches[0].clientX)}
+                  onTouchEnd={() => handleSwipeEnd('elifba')}
+                  onMouseDown={(e) => handleSwipeStart(e.clientX)}
+                  onMouseMove={(e) => handleSwipeMove(e.clientX)}
+                  onMouseUp={() => handleSwipeEnd('elifba')}
+                  onMouseLeave={() => handleSwipeEnd('elifba')}
+                  className="bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-600 rounded-[2rem] p-6 shadow-sm cursor-grab active:cursor-grabbing select-none"
+                >
                   {/* Page Header */}
                   <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-slate-100 dark:border-slate-700">
                     <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-2xl flex items-center justify-center text-white font-display font-black text-lg shadow-md">
@@ -1471,21 +1589,21 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({ initialTab = 'elifba',
                   </AnimatePresence>
                 </div>
 
-                {/* Bottom Navigation (duplicate for convenience) */}
+                {/* Bottom Navigation (duplicate for convenience, RTL order) */}
                 <div className="flex items-center justify-between mt-6">
-                  <button
-                    onClick={goPrevPage}
-                    disabled={currentPageIndex === 0}
-                    className="btn-game-primary text-xs disabled:opacity-30 disabled:cursor-not-allowed"
-                  >
-                    <ChevronLeft className="w-4 h-4" /> Önceki Konu
-                  </button>
                   <button
                     onClick={goNextPage}
                     disabled={currentPageIndex === totalPages - 1}
-                    className="btn-game-secondary text-xs disabled:opacity-30 disabled:cursor-not-allowed"
+                    className="btn-game-primary text-xs disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-1.5"
                   >
-                    Sonraki Konu <ChevronRight className="w-4 h-4" />
+                    <ChevronLeft className="w-4 h-4" /> Sonraki Konu
+                  </button>
+                  <button
+                    onClick={goPrevPage}
+                    disabled={currentPageIndex === 0}
+                    className="btn-game-secondary text-xs disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-1.5"
+                  >
+                    Önceki Konu <ChevronRight className="w-4 h-4" />
                   </button>
                 </div>
               </motion.div>
@@ -2151,20 +2269,6 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({ initialTab = 'elifba',
 
                       <div className="flex items-center gap-2">
                         <button
-                          onClick={togglePlaySurah}
-                          className={`btn-game-sky justify-center text-xs py-2 px-5 cursor-pointer flex items-center gap-2 ${isPlayingAudio ? 'bg-rose-500 border-rose-700' : 'bg-sky-500 border-sky-700'}`}
-                        >
-                          {isPlayingAudio ? (
-                            <>
-                              <Pause className="w-4 h-4 text-white" /> DURDUR
-                            </>
-                          ) : (
-                            <>
-                              <Play className="w-4 h-4 text-white" /> DİNLE
-                            </>
-                          )}
-                        </button>
-                        <button
                           onClick={() => {
                             setIsFullscreenQuran(true);
                             playSound('tick');
@@ -2246,7 +2350,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({ initialTab = 'elifba',
                     Mushaf sayfaları yükleniyor...
                   </div>
                 ) : rightPageAyahs.length > 0 ? (
-                  <div className="bg-[#faf6ef] dark:bg-slate-850 border-3 border-slate-200 dark:border-slate-700 rounded-[2.5rem] p-4 shadow-sm flex flex-col h-[650px] relative overflow-hidden">
+                  <div className="bg-[#faf6ef] dark:bg-slate-900 border-3 border-slate-200 dark:border-slate-700 rounded-[2.5rem] p-4 shadow-sm flex flex-col h-[650px] relative overflow-hidden">
                     {/* Header Controls */}
                     <div className="flex items-center justify-between border-b-2 border-slate-200/60 dark:border-slate-700 pb-3 mb-3 relative z-10">
                       <div className="flex items-center gap-2">
@@ -2259,21 +2363,21 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({ initialTab = 'elifba',
                       </div>
                       
                       <div className="flex items-center gap-2">
-                        {/* Right navigation arrow (moves to PREVIOUS spread/page in RTL) */}
+                        {/* Left navigation arrow: Sonraki (moves left, page increases in RTL) */}
                         <button
                           onClick={() => {
                             if (isMobile) {
-                              if (mushafPage > 1) handleSelectMushafPage(mushafPage - 1);
+                              if (mushafPage < 604) handleSelectMushafPage(mushafPage + 1);
                             } else {
-                              if (rightPageNum > 1) handleSelectMushafPage(rightPageNum - 2);
+                              if (leftPageNum < 604) handleSelectMushafPage(rightPageNum + 2);
                             }
                             playSound('tick');
                           }}
-                          disabled={isMobile ? mushafPage <= 1 : rightPageNum <= 1}
-                          className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 rounded-xl text-slate-700 dark:text-slate-200 text-xs font-black flex items-center gap-1 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed border border-slate-250 dark:border-slate-600"
-                          title="Önceki Sayfa (Sağa Doğru)"
+                          disabled={isMobile ? mushafPage >= 604 : leftPageNum >= 604}
+                          className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-650 rounded-xl text-slate-700 dark:text-slate-200 text-xs font-black flex items-center gap-1 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed border border-slate-250 dark:border-slate-600"
+                          title="Sonraki Sayfa (Sola Doğru)"
                         >
-                          ÖNCEKİ <ChevronRight className="w-4 h-4" />
+                          <ChevronLeft className="w-4 h-4" /> SONRAKİ
                         </button>
 
                         <button
@@ -2294,27 +2398,52 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({ initialTab = 'elifba',
                           <Maximize2 className="w-4 h-4" /> TAM EKRAN
                         </button>
 
-                        {/* Left navigation arrow (moves to NEXT spread/page in RTL) */}
+                        {/* Recital Controls: Dinle */}
+                        <button
+                          onClick={togglePlaySurah}
+                          className={`btn-game-sky justify-center text-xs py-1.5 px-4 cursor-pointer flex items-center gap-1.5 ${isPlayingAudio ? 'bg-rose-500 border-rose-700' : 'bg-sky-500 border-sky-700'}`}
+                        >
+                          {isPlayingAudio ? (
+                            <>
+                              <Pause className="w-4 h-4 text-white" /> DURDUR
+                            </>
+                          ) : (
+                            <>
+                              <Play className="w-4 h-4 text-white" /> DİNLE
+                            </>
+                          )}
+                        </button>
+
+                        {/* Right navigation arrow: Önceki (moves right, page decreases in RTL) */}
                         <button
                           onClick={() => {
                             if (isMobile) {
-                              if (mushafPage < 604) handleSelectMushafPage(mushafPage + 1);
+                              if (mushafPage > 1) handleSelectMushafPage(mushafPage - 1);
                             } else {
-                              if (leftPageNum < 604) handleSelectMushafPage(rightPageNum + 2);
+                              if (rightPageNum > 1) handleSelectMushafPage(rightPageNum - 2);
                             }
                             playSound('tick');
                           }}
-                          disabled={isMobile ? mushafPage >= 604 : leftPageNum >= 604}
-                          className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700/50 dark:hover:bg-slate-650 rounded-xl text-slate-700 dark:text-slate-200 text-xs font-black flex items-center gap-1 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed border border-slate-250 dark:border-slate-600"
-                          title="Sonraki Sayfa (Sola Doğru)"
+                          disabled={isMobile ? mushafPage <= 1 : rightPageNum <= 1}
+                          className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 rounded-xl text-slate-700 dark:text-slate-200 text-xs font-black flex items-center gap-1 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed border border-slate-250 dark:border-slate-600"
+                          title="Önceki Sayfa (Sağa Doğru)"
                         >
-                          <ChevronLeft className="w-4 h-4" /> SONRAKİ
+                          ÖNCEKİ <ChevronRight className="w-4 h-4" />
                         </button>
                       </div>
                     </div>
 
-                    {/* Book Spread Container (Dual-Page) */}
-                    <div className="flex-1 flex flex-row relative min-h-0 bg-[#faf6ef] dark:bg-slate-850 rounded-2xl overflow-hidden border border-amber-900/10 dark:border-slate-700">
+                    {/* Book Spread Container (Dual-Page) with Swipe / Drag Gestures */}
+                    <div 
+                      onTouchStart={(e) => handleSwipeStart(e.touches[0].clientX)}
+                      onTouchMove={(e) => handleSwipeMove(e.touches[0].clientX)}
+                      onTouchEnd={() => handleSwipeEnd('kuran')}
+                      onMouseDown={(e) => handleSwipeStart(e.clientX)}
+                      onMouseMove={(e) => handleSwipeMove(e.clientX)}
+                      onMouseUp={() => handleSwipeEnd('kuran')}
+                      onMouseLeave={() => handleSwipeEnd('kuran')}
+                      className="flex-1 flex flex-row relative min-h-0 bg-[#faf6ef] dark:bg-slate-900 rounded-2xl overflow-hidden border border-amber-900/10 dark:border-slate-700 cursor-grab active:cursor-grabbing select-none"
+                    >
                       {/* Mobile View: Render just the active single page */}
                       <div className="md:hidden flex-1 h-full min-w-0">
                         {renderSingleMushafPage(mushafAyahs, mushafPage)}
@@ -2381,49 +2510,28 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({ initialTab = 'elifba',
           </AnimatePresence>
 
           {/* Top Bar */}
-          <div className="flex items-center justify-between px-6 py-3 bg-emerald-800 dark:bg-emerald-950 text-white shadow-lg shrink-0">
+          <div className="grid grid-cols-3 items-center px-6 py-3 bg-emerald-800 dark:bg-emerald-950 text-white shadow-lg shrink-0">
+            {/* Left section: Title Info */}
             <div className="flex items-center gap-3">
               <BookOpen className="w-5 h-5 opacity-80" />
               {quranViewMode === 'meal' && selectedSurah ? (
                 <div>
-                  <h3 className="font-display font-black text-base tracking-wide">{getTurkceSureIsmi(selectedSurah.number)} Sûresi Meali</h3>
-                  <p className="text-[10px] opacity-70 font-semibold">{selectedSurah.numberOfAyahs} Âyet • {selectedSurah.revelationType === 'Meccan' ? 'Mekkî' : 'Medenî'}</p>
+                  <h3 className="font-display font-black text-sm sm:text-base tracking-wide leading-none">{getTurkceSureIsmi(selectedSurah.number)} Sûresi</h3>
+                  <p className="text-[10px] opacity-70 font-semibold mt-1">Meal Modu</p>
                 </div>
               ) : (
                 <div>
-                  <h3 className="font-display font-black text-base tracking-wide">{Math.floor((mushafPage - 1) / 20) + 1}. Cüz • Sayfa {mushafPage}</h3>
-                  <p className="text-[10px] opacity-70 font-semibold">{mushafAyahs[0]?.surahName || ''} Sûresi</p>
+                  <h3 className="font-display font-black text-sm sm:text-base tracking-wide leading-none">{Math.floor((mushafPage - 1) / 20) + 1}. Cüz • Sayfa {mushafPage}</h3>
+                  <p className="text-[10px] opacity-70 font-semibold mt-1">{mushafAyahs[0]?.surahName || ''} Sûresi</p>
                 </div>
               )}
             </div>
             
-            <div className="flex items-center gap-2">
-              {quranViewMode === 'meal' ? (
-                <button
-                  onClick={togglePlaySurah}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black uppercase tracking-wide transition-all cursor-pointer ${isPlayingAudio ? 'bg-rose-500 hover:bg-rose-600' : 'bg-white/20 hover:bg-white/30'}`}
-                >
-                  {isPlayingAudio ? <><Pause className="w-4 h-4" /> Durdur</> : <><Play className="w-4 h-4" /> Dinle</>}
-                </button>
-              ) : (
+            {/* Center section: Navigation */}
+            <div className="flex items-center justify-center gap-3">
+              {quranViewMode === 'mushaf' && (
                 <>
-                  {/* Right navigation arrow (moves to PREVIOUS spread/page in RTL) */}
-                  <button
-                    onClick={() => {
-                      if (isMobile) {
-                        if (mushafPage > 1) handleSelectMushafPage(mushafPage - 1);
-                      } else {
-                        if (rightPageNum > 1) handleSelectMushafPage(rightPageNum - 2);
-                      }
-                      playSound('tick');
-                    }}
-                    disabled={isMobile ? mushafPage <= 1 : rightPageNum <= 1}
-                    className="px-3 py-2 rounded-xl bg-white/20 hover:bg-white/30 text-white text-xs font-black disabled:opacity-45 cursor-pointer flex items-center gap-1.5"
-                    title="Önceki Sayfa (Sağa Doğru)"
-                  >
-                    Önceki Sayfa <ChevronRight className="w-4 h-4" />
-                  </button>
-                  {/* Left navigation arrow (moves to NEXT spread/page in RTL) */}
+                  {/* Left navigation arrow: Sonraki (moves left, page increases in RTL) */}
                   <button
                     onClick={() => {
                       if (isMobile) {
@@ -2434,19 +2542,72 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({ initialTab = 'elifba',
                       playSound('tick');
                     }}
                     disabled={isMobile ? mushafPage >= 604 : leftPageNum >= 604}
-                    className="px-3 py-2 rounded-xl bg-white/20 hover:bg-white/30 text-white text-xs font-black disabled:opacity-45 cursor-pointer flex items-center gap-1.5"
+                    className="px-3 py-2 rounded-xl bg-white/25 hover:bg-white/35 text-white text-xs font-black disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1.5 transition-all border border-white/10 active:scale-95"
                     title="Sonraki Sayfa (Sola Doğru)"
                   >
-                    <ChevronLeft className="w-4 h-4" /> Sonraki Sayfa
+                    <ChevronLeft className="w-4 h-4" /> SONRAKİ
+                  </button>
+
+                  <span className="text-xs font-extrabold px-3 py-2 bg-white/10 rounded-xl border border-white/10 whitespace-nowrap">
+                    SAYFA {mushafPage}
+                  </span>
+
+                  {/* Dinle Button */}
+                  <button
+                    onClick={togglePlaySurah}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black uppercase tracking-wide transition-all hover:scale-105 active:scale-95 cursor-pointer border border-white/10 ${isPlayingAudio ? 'bg-rose-500 hover:bg-rose-600' : 'bg-white/20 hover:bg-white/30'}`}
+                  >
+                    {isPlayingAudio ? <><Pause className="w-4 h-4" /> Durdur</> : <><Play className="w-4 h-4" /> Dinle</>}
+                  </button>
+
+                  {/* Right navigation arrow: Önceki (moves right, page decreases in RTL) */}
+                  <button
+                    onClick={() => {
+                      if (isMobile) {
+                        if (mushafPage > 1) handleSelectMushafPage(mushafPage - 1);
+                      } else {
+                        if (rightPageNum > 1) handleSelectMushafPage(rightPageNum - 2);
+                      }
+                      playSound('tick');
+                    }}
+                    disabled={isMobile ? mushafPage <= 1 : rightPageNum <= 1}
+                    className="px-3 py-2 rounded-xl bg-white/25 hover:bg-white/35 text-white text-xs font-black disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1.5 transition-all border border-white/10 active:scale-95"
+                    title="Önceki Sayfa (Sağa Doğru)"
+                  >
+                    ÖNCEKİ <ChevronRight className="w-4 h-4" />
                   </button>
                 </>
               )}
+            </div>
+
+            {/* Right section: Dark Mode Toggle & Minimize */}
+            <div className="flex items-center justify-end gap-2.5">
+              {toggleDarkMode && (
+                <button
+                  onClick={toggleDarkMode}
+                  className="px-3 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-white text-xs font-black transition-all hover:scale-105 active:scale-95 cursor-pointer border border-white/10 flex items-center gap-1.5"
+                  title={isDarkMode ? "Aydınlık Moda Geç" : "Karanlık Moda Geç"}
+                >
+                  {isDarkMode ? (
+                    <>
+                      <Sun className="w-4 h-4 text-amber-400" />
+                      <span className="hidden sm:inline">Aydınlık</span>
+                    </>
+                  ) : (
+                    <>
+                      <Moon className="w-4 h-4 text-indigo-200" />
+                      <span className="hidden sm:inline">Karanlık</span>
+                    </>
+                  )}
+                </button>
+              )}
+
               <button
                 onClick={() => { setIsFullscreenQuran(false); playSound('tick'); }}
-                className="w-10 h-10 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all cursor-pointer"
-                title="Tam Ekrandan Çık"
+                className="px-3 py-2 bg-rose-600 hover:bg-rose-700 text-white text-xs font-black uppercase tracking-wider rounded-xl transition-all hover:scale-105 active:scale-95 flex items-center gap-1.5 cursor-pointer shadow-md shadow-rose-600/20 border border-rose-700"
+                title="KÜÇÜLT"
               >
-                <X className="w-5 h-5" />
+                <Minimize2 className="w-4 h-4" /> KÜÇÜLT
               </button>
             </div>
           </div>
@@ -2477,8 +2638,17 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({ initialTab = 'elifba',
               </div>
             </div>
           ) : (
-            /* Dual-Page Fullscreen Mushaf Layout */
-            <div className="flex-1 flex flex-row relative min-h-0 bg-[#faf6ef] dark:bg-[#0d1117] overflow-hidden">
+            /* Dual-Page Fullscreen Mushaf Layout with Swipe / Drag Gestures */
+            <div 
+              onTouchStart={(e) => handleSwipeStart(e.touches[0].clientX)}
+              onTouchMove={(e) => handleSwipeMove(e.touches[0].clientX)}
+              onTouchEnd={() => handleSwipeEnd('kuran')}
+              onMouseDown={(e) => handleSwipeStart(e.clientX)}
+              onMouseMove={(e) => handleSwipeMove(e.clientX)}
+              onMouseUp={() => handleSwipeEnd('kuran')}
+              onMouseLeave={() => handleSwipeEnd('kuran')}
+              className="flex-1 flex flex-row relative min-h-0 bg-[#faf6ef] dark:bg-[#0d1117] overflow-hidden cursor-grab active:cursor-grabbing select-none"
+            >
               {/* Mobile View: Render just the active single page */}
               <div className="md:hidden flex-1 h-full min-w-0">
                 {renderSingleMushafPage(mushafAyahs, mushafPage)}
