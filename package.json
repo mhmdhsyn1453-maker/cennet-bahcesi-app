@@ -57,7 +57,7 @@
         "provider": "github",
         "owner": "mhmdhsyn1453-maker",
         "repo": "cennet-bahcesi-app",
-        "releaseType": "release"
+        "releaseType": "draft"
       }
     ],
     "files": [
