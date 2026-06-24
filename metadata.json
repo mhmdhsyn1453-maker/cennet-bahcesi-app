@@ -1,0 +1,6 @@
+{
+  "name": "Cennet Bahçesi",
+  "description": "Akıllı tahta için tasarlanmış, ortaokul ve lise seviyesine yönelik zeka ve bilgi odaklı kuran kursu takım oyunu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
