@@ -7,8 +7,6 @@ coverage/
 .DS_Store
 *.log
 .env*
-public/assets/*.mp4
-public/assets/*.mp3
 !.env.example
 .firebase/
 
