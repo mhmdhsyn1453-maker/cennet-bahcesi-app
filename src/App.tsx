@@ -11,15 +11,15 @@ import { SirAyeti } from './components/SirAyeti';
 import { SoruEditoru } from './components/SoruEditoru';
 import { BuzzerAndTimer } from './components/BuzzerAndTimer';
 import { playSound } from './components/BuzzerAndTimer';
-import { Compass, Sparkles, BookOpen, Clock, Trophy, Award, RotateCcw, Volume2, VolumeX, Shield, Hammer, Gamepad2, Landmark, BookOpenCheck, Home, Sun, Moon, Eye, EyeOff, Pencil, GraduationCap } from 'lucide-react';
+import { Compass, Sparkles, BookOpen, Clock, Trophy, Award, RotateCcw, Volume2, VolumeX, Shield, Hammer, Gamepad2, Landmark, BookOpenCheck, Home, Sun, Moon, Eye, EyeOff, Pencil, GraduationCap, Maximize2, Minimize2, Heart, X } from 'lucide-react';
 import Lottie from 'lottie-react';
 import { motion } from 'motion/react';
 
 const ElifBaIcon: React.FC<{ className?: string }> = ({ className = "w-5 h-5" }) => {
   return (
-    <span 
-      className={`${className} inline-flex items-center justify-center font-bold select-none`} 
-      style={{ 
+    <span
+      className={`${className} inline-flex items-center justify-center font-bold select-none`}
+      style={{
         direction: 'rtl',
         fontFamily: "'Amiri', 'Traditional Arabic', 'Noto Naskh Arabic', serif",
         fontSize: '1.1rem',
@@ -46,7 +46,7 @@ const LOCAL_STORAGE_KEY = 'cennet_bahcesi_gamedata';
 export default function App() {
   const [phase, setPhase] = useState<'intro' | 'map' | 'gameplay' | 'custom_editor' | 'victory'>('intro');
   const [activeZone, setActiveZone] = useState<GameZone | null>(null);
-  const [activeTab, setActiveTab] = useState<'home' | 'elifba' | 'quran' | 'lessons' | 'games' | 'ezber'>('home');
+  const [activeTab, setActiveTab] = useState<'home' | 'elifba' | 'quran' | 'lessons' | 'games' | 'ezber' | 'about'>('home');
   const [showPenTool, setShowPenTool] = useState<boolean>(false);
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
     return localStorage.getItem('cennet_bahcesi_darkmode') === 'true';
@@ -61,6 +61,34 @@ export default function App() {
   const [basmalaData, setBasmalaData] = useState<any>(null);
   const [cinematicPhase, setCinematicPhase] = useState<'splash' | 'cinematic' | 'ready'>('splash');
   const [isFocused, setIsFocused] = useState<boolean>(false);
+  const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
+
+  const toggleFullscreen = () => {
+    playSound('tick');
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().then(() => {
+        setIsFullscreen(true);
+      }).catch(err => {
+        console.error("Tam ekran hatası:", err);
+      });
+    } else {
+      document.exitFullscreen().then(() => {
+        setIsFullscreen(false);
+      }).catch(err => {
+        console.error("Tam ekrandan çıkış hatası:", err);
+      });
+    }
+  };
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    };
+  }, []);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const safetyTimerRef = useRef<NodeJS.Timeout | null>(null);
@@ -116,6 +144,83 @@ export default function App() {
     }
   }, []);
 
+  // === DRAGGABLE SMART BOARD PEN STATES ===
+  const [penPos, setPenPos] = useState(() => {
+    return { x: window.innerWidth - 80, y: window.innerHeight - 80 };
+  });
+  const isDragging = useRef(false);
+  const dragStart = useRef({ x: 0, y: 0 });
+  const dragStartPos = useRef({ x: 0, y: 0 });
+  const dragDistance = useRef(0);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (e.button !== 0) return;
+    isDragging.current = true;
+    dragStart.current = { x: e.clientX, y: e.clientY };
+    dragStartPos.current = { ...penPos };
+    dragDistance.current = 0;
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (e.touches.length !== 1) return;
+    isDragging.current = true;
+    dragStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    dragStartPos.current = { ...penPos };
+    dragDistance.current = 0;
+  };
+
+  useEffect(() => {
+    const handleMove = (e: MouseEvent | TouchEvent) => {
+      if (!isDragging.current) return;
+      let clientX = 0;
+      let clientY = 0;
+      if ('touches' in e) {
+        if (e.touches.length !== 1) return;
+        clientX = e.touches[0].clientX;
+        clientY = e.touches[0].clientY;
+      } else {
+        clientX = e.clientX;
+        clientY = e.clientY;
+      }
+
+      const deltaX = clientX - dragStart.current.x;
+      const deltaY = clientY - dragStart.current.y;
+      dragDistance.current = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+      const newX = Math.max(10, Math.min(window.innerWidth - 70, dragStartPos.current.x + deltaX));
+      const newY = Math.max(10, Math.min(window.innerHeight - 70, dragStartPos.current.y + deltaY));
+
+      setPenPos({ x: newX, y: newY });
+    };
+
+    const handleEnd = () => {
+      isDragging.current = false;
+    };
+
+    window.addEventListener('mousemove', handleMove);
+    window.addEventListener('mouseup', handleEnd);
+    window.addEventListener('touchmove', handleMove, { passive: false });
+    window.addEventListener('touchend', handleEnd);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMove);
+      window.removeEventListener('mouseup', handleEnd);
+      window.removeEventListener('touchmove', handleMove);
+      window.removeEventListener('touchend', handleEnd);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setPenPos(prev => ({
+        x: Math.max(10, Math.min(window.innerWidth - 70, prev.x)),
+        y: Math.max(10, Math.min(window.innerHeight - 70, prev.y))
+      }));
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   // Helper to safely play background music and handle browser autoplay blocks + fade-in volume
   const playBackgroundMusic = (startTime: number = 35) => {
     if (!audioRef.current) return;
@@ -123,24 +228,24 @@ export default function App() {
     // Force load to ensure the browser fetches the audio stream
     try {
       audioRef.current.load();
-    } catch (e) {}
+    } catch (e) { }
 
     try {
       audioRef.current.currentTime = startTime;
     } catch (e) {
       console.warn("Could not set currentTime before play, will retry after promise resolves:", e);
     }
-    
+
     // Reset volume to 0 for fade-in
     audioRef.current.volume = 0;
-    
+
     audioRef.current.play()
       .then(() => {
         setIsMusicPlaying(true);
         // Ensure currentTime is set successfully now that the audio is playing
         try {
           audioRef.current!.currentTime = startTime;
-        } catch (e) {}
+        } catch (e) { }
 
         let vol = 0;
         const fadeInterval = setInterval(() => {
@@ -393,15 +498,15 @@ export default function App() {
                   <path d="M363.971,181.534c-3.801,10.644-10.259,20.846-19.378,30.608-9.119,9.762-19.417,17.438-30.892,23.027-11.476,5.59-23.026,8.384-34.653,8.384-6.458-.152-9.727-4.632-9.803-13.438,0-9.8,3.687-16.844,11.057-21.133,0-5.588,2.793-12.978,8.378-22.166,5.585-9.188,13.241-18.49,22.969-27.908,9.727-9.418,19.225-14.127,28.498-14.127,4.711,0,8.567,1.264,11.57,3.79,3.001,2.526,4.502,5.782,4.502,9.763,0,5.819-2.205,10.184-6.611,13.093l-2.052-.229c-4.104-3.599-9.082-5.398-14.933-5.398-6.992,0-13.128,2.01-18.409,6.03-5.283,4.02-7.922,8.9-7.922,14.643,0,4.595,1.918,8.366,5.756,11.313,3.836,2.948,8.834,4.422,14.99,4.422,2.204-.383,4.407-1.072,6.612-2.067,10.487-4.135,19.15-11.179,25.99-21.133l4.332,2.526Z" />
                 </g>
               </svg>
- 
+
               {/* Divider line */}
               <div className="w-24 h-0.5 bg-emerald-500/30 dark:bg-emerald-400/30 rounded-full mt-4 mb-3" />
- 
+
               {/* Title - clean, solid colors, no gradient clipping */}
               <h2 className="font-display font-black text-2xl sm:text-3xl tracking-[0.15em] uppercase text-emerald-800 dark:text-emerald-300">
                 CENNET BAHÇESİ
               </h2>
- 
+
               {/* Subtitle */}
               <p className="text-slate-500 dark:text-slate-400 font-bold text-[10px] sm:text-xs mt-2 uppercase tracking-[0.25em]">
                 ELİF-BA  •  KUR'AN-I KERİM  •  EZBER  •  DERSLER  •  OYUNLAR
@@ -413,8 +518,8 @@ export default function App() {
               <button
                 onClick={togglePlayMusic}
                 className={`flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-black tracking-wide uppercase transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-sm border-2 ${isMusicPlaying
-                    ? 'bg-emerald-500 hover:bg-emerald-600 text-white border-emerald-600 animate-pulse'
-                    : 'bg-white/80 dark:bg-slate-700/80 hover:bg-slate-50 dark:hover:bg-slate-600 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-600'
+                  ? 'bg-emerald-500 hover:bg-emerald-600 text-white border-emerald-600 animate-pulse'
+                  : 'bg-white/80 dark:bg-slate-700/80 hover:bg-slate-50 dark:hover:bg-slate-600 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-600'
                   }`}
               >
                 {isMusicPlaying ? (
@@ -578,6 +683,101 @@ export default function App() {
     );
   };
 
+  // Render About & Dua Portal Page
+  const renderAboutView = () => {
+    return (
+      <motion.div
+        key="about-tab"
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        className="max-w-7xl mx-auto px-4 pt-1 pb-6 relative z-10 flex flex-col items-center gap-6 min-h-[calc(100vh-12rem)] select-none w-full"
+        id="about-portal-view"
+      >
+        {/* Header Section */}
+        <div className="flex flex-col items-center gap-2 text-center mt-0">
+          <div className="w-24 h-24 rounded-2xl bg-white shadow-xl border border-slate-200 dark:border-slate-700 flex items-center justify-center p-2 overflow-hidden hover:scale-105 transition-transform duration-300 shrink-0">
+            <img src="assets/logo.png" alt="Cennet Bahçesi Logo" className="w-full h-full object-contain" />
+          </div>
+          <h1 className="text-3xl sm:text-4xl font-black text-slate-800 dark:text-slate-100 font-display tracking-tight mt-2">
+            Cennet Bahçesi
+          </h1>
+          <span className="px-4 py-1.5 rounded-full bg-emerald-500/10 dark:bg-emerald-400/10 text-emerald-700 dark:text-emerald-400 text-xs font-black tracking-widest uppercase border border-emerald-500/20 dark:border-emerald-400/25">
+            Hakkımızda & Dua Talebi
+          </span>
+        </div>
+
+        {/* Divider */}
+        <div className="w-24 h-1 bg-gradient-to-r from-transparent via-slate-400/40 to-transparent dark:via-slate-600/40 rounded-full" />
+
+        {/* Sincere Content Card */}
+        <div className="w-full bg-white/45 dark:bg-slate-900/35 border border-slate-200/50 dark:border-slate-800/50 rounded-[2rem] p-6 sm:p-10 shadow-lg backdrop-blur-md flex flex-col gap-6 text-slate-700 dark:text-slate-200 text-center max-w-6xl relative overflow-hidden">
+          <div className="absolute -top-24 -left-24 w-48 h-48 rounded-full bg-emerald-500/5 blur-3xl pointer-events-none" />
+
+          <p className="font-bold text-base sm:text-lg text-slate-800 dark:text-slate-100 leading-relaxed">
+            Bu çalışma; yavrularımızın ve gençlerimizin kalplerini Kur'an-ı Kerim'in nuruyla aydınlatmak, hayat rehberimiz olan yüce kitabımızı ve güzel ahlakı onlara sevdirmek gayesiyle, <strong>yalnızca Allah rızası gözetilerek</strong> hazırlanmıştır. Projemiz tamamen ücretsizdir ve hiçbir ticari amaç taşımamaktadır.
+          </p>
+
+          <div className="bg-emerald-500/5 dark:bg-emerald-400/5 border border-emerald-500/10 dark:border-emerald-400/10 rounded-2xl p-6 sm:p-8 text-left relative overflow-hidden">
+            <div className="absolute top-0 right-0 transform translate-x-4 -translate-y-4 text-emerald-500/5 font-display text-8xl pointer-events-none select-none">🤲</div>
+            <h3 className="font-black text-emerald-800 dark:text-emerald-400 text-base sm:text-lg mb-3 flex items-center gap-2.5">
+              <span className="text-xl">🤲</span> Gönülden Bir Dua Talebi
+            </h3>
+            <p className="italic text-slate-750 dark:text-slate-305 text-sm leading-relaxed">
+              "Bu uygulamanın kodlanmasında, tasarlanmasında ve hayata geçirilmesinde emeği geçen, vesile olan tüm kardeşlerinizin; anne babalarının, eş ve evlatlarının dünya ve ahiret saadetine nail olması, her türlü maddi ve manevi sıkıntılardan selamete ermesi, ömürlerinin hayırlı ve bereketli olması için siz kıymetli hocalarımızdan ve dua dostlarımızdan samimi birer dua istirham ediyoruz."
+            </p>
+            <p className="mt-4 text-right font-black text-xs sm:text-sm text-emerald-700 dark:text-emerald-500">
+              Rabbimiz, bu mütevazı çalışmayı katında kabul buyursun. Bizleri rızasına uygun işler yapmaya muvaffak kılsın. Amin.
+            </p>
+          </div>
+        </div>
+
+        {/* Contact Details Panel */}
+        <div className="w-full max-w-6xl bg-white/45 dark:bg-slate-900/35 border border-slate-200/50 dark:border-slate-800/50 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-5 shadow-md backdrop-blur-md">
+          <div className="text-center sm:text-left">
+            <h4 className="font-extrabold text-xs sm:text-sm text-slate-850 dark:text-slate-300 uppercase tracking-wider">
+              Destek ve Talepleriniz İçin
+            </h4>
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+              Görüş, öneri veya destek taleplerinizi bize e-posta ile iletebilirsiniz.
+            </p>
+          </div>
+
+          <div className="flex items-center gap-2.5 shrink-0">
+            <a
+              href="mailto:mhmdhsyn1453@gmail.com"
+              className="px-4.5 py-2.5 bg-slate-800 hover:bg-slate-900 dark:bg-slate-200 dark:text-slate-950 text-white font-black text-xs rounded-xl shadow-md transition-all hover:scale-105 active:scale-95 cursor-pointer"
+            >
+              mhmdhsyn1453@gmail.com
+            </a>
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText("mhmdhsyn1453@gmail.com");
+                playSound('tick');
+                alert("E-posta adresi panoya kopyalandı!");
+              }}
+              className="p-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 rounded-xl cursor-pointer shadow-sm hover:scale-105 active:scale-95 transition-all"
+              title="Adresi Kopyala"
+            >
+              📋
+            </button>
+          </div>
+        </div>
+
+        {/* Back button */}
+        <div className="flex w-full justify-center">
+          <button
+            onClick={() => { setActiveTab('home'); playSound('tick'); }}
+            className="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-black shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 transition-all active:scale-95 cursor-pointer text-sm"
+          >
+            Anasayfaya Dön ➔
+          </button>
+        </div>
+
+      </motion.div>
+    );
+  };
+
   // Render station inside active gameplay loop
   const renderGameplayStation = () => {
     const currentActiveTeam = teams.find((t) => t.active) || teams[0];
@@ -658,24 +858,23 @@ export default function App() {
 
       {/* Splash Screen Fullscreen Overlay */}
       {showSplash && basmalaData && (
-        <div 
-          className={`fixed inset-0 z-[99999] ${isDarkMode ? 'bg-[#0a192f]/50 text-slate-100' : 'bg-[#faf6ef]/45 text-slate-800'} backdrop-blur-[12px] flex flex-col items-center justify-center select-none transition-all duration-1000 ease-in-out ${
-            fadeOutSplash ? 'opacity-0 pointer-events-none' : 'opacity-100'
-          }`} 
+        <div
+          className={`fixed inset-0 z-[99999] ${isDarkMode ? 'bg-[#0a192f]/50 text-slate-100' : 'bg-[#faf6ef]/45 text-slate-800'} backdrop-blur-[12px] flex flex-col items-center justify-center select-none transition-all duration-1000 ease-in-out ${fadeOutSplash ? 'opacity-0 pointer-events-none' : 'opacity-100'
+            }`}
           id="splash-screen"
         >
           <div className="w-full max-w-[920px] h-[420px] sm:h-[550px] flex items-center justify-center px-6">
-            <Lottie 
+            <Lottie
               lottieRef={(instance) => {
                 lottieRef.current = instance;
                 if (instance) {
                   instance.setSpeed(1.25); // Speed up slightly to complete in about 4s
                 }
               }}
-              animationData={basmalaData} 
-              loop={false} 
-              style={{ 
-                filter: isDarkMode 
+              animationData={basmalaData}
+              loop={false}
+              style={{
+                filter: isDarkMode
                   ? 'invert(74%) sepia(51%) saturate(579%) hue-rotate(354deg) brightness(105%) contrast(92%)' // Premium Gold in Dark Mode
                   : 'invert(24%) sepia(95%) saturate(366%) hue-rotate(120deg) brightness(88%) contrast(92%)' // Deep Emerald in Light Mode
               }}
@@ -762,10 +961,9 @@ export default function App() {
             src="assets/bg-video.mp4"
           />
           {/* Glass blur overlay: fades out (opacity-0) when splash ends, revealing the clear video during cinematic phase */}
-          <div 
-            className={`absolute inset-0 bg-white/15 dark:bg-[#0a192f]/35 backdrop-blur-[10px] pointer-events-none transition-opacity duration-[1200ms] ease-in-out ${
-              (activeTab === 'home' && cinematicPhase === 'cinematic') ? 'opacity-0' : 'opacity-100'
-            }`} 
+          <div
+            className={`absolute inset-0 bg-white/15 dark:bg-[#0a192f]/35 backdrop-blur-[10px] pointer-events-none transition-opacity duration-[1200ms] ease-in-out ${(activeTab === 'home' && cinematicPhase === 'cinematic') ? 'opacity-0' : 'opacity-100'
+              }`}
           />
         </div>
       )}
@@ -792,108 +990,208 @@ export default function App() {
         </button>
       )}
 
+      {/* Premium Top Right Control Panel on Homepage */}
+      {activeTab === 'home' && phase !== 'gameplay' && phase !== 'victory' && phase !== 'custom_editor' && (
+        <div
+          className={`fixed top-6 right-6 z-50 flex items-center gap-3.5 transition-all duration-700 ease-in-out ${cinematicPhase === 'ready'
+            ? 'opacity-100 translate-y-0 pointer-events-auto'
+            : 'opacity-0 -translate-y-6 pointer-events-none'
+            }`}
+          id="homepage-control-dock"
+        >
+          {/* Theme Toggle Button */}
+          <button
+            onClick={toggleDarkMode}
+            className="group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-emerald-500/10 hover:border-emerald-500/30 dark:hover:border-emerald-500/30"
+            title={isDarkMode ? "Aydınlık Mod" : "Karanlık Mod"}
+          >
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            {isDarkMode ? (
+              <Sun className="w-5.5 h-5.5 text-amber-400 group-hover:rotate-45 transition-transform duration-500" />
+            ) : (
+              <Moon className="w-5.5 h-5.5 text-indigo-600 group-hover:-rotate-12 transition-transform duration-500" />
+            )}
+          </button>
+
+          <button
+            onClick={() => { setActiveTab('about'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
+            className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 ${activeTab === 'about'
+              ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/20'
+              : 'bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)]'
+              }`}
+            title="Hakkımızda & Dua Talebi"
+          >
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <img src="assets/logo.png" alt="Logo" className="w-15 h-15 object-contain relative z-10 group-hover:scale-110 transition-transform duration-300" />
+          </button>
+
+          {/* Fullscreen Toggle Button */}
+          <button
+            onClick={toggleFullscreen}
+            className="group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-emerald-500/10 hover:border-emerald-500/30 dark:hover:border-emerald-500/30"
+            title={isFullscreen ? "Tam Ekrandan Çık" : "Tam Ekran Yap"}
+          >
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            {isFullscreen ? (
+              <Minimize2 className="w-5.5 h-5.5 text-emerald-600 dark:text-emerald-400" />
+            ) : (
+              <Maximize2 className="w-5.5 h-5.5 text-emerald-700 dark:text-emerald-500" />
+            )}
+          </button>
+        </div>
+      )}
+
       {/* Sleek Floating Vertical Navigation Sidebar */}
-      {phase !== 'gameplay' && phase !== 'victory' && phase !== 'custom_editor' && (
-        <div 
-          className={`fixed top-[180px] left-6 z-50 flex flex-col gap-3 transition-all duration-500 ease-in-out ${
-            cinematicPhase === 'ready' 
-              ? (isFocused ? '-translate-x-24 opacity-0 pointer-events-none' : 'translate-x-0 opacity-100 pointer-events-auto') 
-              : 'opacity-0 pointer-events-none'
-          }`} 
+      {phase !== 'gameplay' && phase !== 'victory' && phase !== 'custom_editor' && activeTab !== 'home' && (
+        <div
+          className={`fixed top-[180px] left-6 z-50 flex flex-col gap-3 transition-all duration-500 ease-in-out ${cinematicPhase === 'ready'
+            ? (isFocused ? '-translate-x-24 opacity-0 pointer-events-none' : 'translate-x-0 opacity-100 pointer-events-auto')
+            : 'opacity-0 pointer-events-none'
+            }`}
           id="floating-vertical-nav"
         >
           {/* Home button */}
-          <button
-            onClick={() => { setActiveTab('home'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
-            className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-md cursor-pointer transition-all hover:scale-115 active:scale-95 border-3 ${activeTab === 'home'
-                ? 'bg-emerald-500 border-emerald-600 text-white shadow-md'
-                : 'bg-white border-slate-200 text-slate-600 hover:text-slate-800 hover:border-slate-350'
-              }`}
-            title="Anasayfa"
-          >
-            <Home className="w-5 h-5" />
-          </button>
+          {activeTab !== 'home' && (
+            <button
+              onClick={() => { setActiveTab('home'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
+              className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border ${activeTab === 'home'
+                ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white border-emerald-600 shadow-lg shadow-emerald-500/20'
+                : 'border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-emerald-500/30 dark:hover:border-emerald-500/30'
+                }`}
+              title="Anasayfa"
+            >
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <Home className="w-5 h-5 relative z-10" />
+            </button>
+          )}
 
           {/* Elif-Ba button */}
-          <button
-            onClick={() => { setActiveTab('elifba'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
-            className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-md cursor-pointer transition-all hover:scale-115 active:scale-95 border-3 ${activeTab === 'elifba'
-                ? 'bg-emerald-500 border-emerald-600 text-white shadow-md'
-                : 'bg-white border-slate-200 text-slate-600 hover:text-emerald-700 hover:border-emerald-300'
-              }`}
-            title="Elif-Ba"
-          >
-            <ElifBaIcon className="w-5 h-5" />
-          </button>
+          {activeTab !== 'home' && (
+            <button
+              onClick={() => { setActiveTab('elifba'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
+              className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border ${activeTab === 'elifba'
+                ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white border-emerald-600 shadow-lg shadow-emerald-500/20'
+                : 'border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-emerald-500/30 dark:hover:border-emerald-500/30'
+                }`}
+              title="Elif-Ba"
+            >
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <div className="relative z-10">
+                <ElifBaIcon className="w-5 h-5" />
+              </div>
+            </button>
+          )}
 
           {/* Kur'an-ı Kerim button */}
-          <button
-            onClick={() => { setActiveTab('quran'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
-            className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-md cursor-pointer transition-all hover:scale-115 active:scale-95 border-3 ${activeTab === 'quran'
-                ? 'bg-emerald-500 border-emerald-600 text-white shadow-md'
-                : 'bg-white border-slate-200 text-slate-600 hover:text-teal-700 hover:border-teal-300'
-              }`}
-            title="Kur'an-ı Kerim"
-          >
-            <BookOpen className="w-5 h-5" />
-          </button>
+          {activeTab !== 'home' && (
+            <button
+              onClick={() => { setActiveTab('quran'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
+              className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border ${activeTab === 'quran'
+                ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white border-emerald-600 shadow-lg shadow-emerald-500/20'
+                : 'border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-emerald-500/30 dark:hover:border-emerald-500/30'
+                }`}
+              title="Kur'an-ı Kerim"
+            >
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <BookOpen className="w-5 h-5 relative z-10" />
+            </button>
+          )}
 
           {/* Ezber Listesi button */}
-          <button
-            onClick={() => { setActiveTab('ezber'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
-            className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-md cursor-pointer transition-all hover:scale-115 active:scale-95 border-3 ${activeTab === 'ezber'
-                ? 'bg-emerald-500 border-emerald-600 text-white shadow-md'
-                : 'bg-white border-slate-200 text-slate-600 hover:text-violet-750 hover:border-violet-300'
-              }`}
-            title="Ezber Listesi"
-          >
-            <Award className="w-5 h-5" />
-          </button>
+          {activeTab !== 'home' && (
+            <button
+              onClick={() => { setActiveTab('ezber'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
+              className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border ${activeTab === 'ezber'
+                ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white border-emerald-600 shadow-lg shadow-emerald-500/20'
+                : 'border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-emerald-500/30 dark:hover:border-emerald-500/30'
+                }`}
+              title="Ezber Listesi"
+            >
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <Award className="w-5 h-5 relative z-10" />
+            </button>
+          )}
 
           {/* Ders İçerikleri button */}
-          <button
-            onClick={() => { setActiveTab('lessons'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
-            className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-md cursor-pointer transition-all hover:scale-115 active:scale-95 border-3 ${activeTab === 'lessons'
-                ? 'bg-emerald-500 border-emerald-600 text-white shadow-md'
-                : 'bg-white border-slate-200 text-slate-600 hover:text-amber-700 hover:border-amber-300'
-              }`}
-            title="Ders İçerikleri"
-          >
-            <GraduationCap className="w-5 h-5" />
-          </button>
+          {activeTab !== 'home' && (
+            <button
+              onClick={() => { setActiveTab('lessons'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
+              className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border ${activeTab === 'lessons'
+                ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white border-emerald-600 shadow-lg shadow-emerald-500/20'
+                : 'border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-emerald-500/30 dark:hover:border-emerald-500/30'
+                }`}
+              title="Ders İçerikleri"
+            >
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <GraduationCap className="w-5 h-5 relative z-10" />
+            </button>
+          )}
 
           {/* Oyunlar button */}
-          <button
-            onClick={() => { setActiveTab('games'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
-            className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-md cursor-pointer transition-all hover:scale-115 active:scale-95 border-3 ${activeTab === 'games'
-                ? 'bg-emerald-500 border-emerald-600 text-white shadow-md'
-                : 'bg-white border-slate-200 text-slate-600 hover:text-sky-700 hover:border-sky-300'
-              }`}
-            title="Oyunlar"
-          >
-            <Gamepad2 className="w-5 h-5" />
-          </button>
+          {activeTab !== 'home' && (
+            <button
+              onClick={() => { setActiveTab('games'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
+              className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border ${activeTab === 'games'
+                ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white border-emerald-600 shadow-lg shadow-emerald-500/20'
+                : 'border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-emerald-500/30 dark:hover:border-emerald-500/30'
+                }`}
+              title="Oyunlar"
+            >
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <Gamepad2 className="w-5 h-5 relative z-10" />
+            </button>
+          )}
 
           {/* Theme Toggle button */}
           <button
             onClick={toggleDarkMode}
-            className="w-12 h-12 rounded-2xl flex items-center justify-center shadow-md cursor-pointer transition-all hover:scale-115 active:scale-95 border-3 bg-white border-slate-205 text-slate-600 hover:text-amber-500 hover:border-amber-300"
+            className="group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-emerald-500/10 hover:border-emerald-500/30 dark:hover:border-emerald-500/30"
             title={isDarkMode ? "Aydınlık Mod" : "Karanlık Mod"}
           >
-            {isDarkMode ? <Sun className="w-5 h-5 text-amber-500 animate-spin-slow" /> : <Moon className="w-5 h-5 text-indigo-500" />}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            {isDarkMode ? (
+              <Sun className="w-5.5 h-5.5 text-amber-400 group-hover:rotate-45 transition-transform duration-500 relative z-10" />
+            ) : (
+              <Moon className="w-5.5 h-5.5 text-indigo-600 group-hover:-rotate-12 transition-transform duration-500 relative z-10" />
+            )}
+          </button>
+
+          {/* Fullscreen Toggle button */}
+          <button
+            onClick={toggleFullscreen}
+            className="group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-emerald-500/10 hover:border-emerald-500/30 dark:hover:border-emerald-500/30"
+            title={isFullscreen ? "Tam Ekrandan Çık" : "Tam Ekran Yap"}
+          >
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            {isFullscreen ? (
+              <Minimize2 className="w-5.5 h-5.5 text-emerald-600 dark:text-emerald-400 relative z-10" />
+            ) : (
+              <Maximize2 className="w-5.5 h-5.5 text-emerald-700 dark:text-emerald-500 relative z-10" />
+            )}
+          </button>
+
+          {/* About & Dua button */}
+          <button
+            onClick={() => { setActiveTab('about'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
+            className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 ${activeTab === 'about'
+              ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/20'
+              : 'bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)]'
+              }`}
+            title="Hakkımızda & Dua Talebi"
+          >
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <img src="assets/logo.png" alt="Logo" className="w-15 h-15 object-contain relative z-10 group-hover:scale-110 transition-transform duration-300 relative z-10" />
           </button>
         </div>
       )}
 
       {/* 2. Main Content Flow */}
-      <main className={`flex-1 py-6 flex flex-col justify-center relative z-10 transition-all ${
-        isFocused
-          ? 'p-0'
-          : (phase !== 'gameplay' && phase !== 'victory' && phase !== 'custom_editor'
-            ? 'pl-20 pr-4 sm:pl-24 sm:pr-6'
-            : 'px-4 sm:px-6')
-        } transition-opacity duration-[1500ms] ease-in-out ${
-          cinematicPhase === 'ready' ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+      <main className={`flex-1 py-6 flex flex-col justify-center relative z-10 transition-all ${isFocused
+        ? 'p-0'
+        : (phase !== 'gameplay' && phase !== 'victory' && phase !== 'custom_editor'
+          ? 'pl-20 pr-4 sm:pl-24 sm:pr-6'
+          : 'px-4 sm:px-6')
+        } transition-opacity duration-[1500ms] ease-in-out ${cinematicPhase === 'ready' ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}>
         {phase !== 'custom_editor' && phase !== 'victory' && (
           <>
@@ -910,9 +1208,9 @@ export default function App() {
             )}
 
             {activeTab === 'elifba' && (
-              <KuranElifba 
-                initialTab="elifba" 
-                isDarkMode={isDarkMode} 
+              <KuranElifba
+                initialTab="elifba"
+                isDarkMode={isDarkMode}
                 toggleDarkMode={toggleDarkMode}
                 isFocused={isFocused}
                 setIsFocused={setIsFocused}
@@ -920,9 +1218,9 @@ export default function App() {
             )}
 
             {activeTab === 'quran' && (
-              <KuranElifba 
-                initialTab="kuran" 
-                isDarkMode={isDarkMode} 
+              <KuranElifba
+                initialTab="kuran"
+                isDarkMode={isDarkMode}
                 toggleDarkMode={toggleDarkMode}
                 isFocused={isFocused}
                 setIsFocused={setIsFocused}
@@ -974,6 +1272,7 @@ export default function App() {
                 <GameHub isDarkMode={isDarkMode} />
               </motion.div>
             )}
+            {activeTab === 'about' && renderAboutView()}
           </>
         )}
 
@@ -1014,8 +1313,8 @@ export default function App() {
                   <div
                     key={team.id}
                     className={`flex items-center justify-between p-4 rounded-2xl border-2 ${idx === 0
-                        ? 'bg-yellow-50 border-yellow-400 text-yellow-950 shadow-md ring-2 ring-yellow-200'
-                        : 'bg-slate-50 border-slate-100 text-slate-700'
+                      ? 'bg-yellow-50 border-yellow-400 text-yellow-950 shadow-md ring-2 ring-yellow-200'
+                      : 'bg-slate-50 border-slate-100 text-slate-700'
                       }`}
                   >
                     <div className="flex items-center gap-3">
@@ -1051,17 +1350,20 @@ export default function App() {
       {/* Floating Smart Board Pen Tool Button */}
       {cinematicPhase === 'ready' && (
         <button
+          onMouseDown={handleMouseDown}
+          onTouchStart={handleTouchStart}
           onClick={() => {
+            if (dragDistance.current > 5) return;
             setShowPenTool(prev => !prev);
             playSound('tick');
           }}
-          className={`fixed bottom-6 right-6 z-[99997] w-14 h-14 rounded-full flex items-center justify-center shadow-2xl border-3 transition-all hover:scale-115 active:scale-90 cursor-pointer ${
-            showPenTool
-              ? 'bg-red-500 border-red-650 text-white ring-4 ring-red-150 animate-pulse'
-              : isDarkMode
-                ? 'bg-slate-800 border-slate-750 text-slate-300 hover:border-emerald-500 hover:text-emerald-400 shadow-emerald-950/20'
-                : 'bg-white border-slate-200 text-slate-600 hover:border-emerald-500 hover:text-emerald-600 shadow-slate-350/30'
-          }`}
+          style={{ left: `${penPos.x}px`, top: `${penPos.y}px` }}
+          className={`fixed z-[99997] w-14 h-14 rounded-full flex items-center justify-center shadow-2xl border-3 transition-[background-color,border-color,color,box-shadow,transform] duration-200 cursor-move select-none ${showPenTool
+            ? 'bg-red-500 border-red-650 text-white ring-4 ring-red-150 animate-pulse'
+            : isDarkMode
+              ? 'bg-slate-800 border-slate-750 text-slate-300 hover:border-emerald-500 hover:text-emerald-400 shadow-emerald-950/20 hover:scale-110 active:scale-95'
+              : 'bg-white border-slate-200 text-slate-600 hover:border-emerald-500 hover:text-emerald-600 shadow-slate-350/30 hover:scale-110 active:scale-95'
+            }`}
           title={showPenTool ? "Tahta Kalemini Kapat" : "Akıllı Tahta Kalemini Aç"}
         >
           <Pencil className="w-6 h-6" />
@@ -1070,9 +1372,10 @@ export default function App() {
 
       {/* Fullscreen drawing layer */}
       {showPenTool && (
-        <AkilliTahta 
-          onClose={() => setShowPenTool(false)} 
+        <AkilliTahta
+          onClose={() => setShowPenTool(false)}
           isDarkMode={isDarkMode}
+          buttonPosition={penPos}
         />
       )}
 
@@ -1091,7 +1394,7 @@ export default function App() {
                 v{updateAvailable.version}
               </span>
             </div>
-            
+
             <div className="text-sm text-slate-650 dark:text-slate-350 text-left bg-slate-50 dark:bg-slate-950/40 p-4 rounded-2xl border border-slate-100 dark:border-slate-850 max-h-40 overflow-y-auto">
               <p className="font-bold mb-2">Yapılan Değişiklikler:</p>
               {updateAvailable.releaseNotes ? (
@@ -1146,7 +1449,7 @@ export default function App() {
 
             <div className="flex flex-col gap-2">
               <div className="w-full h-4 bg-slate-100 dark:bg-slate-950/50 rounded-full overflow-hidden p-0.5 border border-slate-200/50 dark:border-slate-800">
-                <div 
+                <div
                   className="h-full bg-gradient-to-r from-sky-500 to-blue-500 rounded-full transition-all duration-300"
                   style={{ width: `${Math.round(downloadProgress?.percent || 0)}%` }}
                 />
@@ -1175,7 +1478,7 @@ export default function App() {
                 Uygulama başarıyla indirildi. Yüklenmek üzere yeniden başlatılıyor...
               </p>
             </div>
-            
+
             <div className="flex justify-center py-2">
               <div className="w-10 h-10 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin" />
             </div>

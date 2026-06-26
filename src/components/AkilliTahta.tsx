@@ -5,9 +5,10 @@ import { playSound } from './BuzzerAndTimer';
 interface AkilliTahtaProps {
   onClose: () => void;
   isDarkMode?: boolean;
+  buttonPosition?: { x: number; y: number };
 }
 
-export const AkilliTahta: React.FC<AkilliTahtaProps> = ({ onClose, isDarkMode = false }) => {
+export const AkilliTahta: React.FC<AkilliTahtaProps> = ({ onClose, isDarkMode = false, buttonPosition }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const contextRef = useRef<CanvasRenderingContext2D | null>(null);
 
@@ -179,6 +180,42 @@ export const AkilliTahta: React.FC<AkilliTahtaProps> = ({ onClose, isDarkMode = 
     return 'crosshair';
   };
 
+  // Position panel relative to button position
+  const getPanelStyle = () => {
+    if (!buttonPosition) {
+      return {
+        right: '16px',
+        top: '50%',
+        transform: 'translateY(-50%)'
+      };
+    }
+    
+    const { x, y } = buttonPosition;
+    const isLeftHalf = x < window.innerWidth / 2;
+    const isTopHalf = y < window.innerHeight / 2;
+
+    const style: React.CSSProperties = {
+      position: 'fixed',
+      zIndex: 50,
+    };
+
+    // Horizontal placement: offset it so it doesn't overlap the button
+    if (isLeftHalf) {
+      style.left = `${x + 70}px`; // Show to the right of the button
+    } else {
+      style.right = `${window.innerWidth - x + 10}px`; // Show to the left of the button
+    }
+
+    // Vertical placement (expand upwards if in bottom half, downwards if in top half)
+    if (isTopHalf) {
+      style.top = `${Math.max(10, y - 50)}px`;
+    } else {
+      style.bottom = `${Math.max(10, window.innerHeight - y - 60)}px`;
+    }
+
+    return style;
+  };
+
   return (
     <div 
       className={`fixed inset-0 z-[99998] transition-colors duration-500 pointer-events-none select-none ${
@@ -222,7 +259,8 @@ export const AkilliTahta: React.FC<AkilliTahtaProps> = ({ onClose, isDarkMode = 
 
       {/* 3. Çizim Yüzen Paleti */}
       <div 
-        className={`fixed right-4 top-1/2 -translate-y-1/2 z-50 pointer-events-auto flex flex-col items-center bg-white/95 dark:bg-slate-850/98 backdrop-blur-md border-3 ${
+        style={getPanelStyle()}
+        className={`pointer-events-auto flex flex-col items-center bg-white/95 dark:bg-slate-850/98 backdrop-blur-md border-3 ${
           isLocked 
             ? 'border-red-500 ring-4 ring-red-100 dark:ring-red-950/20' 
             : 'border-slate-200 dark:border-slate-700/80 shadow-2xl'
