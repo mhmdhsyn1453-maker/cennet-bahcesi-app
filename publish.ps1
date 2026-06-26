@@ -28,7 +28,8 @@ if ($LASTEXITCODE -ne 0) {
 
 # ADIM 3: Electron paketini derle ve GitHub Releases'a yukle (Masaustu versiyonu)
 Write-Host "[3/4] Electron paketleniyor ve GitHub Releases'a yukleniyor..." -ForegroundColor Cyan
-npx electron-builder -wl --publish always --config.directories.output="d:\PSV\dist-electron"
+npx electron-builder -w --publish always --config.directories.output="d:\PSV\dist-electron"
+
 
 
 # ADIM 4: Gecici dizinleri temizle
