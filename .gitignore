@@ -10,3 +10,5 @@ coverage/
 public/assets/*.mp4
 public/assets/*.mp3
 !.env.example
+.firebase/
+
