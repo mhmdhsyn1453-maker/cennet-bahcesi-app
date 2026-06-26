@@ -1,7 +1,7 @@
 {
   "name": "cennet-bahcesi",
   "private": true,
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "Cennet Bahçesi",
   "description": "Cennet Bahçesi Uygulaması",
   "type": "module",
@@ -72,7 +72,9 @@
     },
     "linux": {
       "icon": "logo.svg",
-      "target": ["AppImage"],
+      "target": [
+        "AppImage"
+      ],
       "category": "Education"
     },
     "nsis": {
