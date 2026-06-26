@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Sparkles, Gamepad2 } from 'lucide-react';
+// 1. Lottie bileşenini ve JSON dosyasını içe aktarıyoruz
+import Lottie from 'lottie-react';
+import titleAnimation from '../../public/assets/title.json'; // Klasör yapına göre yolunu (path) gerekirse güncelle
 
 interface GameHubProps {
   isDarkMode?: boolean;
@@ -38,8 +41,14 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
         <div className="absolute -top-24 -right-24 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-sky-500/5 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="w-24 h-24 bg-gradient-to-br from-sky-100 to-indigo-100 dark:from-indigo-950/40 dark:to-violet-950/30 rounded-[2rem] border-3 border-sky-350 dark:border-indigo-800 flex items-center justify-center text-4xl mb-6 shadow-inner animate-bounce duration-1000">
-          🎮
+        {/* 2. Zıplayan emojiyi kaldırıp yerine Lottie animasyonunu ekledik */}
+        <div className="w-48 h-48 mb-4 flex items-center justify-center overflow-hidden">
+          <Lottie
+            animationData={titleAnimation}
+            loop={true}
+            autoplay={true}
+            className="w-full h-full"
+          />
         </div>
 
         <h3 className="font-display font-black text-2xl text-slate-800 dark:text-white tracking-tight uppercase flex items-center gap-2">
@@ -49,7 +58,7 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
         </h3>
 
         <p className="text-sm text-slate-500 dark:text-slate-400 font-semibold mt-4 max-w-lg leading-relaxed">
-          Sınıf içi takım yarışmalarımız ve akıllı tahta uyumlu interaktif meclis oyunlarımız, baştan sona yenilenen eğlenceli altyapısıyla çok yakında burada sizlerle buluşacaktır.
+          Sınıf içi takım yarışmalarımız ve akıllı tahta uyumlu interaktif oyunlarımız, eğlenceli altyapısıyla çok yakında burada sizlerle buluşacaktır.\n Anlayışınız için teşekkür ederiz.
         </p>
 
         <div className="mt-8 px-5 py-2.5 bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-750 text-slate-500 dark:text-slate-400 text-xs font-black uppercase tracking-wider rounded-2xl shadow-sm">
