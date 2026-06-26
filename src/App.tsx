@@ -66,6 +66,56 @@ export default function App() {
   const safetyTimerRef = useRef<NodeJS.Timeout | null>(null);
   const lottieRef = useRef<any>(null);
 
+  // === AUTO-UPDATER STATES ===
+  const [updateAvailable, setUpdateAvailable] = useState<any>(null);
+  const [updateDownloading, setUpdateDownloading] = useState<boolean>(false);
+  const [downloadProgress, setDownloadProgress] = useState<any>(null);
+  const [updateDownloaded, setUpdateDownloaded] = useState<boolean>(false);
+  const [updateError, setUpdateError] = useState<string | null>(null);
+  const [showWelcomeChangelog, setShowWelcomeChangelog] = useState<string | null>(null);
+
+  // Auto-updater event listeners on mount
+  useEffect(() => {
+    // @ts-ignore
+    if (window.electronAPI) {
+      // @ts-ignore
+      window.electronAPI.getAppVersion().then((currentVersion: string) => {
+        const lastVersion = localStorage.getItem('cennet_bahcesi_last_version');
+        if (lastVersion && lastVersion !== currentVersion) {
+          setShowWelcomeChangelog(currentVersion);
+        }
+        localStorage.setItem('cennet_bahcesi_last_version', currentVersion);
+      }).catch((e: any) => console.warn("App version check failed:", e));
+
+      // @ts-ignore
+      window.electronAPI.onUpdateAvailable((info: any) => {
+        setUpdateAvailable(info);
+      });
+
+      // @ts-ignore
+      window.electronAPI.onDownloadProgress((progress: any) => {
+        setDownloadProgress(progress);
+        setUpdateDownloading(true);
+      });
+
+      // @ts-ignore
+      window.electronAPI.onUpdateDownloaded((info: any) => {
+        setUpdateDownloading(false);
+        setUpdateDownloaded(true);
+        setTimeout(() => {
+          // @ts-ignore
+          window.electronAPI.quitAndInstall();
+        }, 3000);
+      });
+
+      // @ts-ignore
+      window.electronAPI.onUpdateError((errMessage: string) => {
+        setUpdateError(errMessage);
+        setUpdateDownloading(false);
+      });
+    }
+  }, []);
+
   // Helper to safely play background music and handle browser autoplay blocks + fade-in volume
   const playBackgroundMusic = (startTime: number = 35) => {
     if (!audioRef.current) return;
@@ -735,7 +785,7 @@ export default function App() {
               playBackgroundMusic(35);
             }
           }}
-          className="fixed top-6 right-6 z-[99999] flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-white/20 dark:bg-slate-900/40 backdrop-blur-md border border-white/30 dark:border-slate-700/50 text-slate-800 dark:text-slate-200 text-xs font-black tracking-widest uppercase hover:bg-white/35 dark:hover:bg-slate-800/50 hover:border-emerald-450 dark:hover:border-emerald-500 transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-md select-none animate-fade-in"
+          className="fixed bottom-[20%] left-1/2 -translate-x-1/2 z-[99999] flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-white/20 dark:bg-slate-900/40 backdrop-blur-md border border-white/30 dark:border-slate-700/50 text-slate-800 dark:text-slate-200 text-xs font-black tracking-widest uppercase hover:bg-white/35 dark:hover:bg-slate-800/50 hover:border-emerald-450 dark:hover:border-emerald-500 transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-md select-none animate-fade-in"
         >
           <span>Girişi Atla</span>
           <span className="text-sm font-normal">➔</span>
@@ -1024,6 +1074,153 @@ export default function App() {
           onClose={() => setShowPenTool(false)} 
           isDarkMode={isDarkMode}
         />
+      )}
+
+      {/* 🌟 Custom Update Available Modal */}
+      {updateAvailable && !updateDownloading && !updateDownloaded && (
+        <div className="fixed inset-0 z-[100000] flex items-center justify-center bg-black/60 backdrop-blur-md animate-fade-in">
+          <div className="w-[90%] max-w-lg p-8 rounded-3xl bg-white/80 dark:bg-slate-900/80 border border-white/20 dark:border-slate-800/80 shadow-2xl backdrop-blur-xl flex flex-col gap-6 text-center select-none">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-16 h-16 rounded-2xl bg-emerald-100 dark:bg-emerald-950/40 text-emerald-500 dark:text-emerald-400 flex items-center justify-center animate-bounce">
+                <Sparkles className="w-8 h-8" />
+              </div>
+              <h2 className="text-2xl font-black text-slate-800 dark:text-slate-100">
+                Yeni Sürüm Hazır!
+              </h2>
+              <span className="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 text-xs font-bold">
+                v{updateAvailable.version}
+              </span>
+            </div>
+            
+            <div className="text-sm text-slate-650 dark:text-slate-350 text-left bg-slate-50 dark:bg-slate-950/40 p-4 rounded-2xl border border-slate-100 dark:border-slate-850 max-h-40 overflow-y-auto">
+              <p className="font-bold mb-2">Yapılan Değişiklikler:</p>
+              {updateAvailable.releaseNotes ? (
+                <div dangerouslySetInnerHTML={{ __html: updateAvailable.releaseNotes }} />
+              ) : (
+                <p>Bu güncelleme performans iyileştirmeleri ve hata düzeltmeleri içerir.</p>
+              )}
+            </div>
+
+            <div className="flex gap-4">
+              <button
+                onClick={() => {
+                  setUpdateAvailable(null);
+                  playSound('tick');
+                }}
+                className="flex-1 py-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-bold transition-all active:scale-95 cursor-pointer"
+              >
+                Daha Sonra
+              </button>
+              <button
+                onClick={() => {
+                  playSound('tick');
+                  setUpdateDownloading(true);
+                  // @ts-ignore
+                  if (window.electronAPI) {
+                    // @ts-ignore
+                    window.electronAPI.startDownload();
+                  }
+                }}
+                className="flex-1 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-black shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 transition-all active:scale-95 cursor-pointer"
+              >
+                Güncellemeyi Başlat
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 📥 Custom Downloading Modal */}
+      {updateDownloading && (
+        <div className="fixed inset-0 z-[100000] flex items-center justify-center bg-black/60 backdrop-blur-md">
+          <div className="w-[90%] max-w-md p-8 rounded-3xl bg-white/80 dark:bg-slate-900/80 border border-white/20 dark:border-slate-800/80 shadow-2xl backdrop-blur-xl flex flex-col gap-6 text-center select-none">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-16 h-16 rounded-2xl bg-sky-100 dark:bg-sky-950/40 text-sky-500 dark:text-sky-400 flex items-center justify-center animate-pulse">
+                <Clock className="w-8 h-8" />
+              </div>
+              <h2 className="text-2xl font-black text-slate-800 dark:text-slate-100">
+                Güncelleme İndiriliyor
+              </h2>
+              <p className="text-xs text-slate-500">Lütfen uygulamayı kapatmayın...</p>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <div className="w-full h-4 bg-slate-100 dark:bg-slate-950/50 rounded-full overflow-hidden p-0.5 border border-slate-200/50 dark:border-slate-800">
+                <div 
+                  className="h-full bg-gradient-to-r from-sky-500 to-blue-500 rounded-full transition-all duration-300"
+                  style={{ width: `${Math.round(downloadProgress?.percent || 0)}%` }}
+                />
+              </div>
+              <div className="flex justify-between text-xs text-slate-500 font-bold px-1">
+                <span>{downloadProgress?.transferred ? `${(downloadProgress.transferred / 1024 / 1024).toFixed(1)} MB` : '0 MB'} / {downloadProgress?.total ? `${(downloadProgress.total / 1024 / 1024).toFixed(1)} MB` : '...'}</span>
+                <span>%{Math.round(downloadProgress?.percent || 0)}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 🎉 Custom Downloaded Modal */}
+      {updateDownloaded && (
+        <div className="fixed inset-0 z-[100000] flex items-center justify-center bg-black/60 backdrop-blur-md">
+          <div className="w-[90%] max-w-md p-8 rounded-3xl bg-white/80 dark:bg-slate-900/80 border border-white/20 dark:border-slate-800/80 shadow-2xl backdrop-blur-xl flex flex-col gap-6 text-center select-none">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-16 h-16 rounded-2xl bg-emerald-100 dark:bg-emerald-950/40 text-emerald-500 dark:text-emerald-400 flex items-center justify-center">
+                <Award className="w-8 h-8 animate-bounce" />
+              </div>
+              <h2 className="text-2xl font-black text-slate-800 dark:text-slate-100">
+                Güncelleme Hazır!
+              </h2>
+              <p className="text-sm text-slate-650 dark:text-slate-355">
+                Uygulama başarıyla indirildi. Yüklenmek üzere yeniden başlatılıyor...
+              </p>
+            </div>
+            
+            <div className="flex justify-center py-2">
+              <div className="w-10 h-10 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 🥳 Custom Welcome Changelog Modal */}
+      {showWelcomeChangelog && (
+        <div className="fixed inset-0 z-[100000] flex items-center justify-center bg-black/60 backdrop-blur-md animate-fade-in">
+          <div className="w-[90%] max-w-lg p-8 rounded-3xl bg-white/80 dark:bg-slate-900/80 border border-white/20 dark:border-slate-800/80 shadow-2xl backdrop-blur-xl flex flex-col gap-6 text-center select-none">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-16 h-16 rounded-2xl bg-amber-100 dark:bg-amber-950/40 text-amber-500 dark:text-amber-400 flex items-center justify-center animate-bounce">
+                <Sparkles className="w-8 h-8" />
+              </div>
+              <h2 className="text-2xl font-black text-slate-800 dark:text-slate-100">
+                Cennet Bahçesi Güncellendi!
+              </h2>
+              <span className="px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400 text-xs font-bold">
+                Yeni Sürüm v{showWelcomeChangelog}
+              </span>
+            </div>
+
+            <div className="text-sm text-slate-600 dark:text-slate-300 text-left bg-slate-50 dark:bg-slate-950/40 p-5 rounded-2xl border border-slate-100 dark:border-slate-800 flex flex-col gap-3">
+              <p className="font-extrabold text-slate-750 dark:text-slate-200">🚀 Bu Sürümde Neler Yeni?</p>
+              <ul className="list-disc pl-5 flex flex-col gap-2.5 text-xs text-slate-650 dark:text-slate-300">
+                <li><strong>Akıllı Tahta Desteği:</strong> Kurulum artık Deep Freeze korumalı akıllı tahtalarda D: sürücüsüne yapılabilir ve veriler kaybolmaz!</li>
+                <li><strong>Özel Güncelleme Ekranı:</strong> Güncellemeler artık siz onay vermeden inmez ve ilerleme çubuğuyla izlenir.</li>
+                <li><strong>Hızlandırılmış Arka Plan:</strong> Giriş arka plan videosu 33 MB'a sıkıştırılarak web sürümündeki kasılmalar giderildi.</li>
+                <li><strong>Mushaf Modunda Dinle:</strong> Mushaf sayfa okuma moduna Dinleme butonu eklendi.</li>
+                <li><strong>Sayfa Çevirme (Swipe):</strong> Kuran okuma sayfalarında dokunarak sağa/sola sayfa çevirme mantığı düzeltildi.</li>
+              </ul>
+            </div>
+
+            <button
+              onClick={() => {
+                setShowWelcomeChangelog(null);
+                playSound('tick');
+              }}
+              className="w-full py-4 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 text-white font-black shadow-lg shadow-amber-500/20 hover:shadow-amber-500/30 transition-all active:scale-95 cursor-pointer"
+            >
+              Hemen Başla ➔
+            </button>
+          </div>
+        </div>
       )}
     </div>
   );

@@ -1,7 +1,19 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 const { autoUpdater } = require("electron-updater");
 const isDev = process.env.IS_DEV === 'true';
+
+// === DEEP FREEZE BYPASS (D:\ Sürücüsü için userData Yönlendirmesi) ===
+if (!isDev) {
+  const appPath = app.getPath('exe');
+  const driveLetter = appPath.substring(0, 3); // e.g. "D:\"
+  if (driveLetter.toLowerCase() !== 'c:\\') {
+    // C:\ dışındaki sürücülerde (genelde dondurulmamış D:\ sürücüsü)
+    // verileri uygulamanın kurulu olduğu klasörün içine (cennet-bahcesi-data) yazarız.
+    const customUserData = path.join(path.dirname(appPath), 'cennet-bahcesi-data');
+    app.setPath('userData', customUserData);
+  }
+}
 
 let mainWindow;
 
@@ -57,7 +69,6 @@ app.whenReady().then(() => {
   createWindow();
 
   // === AUTO-UPDATER (OTOMATİK GÜNCELLEME) KODLARI ===
-  // Geliştirme modundayken (localhost) güncellemeleri kontrol etmesin diye isDev kontrolü koyduk
   if (!isDev) {
     const tokenPart1 = "ghp_";
     const tokenPart2 = "KEAbYwvAz2FnvtC8cp22fAIoZALkFT2i5p1H";
@@ -65,22 +76,62 @@ app.whenReady().then(() => {
       "Authorization": `token ${tokenPart1}${tokenPart2}`
     };
 
-    // Uygulama açıldıktan 3 saniye sonra GitHub'ı kontrol eder
-    setTimeout(() => {
-      autoUpdater.checkForUpdatesAndNotify();
-    }, 3000);
+    // Otomatik indirmeyi kapatıyoruz (kullanıcı modal onayını bekleyecek)
+    autoUpdater.autoDownload = false;
 
-    // Yeni güncelleme bulundu uyarısı
-    autoUpdater.on('update-available', () => {
-      console.log('Yeni bir güncelleme bulundu, arka planda indiriliyor...');
+    // Uygulama açıldıktan 5 saniye sonra güncelleme kontrolü yapar
+    setTimeout(() => {
+      autoUpdater.checkForUpdates().catch(err => {
+        console.error("Güncelleme kontrol hatası:", err);
+      });
+    }, 5000);
+
+    // Yeni güncelleme bulunduğunda
+    autoUpdater.on('update-available', (info) => {
+      console.log('Güncelleme bulundu:', info.version);
+      if (mainWindow) {
+        mainWindow.webContents.send('update-available', info);
+      }
     });
 
-    // Güncelleme tamamen indiğinde eskiyi kapatıp yenisini kurar
-    autoUpdater.on('update-downloaded', () => {
+    // Hata durumunda
+    autoUpdater.on('error', (err) => {
+      console.error('Güncelleme hatası:', err);
+      if (mainWindow) {
+        mainWindow.webContents.send('update-error', err.message);
+      }
+    });
+
+    // İndirme ilerlemesi
+    autoUpdater.on('download-progress', (progressObj) => {
+      if (mainWindow) {
+        mainWindow.webContents.send('download-progress', progressObj);
+      }
+    });
+
+    // İndirme tamamlandığında
+    autoUpdater.on('update-downloaded', (info) => {
+      if (mainWindow) {
+        mainWindow.webContents.send('update-downloaded', info);
+      }
+    });
+
+    // IPC Dinleyicileri (React'tan gelen sinyaller)
+    ipcMain.on('start-download', () => {
+      console.log('İndirme başlatılıyor...');
+      autoUpdater.downloadUpdate();
+    });
+
+    ipcMain.on('quit-and-install', () => {
+      console.log('Uygulama kapatılıp güncelleniyor...');
       autoUpdater.quitAndInstall();
     });
   }
-  // ==================================================
+
+  // Sürüm sorgulaması için handler
+  ipcMain.handle('get-app-version', () => {
+    return app.getVersion();
+  });
 
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow();
