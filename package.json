@@ -71,7 +71,7 @@
       "target": "nsis"
     },
     "linux": {
-      "icon": "icon.ico",
+      "icon": "logo.svg",
       "target": ["AppImage"],
       "category": "Education"
     },
