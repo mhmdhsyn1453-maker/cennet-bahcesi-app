@@ -1022,7 +1022,7 @@ export default function App() {
             title="Hakkımızda & Dua Talebi"
           >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-            <img src="assets/logo.png" alt="Logo" className="w-15 h-15 object-contain relative z-10 group-hover:scale-110 transition-transform duration-300" />
+            <img src="assets/logo.png" alt="Logo" className="w-12 h-12 object-contain relative z-10 group-hover:scale-110 transition-transform duration-300" />
           </button>
 
           {/* Fullscreen Toggle Button */}
@@ -1180,7 +1180,7 @@ export default function App() {
             title="Hakkımızda & Dua Talebi"
           >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-            <img src="assets/logo.png" alt="Logo" className="w-15 h-15 object-contain relative z-10 group-hover:scale-110 transition-transform duration-300 relative z-10" />
+            <img src="assets/logo.png" alt="Logo" className="w-12 h-12 object-contain relative z-10 group-hover:scale-110 transition-transform duration-300 relative z-10" />
           </button>
         </div>
       )}
@@ -1507,9 +1507,11 @@ export default function App() {
               <ul className="list-disc pl-5 flex flex-col gap-2.5 text-xs text-slate-650 dark:text-slate-300">
                 <li><strong>Akıllı Tahta Desteği:</strong> Kurulum artık Deep Freeze korumalı akıllı tahtalarda D: sürücüsüne yapılabilir ve veriler kaybolmaz!</li>
                 <li><strong>Özel Güncelleme Ekranı:</strong> Güncellemeler artık siz onay vermeden inmez ve ilerleme çubuğuyla izlenir.</li>
-                <li><strong>Hızlandırılmış Arka Plan:</strong> Giriş arka plan videosu 33 MB'a sıkıştırılarak web sürümündeki kasılmalar giderildi.</li>
-                <li><strong>Mushaf Modunda Dinle:</strong> Mushaf sayfa okuma moduna Dinleme butonu eklendi.</li>
-                <li><strong>Sayfa Çevirme (Swipe):</strong> Kuran okuma sayfalarında dokunarak sağa/sola sayfa çevirme mantığı düzeltildi.</li>
+                <li><strong>Hakkımızda:</strong> Hakkımızda sayfası geliştirildi ve içine gerekli bilgiler eklendi.</li>
+                <li><strong>Tam Ekran Modu:</strong>Artık Tam ekran yapılabilinir hale gtirildi</li>
+                <li><strong>Kalem Aracı:</strong>Kalem aracı artık sürüklenebilir hale gtirildi.</li>
+                <li><strong>İkonlar:</strong> İkonlar yenilendi ve daha modern bir görünüm kazandırıldı.</li>
+                <li><strong>Oyun Menüsü:</strong>Oyun menüsü için hazırlıklar devam ediyor...</li>
               </ul>
             </div>
 
