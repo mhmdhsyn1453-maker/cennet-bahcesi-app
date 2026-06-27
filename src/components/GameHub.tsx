@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  Sparkles, Gamepad2, Users, Trophy, ArrowLeft, Maximize2, Minimize2, 
-  Play, Settings, User, Landmark, Shield, Flame, Compass, HelpCircle, 
+import {
+  Sparkles, Gamepad2, Users, Trophy, ArrowLeft, Maximize2, Minimize2,
+  Play, Settings, User, Landmark, Shield, Flame, Compass, HelpCircle,
   Star, BookOpen, Clock, Heart, Award, CheckCircle2, XCircle
 } from 'lucide-react';
 import Lottie from 'lottie-react';
 import titleAnimation from '../../public/assets/title.json';
 import { Team } from '../types';
-import { 
-  getCurriculumQuizQuestions, 
-  getRandomQuestionForLetter, 
+import {
+  getCurriculumQuizQuestions,
+  getRandomQuestionForLetter,
   getRandomVocabularyWords,
   getRandomVocabularyWordsByCategory,
   getRandomTrueFalseStatementsByCategory,
   getRandomTrueFalseStatements,
-  AZQuestion, 
+  AZQuestion,
   VocabularyWord,
   TrueFalseStatement,
   UnifiedQuizQuestion
@@ -30,7 +30,7 @@ const TEAM_PRESETS = [
   { name: 'Kurtuba Kahramanları', color: 'from-rose-400 to-red-500', bgBorder: 'border-rose-400/50', textColor: 'text-rose-500', shadowColor: 'shadow-rose-500/20', icon: 'Award' }
 ];
 
-const TURKISH_LETTERS = ['A','B','C','Ç','D','E','F','G','H','I','İ','K','L','M','N','O','Ö','P','R','S','Ş','T','U','Ü','V','Y','Z'];
+const TURKISH_LETTERS = ['A', 'B', 'C', 'Ç', 'D', 'E', 'F', 'G', 'H', 'I', 'İ', 'K', 'L', 'M', 'N', 'O', 'Ö', 'P', 'R', 'S', 'Ş', 'T', 'U', 'Ü', 'V', 'Y', 'Z'];
 
 // Türkçe Harfleri Büyük Harfe Çevirme Yardımcısı
 const toTurkishUpperCase = (str: string) => {
@@ -49,6 +49,22 @@ const cleanTurkish = (str: string) => {
     .trim()
     .replace(/[^a-zçğışöü0-9]/g, '');
 };
+
+// Global session cache to prevent duplicate questions across games
+const globalUsedQuestionIds = new Set<string>();
+
+export function markQuestionAsUsed(id: string) {
+  globalUsedQuestionIds.add(id);
+}
+
+export function filterUnusedQuestions(questions: UnifiedQuizQuestion[]): UnifiedQuizQuestion[] {
+  const unused = questions.filter(q => !globalUsedQuestionIds.has(q.id));
+  if (unused.length === 0) {
+    globalUsedQuestionIds.clear();
+    return questions;
+  }
+  return unused;
+}
 
 interface GameHubProps {
   isDarkMode?: boolean;
@@ -169,7 +185,7 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
 
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-6 select-none" id="game-hub-container">
-      
+
       {/* 1. ÜST BAŞLIK ALANI (Sadece oyun oynanmıyorken gösterilir) */}
       {view !== 'playing_game' && (
         <div className="bg-gradient-to-r from-sky-500 via-indigo-600 to-violet-600 border-b-6 border-indigo-700 p-6 rounded-[2.5rem] shadow-xl mb-6 flex items-center justify-between text-white relative overflow-hidden">
@@ -183,12 +199,12 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
                 CENNET BAHÇESİ OYUN MERKEZİ
               </h2>
               <p className="text-xs font-semibold text-white/90">
-                MEB Akıllı Tahtaları İçin Çevrimdışı İnteraktif Eğlence Portalı • <span className="text-yellow-300 font-extrabold">{quizQuestions.length + 200} Soru & Kelime Havuzu Aktif</span>
+                Çevrimdışı İnteraktif Eğlence Portalı • <span className="text-yellow-300 font-extrabold">{quizQuestions.length + 200} Soru & Kelime Havuzu İle...</span>
               </p>
             </div>
           </div>
           {view !== 'mode_select' && (
-            <button 
+            <button
               onClick={() => setView('mode_select')}
               className="relative z-10 px-4 py-2 bg-white/20 hover:bg-white/35 border border-white/30 rounded-2xl flex items-center gap-2 text-xs font-black uppercase tracking-wider transition-all hover:scale-105 active:scale-95 cursor-pointer"
             >
@@ -200,55 +216,94 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
 
       {/* 2. DİNAMİK GÖRÜNÜM AKIŞI */}
       <AnimatePresence mode="wait">
-        
+
         {/* A. ANA MOD SEÇİMİ (Bireysel vs Takım) */}
         {view === 'mode_select' && (
-          <motion.div 
+          <motion.div
             key="mode_select"
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            exit={{ opacity: 0, y: -20 }}
+            className="w-full max-w-4xl mx-auto flex flex-col gap-8 py-4 items-center"
           >
-            {/* Bireysel Oyunlar Butonu */}
-            <button
-              onClick={() => setView('individual_select')}
-              className="group text-left bg-white dark:bg-slate-800 border-4 border-slate-200 dark:border-slate-700 hover:border-sky-500 dark:hover:border-sky-500 rounded-[3rem] p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer relative overflow-hidden"
-            >
-              <div className="absolute -right-16 -bottom-16 w-48 h-48 bg-sky-500/5 rounded-full blur-2xl group-hover:bg-sky-500/10 transition-colors"></div>
-              <div className="w-16 h-16 rounded-2xl bg-sky-50 dark:bg-sky-950/40 border border-sky-100 dark:border-sky-900 flex items-center justify-center text-sky-500 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                <User className="w-8 h-8" />
-              </div>
-              <h3 className="font-display font-black text-2xl text-slate-800 dark:text-white mt-6 uppercase">
-                Bireysel Oyunlar
-              </h3>
-              <p className="text-xs text-slate-550 dark:text-slate-400 font-semibold mt-2 leading-relaxed">
-                Tek kişi veya sırayla oynanabilen, harf tahminleri, kelime bulmacaları ve reflex tabanlı eğlenceli oyunlar alanı.
-              </p>
-              <div className="mt-6 inline-flex items-center gap-2 text-xs font-black text-sky-650 dark:text-sky-400 uppercase tracking-widest">
-                Keşfetmeye Başla ➔
-              </div>
-            </button>
+            {/* Playful Welcoming Badge */}
+            <div className="flex items-center gap-2 px-4 py-1.5 bg-yellow-100 dark:bg-yellow-950/40 text-yellow-800 dark:text-yellow-300 rounded-full border border-yellow-200 dark:border-yellow-900/50 text-[10px] font-black uppercase tracking-widest animate-pulse">
+              🎮 Oyun Bölgesine Hoş Geldiniz! 🌟
+            </div>
 
-            {/* Takım Yarışmaları Butonu */}
-            <button
-              onClick={() => setView('team_config')}
-              className="group text-left bg-white dark:bg-slate-800 border-4 border-slate-200 dark:border-slate-700 hover:border-emerald-500 dark:hover:border-emerald-500 rounded-[3rem] p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer relative overflow-hidden"
-            >
-              <div className="absolute -right-16 -bottom-16 w-48 h-48 bg-emerald-500/5 rounded-full blur-2xl group-hover:bg-emerald-500/10 transition-colors"></div>
-              <div className="w-16 h-16 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900 flex items-center justify-center text-emerald-500 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                <Users className="w-8 h-8" />
-              </div>
-              <h3 className="font-display font-black text-2xl text-slate-800 dark:text-white mt-6 uppercase">
-                Takım Yarışmaları
+            {/* Title & Subtitle */}
+            <div className="text-center">
+              <h3 className="font-display font-black text-3xl sm:text-4xl text-slate-800 dark:text-white uppercase tracking-tight">
+                Nasıl Oynamak İstersiniz?
               </h3>
-              <p className="text-xs text-slate-550 dark:text-slate-400 font-semibold mt-2 leading-relaxed">
-                Sınıfı 2, 3 veya 4 farklı meclise (takıma) bölerek akıllı tahta başında süreli, heyecanlı ve tatlı rekabet içeren grup yarışmaları alanı.
+              <p className="text-xs text-slate-550 dark:text-slate-400 mt-2 max-w-md mx-auto leading-relaxed">
+                Birbirinden eğlenceli dini bilgi oyunlarını ister tek başınıza, ister arkadaşlarınızla takımlar halinde yarışarak oynayın!
               </p>
-              <div className="mt-6 inline-flex items-center gap-2 text-xs font-black text-emerald-650 dark:text-emerald-400 uppercase tracking-widest">
-                Takımları Kur ve Başla ➔
-              </div>
-            </button>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl">
+              {/* Bireysel Oyunlar Butonu */}
+              <button
+                onClick={() => setView('individual_select')}
+                className="group text-left bg-gradient-to-br from-sky-400 via-sky-500 to-indigo-650 text-white rounded-[2.5rem] p-8 shadow-[0_15px_30px_-5px_rgba(14,165,233,0.25)] dark:shadow-[0_15px_30px_-5px_rgba(14,165,233,0.1)] hover:shadow-[0_20px_40px_-5px_rgba(14,165,233,0.4)] hover:scale-103 active:scale-97 cursor-pointer transition-all duration-300 relative overflow-hidden border-4 border-sky-300 dark:border-sky-700/50 flex flex-col justify-between min-h-[300px]"
+              >
+                {/* Floating Shapes */}
+                <div className="absolute -right-12 -bottom-12 w-48 h-48 bg-white/10 rounded-full blur-2xl group-hover:scale-120 transition-all duration-500"></div>
+                <div className="absolute right-6 top-6 text-7xl opacity-15 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">👤</div>
+
+                <div>
+                  <div className="w-16 h-16 rounded-2xl bg-white/20 border border-white/30 flex items-center justify-center text-white group-hover:scale-115 group-hover:rotate-6 transition-all duration-300 shadow-inner">
+                    <User className="w-8 h-8" />
+                  </div>
+                  <h3 className="font-display font-black text-2xl mt-6 uppercase tracking-tight">
+                    Bireysel Oyunlar
+                  </h3>
+                  <p className="text-xs text-sky-100/90 font-medium mt-2 leading-relaxed max-w-[280px]">
+                    Tek kişi veya sırayla oynanabilen, harf tahminleri, kelime bulmacaları ve refleks tabanlı eğlenceli oyunlar alanı.
+                  </p>
+                </div>
+
+                <div className="mt-8 flex justify-between items-center z-10">
+                  <div className="px-3.5 py-1.5 bg-white/20 rounded-full text-[10px] font-black uppercase tracking-widest border border-white/10">
+                    🎮 20 Farklı Oyun
+                  </div>
+                  <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest bg-white text-indigo-600 px-4 py-2 rounded-xl shadow-md group-hover:bg-sky-50 transition-colors">
+                    Başla ➔
+                  </div>
+                </div>
+              </button>
+
+              {/* Takım Yarışmaları Butonu */}
+              <button
+                onClick={() => setView('team_config')}
+                className="group text-left bg-gradient-to-br from-emerald-400 via-emerald-500 to-teal-655 text-white rounded-[2.5rem] p-8 shadow-[0_15px_30px_-5px_rgba(52,211,153,0.25)] dark:shadow-[0_15px_30px_-5px_rgba(52,211,153,0.1)] hover:shadow-[0_20px_40px_-5px_rgba(52,211,153,0.4)] hover:scale-103 active:scale-97 cursor-pointer transition-all duration-300 relative overflow-hidden border-4 border-emerald-300 dark:border-emerald-700/50 flex flex-col justify-between min-h-[300px]"
+              >
+                {/* Floating Shapes */}
+                <div className="absolute -right-12 -bottom-12 w-48 h-48 bg-white/10 rounded-full blur-2xl group-hover:scale-120 transition-all duration-500"></div>
+                <div className="absolute right-6 top-6 text-7xl opacity-15 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">👥</div>
+
+                <div>
+                  <div className="w-16 h-16 rounded-2xl bg-white/20 border border-white/30 flex items-center justify-center text-white group-hover:scale-115 group-hover:rotate-6 transition-all duration-300 shadow-inner">
+                    <Users className="w-8 h-8" />
+                  </div>
+                  <h3 className="font-display font-black text-2xl mt-6 uppercase tracking-tight">
+                    Takım Yarışmaları
+                  </h3>
+                  <p className="text-xs text-emerald-100/90 font-medium mt-2 leading-relaxed max-w-[280px]">
+                    Sınıfı meclislere (takımlara) bölerek tatlı bir rekabete girin! Jeopardy, halat çekme ve bomba düellosu gibi 6 büyük yarışma.
+                  </p>
+                </div>
+
+                <div className="mt-8 flex justify-between items-center z-10">
+                  <div className="px-3.5 py-1.5 bg-white/20 rounded-full text-[10px] font-black uppercase tracking-widest border border-white/10">
+                    🔥 6 Dev Yarışma
+                  </div>
+                  <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest bg-white text-teal-700 px-4 py-2 rounded-xl shadow-md group-hover:bg-emerald-50 transition-colors">
+                    Kurulum Yap ➔
+                  </div>
+                </div>
+              </button>
+            </div>
           </motion.div>
         )}
 
@@ -259,47 +314,46 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.98 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
           >
             {INDIVIDUAL_GAMES.map((game) => (
               <div
                 key={game.id}
-                className={`bg-white dark:bg-slate-800 border-3 rounded-[2.5rem] p-6 shadow-md relative overflow-hidden flex flex-col justify-between transition-all duration-300 ${
-                  game.comingSoon 
-                    ? 'border-slate-100 dark:border-slate-850 opacity-60' 
+                className={`bg-white dark:bg-slate-800 border-3 rounded-[1.75rem] p-4.5 shadow-md relative overflow-hidden flex flex-col justify-between transition-all duration-300 ${game.comingSoon
+                    ? 'border-slate-100 dark:border-slate-850 opacity-60'
                     : 'border-slate-200 dark:border-slate-700 hover:border-indigo-500 dark:hover:border-indigo-500 hover:shadow-lg'
-                }`}
+                  }`}
               >
                 {game.comingSoon && (
-                  <div className="absolute top-4 right-4 px-2.5 py-1 bg-slate-150 dark:bg-slate-900 border border-slate-200 dark:border-slate-750 text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-wider rounded-xl">
+                  <div className="absolute top-3 right-3 px-2 py-0.5 bg-slate-150 dark:bg-slate-900 border border-slate-200 dark:border-slate-750 text-[9px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-wider rounded-lg">
                     ⏳ Hazırlanıyor
                   </div>
                 )}
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-900/50 flex items-center justify-center shadow-inner mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-900/50 flex items-center justify-center shadow-inner mb-3 [&>svg]:w-5 [&>svg]:h-5 shrink-0">
                     {game.icon}
                   </div>
-                  <h4 className="font-display font-black text-lg text-slate-800 dark:text-white uppercase tracking-tight">
+                  <h4 className="font-display font-black text-sm sm:text-base text-slate-800 dark:text-white uppercase tracking-tight">
                     {game.title}
                   </h4>
-                  <p className="text-xs text-slate-550 dark:text-slate-400 font-semibold mt-2 leading-relaxed">
+                  <p className="text-[10.5px] text-slate-550 dark:text-slate-400 font-semibold mt-1.5 leading-snug">
                     {game.desc}
                   </p>
                 </div>
-                
-                <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-750/50 flex justify-between items-center">
-                  <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
+
+                <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-750/50 flex justify-between items-center">
+                  <span className="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
                     Bireysel Oyun
                   </span>
                   {!game.comingSoon ? (
                     <button
                       onClick={() => handleStartGame(game.id, game.title, false)}
-                      className="px-4 py-2 bg-gradient-to-r from-sky-500 to-indigo-500 text-white text-xs font-black uppercase tracking-wider rounded-xl shadow-md hover:shadow-indigo-500/20 hover:scale-105 active:scale-95 cursor-pointer transition-all flex items-center gap-1"
+                      className="px-3 py-1.5 bg-gradient-to-r from-sky-500 to-indigo-500 text-white text-[10px] font-black uppercase tracking-wider rounded-lg shadow-md hover:shadow-indigo-500/20 hover:scale-105 active:scale-95 cursor-pointer transition-all flex items-center gap-1"
                     >
-                      <Play className="w-3.5 h-3.5 fill-current" /> Oyna
+                      <Play className="w-3 h-3 fill-current" /> Oyna
                     </button>
                   ) : (
-                    <div className="text-[10px] font-black text-indigo-400 uppercase tracking-wider bg-indigo-50 dark:bg-indigo-950/20 px-2 py-1 rounded-lg">
+                    <div className="text-[9px] font-black text-indigo-400 uppercase tracking-wider bg-indigo-50 dark:bg-indigo-950/20 px-2 py-0.5 rounded-md">
                       Çok Yakında
                     </div>
                   )}
@@ -332,11 +386,10 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
                   <button
                     key={count}
                     onClick={() => setTeamCount(count)}
-                    className={`flex flex-col items-center justify-center p-4 rounded-2xl border-3 transition-all cursor-pointer ${
-                      teamCount === count
+                    className={`flex flex-col items-center justify-center p-4 rounded-2xl border-3 transition-all cursor-pointer ${teamCount === count
                         ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-500 text-emerald-900 dark:text-emerald-400 shadow-md scale-[1.02]'
                         : 'bg-slate-50 dark:bg-slate-900/50 border-slate-200 dark:border-slate-750 text-slate-400 dark:text-slate-550 hover:border-slate-350 dark:hover:border-slate-600'
-                    }`}
+                      }`}
                   >
                     <span className="text-3xl font-display font-black mb-1">{count}</span>
                     <span className="text-[10px] font-black tracking-widest uppercase">TAKIM</span>
@@ -409,7 +462,7 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
                 {teams.slice(0, teamCount).map((team, idx) => {
                   const preset = TEAM_PRESETS[idx];
                   return (
-                    <div 
+                    <div
                       key={team.id}
                       className="px-4 py-2 border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 rounded-2xl flex items-center gap-2"
                     >
@@ -423,7 +476,7 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
                   );
                 })}
               </div>
-              <button 
+              <button
                 onClick={() => setView('team_config')}
                 className="px-3 py-1.5 bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 border border-slate-200 dark:border-slate-755 rounded-xl text-[10px] font-black uppercase tracking-wider text-slate-600 dark:text-slate-400 transition-colors cursor-pointer"
               >
@@ -432,46 +485,45 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
             </div>
 
             {/* Takım Oyunları Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
               {TEAM_GAMES.map((game) => (
                 <div
                   key={game.id}
-                  className={`bg-white dark:bg-slate-800 border-3 rounded-[2.5rem] p-6 shadow-md relative overflow-hidden flex flex-col justify-between transition-all duration-300 ${
-                    game.comingSoon 
-                      ? 'border-slate-100 dark:border-slate-850 opacity-60' 
+                  className={`bg-white dark:bg-slate-800 border-3 rounded-[1.75rem] p-4.5 shadow-md relative overflow-hidden flex flex-col justify-between transition-all duration-300 ${game.comingSoon
+                      ? 'border-slate-100 dark:border-slate-850 opacity-60'
                       : 'border-slate-200 dark:border-slate-700 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-lg'
-                  }`}
+                    }`}
                 >
                   {game.comingSoon && (
-                    <div className="absolute top-4 right-4 px-2.5 py-1 bg-slate-150 dark:bg-slate-900 border border-slate-200 dark:border-slate-750 text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-wider rounded-xl">
+                    <div className="absolute top-3 right-3 px-2 py-0.5 bg-slate-150 dark:bg-slate-900 border border-slate-200 dark:border-slate-750 text-[9px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-wider rounded-lg">
                       ⏳ Hazırlanıyor
                     </div>
                   )}
                   <div>
-                    <div className="w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-900/50 flex items-center justify-center shadow-inner mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-900/50 flex items-center justify-center shadow-inner mb-3 [&>svg]:w-5 [&>svg]:h-5 shrink-0">
                       {game.icon}
                     </div>
-                    <h4 className="font-display font-black text-lg text-slate-800 dark:text-white uppercase tracking-tight">
+                    <h4 className="font-display font-black text-sm sm:text-base text-slate-800 dark:text-white uppercase tracking-tight">
                       {game.title}
                     </h4>
-                    <p className="text-xs text-slate-550 dark:text-slate-400 font-semibold mt-2 leading-relaxed">
+                    <p className="text-[10.5px] text-slate-550 dark:text-slate-400 font-semibold mt-1.5 leading-snug">
                       {game.desc}
                     </p>
                   </div>
-                  
-                  <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-750/50 flex justify-between items-center">
-                    <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
-                      {teamCount} Takımlı Yarışma
+
+                  <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-750/50 flex justify-between items-center">
+                    <span className="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
+                      {teamCount} Takım
                     </span>
                     {!game.comingSoon ? (
                       <button
                         onClick={() => handleStartGame(game.id, game.title, true)}
-                        className="px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs font-black uppercase tracking-wider rounded-xl shadow-md hover:shadow-emerald-500/20 hover:scale-105 active:scale-95 cursor-pointer transition-all flex items-center gap-1"
+                        className="px-3 py-1.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-[10px] font-black uppercase tracking-wider rounded-lg shadow-md hover:shadow-emerald-500/20 hover:scale-105 active:scale-95 cursor-pointer transition-all flex items-center gap-1"
                       >
-                        <Play className="w-3.5 h-3.5 fill-current" /> Başlat
+                        <Play className="w-3 h-3 fill-current" /> Başlat
                       </button>
                     ) : (
-                      <div className="text-[10px] font-black text-emerald-400 uppercase tracking-wider bg-emerald-50 dark:bg-emerald-950/20 px-2 py-1 rounded-lg">
+                      <div className="text-[9px] font-black text-emerald-400 uppercase tracking-wider bg-emerald-50 dark:bg-emerald-950/20 px-2 py-0.5 rounded-md">
                         Çok Yakında
                       </div>
                     )}
@@ -626,11 +678,10 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
                   return (
                     <div
                       key={team.id}
-                      className={`p-3 rounded-2xl border-2 bg-white dark:bg-slate-850 shadow-sm flex items-center justify-between transition-all ${
-                        team.active 
-                          ? 'border-emerald-500 ring-3 ring-emerald-100 dark:ring-emerald-950/20' 
+                      className={`p-3 rounded-2xl border-2 bg-white dark:bg-slate-850 shadow-sm flex items-center justify-between transition-all ${team.active
+                          ? 'border-emerald-500 ring-3 ring-emerald-100 dark:ring-emerald-950/20'
                           : 'border-slate-200 dark:border-slate-750'
-                      }`}
+                        }`}
                     >
                       <div className="flex items-center gap-2">
                         <div className={`w-7 h-7 rounded-lg bg-gradient-to-br ${preset.color} text-white flex items-center justify-center shadow-sm`}>
@@ -690,7 +741,7 @@ const PassaparolaGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
   const [userInput, setUserInput] = useState<string>('');
   const [timer, setTimer] = useState<number>(300); // 5 dakika
   const [showReveal, setShowReveal] = useState<boolean>(false);
-  
+
   // Harf durumları: 'pending' | 'correct' | 'incorrect' | 'passed'
   const [lettersState, setLettersState] = useState<Record<string, 'pending' | 'correct' | 'incorrect' | 'passed'>>(() => {
     const states: Record<string, 'pending' | 'correct' | 'incorrect' | 'passed'> = {};
@@ -700,7 +751,7 @@ const PassaparolaGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
   // Bu oyun oturumuna özel dondurulmuş sorular listesi
   const [gameQuestions, setGameQuestions] = useState<Record<string, AZQuestion>>({});
-  
+
   // Pas geçmişi (Tur 2'de sormak için harflerin indeksleri)
   const [passHistory, setPassHistory] = useState<number[]>([]);
 
@@ -789,7 +840,7 @@ const PassaparolaGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
       // 2. Turda pas geçmişinden sıradaki harfe git
       const currentPassIndexInHistory = passHistory.indexOf(currentIdx);
       const remainingPasses = passHistory.filter(idx => updatedStates[TURKISH_LETTERS[idx]] === 'passed');
-      
+
       if (remainingPasses.length > 0) {
         // Hala cevaplanmamış paslar var
         let nextPassIdx = -1;
@@ -816,10 +867,10 @@ const PassaparolaGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
   // Cevap Verme
   const handleAnswerSubmit = () => {
     if (!userInput.trim()) return;
-    
+
     const cleanInput = cleanTurkish(userInput);
     const cleanCorrect = cleanTurkish(activeQuestionObj.answer);
-    
+
     const isCorrect = cleanInput === cleanCorrect;
     if (isCorrect) {
       playSound('success');
@@ -894,7 +945,7 @@ const PassaparolaGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
       {gameStatus === 'playing' && activeQuestionObj && (
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-          
+
           {/* Sol Kolon: Harf Çemberi */}
           <div className="lg:col-span-6 flex justify-center py-4">
             <div className="relative w-64 h-64 sm:w-[350px] sm:h-[350px] rounded-full border-2 border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/20 shadow-inner flex items-center justify-center">
@@ -904,7 +955,7 @@ const PassaparolaGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                 const radius = 43; // Yüzde yarıçap
                 const left = `calc(50% + ${radius * Math.cos(rad)}% - 1.15rem)`;
                 const top = `calc(50% + ${radius * Math.sin(rad)}% - 1.15rem)`;
-                
+
                 let colorClass = 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border-slate-200 dark:border-slate-700';
                 if (lettersState[letter] === 'correct') {
                   colorClass = 'bg-emerald-500 text-white border-emerald-600 shadow-sm';
@@ -915,7 +966,7 @@ const PassaparolaGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                 } else if (letter === activeLetter) {
                   colorClass = 'bg-sky-500 text-white border-sky-600 scale-125 ring-4 ring-sky-100 dark:ring-sky-950/40 animate-pulse';
                 }
-                
+
                 return (
                   <div
                     key={letter}
@@ -926,7 +977,7 @@ const PassaparolaGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                   </div>
                 );
               })}
-              
+
               {/* Çemberin İçi Merkez Bilgi Alanı */}
               <div className="w-36 h-36 sm:w-48 sm:h-48 rounded-full bg-white dark:bg-slate-900 border-4 border-slate-100 dark:border-slate-800 shadow-lg flex flex-col items-center justify-center p-3 text-center z-10">
                 <span className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">
@@ -944,7 +995,7 @@ const PassaparolaGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
           {/* Sağ Kolon: Soru Paneli ve Klavye */}
           <div className="lg:col-span-6 flex flex-col gap-4">
-            
+
             {/* Süre & Doğru/Yanlış Sayacı */}
             <div className="flex justify-between items-center bg-white dark:bg-slate-800 border-2 border-slate-150 dark:border-slate-750 px-4 py-2.5 rounded-2xl shadow-sm text-xs font-black">
               <span className="text-slate-650 dark:text-slate-350 flex items-center gap-1">
@@ -984,7 +1035,7 @@ const PassaparolaGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                   placeholder={`${activeLetter} harfi ile başlayan cevabı yazın...`}
                   className="flex-1 bg-white dark:bg-slate-850 border-3 border-slate-200 dark:border-slate-700 focus:border-sky-500 dark:focus:border-sky-500 focus:outline-none p-3.5 rounded-2xl text-slate-800 dark:text-white font-display text-sm font-black tracking-wide"
                 />
-                
+
                 <button
                   onClick={handlePass}
                   className="px-5 py-3.5 bg-amber-400 border-b-4 border-amber-600 font-black text-xs uppercase tracking-wider rounded-2xl text-slate-900 hover:scale-105 active:scale-95 transition-all cursor-pointer shadow"
@@ -1002,7 +1053,7 @@ const PassaparolaGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
               {/* Öğretmen Override ve Kolay Cevap Gör Modu */}
               <div className="flex justify-between items-center bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 p-2.5 rounded-xl">
-                <button 
+                <button
                   onClick={() => setShowReveal(!showReveal)}
                   className="px-3 py-1 bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-950/30 dark:hover:bg-indigo-900/30 text-indigo-650 dark:text-indigo-400 text-[10px] font-black uppercase tracking-wider rounded-lg transition-colors cursor-pointer"
                 >
@@ -1015,13 +1066,13 @@ const PassaparolaGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                       Cevap: <span className="underline">{activeQuestionObj.answer}</span>
                     </span>
                     <div className="flex gap-1.5">
-                      <button 
+                      <button
                         onClick={() => handleManualMark('correct')}
                         className="px-2.5 py-1 bg-emerald-500 text-white text-[9px] font-black uppercase rounded-md shadow hover:scale-105 transition-all cursor-pointer"
                       >
                         DOĞRU
                       </button>
-                      <button 
+                      <button
                         onClick={() => handleManualMark('incorrect')}
                         className="px-2.5 py-1 bg-rose-500 text-white text-[9px] font-black uppercase rounded-md shadow hover:scale-105 transition-all cursor-pointer"
                       >
@@ -1036,9 +1087,9 @@ const PassaparolaGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
             {/* Akıllı Tahta Sanal Klavyesi (Q Klavye Türkçe) */}
             <div className="bg-slate-100/70 dark:bg-slate-950/20 border border-slate-200 dark:border-slate-800 p-3 rounded-2xl flex flex-col gap-1.5 shadow-inner">
               {[
-                ['Q','W','E','R','T','Y','U','I','O','P','Ğ','Ü'],
-                ['A','S','D','F','G','H','J','K','L','Ş','İ'],
-                ['Z','X','C','V','B','N','M','Ö','Ç','SİL','TEMİZLE']
+                ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'Ğ', 'Ü'],
+                ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Ş', 'İ'],
+                ['Z', 'X', 'C', 'V', 'B', 'N', 'M', 'Ö', 'Ç', 'SİL', 'TEMİZLE']
               ].map((row, rIdx) => (
                 <div key={rIdx} className="flex justify-center gap-1 w-full">
                   {row.map((key) => {
@@ -1047,11 +1098,10 @@ const PassaparolaGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                       <button
                         key={key}
                         onClick={() => handleVirtualKeyPress(key)}
-                        className={`py-2 text-xs font-black rounded-lg transition-all active:scale-90 cursor-pointer shadow-sm flex items-center justify-center ${
-                          isSpecial 
-                            ? 'bg-slate-300 dark:bg-slate-800 hover:bg-slate-350 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 px-3' 
+                        className={`py-2 text-xs font-black rounded-lg transition-all active:scale-90 cursor-pointer shadow-sm flex items-center justify-center ${isSpecial
+                            ? 'bg-slate-300 dark:bg-slate-800 hover:bg-slate-350 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 px-3'
                             : 'flex-1 bg-white dark:bg-slate-850 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-850 dark:text-slate-100'
-                        }`}
+                          }`}
                       >
                         {key}
                       </button>
@@ -1190,7 +1240,7 @@ const MosqueHangmanGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) =>
     const uniqueWordLetters = new Set(currentWordObj.word.split(''));
     const correctGuesses = [...uniqueWordLetters].filter(l => guessedLetters.includes(l));
     const ratio = correctGuesses.length / uniqueWordLetters.size;
-    
+
     if (gameStatus === 'won') return 6;
     return Math.floor(ratio * 6);
   };
@@ -1221,10 +1271,10 @@ const MosqueHangmanGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) =>
 
       {gameStatus === 'playing' && currentWordObj && (
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-          
+
           {/* Sol Kolon: Sevimli Cami İnşaat SVG Alanı */}
           <div className="lg:col-span-6 flex flex-col items-center py-4 bg-white dark:bg-slate-850 border-3 border-slate-200 dark:border-slate-750 p-6 rounded-[2.5rem] shadow-md relative min-h-[300px]">
-            
+
             {/* Süre & Can Göstergesi (Kalpler) */}
             <div className="w-full flex justify-between items-center mb-4 z-10 px-2">
               <span className={`text-xs font-black flex items-center gap-1 ${timer <= 10 ? 'text-rose-500 animate-pulse text-sm font-black' : 'text-slate-500 dark:text-slate-400'}`}>
@@ -1232,9 +1282,9 @@ const MosqueHangmanGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) =>
               </span>
               <div className="flex gap-1.5 justify-center">
                 {Array.from({ length: 6 }).map((_, i) => (
-                  <Heart 
-                    key={i} 
-                    className={`w-5 h-5 ${i < lives ? 'text-red-500 fill-red-500 scale-110' : 'text-slate-200 dark:text-slate-750 scale-90'} transition-all duration-300`} 
+                  <Heart
+                    key={i}
+                    className={`w-5 h-5 ${i < lives ? 'text-red-500 fill-red-500 scale-110' : 'text-slate-200 dark:text-slate-750 scale-90'} transition-all duration-300`}
                   />
                 ))}
               </div>
@@ -1302,7 +1352,7 @@ const MosqueHangmanGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) =>
 
           {/* Sağ Kolon: Kelime Gösterimi ve Klavye */}
           <div className="lg:col-span-6 flex flex-col gap-5 items-center">
-            
+
             {/* Kelime Karakter Kutuları */}
             <div className="flex flex-wrap gap-2.5 justify-center py-6">
               {currentWordObj.word.split('').map((char, index) => {
@@ -1310,11 +1360,10 @@ const MosqueHangmanGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) =>
                 return (
                   <div
                     key={index}
-                    className={`w-10 h-12 sm:w-12 sm:h-14 rounded-2xl border-3 flex items-center justify-center font-display font-black text-lg sm:text-xl shadow transition-all duration-300 ${
-                      isGuessed
+                    className={`w-10 h-12 sm:w-12 sm:h-14 rounded-2xl border-3 flex items-center justify-center font-display font-black text-lg sm:text-xl shadow transition-all duration-300 ${isGuessed
                         ? 'bg-white dark:bg-slate-800 border-emerald-500 text-emerald-600 dark:text-emerald-400 scale-105'
                         : 'bg-slate-100/50 dark:bg-slate-900/50 border-slate-200 dark:border-slate-750 text-transparent'
-                    }`}
+                      }`}
                   >
                     {isGuessed ? char : '_'}
                   </div>
@@ -1327,16 +1376,16 @@ const MosqueHangmanGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) =>
               <span className="block text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center mb-3">
                 Klavye Tıklayarak Harf Seçin:
               </span>
-              
+
               <div className="flex flex-wrap gap-1.5 justify-center">
                 {TURKISH_LETTERS.map((letter) => {
                   const isUsed = guessedLetters.includes(letter);
                   const isInWord = currentWordObj.word.includes(letter);
-                  
+
                   let btnStyle = 'bg-slate-50 hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-100 border-slate-200 dark:border-slate-700';
                   if (isUsed) {
-                    btnStyle = isInWord 
-                      ? 'bg-emerald-500 border-emerald-600 text-white opacity-50 cursor-not-allowed pointer-events-none' 
+                    btnStyle = isInWord
+                      ? 'bg-emerald-500 border-emerald-600 text-white opacity-50 cursor-not-allowed pointer-events-none'
                       : 'bg-rose-500 border-rose-600 text-white opacity-40 cursor-not-allowed pointer-events-none';
                   }
 
@@ -1477,10 +1526,10 @@ const DoorSwiperGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
   // Kapı Seçim Mantığı
   const handleSelectDoor = (userChoice: boolean) => {
     if (isAnswered || statements.length === 0) return;
-    
+
     const currentStatementObj = statements[currentIdx];
     const isCorrectChoice = userChoice === currentStatementObj.isCorrect;
-    
+
     setIsAnswered(true);
     setSelectedDoor(userChoice ? 'correct' : 'incorrect');
 
@@ -1533,7 +1582,7 @@ const DoorSwiperGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
       {gameStatus === 'playing' && currentStatement && (
         <div className="w-full flex flex-col gap-6 items-center">
-          
+
           {/* Üst Bilgi Barı */}
           <div className="w-full max-w-2xl flex justify-between items-center bg-white dark:bg-slate-850 border-2 border-slate-150 dark:border-slate-750 px-4 py-2.5 rounded-2xl shadow-sm text-xs font-black">
             <span className={`flex items-center gap-1 ${timer <= 10 ? 'text-rose-500 animate-pulse text-sm font-black' : 'text-slate-500 dark:text-slate-450'}`}>
@@ -1559,18 +1608,17 @@ const DoorSwiperGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
           {/* Kapılar Alanı */}
           <div className="w-full max-w-2xl grid grid-cols-2 gap-6 items-center py-2">
-            
+
             {/* 1. DOĞRU KAPISI */}
             <button
               onClick={() => handleSelectDoor(true)}
               disabled={isAnswered}
-              className={`group flex flex-col items-center justify-center p-6 bg-gradient-to-b from-emerald-400 to-emerald-600 dark:from-emerald-500 dark:to-emerald-700 text-white rounded-[2rem] border-4 border-emerald-350 dark:border-emerald-600 shadow-lg relative overflow-hidden transition-all duration-300 ${
-                isAnswered 
-                  ? selectedDoor === 'correct' 
-                    ? 'ring-4 ring-emerald-300 dark:ring-emerald-800 scale-105 shadow-emerald-500/20' 
-                    : 'opacity-40 scale-95 pointer-events-none' 
+              className={`group flex flex-col items-center justify-center p-6 bg-gradient-to-b from-emerald-400 to-emerald-600 dark:from-emerald-500 dark:to-emerald-700 text-white rounded-[2rem] border-4 border-emerald-350 dark:border-emerald-600 shadow-lg relative overflow-hidden transition-all duration-300 ${isAnswered
+                  ? selectedDoor === 'correct'
+                    ? 'ring-4 ring-emerald-300 dark:ring-emerald-800 scale-105 shadow-emerald-500/20'
+                    : 'opacity-40 scale-95 pointer-events-none'
                   : 'hover:scale-[1.03] active:scale-97 cursor-pointer hover:shadow-emerald-500/25'
-              }`}
+                }`}
             >
               <div className="absolute inset-0 bg-white/5 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity"></div>
               {/* Kapı Kemeri Şekli */}
@@ -1587,13 +1635,12 @@ const DoorSwiperGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
             <button
               onClick={() => handleSelectDoor(false)}
               disabled={isAnswered}
-              className={`group flex flex-col items-center justify-center p-6 bg-gradient-to-b from-rose-450 to-red-650 dark:from-rose-500 dark:to-red-700 text-white rounded-[2rem] border-4 border-rose-300 dark:border-red-600 shadow-lg relative overflow-hidden transition-all duration-300 ${
-                isAnswered 
-                  ? selectedDoor === 'incorrect' 
-                    ? 'ring-4 ring-rose-300 dark:ring-rose-800 scale-105 shadow-rose-500/20' 
-                    : 'opacity-40 scale-95 pointer-events-none' 
+              className={`group flex flex-col items-center justify-center p-6 bg-gradient-to-b from-rose-450 to-red-650 dark:from-rose-500 dark:to-red-700 text-white rounded-[2rem] border-4 border-rose-300 dark:border-red-600 shadow-lg relative overflow-hidden transition-all duration-300 ${isAnswered
+                  ? selectedDoor === 'incorrect'
+                    ? 'ring-4 ring-rose-300 dark:ring-rose-800 scale-105 shadow-rose-500/20'
+                    : 'opacity-40 scale-95 pointer-events-none'
                   : 'hover:scale-[1.03] active:scale-97 cursor-pointer hover:shadow-rose-500/25'
-              }`}
+                }`}
             >
               <div className="absolute inset-0 bg-white/5 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity"></div>
               {/* Kapı Kemeri Şekli */}
@@ -1716,7 +1763,7 @@ const MemoryMatchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
         isMatched: false
       });
     });
-    
+
     // Fisher-Yates karıştırması
     const shuffled = [...generated];
     for (let i = shuffled.length - 1; i > 0; i--) {
@@ -1753,7 +1800,7 @@ const MemoryMatchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
         // Eşleşme Başarılı
         setTimeout(() => {
           playSound('success');
-          const matched = cards.map((c, idx) => 
+          const matched = cards.map((c, idx) =>
             idx === firstIdx || idx === secondIdx ? { ...c, isMatched: true } : c
           );
           setCards(matched);
@@ -1770,7 +1817,7 @@ const MemoryMatchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
         // Mismatch - Geri Çevirme
         setTimeout(() => {
           playSound('fail');
-          const reset = cards.map((c, idx) => 
+          const reset = cards.map((c, idx) =>
             idx === firstIdx || idx === secondIdx ? { ...c, isFlipped: false } : c
           );
           setCards(reset);
@@ -1804,7 +1851,7 @@ const MemoryMatchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
       {gameStatus === 'playing' && (
         <div className="w-full flex flex-col gap-5 items-center">
-          
+
           {/* Skor & Hamle Barı */}
           <div className="w-full max-w-3xl flex justify-between items-center bg-white dark:bg-slate-850 border-2 border-slate-150 dark:border-slate-750 px-4 py-2.5 rounded-2xl shadow-sm text-xs font-black">
             <span className="text-slate-500 dark:text-slate-400">📊 Hamle Sayısı: {moves}</span>
@@ -1820,13 +1867,12 @@ const MemoryMatchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                   key={card.id}
                   onClick={() => handleCardClick(idx)}
                   disabled={card.isMatched}
-                  className={`h-36 rounded-2xl border-3 flex flex-col items-center justify-center p-3 text-center transition-all duration-300 relative ${
-                    card.isMatched
+                  className={`h-36 rounded-2xl border-3 flex flex-col items-center justify-center p-3 text-center transition-all duration-300 relative ${card.isMatched
                       ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-500 text-emerald-700 dark:text-emerald-450 opacity-80 scale-95'
                       : showContent
-                      ? 'bg-white dark:bg-slate-800 border-indigo-500 text-slate-800 dark:text-white scale-102 shadow-md'
-                      : 'bg-gradient-to-br from-indigo-550 to-violet-650 border-indigo-400 text-white hover:scale-[1.03] active:scale-97 cursor-pointer shadow-lg'
-                  }`}
+                        ? 'bg-white dark:bg-slate-800 border-indigo-500 text-slate-800 dark:text-white scale-102 shadow-md'
+                        : 'bg-gradient-to-br from-indigo-550 to-violet-650 border-indigo-400 text-white hover:scale-[1.03] active:scale-97 cursor-pointer shadow-lg'
+                    }`}
                 >
                   {showContent ? (
                     <div className="flex flex-col gap-1.5 justify-center items-center h-full">
@@ -1906,16 +1952,16 @@ const WordScrambleGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => 
     if (list.length > 0) {
       const selected = list[0];
       setWordObj(selected);
-      
+
       const letters = selected.word.split('').map((l, i) => ({ id: `scramble_${l}_${i}`, letter: l }));
-      
+
       // fisher-yates karıştırma
       const shuffled = [...letters];
       for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
       }
-      
+
       setScrambledLetters(shuffled);
       setGuessLetters([]);
       setTimer(60);
@@ -1992,7 +2038,7 @@ const WordScrambleGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => 
   const handleCheck = () => {
     if (!wordObj) return;
     const currentGuessStr = guessLetters.map(item => item.letter).join('');
-    
+
     if (currentGuessStr === wordObj.word) {
       playSound('complete');
       setGameStatus('won');
@@ -2040,7 +2086,7 @@ const WordScrambleGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => 
 
       {gameStatus === 'playing' && wordObj && (
         <div className="w-full flex flex-col gap-6 items-center">
-          
+
           {/* Süre, Can ve Can barı */}
           <div className="w-full max-w-2xl flex justify-between items-center bg-white dark:bg-slate-850 border-2 border-slate-150 dark:border-slate-750 px-4 py-2.5 rounded-2xl shadow-sm text-xs font-black">
             <span className={`flex items-center gap-1 ${timer <= 10 ? 'text-rose-500 animate-pulse text-sm font-black' : 'text-slate-500'}`}>
@@ -2209,10 +2255,10 @@ const JeopardyConquestGame: React.FC<JeopardyConquestGameProps> = ({ isDarkMode,
   // Oyunu Başlat
   const handleStart = () => {
     playSound('complete');
-    
+
     // Skorları sıfırla
     setTeams(prev => prev.map((t, idx) => ({ ...t, score: 0, active: idx === 0 })));
-    
+
     // Board oluştur
     const newBoard: JeopardyCell[] = [];
     categories.forEach(cat => {
@@ -2226,7 +2272,7 @@ const JeopardyConquestGame: React.FC<JeopardyConquestGameProps> = ({ isDarkMode,
         });
       });
     });
-    
+
     setBoard(newBoard);
     setActiveTeamIdx(0);
     setSelectedCellIdx(null);
@@ -2242,7 +2288,7 @@ const JeopardyConquestGame: React.FC<JeopardyConquestGameProps> = ({ isDarkMode,
     if (gameStatus !== 'playing' || cell.questioned || selectedCellIdx !== null) return;
 
     playSound('tick');
-    
+
     // Kategoriye uygun soru filtrele
     const quizQuestions = getCurriculumQuizQuestions();
     const filtered = quizQuestions.filter(q => getQuestionCategory(q) === cell.category);
@@ -2278,9 +2324,9 @@ const JeopardyConquestGame: React.FC<JeopardyConquestGameProps> = ({ isDarkMode,
     if (isCorrect) {
       playSound('success');
       newBoard[selectedCellIdx].ownerIdx = activeTeamIdx;
-      
+
       // Skoru artır
-      setTeams(prev => prev.map((t, idx) => 
+      setTeams(prev => prev.map((t, idx) =>
         idx === activeTeamIdx ? { ...t, score: t.score + cell.points } : t
       ));
     } else {
@@ -2337,7 +2383,7 @@ const JeopardyConquestGame: React.FC<JeopardyConquestGameProps> = ({ isDarkMode,
 
       {gameStatus === 'playing' && (
         <div className="w-full flex flex-col gap-6 items-center">
-          
+
           {/* Aktif Takım Banner */}
           <div className={`px-8 py-3 bg-gradient-to-r ${TEAM_PRESETS[activeTeamIdx].color} text-white rounded-2xl shadow-md text-xs font-black uppercase tracking-wider animate-pulse`}>
             📢 Sıradaki Hamle: {teams[activeTeamIdx].name} ({TEAM_PRESETS[activeTeamIdx].name})
@@ -2345,7 +2391,7 @@ const JeopardyConquestGame: React.FC<JeopardyConquestGameProps> = ({ isDarkMode,
 
           {/* Jeopardy Tahtası */}
           <div className="w-full max-w-4xl bg-white dark:bg-slate-855 border-3 border-slate-200 dark:border-slate-750 p-6 rounded-[2.5rem] shadow-lg">
-            
+
             {/* Sütun Başlıkları (Kategoriler) */}
             <div className="grid grid-cols-3 gap-4 mb-4 text-center">
               {categories.map(cat => (
@@ -2404,7 +2450,7 @@ const JeopardyConquestGame: React.FC<JeopardyConquestGameProps> = ({ isDarkMode,
           {selectedCellIdx !== null && currentQuestion && (
             <div className="fixed inset-0 bg-slate-950/70 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
               <div className="bg-white dark:bg-slate-850 border-4 border-indigo-500 rounded-[2.5rem] max-w-2xl w-full p-8 shadow-2xl relative animate-scale-up">
-                
+
                 {/* Hücre Bilgisi */}
                 <div className="flex justify-between items-center mb-6">
                   <span className="text-[10px] font-black uppercase tracking-widest bg-indigo-50 dark:bg-indigo-950/40 text-indigo-650 dark:text-indigo-300 px-3.5 py-1.5 rounded-full border border-indigo-100 dark:border-indigo-900/50">
@@ -2428,7 +2474,7 @@ const JeopardyConquestGame: React.FC<JeopardyConquestGameProps> = ({ isDarkMode,
                     const isCorrectOpt = opt === currentQuestion.correct;
                     const isSelected = opt === selectedOpt;
                     const letter = String.fromCharCode(65 + i); // A, B, C, D
-                    
+
                     let btnStyle = "bg-slate-50 hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-750 border-slate-200 dark:border-slate-700 text-slate-850 dark:text-white cursor-pointer";
                     if (showReveal) {
                       if (isCorrectOpt) {
@@ -2474,7 +2520,7 @@ const JeopardyConquestGame: React.FC<JeopardyConquestGameProps> = ({ isDarkMode,
                     >
                       {showReveal ? 'Cevabı Gizle 👁️' : 'Doğru Cevabı Göster 💡'}
                     </button>
-                    
+
                     <div className="flex gap-3">
                       <button
                         onClick={() => handleEvaluate(false)}
@@ -2557,11 +2603,13 @@ const TugOfWarGame: React.FC<TugOfWarGameProps> = ({ isDarkMode, teams, setTeams
   const [currentQuestion, setCurrentQuestion] = useState<UnifiedQuizQuestion | null>(null);
   const [showReveal, setShowReveal] = useState<boolean>(false);
   const [winnerTeamIdx, setWinnerTeamIdx] = useState<number | null>(null);
+  const [usedQuestionIds, setUsedQuestionIds] = useState<string[]>([]);
 
   // Oyunu Başlat
   const handleStart = () => {
     playSound('complete');
-    
+    setUsedQuestionIds([]);
+
     // Skorları sıfırla ve ilk iki takımı ata
     setTeams(prev => prev.map((t, idx) => ({ ...t, score: 0, active: idx === 0 })));
     setRopePosition(0);
@@ -2574,9 +2622,17 @@ const TugOfWarGame: React.FC<TugOfWarGameProps> = ({ isDarkMode, teams, setTeams
   // Soru yükle
   const loadNextQuestion = () => {
     const list = getCurriculumQuizQuestions();
-    const randomQuestion = list[Math.floor(Math.random() * list.length)];
+    const unusedList = filterUnusedQuestions(list);
+    const filtered = unusedList.filter(q => !usedQuestionIds.includes(q.id));
+    const pool = filtered.length > 0 ? filtered : unusedList;
+    const finalPool = pool.length > 0 ? pool : list;
+    const randomQuestion = finalPool[Math.floor(Math.random() * finalPool.length)];
     setCurrentQuestion(randomQuestion);
     setShowReveal(false);
+    if (randomQuestion) {
+      setUsedQuestionIds(prev => [...prev, randomQuestion.id]);
+      markQuestionAsUsed(randomQuestion.id);
+    }
   };
 
   // Cevap Değerlendirme
@@ -2584,7 +2640,7 @@ const TugOfWarGame: React.FC<TugOfWarGameProps> = ({ isDarkMode, teams, setTeams
     if (!currentQuestion) return;
 
     let nextPos = ropePosition;
-    
+
     if (isCorrect) {
       playSound('success');
       // Doğru cevap: halatı kendi tarafına çeker
@@ -2653,10 +2709,10 @@ const TugOfWarGame: React.FC<TugOfWarGameProps> = ({ isDarkMode, teams, setTeams
 
       {gameStatus === 'playing' && currentQuestion && (
         <div className="w-full flex flex-col gap-6 items-center">
-          
+
           {/* Halat Çekme Görseli */}
           <div className="w-full max-w-3xl bg-white dark:bg-slate-850 border-3 border-slate-200 dark:border-slate-750 p-6 rounded-[2.5rem] shadow-lg flex flex-col items-center gap-6">
-            
+
             {/* Takım İsimleri */}
             <div className="w-full flex justify-between px-4 text-xs font-black uppercase tracking-wider">
               <span className={`text-left text-amber-500 ${activeTeamIdx === 0 ? 'scale-110 animate-pulse text-sm' : 'opacity-60'}`}>
@@ -2671,7 +2727,7 @@ const TugOfWarGame: React.FC<TugOfWarGameProps> = ({ isDarkMode, teams, setTeams
             <div className="w-full h-16 bg-slate-100 dark:bg-slate-900 border-2 border-slate-250 dark:border-slate-800 rounded-3xl relative flex items-center px-8">
               {/* Halat Çizgisi */}
               <div className="absolute left-6 right-6 h-2.5 bg-amber-700/60 rounded-full border border-amber-800 shadow-inner"></div>
-              
+
               {/* Bölmeler/Slots */}
               <div className="w-full flex justify-between relative z-10">
                 {[-3, -2, -1, 0, 1, 2, 3].map((pos) => {
@@ -2679,11 +2735,10 @@ const TugOfWarGame: React.FC<TugOfWarGameProps> = ({ isDarkMode, teams, setTeams
                   return (
                     <div
                       key={pos}
-                      className={`w-6 h-6 rounded-full flex items-center justify-center text-[8px] font-black transition-all ${
-                        isCurrent
+                      className={`w-6 h-6 rounded-full flex items-center justify-center text-[8px] font-black transition-all ${isCurrent
                           ? 'bg-rose-500 text-white scale-125 ring-4 ring-rose-300 dark:ring-rose-800 animate-bounce'
                           : 'bg-slate-200 dark:bg-slate-800 text-slate-500'
-                      }`}
+                        }`}
                     >
                       {pos === 0 ? '🚩' : isCurrent ? '🔴' : '•'}
                     </div>
@@ -2701,7 +2756,7 @@ const TugOfWarGame: React.FC<TugOfWarGameProps> = ({ isDarkMode, teams, setTeams
 
           {/* Soru Paneli */}
           <div className="w-full max-w-2xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6">
-            
+
             {/* Başlık / Sıra Bilgisi */}
             <div className="flex justify-between items-center">
               <span className={`text-[10px] font-black uppercase tracking-widest px-3.5 py-1.5 rounded-full text-white bg-gradient-to-r ${TEAM_PRESETS[activeTeamIdx].color}`}>
@@ -2721,18 +2776,17 @@ const TugOfWarGame: React.FC<TugOfWarGameProps> = ({ isDarkMode, teams, setTeams
               {currentQuestion.options.map((opt, i) => {
                 const isCorrectOpt = opt === currentQuestion.correct;
                 const letter = String.fromCharCode(65 + i);
-                
+
                 return (
                   <button
                     key={opt}
                     onClick={() => playSound('tick')}
-                    className={`p-4 text-left rounded-2xl border-2 text-xs font-bold leading-normal transition-all hover:scale-102 flex gap-3 items-center ${
-                      showReveal
+                    className={`p-4 text-left rounded-2xl border-2 text-xs font-bold leading-normal transition-all hover:scale-102 flex gap-3 items-center ${showReveal
                         ? isCorrectOpt
                           ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-500 text-emerald-700 dark:text-emerald-450 ring-2 ring-emerald-300'
                           : 'bg-slate-55 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-400 opacity-60'
                         : 'bg-slate-50 hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-750 border-slate-200 dark:border-slate-700 text-slate-850 dark:text-white cursor-pointer'
-                    }`}
+                      }`}
                   >
                     <span className="w-6 h-6 rounded-lg bg-indigo-500 text-white font-black text-[10px] flex items-center justify-center shrink-0">
                       {letter}
@@ -2752,7 +2806,7 @@ const TugOfWarGame: React.FC<TugOfWarGameProps> = ({ isDarkMode, teams, setTeams
                 >
                   {showReveal ? 'Cevabı Gizle 👁️' : 'Doğru Cevabı Göster 💡'}
                 </button>
-                
+
                 <div className="flex gap-3">
                   <button
                     onClick={() => handleEvaluate(false)}
@@ -2839,15 +2893,20 @@ const MillionaireQuizGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) 
   const handleStart = () => {
     playSound('complete');
     const pool = getCurriculumQuizQuestions();
-    
+    const unusedPool = filterUnusedQuestions(pool);
+    const finalPool = unusedPool.length >= 12 ? unusedPool : pool;
+
     // Rastgele 12 soru karıştırıp seçelim
-    const shuffled = [...pool];
+    const shuffled = [...finalPool];
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
-    
-    setQuestions(shuffled.slice(0, 12));
+
+    const selected = shuffled.slice(0, 12);
+    setQuestions(selected);
+    selected.forEach(q => markQuestionAsUsed(q.id));
+
     setCurrentIdx(0);
     setJokers({ half: true, audience: true, phone: true });
     setAudienceText(null);
@@ -2865,7 +2924,7 @@ const MillionaireQuizGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) 
     if (!jokers.half || !currentQuestion || showAnswerResult) return;
     playSound('tick');
     setJokers(prev => ({ ...prev, half: false }));
-    
+
     // Yanlış şıkları topla
     const incorrectOpts = currentQuestion.options.filter(o => o !== currentQuestion.correct);
     // İki tanesini rastgele ele
@@ -2969,10 +3028,10 @@ const MillionaireQuizGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) 
 
       {gameStatus === 'playing' && currentQuestion && (
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-          
+
           {/* Sol Kolon: Joker Kartları ve Ödül Basamakları */}
           <div className="lg:col-span-4 flex flex-col gap-4 bg-slate-50 dark:bg-slate-900/60 p-5 rounded-[2rem] border-2 border-slate-200 dark:border-slate-800">
-            
+
             {/* Jokerler */}
             <div className="flex gap-2 justify-center">
               <button
@@ -3003,17 +3062,16 @@ const MillionaireQuizGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) 
               {prizeLadder.map((prize, idx) => {
                 const isCurrent = idx === currentIdx;
                 const isPassed = idx < currentIdx;
-                
+
                 return (
                   <div
                     key={prize}
-                    className={`flex justify-between items-center px-3 py-1 text-[9px] font-bold rounded-lg ${
-                      isCurrent
+                    className={`flex justify-between items-center px-3 py-1 text-[9px] font-bold rounded-lg ${isCurrent
                         ? 'bg-yellow-500 text-white font-black scale-102 shadow animate-pulse'
                         : isPassed
-                        ? 'text-emerald-600 dark:text-emerald-450 line-through'
-                        : 'text-slate-500 dark:text-slate-450'
-                    }`}
+                          ? 'text-emerald-600 dark:text-emerald-450 line-through'
+                          : 'text-slate-500 dark:text-slate-450'
+                      }`}
                   >
                     <span>Soru {idx + 1}</span>
                     <span>{prize}</span>
@@ -3026,7 +3084,7 @@ const MillionaireQuizGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) 
 
           {/* Sağ Kolon: Soru Kartı ve Şıklar */}
           <div className="lg:col-span-8 flex flex-col gap-5 items-center">
-            
+
             {/* Soru */}
             <div className="w-full bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-6 rounded-[2.5rem] shadow-md text-center min-h-[100px] flex items-center justify-center">
               <p className="text-base sm:text-lg font-bold text-slate-850 dark:text-white leading-relaxed">
@@ -3166,7 +3224,7 @@ const WordSearchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
   // Oyunu Başlat
   const handleStart = () => {
     playSound('complete');
-    
+
     // Rastgele 3 kelime seçelim (Uzunluğu 3-7 arası olan)
     const list = getRandomVocabularyWords(30);
     const words = list
@@ -3178,9 +3236,9 @@ const WordSearchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
     setFoundWords([]);
     setStartCell(null);
     setSelectedCells([]);
-    
+
     // Boş Grid Üret
-    const tempGrid: GridCell[][] = Array.from({ length: gridSize }, (_, r) => 
+    const tempGrid: GridCell[][] = Array.from({ length: gridSize }, (_, r) =>
       Array.from({ length: gridSize }, (_, c) => ({
         letter: '',
         row: r,
@@ -3194,7 +3252,7 @@ const WordSearchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
     words.forEach((word) => {
       let placed = false;
       let limit = 0;
-      
+
       while (!placed && limit < 100) {
         limit++;
         const isHorizontal = Math.random() > 0.5;
@@ -3258,7 +3316,7 @@ const WordSearchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
       // İlk tıklama: seçimi başlat
       setStartCell({ r, c });
       setSelectedCells([{ r, c }]);
-      setGrid(prev => prev.map((row, ri) => row.map((cell, ci) => 
+      setGrid(prev => prev.map((row, ri) => row.map((cell, ci) =>
         ri === r && ci === c ? { ...cell, highlighted: true } : cell
       )));
     } else {
@@ -3346,7 +3404,7 @@ const WordSearchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
       {gameStatus === 'playing' && (
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-          
+
           {/* Sol Kolon: Bulunması Gereken Kelimeler Listesi */}
           <div className="lg:col-span-4 flex flex-col gap-4 bg-slate-50 dark:bg-slate-900/60 p-6 rounded-[2rem] border-2 border-slate-200 dark:border-slate-800 text-center">
             <span className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">
@@ -3358,11 +3416,10 @@ const WordSearchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                 return (
                   <div
                     key={word}
-                    className={`p-3.5 rounded-2xl border-2 font-display font-black text-sm transition-all text-center uppercase tracking-widest ${
-                      found
+                    className={`p-3.5 rounded-2xl border-2 font-display font-black text-sm transition-all text-center uppercase tracking-widest ${found
                         ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-400 text-emerald-650 dark:text-emerald-450 line-through'
                         : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white shadow-sm'
-                    }`}
+                      }`}
                   >
                     {word} {found && '✓'}
                   </div>
@@ -3375,7 +3432,7 @@ const WordSearchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
           <div className="lg:col-span-8 flex flex-col items-center">
             <div className="bg-white dark:bg-slate-850 border-3 border-slate-250 dark:border-slate-700 p-5 rounded-[2.5rem] shadow-lg">
               <div className="grid grid-cols-8 gap-2">
-                {grid.map((row, ri) => 
+                {grid.map((row, ri) =>
                   row.map((cell, ci) => {
                     let cellStyle = "bg-slate-50 hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-700 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white cursor-pointer shadow-sm";
                     if (cell.permanentlyHighlighted) {
@@ -3397,7 +3454,7 @@ const WordSearchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                 )}
               </div>
             </div>
-            
+
             <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest mt-4">
               Tıklanan Harf: {startCell ? `Başlangıç (${startCell.r + 1}, ${startCell.c + 1})` : 'Seçim yok'}
             </span>
@@ -3469,14 +3526,14 @@ const WordBombGame: React.FC<WordBombGameProps> = ({ isDarkMode, teams, setTeams
           handleExplode();
           return 0;
         }
-        
+
         // Son 5 saniyede hızlı tık sesi, normalde yavaş tık sesi
         if (prev <= 6) {
           playSound('tick');
         } else if (prev % 2 === 0) {
           playSound('tick');
         }
-        
+
         return prev - 1;
       });
     }, 1000);
@@ -3487,18 +3544,18 @@ const WordBombGame: React.FC<WordBombGameProps> = ({ isDarkMode, teams, setTeams
   // Oyunu Başlat
   const handleStart = () => {
     playSound('complete');
-    
+
     // Tüm takımları aktif yap, elenenleri temizle
     const elim = Array(teamCount).fill(false);
     setEliminatedTeams(elim);
-    
+
     // Skorları sıfırla
     setTeams(prev => prev.map((t, idx) => ({ ...t, score: 0, active: idx === 0 })));
-    
+
     // Rastgele kategori seç
     const randomCat = categories[Math.floor(Math.random() * categories.length)];
     setCategoryText(randomCat);
-    
+
     setActiveTeamIdx(0);
     setWinnerTeamIdx(null);
     resetBombTimer();
@@ -3508,7 +3565,7 @@ const WordBombGame: React.FC<WordBombGameProps> = ({ isDarkMode, teams, setTeams
   // Bombanın patlama anı
   const handleExplode = () => {
     playSound('fail');
-    
+
     const newElim = [...eliminatedTeams];
     newElim[activeTeamIdx] = true;
     setEliminatedTeams(newElim);
@@ -3535,7 +3592,7 @@ const WordBombGame: React.FC<WordBombGameProps> = ({ isDarkMode, teams, setTeams
       if (currentPos !== -1 && currentPos + 1 < activeIndices.length) {
         nextIdx = activeIndices[currentPos + 1];
       }
-      
+
       setActiveTeamIdx(nextIdx);
       setTeams(prev => prev.map((t, i) => ({ ...t, active: i === nextIdx })));
       resetBombTimer();
@@ -3597,7 +3654,7 @@ const WordBombGame: React.FC<WordBombGameProps> = ({ isDarkMode, teams, setTeams
 
       {gameStatus === 'playing' && (
         <div className="w-full max-w-3xl flex flex-col items-center gap-6">
-          
+
           {/* Kategori Paneli */}
           <div className="w-full bg-white dark:bg-slate-850 border-3 border-slate-200 dark:border-slate-750 p-6 rounded-[2.5rem] shadow-lg text-center">
             <span className="text-[10px] font-black text-red-500 uppercase tracking-widest bg-red-50 dark:bg-red-950/40 px-3 py-1.5 rounded-full border border-red-100 dark:border-red-900/50">
@@ -3619,7 +3676,7 @@ const WordBombGame: React.FC<WordBombGameProps> = ({ isDarkMode, teams, setTeams
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">BOMBA SÜRESİ</span>
               <span className="text-4xl font-display font-black text-red-500 tracking-wider mt-1">{timer}s</span>
             </div>
-            
+
             {/* Bomba Sırası Kimde */}
             <span className={`px-6 py-2.5 rounded-full text-xs font-black uppercase text-white shadow-md bg-gradient-to-r ${TEAM_PRESETS[activeTeamIdx].color} animate-bounce`}>
               🎯 BOMBA ŞUAN: {teams[activeTeamIdx].name} TAKIMINDA!
@@ -3642,13 +3699,12 @@ const WordBombGame: React.FC<WordBombGameProps> = ({ isDarkMode, teams, setTeams
               return (
                 <div
                   key={team.id}
-                  className={`p-3.5 rounded-2xl border-2 text-center transition-all ${
-                    isEliminated
+                  className={`p-3.5 rounded-2xl border-2 text-center transition-all ${isEliminated
                       ? 'bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800 opacity-40 line-through text-slate-400'
                       : idx === activeTeamIdx
-                      ? 'border-red-500 bg-red-50/20 ring-3 ring-red-150 dark:ring-red-950/20 text-slate-800 dark:text-white font-black'
-                      : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white'
-                  }`}
+                        ? 'border-red-500 bg-red-50/20 ring-3 ring-red-150 dark:ring-red-950/20 text-slate-800 dark:text-white font-black'
+                        : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white'
+                    }`}
                 >
                   <span className="text-[10px] font-black uppercase tracking-wider block">{team.name}</span>
                   <span className="text-[9px] font-bold text-slate-500 block mt-1">{isEliminated ? 'ELENDİ 💥' : 'HAYATTA'}</span>
@@ -3706,6 +3762,7 @@ const BuzzerDuelGame: React.FC<BuzzerDuelGameProps> = ({ isDarkMode, teams, setT
   const [questionStatus, setQuestionStatus] = useState<'waiting_buzzer' | 'answering' | 'result'>('waiting_buzzer');
   const [showReveal, setShowReveal] = useState<boolean>(false);
   const [winnerTeamIdx, setWinnerTeamIdx] = useState<number | null>(null);
+  const [usedQuestionIds, setUsedQuestionIds] = useState<string[]>([]);
 
   const winningScore = 150; // 150 puana ilk ulaşan düelloyu kazanır
 
@@ -3715,7 +3772,7 @@ const BuzzerDuelGame: React.FC<BuzzerDuelGameProps> = ({ isDarkMode, teams, setT
 
     const handleKeyDown = (e: KeyboardEvent) => {
       const key = e.key.toUpperCase();
-      
+
       // Takım 1: Q, Takım 2: P, Takım 3: Z, Takım 4: M
       if (key === 'Q' && teamCount >= 1) triggerBuzzer(0);
       if (key === 'P' && teamCount >= 2) triggerBuzzer(1);
@@ -3730,7 +3787,8 @@ const BuzzerDuelGame: React.FC<BuzzerDuelGameProps> = ({ isDarkMode, teams, setT
   // Oyunu Başlat
   const handleStart = () => {
     playSound('complete');
-    
+    setUsedQuestionIds([]);
+
     // Skorları sıfırla
     setTeams(prev => prev.map((t, idx) => ({ ...t, score: 0, active: idx === 0 })));
     setWinnerTeamIdx(null);
@@ -3743,9 +3801,17 @@ const BuzzerDuelGame: React.FC<BuzzerDuelGameProps> = ({ isDarkMode, teams, setT
   // Soru yükle
   const loadNextQuestion = () => {
     const list = getCurriculumQuizQuestions();
-    const randomQuestion = list[Math.floor(Math.random() * list.length)];
+    const unusedList = filterUnusedQuestions(list);
+    const filtered = unusedList.filter(q => !usedQuestionIds.includes(q.id));
+    const pool = filtered.length > 0 ? filtered : unusedList;
+    const finalPool = pool.length > 0 ? pool : list;
+    const randomQuestion = finalPool[Math.floor(Math.random() * finalPool.length)];
     setCurrentQuestion(randomQuestion);
     setShowReveal(false);
+    if (randomQuestion) {
+      setUsedQuestionIds(prev => [...prev, randomQuestion.id]);
+      markQuestionAsUsed(randomQuestion.id);
+    }
   };
 
   // Zile Basma Tetikleyici
@@ -3755,7 +3821,7 @@ const BuzzerDuelGame: React.FC<BuzzerDuelGameProps> = ({ isDarkMode, teams, setT
 
     setBuzzedTeamIdx(teamIdx);
     setQuestionStatus('answering');
-    
+
     // Aktif takımı seç
     setTeams(prev => prev.map((t, i) => ({ ...t, active: i === teamIdx })));
   };
@@ -3766,9 +3832,9 @@ const BuzzerDuelGame: React.FC<BuzzerDuelGameProps> = ({ isDarkMode, teams, setT
 
     if (isCorrect) {
       playSound('success');
-      
+
       // Doğru bilirse +50 puan
-      const updatedTeams = teams.map((t, idx) => 
+      const updatedTeams = teams.map((t, idx) =>
         idx === buzzedTeamIdx ? { ...t, score: t.score + 50 } : t
       );
       setTeams(updatedTeams);
@@ -3826,7 +3892,7 @@ const BuzzerDuelGame: React.FC<BuzzerDuelGameProps> = ({ isDarkMode, teams, setT
 
       {gameStatus === 'playing' && currentQuestion && (
         <div className="w-full flex flex-col gap-6 items-center">
-          
+
           {/* Üst Skor Tablosu ve Pas Tuşu */}
           <div className="w-full max-w-3xl flex justify-between items-center px-4">
             <span className="text-[10px] font-black text-slate-450 uppercase tracking-widest">
@@ -3854,17 +3920,16 @@ const BuzzerDuelGame: React.FC<BuzzerDuelGameProps> = ({ isDarkMode, teams, setT
               {currentQuestion.options.map((opt, i) => {
                 const isCorrectOpt = opt === currentQuestion.correct;
                 const letter = String.fromCharCode(65 + i);
-                
+
                 return (
                   <div
                     key={opt}
-                    className={`p-3.5 rounded-2xl border text-xs font-semibold leading-normal flex gap-3 items-center ${
-                      showReveal
+                    className={`p-3.5 rounded-2xl border text-xs font-semibold leading-normal flex gap-3 items-center ${showReveal
                         ? isCorrectOpt
                           ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-400 text-emerald-700 dark:text-emerald-450 ring-2 ring-emerald-300'
                           : 'bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-400 opacity-60'
                         : 'bg-slate-50/50 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-350'
-                    }`}
+                      }`}
                   >
                     <span className="w-5 h-5 rounded bg-indigo-500 text-white font-black text-[9px] flex items-center justify-center shrink-0">
                       {letter}
@@ -4053,7 +4118,7 @@ const FillInBlanksGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => 
 
       {gameStatus === 'playing' && currentQ && (
         <div className="w-full max-w-2xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-          
+
           <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
             <span>Soru: {currentIdx + 1} / {questions.length}</span>
             <span>Skor: {score} Puan</span>
@@ -4202,7 +4267,7 @@ const ChronologyGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
   const loadLevel = (levelIdx: number) => {
     setChecked(false);
     setIsAllCorrect(false);
-    
+
     // Karışık listele
     const correct = levels[levelIdx].correctOrder;
     const shuffled = [...correct].sort(() => Math.random() - 0.5);
@@ -4270,7 +4335,7 @@ const ChronologyGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
       {gameStatus === 'playing' && (
         <div className="w-full max-w-xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-          
+
           <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
             <span>Aşama: {currentLevel + 1} / {levels.length}</span>
             <span>Sıralama Görevi</span>
@@ -4297,7 +4362,7 @@ const ChronologyGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                   className={`p-4 rounded-2xl border-2 flex items-center justify-between transition-all bg-slate-50 dark:bg-slate-900 ${borderStyle}`}
                 >
                   <span className="text-xs font-bold text-slate-855 dark:text-white uppercase tracking-wider">{item}</span>
-                  
+
                   {!checked && (
                     <div className="flex gap-2">
                       <button
@@ -4382,6 +4447,7 @@ const WheelOfWisdomGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) =>
   const [round, setRound] = useState<number>(1);
   const [showAnswerFeedback, setShowAnswerFeedback] = useState<boolean>(false);
   const [selectedOpt, setSelectedOpt] = useState<string | null>(null);
+  const [usedQuestionIds, setUsedQuestionIds] = useState<string[]>([]);
 
   const categories = ['İnanç', 'İbadet', 'Ahlak', 'Siyer', 'Pas 💤', 'İflas 💥'];
 
@@ -4393,6 +4459,7 @@ const WheelOfWisdomGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) =>
     setCurrentQuestion(null);
     setShowAnswerFeedback(false);
     setSelectedOpt(null);
+    setUsedQuestionIds([]);
     setGameStatus('playing');
   };
 
@@ -4412,7 +4479,7 @@ const WheelOfWisdomGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) =>
     // Landed segment tespiti
     setTimeout(() => {
       setIsSpinning(false);
-      
+
       const normalizedAngle = (360 - (totalRotation % 360)) % 360;
       const segmentSize = 360 / categories.length;
       const landedIdx = Math.floor(normalizedAngle / segmentSize) % categories.length;
@@ -4434,10 +4501,19 @@ const WheelOfWisdomGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) =>
       } else {
         // Soru yükle
         const pool = getCurriculumQuizQuestions();
-        const randomQ = pool[Math.floor(Math.random() * pool.length)];
+        const unusedPool = filterUnusedQuestions(pool);
+        const filtered = unusedPool.filter(q => !usedQuestionIds.includes(q.id));
+        const finalPool = filtered.length > 0 ? filtered : unusedPool;
+        const lastPool = finalPool.length > 0 ? finalPool : pool;
+        const randomQ = lastPool[Math.floor(Math.random() * lastPool.length)];
+
         setCurrentQuestion(randomQ);
         setShowAnswerFeedback(false);
         setSelectedOpt(null);
+        if (randomQ) {
+          setUsedQuestionIds(prev => [...prev, randomQ.id]);
+          markQuestionAsUsed(randomQ.id);
+        }
       }
     }, 3000);
   };
@@ -4493,7 +4569,7 @@ const WheelOfWisdomGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) =>
 
       {gameStatus === 'playing' && (
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-          
+
           {/* Sol Kolon: Çark Çizimi */}
           <div className="lg:col-span-5 flex flex-col items-center gap-4 bg-slate-50 dark:bg-slate-900/60 p-6 rounded-[2rem] border-2 border-slate-200 dark:border-slate-800">
             <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest px-2">
@@ -4505,7 +4581,7 @@ const WheelOfWisdomGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) =>
             <div className="relative w-56 h-56 flex items-center justify-center mt-3">
               {/* Pointer Gösterge */}
               <div className="absolute -top-3.5 z-20 text-2xl filter drop-shadow">▼</div>
-              
+
               {/* Dönen Çark */}
               <div
                 style={{
@@ -4520,10 +4596,10 @@ const WheelOfWisdomGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) =>
                     const angle = 360 / categories.length;
                     const startAngle = idx * angle;
                     const endAngle = (idx + 1) * angle;
-                    
+
                     const radStart = (startAngle * Math.PI) / 180;
                     const radEnd = (endAngle * Math.PI) / 180;
-                    
+
                     const x1 = 50 + 50 * Math.cos(radStart);
                     const y1 = 50 + 50 * Math.sin(radStart);
                     const x2 = 50 + 50 * Math.cos(radEnd);
@@ -4584,7 +4660,7 @@ const WheelOfWisdomGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) =>
 
           {/* Sağ Kolon: Soru / Durum */}
           <div className="lg:col-span-7 flex flex-col gap-4 items-center">
-            
+
             {/* Çark Sonuç Büyüteci */}
             {selectedCat && (
               <div className="w-full bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-6 rounded-[2.5rem] shadow flex flex-col items-center gap-3 animate-scale-up text-center">
@@ -4594,7 +4670,7 @@ const WheelOfWisdomGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) =>
                 <span className="text-xl font-display font-black text-purple-650 dark:text-purple-400 uppercase tracking-widest animate-bounce">
                   ✨ {selectedCat} ✨
                 </span>
-                
+
                 {selectedCat === 'Pas 💤' && (
                   <p className="text-xs text-slate-500 mt-1">Bu tur pas geçtiniz! Bir sonraki tura aktarılıyorsunuz...</p>
                 )}
@@ -4794,7 +4870,7 @@ const ImageGuessGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
       {gameStatus === 'playing' && currentImg && (
         <div className="w-full max-w-2xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-          
+
           <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
             <span>Görsel: {currentIdx + 1} / {list.length}</span>
             <span>Kazanılacak: {guessPoints} Puan</span>
@@ -4802,7 +4878,7 @@ const ImageGuessGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
           {/* Görsel Grid Alanı */}
           <div className="relative w-48 h-48 bg-slate-50 dark:bg-slate-900 border-3 border-slate-200 dark:border-slate-750 rounded-3xl flex items-center justify-center overflow-hidden shadow-inner">
-            
+
             {/* Emoji (Gizli Nesne) */}
             <span className="text-7xl select-none">{currentImg.emoji}</span>
 
@@ -4813,11 +4889,10 @@ const ImageGuessGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                   <button
                     key={idx}
                     onClick={() => handleTileClick(idx)}
-                    className={`w-full h-full flex items-center justify-center font-bold text-xs transition-all ${
-                      isOpen
+                    className={`w-full h-full flex items-center justify-center font-bold text-xs transition-all ${isOpen
                         ? 'opacity-0 pointer-events-none'
                         : 'bg-indigo-500 border border-indigo-400 text-white hover:bg-indigo-650 cursor-pointer'
-                    }`}
+                      }`}
                   >
                     {!isOpen && '?'}
                   </button>
@@ -4935,7 +5010,7 @@ const FallingWordsGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => 
 
     // Balonları oluştur: Hedef harfler + rastgele harfler
     const correctLetters = randomWord.split('');
-    const randomLetters = Array.from({ length: 4 }, () => 
+    const randomLetters = Array.from({ length: 4 }, () =>
       TURKISH_LETTERS[Math.floor(Math.random() * TURKISH_LETTERS.length)]
     );
     const combined = [...correctLetters, ...randomLetters];
@@ -4963,7 +5038,7 @@ const FallingWordsGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => 
       if (collectedIdx + 1 === targetWord.length) {
         playSound('complete');
         setScore(prev => prev + 100);
-        
+
         if (round < 4) {
           setRound(prev => prev + 1);
           loadNextWord();
@@ -5007,7 +5082,7 @@ const FallingWordsGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => 
 
       {gameStatus === 'playing' && (
         <div className="w-full max-w-2xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-          
+
           <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
             <span>Aşama: {round} / 4</span>
             <span>Canlar: {'❤️'.repeat(lives)}</span>
@@ -5020,11 +5095,10 @@ const FallingWordsGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => 
               return (
                 <div
                   key={i}
-                  className={`w-12 h-12 rounded-xl border-3 flex items-center justify-center font-display font-black text-lg ${
-                    collected
+                  className={`w-12 h-12 rounded-xl border-3 flex items-center justify-center font-display font-black text-lg ${collected
                       ? 'bg-emerald-500 border-emerald-600 text-white'
                       : 'bg-slate-50 border-slate-200 dark:bg-slate-900 dark:border-slate-700 text-slate-400'
-                  }`}
+                    }`}
                 >
                   {collected ? char : '_'}
                 </div>
@@ -5131,12 +5205,17 @@ const QuickQuizGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
   // Oyunu Başlat
   const handleStart = () => {
     playSound('complete');
-    
+
     // Rastgele 10 soru karıştırıp seçelim
     const pool = getCurriculumQuizQuestions();
-    const shuffled = [...pool].sort(() => Math.random() - 0.5);
-    
-    setQuestions(shuffled.slice(0, 10));
+    const unusedPool = filterUnusedQuestions(pool);
+    const finalPool = unusedPool.length >= 10 ? unusedPool : pool;
+    const shuffled = [...finalPool].sort(() => Math.random() - 0.5);
+
+    const selected = shuffled.slice(0, 10);
+    setQuestions(selected);
+    selected.forEach(q => markQuestionAsUsed(q.id));
+
     setCurrentIdx(0);
     setScore(0);
     setTimer(15);
@@ -5203,7 +5282,7 @@ const QuickQuizGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
       {gameStatus === 'playing' && currentQ && (
         <div className="w-full max-w-2xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-          
+
           <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
             <span>Soru: {currentIdx + 1} / {questions.length}</span>
             <span>Skor: {score} Puan</span>
@@ -5397,7 +5476,7 @@ const HoneycombPuzzleGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) 
 
       {gameStatus === 'playing' && (
         <div className="w-full max-w-xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-          
+
           <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
             <span>Aşama: {round} / 4</span>
             <span>Skor: {score} Puan</span>
@@ -5421,11 +5500,10 @@ const HoneycombPuzzleGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) 
                 <button
                   key={idx}
                   onClick={() => handleCellClick(idx)}
-                  className={`w-14 h-16 flex flex-col items-center justify-center font-display font-black text-sm transition-all cursor-pointer shadow-sm relative ${
-                    isSelected
+                  className={`w-14 h-16 flex flex-col items-center justify-center font-display font-black text-sm transition-all cursor-pointer shadow-sm relative ${isSelected
                       ? 'bg-yellow-500 text-white border-3 border-yellow-600 scale-105 shadow-inner'
                       : 'bg-white dark:bg-slate-800 border-2 border-slate-250 dark:border-slate-750 text-slate-850 dark:text-white hover:scale-103'
-                  }`}
+                    }`}
                   style={{
                     clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)'
                   }}
@@ -5520,12 +5598,20 @@ const MazeRunnerGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
   const handleStart = () => {
     playSound('complete');
     setPlayerPos({ r: 0, c: 0 });
-    
-    // Soru kapılarını oluştur
+
+    // Soru kapılarını oluştur (farklı ve kullanılmamış sorular seç)
     const pool = getCurriculumQuizQuestions();
-    const g1: MazeQuestionGate = { row: 2, col: 2, question: pool[Math.floor(Math.random() * pool.length)] };
-    const g2: MazeQuestionGate = { row: 4, col: 2, question: pool[Math.floor(Math.random() * pool.length)] };
-    
+    const unusedPool = filterUnusedQuestions(pool);
+    const finalPool = unusedPool.length >= 2 ? unusedPool : pool;
+
+    // Karıştırıp iki farklı soru seçelim
+    const shuffled = [...finalPool].sort(() => Math.random() - 0.5);
+    const g1: MazeQuestionGate = { row: 2, col: 2, question: shuffled[0] };
+    const g2: MazeQuestionGate = { row: 4, col: 2, question: shuffled[1] };
+
+    markQuestionAsUsed(shuffled[0].id);
+    markQuestionAsUsed(shuffled[1].id);
+
     setGates([g1, g2]);
     setActiveGate(null);
     setShowAnswerResult(false);
@@ -5631,12 +5717,12 @@ const MazeRunnerGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
       {gameStatus === 'playing' && (
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-          
+
           {/* Sol Kolon: Harita Grid */}
           <div className="lg:col-span-6 flex flex-col items-center">
             <div className="bg-white dark:bg-slate-850 border-3 border-slate-200 dark:border-slate-700 p-4 rounded-[2.5rem] shadow-lg">
               <div className="grid grid-cols-6 gap-1 bg-slate-100 dark:bg-slate-900 p-1.5 rounded-2xl">
-                {Array.from({ length: gridSize }).map((_, r) => 
+                {Array.from({ length: gridSize }).map((_, r) =>
                   Array.from({ length: gridSize }).map((_, c) => {
                     const isPlayer = playerPos.r === r && playerPos.c === c;
                     const isGoal = r === 5 && c === 5;
@@ -5663,7 +5749,7 @@ const MazeRunnerGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
           {/* Sağ Kolon: Yön Düğmeleri ve Soru Modalı */}
           <div className="lg:col-span-6 flex flex-col items-center gap-6">
-            
+
             {/* Navigasyon Okları */}
             {!activeGate && (
               <div className="flex flex-col items-center gap-2 p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-inner w-56">
@@ -5702,7 +5788,7 @@ const MazeRunnerGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                 <span className="text-[9px] font-black text-amber-600 uppercase tracking-widest bg-amber-50 dark:bg-amber-950/40 px-3.5 py-1.5 rounded-full border border-amber-100 dark:border-amber-900/50 w-fit">
                   🔑 KİLİTLİ KAPI SORUSU
                 </span>
-                
+
                 <p className="text-xs sm:text-sm font-bold text-slate-855 dark:text-white leading-relaxed mt-1">
                   "{activeGate.question.question}"
                 </p>
@@ -5908,7 +5994,7 @@ const WordChainGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
       {gameStatus === 'playing' && currentL && (
         <div className="w-full max-w-2xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-          
+
           <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
             <span>Aşama: {currentLevel + 1} / {levels.length}</span>
             <span>Kelime Eşleme</span>
@@ -6131,7 +6217,7 @@ const TabooTermsGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
       {gameStatus === 'playing' && currentCard && (
         <div className="w-full max-w-sm bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-          
+
           <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
             <span>Süre: {timer}s</span>
             <span>Skor: {score} Puan</span>
@@ -6143,9 +6229,9 @@ const TabooTermsGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
             <span className="text-3xl font-display font-black text-teal-650 dark:text-teal-400 tracking-wider">
               {currentCard.word}
             </span>
-            
+
             <div className="w-full h-px bg-teal-200 dark:bg-teal-900/60 my-2" />
-            
+
             <span className="text-[9px] font-black text-rose-500 tracking-widest uppercase">YASAKLI KELİMELER</span>
             <div className="flex flex-col gap-2 w-full">
               {currentCard.forbidden.map(word => (
@@ -6316,14 +6402,14 @@ const PairMatchingGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => 
 
       {gameStatus === 'playing' && (
         <div className="w-full max-w-3xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-          
+
           <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
             <span>Eşleşen: {matchedIds.length} / {items.length}</span>
             <span>Skor: {score} Puan</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mt-2">
-            
+
             {/* Sol: Kavramlar */}
             <div className="flex flex-col gap-3">
               <span className="text-[9px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center">KAVRAMLAR</span>
@@ -6487,7 +6573,7 @@ const BalloonPopGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
     } else {
       // Yanlış!
       playSound('fail');
-      
+
       const updated = [...balloons];
       updated[bIdx].isWrongRed = true;
       setBalloons(updated);
@@ -6525,7 +6611,7 @@ const BalloonPopGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
       {gameStatus === 'playing' && currentQ && (
         <div className="w-full max-w-2xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-          
+
           <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
             <span>Aşama: {round} / 4</span>
             <span>Canlar: {'❤️'.repeat(lives)}</span>
@@ -6660,7 +6746,7 @@ const DiffFinderGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
     // Tıklanan elemanın id'si diff değilse tık ses efekti veya ceza
     const target = e.target as HTMLElement;
     if (target.closest('.diff-trigger')) return;
-    
+
     playSound('fail');
   };
 
@@ -6687,7 +6773,7 @@ const DiffFinderGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
       {gameStatus === 'playing' && (
         <div className="w-full max-w-4xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-          
+
           <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
             <span>Bulunan Farklar: {foundDiffs.length} / 3</span>
             <span>Skor: {score} Puan</span>
@@ -6695,17 +6781,17 @@ const DiffFinderGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
           {/* Resimler Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full mt-2">
-            
+
             {/* SOL GÖRSEL: ORİJİNAL CAMİ (Vektörel Çizim) */}
             <div className="flex flex-col items-center gap-2">
               <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">ORİJİNAL GÖRSEL</span>
               <div className="relative w-full aspect-square max-w-[280px] bg-sky-100 dark:bg-slate-900 border-3 border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-inner flex items-center justify-center p-4">
-                
+
                 {/* Gövde SVG Cami */}
                 <svg className="w-full h-full text-emerald-600 dark:text-emerald-500" viewBox="0 0 100 100">
                   {/* Gökyüzü arka plan */}
                   <rect width="100" height="100" fill="transparent" />
-                  
+
                   {/* Minare Sol */}
                   <rect x="20" y="30" width="6" height="50" fill="currentColor" />
                   <polygon points="20,30 23,20 26,30" fill="currentColor" />
@@ -6736,15 +6822,15 @@ const DiffFinderGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                 onClick={handleWrongClick}
                 className="relative w-full aspect-square max-w-[280px] bg-sky-100 dark:bg-slate-900 border-3 border-indigo-400 rounded-3xl overflow-hidden shadow-md flex items-center justify-center p-4 cursor-crosshair"
               >
-                
+
                 {/* Gövde SVG Cami (Modifiyeli hali) */}
                 <svg className="w-full h-full text-emerald-600 dark:text-emerald-500" viewBox="0 0 100 100">
                   <rect width="100" height="100" fill="transparent" />
-                  
+
                   {/* Minare Sol */}
                   <rect x="20" y="30" width="6" height="50" fill="currentColor" />
                   <polygon points="20,30 23,20 26,30" fill="currentColor" />
-                  
+
                   {/* FARK 1: Sol şerefe rengi farklı (altın sarısı yerine gri) */}
                   <rect x="18" y="45" width="10" height="5" fill="#6b7280" />
 
@@ -6752,13 +6838,13 @@ const DiffFinderGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                   <rect x="35" y="50" width="30" height="30" fill="currentColor" />
                   {/* Kubbe */}
                   <path d="M 35 50 A 15 15 0 0 1 65 50 Z" fill="currentColor" />
-                  
+
                   {/* FARK 2: Kubbe alemi tepesindeki yuvarlak hilale benzeyen altın rengi eksik */}
                   <line x1="50" y1="35" x2="50" y2="28" stroke="#ca8a04" strokeWidth="2" />
 
                   {/* Kapı */}
                   <rect x="44" y="65" width="12" height="15" fill="#ca8a04" />
-                  
+
                   {/* FARK 3: Kapı üstü Crescent yerine yıldız deseni var */}
                   <polygon points="50,69 51,71 53,71 51.5,72 52,74 50,73 48,74 48.5,72 47,71 49,71" fill="currentColor" />
                 </svg>
@@ -6841,13 +6927,17 @@ const ChestGuardianGame: React.FC<{
 
   const handleStart = () => {
     playSound('complete');
-    
+
     // Soruları seç
     const pool = getCurriculumQuizQuestions();
-    const shuffled = [...pool].sort(() => Math.random() - 0.5).slice(0, 5);
+    const unusedPool = filterUnusedQuestions(pool);
+    const finalPool = unusedPool.length >= 5 ? unusedPool : pool;
+    const shuffled = [...finalPool].sort(() => Math.random() - 0.5).slice(0, 5);
+    shuffled.forEach(q => markQuestionAsUsed(q.id));
+
     setQuestions(shuffled);
     setCurrentIdx(0);
-    
+
     // Takım sandıklarını 500 altına eşitle
     setChests(Array(teamCount).fill(500));
     setActiveTeamIdx(0);
@@ -6885,7 +6975,7 @@ const ChestGuardianGame: React.FC<{
         const share = Math.floor(loss / (teamCount - 1 || 1));
         return next.map((val, idx) => idx === activeTeamIdx ? val : val + share);
       });
-      
+
       setTeams(prev => {
         const loss = 100;
         const share = Math.floor(loss / (teamCount - 1 || 1));
@@ -6898,11 +6988,11 @@ const ChestGuardianGame: React.FC<{
     if (currentIdx + 1 < questions.length) {
       playSound('complete');
       setCurrentIdx(prev => prev + 1);
-      
+
       // Sıradaki takıma geç
       const nextTeam = (activeTeamIdx + 1) % teamCount;
       setActiveTeamIdx(nextTeam);
-      
+
       // bottom tab aktif takım senkronu
       setTeams(prev => prev.map((t, idx) => ({ ...t, active: idx === nextTeam })));
 
@@ -6940,7 +7030,7 @@ const ChestGuardianGame: React.FC<{
 
       {gameStatus === 'playing' && currentQ && (
         <div className="w-full max-w-3xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-          
+
           {/* Sandık Durum Panelleri */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full">
             {Array.from({ length: teamCount }).map((_, idx) => {
@@ -6948,11 +7038,10 @@ const ChestGuardianGame: React.FC<{
               return (
                 <div
                   key={idx}
-                  className={`p-4 border-2 rounded-2xl text-center flex flex-col gap-1 shadow-sm ${
-                    active
+                  className={`p-4 border-2 rounded-2xl text-center flex flex-col gap-1 shadow-sm ${active
                       ? 'border-yellow-500 bg-yellow-50/20 dark:bg-yellow-950/20 scale-102 font-black text-yellow-650 dark:text-yellow-450 animate-pulse'
                       : 'border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-350'
-                  }`}
+                    }`}
                 >
                   <span className="text-[8px] font-black uppercase tracking-widest">TAKIM {idx + 1}</span>
                   <span className="text-lg font-display font-black">💰 {chests[idx]} Altın</span>
@@ -7074,7 +7163,11 @@ const HeavenPathGame: React.FC<{
   const handleStart = () => {
     playSound('complete');
     const pool = getCurriculumQuizQuestions();
-    const shuffled = [...pool].sort(() => Math.random() - 0.5).slice(0, 10);
+    const unusedPool = filterUnusedQuestions(pool);
+    const finalPool = unusedPool.length >= 10 ? unusedPool : pool;
+    const shuffled = [...finalPool].sort(() => Math.random() - 0.5).slice(0, 10);
+    shuffled.forEach(q => markQuestionAsUsed(q.id));
+
     setQuestions(shuffled);
     setCurrentIdx(0);
     setPositions(Array(teamCount).fill(0));
@@ -7097,7 +7190,7 @@ const HeavenPathGame: React.FC<{
       // Rastgele 1 veya 2 adım ilerlet
       const steps = Math.floor(Math.random() * 2) + 1;
       setDiceResult(steps);
-      
+
       setPositions(prev => {
         const next = [...prev];
         next[activeTeamIdx] = Math.min(9, next[activeTeamIdx] + steps);
@@ -7169,14 +7262,14 @@ const HeavenPathGame: React.FC<{
 
       {gameStatus === 'playing' && currentQ && (
         <div className="w-full max-w-4xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-          
+
           {/* Yol (Stepping Stones) Görseli */}
           <div className="flex flex-col gap-2 w-full">
             <span className="text-[9px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center">CENNET YOLU HARİTASI</span>
             <div className="grid grid-cols-10 gap-1.5 p-3 bg-slate-50 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-850 rounded-2xl w-full min-h-[75px] items-center">
               {Array.from({ length: 10 }).map((_, stepIdx) => {
                 const isGoal = stepIdx === 9;
-                
+
                 // Bu basamakta duran takımların baş harfleri
                 const activePawns: string[] = [];
                 positions.forEach((pos, teamIdx) => {

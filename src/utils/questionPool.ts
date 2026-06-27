@@ -1,5 +1,6 @@
 import { WEEKLY_CURRICULUM, Lesson } from '../data/curriculumData';
 import { defaultGameData } from '../data/defaultQuestions';
+import { GENERAL_KNOWLEDGE_POOL } from '../data/generalKnowledgePool';
 
 // Soru tipleri tanımları
 export interface UnifiedQuizQuestion {
@@ -675,7 +676,8 @@ export const GENERAL_KNOWLEDGE_QUESTIONS: UnifiedQuizQuestion[] = [
     correct: "Ahlak",
     wisdom: "Güzel ahlak, dinimizin inanç ve ibadetlerden sonra gelen en önemli ve tamamlayıcı ayağıdır.",
     source: "Genel Kültür - Ahlak"
-  }
+  },
+  ...GENERAL_KNOWLEDGE_POOL
 ];
 // Overwrite options list item to Ahlak:
 GENERAL_KNOWLEDGE_QUESTIONS[24].options = ["İbadet", "Ahlak", "Fıkıh", "Tevhid"];

@@ -144,6 +144,23 @@ export default function App() {
     }
   }, []);
 
+  // Web autoplay engeline karşı kullanıcı etkileşimiyle sesi başlatma dinleyicisi
+  useEffect(() => {
+    const handleFirstUserInteraction = () => {
+      if (cinematicPhase !== 'splash' && !isMusicPlaying && audioRef.current) {
+        playBackgroundMusic(35);
+        window.removeEventListener('click', handleFirstUserInteraction);
+        window.removeEventListener('touchstart', handleFirstUserInteraction);
+      }
+    };
+    window.addEventListener('click', handleFirstUserInteraction);
+    window.addEventListener('touchstart', handleFirstUserInteraction);
+    return () => {
+      window.removeEventListener('click', handleFirstUserInteraction);
+      window.removeEventListener('touchstart', handleFirstUserInteraction);
+    };
+  }, [cinematicPhase, isMusicPlaying]);
+
   // === DRAGGABLE SMART BOARD PEN STATES ===
   const [penPos, setPenPos] = useState(() => {
     return { x: window.innerWidth - 80, y: window.innerHeight - 80 };
@@ -1505,13 +1522,11 @@ export default function App() {
             <div className="text-sm text-slate-600 dark:text-slate-300 text-left bg-slate-50 dark:bg-slate-950/40 p-5 rounded-2xl border border-slate-100 dark:border-slate-800 flex flex-col gap-3">
               <p className="font-extrabold text-slate-750 dark:text-slate-200">🚀 Bu Sürümde Neler Yeni?</p>
               <ul className="list-disc pl-5 flex flex-col gap-2.5 text-xs text-slate-650 dark:text-slate-300">
-                <li><strong>Akıllı Tahta Desteği:</strong> Kurulum artık Deep Freeze korumalı akıllı tahtalarda D: sürücüsüne yapılabilir ve veriler kaybolmaz!</li>
-                <li><strong>Özel Güncelleme Ekranı:</strong> Güncellemeler artık siz onay vermeden inmez ve ilerleme çubuğuyla izlenir.</li>
-                <li><strong>Hakkımızda:</strong> Hakkımızda sayfası geliştirildi ve içine gerekli bilgiler eklendi.</li>
-                <li><strong>Tam Ekran Modu:</strong>Artık Tam ekran yapılabilinir hale gtirildi</li>
-                <li><strong>Kalem Aracı:</strong>Kalem aracı artık sürüklenebilir hale gtirildi.</li>
-                <li><strong>İkonlar:</strong> İkonlar yenilendi ve daha modern bir görünüm kazandırıldı.</li>
-                <li><strong>Oyun Menüsü:</strong>Oyun menüsü için hazırlıklar devam ediyor...</li>
+                <li><strong>500+ Soru Havuzu:</strong> Dini müfredata uygun 500'den fazla soru havuza eklenerek bilgi yarışmaları devasa bir boyuta taşındı!</li>
+                <li><strong>Soru Tekrarsızlık Sistemi:</strong> Tüm oyunlar arasında soruların üst üste tekrarlanmasını önleyen akıllı önbellek sistemi entegre edildi.</li>
+                <li><strong>Yenilenen Oyun Giriş Ekranı:</strong> Bireysel ve Takım modları, göz alıcı 3D derinlikli, gölgeli ve gradyanlı kart tasarımlarıyla baştan inşa edildi.</li>
+                <li><strong>Kompakt Oyun Kartları:</strong> Oyun listelerindeki kart boyutları ve yerleşimleri, akıllı tahtalarda tek bakışta görünebilecek şekilde optimize edildi.</li>
+                <li><strong>Sessiz Güncelleme Kolaylığı:</strong> Uygulama güncellemeleri artık ilk kurulum ayarlarınızı bozmadan, arka planda tamamen sessiz ve otomatik kurulacak şekilde güncellendi.</li>
               </ul>
             </div>
 

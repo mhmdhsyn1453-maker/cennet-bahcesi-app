@@ -123,8 +123,8 @@ app.whenReady().then(() => {
     });
 
     ipcMain.on('quit-and-install', () => {
-      console.log('Uygulama kapatılıp güncelleniyor...');
-      autoUpdater.quitAndInstall();
+      console.log('Uygulama kapatılıp güncelleniyor (Sessiz Mod)...');
+      autoUpdater.quitAndInstall(true, true);
     });
   }
 
