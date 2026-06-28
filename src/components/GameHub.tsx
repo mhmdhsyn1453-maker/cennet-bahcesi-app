@@ -6,7 +6,6 @@ import {
   Star, BookOpen, Clock, Heart, Award, CheckCircle2, XCircle
 } from 'lucide-react';
 import Lottie from 'lottie-react';
-import titleAnimation from '../../public/assets/title.json';
 import { Team } from '../types';
 import {
   getCurriculumQuizQuestions,
@@ -79,6 +78,15 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
   // 'team_select' : Takım oyun listesi
   // 'playing_game' : Aktif bir oyunun tam ekran oynanması
   const [view, setView] = useState<'mode_select' | 'individual_select' | 'team_config' | 'team_select' | 'playing_game'>('mode_select');
+
+  // Title Animation Lottie (Loaded dynamically to avoid Vite public folder import error)
+  const [titleAnimation, setTitleAnimation] = useState<any>(null);
+  useEffect(() => {
+    fetch('assets/title.json')
+      .then((r) => r.json())
+      .then((data) => setTitleAnimation(data))
+      .catch((err) => console.error("Game title Lottie load failed:", err));
+  }, []);
 
   // Takım Ayarları
   const [teamCount, setTeamCount] = useState<number>(2);
@@ -659,7 +667,9 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
               {!['az_passaparola', 'mosque_hangman', 'door_swiper', 'memory_match', 'word_scramble', 'millionaire_quiz', 'word_search', 'fill_in_blanks', 'chronology', 'wheel_of_wisdom', 'image_guess', 'falling_words', 'quick_quiz', 'honeycomb_puzzle', 'maze_runner', 'word_chain', 'taboo_terms', 'pair_matching', 'balloon_pop', 'diff_finder', 'jeopardy_conquest', 'tug_of_war', 'word_bomb', 'buzzer_duel', 'chest_guardian', 'heaven_path'].includes(activeGame.id) && (
                 <div className="text-center flex flex-col items-center">
                   <div className="w-32 h-32 mb-4">
-                    <Lottie animationData={titleAnimation} loop={true} autoplay={true} className="w-full h-full" />
+                    {titleAnimation && (
+                      <Lottie animationData={titleAnimation} loop={true} autoplay={true} className="w-full h-full" />
+                    )}
                   </div>
                   <h3 className="font-display font-black text-2xl text-slate-800 dark:text-white uppercase">
                     {activeGame.title}

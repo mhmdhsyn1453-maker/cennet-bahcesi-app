@@ -11,7 +11,7 @@ import { SirAyeti } from './components/SirAyeti';
 import { SoruEditoru } from './components/SoruEditoru';
 import { BuzzerAndTimer } from './components/BuzzerAndTimer';
 import { playSound } from './components/BuzzerAndTimer';
-import { Compass, Sparkles, BookOpen, Clock, Trophy, Award, RotateCcw, Volume2, VolumeX, Shield, Hammer, Gamepad2, Landmark, BookOpenCheck, Home, Sun, Moon, Eye, EyeOff, Pencil, GraduationCap, Maximize2, Minimize2, Heart, X } from 'lucide-react';
+import { Compass, Sparkles, BookOpen, Clock, Trophy, Award, RotateCcw, Volume2, VolumeX, Shield, Hammer, Gamepad2, Landmark, BookOpenCheck, Home, Sun, Moon, Eye, EyeOff, Pencil, GraduationCap, Maximize2, Minimize2, Heart, X, Music } from 'lucide-react';
 import Lottie from 'lottie-react';
 import { motion } from 'motion/react';
 
@@ -40,13 +40,15 @@ import { DersPortal } from './components/DersPortal';
 import { GameHub } from './components/GameHub';
 import { EzberPortali } from './components/EzberPortali';
 import { AkilliTahta } from './components/AkilliTahta';
+import { Ilahiler } from './components/Ilahiler';
 
 const LOCAL_STORAGE_KEY = 'cennet_bahcesi_gamedata';
 
 export default function App() {
   const [phase, setPhase] = useState<'intro' | 'map' | 'gameplay' | 'custom_editor' | 'victory'>('intro');
   const [activeZone, setActiveZone] = useState<GameZone | null>(null);
-  const [activeTab, setActiveTab] = useState<'home' | 'elifba' | 'quran' | 'lessons' | 'games' | 'ezber' | 'about'>('home');
+  const [activeTab, setActiveTab] = useState<'home' | 'elifba' | 'quran' | 'lessons' | 'games' | 'ezber' | 'about' | 'ilahiler'>('home');
+  const [isIlahiPlaying, setIsIlahiPlaying] = useState<boolean>(false);
   const [showPenTool, setShowPenTool] = useState<boolean>(false);
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
     return localStorage.getItem('cennet_bahcesi_darkmode') === 'true';
@@ -565,7 +567,7 @@ export default function App() {
 
               {/* Subtitle */}
               <p className="text-slate-500 dark:text-slate-400 font-bold text-[10px] sm:text-xs mt-2 uppercase tracking-[0.25em]">
-                ELİF-BA  •  KUR'AN-I KERİM  •  EZBER  •  DERSLER  •  OYUNLAR
+                ELİF-BA  •  KUR'AN-I KERİM  •  EZBER  •  DERSLER  •  OYUNLAR  •  İLAHİLER
               </p>
             </div>
 
@@ -688,7 +690,7 @@ export default function App() {
           {/* Portal 4: Interactive Lessons */}
           <div
             onClick={() => { setActiveTab('lessons'); }}
-            className="group bg-gradient-to-br from-white to-amber-50/30 border-2 border-slate-200 hover:border-amber-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-amber-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-3"
+            className="group bg-gradient-to-br from-white to-amber-50/30 border-2 border-slate-200 hover:border-amber-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-amber-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-amber-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             <div className="flex items-center gap-4 relative z-10 flex-1 min-w-0">
@@ -712,7 +714,7 @@ export default function App() {
           {/* Portal 5: Classroom Games Tourney */}
           <div
             onClick={() => { setActiveTab('games'); }}
-            className="group bg-gradient-to-br from-white to-sky-50/30 border-2 border-slate-200 hover:border-sky-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-sky-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-3"
+            className="group bg-gradient-to-br from-white to-sky-50/30 border-2 border-slate-200 hover:border-sky-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-sky-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-sky-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             <div className="flex items-center gap-4 relative z-10 flex-1 min-w-0">
@@ -729,6 +731,30 @@ export default function App() {
               </div>
             </div>
             <div className="w-9 h-9 bg-sky-50 text-sky-600 group-hover:bg-sky-500 group-hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm shrink-0 relative z-10">
+              ➔
+            </div>
+          </div>
+
+          {/* Portal 6: İlahiler */}
+          <div
+            onClick={() => { setActiveTab('ilahiler'); }}
+            className="group bg-gradient-to-br from-white to-rose-50/30 border-2 border-slate-200 hover:border-rose-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-rose-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-rose-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <div className="flex items-center gap-4 relative z-10 flex-1 min-w-0">
+              <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-pink-650 rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <Music className="w-6 h-6" />
+              </div>
+              <div className="flex flex-col justify-center min-w-0">
+                <h3 className="font-display font-black text-base text-slate-800 group-hover:text-rose-700 transition-colors tracking-tight uppercase">
+                  İLAHİLER
+                </h3>
+                <p className="text-[11px] text-slate-500 font-semibold leading-snug line-clamp-1">
+                  Önderimiz Peygamber, Ey Sevgili ve daha fazlası; dinle ve sözleri oku.
+                </p>
+              </div>
+            </div>
+            <div className="w-9 h-9 bg-rose-50 text-rose-600 group-hover:bg-rose-500 group-hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm shrink-0 relative z-10">
               ➔
             </div>
           </div>
@@ -1100,9 +1126,9 @@ export default function App() {
       {/* Sleek Floating Vertical Navigation Sidebar */}
       {phase !== 'gameplay' && phase !== 'victory' && phase !== 'custom_editor' && activeTab !== 'home' && (
         <div
-          className={`fixed top-[180px] left-6 z-50 flex flex-col gap-3 transition-all duration-500 ease-in-out ${cinematicPhase === 'ready'
-            ? (isFocused ? '-translate-x-24 opacity-0 pointer-events-none' : 'translate-x-0 opacity-100 pointer-events-auto')
-            : 'opacity-0 pointer-events-none'
+          className={`fixed top-1/2 left-6 z-50 flex flex-col gap-3 transition-all duration-500 ease-in-out ${cinematicPhase === 'ready'
+            ? (isFocused ? '-translate-x-24 -translate-y-1/2 opacity-0 pointer-events-none' : 'translate-x-0 -translate-y-1/2 opacity-100 pointer-events-auto')
+            : '-translate-y-1/2 opacity-0 pointer-events-none'
             }`}
           id="floating-vertical-nav"
         >
@@ -1195,6 +1221,21 @@ export default function App() {
             >
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               <Gamepad2 className="w-5 h-5 relative z-10" />
+            </button>
+          )}
+
+          {/* İlahiler button */}
+          {activeTab !== 'home' && (
+            <button
+              onClick={() => { setActiveTab('ilahiler'); setPhase('map'); setActiveZone(null); setIsFocused(false); }}
+              className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border ${activeTab === 'ilahiler'
+                ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white border-emerald-600 shadow-lg shadow-emerald-500/20'
+                : 'border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-emerald-500/30 dark:hover:border-emerald-500/30'
+                }`}
+              title="İlahiler"
+            >
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <Music className="w-5 h-5 relative z-10" />
             </button>
           )}
 
@@ -1337,6 +1378,34 @@ export default function App() {
                   className="w-full"
                 >
                   <GameHub isDarkMode={isDarkMode} />
+                </motion.div>
+              </div>
+            )}
+
+            {visitedTabs.includes('ilahiler') && (
+              <div style={{ display: activeTab === 'ilahiler' ? 'block' : 'none' }} className="w-full">
+                <motion.div
+                  key="ilahiler-tab"
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: activeTab === 'ilahiler' ? 1 : 0, y: activeTab === 'ilahiler' ? 0 : 15 }}
+                  transition={{ duration: 0.4 }}
+                  className="w-full"
+                >
+                  <Ilahiler
+                    isDarkMode={isDarkMode}
+                    isAppMusicPlaying={isMusicPlaying}
+                    isFocused={isFocused}
+                    setIsFocused={setIsFocused}
+                    onIlahiPlayStateChange={(playing) => {
+                      setIsIlahiPlaying(playing);
+                      if (playing) {
+                        if (audioRef.current && !audioRef.current.paused) {
+                          audioRef.current.pause();
+                          setIsMusicPlaying(false);
+                        }
+                      }
+                    }}
+                  />
                 </motion.div>
               </div>
             )}
