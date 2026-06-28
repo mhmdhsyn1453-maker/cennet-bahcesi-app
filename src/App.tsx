@@ -62,6 +62,13 @@ export default function App() {
   const [cinematicPhase, setCinematicPhase] = useState<'splash' | 'cinematic' | 'ready'>('splash');
   const [isFocused, setIsFocused] = useState<boolean>(false);
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
+  const [visitedTabs, setVisitedTabs] = useState<string[]>(['home']);
+
+  useEffect(() => {
+    if (!visitedTabs.includes(activeTab)) {
+      setVisitedTabs(prev => [...prev, activeTab]);
+    }
+  }, [activeTab, visitedTabs]);
 
   const toggleFullscreen = () => {
     playSound('tick');
@@ -90,6 +97,7 @@ export default function App() {
     };
   }, []);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const hasInteractedRef = useRef(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const safetyTimerRef = useRef<NodeJS.Timeout | null>(null);
   const lottieRef = useRef<any>(null);
@@ -146,24 +154,29 @@ export default function App() {
 
   // Web autoplay engeline karşı kullanıcı etkileşimiyle sesi başlatma dinleyicisi
   useEffect(() => {
+    if (hasInteractedRef.current) return;
+
     const handleFirstUserInteraction = () => {
-      if (cinematicPhase !== 'splash' && !isMusicPlaying && audioRef.current) {
+      if (hasInteractedRef.current) return;
+      if (cinematicPhase !== 'splash' && audioRef.current) {
+        hasInteractedRef.current = true;
         playBackgroundMusic(35);
         window.removeEventListener('click', handleFirstUserInteraction);
         window.removeEventListener('touchstart', handleFirstUserInteraction);
       }
     };
+
     window.addEventListener('click', handleFirstUserInteraction);
     window.addEventListener('touchstart', handleFirstUserInteraction);
     return () => {
       window.removeEventListener('click', handleFirstUserInteraction);
       window.removeEventListener('touchstart', handleFirstUserInteraction);
     };
-  }, [cinematicPhase, isMusicPlaying]);
+  }, [cinematicPhase]);
 
   // === DRAGGABLE SMART BOARD PEN STATES ===
   const [penPos, setPenPos] = useState(() => {
-    return { x: window.innerWidth - 80, y: window.innerHeight - 80 };
+    return { x: -9999, y: -9999 };
   });
   const isDragging = useRef(false);
   const dragStart = useRef({ x: 0, y: 0 });
@@ -174,7 +187,14 @@ export default function App() {
     if (e.button !== 0) return;
     isDragging.current = true;
     dragStart.current = { x: e.clientX, y: e.clientY };
-    dragStartPos.current = { ...penPos };
+    let currentX = penPos.x;
+    let currentY = penPos.y;
+    if (currentX === -9999 && currentY === -9999) {
+      const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+      currentX = rect.left;
+      currentY = rect.top;
+    }
+    dragStartPos.current = { x: currentX, y: currentY };
     dragDistance.current = 0;
   };
 
@@ -182,7 +202,14 @@ export default function App() {
     if (e.touches.length !== 1) return;
     isDragging.current = true;
     dragStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-    dragStartPos.current = { ...penPos };
+    let currentX = penPos.x;
+    let currentY = penPos.y;
+    if (currentX === -9999 && currentY === -9999) {
+      const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+      currentX = rect.left;
+      currentY = rect.top;
+    }
+    dragStartPos.current = { x: currentX, y: currentY };
     dragDistance.current = 0;
   };
 
@@ -258,6 +285,7 @@ export default function App() {
 
     audioRef.current.play()
       .then(() => {
+        hasInteractedRef.current = true;
         setIsMusicPlaying(true);
         // Ensure currentTime is set successfully now that the audio is playing
         try {
@@ -330,13 +358,24 @@ export default function App() {
     audio.preload = 'auto';
     audioRef.current = audio;
 
+    const handlePlay = () => setIsMusicPlaying(true);
+    const handlePause = () => setIsMusicPlaying(false);
+
+    audio.addEventListener('play', handlePlay);
+    audio.addEventListener('pause', handlePause);
+
     return () => {
       audio.pause();
+      audio.removeEventListener('play', handlePlay);
+      audio.removeEventListener('pause', handlePause);
     };
   }, []);
 
   // Control background music play/pause
-  const togglePlayMusic = () => {
+  const togglePlayMusic = (e?: React.MouseEvent | React.TouchEvent) => {
+    if (e) {
+      e.stopPropagation();
+    }
     if (!audioRef.current) return;
 
     if (isMusicPlaying) {
@@ -533,7 +572,7 @@ export default function App() {
             {/* Audio & Visual Controllers - inside card */}
             <div className="mt-4 flex gap-3 justify-center relative z-10">
               <button
-                onClick={togglePlayMusic}
+                onClick={(e) => togglePlayMusic(e)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-black tracking-wide uppercase transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-sm border-2 ${isMusicPlaying
                   ? 'bg-emerald-500 hover:bg-emerald-600 text-white border-emerald-600 animate-pulse'
                   : 'bg-white/80 dark:bg-slate-700/80 hover:bg-slate-50 dark:hover:bg-slate-600 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-600'
@@ -1212,60 +1251,47 @@ export default function App() {
         }`}>
         {phase !== 'custom_editor' && phase !== 'victory' && (
           <>
-            {activeTab === 'home' && (
-              <motion.div
-                key="home-tab"
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                className="w-full"
-              >
-                {renderHomeView()}
-              </motion.div>
+            {visitedTabs.includes('home') && (
+              <div style={{ display: activeTab === 'home' ? 'block' : 'none' }} className="w-full">
+                <motion.div
+                  key="home-tab"
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: activeTab === 'home' ? 1 : 0, y: activeTab === 'home' ? 0 : 15 }}
+                  transition={{ duration: 0.4 }}
+                  className="w-full"
+                >
+                  {renderHomeView()}
+                </motion.div>
+              </div>
             )}
 
-            {activeTab === 'elifba' && (
-              <KuranElifba
-                initialTab="elifba"
-                isDarkMode={isDarkMode}
-                toggleDarkMode={toggleDarkMode}
-                isFocused={isFocused}
-                setIsFocused={setIsFocused}
-              />
+            {visitedTabs.includes('elifba') && (
+              <div style={{ display: activeTab === 'elifba' ? 'block' : 'none' }} className="w-full">
+                <KuranElifba
+                  initialTab="elifba"
+                  isDarkMode={isDarkMode}
+                  toggleDarkMode={toggleDarkMode}
+                  isFocused={isFocused}
+                  setIsFocused={setIsFocused}
+                />
+              </div>
             )}
 
-            {activeTab === 'quran' && (
-              <KuranElifba
-                initialTab="kuran"
-                isDarkMode={isDarkMode}
-                toggleDarkMode={toggleDarkMode}
-                isFocused={isFocused}
-                setIsFocused={setIsFocused}
-              />
+            {visitedTabs.includes('quran') && (
+              <div style={{ display: activeTab === 'quran' ? 'block' : 'none' }} className="w-full">
+                <KuranElifba
+                  initialTab="kuran"
+                  isDarkMode={isDarkMode}
+                  toggleDarkMode={toggleDarkMode}
+                  isFocused={isFocused}
+                  setIsFocused={setIsFocused}
+                />
+              </div>
             )}
 
-            {activeTab === 'lessons' && (
-              <DersPortal
-                isDarkMode={isDarkMode}
-                toggleDarkMode={toggleDarkMode}
-                isMusicPlaying={isMusicPlaying}
-                togglePlayMusic={togglePlayMusic}
-                isAnimatedBg={isAnimatedBg}
-                toggleAnimatedBg={toggleAnimatedBg}
-                isFocused={isFocused}
-                setIsFocused={setIsFocused}
-              />
-            )}
-
-            {activeTab === 'ezber' && (
-              <motion.div
-                key="ezber-tab"
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                className="w-full"
-              >
-                <EzberPortali
+            {visitedTabs.includes('lessons') && (
+              <div style={{ display: activeTab === 'lessons' ? 'block' : 'none' }} className="w-full">
+                <DersPortal
                   isDarkMode={isDarkMode}
                   toggleDarkMode={toggleDarkMode}
                   isMusicPlaying={isMusicPlaying}
@@ -1275,21 +1301,51 @@ export default function App() {
                   isFocused={isFocused}
                   setIsFocused={setIsFocused}
                 />
-              </motion.div>
+              </div>
             )}
 
-            {activeTab === 'games' && (
-              <motion.div
-                key="games-tab"
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                className="w-full"
-              >
-                <GameHub isDarkMode={isDarkMode} />
-              </motion.div>
+            {visitedTabs.includes('ezber') && (
+              <div style={{ display: activeTab === 'ezber' ? 'block' : 'none' }} className="w-full">
+                <motion.div
+                  key="ezber-tab"
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: activeTab === 'ezber' ? 1 : 0, y: activeTab === 'ezber' ? 0 : 15 }}
+                  transition={{ duration: 0.4 }}
+                  className="w-full"
+                >
+                  <EzberPortali
+                    isDarkMode={isDarkMode}
+                    toggleDarkMode={toggleDarkMode}
+                    isMusicPlaying={isMusicPlaying}
+                    togglePlayMusic={togglePlayMusic}
+                    isAnimatedBg={isAnimatedBg}
+                    toggleAnimatedBg={toggleAnimatedBg}
+                    isFocused={isFocused}
+                    setIsFocused={setIsFocused}
+                  />
+                </motion.div>
+              </div>
             )}
-            {activeTab === 'about' && renderAboutView()}
+
+            {visitedTabs.includes('games') && (
+              <div style={{ display: activeTab === 'games' ? 'block' : 'none' }} className="w-full">
+                <motion.div
+                  key="games-tab"
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: activeTab === 'games' ? 1 : 0, y: activeTab === 'games' ? 0 : 15 }}
+                  transition={{ duration: 0.4 }}
+                  className="w-full"
+                >
+                  <GameHub isDarkMode={isDarkMode} />
+                </motion.div>
+              </div>
+            )}
+
+            {visitedTabs.includes('about') && (
+              <div style={{ display: activeTab === 'about' ? 'block' : 'none' }} className="w-full">
+                {renderAboutView()}
+              </div>
+            )}
           </>
         )}
 
@@ -1374,7 +1430,11 @@ export default function App() {
             setShowPenTool(prev => !prev);
             playSound('tick');
           }}
-          style={{ left: `${penPos.x}px`, top: `${penPos.y}px` }}
+          style={
+            penPos.x === -9999 && penPos.y === -9999
+              ? { right: '24px', bottom: '24px' }
+              : { left: `${penPos.x}px`, top: `${penPos.y}px` }
+          }
           className={`fixed z-[99997] w-14 h-14 rounded-full flex items-center justify-center shadow-2xl border-3 transition-[background-color,border-color,color,box-shadow,transform] duration-200 cursor-move select-none ${showPenTool
             ? 'bg-red-500 border-red-650 text-white ring-4 ring-red-150 animate-pulse'
             : isDarkMode

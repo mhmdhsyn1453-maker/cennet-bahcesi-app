@@ -4164,5 +4164,135 @@ export const GENERAL_KNOWLEDGE_POOL: UnifiedQuizQuestion[] = [
     "correct": "Küşteri Meydanı (Ayna)",
     "wisdom": "Gölge oyununda perdeye Şeyh Küşteri'nin anısına 'Küşteri Meydanı' denir. Oynatıcı ustaya ise 'Hayali' veya 'Karagözcü' denir.",
     "source": "Genel Kültür - Kültür Sanat"
+  },
+  {
+    "id": "imported_1",
+    "question": "Aşağıdakilerden hangisi hadesten temizlenme yolu değildir?",
+    "options": [
+      "Abdest almak",
+      "Gusül yapmak",
+      "Teyemmüm yapmak",
+      "Elbiseleri temizlemek"
+    ],
+    "correct": "Elbiseleri temizlemek",
+    "wisdom": "",
+    "source": "Genel Kültür - İBADET"
+  },
+  {
+    "id": "imported_6",
+    "question": "Şüphesiz Allah çok tövbe edenleri, çok temizlenenleri sever ayeti aşağıdaki ibadetlerden hangisine dikkat çekmektedir?",
+    "options": [
+      "Namaz",
+      "Oruç",
+      "Zekat",
+      "Abdest"
+    ],
+    "correct": "Abdest",
+    "wisdom": "",
+    "source": "Genel Kültür - İBADET"
+  },
+  {
+    "id": "imported_7",
+    "question": "Kişinin kalbini ve benliğini, yalan, kibir, haset, gıybet ve benzeri bütün kötülük, günah ve çirkinliklerden arındırması hangi temizlik çeşidine girer?",
+    "options": [
+      "Manevi temizlik",
+      "Maddi Temizlik",
+      "Hükmi Temizlik",
+      "Çevre Temizliği"
+    ],
+    "correct": "Manevi temizlik",
+    "wisdom": "",
+    "source": "Genel Kültür - İBADET"
+  },
+  {
+    "id": "imported_8",
+    "question": "Nefsini arındıran kurtuluşa ermiştir ayeti hangi temizliğe vurgu yapar?",
+    "options": [
+      "Maddi Temizlik",
+      "Manevi Temizlik",
+      "Hükmi Temizlik",
+      "Çevre Temizliği"
+    ],
+    "correct": "Manevi Temizlik",
+    "wisdom": "",
+    "source": "Genel Kültür - İBADET"
+  },
+  {
+    "id": "imported_9",
+    "question": "Abdestsizlik veya cünüplük sebebiyle dinimizce insanda meydana geldiği kabul edilen hükmi kirliliğe ne ad verilir?",
+    "options": [
+      "Taharet",
+      "Necaset",
+      "Hades",
+      "Haset"
+    ],
+    "correct": "Hades",
+    "wisdom": "",
+    "source": "Genel Kültür - İBADET"
+  },
+  {
+    "id": "imported_10",
+    "question": "Kişinin abdest veya gusül alarak yaptığı temizliğe ne ad verilir?",
+    "options": [
+      "Taharet",
+      "Necasetten Taharet",
+      "Hadesten Taharet",
+      "Tahareti Suğra"
+    ],
+    "correct": "Necasetten Taharet",
+    "wisdom": "",
+    "source": "Genel Kültür - İBADET"
+  },
+  {
+    "id": "imported_11",
+    "question": "Aşağıdakilerden hangisi necaset değildir?",
+    "options": [
+      "Kan, insan idrari ve dışkısı",
+      "Ağız dolusu olmayan kusmuk",
+      "Domuz eti",
+      "Yenmesi helal olmayan hayvanların idrar ve dışkısı"
+    ],
+    "correct": "Ağız dolusu olmayan kusmuk",
+    "wisdom": "",
+    "source": "Genel Kültür - İBADET"
+  },
+  {
+    "id": "imported_12",
+    "question": "Aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+    "options": [
+      "Hades - Hükmi temizlik",
+      "Necaset - Maddi temizlik",
+      "Tövbe - Manevi temizlik",
+      "Abdest - Manevi Temizlik"
+    ],
+    "correct": "Abdest - Manevi Temizlik",
+    "wisdom": "",
+    "source": "Genel Kültür - İBADET"
+  },
+  {
+    "id": "imported_13",
+    "question": "Temizlik anlamına gelen kelime hangisidir?",
+    "options": [
+      "Necaset",
+      "Taharet",
+      "Hades",
+      "Kehanet"
+    ],
+    "correct": "Taharet",
+    "wisdom": "",
+    "source": "Genel Kültür - İBADET"
+  },
+  {
+    "id": "imported_14",
+    "question": "Necaset denilen maddi pisliklerden ve hades denilen hükmi pisliklerden temizlenmeye ne ad verilir?",
+    "options": [
+      "Kehanet",
+      "Hades",
+      "Taharet",
+      "Necaset"
+    ],
+    "correct": "Taharet",
+    "wisdom": "",
+    "source": "Genel Kültür - İBADET"
   }
 ];

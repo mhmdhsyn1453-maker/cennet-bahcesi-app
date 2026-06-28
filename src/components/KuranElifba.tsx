@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Book, Play, Pause, Search, RefreshCw, Volume2, Sparkles, BookOpen, Heart, Award, ArrowRight, ArrowLeft, BookOpenCheck, ChevronLeft, ChevronRight, Layers, GraduationCap, Puzzle, Eye, EyeOff, RotateCcw, Trophy, Zap, Target, CheckCircle, XCircle, Star, Grid3X3, FlipHorizontal, Shuffle, SortAsc, Maximize2, Minimize2, X, Sun, Moon } from 'lucide-react';
+import { Book, Play, Pause, Search, RefreshCw, Volume2, VolumeX, Sparkles, BookOpen, Heart, Award, ArrowRight, ArrowLeft, BookOpenCheck, ChevronLeft, ChevronRight, Layers, GraduationCap, Puzzle, Eye, EyeOff, RotateCcw, Trophy, Zap, Target, CheckCircle, XCircle, Star, Grid3X3, FlipHorizontal, Shuffle, SortAsc, Maximize2, Minimize2, X, Sun, Moon } from 'lucide-react';
 import { playSound } from './BuzzerAndTimer';
 import Lottie from 'lottie-react';
 import {
@@ -88,6 +88,16 @@ const cleanBismillah = (text: string, surahNumber: number): string => {
 
   return text;
 };
+
+function shuffleArray<T>(array: T[]): T[] {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 
 
 const FALLBACK_POPULAR_SURAHS: Surah[] = [
@@ -263,7 +273,7 @@ const ClickableWord: React.FC<{
 
   const handleClick = () => {
     setShowTip(true);
-    playSound('tick');
+   
     setTimeout(() => setShowTip(false), 3000);
   };
 
@@ -315,7 +325,7 @@ const HarekeCard: React.FC<{
 
   const handleClick = () => {
     setShowTip(true);
-    playSound('tick');
+   
     setTimeout(() => setShowTip(false), 2500);
   };
 
@@ -382,7 +392,7 @@ const DuaCard: React.FC<{
 
       {/* Anlam (toggle) */}
       <button
-        onClick={() => { setExpanded(!expanded); playSound('tick'); }}
+        onClick={() => { setExpanded(!expanded); }}
         className="w-full flex items-center justify-center gap-2 text-xs font-black text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 cursor-pointer py-2 transition-colors"
       >
         <Eye className="w-4 h-4" />
@@ -408,12 +418,21 @@ const DuaCard: React.FC<{
   );
 };
 
-const HarfKutusu: React.FC<{ h: any; hideName: boolean }> = ({ h, hideName }) => {
+const HarfKutusu: React.FC<{ h: any; hideName: boolean; playAudio: boolean }> = ({ h, hideName, playAudio }) => {
   const [showInfo, setShowInfo] = useState(false);
 
   const handleClick = () => {
     setShowInfo(true);
-    playSound('tick');
+    if (playAudio) {
+      const audioUrl = `assets/audio/elifba/${h.sira}.harf.mp3`;
+      const audio = new Audio(audioUrl);
+      audio.play().catch(err => {
+        console.warn("Harf ses dosyası çalınamadı:", audioUrl, err);
+       
+      });
+    } else {
+     
+    }
   };
 
   // Auto-hide the tooltip after 2 seconds
@@ -469,6 +488,7 @@ const HarfKutusu: React.FC<{ h: any; hideName: boolean }> = ({ h, hideName }) =>
 
 const HarflerTablosu: React.FC<{ page: ElifbaPage }> = ({ page }) => {
   const [hideNames, setHideNames] = useState(false);
+  const [playAudio, setPlayAudio] = useState(true);
   const [isShuffled, setIsShuffled] = useState(false);
   const [shuffledList, setShuffledList] = useState<any[]>([]);
 
@@ -477,15 +497,15 @@ const HarflerTablosu: React.FC<{ page: ElifbaPage }> = ({ page }) => {
 
   const handleShuffle = () => {
     // Shuffling letters dynamically (supports clicking multiple times for different combinations)
-    const shuffled = [...originalLetters].sort(() => 0.5 - Math.random());
+    const shuffled = shuffleArray(originalLetters);
     setShuffledList(shuffled);
     setIsShuffled(true);
-    playSound('tick');
+   
   };
 
   const handleResetOrder = () => {
     setIsShuffled(false);
-    playSound('tick');
+   
   };
 
   const lettersToRender = isShuffled ? shuffledList : originalLetters;
@@ -494,9 +514,22 @@ const HarflerTablosu: React.FC<{ page: ElifbaPage }> = ({ page }) => {
     <div>
       {/* Playful giant circular control buttons - placed directly without an enclosing card wrapper */}
       <div className="flex items-center justify-center gap-4 mb-6">
+        {/* Sesli Okunuş Toggle */}
+        <button
+          onClick={() => { setPlayAudio(!playAudio); }}
+          className={`w-14 h-14 rounded-full flex items-center justify-center shadow-md border-3 transition-all hover:scale-110 active:scale-95 cursor-pointer bg-white dark:bg-slate-800 ${
+            playAudio
+              ? 'border-teal-500 text-teal-600 dark:text-teal-400 ring-4 ring-teal-100 dark:ring-teal-900/20'
+              : 'border-slate-200 dark:border-slate-650 text-slate-400 dark:text-slate-500 hover:border-slate-350'
+          }`}
+          title={playAudio ? "Harf Seslerini Kapat" : "Harf Seslerini Aç"}
+        >
+          {playAudio ? <Volume2 className="w-6 h-6" /> : <VolumeX className="w-6 h-6" />}
+        </button>
+
         {/* Türkçe İsimleri Göster/Gizle Toggle */}
         <button
-          onClick={() => { setHideNames(!hideNames); playSound('tick'); }}
+          onClick={() => { setHideNames(!hideNames); }}
           className={`w-14 h-14 rounded-full flex items-center justify-center shadow-md border-3 transition-all hover:scale-110 active:scale-95 cursor-pointer bg-white dark:bg-slate-800 ${
             !hideNames
               ? 'border-emerald-500 text-emerald-600 dark:text-emerald-400 ring-4 ring-emerald-100 dark:ring-emerald-900/20'
@@ -543,7 +576,7 @@ const HarflerTablosu: React.FC<{ page: ElifbaPage }> = ({ page }) => {
       <div className="grid grid-cols-4 sm:grid-cols-7 gap-3" dir="rtl">
         {lettersToRender.map((h) => {
           return (
-            <HarfKutusu key={h.sira} h={h} hideName={hideNames} />
+            <HarfKutusu key={h.sira} h={h} hideName={hideNames} playAudio={playAudio} />
           );
         })}
       </div>
@@ -724,14 +757,14 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
   const goNextPage = () => {
     if (currentPageIndex < totalPages - 1) {
       setCurrentPageIndex(prev => prev + 1);
-      playSound('tick');
+     
     }
   };
 
   const goPrevPage = () => {
     if (currentPageIndex > 0) {
       setCurrentPageIndex(prev => prev - 1);
-      playSound('tick');
+     
     }
   };
 
@@ -752,7 +785,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
 
   const initMemoryGame = useCallback(() => {
     // Pick random letters
-    const shuffledLetters = [...ELIFBA_LETTERS].sort(() => 0.5 - Math.random()).slice(0, MEMORY_PAIR_COUNT);
+    const shuffledLetters = shuffleArray(ELIFBA_LETTERS).slice(0, MEMORY_PAIR_COUNT);
     const cards: MemoryCard[] = [];
     let id = 0;
     shuffledLetters.forEach(letter => {
@@ -760,7 +793,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
       cards.push({ id: id++, content: letter.name, type: 'name', pairId: letter.char });
     });
     // Shuffle cards
-    const shuffled = cards.sort(() => 0.5 - Math.random());
+    const shuffled = shuffleArray(cards);
     setMemoryCards(shuffled);
     setMemoryFlipped([]);
     setMemoryMatched([]);
@@ -778,7 +811,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
 
     const newFlipped = [...memoryFlipped, cardId];
     setMemoryFlipped(newFlipped);
-    playSound('tick');
+   
 
     if (newFlipped.length === 2) {
       setMemoryMoves(prev => prev + 1);
@@ -833,6 +866,13 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
   const [audioInstance, setAudioInstance] = useState<HTMLAudioElement | null>(null);
   const [isOffline, setIsOffline] = useState(false);
+
+  // Continuous play states
+  const [isContinuousPlaying, setIsContinuousPlaying] = useState(false);
+  const [playList, setPlayList] = useState<Ayah[]>([]);
+  const [playIndex, setPlayIndex] = useState<number>(-1);
+  const [currentPlayingAyahKey, setCurrentPlayingAyahKey] = useState<string | null>(null);
+  const [lastPlayedAyahKey, setLastPlayedAyahKey] = useState<string | null>(null);
   const [offlineAlert, setOfflineAlert] = useState<string | null>(null);
   const [isFullscreenQuran, setIsFullscreenQuran] = useState(false);
 
@@ -905,11 +945,37 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
     return mushafPage % 2 === 1 ? rightPageAyahs : leftPageAyahs;
   }, [mushafPage, rightPageAyahs, leftPageAyahs]);
 
+  const activeAudioRef = useRef<HTMLAudioElement | null>(null);
   const basmalaSafetyTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const basmalaAudioRef = useRef<HTMLAudioElement | null>(null);
+
+  const playBasmalaIntroAudio = () => {
+    stopAllAudio();
+    if (basmalaAudioRef.current) {
+      basmalaAudioRef.current.pause();
+      basmalaAudioRef.current = null;
+    }
+    const audio = new Audio('assets/audio/basmala_intro.mp3');
+    basmalaAudioRef.current = audio;
+    audio.play().catch(err => {
+      console.warn("Basmele intro ses dosyası çalınamadı:", err);
+    });
+  };
+
+  const stopBasmalaIntroAudio = () => {
+    if (basmalaAudioRef.current) {
+      basmalaAudioRef.current.pause();
+      basmalaAudioRef.current = null;
+    }
+  };
 
   useEffect(() => {
     return () => {
       if (basmalaSafetyTimerRef.current) clearTimeout(basmalaSafetyTimerRef.current);
+      if (basmalaAudioRef.current) {
+        basmalaAudioRef.current.pause();
+        basmalaAudioRef.current = null;
+      }
     };
   }, []);
 
@@ -961,7 +1027,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
         if (type === 'elifba') {
           if (currentPageIndex > 0) {
             setCurrentPageIndex(prev => prev - 1);
-            playSound('tick');
+           
           }
         } else {
           if (isMobile) {
@@ -969,14 +1035,14 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
           } else {
             if (rightPageNum > 1) handleSelectMushafPage(rightPageNum - 2);
           }
-          playSound('tick');
+         
         }
       } else {
         // Dragged RIGHT -> Go to NEXT page (RTL: page increases)
         if (type === 'elifba') {
           if (currentPageIndex < totalPages - 1) {
             setCurrentPageIndex(prev => prev + 1);
-            playSound('tick');
+           
           }
         } else {
           if (isMobile) {
@@ -984,7 +1050,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
           } else {
             if (leftPageNum < 604) handleSelectMushafPage(rightPageNum + 2);
           }
-          playSound('tick');
+         
         }
       }
     }
@@ -1013,18 +1079,21 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
   };
 
   // Fetch Mushaf page details (Arabic + Turkish) for both pages in the spread
-  const handleSelectMushafPage = async (pageNumber: number) => {
+  const handleSelectMushafPage = async (pageNumber: number, isAuto: boolean = false) => {
     const rightPageNum = pageNumber % 2 === 1 ? pageNumber : pageNumber - 1;
     const leftPageNum = rightPageNum + 1;
 
     setMushafPage(pageNumber);
     setLoadingMushafDetail(true);
     
-    // Clear audio if playing
-    if (audioInstance) {
-      audioInstance.pause();
-      setIsPlayingAudio(false);
-      setAudioInstance(null);
+    if (!isAuto) {
+      stopAllAudio();
+    } else {
+      if (audioInstance) {
+        audioInstance.pause();
+        setIsPlayingAudio(false);
+        setAudioInstance(null);
+      }
     }
 
     try {
@@ -1090,14 +1159,14 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
     if (currentMode === 'isim-bul') {
       // Show letter → find name
       const others = ELIFBA_LETTERS.filter(l => l.char !== randomTarget.char);
-      const shuffled = [...others].sort(() => 0.5 - Math.random()).slice(0, 3);
-      const options = [randomTarget, ...shuffled].sort(() => 0.5 - Math.random());
+      const shuffled = shuffleArray(others).slice(0, 3);
+      const options = shuffleArray([randomTarget, ...shuffled]);
       setQuizOptions(options);
     } else {
       // Show name → find letter
       const others = ELIFBA_LETTERS.filter(l => l.char !== randomTarget.char);
-      const shuffled = [...others].sort(() => 0.5 - Math.random()).slice(0, 3);
-      const options = [randomTarget, ...shuffled].sort(() => 0.5 - Math.random());
+      const shuffled = shuffleArray(others).slice(0, 3);
+      const options = shuffleArray([randomTarget, ...shuffled]);
       setQuizOptions(options);
     }
   };
@@ -1251,45 +1320,241 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
     }
   };
 
-  // Audio Recitation controller
-  const togglePlaySurah = () => {
-    if (!selectedSurah) return;
-    
-    const audioUrl = `https://server8.mp3quran.net/afs/${selectedSurah.number.toString().padStart(3, '0')}.mp3`;
+  // Ref to always have the latest isContinuousPlaying value (avoids stale closures in onended)
+  const isContinuousRef = useRef(false);
 
-    if (isPlayingAudio && audioInstance) {
+  const stopAllAudio = useCallback(() => {
+    if (activeAudioRef.current) {
+      activeAudioRef.current.pause();
+      activeAudioRef.current = null;
+    }
+    if (audioInstance) {
       audioInstance.pause();
-      setIsPlayingAudio(false);
-    } else {
-      if (audioInstance) {
-        audioInstance.play().catch(err => {
-          console.warn("Audio playback was restricted or failed:", err);
-          setIsPlayingAudio(false);
-          setOfflineAlert("Ses dosyası oynatılamadı. İnternet bağlantısı kesilmiş veya ses sunucusuna erişilemiyor olabilir.");
-        });
-        setIsPlayingAudio(true);
+    }
+    setAudioInstance(null);
+    setIsPlayingAudio(false);
+    isContinuousRef.current = false;
+    setIsContinuousPlaying(false);
+    setPlayIndex(-1);
+    setPlayList([]);
+    setCurrentPlayingAyahKey(null);
+  }, [audioInstance]);
+
+  // Core function: play a single ayah from a list. When it ends, advance to next.
+  const playAyahInList = useCallback((list: Ayah[], index: number) => {
+    if (index < 0 || index >= list.length) {
+      // End of page — auto-advance to next page if continuous
+      if (isContinuousRef.current) {
+        const nextP = isMobile ? mushafPage + 1 : (mushafPage % 2 === 1 ? mushafPage : mushafPage - 1) + 2;
+        if (nextP <= 604) {
+          handleSelectMushafPage(nextP, true);
+          setPlayIndex(-2); // sentinel: waiting for page data
+        } else {
+          stopAllAudio();
+        }
       } else {
-        const newAudio = new Audio(audioUrl);
-        newAudio.play().catch(err => {
-          console.warn("Audio playback configuration failed or was restricted:", err);
-          setIsPlayingAudio(false);
-          setOfflineAlert("Ses dosyası oynatılamadı. İnternet bağlantısı kesilmiş veya ses sunucusuna erişilemiyor olabilir.");
-        });
-        setIsPlayingAudio(true);
-        newAudio.onended = () => setIsPlayingAudio(false);
-        setAudioInstance(newAudio);
+        stopAllAudio();
+      }
+      return;
+    }
+
+    const verse = list[index];
+    const sStr = (verse.surahNumber || 1).toString().padStart(3, '0');
+    const aStr = verse.number.toString().padStart(3, '0');
+    const audioUrl = `https://everyayah.com/data/Alafasy_128kbps/${sStr}${aStr}.mp3`;
+
+    // Stop any currently playing audio
+    if (activeAudioRef.current) {
+      activeAudioRef.current.pause();
+    }
+
+    const audio = new Audio(audioUrl);
+    activeAudioRef.current = audio;
+    setAudioInstance(audio);
+    setPlayIndex(index);
+    const key = `${verse.surahNumber || 1}_${verse.number}`;
+    setCurrentPlayingAyahKey(key);
+    setLastPlayedAyahKey(key);
+    setIsPlayingAudio(true);
+
+    // Set onended BEFORE calling play
+    audio.onended = () => {
+      if (isContinuousRef.current) {
+        // Directly play next ayah (no useEffect needed for chaining)
+        playAyahInList(list, index + 1);
+      } else {
+        stopAllAudio();
+      }
+    };
+
+    audio.play().catch(err => {
+      console.warn("Audio play error:", err);
+      // AbortError happens when we stop audio intentionally — ignore it
+      if (err.name === 'AbortError') return;
+      stopAllAudio();
+      setOfflineAlert("Ses dosyası yüklenemedi veya oynatılamadı. Lütfen internet bağlantınızı kontrol edin.");
+    });
+  }, [isMobile, mushafPage, stopAllAudio]);
+
+  // Play a single ayah on click, starting continuous play from this ayah
+  const handlePlayAyah = (surahNum: number, verseNum: number) => {
+    stopAllAudio();
+
+    const currentList = isMobile ? mushafAyahs : [...rightPageAyahs, ...leftPageAyahs];
+    const foundIndex = currentList.findIndex(
+      v => (v.surahNumber || 1) === surahNum && v.number === verseNum
+    );
+
+    if (foundIndex !== -1) {
+      isContinuousRef.current = true;
+      setIsContinuousPlaying(true);
+      setPlayList(currentList);
+      playAyahInList(currentList, foundIndex);
+    } else {
+      // Fallback: play single ayah if not found in current page list
+      const key = `${surahNum}_${verseNum}`;
+      const sStr = surahNum.toString().padStart(3, '0');
+      const aStr = verseNum.toString().padStart(3, '0');
+      const audioUrl = `https://everyayah.com/data/Alafasy_128kbps/${sStr}${aStr}.mp3`;
+
+      const audio = new Audio(audioUrl);
+      activeAudioRef.current = audio;
+      setAudioInstance(audio);
+      setCurrentPlayingAyahKey(key);
+      setLastPlayedAyahKey(key);
+      setIsPlayingAudio(true);
+
+      audio.onended = () => stopAllAudio();
+
+      audio.play().catch(err => {
+        console.warn("Ayah audio play failed:", err);
+        if (err.name === 'AbortError') return;
+        stopAllAudio();
+        setOfflineAlert("Ayet sesi çalınamadı. İnternet bağlantınızı kontrol edin.");
+      });
+    }
+  };
+
+  // Toggle continuous mushaf playback from current page
+  const togglePlayMushaf = () => {
+    if (isPlayingAudio || isContinuousPlaying) {
+      stopAllAudio();
+    } else {
+      const currentList = isMobile ? mushafAyahs : [...rightPageAyahs, ...leftPageAyahs];
+      if (currentList.length > 0) {
+        isContinuousRef.current = true;
+        setIsContinuousPlaying(true);
+        setPlayList(currentList);
+
+        // 1. Try to find last played ayah to resume
+        let startIndex = -1;
+        if (lastPlayedAyahKey) {
+          startIndex = currentList.findIndex(
+            v => `${v.surahNumber || 1}_${v.number}` === lastPlayedAyahKey
+          );
+        }
+
+        // 2. If not found, determine starting index based on active mushafPage (even/odd)
+        if (startIndex === -1) {
+          if (!isMobile && mushafPage % 2 === 0) {
+            // If active page is the left page (even), start from the beginning of the left page
+            startIndex = rightPageAyahs.length;
+          } else {
+            startIndex = 0;
+          }
+        }
+
+        // Play from calculated startIndex
+        playAyahInList(currentList, startIndex);
       }
     }
   };
 
+  // Toggle surah playback for meal mode
+  const togglePlaySurah = () => {
+    if (!selectedSurah) return;
+    const audioUrl = `https://server8.mp3quran.net/afs/${selectedSurah.number.toString().padStart(3, '0')}.mp3`;
+
+    if (isPlayingAudio || isContinuousPlaying) {
+      stopAllAudio();
+    } else {
+      const newAudio = new Audio(audioUrl);
+      activeAudioRef.current = newAudio;
+      setIsPlayingAudio(true);
+      setAudioInstance(newAudio);
+      newAudio.onended = () => stopAllAudio();
+      newAudio.play().catch(err => {
+        console.warn("Audio playback failed:", err);
+        if (err.name === 'AbortError') return;
+        stopAllAudio();
+        setOfflineAlert("Ses dosyası oynatılamadı. İnternet bağlantısını kontrol edin.");
+      });
+    }
+  };
+
+  // Only useEffect needed: when a new page loads during auto-advance (playIndex === -2)
+  useEffect(() => {
+    if (isContinuousPlaying && playIndex === -2 && !loadingMushafDetail) {
+      const currentList = isMobile ? mushafAyahs : [...rightPageAyahs, ...leftPageAyahs];
+      if (currentList.length > 0) {
+        setPlayList(currentList);
+        playAyahInList(currentList, 0);
+      } else {
+        stopAllAudio();
+      }
+    }
+  }, [loadingMushafDetail, isContinuousPlaying, playIndex, isMobile, mushafAyahs, rightPageAyahs, leftPageAyahs, stopAllAudio, playAyahInList]);
+
+
   // Clean audio on unmount
   useEffect(() => {
     return () => {
-      if (audioInstance) {
-        audioInstance.pause();
+      if (activeAudioRef.current) {
+        activeAudioRef.current.pause();
+        activeAudioRef.current = null;
       }
     };
-  }, [audioInstance]);
+  }, []);
+
+  // Scroll to top of new pages when page/spread changes, or when they finish loading
+  useEffect(() => {
+    if (loadingMushafDetail) return;
+    const pages = isMobile ? [mushafPage] : [rightPageNum, leftPageNum];
+    pages.forEach(pNum => {
+      const container = document.getElementById(`mushaf-scroll-container-${pNum}`);
+      if (container) {
+        container.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }, [mushafPage, loadingMushafDetail, isMobile, rightPageNum, leftPageNum]);
+
+  // Autonomous scrolling: scroll active ayah into view
+  useEffect(() => {
+    if (!currentPlayingAyahKey) return;
+    const [sNum, aNum] = currentPlayingAyahKey.split('_');
+    const ayahEl = document.getElementById(`ayah-span-${sNum}-${aNum}`);
+    if (ayahEl) {
+      const container = ayahEl.closest('[id^="mushaf-scroll-container-"]');
+      if (container) {
+        const containerRect = container.getBoundingClientRect();
+        const elementRect = ayahEl.getBoundingClientRect();
+        
+        // Check if the ayah element is fully visible in the container with a 20px padding margin
+        const isVisible = (
+          elementRect.top >= containerRect.top + 20 &&
+          elementRect.bottom <= containerRect.bottom - 20
+        );
+        
+        if (!isVisible) {
+          const relativeTop = elementRect.top - containerRect.top + container.scrollTop;
+          container.scrollTo({
+            top: relativeTop - containerRect.height / 2 + elementRect.height / 2,
+            behavior: 'smooth'
+          });
+        }
+      }
+    }
+  }, [currentPlayingAyahKey]);
 
   // Filter surahs list (Turkish names + number)
   const filteredSurahs = surahsList.filter(s => {
@@ -1342,7 +1607,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
         <div className="absolute inset-3 border border-amber-700/5 dark:border-emerald-700/10 rounded-[1.3rem] pointer-events-none z-0" />
         
         {/* Page content */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-6 relative z-10 scrollbar-amber">
+        <div id={`mushaf-scroll-container-${pageNum}`} className="flex-1 overflow-y-auto p-4 space-y-6 relative z-10 scrollbar-amber">
           {surahSegments.map((seg) => (
             <div key={seg.surahNumber} className="space-y-4">
               {/* Surah Header Banner (only show if it contains verse 1 on this page) */}
@@ -1370,14 +1635,26 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                 dir="rtl"
                 style={{ fontFamily: "'Amiri', 'Traditional Arabic', 'Noto Naskh Arabic', serif", wordSpacing: '2px' }}
               >
-                {seg.verses.map((verse) => (
-                  <React.Fragment key={verse.number}>
-                    <span>{verse.text}</span>
-                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full border-2 border-amber-600/30 dark:border-emerald-600/30 bg-amber-50/30 dark:bg-emerald-950/20 text-xs font-sans font-black mx-1.5 text-amber-950 dark:text-emerald-300 select-none relative -top-[3px]">
-                      {verse.number}
-                    </span>
-                  </React.Fragment>
-                ))}
+                {seg.verses.map((verse) => {
+                  const isCurrentPlaying = currentPlayingAyahKey === `${seg.surahNumber}_${verse.number}`;
+                  return (
+                    <React.Fragment key={verse.number}>
+                      <span 
+                        id={`ayah-span-${seg.surahNumber}-${verse.number}`}
+                        onClick={() => handlePlayAyah(seg.surahNumber, verse.number)}
+                        className={`cursor-pointer rounded hover:bg-emerald-500/10 dark:hover:bg-emerald-500/25 px-1 py-0.5 transition-colors ${
+                          isCurrentPlaying ? 'bg-emerald-500/25 dark:bg-emerald-500/40 text-emerald-800 dark:text-emerald-300 ring-2 ring-emerald-500/30' : ''
+                        }`}
+                        title="Ayeti Dinle"
+                      >
+                        {verse.text}
+                      </span>
+                      <span className="inline-flex items-center justify-center w-8 h-8 rounded-full border-2 border-amber-600/30 dark:border-emerald-600/30 bg-amber-50/30 dark:bg-emerald-950/20 text-xs font-sans font-black mx-1.5 text-amber-950 dark:text-emerald-300 select-none relative -top-[3px]">
+                        {verse.number}
+                      </span>
+                    </React.Fragment>
+                  );
+                })}
               </div>
             </div>
           ))}
@@ -1451,7 +1728,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                     onClick={() => {
                       setElifbaSubMode(item.id as any);
                       if (item.action) item.action();
-                      playSound('tick');
+                     
                     }}
                     className={`py-2.5 px-4 rounded-full text-[10px] sm:text-xs font-black tracking-wide transition-all uppercase cursor-pointer flex-1 flex items-center justify-center gap-2 ${
                       isSelected
@@ -1483,7 +1760,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                     <div className="flex items-center gap-3 relative" ref={elifbaDropdownRef}>
                       <Layers className="w-5 h-5 text-teal-600 dark:text-teal-400" />
                       <button
-                        onClick={() => { setIsElifbaDropdownOpen(!isElifbaDropdownOpen); playSound('tick'); }}
+                        onClick={() => { setIsElifbaDropdownOpen(!isElifbaDropdownOpen); }}
                         className="bg-slate-50 dark:bg-slate-700 border-2 border-slate-200 dark:border-slate-500 text-slate-800 dark:text-slate-100 font-display font-bold text-xs py-2.5 px-4 rounded-xl focus:border-teal-500 focus:outline-none cursor-pointer min-w-[280px] flex items-center justify-between gap-2 shadow-sm"
                       >
                         <span>{currentPage.konuNo}. Konu — {currentPage.baslik}</span>
@@ -1506,7 +1783,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                                   onClick={() => {
                                     setCurrentPageIndex(idx);
                                     setIsElifbaDropdownOpen(false);
-                                    playSound('tick');
+                                   
                                   }}
                                   className={`w-full text-left px-4 py-3 text-xs font-semibold hover:bg-slate-50 dark:hover:bg-slate-700/50 border-b border-slate-100 dark:border-slate-700/40 flex items-center justify-between ${
                                     isSelected 
@@ -1526,6 +1803,24 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
 
                     {/* Navigation buttons (RTL order: Next on Left, Prev on Right) */}
                     <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => {
+                         
+                          if (setIsFocused) {
+                            setIsFocused(!isFocused);
+                          }
+                        }}
+                        className={`px-4 py-2.5 rounded-xl border-2 transition-all cursor-pointer flex items-center gap-1.5 font-black text-xs ${
+                          isFocused
+                            ? 'bg-amber-500 border-amber-600 text-white hover:bg-amber-650'
+                            : 'border-slate-200 dark:border-slate-500 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-650'
+                        }`}
+                        title={isFocused ? 'Normal Ekrana Dön (Menüyü Göster)' : 'Tam Ekran Modu (Menüyü Gizle)'}
+                      >
+                        {isFocused ? <Minimize2 className="w-4.5 h-4.5" /> : <Maximize2 className="w-4.5 h-4.5" />}
+                        <span>{isFocused ? 'NORMALE DÖN' : 'ODAKLAN / TAM EKRAN'}</span>
+                      </button>
+
                       <button
                         onClick={goNextPage}
                         disabled={currentPageIndex === totalPages - 1}
@@ -1961,7 +2256,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
               {/* View Mode Toggle: Mushaf vs Meal */}
               <div className="flex gap-1.5 mb-4 bg-slate-50 dark:bg-slate-700/50 p-1.5 rounded-2xl border border-slate-100 dark:border-slate-600 select-none">
                 <button
-                  onClick={() => { setQuranViewMode('mushaf'); playSound('tick'); }}
+                  onClick={() => { setQuranViewMode('mushaf'); }}
                   className={`flex-1 py-2.5 rounded-xl text-[10px] font-black tracking-wide uppercase transition-all cursor-pointer ${
                     quranViewMode === 'mushaf'
                       ? 'bg-emerald-500 text-white shadow-sm'
@@ -1971,7 +2266,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                   MUSHAF
                 </button>
                 <button
-                  onClick={() => { setQuranViewMode('meal'); playSound('tick'); }}
+                  onClick={() => { setQuranViewMode('meal'); }}
                   className={`flex-1 py-2.5 rounded-xl text-[10px] font-black tracking-wide uppercase transition-all cursor-pointer ${
                     quranViewMode === 'meal'
                       ? 'bg-emerald-500 text-white shadow-sm'
@@ -2004,7 +2299,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                       <span className="text-[9px] font-extrabold text-emerald-850 dark:text-emerald-300 uppercase block pl-1">HIZLI YÖNLENDİRME:</span>
                       {parsedSearch.type === 'page' && (
                         <button
-                          onClick={() => { handleSelectMushafPage(parsedSearch.value); playSound('tick'); }}
+                          onClick={() => { handleSelectMushafPage(parsedSearch.value); }}
                           className="w-full text-left py-2 px-3 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-650 rounded-xl text-xs font-black text-slate-800 dark:text-slate-200 hover:border-emerald-500 transition-all cursor-pointer flex items-center gap-1.5 shadow-sm"
                         >
                           <span>📄</span> Sayfa {parsedSearch.value}'e Git
@@ -2012,7 +2307,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                       )}
                       {parsedSearch.type === 'juz' && (
                         <button
-                          onClick={() => { handleSelectMushafPage(getJuzStartPage(parsedSearch.value)); setOpenJuzIndex(parsedSearch.value); playSound('tick'); }}
+                          onClick={() => { handleSelectMushafPage(getJuzStartPage(parsedSearch.value)); setOpenJuzIndex(parsedSearch.value); }}
                           className="w-full text-left py-2 px-3 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-650 rounded-xl text-xs font-black text-slate-800 dark:text-slate-200 hover:border-emerald-500 transition-all cursor-pointer flex items-center gap-1.5 shadow-sm"
                         >
                           <span>📖</span> {parsedSearch.value}. Cüze Git (Sayfa {getJuzStartPage(parsedSearch.value)})
@@ -2028,7 +2323,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                               handleSelectMushafPage(getJuzStartPage(res.value));
                               setOpenJuzIndex(res.value);
                             }
-                            playSound('tick');
+                           
                           }}
                           className="w-full text-left py-2 px-3 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-650 rounded-xl text-xs font-black text-slate-800 dark:text-slate-200 hover:border-emerald-500 transition-all cursor-pointer flex items-center gap-1.5 shadow-sm"
                         >
@@ -2045,7 +2340,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                   {/* Sub-mode inside Mushaf sidebar: Cüz vs Sure */}
                   <div className="flex gap-1.5 mb-3 bg-slate-50 dark:bg-slate-700/50 p-1.5 rounded-2xl border border-slate-100 dark:border-slate-600 select-none shrink-0">
                     <button
-                      onClick={() => { setMushafListMode('juz'); playSound('tick'); }}
+                      onClick={() => { setMushafListMode('juz'); }}
                       className={`flex-1 py-1.5 rounded-xl text-[9px] font-black tracking-wider uppercase transition-all cursor-pointer ${
                         mushafListMode === 'juz'
                           ? 'bg-slate-700 dark:bg-slate-600 text-white shadow-sm'
@@ -2055,7 +2350,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                       CÜZ LİSTESİ
                     </button>
                     <button
-                      onClick={() => { setMushafListMode('surah'); playSound('tick'); }}
+                      onClick={() => { setMushafListMode('surah'); }}
                       className={`flex-1 py-1.5 rounded-xl text-[9px] font-black tracking-wider uppercase transition-all cursor-pointer ${
                         mushafListMode === 'surah'
                           ? 'bg-slate-700 dark:bg-slate-600 text-white shadow-sm'
@@ -2102,7 +2397,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                               <button
                                 onClick={() => {
                                   setOpenJuzIndex(isOpen ? null : juzNum);
-                                  playSound('tick');
+                                 
                                 }}
                                 className={`w-full p-3 text-left font-display font-black text-xs flex items-center justify-between transition-colors ${
                                   isOpen 
@@ -2119,7 +2414,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                                   {Array.from({ length: end - start + 1 }, (_, i) => start + i).map((pNum) => (
                                     <button
                                       key={pNum}
-                                      onClick={() => { handleSelectMushafPage(pNum); playSound('tick'); }}
+                                      onClick={() => { handleSelectMushafPage(pNum); }}
                                       className={`py-2 text-[10px] font-black rounded-lg border-2 cursor-pointer transition-all ${
                                         mushafPage === pNum
                                           ? 'bg-emerald-500 border-emerald-600 text-white shadow-sm'
@@ -2153,7 +2448,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                             onClick={() => {
                               handleSelectMushafPage(startPage);
                               setSelectedSurah(surah); // Also set active surah meta
-                              playSound('tick');
+                             
                             }}
                             className={`w-full p-3.5 rounded-xl border-2 cursor-pointer flex items-center justify-between transition-all ${
                               isCurrentlyOnThisSurahStartPage
@@ -2218,7 +2513,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                         return (
                           <button
                             key={surah.number}
-                            onClick={() => { handleSelectSurah(surah); playSound('tick'); }}
+                            onClick={() => { handleSelectSurah(surah); }}
                             className={`w-full p-3.5 rounded-xl border-2 cursor-pointer flex items-center justify-between transition-all ${
                               isSelected
                                 ? 'bg-emerald-50 dark:bg-emerald-900/30 border-emerald-500 text-emerald-900 dark:text-emerald-200 shadow-sm'
@@ -2271,12 +2566,14 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                         <button
                           onClick={() => {
                             setIsFullscreenQuran(true);
-                            playSound('tick');
+                           
                             if (selectedSurah?.number !== 9 && basmalaAnimData) {
                               setShowFullscreenBasmalaIntro(true);
+                              playBasmalaIntroAudio();
                               if (basmalaSafetyTimerRef.current) clearTimeout(basmalaSafetyTimerRef.current);
                               basmalaSafetyTimerRef.current = setTimeout(() => {
                                 setShowFullscreenBasmalaIntro(false);
+                                stopBasmalaIntroAudio();
                               }, 6500);
                             }
                           }}
@@ -2371,7 +2668,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                             } else {
                               if (leftPageNum < 604) handleSelectMushafPage(rightPageNum + 2);
                             }
-                            playSound('tick');
+                           
                           }}
                           disabled={isMobile ? mushafPage >= 604 : leftPageNum >= 604}
                           className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-650 rounded-xl text-slate-700 dark:text-slate-200 text-xs font-black flex items-center gap-1 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed border border-slate-250 dark:border-slate-600"
@@ -2383,13 +2680,15 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                         <button
                           onClick={() => {
                             setIsFullscreenQuran(true);
-                            playSound('tick');
+                           
                             // Fullscreen intro plays Besmele if it's not Surah 9 Tevbe starting page (starts on p. 187)
                             if (rightPageNum !== 9 && basmalaAnimData) {
                               setShowFullscreenBasmalaIntro(true);
+                              playBasmalaIntroAudio();
                               if (basmalaSafetyTimerRef.current) clearTimeout(basmalaSafetyTimerRef.current);
                               basmalaSafetyTimerRef.current = setTimeout(() => {
                                 setShowFullscreenBasmalaIntro(false);
+                                stopBasmalaIntroAudio();
                               }, 6500);
                             }
                           }}
@@ -2400,10 +2699,10 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
 
                         {/* Recital Controls: Dinle */}
                         <button
-                          onClick={togglePlaySurah}
-                          className={`btn-game-sky justify-center text-xs py-1.5 px-4 cursor-pointer flex items-center gap-1.5 ${isPlayingAudio ? 'bg-rose-500 border-rose-700' : 'bg-sky-500 border-sky-700'}`}
+                          onClick={quranViewMode === 'mushaf' ? togglePlayMushaf : togglePlaySurah}
+                          className={`btn-game-sky justify-center text-xs py-1.5 px-4 cursor-pointer flex items-center gap-1.5 ${(isPlayingAudio || isContinuousPlaying) ? 'bg-rose-500 border-rose-700' : 'bg-sky-500 border-sky-700'}`}
                         >
-                          {isPlayingAudio ? (
+                          {(isPlayingAudio || isContinuousPlaying) ? (
                             <>
                               <Pause className="w-4 h-4 text-white" /> DURDUR
                             </>
@@ -2422,7 +2721,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                             } else {
                               if (rightPageNum > 1) handleSelectMushafPage(rightPageNum - 2);
                             }
-                            playSound('tick');
+                           
                           }}
                           disabled={isMobile ? mushafPage <= 1 : rightPageNum <= 1}
                           className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 rounded-xl text-slate-700 dark:text-slate-200 text-xs font-black flex items-center gap-1 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed border border-slate-250 dark:border-slate-600"
@@ -2501,6 +2800,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                       if (basmalaSafetyTimerRef.current) clearTimeout(basmalaSafetyTimerRef.current);
                       setTimeout(() => {
                         setShowFullscreenBasmalaIntro(false);
+                        stopBasmalaIntroAudio();
                       }, 1500);
                     }}
                   />
@@ -2512,17 +2812,63 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
           {/* Top Bar */}
           <div className="grid grid-cols-3 items-center px-6 py-3 bg-emerald-800 dark:bg-emerald-950 text-white shadow-lg shrink-0">
             {/* Left section: Title Info */}
-            <div className="flex items-center gap-3">
-              <BookOpen className="w-5 h-5 opacity-80" />
+            <div className="flex items-center gap-3 relative">
+              <BookOpen className="w-5 h-5 opacity-80 shrink-0" />
               {quranViewMode === 'meal' && selectedSurah ? (
                 <div>
                   <h3 className="font-display font-black text-sm sm:text-base tracking-wide leading-none">{getTurkceSureIsmi(selectedSurah.number)} Sûresi</h3>
                   <p className="text-[10px] opacity-70 font-semibold mt-1">Meal Modu</p>
                 </div>
               ) : (
-                <div>
-                  <h3 className="font-display font-black text-sm sm:text-base tracking-wide leading-none">{Math.floor((mushafPage - 1) / 20) + 1}. Cüz • Sayfa {mushafPage}</h3>
-                  <p className="text-[10px] opacity-70 font-semibold mt-1">{mushafAyahs[0]?.surahName || ''} Sûresi</p>
+                <div className="relative">
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder={`${Math.floor((mushafPage - 1) / 20) + 1}. Cüz • Sayfa ${mushafPage} • ${mushafAyahs[0]?.surahName || ''} Sûresi`}
+                    className="bg-white/10 hover:bg-white/20 focus:bg-white focus:text-slate-800 focus:outline-none py-1.5 px-3 rounded-xl text-white text-xs font-black tracking-wide w-64 placeholder-white/80 transition-all border border-white/25"
+                    title="Gitmek istediğiniz sayfa, cüz veya sure adını yazın..."
+                  />
+
+                  {/* Floating Results Popup */}
+                  {searchQuery.trim() && parsedSearch && (
+                    <div className="absolute top-11 left-0 z-[10005] bg-white dark:bg-slate-800 border-2 border-emerald-500/30 rounded-2xl shadow-xl p-2 w-64 space-y-1 text-slate-800 dark:text-slate-100 select-none shadow-emerald-500/10">
+                      <span className="text-[9px] font-extrabold text-emerald-700 dark:text-emerald-400 uppercase block pl-1 mb-1">HIZLI YÖNLENDİRME:</span>
+                      {parsedSearch.type === 'page' && (
+                        <button
+                          onClick={() => { handleSelectMushafPage(parsedSearch.value); setSearchQuery(''); }}
+                          className="w-full text-left py-2 px-3 bg-slate-50 dark:bg-slate-700/60 hover:bg-emerald-50 dark:hover:bg-emerald-950/20 border border-slate-200 dark:border-slate-650 rounded-xl text-xs font-black hover:border-emerald-500 transition-all cursor-pointer flex items-center gap-1.5 shadow-sm text-slate-800 dark:text-slate-200"
+                        >
+                          📄 Sayfa {parsedSearch.value}'e Git
+                        </button>
+                      )}
+                      {parsedSearch.type === 'juz' && (
+                        <button
+                          onClick={() => { handleSelectMushafPage(getJuzStartPage(parsedSearch.value)); setOpenJuzIndex(parsedSearch.value); setSearchQuery(''); }}
+                          className="w-full text-left py-2 px-3 bg-slate-50 dark:bg-slate-700/60 hover:bg-emerald-50 dark:hover:bg-emerald-950/20 border border-slate-200 dark:border-slate-650 rounded-xl text-xs font-black hover:border-emerald-500 transition-all cursor-pointer flex items-center gap-1.5 shadow-sm text-slate-800 dark:text-slate-200"
+                        >
+                          📖 {parsedSearch.value}. Cüze Git (S. {getJuzStartPage(parsedSearch.value)})
+                        </button>
+                      )}
+                      {parsedSearch.type === 'multiple' && parsedSearch.results.map((res, i) => (
+                        <button
+                          key={i}
+                          onClick={() => {
+                            if (res.type === 'page') {
+                              handleSelectMushafPage(res.value);
+                            } else {
+                              handleSelectMushafPage(getJuzStartPage(res.value));
+                              setOpenJuzIndex(res.value);
+                            }
+                            setSearchQuery('');
+                          }}
+                          className="w-full text-left py-1.5 px-3 bg-slate-50 dark:bg-slate-700/60 hover:bg-emerald-50 dark:hover:bg-emerald-950/20 border border-slate-200 dark:border-slate-650 rounded-xl text-xs font-black hover:border-emerald-500 transition-all cursor-pointer flex items-center gap-1.5 shadow-sm text-slate-800 dark:text-slate-200"
+                        >
+                          {res.type === 'page' ? '📄' : '📖'} {res.text}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
               )}
             </div>
@@ -2539,7 +2885,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                       } else {
                         if (leftPageNum < 604) handleSelectMushafPage(rightPageNum + 2);
                       }
-                      playSound('tick');
+                     
                     }}
                     disabled={isMobile ? mushafPage >= 604 : leftPageNum >= 604}
                     className="px-3 py-2 rounded-xl bg-white/25 hover:bg-white/35 text-white text-xs font-black disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1.5 transition-all border border-white/10 active:scale-95"
@@ -2554,10 +2900,10 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
 
                   {/* Dinle Button */}
                   <button
-                    onClick={togglePlaySurah}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black uppercase tracking-wide transition-all hover:scale-105 active:scale-95 cursor-pointer border border-white/10 ${isPlayingAudio ? 'bg-rose-500 hover:bg-rose-600' : 'bg-white/20 hover:bg-white/30'}`}
+                    onClick={togglePlayMushaf}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-black uppercase tracking-wide transition-all hover:scale-105 active:scale-95 cursor-pointer border border-white/10 ${(isPlayingAudio || isContinuousPlaying) ? 'bg-rose-500 hover:bg-rose-600' : 'bg-white/20 hover:bg-white/30'}`}
                   >
-                    {isPlayingAudio ? <><Pause className="w-4 h-4" /> Durdur</> : <><Play className="w-4 h-4" /> Dinle</>}
+                    {(isPlayingAudio || isContinuousPlaying) ? <><Pause className="w-4 h-4" /> Durdur</> : <><Play className="w-4 h-4" /> Dinle</>}
                   </button>
 
                   {/* Right navigation arrow: Önceki (moves right, page decreases in RTL) */}
@@ -2568,7 +2914,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                       } else {
                         if (rightPageNum > 1) handleSelectMushafPage(rightPageNum - 2);
                       }
-                      playSound('tick');
+                     
                     }}
                     disabled={isMobile ? mushafPage <= 1 : rightPageNum <= 1}
                     className="px-3 py-2 rounded-xl bg-white/25 hover:bg-white/35 text-white text-xs font-black disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1.5 transition-all border border-white/10 active:scale-95"
@@ -2603,7 +2949,10 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
               )}
 
               <button
-                onClick={() => { setIsFullscreenQuran(false); playSound('tick'); }}
+                onClick={() => { 
+                  setIsFullscreenQuran(false); 
+                  stopBasmalaIntroAudio(); 
+                }}
                 className="px-3 py-2 bg-rose-600 hover:bg-rose-700 text-white text-xs font-black uppercase tracking-wider rounded-xl transition-all hover:scale-105 active:scale-95 flex items-center gap-1.5 cursor-pointer shadow-md shadow-rose-600/20 border border-rose-700"
                 title="KÜÇÜLT"
               >
@@ -2613,7 +2962,12 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
           </div>
 
           {/* Verses Area */}
-          {quranViewMode === 'meal' ? (
+          {loadingMushafDetail ? (
+            <div className="flex-1 flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 bg-[#faf6ef] dark:bg-[#0d1117] select-none">
+              <RefreshCw className="w-10 h-10 animate-spin text-emerald-500 mb-3" />
+              <span className="text-sm font-black uppercase tracking-wider">Sayfalar Yükleniyor...</span>
+            </div>
+          ) : quranViewMode === 'meal' ? (
             <div className="flex-1 overflow-y-auto px-6 sm:px-12 md:px-20 lg:px-32 py-8 bg-[#faf6ef] dark:bg-[#0d1117] text-slate-800 dark:text-slate-100">
               <div className="max-w-4xl mx-auto space-y-4">
                 {/* Surah Turkish Header */}
@@ -2680,7 +3034,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
               {offlineAlert}
             </p>
             <button
-              onClick={() => { setOfflineAlert(null); playSound('tick'); }}
+              onClick={() => { setOfflineAlert(null); }}
               className="mt-6 px-6 py-2.5 bg-rose-600 hover:bg-rose-700 text-white font-display font-black text-xs rounded-xl shadow-md cursor-pointer transition active:scale-95"
             >
               Anladım, Kapat

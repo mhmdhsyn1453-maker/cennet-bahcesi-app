@@ -182,11 +182,10 @@ export const AkilliTahta: React.FC<AkilliTahtaProps> = ({ onClose, isDarkMode = 
 
   // Position panel relative to button position
   const getPanelStyle = () => {
-    if (!buttonPosition) {
+    if (!buttonPosition || (buttonPosition.x === -9999 && buttonPosition.y === -9999)) {
       return {
-        right: '16px',
-        top: '50%',
-        transform: 'translateY(-50%)'
+        right: '80px',
+        bottom: '16px'
       };
     }
     

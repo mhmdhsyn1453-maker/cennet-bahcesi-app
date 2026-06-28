@@ -34,16 +34,7 @@ export const playSound = (type: 'success' | 'fail' | 'tick' | 'complete') => {
     if (!ctx) return;
 
     if (type === 'tick') {
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(800, ctx.currentTime);
-      gain.gain.setValueAtTime(0.01, ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.05);
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.start();
-      osc.stop(ctx.currentTime + 0.05);
+      return; // Silent
     } else if (type === 'success') {
       // Triumphant double-beep chord
       const freqs = [523.25, 659.25, 783.99]; // C5, E5, G5
@@ -73,20 +64,7 @@ export const playSound = (type: 'success' | 'fail' | 'tick' | 'complete') => {
       osc.start();
       osc.stop(ctx.currentTime + 0.5);
     } else if (type === 'complete') {
-      // Harmonious final sweep
-      const freqs = [261.63, 329.63, 392.00, 523.25, 659.25, 1046.50];
-      freqs.forEach((freq, idx) => {
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(freq, ctx.currentTime + idx * 0.1);
-        gain.gain.setValueAtTime(0.1, ctx.currentTime + idx * 0.1);
-        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + idx * 0.1 + 0.6);
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-        osc.start();
-        osc.stop(ctx.currentTime + idx * 0.1 + 0.6);
-      });
+      return; // Silent
     }
   } catch (e) {
     console.error('Audio synthesizer is not supported or was blocked:', e);

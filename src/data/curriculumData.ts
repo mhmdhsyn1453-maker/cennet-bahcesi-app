@@ -1933,70 +1933,70 @@ export const WEEKLY_CURRICULUM: WeekCurriculum[] = [
                 title: "Adım 1: Niyet ve Besmele",
                 emoji: "🚰",
                 body: "Abdest almaya besmele çekip niyet ederek başlarız. 'Bismillahirrahmanirrahim' der ve kalben abdest almaya niyet ederiz.",
-                image: "/assets/img/abdest/niyet.png"
+                image: "assets/img/abdest/niyet.png"
               },
               {
                 type: 'content',
                 title: "Adım 2: Elleri Yıkamak",
                 emoji: "🧼",
                 body: "Ellerimizi bileklere kadar güzelce üç defa yıkarız. Parmak aralarının da iyice yıkanmasına dikkat ederiz.",
-                image: "/assets/img/abdest/adim1.png"
+                image: "assets/img/abdest/adim1.png"
               },
               {
                 type: 'content',
                 title: "Adım 3: Ağza Su Vermek",
                 emoji: "🌊",
                 body: "Sağ elimizle ağzımıza üç kez su alarak ağzımızın içini güzelce temizler ve çalkalarız.",
-                image: "/assets/img/abdest/adim2.png"
+                image: "assets/img/abdest/adim2.png"
               },
               {
                 type: 'content',
                 title: "Adım 4: Burna Su Vermek",
                 emoji: "👃",
                 body: "Sağ elimizle burnumuza üç kez su çekeriz. Sol elimizle burnumuzu temizleyerek yıkarız.",
-                image: "/assets/img/abdest/adim3.png"
+                image: "assets/img/abdest/adim3.png"
               },
               {
                 type: 'content',
                 title: "Adım 5: Yüzü Yıkamak",
                 emoji: "✨",
                 body: "Alından çene altına, kulak yumuşaklarına kadar yüzümüzü üç defa güzelce yıkarız.",
-                image: "/assets/img/abdest/adim4.png"
+                image: "assets/img/abdest/adim4.png"
               },
               {
                 type: 'content',
                 title: "Adım 6: Kolları Yıkamak",
                 emoji: "💪",
                 body: "Kollarımızı da dirseklerimizle birlikte (dirsekler dahil) güzelce üçer defa yıkarız. Önce sağ kolu, sonra sol kolu yıkarız.",
-                image: "/assets/img/abdest/adim5.png"
+                image: "assets/img/abdest/adim5.png"
               },
               {
                 type: 'content',
                 title: "Adım 7: Başı Mesh Etmek",
                 emoji: "🤚",
                 body: "Ellerimizi ıslatıp başımıza süreriz, yani başımızın üst kısmını ıslak elle mesh ederiz.",
-                image: "/assets/img/abdest/adim6.png"
+                image: "assets/img/abdest/adim6.png"
               },
               {
                 type: 'content',
                 title: "Adım 8: Kulakları Mesh Etmek",
                 emoji: "👂",
                 body: "Yine ellerimizi ıslatıp serçe parmağımızla kulaklarımızın içini temizler, başparmağımızla da kulağımızın arkasını mesh ederiz.",
-                image: "/assets/img/abdest/adim7.png"
+                image: "assets/img/abdest/adim7.png"
               },
               {
                 type: 'content',
                 title: "Adım 9: Boynu Mesh Etmek",
                 emoji: "🙌",
                 body: "Kulakları mesh ettikten sonra ellerimizin kalan parmaklarının arkasıyla boynumuzu güzelce mesh ederiz.",
-                image: "/assets/img/abdest/adim8.png"
+                image: "assets/img/abdest/adim8.png"
               },
               {
                 type: 'content',
                 title: "Adım 10: Ayaklar ve Kapanış",
                 emoji: "👣",
                 body: "Son olarak, ayaklarımızı (topuklar ve parmak araları dahil) güzelce yıkadığımızda abdestimiz tamamdır. Önce sağ, sonra sol ayak yıkanır.",
-                image: "/assets/img/abdest/adim9.png"
+                image: "assets/img/abdest/adim9.png"
               },
               {
                 type: 'quiz',
@@ -3323,56 +3323,56 @@ export const WEEKLY_CURRICULUM: WeekCurriculum[] = [
                 title: "1. Safha: Niyet",
                 emoji: "🤲",
                 body: "Kılınacak namaz için kalben ve zihnen niyet edilir. Örnek: 'Niyet ettim Allah rızası için sabah namazının farzını kılmaya.' Niyet, yapacağımız işe tam olarak odaklanmaktır.",
-                image: "/assets/img/namaz/1.png"
+                image: "assets/img/namaz/1.png"
               },
               {
                 type: 'content',
                 title: "2. Safha: İftitah Tekbiri",
                 emoji: "🤚",
                 body: "Erkekler ellerini kulaklarına, kadınlar göğüs hizasına kaldırarak 'Allahu ekber' der. Bu hareketle dünya işlerini arkamızda bıraktığımızı ilan ederiz.",
-                image: "/assets/img/namaz/2.png"
+                image: "assets/img/namaz/2.png"
               },
               {
                 type: 'content',
                 title: "3. Safha: Kıyam ve Kıraat",
                 emoji: "🧍",
                 body: "Sağ elle sol bilek tutulur. Erkekler ellerini göbeğinin altında, kadınlar göğsün üstünde tutar. Ayakta saygıyla durup (Kıyam), sırasıyla Sübhâneke, Fatiha ve bir sûre okuruz (Kıraat).",
-                image: "/assets/img/namaz/3.png"
+                image: "assets/img/namaz/3.png"
               },
               {
                 type: 'content',
                 title: "4. Safha: Rükû",
                 emoji: "📐",
                 body: "Eller dizlere konularak, erkekler sırtı dümdüz olacak şekilde 90 derece, kadınlar ise hafifçe eğilir. Bu saygı duruşunda 3 defa 'sübhâne rabbiye'l-azim' denir.",
-                image: "/assets/img/namaz/4.png"
+                image: "assets/img/namaz/4.png"
               },
               {
                 type: 'content',
                 title: "5. Safha: Kavme (Rükûdan Doğrulma)",
                 emoji: "🧍‍♂️",
                 body: "Rükûdan doğrularak dik dururuz. Kalkarken 'Semiallahu limen hamideh' denir. Ayakta tam dik durduğumuz o kısa anda ise 'Rabbenâ lekel-hamd' denir.",
-                image: "/assets/img/namaz/5.png"
+                image: "assets/img/namaz/5.png"
               },
               {
                 type: 'content',
                 title: "6. Safha: Secde (Sücud)",
                 emoji: "🙇",
                 body: "Eller, alın ve burun yere değdirilir. Kulun Allah'a en yakın olduğu andır. 3 defa 'sübhane rabbiye'l-a'la' denir. Doğrulup hafifçe oturulur og ardından ikinci secdeye gidilir.",
-                image: "/assets/img/namaz/6.png"
+                image: "assets/img/namaz/6.png"
               },
               {
                 type: 'content',
                 title: "7. Safha: Oturuşlar (Ka'de)",
                 emoji: "🧎",
                 body: "Eller dizlerin üzerine konur. Erkekler sol ayağın üzerine oturur, sağ ayağı dik tutar; kadınlar ayaklarını sağa çevirerek oturur. Tahiyyât, Salli-Barik ve Rabbenâ duaları okunur.",
-                image: "/assets/img/namaz/7.png"
+                image: "assets/img/namaz/7.png"
               },
               {
                 type: 'content',
                 title: "8. Safha: Selam",
                 emoji: "👋",
                 body: "Önce sağ omuza, sonra sol omuza bakarak 'esselâmu aleyküm ve rahmetullah' denir ve namaz biter. Böylece tüm dünyaya barış ve esenlik dilemiş oluruz.",
-                image: "/assets/img/namaz/8.png"
+                image: "assets/img/namaz/8.png"
               },
               {
                 type: 'content',

@@ -18,7 +18,8 @@ import {
   AZQuestion,
   VocabularyWord,
   TrueFalseStatement,
-  UnifiedQuizQuestion
+  UnifiedQuizQuestion,
+  shuffleArray
 } from '../utils/questionPool';
 import { playSound } from './BuzzerAndTimer';
 
@@ -2928,8 +2929,7 @@ const MillionaireQuizGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) 
     // Yanlış şıkları topla
     const incorrectOpts = currentQuestion.options.filter(o => o !== currentQuestion.correct);
     // İki tanesini rastgele ele
-    const shuffledIncorrect = [...incorrectOpts];
-    shuffledIncorrect.sort(() => Math.random() - 0.5);
+    const shuffledIncorrect = shuffleArray(incorrectOpts);
     setEliminatedOpts([shuffledIncorrect[0], shuffledIncorrect[1]]);
   };
 
@@ -4270,7 +4270,7 @@ const ChronologyGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
     // Karışık listele
     const correct = levels[levelIdx].correctOrder;
-    const shuffled = [...correct].sort(() => Math.random() - 0.5);
+    const shuffled = shuffleArray(correct);
     setCurrentItems(shuffled);
   };
 
@@ -5015,9 +5015,9 @@ const FallingWordsGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => 
     );
     const combined = [...correctLetters, ...randomLetters];
     // Karıştır
-    combined.sort(() => Math.random() - 0.5);
+    const shuffledCombined = shuffleArray(combined);
 
-    setBubbles(combined);
+    setBubbles(shuffledCombined);
   };
 
   const handleBubbleClick = (letter: string, bIdx: number) => {
@@ -5210,7 +5210,7 @@ const QuickQuizGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
     const pool = getCurriculumQuizQuestions();
     const unusedPool = filterUnusedQuestions(pool);
     const finalPool = unusedPool.length >= 10 ? unusedPool : pool;
-    const shuffled = [...finalPool].sort(() => Math.random() - 0.5);
+    const shuffled = shuffleArray(finalPool);
 
     const selected = shuffled.slice(0, 10);
     setQuestions(selected);
@@ -5410,8 +5410,8 @@ const HoneycombPuzzleGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) 
       arr.push(TURKISH_LETTERS[Math.floor(Math.random() * TURKISH_LETTERS.length)]);
     }
     // Karıştır
-    arr.sort(() => Math.random() - 0.5);
-    setLetters(arr);
+    const shuffledArr = shuffleArray(arr);
+    setLetters(shuffledArr);
   };
 
   const handleCellClick = (idx: number) => {
@@ -5605,7 +5605,7 @@ const MazeRunnerGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
     const finalPool = unusedPool.length >= 2 ? unusedPool : pool;
 
     // Karıştırıp iki farklı soru seçelim
-    const shuffled = [...finalPool].sort(() => Math.random() - 0.5);
+    const shuffled = shuffleArray(finalPool);
     const g1: MazeQuestionGate = { row: 2, col: 2, question: shuffled[0] };
     const g2: MazeQuestionGate = { row: 4, col: 2, question: shuffled[1] };
 
@@ -6159,7 +6159,7 @@ const TabooTermsGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
   const handleStart = () => {
     playSound('complete');
     // Kartları karıştır
-    const shuffled = [...cardPool].sort(() => Math.random() - 0.5);
+    const shuffled = shuffleArray(cardPool);
     setCards(shuffled);
     setCurrentIdx(0);
     setTimer(60);
@@ -6538,7 +6538,7 @@ const BalloonPopGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
     // Balonları oluştur
     const correctB = { text: q.correct, isCorrect: true, isPopped: false, isWrongRed: false };
     const wrongBs = q.wrongOptions.map(opt => ({ text: opt, isCorrect: false, isPopped: false, isWrongRed: false }));
-    const combined = [correctB, ...wrongBs].sort(() => Math.random() - 0.5);
+    const combined = shuffleArray([correctB, ...wrongBs]);
 
     setBalloons(combined);
   };
@@ -6932,7 +6932,7 @@ const ChestGuardianGame: React.FC<{
     const pool = getCurriculumQuizQuestions();
     const unusedPool = filterUnusedQuestions(pool);
     const finalPool = unusedPool.length >= 5 ? unusedPool : pool;
-    const shuffled = [...finalPool].sort(() => Math.random() - 0.5).slice(0, 5);
+    const shuffled = shuffleArray(finalPool).slice(0, 5);
     shuffled.forEach(q => markQuestionAsUsed(q.id));
 
     setQuestions(shuffled);
@@ -7165,7 +7165,7 @@ const HeavenPathGame: React.FC<{
     const pool = getCurriculumQuizQuestions();
     const unusedPool = filterUnusedQuestions(pool);
     const finalPool = unusedPool.length >= 10 ? unusedPool : pool;
-    const shuffled = [...finalPool].sort(() => Math.random() - 0.5).slice(0, 10);
+    const shuffled = shuffleArray(finalPool).slice(0, 10);
     shuffled.forEach(q => markQuestionAsUsed(q.id));
 
     setQuestions(shuffled);

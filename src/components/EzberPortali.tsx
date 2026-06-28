@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BookOpen, CheckCircle, Circle, HelpCircle, Eye, EyeOff, Award, Sparkles, Star, ChevronDown, ChevronUp, RotateCcw, X, Volume2, VolumeX, Sun, Moon, Maximize2, Minimize2 } from 'lucide-react';
-import { playSound } from './BuzzerAndTimer';
 
 interface EzberItem {
   id: string;
@@ -257,34 +256,53 @@ export const EZBER_ITEMS: EzberItem[] = [
     ]
   },
 
-  // ─── EZAN / KAMET / MÜEZZİNLİK ──────────────────────────────────
+  // ─── EZAN ──────────────────────────────────────────────────────────
   {
-    id: 'ezan_kamet',
-    baslik: 'Ezan ve Kamet',
+    id: 'ezan',
+    baslik: 'Ezan',
+    arapcaName: 'الأذان',
     kategori: 'muezzinlik',
     satirlar: [
-      { arapca: 'اَللّٰهُ اَكْبَرُ (٤ Kere)', okunusu: 'Allāhü ekber (Ezan ve Kamette)', anlami: 'Allah en büyüktür.' },
-      { arapca: 'اَشْهَدُ اَنْ لَٓا اِلٰهَ اِلَّا اللّٰهُ (٢ Kere)', okunusu: 'Eşhedü en lâ ilâhe illallâh', anlami: 'Şahitlik ederim ki Allah\'tan başka hiçbir ilah yoktur.' },
-      { arapca: 'اَشْهَدُ اَنَّ مُحَمَّدًا رَسُولُ اللّٰهِ (٢ Kere)', okunusu: 'Eşhedü enne Muhammeden rasûlullâh', anlami: 'Şahitlik ederim ki Muhammed Allah\'ın elçisidir.' },
-      { arapca: 'حَيَّ عَلَى الصَّلٰوةِ (٢ Kere)', okunusu: 'Hayye ales-salâh', anlami: 'Haydin namaza gelin!' },
-      { arapca: 'حَيَّ عَلَى الْفَلَاحِ (٢ Kere)', okunusu: 'Hayye alel-felâh', anlami: 'Haydin kurtuluşa ve felaha gelin!' },
-      { arapca: 'قَدْ قَامَتِ الصَّلٰوةُ (Sadece Kamette - ٢ Kere)', okunusu: 'Kad kâmetis-salâh', anlami: 'Namaz başladı, namaz kesin olarak başladı.' },
-      { arapca: 'اَللّٰهُ اَكْبَرُ (٢ Kere)', okunusu: 'Allāhü ekber', anlami: 'Allah en büyüktür.' },
-      { arapca: 'لَٓا اِلٰهَ اِلَّا اللّٰهُ (١ Kere)', okunusu: 'Lâ ilâhe illallâh', anlami: 'Allah\'tan başka hiçbir ilah yoktur.' }
+      { arapca: 'اَللّٰهُ اَكْبَرُ ، اَللّٰهُ اَكْبَرُ ، اَللّٰهُ اَكْبَرُ ، اَللّٰهُ اَكْبَرُ', okunusu: 'Allāhü ekber, Allāhü ekber, Allāhü ekber, Allāhü ekber (4 Kere)', anlami: 'Allah en büyüktür.' },
+      { arapca: 'اَشْهَدُ اَنْ لَٓا اِلٰهَ اِلَّا اللّٰهُ ، اَشْهَدُ اَنْ لَٓا اِلٰهَ اِلَّا اللّٰهُ', okunusu: 'Eşhedü en lâ ilâhe illallâh (2 Kere)', anlami: 'Şahitlik ederim ki Allah\'tan başka hiçbir ilah yoktur.' },
+      { arapca: 'اَشْهَدُ اَنَّ مُحَمَّدًا رَسُولُ اللّٰهِ ، اَشْهَدُ اَنَّ مُحَمَّدًا رَسُولُ اللّٰهِ', okunusu: 'Eşhedü enne Muhammeden rasûlullâh (2 Kere)', anlami: 'Şahitlik ederim ki Muhammed Allah\'ın elçisidir.' },
+      { arapca: 'حَيَّ عَلَى الصَّلٰوةِ ، حَيَّ عَلَى الصَّلٰوةِ', okunusu: 'Hayye ales-salâh (2 Kere)', anlami: 'Haydin namaza gelin!' },
+      { arapca: 'حَيَّ عَلَى الْفَلَاحِ ، حَيَّ عَلَى الْفَلَاحِ', okunusu: 'Hayye alel-felâh (2 Kere)', anlami: 'Haydin kurtuluşa ve felaha gelin!' },
+      { arapca: 'اَللّٰهُ اَكْبَرُ ، اَللّٰهُ اَكْبَرُ', okunusu: 'Allāhü ekber (2 Kere)', anlami: 'Allah en büyüktür.' },
+      { arapca: 'لَٓا اِلٰهَ اِلَّا اللّٰهُ', okunusu: 'Lâ ilâhe illallâh (1 Kere)', anlami: 'Allah\'tan başka hiçbir ilah yoktur.' }
     ]
   },
+  // ─── KAMET ─────────────────────────────────────────────────────────
+  {
+    id: 'kamet',
+    baslik: 'Kamet (İkâmet)',
+    arapcaName: 'الإقامة',
+    kategori: 'muezzinlik',
+    satirlar: [
+      { arapca: 'اَللّٰهُ اَكْبَرُ ، اَللّٰهُ اَكْبَرُ ، اَللّٰهُ اَكْبَرُ ، اَللّٰهُ اَكْبَرُ', okunusu: 'Allāhü ekber, Allāhü ekber, Allāhü ekber, Allāhü ekber (4 Kere)', anlami: 'Allah en büyüktür.' },
+      { arapca: 'اَشْهَدُ اَنْ لَٓا اِلٰهَ اِلَّا اللّٰهُ ، اَشْهَدُ اَنْ لَٓا اِلٰهَ اِلَّا اللّٰهُ', okunusu: 'Eşhedü en lâ ilâhe illallâh (2 Kere)', anlami: 'Şahitlik ederim ki Allah\'tan başka hiçbir ilah yoktur.' },
+      { arapca: 'اَشْهَدُ اَنَّ مُحَمَّدًا رَسُولُ اللّٰهِ ، اَشْهَدُ اَنَّ مُحَمَّدًا رَسُولُ اللّٰهِ', okunusu: 'Eşhedü enne Muhammeden rasûlullâh (2 Kere)', anlami: 'Şahitlik ederim ki Muhammed Allah\'ın elçisidir.' },
+      { arapca: 'حَيَّ عَلَى الصَّلٰوةِ ، حَيَّ عَلَى الصَّلٰوةِ', okunusu: 'Hayye ales-salâh (2 Kere)', anlami: 'Haydin namaza gelin!' },
+      { arapca: 'حَيَّ عَلَى الْفَلَاحِ ، حَيَّ عَلَى الْفَلَاحِ', okunusu: 'Hayye alel-felâh (2 Kere)', anlami: 'Haydin kurtuluşa ve felaha gelin!' },
+      { arapca: 'قَدْ قَامَتِ الصَّلٰوةُ ، قَدْ قَامَتِ الصَّلٰوةُ', okunusu: 'Kad kâmetis-salâh (2 Kere) ⬅️ Kamete Özel', anlami: 'Namaz başladı, namaz kesin olarak başladı. (Bu cümle sadece Kamette söylenir, Ezanda yoktur.)' },
+      { arapca: 'اَللّٰهُ اَكْبَرُ ، اَللّٰهُ اَكْبَرُ', okunusu: 'Allāhü ekber (2 Kere)', anlami: 'Allah en büyüktür.' },
+      { arapca: 'لَٓا اِلٰهَ اِلَّا اللّٰهُ', okunusu: 'Lâ ilâhe illallâh (1 Kere)', anlami: 'Allah\'tan başka hiçbir ilah yoktur.' }
+    ]
+  },
+  // ─── NAMAZ SONRASI MÜEZZİNLİK DUALARI (Adım Adım) ────────────────
   {
     id: 'muezzinlik_duaları',
     baslik: 'Namaz Sonrası Müezzinlik Duaları',
+    arapcaName: 'أذكار ما بعد الصلاة',
     kategori: 'muezzinlik',
     satirlar: [
-      { arapca: 'اَللّٰهُمَّ اَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْاِكْرَامِۜ', okunusu: 'Allâhümme entes-selâmü ve minkes-selâmü tebârakte yâ zel-celâli vel-ikrâm', anlami: 'Farz namaz bitince okunur: Allah\'ım! Sen selamsın, selamet Sendendir. Ey celal ve ikram sahibi olan Rabbim, Sen ne yücesin!' },
-      { arapca: 'عَلٰى رَسُولِنَا صَلَوَاتٌ', okunusu: 'Alâ rasûlinâ salevât (Hoca/Müezzin der, cemaat salavat çeker)', anlami: 'Peygamberimiz Hz. Muhammed\'e salât ve selam olsun.' },
-      { arapca: 'سُبْحَانَ اللّٰهِ وَالْحَمDُ لِلّٰهِ وَلَٓا اِلٰهَ اِلَّا اللّٰهُ وَاللّٰهُ اَكْبَرُ', okunusu: 'Sübhânallâhi vel-hamdü lillâhi ve lâ ilâhe illallâhü vallâhü ekber', anlami: 'Allah noksan sıfatlardan uzaktır, hamd Allah\'adır, Allah\'tan başka ilah yoktur ve Allah en büyüktür.' },
-      { arapca: 'وَلَا حَوْلَ وَلَا قُوَّةَ اِلَّا بِاللّٰهِ الْعَلِيِّ الْعَظ۪يمِۜ', okunusu: 've lâ havle ve lâ kuvvete illâ billâhil-aliyyil-azîm', anlami: 'Güç ve kuvvet ancak şanı çok yüce ve azametli olan Allah\'ın yardımıyladır.' },
-      { arapca: 'سُبْحَانَ اللّٰهِ (٣٣ Defa)', okunusu: 'Sübhânallâh (Namaz tesbihatı - 1)', anlami: 'Allah\'ı tüm noksanlıklardan tenzih ederim.' },
-      { arapca: 'اَلْحَمْدُ لِلّٰهِ (٣٣ Defa)', okunusu: 'Elhamdülillâh (Namaz tesbihatı - 2)', anlami: 'Hamd, teşekkür Allah\'adır.' },
-      { arapca: 'اَللّٰهُ اَكْبَرُ (٣٣ Defa)', okunusu: 'Allāhü ekber (Namaz tesbihatı - 3)', anlami: 'Allah en büyüktür.' }
+      { arapca: '【 ١ 】 اَللّٰهُمَّ اَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْاِكْرَامِۜ', okunusu: '1. ADIM: Selam verdikten sonra okunur → Allâhümme entes-selâmü ve minkes-selâmü tebârakte yâ zel-celâli vel-ikrâm', anlami: 'Farz namazın selamından hemen sonra: Allah\'ım! Sen selamsın, selamet Sendendir. Ey celal ve ikram sahibi olan Rabbim, Sen ne yücesin!' },
+      { arapca: '【 ٢ 】 عَلٰى رَسُولِنَا صَلَوَاتٌ', okunusu: '2. ADIM: Hoca/Müezzin yüksek sesle der → Alâ rasûlinâ salevât! (Cemaat salavat-ı şerife getirir)', anlami: 'Peygamberimiz Hz. Muhammed\'e salât ve selam olsun.' },
+      { arapca: '【 ٣ 】 سُبْحَانَ اللّٰهِ وَالْحَمْدُ لِلّٰهِ وَلَٓا اِلٰهَ اِلَّا اللّٰهُ وَاللّٰهُ اَكْبَرُ', okunusu: '3. ADIM: Hep birlikte okunur → Sübhânallâhi vel-hamdü lillâhi ve lâ ilâhe illallâhü vallâhü ekber', anlami: 'Allah noksan sıfatlardan uzaktır, hamd Allah\'adır, Allah\'tan başka ilah yoktur ve Allah en büyüktür.' },
+      { arapca: 'وَلَا حَوْلَ وَلَا قُوَّةَ اِلَّا بِاللّٰهِ الْعَلِيِّ الْعَظ۪يمِۜ', okunusu: '(Devamı) ve lâ havle ve lâ kuvvete illâ billâhil-aliyyil-azîm', anlami: 'Güç ve kuvvet ancak şanı çok yüce ve azametli olan Allah\'ın yardımıyladır.' },
+      { arapca: '【 ٤ 】 سُبْحَانَ اللّٰهِ × ٣٣', okunusu: '4. ADIM: Tesbihata geçilir → Sübhânallâh (33 defa çekilir)', anlami: 'Allah\'ı tüm noksanlıklardan tenzih ederim.' },
+      { arapca: '【 ٥ 】 اَلْحَمْدُ لِلّٰهِ × ٣٣', okunusu: '5. ADIM: Elhamdülillâh (33 defa çekilir)', anlami: 'Hamd, teşekkür Allah\'adır.' },
+      { arapca: '【 ٦ 】 اَللّٰهُ اَكْبَرُ × ٣٣', okunusu: '6. ADIM: Allāhü ekber (33 defa çekilir)', anlami: 'Allah en büyüktür.' }
     ]
   }
 ];
@@ -300,6 +318,20 @@ export interface EzberPortaliProps {
   setIsFocused: (focused: boolean) => void;
 }
 
+const SURAH_NUMBER_MAP: Record<string, number> = {
+  fatiha: 1,
+  fil: 105,
+  kureys: 106,
+  maun: 107,
+  kevser: 108,
+  kafirun: 109,
+  nasr: 110,
+  tebbet: 111,
+  ihlas: 112,
+  felak: 113,
+  nas: 114
+};
+
 export const EzberPortali: React.FC<EzberPortaliProps> = ({
   isDarkMode,
   toggleDarkMode,
@@ -314,6 +346,54 @@ export const EzberPortali: React.FC<EzberPortaliProps> = ({
   const [selectedItemForModal, setSelectedItemForModal] = useState<EzberItem | null>(null);
   const [modalTab, setModalTab] = useState<'arabic' | 'turkish' | 'meaning'>('arabic');
   const [ezberStatus, setEzberStatus] = useState<Record<string, 'todo' | 'learning' | 'done'>>({});
+
+  const [playingItemId, setPlayingItemId] = useState<string | null>(null);
+  const [audioInstance, setAudioInstance] = useState<HTMLAudioElement | null>(null);
+
+  const togglePlayEzber = (item: EzberItem) => {
+    if (playingItemId === item.id) {
+      if (audioInstance) {
+        audioInstance.pause();
+      }
+      setPlayingItemId(null);
+      setAudioInstance(null);
+    } else {
+      if (audioInstance) {
+        audioInstance.pause();
+      }
+
+      let audioUrl = '';
+      const surahNum = SURAH_NUMBER_MAP[item.id];
+      if (surahNum) {
+        audioUrl = `https://server8.mp3quran.net/afs/${surahNum.toString().padStart(3, '0')}.mp3`;
+      } else {
+        audioUrl = `assets/audio/ezber/${item.id}.mp3`;
+      }
+
+      const audio = new Audio(audioUrl);
+      setPlayingItemId(item.id);
+      setAudioInstance(audio);
+
+      audio.onended = () => {
+        setPlayingItemId(null);
+        setAudioInstance(null);
+      };
+
+      audio.play().catch(err => {
+        console.warn("Ezber ses dosyası çalınamadı:", audioUrl, err);
+        setPlayingItemId(null);
+        setAudioInstance(null);
+      });
+    }
+  };
+
+  useEffect(() => {
+    return () => {
+      if (audioInstance) {
+        audioInstance.pause();
+      }
+    };
+  }, [audioInstance]);
 
   useEffect(() => {
     const stored = localStorage.getItem('cennet_bahcesi_ezber_status');
@@ -340,11 +420,7 @@ export const EzberPortali: React.FC<EzberPortaliProps> = ({
     const updated = { ...ezberStatus, [id]: status };
     setEzberStatus(updated);
     localStorage.setItem('cennet_bahcesi_ezber_status', JSON.stringify(updated));
-    if (status === 'done') {
-      playSound('success');
-    } else {
-      playSound('tick');
-    }
+    if (status === 'done') { } else { }
   };
 
   const getStatusColorClass = (id: string) => {
@@ -356,15 +432,11 @@ export const EzberPortali: React.FC<EzberPortaliProps> = ({
 
   const handleOpenStudyModal = (item: EzberItem) => {
     setSelectedItemForModal(item);
-    setModalTab('arabic');
-    playSound('tick');
-  };
+    setModalTab('arabic'); };
 
   const handleCloseStudyModal = () => {
     setSelectedItemForModal(null);
-    setIsFocused(false);
-    playSound('fail');
-  };
+    setIsFocused(false); };
 
   const filteredItems = EZBER_ITEMS.filter(item => item.kategori === activeCategory);
 
@@ -508,16 +580,16 @@ export const EzberPortali: React.FC<EzberPortaliProps> = ({
 
           <div className="flex gap-2.5 mb-6 overflow-x-auto pb-1 justify-center sm:justify-start">
             <button
-              onClick={() => { setActiveCategory('dualar'); playSound('tick'); }}
+              onClick={() => { setActiveCategory('dualar'); }}
               className={`px-5 py-3 rounded-2xl text-xs font-black uppercase tracking-wider cursor-pointer shadow-sm transition-all border-3 flex items-center gap-2 shrink-0 ${activeCategory === 'dualar'
                 ? 'bg-emerald-500 border-emerald-600 text-white shadow-[0_3px_0_#047857]'
                 : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-slate-350 dark:hover:border-slate-600'
                 }`}
             >
-              Müzik / Namaz Duaları
+              🤲 Namaz Duaları
             </button>
             <button
-              onClick={() => { setActiveCategory('sureler'); playSound('tick'); }}
+              onClick={() => { setActiveCategory('sureler'); }}
               className={`px-5 py-3 rounded-2xl text-xs font-black uppercase tracking-wider cursor-pointer shadow-sm transition-all border-3 flex items-center gap-2 shrink-0 ${activeCategory === 'sureler'
                 ? 'bg-emerald-500 border-emerald-600 text-white shadow-[0_3px_0_#047857]'
                 : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-slate-350 dark:hover:border-slate-600'
@@ -526,7 +598,7 @@ export const EzberPortali: React.FC<EzberPortaliProps> = ({
               📖 Kısa Sureler
             </button>
             <button
-              onClick={() => { setActiveCategory('muezzinlik'); playSound('tick'); }}
+              onClick={() => { setActiveCategory('muezzinlik'); }}
               className={`px-5 py-3 rounded-2xl text-xs font-black uppercase tracking-wider cursor-pointer shadow-sm transition-all border-3 flex items-center gap-2 shrink-0 ${activeCategory === 'muezzinlik'
                 ? 'bg-emerald-500 border-emerald-600 text-white shadow-[0_3px_0_#047857]'
                 : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-slate-350 dark:hover:border-slate-600'
@@ -543,16 +615,17 @@ export const EzberPortali: React.FC<EzberPortaliProps> = ({
                 <div
                   key={item.id}
                   onClick={() => handleOpenStudyModal(item)}
-                  className="bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700/60 rounded-[2rem] p-5 shadow-sm hover:border-emerald-450 dark:hover:border-emerald-600 hover:shadow-md hover:scale-[1.005] transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 cursor-pointer"
+                  className="bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700/60 rounded-[1.5rem] sm:rounded-[2rem] p-3 sm:p-5 shadow-sm hover:border-emerald-450 dark:hover:border-emerald-600 hover:shadow-md hover:scale-[1.002] transition-all duration-300 flex flex-col justify-between gap-3 sm:gap-5 cursor-pointer h-full overflow-hidden"
                 >
-                  <div className="flex items-center gap-4 flex-1">
+                  {/* Top: Title & Info */}
+                  <div className="flex items-start gap-4">
                     <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 border-2 font-bold text-base ${getStatusColorClass(item.id)}`}>
                       {status === 'done' && '✓'}
                       {status === 'learning' && '⌛'}
                       {status === 'todo' && '○'}
                     </div>
-                    <div>
-                      <h3 className="font-display font-black text-lg text-slate-800 dark:text-slate-100 flex items-center gap-2 flex-wrap">
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-display font-black text-base sm:text-lg text-slate-800 dark:text-slate-100 flex items-center gap-2 flex-wrap leading-tight">
                         {item.baslik}
                         {item.arapcaName && (
                           <span className="font-serif text-sm font-bold text-slate-400 dark:text-slate-500" dir="rtl">
@@ -560,41 +633,62 @@ export const EzberPortali: React.FC<EzberPortaliProps> = ({
                           </span>
                         )}
                       </h3>
-                      <p className="text-[10px] text-slate-400 dark:text-slate-500 font-bold uppercase tracking-wider">
+                      <p className="text-[10px] text-slate-450 dark:text-slate-500 font-bold uppercase tracking-wider mt-1">
                         {item.satirlar.length} Ayet/Satır Uzunluğunda
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center justify-between sm:justify-end gap-3 w-full sm:w-auto" onClick={(e) => e.stopPropagation()}>
-                    <div className="flex items-center bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700/50 p-1 rounded-2xl text-[10px] font-black tracking-wide">
+
+                  {/* Bottom: Action Buttons */}
+                  <div 
+                    className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center justify-between gap-2 pt-3 border-t border-slate-100 dark:border-slate-700/45" 
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {/* Status switcher */}
+                    <div className="flex items-center bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700/50 p-0.5 rounded-xl text-[9px] font-black tracking-wide">
                       <button
                         onClick={() => handleUpdateStatus(item.id, 'todo')}
-                        className={`px-3 py-1.5 rounded-xl cursor-pointer uppercase transition-colors ${status === 'todo' ? 'bg-slate-400 text-white shadow-sm' : 'text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800'
+                        className={`px-2 py-1 rounded-lg cursor-pointer uppercase transition-colors ${status === 'todo' ? 'bg-slate-400 text-white shadow-sm' : 'text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800'
                           }`}
                       >
                         Yeni
                       </button>
                       <button
                         onClick={() => handleUpdateStatus(item.id, 'learning')}
-                        className={`px-3 py-1.5 rounded-xl cursor-pointer uppercase transition-colors ${status === 'learning' ? 'bg-amber-500 text-white shadow-sm' : 'text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800'
+                        className={`px-2 py-1 rounded-lg cursor-pointer uppercase transition-colors ${status === 'learning' ? 'bg-amber-500 text-white shadow-sm' : 'text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800'
                           }`}
                       >
                         Ezberde
                       </button>
                       <button
                         onClick={() => handleUpdateStatus(item.id, 'done')}
-                        className={`px-3 py-1.5 rounded-xl cursor-pointer uppercase transition-colors ${status === 'done' ? 'bg-emerald-500 text-white shadow-sm' : 'text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800'
+                        className={`px-2 py-1 rounded-lg cursor-pointer uppercase transition-colors ${status === 'done' ? 'bg-emerald-500 text-white shadow-sm' : 'text-slate-555 hover:bg-slate-200 dark:hover:bg-slate-800'
                           }`}
                       >
                         Bitti
                       </button>
                     </div>
-                    <button
-                      onClick={() => handleOpenStudyModal(item)}
-                      className="px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl text-xs font-black uppercase tracking-wider shadow-sm transition-all active:scale-95 cursor-pointer shrink-0"
-                    >
-                      Çalış ➔
-                    </button>
+
+                    <div className="flex items-center gap-2 shrink-0">
+                      <button
+                        onClick={(e) => { e.stopPropagation(); togglePlayEzber(item); }}
+                        className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all active:scale-95 cursor-pointer border-2 ${
+                          playingItemId === item.id
+                            ? 'bg-rose-500 hover:bg-rose-600 border-rose-600 text-white shadow-sm'
+                            : 'bg-white hover:bg-slate-50 dark:bg-slate-750 dark:hover:bg-slate-700 border-slate-200 dark:border-slate-650 text-emerald-600 dark:text-emerald-400'
+                        }`}
+                        title={playingItemId === item.id ? "Sesi Durdur" : "Dinle / Oku"}
+                      >
+                        {playingItemId === item.id ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+                      </button>
+
+                      <button
+                        onClick={() => handleOpenStudyModal(item)}
+                        className="px-3 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-[10px] font-black uppercase tracking-wider shadow-sm transition-all active:scale-95 cursor-pointer shrink-0"
+                      >
+                        Çalış ➔
+                      </button>
+                    </div>
                   </div>
                 </div>
               );
@@ -635,16 +729,17 @@ export const EzberPortali: React.FC<EzberPortaliProps> = ({
 
                 <div className="flex flex-wrap items-center gap-2.5">
                   <button
-                    onClick={togglePlayMusic}
-                    className={`px-3 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider transition-all hover:scale-105 active:scale-95 cursor-pointer border-2 flex items-center gap-1.5 ${isMusicPlaying
-                      ? 'bg-violet-600 hover:bg-violet-750 text-white border-violet-700 shadow-md shadow-violet-500/20'
-                      : isDarkMode
-                        ? 'bg-slate-850 hover:bg-slate-800 text-slate-300 border-slate-700'
-                        : 'bg-white hover:bg-slate-55 text-slate-600 border-slate-200'
-                      }`}
+                    onClick={() => togglePlayEzber(selectedItemForModal)}
+                    className={`px-3 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider transition-all hover:scale-105 active:scale-95 cursor-pointer border-2 flex items-center gap-1.5 ${
+                      playingItemId === selectedItemForModal.id
+                        ? 'bg-rose-500 hover:bg-rose-600 text-white border-rose-600 shadow-md shadow-rose-500/20'
+                        : isDarkMode
+                          ? 'bg-slate-850 hover:bg-slate-800 text-slate-350 border-slate-700'
+                          : 'bg-white hover:bg-slate-100 text-slate-650 border-slate-200'
+                    }`}
                   >
-                    {isMusicPlaying ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                    {isMusicPlaying ? "Sesi Kapat" : "Sesi Aç"}
+                    {playingItemId === selectedItemForModal.id ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+                    {playingItemId === selectedItemForModal.id ? "Okunuşu Durdur" : "Okunuşu Dinle"}
                   </button>
 
                   <button
@@ -679,7 +774,7 @@ export const EzberPortali: React.FC<EzberPortaliProps> = ({
                   </button>
 
                   <button
-                    onClick={() => { setIsFocused(false); playSound('tick'); }}
+                    onClick={() => { setIsFocused(false); }}
                     className="px-3 py-2 bg-rose-600 hover:bg-rose-700 text-white text-[10px] font-black uppercase tracking-wider rounded-xl transition-all hover:scale-105 active:scale-95 flex items-center gap-1.5 cursor-pointer shadow-md shadow-rose-600/20 border-2 border-rose-700"
                   >
                     <Minimize2 className="w-4 h-4" /> Tam Ekrandan Çık
@@ -691,21 +786,21 @@ export const EzberPortali: React.FC<EzberPortaliProps> = ({
               <div className="flex-1 flex flex-col min-h-0 relative z-10">
                 <div className="my-2 flex gap-3 p-1 bg-slate-100/50 dark:bg-slate-900/45 rounded-2xl max-w-lg mx-auto w-full border border-slate-200 dark:border-slate-800 shrink-0">
                   <button
-                    onClick={() => { setModalTab('arabic'); playSound('tick'); }}
+                    onClick={() => { setModalTab('arabic'); }}
                     className={`flex-1 py-2.5 px-4 rounded-xl text-xs font-black uppercase tracking-wider transition-all cursor-pointer flex items-center justify-center gap-2 ${modalTab === 'arabic' ? 'bg-violet-650 text-white shadow-sm' : 'text-slate-500 dark:text-slate-400 hover:bg-slate-200/55 dark:hover:bg-slate-800/40'
                       }`}
                   >
                     📖 Arapça (Mushaf)
                   </button>
                   <button
-                    onClick={() => { setModalTab('turkish'); playSound('tick'); }}
+                    onClick={() => { setModalTab('turkish'); }}
                     className={`flex-1 py-2.5 px-4 rounded-xl text-xs font-black uppercase tracking-wider transition-all cursor-pointer flex items-center justify-center gap-2 ${modalTab === 'turkish' ? 'bg-violet-650 text-white shadow-sm' : 'text-slate-500 dark:text-slate-400 hover:bg-slate-200/55 dark:hover:bg-slate-800/40'
                       }`}
                   >
                     🇹🇷 Türkçe Okunuş
                   </button>
                   <button
-                    onClick={() => { setModalTab('meaning'); playSound('tick'); }}
+                    onClick={() => { setModalTab('meaning'); }}
                     className={`flex-1 py-2.5 px-4 rounded-xl text-xs font-black uppercase tracking-wider transition-all cursor-pointer flex items-center justify-center gap-2 ${modalTab === 'meaning' ? 'bg-violet-650 text-white shadow-sm' : 'text-slate-500 dark:text-slate-400 hover:bg-slate-200/55 dark:hover:bg-slate-800/40'
                       }`}
                   >
@@ -751,7 +846,19 @@ export const EzberPortali: React.FC<EzberPortaliProps> = ({
                   </div>
                   <div className="flex items-center gap-2">
                     <button
-                      onClick={() => { setIsFocused(true); playSound('tick'); }}
+                      onClick={() => togglePlayEzber(selectedItemForModal)}
+                      className={`w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition-colors ${
+                        playingItemId === selectedItemForModal.id
+                          ? 'bg-rose-500 text-white hover:bg-rose-600 animate-pulse'
+                          : 'bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 hover:bg-slate-200 dark:hover:bg-slate-700'
+                      }`}
+                      title={playingItemId === selectedItemForModal.id ? "Okunuşu Durdur" : "Okunuşu Dinle"}
+                    >
+                      {playingItemId === selectedItemForModal.id ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+                    </button>
+
+                    <button
+                      onClick={() => { setIsFocused(true); }}
                       className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer transition-colors"
                     >
                       <Maximize2 className="w-5 h-5" />
@@ -767,7 +874,7 @@ export const EzberPortali: React.FC<EzberPortaliProps> = ({
 
                 <div className="px-6 pb-4 pt-2 flex gap-3 border-b border-slate-200 dark:border-slate-700/80 shrink-0 bg-slate-50/50 dark:bg-slate-900/10">
                   <button
-                    onClick={() => { setModalTab('arabic'); playSound('tick'); }}
+                    onClick={() => { setModalTab('arabic'); }}
                     className={`flex-1 py-3 px-4 rounded-2xl text-xs font-black uppercase tracking-wider transition-all cursor-pointer border-3 flex items-center justify-center gap-2 ${modalTab === 'arabic'
                       ? 'bg-emerald-500 border-emerald-600 text-white shadow-sm'
                       : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-slate-350 dark:hover:border-slate-600'
@@ -776,7 +883,7 @@ export const EzberPortali: React.FC<EzberPortaliProps> = ({
                     📖 Arapça (Mushaf)
                   </button>
                   <button
-                    onClick={() => { setModalTab('turkish'); playSound('tick'); }}
+                    onClick={() => { setModalTab('turkish'); }}
                     className={`flex-1 py-3 px-4 rounded-2xl text-xs font-black uppercase tracking-wider transition-all cursor-pointer border-3 flex items-center justify-center gap-2 ${modalTab === 'turkish'
                       ? 'bg-emerald-500 border-emerald-600 text-white shadow-sm'
                       : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-slate-350 dark:hover:border-slate-600'
@@ -785,7 +892,7 @@ export const EzberPortali: React.FC<EzberPortaliProps> = ({
                     🇹🇷 Türkçe Okunuş
                   </button>
                   <button
-                    onClick={() => { setModalTab('meaning'); playSound('tick'); }}
+                    onClick={() => { setModalTab('meaning'); }}
                     className={`flex-1 py-3 px-4 rounded-2xl text-xs font-black uppercase tracking-wider transition-all cursor-pointer border-3 flex items-center justify-center gap-2 ${modalTab === 'meaning'
                       ? 'bg-emerald-500 border-emerald-600 text-white shadow-sm'
                       : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-slate-350 dark:hover:border-slate-600'
