@@ -71,7 +71,7 @@ export default function App() {
   }, [activeTab, visitedTabs]);
 
   const toggleFullscreen = () => {
-    playSound('tick');
+   
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen().then(() => {
         setIsFullscreen(true);
@@ -393,14 +393,14 @@ export default function App() {
         setIsMusicPlaying(false);
       });
     }
-    playSound('tick');
+   
   };
 
   const toggleAnimatedBg = () => {
     setIsAnimatedBg((prev) => {
       const newVal = !prev;
       localStorage.setItem('cennet_bahcesi_animated_bg', String(newVal));
-      playSound('tick');
+     
       return newVal;
     });
   };
@@ -409,7 +409,7 @@ export default function App() {
     setIsDarkMode((prev) => {
       const newVal = !prev;
       localStorage.setItem('cennet_bahcesi_darkmode', String(newVal));
-      playSound('tick');
+     
       return newVal;
     });
   };
@@ -440,13 +440,13 @@ export default function App() {
   const handleTeamsSelected = (selectedTeams: Team[]) => {
     setTeams(selectedTeams);
     setPhase('map');
-    playSound('complete');
+   
   };
 
   const handleSelectZone = (zone: GameZone) => {
     setActiveZone(zone);
     setPhase('gameplay');
-    playSound('tick');
+   
   };
 
   const handleAwardPoints = (teamId: string, points: number) => {
@@ -459,14 +459,14 @@ export default function App() {
     setTeams((prev) =>
       prev.map((t) => (t.id === teamId ? { ...t, score: Math.max(0, t.score + delta) } : t))
     );
-    playSound('tick');
+   
   };
 
   const handleSwitchActiveTeam = (teamId: string) => {
     setTeams((prev) =>
       prev.map((t) => ({ ...t, active: t.id === teamId }))
     );
-    playSound('tick');
+   
   };
 
   // Shift active team to the next turn order
@@ -508,7 +508,7 @@ export default function App() {
 
   const handleGoToVictory = () => {
     setPhase('victory');
-    playSound('complete');
+   
   };
 
   const resetWholeGame = () => {
@@ -615,7 +615,7 @@ export default function App() {
 
           {/* Portal 1: Elif-Ba */}
           <div
-            onClick={() => { setActiveTab('elifba'); playSound('tick'); }}
+            onClick={() => { setActiveTab('elifba'); }}
             className="group bg-gradient-to-br from-white to-emerald-50/30 border-2 border-slate-200 hover:border-emerald-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-emerald-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
@@ -639,7 +639,7 @@ export default function App() {
 
           {/* Portal 2: Quran */}
           <div
-            onClick={() => { setActiveTab('quran'); playSound('tick'); }}
+            onClick={() => { setActiveTab('quran'); }}
             className="group bg-gradient-to-br from-white to-teal-50/30 border-2 border-slate-200 hover:border-teal-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-teal-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-teal-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
@@ -663,7 +663,7 @@ export default function App() {
 
           {/* Portal 3: Ezber */}
           <div
-            onClick={() => { setActiveTab('ezber'); playSound('tick'); }}
+            onClick={() => { setActiveTab('ezber'); }}
             className="group bg-gradient-to-br from-white to-violet-50/30 border-2 border-slate-200 hover:border-violet-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-violet-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-violet-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
@@ -687,7 +687,7 @@ export default function App() {
 
           {/* Portal 4: Interactive Lessons */}
           <div
-            onClick={() => { setActiveTab('lessons'); playSound('tick'); }}
+            onClick={() => { setActiveTab('lessons'); }}
             className="group bg-gradient-to-br from-white to-amber-50/30 border-2 border-slate-200 hover:border-amber-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-amber-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-3"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-amber-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
@@ -711,7 +711,7 @@ export default function App() {
 
           {/* Portal 5: Classroom Games Tourney */}
           <div
-            onClick={() => { setActiveTab('games'); playSound('tick'); }}
+            onClick={() => { setActiveTab('games'); }}
             className="group bg-gradient-to-br from-white to-sky-50/30 border-2 border-slate-200 hover:border-sky-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-sky-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-3"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-sky-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
@@ -809,7 +809,7 @@ export default function App() {
             <button
               onClick={() => {
                 navigator.clipboard.writeText("mhmdhsyn1453@gmail.com");
-                playSound('tick');
+               
                 alert("E-posta adresi panoya kopyalandı!");
               }}
               className="p-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 rounded-xl cursor-pointer shadow-sm hover:scale-105 active:scale-95 transition-all"
@@ -823,7 +823,7 @@ export default function App() {
         {/* Back button */}
         <div className="flex w-full justify-center">
           <button
-            onClick={() => { setActiveTab('home'); playSound('tick'); }}
+            onClick={() => { setActiveTab('home'); }}
             className="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-black shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 transition-all active:scale-95 cursor-pointer text-sm"
           >
             Anasayfaya Dön ➔
@@ -1034,7 +1034,7 @@ export default function App() {
         <button
           onClick={() => {
             setCinematicPhase('ready');
-            playSound('tick');
+           
             if (audioRef.current && audioRef.current.paused) {
               playBackgroundMusic(35);
             }
@@ -1070,7 +1070,7 @@ export default function App() {
           </button>
 
           <button
-            onClick={() => { setActiveTab('about'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
+            onClick={() => { setActiveTab('about'); setPhase('map'); setActiveZone(null); setIsFocused(false); }}
             className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 ${activeTab === 'about'
               ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/20'
               : 'bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)]'
@@ -1109,7 +1109,7 @@ export default function App() {
           {/* Home button */}
           {activeTab !== 'home' && (
             <button
-              onClick={() => { setActiveTab('home'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
+              onClick={() => { setActiveTab('home'); setPhase('map'); setActiveZone(null); setIsFocused(false); }}
               className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border ${activeTab === 'home'
                 ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white border-emerald-600 shadow-lg shadow-emerald-500/20'
                 : 'border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-emerald-500/30 dark:hover:border-emerald-500/30'
@@ -1124,7 +1124,7 @@ export default function App() {
           {/* Elif-Ba button */}
           {activeTab !== 'home' && (
             <button
-              onClick={() => { setActiveTab('elifba'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
+              onClick={() => { setActiveTab('elifba'); setPhase('map'); setActiveZone(null); setIsFocused(false); }}
               className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border ${activeTab === 'elifba'
                 ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white border-emerald-600 shadow-lg shadow-emerald-500/20'
                 : 'border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-emerald-500/30 dark:hover:border-emerald-500/30'
@@ -1141,7 +1141,7 @@ export default function App() {
           {/* Kur'an-ı Kerim button */}
           {activeTab !== 'home' && (
             <button
-              onClick={() => { setActiveTab('quran'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
+              onClick={() => { setActiveTab('quran'); setPhase('map'); setActiveZone(null); setIsFocused(false); }}
               className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border ${activeTab === 'quran'
                 ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white border-emerald-600 shadow-lg shadow-emerald-500/20'
                 : 'border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-emerald-500/30 dark:hover:border-emerald-500/30'
@@ -1156,7 +1156,7 @@ export default function App() {
           {/* Ezber Listesi button */}
           {activeTab !== 'home' && (
             <button
-              onClick={() => { setActiveTab('ezber'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
+              onClick={() => { setActiveTab('ezber'); setPhase('map'); setActiveZone(null); setIsFocused(false); }}
               className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border ${activeTab === 'ezber'
                 ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white border-emerald-600 shadow-lg shadow-emerald-500/20'
                 : 'border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-emerald-500/30 dark:hover:border-emerald-500/30'
@@ -1171,7 +1171,7 @@ export default function App() {
           {/* Ders İçerikleri button */}
           {activeTab !== 'home' && (
             <button
-              onClick={() => { setActiveTab('lessons'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
+              onClick={() => { setActiveTab('lessons'); setPhase('map'); setActiveZone(null); setIsFocused(false); }}
               className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border ${activeTab === 'lessons'
                 ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white border-emerald-600 shadow-lg shadow-emerald-500/20'
                 : 'border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-emerald-500/30 dark:hover:border-emerald-500/30'
@@ -1186,7 +1186,7 @@ export default function App() {
           {/* Oyunlar button */}
           {activeTab !== 'home' && (
             <button
-              onClick={() => { setActiveTab('games'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
+              onClick={() => { setActiveTab('games'); setPhase('map'); setActiveZone(null); setIsFocused(false); }}
               className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border ${activeTab === 'games'
                 ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white border-emerald-600 shadow-lg shadow-emerald-500/20'
                 : 'border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-emerald-500/30 dark:hover:border-emerald-500/30'
@@ -1228,7 +1228,7 @@ export default function App() {
 
           {/* About & Dua button */}
           <button
-            onClick={() => { setActiveTab('about'); setPhase('map'); setActiveZone(null); setIsFocused(false); playSound('tick'); }}
+            onClick={() => { setActiveTab('about'); setPhase('map'); setActiveZone(null); setIsFocused(false); }}
             className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 ${activeTab === 'about'
               ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/20'
               : 'bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)]'
@@ -1428,7 +1428,7 @@ export default function App() {
           onClick={() => {
             if (dragDistance.current > 5) return;
             setShowPenTool(prev => !prev);
-            playSound('tick');
+           
           }}
           style={
             penPos.x === -9999 && penPos.y === -9999
@@ -1485,7 +1485,7 @@ export default function App() {
               <button
                 onClick={() => {
                   setUpdateAvailable(null);
-                  playSound('tick');
+                 
                 }}
                 className="flex-1 py-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-bold transition-all active:scale-95 cursor-pointer"
               >
@@ -1493,7 +1493,7 @@ export default function App() {
               </button>
               <button
                 onClick={() => {
-                  playSound('tick');
+                 
                   setUpdateDownloading(true);
                   // @ts-ignore
                   if (window.electronAPI) {
@@ -1582,18 +1582,18 @@ export default function App() {
             <div className="text-sm text-slate-600 dark:text-slate-300 text-left bg-slate-50 dark:bg-slate-950/40 p-5 rounded-2xl border border-slate-100 dark:border-slate-800 flex flex-col gap-3">
               <p className="font-extrabold text-slate-750 dark:text-slate-200">🚀 Bu Sürümde Neler Yeni?</p>
               <ul className="list-disc pl-5 flex flex-col gap-2.5 text-xs text-slate-650 dark:text-slate-300">
-                <li><strong>500+ Soru Havuzu:</strong> Dini müfredata uygun 500'den fazla soru havuza eklenerek bilgi yarışmaları devasa bir boyuta taşındı!</li>
-                <li><strong>Soru Tekrarsızlık Sistemi:</strong> Tüm oyunlar arasında soruların üst üste tekrarlanmasını önleyen akıllı önbellek sistemi entegre edildi.</li>
-                <li><strong>Yenilenen Oyun Giriş Ekranı:</strong> Bireysel ve Takım modları, göz alıcı 3D derinlikli, gölgeli ve gradyanlı kart tasarımlarıyla baştan inşa edildi.</li>
-                <li><strong>Kompakt Oyun Kartları:</strong> Oyun listelerindeki kart boyutları ve yerleşimleri, akıllı tahtalarda tek bakışta görünebilecek şekilde optimize edildi.</li>
-                <li><strong>Sessiz Güncelleme Kolaylığı:</strong> Uygulama güncellemeleri artık ilk kurulum ayarlarınızı bozmadan, arka planda tamamen sessiz ve otomatik kurulacak şekilde güncellendi.</li>
+                <li><strong>Kur'an-ı Kerim Dinleme Sistemi:</strong> Ayete tıklayarak kesintisiz okuma başlatma, otonom yumuşak sayfa kaydırma (scroll) ve otomatik sayfa geçiş desteği.</li>
+                <li><strong>Gelişmiş Kaldığın Yerden Devam Etme:</strong> Dinleme işlemi artık her zaman sağ sayfadan değil, aktif seçili olan sayfa numarasından ve en son kaldığı ayetten başlar.</li>
+                <li><strong>Ezan ve Kamet Ayrımı:</strong> Ezber portalında Ezan ve Kamet ayrı kartlara bölündü; Kamet'e özel `Kad kâmetis-salâh` vurgulandı.</li>
+                <li><strong>Adım Adım Müezzinlik Rehberi:</strong> Namaz sonrası müezzinlik duaları ve tesbihat akışı 6 adımda numaralandırılarak son derece sade hale getirildi.</li>
+                <li><strong>Besmele Giriş Sesi & Sessiz Arayüz:</strong> Tam ekrana geçerken çalacak özel Besmele sesi (basmala_intro.mp3) desteği eklendi. Rahatsız edici menü tık sesleri tamamen temizlendi.</li>
               </ul>
             </div>
 
             <button
               onClick={() => {
                 setShowWelcomeChangelog(null);
-                playSound('tick');
+               
               }}
               className="w-full py-4 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 text-white font-black shadow-lg shadow-amber-500/20 hover:shadow-amber-500/30 transition-all active:scale-95 cursor-pointer"
             >
