@@ -6,7 +6,332 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ## 🌍 BÖLÜM 1: GENEL KÜLTÜR VE BİLGİ YARIŞMASI SORULARI (355 Soru)
 
-### [GK-1] Güneş sisteminde Güneş'e en yakın gezegen hangisidir?
+### [GK-1] Matematikte 'Sıfır' (0) rakamını ilk kez kullanan ve Cebir biliminin kurucusu kabul edilen ünlü Müslüman bilim insanı kimdir?
+* **Kategori:** Genel Kültür - Bilim Tarihi
+* **Şıklar:**
+  - A) Harezmi
+  - B) İbn-i Sina
+  - C) Biruni
+  - D) Ali Kuşçu
+* **Doğru Cevap:** Harezmi
+* **Hikmet Notu / Açıklama:** *Harezmi, yazdığı eserlerle sıfır rakamını tüm dünyaya tanıtmış ve Cebir biliminin temellerini atmıştır.*
+* **Soru ID:** `gk_1`
+
+---
+
+### [GK-2] Avrupa'da 'Avicenna' olarak tanınan ve tıp alanındaki kitabı yüzyıllarca üniversitelerde okutulan büyük hekim kimdir?
+* **Kategori:** Genel Kültür - Bilim Tarihi
+* **Şıklar:**
+  - A) İbn-i Rüşd
+  - B) İbn-i Sina
+  - C) Farabi
+  - D) Gazali
+* **Doğru Cevap:** İbn-i Sina
+* **Hikmet Notu / Açıklama:** *İbn-i Sina, 'El-Kanun fi't-Tıb' eseriyle tıp tarihine yön vermiş dahi bir hekim ve filozoftur.*
+* **Soru ID:** `gk_2`
+
+---
+
+### [GK-3] Diyarbakır Artuklu Sarayı'nda yaşamış, robotik ve sibernetik biliminin kurucusu kabul edilen dahi mucit kimdir?
+* **Kategori:** Genel Kültür - Mucitler
+* **Şıklar:**
+  - A) El-Cezeri
+  - B) Piri Reis
+  - C) Mimar Sinan
+  - D) Uluğ Bey
+* **Doğru Cevap:** El-Cezeri
+* **Hikmet Notu / Açıklama:** *El-Cezeri, su gücüyle çalışan saatler, otomatik kapılar ve robotlar geliştirerek robotik bilimine öncülük etmiştir.*
+* **Soru ID:** `gk_3`
+
+---
+
+### [GK-4] Dünyamızın ısı ve ışık kaynağı olan, Dünya'ya en yakın yıldız hangisidir?
+* **Kategori:** Genel Kültür - Gökbilim
+* **Şıklar:**
+  - A) Kutup Yıldızı
+  - B) Güneş
+  - C) Sirius
+  - D) Mars
+* **Doğru Cevap:** Güneş
+* **Hikmet Notu / Açıklama:** *Güneş de bir yıldızdır ve dünyamızdaki yaşamın devamı için gereken ısı ve ışığı sağlar.*
+* **Soru ID:** `gk_4`
+
+---
+
+### [GK-5] Mavi Gezegen olarak bilinen ve üzerinde yaşam barındırdığı bilinen tek gezegen hangisidir?
+* **Kategori:** Genel Kültür - Coğrafya
+* **Şıklar:**
+  - A) Jüpiter
+  - B) Venüs
+  - C) Dünya
+  - D) Mars
+* **Doğru Cevap:** Dünya
+* **Hikmet Notu / Açıklama:** *Dünya, atmosferi ve sıvı suyu sayesinde hayatın devam edebildiği özel tasarlanmış yuvamızdır.*
+* **Soru ID:** `gk_5`
+
+---
+
+### [GK-6] Mimar Sinan'ın İstanbul'da yaptığı ve 'Kalfalık Eserim' olarak nitelendirdiği muhteşem cami hangisidir?
+* **Kategori:** Genel Kültür - Sanat Tarihi
+* **Şıklar:**
+  - A) Selimiye Camii
+  - B) Süleymaniye Camii
+  - C) Şehzade Camii
+  - D) Fatih Camii
+* **Doğru Cevap:** Süleymaniye Camii
+* **Hikmet Notu / Açıklama:** *Süleymaniye Camii, estetiği, akustiği ve mimari dayanıklılığı ile Mimar Sinan'ın en nadide kalfalık şaheseridir.*
+* **Soru ID:** `gk_6`
+
+---
+
+### [GK-7] Mimar Sinan'ın 'Ustalık Eserim' dediği ve Edirne'de bulunan ünlü cami hangisidir?
+* **Kategori:** Genel Kültür - Sanat Tarihi
+* **Şıklar:**
+  - A) Selimiye Camii
+  - B) Süleymaniye Camii
+  - C) Ortaköy Camii
+  - D) Sultanahmet Camii
+* **Doğru Cevap:** Selimiye Camii
+* **Hikmet Notu / Açıklama:** *Edirne'deki Selimiye Camii, UNESCO Dünya Mirası listesinde yer alan mimari bir zirvedir.*
+* **Soru ID:** `gk_7`
+
+---
+
+### [GK-8] Osmanlı döneminde kendi yaptığı kanatlarla İstanbul Boğazı'nda Galata Kulesi'nden Üsküdar'a uçan ünlü Türk mucit kimdir?
+* **Kategori:** Genel Kültür - Mucitler
+* **Şıklar:**
+  - A) Lagari Hasan Çelebi
+  - B) Hezarfen Ahmed Çelebi
+  - C) Katip Çelebi
+  - D) Evliya Çelebi
+* **Doğru Cevap:** Hezarfen Ahmed Çelebi
+* **Hikmet Notu / Açıklama:** *Hezarfen Ahmed Çelebi, kuşların kanat yapısını inceleyerek uçuş denemeleri yapmış tarihi bir havacıdır.*
+* **Soru ID:** `gk_8`
+
+---
+
+### [GK-9] İstiklal Marşı'mızın şairi olan, vatan ve ahlak değerlerini şiirlerinde en güzel şekilde işleyen yazar kimdir?
+* **Kategori:** Genel Kültür - Edebiyat
+* **Şıklar:**
+  - A) Necip Fazıl Kısakürek
+  - B) Mehmet Akif Ersoy
+  - C) Yahya Kemal Beyatlı
+  - D) Cahit Sıtkı Tarancı
+* **Doğru Cevap:** Mehmet Akif Ersoy
+* **Hikmet Notu / Açıklama:** *Mehmet Akif Ersoy, bağımsızlık mücadelemizi destanlaştıran İstiklal Marşı'nı yazıp milletimize armağan etmiştir.*
+* **Soru ID:** `gk_9`
+
+---
+
+### [GK-10] Fatih Sultan Mehmet'in 1453 yılında fethederek Orta Çağ'ı kapatıp Yeni Çağ'ı açtığı tarihi şehir hangisidir?
+* **Kategori:** Genel Kültür - Tarih
+* **Şıklar:**
+  - A) Roma
+  - B) Kudüs
+  - C) İstanbul
+  - D) Bağdat
+* **Doğru Cevap:** İstanbul
+* **Hikmet Notu / Açıklama:** *İstanbul'un fethi, hem dünya tarihinin akışını değiştirmiş hem de Peygamberimizin kutlu müjdesine nail olunmasını sağlamıştır.*
+* **Soru ID:** `gk_10`
+
+---
+
+### [GK-11] Türkiye Cumhuriyeti'nin başkenti hangi şehrimizdir?
+* **Kategori:** Genel Kültür - Coğrafya
+* **Şıklar:**
+  - A) İstanbul
+  - B) Ankara
+  - C) İzmir
+  - D) Bursa
+* **Doğru Cevap:** Ankara
+* **Hikmet Notu / Açıklama:** *Ankara, Türkiye Cumhuriyeti'nin yönetim merkezi ve başkentidir.*
+* **Soru ID:** `gk_11`
+
+---
+
+### [GK-12] Dünyanın en yüksek dağı olarak kabul edilen ve Himalayalar'da bulunan dağ hangisidir?
+* **Kategori:** Genel Kültür - Coğrafya
+* **Şıklar:**
+  - A) Ağrı Dağı
+  - B) Everest Dağı
+  - C) Mont Blanc
+  - D) Fujiyama Dağı
+* **Doğru Cevap:** Everest Dağı
+* **Hikmet Notu / Açıklama:** *Everest Dağı, deniz seviyesinden 8.848 metre yüksekliğiyle dünyanın en yüksek zirvesidir.*
+* **Soru ID:** `gk_12`
+
+---
+
+### [GK-13] Sıvı haldeki suyun donarak katı buz haline geçtiği sıcaklık derecesi kaçtır?
+* **Kategori:** Genel Kültür - Fen Bilgisi
+* **Şıklar:**
+  - A) 0 °C
+  - B) 10 °C
+  - C) -5 °C
+  - D) 100 °C
+* **Doğru Cevap:** 0 °C
+* **Hikmet Notu / Açıklama:** *Saf su, deniz seviyesinde 0 santigrat derecede donmaya başlar.*
+* **Soru ID:** `gk_13`
+
+---
+
+### [GK-14] Yerçekimi kanununu ağaçtan düşen bir elmayı gözlemleyerek formülleştiren ünlü fizikçi kimdir?
+* **Kategori:** Genel Kültür - Fizik
+* **Şıklar:**
+  - A) Albert Einstein
+  - B) Galileo Galilei
+  - C) Isaac Newton
+  - D) Nikola Tesla
+* **Doğru Cevap:** Isaac Newton
+* **Hikmet Notu / Açıklama:** *Newton, kütleçekim yasasını keşfederek modern fiziğin kurucularından biri olmuştur.*
+* **Soru ID:** `gk_14`
+
+---
+
+### [GK-15] Vücudumuzda kirli kanı temizlemek üzere akciğere gönderen ve temiz kanı vücuda pompalayan hayati organ hangisidir?
+* **Kategori:** Genel Kültür - Biyoloji
+* **Şıklar:**
+  - A) Karaciğer
+  - B) Mide
+  - C) Beyin
+  - D) Kalp
+* **Doğru Cevap:** Kalp
+* **Hikmet Notu / Açıklama:** *Kalp, bir pompa gibi çalışarak vücudumuzun her noktasına oksijen taşıyan kanı ulaştırır.*
+* **Soru ID:** `gk_15`
+
+---
+
+### [GK-16] Tarihte ilk dünya haritalarından birini çizen ve Kitab-ı Bahriye isimli denizcilik kitabını yazan ünlü Osmanlı denizcisi kimdir?
+* **Kategori:** Genel Kültür - Coğrafya
+* **Şıklar:**
+  - A) Barbaros Hayrettin Paşa
+  - B) Piri Reis
+  - C) Seydi Ali Reis
+  - D) Turgut Reis
+* **Doğru Cevap:** Piri Reis
+* **Hikmet Notu / Açıklama:** *Piri Reis, ceylan derisi üzerine çizdiği harikulade dünya haritasıyla coğrafya tarihine damga vurmuştur.*
+* **Soru ID:** `gk_16`
+
+---
+
+### [GK-17] Gökyüzündeki su damlacıklarının güneş ışınlarıyla kırılmasıyla oluşan rengarenk gökyüzü kuşağına ne ad verilir?
+* **Kategori:** Genel Kültür - Doğa Bilimleri
+* **Şıklar:**
+  - A) Kutup Işıkları
+  - B) Samanyolu
+  - C) Gökkuşağı
+  - D) Meteor Yağmuru
+* **Doğru Cevap:** Gökkuşağı
+* **Hikmet Notu / Açıklama:** *Gökkuşağı, ışığın su damlaları içinden geçerken yansıması ve kırılması sonucu yedi renge ayrılmasıyla oluşur.*
+* **Soru ID:** `gk_17`
+
+---
+
+### [GK-18] Türkiye'nin sınırları içerisindeki en uzun nehri hangisidir?
+* **Kategori:** Genel Kültür - Coğrafya
+* **Şıklar:**
+  - A) Fırat Nehri
+  - B) Dicle Nehri
+  - C) Kızılırmak
+  - D) Sakarya Nehri
+* **Doğru Cevap:** Kızılırmak
+* **Hikmet Notu / Açıklama:** *Kızılırmak, 1355 km uzunluğuyla Türkiye topraklarında doğup yine Türkiye topraklarında denize dökülen en uzun nehrimizdir.*
+* **Soru ID:** `gk_18`
+
+---
+
+### [GK-19] Karagöz ile Hacivat hangi geleneksel Türk tiyatrosu türüne aittir?
+* **Kategori:** Genel Kültür - Kültür Sanat
+* **Şıklar:**
+  - A) Gölge Oyunu
+  - B) Meddah
+  - C) Orta Oyunu
+  - D) Kukla
+* **Doğru Cevap:** Gölge Oyunu
+* **Hikmet Notu / Açıklama:** *Gölge oyunu, arkadan aydınlatılmış bir perde üzerine deri tasvirlerin yansıtılmasına dayanan geleneksel bir sanattır.*
+* **Soru ID:** `gk_19`
+
+---
+
+### [GK-20] Osmanlı Devleti'nin kurucusu kabul edilen padişah kimdir?
+* **Kategori:** Genel Kültür - Tarih
+* **Şıklar:**
+  - A) Orhan Gazi
+  - B) Osman Gazi
+  - C) I. Murad
+  - D) Fatih Sultan Mehmet
+* **Doğru Cevap:** Osman Gazi
+* **Hikmet Notu / Açıklama:** *Osman Gazi, 1299 yılında Söğüt ve Domaniç civarında Osmanlı Beyliği'ni kurmuştur.*
+* **Soru ID:** `gk_20`
+
+---
+
+### [GK-21] Canlıların kalıtsal özelliklerini (saç rengi, göz rengi vb.) taşıyan ve hücre çekirdeğinde bulunan yönetici molekülün adı nedir?
+* **Kategori:** Genel Kültür - Biyoloji
+* **Şıklar:**
+  - A) Protein
+  - B) DNA
+  - C) Vitamin
+  - D) Hücre Zarı
+* **Doğru Cevap:** DNA
+* **Hikmet Notu / Açıklama:** *DNA, hücrelerimizin nasıl çalışacağını belirleyen genetik bilgi kodlarını barındırır.*
+* **Soru ID:** `gk_21`
+
+---
+
+### [GK-22] Bitkilerin güneş ışığı, su ve karbondioksit kullanarak kendi besinlerini üretme sürecine ne ad verilir?
+* **Kategori:** Genel Kültür - Botanik
+* **Şıklar:**
+  - A) Solunum
+  - B) Fotosentez
+  - C) Terleme
+  - D) Mayalanma
+* **Doğru Cevap:** Fotosentez
+* **Hikmet Notu / Açıklama:** *Fotosentez sayesinde bitkiler besin üretirken aynı zamanda havaya yaşam kaynağımız olan oksijeni salarlar.*
+* **Soru ID:** `gk_22`
+
+---
+
+### [GK-23] Dünyanın en derin gölü kabul edilen ve Sibirya'da bulunan büyük tatlı su gölü hangisidir?
+* **Kategori:** Genel Kültür - Coğrafya
+* **Şıklar:**
+  - A) Hazar Gölü
+  - B) Van Gölü
+  - C) Baykal Gölü
+  - D) Lut Gölü
+* **Doğru Cevap:** Baykal Gölü
+* **Hikmet Notu / Açıklama:** *Baykal Gölü, hem dünyanın en derin gölüdür hem de dünyadaki tatlı su rezervinin yaklaşık %20'sini oluşturur.*
+* **Soru ID:** `gk_23`
+
+---
+
+### [GK-24] Osmanlı padişahlarının devleti yönettiği ve şu an müze olan İstanbul'daki en ünlü tarihi saray hangisidir?
+* **Kategori:** Genel Kültür - Tarih
+* **Şıklar:**
+  - A) Dolmabahçe Sarayı
+  - B) Topkapı Sarayı
+  - C) Beylerbeyi Sarayı
+  - D) Çırağan Sarayı
+* **Doğru Cevap:** Topkapı Sarayı
+* **Hikmet Notu / Açıklama:** *Topkapı Sarayı, yaklaşık 400 yıl boyunca Osmanlı İmparatorluğu'nun idari ve ikamet merkezi olmuştur.*
+* **Soru ID:** `gk_24`
+
+---
+
+### [GK-25] İletişimde dürüstlük, emanete sadakat ve yalandan kaçınmak gibi güzel davranışlar dinimizde hangi başlık altında toplanır?
+* **Kategori:** Genel Kültür - Ahlak
+* **Şıklar:**
+  - A) İbadet
+  - B) Ahlak
+  - C) Fıkıh
+  - D) Tevhid
+* **Doğru Cevap:** Ahlak
+* **Hikmet Notu / Açıklama:** *Güzel ahlak, dinimizin inanç ve ibadetlerden sonra gelen en önemli ve tamamlayıcı ayağıdır.*
+* **Soru ID:** `gk_25`
+
+---
+
+### [GK-26] Güneş sisteminde Güneş'e en yakın gezegen hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Merkür
@@ -19,7 +344,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-2] Güneş sistemindeki en sıcak gezegen hangisidir?
+### [GK-27] Güneş sistemindeki en sıcak gezegen hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Venüs
@@ -32,7 +357,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-3] Halkalarıyla ünlü, Güneş sisteminin ikinci büyük gezegeni hangisidir?
+### [GK-28] Halkalarıyla ünlü, Güneş sisteminin ikinci büyük gezegeni hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Satürn
@@ -45,7 +370,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-4] Kızıl Gezegen olarak da bilinen, Dünya'ya komşu gezegen hangisidir?
+### [GK-29] Kızıl Gezegen olarak da bilinen, Dünya'ya komşu gezegen hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Mars
@@ -58,7 +383,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-5] Gezegenimizin tek doğal uydusu hangisidir?
+### [GK-30] Gezegenimizin tek doğal uydusu hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Ay
@@ -71,7 +396,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-6] Güneş sistemindeki en büyük gezegen hangisidir?
+### [GK-31] Güneş sistemindeki en büyük gezegen hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Jüpiter
@@ -84,7 +409,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-7] Gökyüzünde her zaman kuzey yönünü gösteren ve yön bulmaya yarayan yıldız hangisidir?
+### [GK-32] Gökyüzünde her zaman kuzey yönünü gösteren ve yön bulmaya yarayan yıldız hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Kutup Yıldızı
@@ -97,7 +422,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-8] Dünya'nın da içinde bulunduğu gökadanın (galaksinin) adı nedir?
+### [GK-33] Dünya'nın da içinde bulunduğu gökadanın (galaksinin) adı nedir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Samanyolu
@@ -110,7 +435,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-9] Güneş bir yıldız mıdır yoksa gezegen midir?
+### [GK-34] Güneş bir yıldız mıdır yoksa gezegen midir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Yıldız
@@ -123,7 +448,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-10] Dünya'nın kendi ekseni etrafında bir tam dönüşü ne kadar sürer?
+### [GK-35] Dünya'nın kendi ekseni etrafında bir tam dönüşü ne kadar sürer?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) 24 Saat
@@ -136,7 +461,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-11] Dünya'nın Güneş etrafında bir tam tur dönmesi ne kadar sürer?
+### [GK-36] Dünya'nın Güneş etrafında bir tam tur dönmesi ne kadar sürer?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) 365 Gün 6 Saat
@@ -149,7 +474,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-12] Halk arasında 'Çoban Yıldızı' veya 'Sabah Yıldızı' olarak bilinen gezegen hangisidir?
+### [GK-37] Halk arasında 'Çoban Yıldızı' veya 'Sabah Yıldızı' olarak bilinen gezegen hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Venüs
@@ -162,7 +487,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-13] Güneş sistemindeki en soğuk ve Güneş'e en uzak gezegen hangisidir?
+### [GK-38] Güneş sistemindeki en soğuk ve Güneş'e en uzak gezegen hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Neptün
@@ -175,7 +500,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-14] Gök cisimlerini yakından incelemek için kullanılan optik alet hangisidir?
+### [GK-39] Gök cisimlerini yakından incelemek için kullanılan optik alet hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Teleskop
@@ -188,7 +513,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-15] Uzayda yerçekiminin çok güçlü olduğu ve ışığın bile kaçamadığı bölgelere ne ad verilir?
+### [GK-40] Uzayda yerçekiminin çok güçlü olduğu ve ışığın bile kaçamadığı bölgelere ne ad verilir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Kara Delik
@@ -201,7 +526,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-16] Uzaya gönderilen ve Dünya etrafında dolanarak iletişim veya gözlem sağlayan insan yapısı araçlara ne denir?
+### [GK-41] Uzaya gönderilen ve Dünya etrafında dolanarak iletişim veya gözlem sağlayan insan yapısı araçlara ne denir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Yapay Uydu
@@ -214,7 +539,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-17] Güneş tutulması hangi gök cisminin Güneş ile Dünya arasına girmesiyle gerçekleşir?
+### [GK-42] Güneş tutulması hangi gök cisminin Güneş ile Dünya arasına girmesiyle gerçekleşir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Ay
@@ -227,7 +552,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-18] Kuyruklu yıldızlar aslında neden oluşurlar?
+### [GK-43] Kuyruklu yıldızlar aslında neden oluşurlar?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Buz, Gaz ve Toz karışımı
@@ -240,7 +565,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-19] İçinde astronotların aylarca yaşayıp bilimsel araştırmalar yaptığı dev uzay laboratuvarına ne denir?
+### [GK-44] İçinde astronotların aylarca yaşayıp bilimsel araştırmalar yaptığı dev uzay laboratuvarına ne denir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Uluslararası Uzay İstasyonu
@@ -253,7 +578,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-20] Dünya'nın atmosferine girerek yanan ve gökyüzünde ışık çizgisi oluşturan taş parçalarına ne denir?
+### [GK-45] Dünya'nın atmosferine girerek yanan ve gökyüzünde ışık çizgisi oluşturan taş parçalarına ne denir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Meteor (Gök Taşı)
@@ -266,7 +591,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-21] Güneş sistemindeki gezegenlerin yörüngeleri hangi geometrik şekildedir?
+### [GK-46] Güneş sistemindeki gezegenlerin yörüngeleri hangi geometrik şekildedir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Elips
@@ -279,7 +604,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-22] Ay'a ayak basan ilk insan kimdir?
+### [GK-47] Ay'a ayak basan ilk insan kimdir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Neil Armstrong
@@ -292,7 +617,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-23] Uzaya çıkan ilk insan kimdir?
+### [GK-48] Uzaya çıkan ilk insan kimdir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Yuri Gagarin
@@ -305,7 +630,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-24] Güneş sisteminde kaç tane gezegen vardır?
+### [GK-49] Güneş sisteminde kaç tane gezegen vardır?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) 8
@@ -318,7 +643,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-25] 2006 yılında gezegen sınıfından çıkarılıp 'Cüce Gezegen' ilan edilen gök cismi hangisidir?
+### [GK-50] 2006 yılında gezegen sınıfından çıkarılıp 'Cüce Gezegen' ilan edilen gök cismi hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Plüton
@@ -331,7 +656,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-26] Güneş sisteminin en yüksek dağı olan 'Olympus Mons' volkanı hangi gezegendedir?
+### [GK-51] Güneş sisteminin en yüksek dağı olan 'Olympus Mons' volkanı hangi gezegendedir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Mars
@@ -344,7 +669,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-27] Gezegenler kendi ışıklarını üretebilirler mi?
+### [GK-52] Gezegenler kendi ışıklarını üretebilirler mi?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Hayır, sadece yıldızların ışığını yansıtırlar
@@ -357,7 +682,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-28] Gelgit (medcezir) olayına en çok hangi gök cisminin kütleçekim kuvveti neden olur?
+### [GK-53] Gelgit (medcezir) olayına en çok hangi gök cisminin kütleçekim kuvveti neden olur?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Ay
@@ -370,7 +695,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-29] Evrendeki yeni yıldızların doğduğu devasa toz ve gaz bulutlarına ne ad verilir?
+### [GK-54] Evrendeki yeni yıldızların doğduğu devasa toz ve gaz bulutlarına ne ad verilir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Bulutsu (Nebula)
@@ -383,7 +708,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-30] Bizim galaksimize en yakın büyük sarmal galaksinin adı nedir?
+### [GK-55] Bizim galaksimize en yakın büyük sarmal galaksinin adı nedir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Andromeda
@@ -396,7 +721,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-31] Güneş sistemindeki en büyük uydu hangisidir ve hangi gezegene aittir?
+### [GK-56] Güneş sistemindeki en büyük uydu hangisidir ve hangi gezegene aittir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Ganymede (Jüpiter)
@@ -409,7 +734,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-32] Kalın buz tabakası altında dev bir okyanus barındırdığı düşünülen Jüpiter uydusu hangisidir?
+### [GK-57] Kalın buz tabakası altında dev bir okyanus barındırdığı düşünülen Jüpiter uydusu hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Europa
@@ -422,7 +747,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-33] Yan yatan bir varil gibi dönen ve yörüngesinde neredeyse 90 derece eğik duran gezegen hangisidir?
+### [GK-58] Yan yatan bir varil gibi dönen ve yörüngesinde neredeyse 90 derece eğik duran gezegen hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Uranüs
@@ -435,7 +760,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-34] Atmosferi neredeyse tamamen zehirli karbondioksitten oluşan ve asit yağmurları yağan gezegen hangisidir?
+### [GK-59] Atmosferi neredeyse tamamen zehirli karbondioksitten oluşan ve asit yağmurları yağan gezegen hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Venüs
@@ -448,7 +773,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-35] Işığın uzayda bir yılda aldığı mesafeye ne ad verilir?
+### [GK-60] Işığın uzayda bir yılda aldığı mesafeye ne ad verilir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Işık Yılı
@@ -461,7 +786,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-36] Dünya ile Güneş arasındaki ortalama mesafe yaklaşık kaç milyon kilometredir?
+### [GK-61] Dünya ile Güneş arasındaki ortalama mesafe yaklaşık kaç milyon kilometredir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) 150 Milyon km
@@ -474,7 +799,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-37] Kendi etrafında en hızlı dönen ve bir günü sadece 10 saat süren gezegen hangisidir?
+### [GK-62] Kendi etrafında en hızlı dönen ve bir günü sadece 10 saat süren gezegen hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Jüpiter
@@ -487,7 +812,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-38] Üzerinde yüzlerce yıldır devam eden dev bir fırtına (Büyük Kırmızı Leke) olan gezegen hangisidir?
+### [GK-63] Üzerinde yüzlerce yıldır devam eden dev bir fırtına (Büyük Kırmızı Leke) olan gezegen hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Jüpiter
@@ -500,7 +825,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-39] Yüzeyi kraterlerle dolu, görünüşü Ay'a çok benzeyen gezegen hangisidir?
+### [GK-64] Yüzeyi kraterlerle dolu, görünüşü Ay'a çok benzeyen gezegen hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Merkür
@@ -513,7 +838,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-40] Güneş sisteminde Güneş'e en uzak dördüncü gezegen (Dünya'nın hemen dışındaki komşusu) hangisidir?
+### [GK-65] Güneş sisteminde Güneş'e en uzak dördüncü gezegen (Dünya'nın hemen dışındaki komşusu) hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Mars
@@ -526,7 +851,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-41] Atmosferi ve uydusu olmayan, Güneş'e en yakın gezegen hangisidir?
+### [GK-66] Atmosferi ve uydusu olmayan, Güneş'e en yakın gezegen hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Merkür
@@ -539,7 +864,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-42] Güneş sistemindeki gezegenler genel olarak hangi iki gruba ayrılır?
+### [GK-67] Güneş sistemindeki gezegenler genel olarak hangi iki gruba ayrılır?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Karasal ve Gazsal
@@ -552,7 +877,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-43] Mars ile Jüpiter arasında dolanan devasa taş ve kaya parçalarının bulunduğu kuşağa ne denir?
+### [GK-68] Mars ile Jüpiter arasında dolanan devasa taş ve kaya parçalarının bulunduğu kuşağa ne denir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Asteroit Kuşağı
@@ -565,7 +890,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-44] Kendi enerjisini üretemeyen, bir yıldızın etrafında dolanan gök cisimlerine ne ad verilir?
+### [GK-69] Kendi enerjisini üretemeyen, bir yıldızın etrafında dolanan gök cisimlerine ne ad verilir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Gezegen
@@ -578,7 +903,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-45] Gökcisimlerinin birbirini çekmesini sağlayan kozmik kuvvete ne ad verilir?
+### [GK-70] Gökcisimlerinin birbirini çekmesini sağlayan kozmik kuvvete ne ad verilir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Kütleçekim Kuvveti
@@ -591,7 +916,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-46] Güneş'ten gelen zararlı ultraviyole ışınları süzerek Dünya'yı koruyan katman hangisidir?
+### [GK-71] Güneş'ten gelen zararlı ultraviyole ışınları süzerek Dünya'yı koruyan katman hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Ozon Tabakası
@@ -604,7 +929,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-47] Gökbiliminde kullanılan ve ışık hızının saniyede aldığı mesafeyi ifade eden değer yaklaşık kaçtır?
+### [GK-72] Gökbiliminde kullanılan ve ışık hızının saniyede aldığı mesafeyi ifade eden değer yaklaşık kaçtır?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) 300.000 Kilometre
@@ -617,7 +942,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-48] Ay'ın Dünya'ya bakan yüzünün tamamen aydınlık göründüğü evresine ne ad verilir?
+### [GK-73] Ay'ın Dünya'ya bakan yüzünün tamamen aydınlık göründüğü evresine ne ad verilir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Dolunay
@@ -630,7 +955,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-49] Ay'ın gökyüzünde ince bir yay şeklinde göründüğü ve bayrağımızda da yer alan evresi hangisidir?
+### [GK-74] Ay'ın gökyüzünde ince bir yay şeklinde göründüğü ve bayrağımızda da yer alan evresi hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Hilal
@@ -643,7 +968,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-50] Güneş sistemindeki en küçük gezegen hangisidir?
+### [GK-75] Güneş sistemindeki en küçük gezegen hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Merkür
@@ -656,7 +981,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-51] Güneş sistemindeki gezegenlerden hangisinin bilinen en çok uydusu vardır?
+### [GK-76] Güneş sistemindeki gezegenlerden hangisinin bilinen en çok uydusu vardır?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Satürn
@@ -669,7 +994,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-52] Kutup bölgelerinde geceleri gökyüzünde beliren yeşil ve kırmızı renkli muhteşem ışımalara ne denir?
+### [GK-77] Kutup bölgelerinde geceleri gökyüzünde beliren yeşil ve kırmızı renkli muhteşem ışımalara ne denir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Kutup Işıkları (Aurora)
@@ -682,7 +1007,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-53] Uzay araştırmaları yapan meşhur Amerikan uzay dairesinin kısa adı nedir?
+### [GK-78] Uzay araştırmaları yapan meşhur Amerikan uzay dairesinin kısa adı nedir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) NASA
@@ -695,7 +1020,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-54] Türkiye'nin uzay çalışmalarını yürütmek için kurulan resmi ajansın adı nedir?
+### [GK-79] Türkiye'nin uzay çalışmalarını yürütmek için kurulan resmi ajansın adı nedir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) TUA
@@ -708,7 +1033,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-55] Bir gök cisminin etrafında dolanan daha küçük gök cisimlerine genel olarak ne ad verilir?
+### [GK-80] Bir gök cisminin etrafında dolanan daha küçük gök cisimlerine genel olarak ne ad verilir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Uydu
@@ -721,7 +1046,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-56] Dünya'nın şeklini en iyi tanımlayan, kutuplardan basık, ekvatordan şişkin özel geometrik şekle ne denir?
+### [GK-81] Dünya'nın şeklini en iyi tanımlayan, kutuplardan basık, ekvatordan şişkin özel geometrik şekle ne denir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Geoit
@@ -734,7 +1059,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-57] Uzayda yaşam olup olmadığını araştıran ve uzay koşullarını inceleyen bilim dalına ne denir?
+### [GK-82] Uzayda yaşam olup olmadığını araştıran ve uzay koşullarını inceleyen bilim dalına ne denir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Astroloji değil Astronomi
@@ -747,7 +1072,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-58] Yörüngesinde dönen dev halkaları neredeyse tamamen su buzu ve kar karışımından oluşan gezegen hangisidir?
+### [GK-83] Yörüngesinde dönen dev halkaları neredeyse tamamen su buzu ve kar karışımından oluşan gezegen hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Satürn
@@ -760,7 +1085,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-59] Uzayda astronotların nefes almasını, sıcaklık ve basınçtan korunmasını sağlayan özel kıyafete ne denir?
+### [GK-84] Uzayda astronotların nefes almasını, sıcaklık ve basınçtan korunmasını sağlayan özel kıyafete ne denir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Uzay Elbisesi
@@ -773,7 +1098,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-60] Güneş sistemindeki en parlak gezegen hangisidir?
+### [GK-85] Güneş sistemindeki en parlak gezegen hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Venüs
@@ -786,7 +1111,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-61] Uzay boşluğunda ses yayılabilir mi?
+### [GK-86] Uzay boşluğunda ses yayılabilir mi?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Hayır, çünkü hava ve ortam yoktur
@@ -799,7 +1124,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-62] Güneş sisteminde yaşam olduğu kesin olarak bilinen tek gezegen hangisidir?
+### [GK-87] Güneş sisteminde yaşam olduğu kesin olarak bilinen tek gezegen hangisidir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Dünya
@@ -812,7 +1137,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-63] Dünya'nın zararlı güneş radyasyonlarından korunmasını sağlayan doğal kalkanı nedir?
+### [GK-88] Dünya'nın zararlı güneş radyasyonlarından korunmasını sağlayan doğal kalkanı nedir?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) Manyetik Alan
@@ -825,7 +1150,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-64] Güneş sisteminin toplam kütlesinin yaklaşık yüzde kaçını tek başına Güneş oluşturur?
+### [GK-89] Güneş sisteminin toplam kütlesinin yaklaşık yüzde kaçını tek başına Güneş oluşturur?
 * **Kategori:** Genel Kültür - Astronomi
 * **Şıklar:**
   - A) %99.8
@@ -838,7 +1163,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-65] Tarihte ilk robot tasarımlarını yapan, sibernetiğin kurucusu ünlü Müslüman mucit kimdir?
+### [GK-90] Tarihte ilk robot tasarımlarını yapan, sibernetiğin kurucusu ünlü Müslüman mucit kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) El-Cezeri
@@ -851,7 +1176,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-66] Cebir biliminin kurucusu kabul edilen ve matematikte 'Sıfır' (0) rakamını ilk kez sistemli kullanan bilim insanı kimdir?
+### [GK-91] Cebir biliminin kurucusu kabul edilen ve matematikte 'Sıfır' (0) rakamını ilk kez sistemli kullanan bilim insanı kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Harezmi
@@ -864,7 +1189,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-67] Tarihte ilk kez uçmayı başaran, kendi yaptığı kanatlarla Galata Kulesi'nden Üsküdar'a uçan Osmanlı bilgini kimdir?
+### [GK-92] Tarihte ilk kez uçmayı başaran, kendi yaptığı kanatlarla Galata Kulesi'nden Üsküdar'a uçan Osmanlı bilgini kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Hezarfen Ahmed Çelebi
@@ -877,7 +1202,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-68] Barutu roket teknolojisine dönüştürüp tarihteki ilk insanlı dikey uçuşu gerçekleştiren mucit kimdir?
+### [GK-93] Barutu roket teknolojisine dönüştürüp tarihteki ilk insanlı dikey uçuşu gerçekleştiren mucit kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Lagari Hasan Çelebi
@@ -890,7 +1215,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-69] Tıbbın babası kabul edilen, 'El-Kanun fi't-Tıbb' (Tıbbın Kanunu) eseri yüzyıllarca Avrupa'da okutulan hekim kimdir?
+### [GK-94] Tıbbın babası kabul edilen, 'El-Kanun fi't-Tıbb' (Tıbbın Kanunu) eseri yüzyıllarca Avrupa'da okutulan hekim kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) İbni Sina
@@ -903,7 +1228,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-70] Fatih Sultan Mehmet'in İstanbul'a davet ettiği, Ay'ın haritasını çıkaran ünlü astronom ve matematikçi kimdir?
+### [GK-95] Fatih Sultan Mehmet'in İstanbul'a davet ettiği, Ay'ın haritasını çıkaran ünlü astronom ve matematikçi kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Ali Kuşçu
@@ -916,7 +1241,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-71] Yerçekimini formüle eden, kafasına düşen elma hikayesiyle tanınan ünlü fizikçi kimdir?
+### [GK-96] Yerçekimini formüle eden, kafasına düşen elma hikayesiyle tanınan ünlü fizikçi kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Isaac Newton
@@ -929,7 +1254,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-72] Ampulü icat ederek geceleri caddelerin ve evlerin aydınlanmasını sağlayan Amerikalı mucit kimdir?
+### [GK-97] Ampulü icat ederek geceleri caddelerin ve evlerin aydınlanmasını sağlayan Amerikalı mucit kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Thomas Edison
@@ -942,7 +1267,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-73] Telefonu icat ederek insanlar arası sesli iletişimi başlatan mucit kimdir?
+### [GK-98] Telefonu icat ederek insanlar arası sesli iletişimi başlatan mucit kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Alexander Graham Bell
@@ -955,7 +1280,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-74] İlk motorlu uçağı yaparak insanlı uçuş çağını başlatan kardeşler kimlerdir?
+### [GK-99] İlk motorlu uçağı yaparak insanlı uçuş çağını başlatan kardeşler kimlerdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Wright Kardeşler
@@ -968,7 +1293,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-75] Gözle görülemeyecek kadar küçük mikroorganizmaları incelemek için kullanılan alet hangisidir?
+### [GK-100] Gözle görülemeyecek kadar küçük mikroorganizmaları incelemek için kullanılan alet hangisidir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Mikroskop
@@ -981,7 +1306,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-76] Kuduz aşısını bularak tıp tarihinde milyonlarca insanın hayatını kurtaran Fransız bilim insanı kimdir?
+### [GK-101] Kuduz aşısını bularak tıp tarihinde milyonlarca insanın hayatını kurtaran Fransız bilim insanı kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Louis Pasteur
@@ -994,7 +1319,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-77] İlk antibiyotik olan Penisilin'i şans eseri küf mantarlarından keşfeden bilim insanı kimdir?
+### [GK-102] İlk antibiyotik olan Penisilin'i şans eseri küf mantarlarından keşfeden bilim insanı kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Alexander Fleming
@@ -1007,7 +1332,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-78] Radyoaktivite üzerine yaptığı çalışmalarla iki kez Nobel Ödülü alan ünlü kadın fizikçi ve kimyager kimdir?
+### [GK-103] Radyoaktivite üzerine yaptığı çalışmalarla iki kez Nobel Ödülü alan ünlü kadın fizikçi ve kimyager kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Marie Curie
@@ -1020,7 +1345,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-79] Alternatif akım (AC) elektrik sistemini geliştiren, kablosuz enerji iletimi üzerinde çalışan dahi mucit kimdir?
+### [GK-104] Alternatif akım (AC) elektrik sistemini geliştiren, kablosuz enerji iletimi üzerinde çalışan dahi mucit kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Nikola Tesla
@@ -1033,7 +1358,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-80] İzafiyet Teorisi'ni (Görelilik) ortaya koyan, E=mc² formülüyle ünlü 20. yüzyılın en büyük fizikçisi kimdir?
+### [GK-105] İzafiyet Teorisi'ni (Görelilik) ortaya koyan, E=mc² formülüyle ünlü 20. yüzyılın en büyük fizikçisi kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Albert Einstein
@@ -1046,7 +1371,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-81] Kimya alanında yaptığı hücre araştırmalarıyla 2015 yılında Nobel Ödülü kazanan Türk bilim insanı kimdir?
+### [GK-106] Kimya alanında yaptığı hücre araştırmalarıyla 2015 yılında Nobel Ödülü kazanan Türk bilim insanı kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Aziz Sancar
@@ -1059,7 +1384,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-82] Matematikte kendi adıyla anılan teorem ve formüller geliştiren, 10 Türk Lirası banknotunun arkasında resmi olan bilim insanı kimdir?
+### [GK-107] Matematikte kendi adıyla anılan teorem ve formüller geliştiren, 10 Türk Lirası banknotunun arkasında resmi olan bilim insanı kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Cahit Arf
@@ -1072,7 +1397,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-83] Dünyanın çevresini neredeyse sıfır hatayla ölçen, jeodezi biliminin kurucusu Müslüman bilgin kimdir?
+### [GK-108] Dünyanın çevresini neredeyse sıfır hatayla ölçen, jeodezi biliminin kurucusu Müslüman bilgin kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Biruni
@@ -1085,7 +1410,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-84] Matbaayı (hareketli metal harflerle) icat ederek kitapların hızlıca basılmasını ve bilginin yayılmasını sağlayan mucit kimdir?
+### [GK-109] Matbaayı (hareketli metal harflerle) icat ederek kitapların hızlıca basılmasını ve bilginin yayılmasını sağlayan mucit kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Johannes Gutenberg
@@ -1098,7 +1423,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-85] Suyun kaldırma kuvvetini banyoda yıkanırken keşfedip 'Evreka! (Buldum!)' diye bağıran antik çağ bilgini kimdir?
+### [GK-110] Suyun kaldırma kuvvetini banyoda yıkanırken keşfedip 'Evreka! (Buldum!)' diye bağıran antik çağ bilgini kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Arşimet
@@ -1111,7 +1436,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-86] İlk buharlı makineyi geliştirerek Sanayi Devrimi'nin başlamasını sağlayan İskoç mühendis kimdir?
+### [GK-111] İlk buharlı makineyi geliştirerek Sanayi Devrimi'nin başlamasını sağlayan İskoç mühendis kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) James Watt
@@ -1124,7 +1449,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-87] Teleskopu gökyüzü gözlemlerinde kullanan ilk bilim insanı, Dünya'nın döndüğünü savunduğu için yargılanan bilgin kimdir?
+### [GK-112] Teleskopu gökyüzü gözlemlerinde kullanan ilk bilim insanı, Dünya'nın döndüğünü savunduğu için yargılanan bilgin kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Galileo Galilei
@@ -1137,7 +1462,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-88] Bitkilerin yeşil rengini veren ve güneş ışığını kullanarak fotosentez yapmalarını sağlayan pigment nedir?
+### [GK-113] Bitkilerin yeşil rengini veren ve güneş ışığını kullanarak fotosentez yapmalarını sağlayan pigment nedir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Klorofil
@@ -1150,7 +1475,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-89] Bilgisayar biliminin babası kabul edilen, II. Dünya Savaşı'nda Enigma şifresini çözen İngiliz matematikçi kimdir?
+### [GK-114] Bilgisayar biliminin babası kabul edilen, II. Dünya Savaşı'nda Enigma şifresini çözen İngiliz matematikçi kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Alan Turing
@@ -1163,7 +1488,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-90] Tarihteki ilk programlanabilir mekanik bilgisayarı (Fark Makinesi) tasarlayan mucit kimdir?
+### [GK-115] Tarihteki ilk programlanabilir mekanik bilgisayarı (Fark Makinesi) tasarlayan mucit kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Charles Babbage
@@ -1176,7 +1501,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-91] Dünyanın ilk bilgisayar programcısı kabul edilen, mekanik bilgisayarlar için ilk algoritmayı yazan kadın matematikçi kimdir?
+### [GK-116] Dünyanın ilk bilgisayar programcısı kabul edilen, mekanik bilgisayarlar için ilk algoritmayı yazan kadın matematikçi kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Ada Lovelace
@@ -1189,7 +1514,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-92] Suyu oluşturan iki temel kimyasal element hangileridir?
+### [GK-117] Suyu oluşturan iki temel kimyasal element hangileridir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Hidrojen ve Oksijen
@@ -1202,7 +1527,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-93] Havadaki nem oranını ve sıcaklığı ölçerek hava durumunu tahmin eden bilim dalına ne ad verilir?
+### [GK-118] Havadaki nem oranını ve sıcaklığı ölçerek hava durumunu tahmin eden bilim dalına ne ad verilir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Meteoroloji
@@ -1215,7 +1540,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-94] Kan dolaşımını, kalbin kanı vücuda nasıl pompaladığını ilk kez doğru şekilde açıklayan Müslüman hekim kimdir?
+### [GK-119] Kan dolaşımını, kalbin kanı vücuda nasıl pompaladığını ilk kez doğru şekilde açıklayan Müslüman hekim kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) İbni Nefis
@@ -1228,7 +1553,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-95] İlk modern ameliyat aletlerini tasarlayan ve cerrahinin babası kabul edilen Endülüslü Müslüman hekim kimdir?
+### [GK-120] İlk modern ameliyat aletlerini tasarlayan ve cerrahinin babası kabul edilen Endülüslü Müslüman hekim kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Zehravi
@@ -1241,7 +1566,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-96] Optik biliminin kurucusu, karanlık kutuyu (kamera obskura) keşfederek fotoğraf makinesinin temelini atan bilgin kimdir?
+### [GK-121] Optik biliminin kurucusu, karanlık kutuyu (kamera obskura) keşfederek fotoğraf makinesinin temelini atan bilgin kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) İbnül Heysem
@@ -1254,7 +1579,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-97] Pillerin atası sayılan, kimyasal enerjiyi elektrik enerjisine dönüştüren ilk pili icat eden İtalyan fizikçi kimdir?
+### [GK-122] Pillerin atası sayılan, kimyasal enerjiyi elektrik enerjisine dönüştüren ilk pili icat eden İtalyan fizikçi kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Alessandro Volta
@@ -1267,7 +1592,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-98] Elektromanyetik indüklemeyi keşfederek elektrik jeneratörünü ve dinamosunu icat eden bilim insanı kimdir?
+### [GK-123] Elektromanyetik indüklemeyi keşfederek elektrik jeneratörünü ve dinamosunu icat eden bilim insanı kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Michael Faraday
@@ -1280,7 +1605,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-99] Depremlerin büyüklüğünü ölçmek için kullanılan ve sismograf cihazıyla veri toplayan meşhur ölçeğin adı nedir?
+### [GK-124] Depremlerin büyüklüğünü ölçmek için kullanılan ve sismograf cihazıyla veri toplayan meşhur ölçeğin adı nedir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Richter Ölçeği
@@ -1293,7 +1618,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-100] Havadaki sıcaklık değişimlerini ölçmek için kullanılan cihazın adı nedir?
+### [GK-125] Havadaki sıcaklık değişimlerini ölçmek için kullanılan cihazın adı nedir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Termometre
@@ -1306,7 +1631,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-101] Hava basıncını ölçmek için kullanılan ve açık hava basıncını keşfeden Torricelli'nin geliştirdiği alet nedir?
+### [GK-126] Hava basıncını ölçmek için kullanılan ve açık hava basıncını keşfeden Torricelli'nin geliştirdiği alet nedir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Barometre
@@ -1319,7 +1644,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-102] Suyun donma noktasını 0 derece, kaynama noktasını 100 derece kabul eden sıcaklık ölçeği hangisidir?
+### [GK-127] Suyun donma noktasını 0 derece, kaynama noktasını 100 derece kabul eden sıcaklık ölçeği hangisidir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Celsius
@@ -1332,7 +1657,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-103] Bilim dünyasında mutlak sıfır noktası (-273.15 °C) ile başlayan sıcaklık birimi hangisidir?
+### [GK-128] Bilim dünyasında mutlak sıfır noktası (-273.15 °C) ile başlayan sıcaklık birimi hangisidir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Kelvin
@@ -1345,7 +1670,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-104] Vücudumuzdaki kemiklerin kırıklarını veya organların durumunu X ışınları kullanarak görüntüleyen cihaz nedir?
+### [GK-129] Vücudumuzdaki kemiklerin kırıklarını veya organların durumunu X ışınları kullanarak görüntüleyen cihaz nedir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Röntgen Cihazı
@@ -1358,7 +1683,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-105] Doktorların hastanın kalp atışlarını ve akciğer seslerini dinlemek için kullandığı kulaklıklı alet nedir?
+### [GK-130] Doktorların hastanın kalp atışlarını ve akciğer seslerini dinlemek için kullandığı kulaklıklı alet nedir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Stetoskop
@@ -1371,7 +1696,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-106] Denizaltıların suyun altındayken su yüzeyini ve yukarıdaki gemileri görmesini sağlayan aynalı dürbün sistemi nedir?
+### [GK-131] Denizaltıların suyun altındayken su yüzeyini ve yukarıdaki gemileri görmesini sağlayan aynalı dürbün sistemi nedir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Periskop
@@ -1384,7 +1709,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-107] Uçakların ve gemilerin yönlerini ve konumlarını elektromanyetik radyo dalgalarıyla tespit eden sistem nedir?
+### [GK-132] Uçakların ve gemilerin yönlerini ve konumlarını elektromanyetik radyo dalgalarıyla tespit eden sistem nedir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Radar
@@ -1397,7 +1722,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-108] Denizaltıların su altında ses dalgaları yayarak çevrelerindeki engelleri veya diğer araçları bulmasını sağlayan sistem nedir?
+### [GK-133] Denizaltıların su altında ses dalgaları yayarak çevrelerindeki engelleri veya diğer araçları bulmasını sağlayan sistem nedir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Sonar
@@ -1410,7 +1735,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-109] Aynalar üzerlerine düşen ışığı nasıl yansıtırlar?
+### [GK-134] Aynalar üzerlerine düşen ışığı nasıl yansıtırlar?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Düzgün Yansıma
@@ -1423,7 +1748,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-110] Verileri ışık hızında iletmek için cam veya plastik kablolardan üretilen teknoloji nedir?
+### [GK-135] Verileri ışık hızında iletmek için cam veya plastik kablolardan üretilen teknoloji nedir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Fiber Optik Kablo
@@ -1436,7 +1761,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-111] İçine konulan yiyecek ve içeceklerin soğuk kalmasını sağlayan buzdolabını icat eden bilim insanı kimdir?
+### [GK-136] İçine konulan yiyecek ve içeceklerin soğuk kalmasını sağlayan buzdolabını icat eden bilim insanı kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Albert Marshall
@@ -1449,7 +1774,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-112] Yerçekimi ivmesi Dünya'nın her yerinde aynı mıdır?
+### [GK-137] Yerçekimi ivmesi Dünya'nın her yerinde aynı mıdır?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Hayır, kutuplarda daha fazla, ekvatorda daha azdır
@@ -1462,7 +1787,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-113] Binalarda katlar arasında insan ve yük taşımaya yarayan modern asansörün güvenlik frenini bulan mucit kimdir?
+### [GK-138] Binalarda katlar arasında insan ve yük taşımaya yarayan modern asansörün güvenlik frenini bulan mucit kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Elisha Otis
@@ -1475,7 +1800,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-114] Dönen tekerleklerin tarihi ilk kez hangi antik medeniyet tarafından kullanılmıştır?
+### [GK-139] Dönen tekerleklerin tarihi ilk kez hangi antik medeniyet tarafından kullanılmıştır?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Sümerler
@@ -1488,7 +1813,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-115] Bitki liflerini ezerek hamur haline getiren ve bugün kullandığımız kağıdı icat eden Çinli devlet görevlisi kimdir?
+### [GK-140] Bitki liflerini ezerek hamur haline getiren ve bugün kullandığımız kağıdı icat eden Çinli devlet görevlisi kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Cai Lun
@@ -1501,7 +1826,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-116] Denizcilerin yönlerini bulmalarını sağlayan, Dünya'nın manyetik alanına göre çalışan pusulayı ilk bulan medeniyet?
+### [GK-141] Denizcilerin yönlerini bulmalarını sağlayan, Dünya'nın manyetik alanına göre çalışan pusulayı ilk bulan medeniyet?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Çinliler
@@ -1514,7 +1839,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-117] Tarihteki ilk otomobili (gazla çalışan içten yanmalı motorlu) üreten mucit kimdir?
+### [GK-142] Tarihteki ilk otomobili (gazla çalışan içten yanmalı motorlu) üreten mucit kimdir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Karl Benz
@@ -1527,7 +1852,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-118] Elektrik akımına karşı gösterilen zorluğa fizik biliminde ne ad verilir?
+### [GK-143] Elektrik akımına karşı gösterilen zorluğa fizik biliminde ne ad verilir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Direnç
@@ -1540,7 +1865,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-119] Kandaki oksijeni vücudun diğer organlarına taşıyan demir yönünden zengin protein hücresi nedir?
+### [GK-144] Kandaki oksijeni vücudun diğer organlarına taşıyan demir yönünden zengin protein hücresi nedir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Hemoglobin
@@ -1553,7 +1878,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-120] İnternetin temelini oluşturan, bilgisayarların birbiriyle konuşmasını sağlayan küresel ağ protokolü hangisidir?
+### [GK-145] İnternetin temelini oluşturan, bilgisayarların birbiriyle konuşmasını sağlayan küresel ağ protokolü hangisidir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) TCP/IP
@@ -1566,7 +1891,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-121] Işığın cam prizmadan geçerken yedi renge ayrılması olayına ne ad verilir?
+### [GK-146] Işığın cam prizmadan geçerken yedi renge ayrılması olayına ne ad verilir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Işığın Kırılması
@@ -1579,7 +1904,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-122] Isıyı ve elektriği en iyi ileten, oda sıcaklığında sıvı olan tek metal element hangisidir?
+### [GK-147] Isıyı ve elektriği en iyi ileten, oda sıcaklığında sıvı olan tek metal element hangisidir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Cıva
@@ -1592,7 +1917,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-123] Çeliğin paslanmasını önlemek ve ona parlaklık kazandırmak için eklenen element hangisidir?
+### [GK-148] Çeliğin paslanmasını önlemek ve ona parlaklık kazandırmak için eklenen element hangisidir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Krom
@@ -1605,7 +1930,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-124] Suyun kaldırma kuvvetini keşfeden Arşimet hangi ülkede yaşamıştır?
+### [GK-149] Suyun kaldırma kuvvetini keşfeden Arşimet hangi ülkede yaşamıştır?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Antik Yunanistan (Sicilya)
@@ -1618,7 +1943,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-125] Havada en çok bulunan gaz hangisidir ve oranı yüzde kaçtır?
+### [GK-150] Havada en çok bulunan gaz hangisidir ve oranı yüzde kaçtır?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Azot (%78)
@@ -1631,7 +1956,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-126] Dünyanın çevresinde dolanarak internet hizmeti sağlayan Elon Musk'ın uydu takım yıldızının adı nedir?
+### [GK-151] Dünyanın çevresinde dolanarak internet hizmeti sağlayan Elon Musk'ın uydu takım yıldızının adı nedir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Starlink
@@ -1644,7 +1969,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-127] Gözün renkli kısmına ne ad verilir?
+### [GK-152] Gözün renkli kısmına ne ad verilir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) İris
@@ -1657,7 +1982,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-128] Bitkilerin yapraklarındaki gözeneklerden su buharı salarak serinlemesi olayına ne denir?
+### [GK-153] Bitkilerin yapraklarındaki gözeneklerden su buharı salarak serinlemesi olayına ne denir?
 * **Kategori:** Genel Kültür - Bilim ve Keşifler
 * **Şıklar:**
   - A) Terleme
@@ -1670,7 +1995,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-129] Dünyadaki oksijenin yaklaşık yarısından fazlasını üreten deniz canlıları hangileridir?
+### [GK-154] Dünyadaki oksijenin yaklaşık yarısından fazlasını üreten deniz canlıları hangileridir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Fitoplanktonlar (Algler)
@@ -1683,7 +2008,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-130] Bir ağacın yaşını öğrenmek için gövdesindeki hangi yapı incelenir?
+### [GK-155] Bir ağacın yaşını öğrenmek için gövdesindeki hangi yapı incelenir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Yıllık Büyüme Halkaları
@@ -1696,7 +2021,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-131] Dünyanın en büyük ve en derin okyanusu hangisidir?
+### [GK-156] Dünyanın en büyük ve en derin okyanusu hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Büyük Okyanus (Pasifik)
@@ -1709,7 +2034,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-132] Kendi vücut ağırlığının 50 katı kadar yük taşıyabilen çalışkan ve sosyal böcek türü hangisidir?
+### [GK-157] Kendi vücut ağırlığının 50 katı kadar yük taşıyabilen çalışkan ve sosyal böcek türü hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Karınca
@@ -1722,7 +2047,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-133] Çiçeklerden nektar toplayarak bal yapan, doğadaki tozlaşmanın en büyük mimarı olan böcek hangisidir?
+### [GK-158] Çiçeklerden nektar toplayarak bal yapan, doğadaki tozlaşmanın en büyük mimarı olan böcek hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Bal Arısı
@@ -1735,7 +2060,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-134] Dünya üzerindeki en büyük memeli ve en büyük canlı hayvan hangisidir?
+### [GK-159] Dünya üzerindeki en büyük memeli ve en büyük canlı hayvan hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Mavi Balina
@@ -1748,7 +2073,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-135] Hem karada hem suda yaşayabilen, gelişim döneminde kurbağalar gibi başkalaşım geçiren canlı grubu?
+### [GK-160] Hem karada hem suda yaşayabilen, gelişim döneminde kurbağalar gibi başkalaşım geçiren canlı grubu?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) İki Yaşamlılar (Amfibiler)
@@ -1761,7 +2086,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-136] Vücut sıcaklıklarını çevreye göre ayarlayamayan, tüyleri olan ve yumurtlayarak çoğalan canlı sınıfı?
+### [GK-161] Vücut sıcaklıklarını çevreye göre ayarlayamayan, tüyleri olan ve yumurtlayarak çoğalan canlı sınıfı?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Kuşlar
@@ -1774,7 +2099,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-137] Kışın soğuktan korunmak ve yiyecek bulmak için binlerce kilometre uçan kuşların yaptığı bu harekete ne denir?
+### [GK-162] Kışın soğuktan korunmak ve yiyecek bulmak için binlerce kilometre uçan kuşların yaptığı bu harekete ne denir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Göç
@@ -1787,7 +2112,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-138] Çöl koşullarına uyum sağlamış, sırtındaki hörgüçlerinde yağ depolayarak günlerce susuz yaşayabilen hayvan?
+### [GK-163] Çöl koşullarına uyum sağlamış, sırtındaki hörgüçlerinde yağ depolayarak günlerce susuz yaşayabilen hayvan?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Deve
@@ -1800,7 +2125,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-139] Kendi kendilerine besin üretebilen, karbondioksiti alıp havaya oksijen salan canlılar hangileridir?
+### [GK-164] Kendi kendilerine besin üretebilen, karbondioksiti alıp havaya oksijen salan canlılar hangileridir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Bitkiler
@@ -1813,7 +2138,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-140] Doğadaki canlılerin birbirini yiyerek oluşturduğu beslenme zincirine ne ad verilir?
+### [GK-165] Doğadaki canlılerin birbirini yiyerek oluşturduğu beslenme zincirine ne ad verilir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Besin Zinciri
@@ -1826,7 +2151,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-141] Bulutlardaki su buharının soğuk hava dalgasıyla karşılaşarak sıvı halde yeryüzüne düşmesine ne denir?
+### [GK-166] Bulutlardaki su buharının soğuk hava dalgasıyla karşılaşarak sıvı halde yeryüzüne düşmesine ne denir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Yağmur
@@ -1839,7 +2164,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-142] Su buharının gökyüzünde aşırı soğukla karşılaşıp kristalleşerek beyaz taneler halinde düşmesine ne denir?
+### [GK-167] Su buharının gökyüzünde aşırı soğukla karşılaşıp kristalleşerek beyaz taneler halinde düşmesine ne denir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Kar
@@ -1852,7 +2177,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-143] Dünyanın en kurak bölgesi olan ve neredeyse hiç yağmur almayan devasa kum kaplı alanlara ne denir?
+### [GK-168] Dünyanın en kurak bölgesi olan ve neredeyse hiç yağmur almayan devasa kum kaplı alanlara ne denir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Çöl
@@ -1865,7 +2190,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-144] Bitki örtüsünü korumak, su kaynaklarını tasarruflu kullanmak ve doğayı temiz tutmak için yapılan çalışmalara ne denir?
+### [GK-169] Bitki örtüsünü korumak, su kaynaklarını tasarruflu kullanmak ve doğayı temiz tutmak için yapılan çalışmalara ne denir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Çevre Koruma
@@ -1878,7 +2203,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-145] Denizlerde yaşayan, kemikli balıkların aksine kıkırdaktan oluşan iskelete ve keskin dişlere sahip yırtıcı balık?
+### [GK-170] Denizlerde yaşayan, kemikli balıkların aksine kıkırdaktan oluşan iskelete ve keskin dişlere sahip yırtıcı balık?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Köpekbalığı
@@ -1891,7 +2216,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-146] Dünya yüzeyinin yaklaşık yüzde kaçı sularla (okyanus ve denizlerle) kaplıdır?
+### [GK-171] Dünya yüzeyinin yaklaşık yüzde kaçı sularla (okyanus ve denizlerle) kaplıdır?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) %71
@@ -1904,7 +2229,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-147] Havadaki su buharının yeryüzüne yakın yerlerde yoğunlaşmasıyla oluşan, görüşü engelleyen beyaz bulut katmanı?
+### [GK-172] Havadaki su buharının yeryüzüne yakın yerlerde yoğunlaşmasıyla oluşan, görüşü engelleyen beyaz bulut katmanı?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Sis
@@ -1917,7 +2242,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-148] Canlıların düşmanlarından korunmak veya avlanmak için çevreleriyle tamamen uyumlu renk ve desenlere bürünmesine ne denir?
+### [GK-173] Canlıların düşmanlarından korunmak veya avlanmak için çevreleriyle tamamen uyumlu renk ve desenlere bürünmesine ne denir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Kamuflaj
@@ -1930,7 +2255,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-149] Yazın sıcak günlerinde, geceleri havadaki nemin soğuk yapraklar üzerinde su damlacıkları oluşturması olayına ne denir?
+### [GK-174] Yazın sıcak günlerinde, geceleri havadaki nemin soğuk yapraklar üzerinde su damlacıkları oluşturması olayına ne denir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Çiy
@@ -1943,7 +2268,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-150] Sonbahar ve kış sabahlarında yerdeki otların ve dalların üzerinde buz kristallerinin oluşması olayına ne denir?
+### [GK-175] Sonbahar ve kış sabahlarında yerdeki otların ve dalların üzerinde buz kristallerinin oluşması olayına ne denir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Kırağı
@@ -1956,7 +2281,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-151] Karasal iklimde ilkbaharda yağan yağmurlarla yeşeren, yazın ise kuruyan otsu bitki örtüsüne ne ad verilir?
+### [GK-176] Karasal iklimde ilkbaharda yağan yağmurlarla yeşeren, yazın ise kuruyan otsu bitki örtüsüne ne ad verilir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Bozkır (Step)
@@ -1969,7 +2294,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-152] Akdeniz iklimine özgü, kışın yaprak dökmeyen bodur ağaç ve çalılardan oluşan bitki örtüsünün adı nedir?
+### [GK-177] Akdeniz iklimine özgü, kışın yaprak dökmeyen bodur ağaç ve çalılardan oluşan bitki örtüsünün adı nedir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Maki
@@ -1982,7 +2307,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-153] Karların erimesi veya şiddetli yağmurlar sonucu toprak tabakasının dik yamaçlardan aşağı kayması afetine ne denir?
+### [GK-178] Karların erimesi veya şiddetli yağmurlar sonucu toprak tabakasının dik yamaçlardan aşağı kayması afetine ne denir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Heyelan (Toprak Kayması)
@@ -1995,7 +2320,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-154] Toprağın rüzgar ve akarsular tarafından aşındırılarak deniz ve göllere taşınması sürecine ne ad verilir?
+### [GK-179] Toprağın rüzgar ve akarsular tarafından aşındırılarak deniz ve göllere taşınması sürecine ne ad verilir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Erozyon
@@ -2008,7 +2333,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-155] Dünyanın akciğerleri olarak kabul edilen, en yoğun bitki ve ağaç çeşitliliğine sahip devasa tropikal ormanlar nerededir?
+### [GK-180] Dünyanın akciğerleri olarak kabul edilen, en yoğun bitki ve ağaç çeşitliliğine sahip devasa tropikal ormanlar nerededir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Amazon Ormanları
@@ -2021,7 +2346,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-156] Kutup bölgelerinde yüzen devasa tatlı su buz kütlelerine ne ad verilir?
+### [GK-181] Kutup bölgelerinde yüzen devasa tatlı su buz kütlelerine ne ad verilir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Buzdağı (Iceberg)
@@ -2034,7 +2359,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-157] Böcek yiyen ve kapandığında kaçmalarını engelleyen yapraklara sahip ilginç etçil bitki hangisidir?
+### [GK-182] Böcek yiyen ve kapandığında kaçmalarını engelleyen yapraklara sahip ilginç etçil bitki hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Sinek Kapan (Venüs Sinek Kapanı)
@@ -2047,7 +2372,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-158] Deniz suyunda çözünmüş halde bulunan ve deniz canlılarının nefes almasını sağlayan gaz hangisidir?
+### [GK-183] Deniz suyunda çözünmüş halde bulunan ve deniz canlılarının nefes almasını sağlayan gaz hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Oksijen
@@ -2060,7 +2385,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-159] Uçamayan, Güney Kutbu'nda (Antarktika) yaşayan ve dik yürüyen sevimli deniz kuşları hangileridir?
+### [GK-184] Uçamayan, Güney Kutbu'nda (Antarktika) yaşayan ve dik yürüyen sevimli deniz kuşları hangileridir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Penguen
@@ -2073,7 +2398,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-160] Yumurtalarını kumsallara gömen, denizlerde yaşayan ve akciğer solunumu yapan koruma altındaki kaplumbağa türü?
+### [GK-185] Yumurtalarını kumsallara gömen, denizlerde yaşayan ve akciğer solunumu yapan koruma altındaki kaplumbağa türü?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Caretta Caretta
@@ -2086,7 +2411,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-161] Dünyanın en hızlı koşan kara hayvanı hangisidir?
+### [GK-186] Dünyanın en hızlı koşan kara hayvanı hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Çita
@@ -2099,7 +2424,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-162] Dünyanın en yüksek kara hayvanı hangisidir?
+### [GK-187] Dünyanın en yüksek kara hayvanı hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Zürafa
@@ -2112,7 +2437,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-163] Bal arıları kovan içindeki yerleri ve çiçeklerin konumunu diğer arılara nasıl bildirirler?
+### [GK-188] Bal arıları kovan içindeki yerleri ve çiçeklerin konumunu diğer arılara nasıl bildirirler?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Özel Dans Figürleriyle
@@ -2125,7 +2450,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-164] Filler kendi aralarında çok uzak mesafelerden nasıl iletişim kurarlar?
+### [GK-189] Filler kendi aralarında çok uzak mesafelerden nasıl iletişim kurarlar?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) İnsan kulağının duyamayacağı infrases (düşük frekanslı ses) ile
@@ -2138,7 +2463,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-165] Denizlerin en zeki canlılarından olan ve birbirlerine özel ıslık sesleriyle hitap eden memeli hangisidir?
+### [GK-190] Denizlerin en zeki canlılarından olan ve birbirlerine özel ıslık sesleriyle hitap eden memeli hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Yunus
@@ -2151,7 +2476,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-166] Kaktüsler kurak çöl ortamlarında suyu nasıl depolarlar?
+### [GK-191] Kaktüsler kurak çöl ortamlarında suyu nasıl depolarlar?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Gövdelerindeki süngerimsi dokularda
@@ -2164,7 +2489,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-167] Günde 90 cm'ye kadar büyüyebilen dünyanın en hızlı büyüyen odunsu bitkisi hangisidir?
+### [GK-192] Günde 90 cm'ye kadar büyüyebilen dünyanın en hızlı büyüyen odunsu bitkisi hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Bambu
@@ -2177,7 +2502,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-168] Zebrayı kaplayan siyah beyaz çizgiler ne işe yarar?
+### [GK-193] Zebrayı kaplayan siyah beyaz çizgiler ne işe yarar?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Sinekleri uzak tutmaya ve vücut sıcaklığını dengelemeye
@@ -2190,7 +2515,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-169] Yılanlar büyüdükçe dar gelen dış derilerini yenisiyle değiştirmek için ne yaparlar?
+### [GK-194] Yılanlar büyüdükçe dar gelen dış derilerini yenisiyle değiştirmek için ne yaparlar?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Deri Değiştirirler (Gömlek Değiştirme)
@@ -2203,7 +2528,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-170] Avını yakalamak için kendi boyundan daha uzun yapışkan bir dili ışık hızında fırlatan canlı hangisidir?
+### [GK-195] Avını yakalamak için kendi boyundan daha uzun yapışkan bir dili ışık hızında fırlatan canlı hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Bukalemun
@@ -2216,7 +2541,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-171] Dünyanın en uzun yaşayan ağaç türü hangisidir?
+### [GK-196] Dünyanın en uzun yaşayan ağaç türü hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Sekoya (Mamut Ağacı)
@@ -2229,7 +2554,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-172] Yaprakları dokunulduğunda küsüp kapanan ilginç bitki hangisidir?
+### [GK-197] Yaprakları dokunulduğunda küsüp kapanan ilginç bitki hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Mimoza (Küstüm Otu)
@@ -2242,7 +2567,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-173] Denizatlarının üremesinde yumurtaları taşıyan ve doğum yapan ebeveyn hangisidir?
+### [GK-198] Denizatlarının üremesinde yumurtaları taşıyan ve doğum yapan ebeveyn hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Erkek Denizatı
@@ -2255,7 +2580,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-174] Uçamayan tek kuş türü hangisidir?
+### [GK-199] Uçamayan tek kuş türü hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Devekuşu
@@ -2268,7 +2593,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-175] Kendi ağırlığının yüzlerce katı basınca dayanabilen, okyanusun en derin yeri olan Mariana Çukuru kaç metredir?
+### [GK-200] Kendi ağırlığının yüzlerce katı basınca dayanabilen, okyanusun en derin yeri olan Mariana Çukuru kaç metredir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Yaklaşık 11.000 Metre
@@ -2281,7 +2606,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-176] Okyanuslarda yaşayan ve 8 kolu bulunan, renk değiştirme ustası omurgasız canlı hangisidir?
+### [GK-201] Okyanuslarda yaşayan ve 8 kolu bulunan, renk değiştirme ustası omurgasız canlı hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Ahtapot
@@ -2294,7 +2619,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-177] Geriye doğru uçabilen tek kuş türü hangisidir?
+### [GK-202] Geriye doğru uçabilen tek kuş türü hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Sinek Kuşu (Kolibri)
@@ -2307,7 +2632,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-178] Dünyanın en büyük sıcak çölü olan Sahra Çölü hangi kıtadadır?
+### [GK-203] Dünyanın en büyük sıcak çölü olan Sahra Çölü hangi kıtadadır?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Afrika
@@ -2320,7 +2645,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-179] Kutup ayıları neden beyaz görünür?
+### [GK-204] Kutup ayıları neden beyaz görünür?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Kılları şeffaf olup kar ışığını yansıttığı için
@@ -2333,7 +2658,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-180] Okyanus dalgalarının kıyıya vurduğunda parıldayan mavi ışıklar saçması olayına ne ad verilir?
+### [GK-205] Okyanus dalgalarının kıyıya vurduğunda parıldayan mavi ışıklar saçması olayına ne ad verilir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Biyolüminesans
@@ -2346,7 +2671,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-181] Ağaçların yapraklarının sonbaharda sararıp dökülmesinin temel sebebi nedir?
+### [GK-206] Ağaçların yapraklarının sonbaharda sararıp dökülmesinin temel sebebi nedir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Kışın su kaybını önlemek ve enerji tasarrufu yapmak
@@ -2359,7 +2684,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-182] İnci lifleri üreterek kendi kabuğunun içine giren yabancı maddeleri pürüzsüz bir topa dönüştüren deniz canlısı?
+### [GK-207] İnci lifleri üreterek kendi kabuğunun içine giren yabancı maddeleri pürüzsüz bir topa dönüştüren deniz canlısı?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) İstiridye (Sedef)
@@ -2372,7 +2697,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-183] Avustralya'da yaşayan, yavrularını karınlarındaki özel kesede büyüten zıplayan canlı hangisidir?
+### [GK-208] Avustralya'da yaşayan, yavrularını karınlarındaki özel kesede büyüten zıplayan canlı hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Kanguru
@@ -2385,7 +2710,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-184] Sadece okaliptüs yaprakları yiyerek beslenen ve günde 20 saate kadar uyuyan keseli Avustralya hayvanı?
+### [GK-209] Sadece okaliptüs yaprakları yiyerek beslenen ve günde 20 saate kadar uyuyan keseli Avustralya hayvanı?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Koala
@@ -2398,7 +2723,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-185] Kafasını vücudunu hiç kıpırdatmadan 270 derece döndürebilen, geceleri avlanan yırtıcı kuş hangisidir?
+### [GK-210] Kafasını vücudunu hiç kıpırdatmadan 270 derece döndürebilen, geceleri avlanan yırtıcı kuş hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Baykuş
@@ -2411,7 +2736,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-186] Bal arılarının baş kısımlarında toplam kaç tane gözü bulunur?
+### [GK-211] Bal arılarının baş kısımlarında toplam kaç tane gözü bulunur?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) 5 Göz
@@ -2424,7 +2749,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-187] Penguenler su ihtiyaçlarını okyanusta yaşarken tatlı su bulamadıklarında nasıl karşılarlar?
+### [GK-212] Penguenler su ihtiyaçlarını okyanusta yaşarken tatlı su bulamadıklarında nasıl karşılarlar?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Deniz suyunu içip vücutlarındaki özel bezlerle tuzu süzerek
@@ -2437,7 +2762,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-188] Karıncaların solunum yapmasını sağlayan akciğer benzeri organları var mıdır?
+### [GK-213] Karıncaların solunum yapmasını sağlayan akciğer benzeri organları var mıdır?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Hayır, vücutlarındaki gözeneklerle trake solunumu yaparlar
@@ -2450,7 +2775,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-189] Havada süzülürken avını yakalamak için saatte 380 km hıza ulaşabilen dünyanın en hızlı uçan kuşu?
+### [GK-214] Havada süzülürken avını yakalamak için saatte 380 km hıza ulaşabilen dünyanın en hızlı uçan kuşu?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Gökdoğan (Alaca Doğan)
@@ -2463,7 +2788,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-190] Timsahlar avlarını yerken neden ağlarlar?
+### [GK-215] Timsahlar avlarını yerken neden ağlarlar?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Vücutlarındaki fazla tuzu göz pınarlarından dışarı atmak için
@@ -2476,7 +2801,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-191] Kurak mevsimlerde hayatta kalmak için vücutlarını sümüksü bir sıvıyla kaplayıp 3 yıla kadar uyuyabilen canlı?
+### [GK-216] Kurak mevsimlerde hayatta kalmak için vücutlarını sümüksü bir sıvıyla kaplayıp 3 yıla kadar uyuyabilen canlı?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Çöl Salyangozu
@@ -2489,7 +2814,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-192] Kelebeklerin ömrü gerçekten sadece bir gün müdür?
+### [GK-217] Kelebeklerin ömrü gerçekten sadece bir gün müdür?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) Hayır, türüne göre birkaç gün ile birkaç ay arası değişir
@@ -2502,7 +2827,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-193] Dut yaprağı yiyerek beslenen ve salgıladığı liflerle ipek kozasını ören böcek hangisidir?
+### [GK-218] Dut yaprağı yiyerek beslenen ve salgıladığı liflerle ipek kozasını ören böcek hangisidir?
 * **Kategori:** Genel Kültür - Doğa ve Canlılar
 * **Şıklar:**
   - A) İpek Böceği
@@ -2515,7 +2840,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-194] Üç tarafı denizlerle çevrili, iki kıtayı birbirine bağlayan Türkiye'nin yer aldığı yarımada hangisidir?
+### [GK-219] Üç tarafı denizlerle çevrili, iki kıtayı birbirine bağlayan Türkiye'nin yer aldığı yarımada hangisidir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Anadolu Yarımadası
@@ -2528,7 +2853,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-195] Türkiye'nin en yüksek dağı hangisidir?
+### [GK-220] Türkiye'nin en yüksek dağı hangisidir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Ağrı Dağı
@@ -2541,7 +2866,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-196] Türkiye'nin en büyük gölü hangisidir?
+### [GK-221] Türkiye'nin en büyük gölü hangisidir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Van Gölü
@@ -2554,7 +2879,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-197] Türkiye Cumhuriyeti'nin başkenti hangi ilimizdir?
+### [GK-222] Türkiye Cumhuriyeti'nin başkenti hangi ilimizdir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Ankara
@@ -2567,7 +2892,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-198] Dünya üzerindeki en uzun nehir hangisidir?
+### [GK-223] Dünya üzerindeki en uzun nehir hangisidir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Nil Nehri
@@ -2580,7 +2905,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-199] Dünya üzerindeki en yüksek dağ hangisidir?
+### [GK-224] Dünya üzerindeki en yüksek dağ hangisidir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Everest Dağı
@@ -2593,7 +2918,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-200] Dünya üzerinde kaç tane kıta vardır?
+### [GK-225] Dünya üzerinde kaç tane kıta vardır?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) 7
@@ -2606,7 +2931,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-201] İstanbul'u 1453 yılında fethederek Orta Çağ'ı kapatıp Yeni Çağ'ı açan Osmanlı padişahı kimdir?
+### [GK-226] İstanbul'u 1453 yılında fethederek Orta Çağ'ı kapatıp Yeni Çağ'ı açan Osmanlı padişahı kimdir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Fatih Sultan Mehmet
@@ -2619,7 +2944,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-202] Tarihin sıfır noktası kabul edilen, Şanlıurfa yakınlarındaki dünyanın bilinen en eski tapınak kompleksi neresidir?
+### [GK-227] Tarihin sıfır noktası kabul edilen, Şanlıurfa yakınlarındaki dünyanın bilinen en eski tapınak kompleksi neresidir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Göbeklitepe
@@ -2632,7 +2957,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-203] Osmanlı İmparatorluğu'nun kurucusu olan ve beyliğe adını veren tarihi şahsiyet kimdir?
+### [GK-228] Osmanlı İmparatorluğu'nun kurucusu olan ve beyliğe adını veren tarihi şahsiyet kimdir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Osman Gazi
@@ -2645,7 +2970,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-204] Türkiye'nin güney sınırını oluşturan ve Akdeniz bölgesine paralel uzanan sıradağların adı nedir?
+### [GK-229] Türkiye'nin güney sınırını oluşturan ve Akdeniz bölgesine paralel uzanan sıradağların adı nedir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Toros Dağları
@@ -2658,7 +2983,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-205] Türkiye'nin kuzeyinde yer alan ve en çok yağış alan denizimiz hangisidir?
+### [GK-230] Türkiye'nin kuzeyinde yer alan ve en çok yağış alan denizimiz hangisidir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Karadeniz
@@ -2671,7 +2996,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-206] Haritalarda kullanılan yön levhalarında 'K' harfi hangi yönü gösterir?
+### [GK-231] Haritalarda kullanılan yön levhalarında 'K' harfi hangi yönü gösterir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Kuzey
@@ -2684,7 +3009,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-207] Haritada iki nokta arasındaki mesafenin gerçek hayattaki küçültme oranına ne ad verilir?
+### [GK-232] Haritada iki nokta arasındaki mesafenin gerçek hayattaki küçültme oranına ne ad verilir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Ölçek
@@ -2697,7 +3022,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-208] Ekvatora paralel olarak çizilen ve Dünya'yı yatay dilimlere ayıran hayali çizgilere ne denir?
+### [GK-233] Ekvatora paralel olarak çizilen ve Dünya'yı yatay dilimlere ayıran hayali çizgilere ne denir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Paralel
@@ -2710,7 +3035,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-209] Kutup noktalarını birleştiren ve Dünya'yı dikey dilimlere ayıran hayali çizgilere ne denir?
+### [GK-234] Kutup noktalarını birleştiren ve Dünya'yı dikey dilimlere ayıran hayali çizgilere ne denir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Meridyen
@@ -2723,7 +3048,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-210] Dünya'yı kuzey ve güney olmak üzere iki eşit yarım küreye bölen en büyük enlem dairesi hangisidir?
+### [GK-235] Dünya'yı kuzey ve güney olmak üzere iki eşit yarım küreye bölen en büyük enlem dairesi hangisidir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Ekvator
@@ -2736,7 +3061,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-211] Dünya üzerindeki başlangıç meridyeni (0 derece) hangi İngiliz kasabasından geçer?
+### [GK-236] Dünya üzerindeki başlangıç meridyeni (0 derece) hangi İngiliz kasabasından geçer?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Greenwich
@@ -2749,7 +3074,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-212] Türkiye, saat dilimi ve coğrafi konumu itibariyle hangi yarım kürede yer alır?
+### [GK-237] Türkiye, saat dilimi ve coğrafi konumu itibariyle hangi yarım kürede yer alır?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Kuzey Yarım Küre
@@ -2762,7 +3087,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-213] Osmanlı Devleti'nin ilk başkenti (Söğüt'ten sonraki ilk büyük şehir merkezi) hangisidir?
+### [GK-238] Osmanlı Devleti'nin ilk başkenti (Söğüt'ten sonraki ilk büyük şehir merkezi) hangisidir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Bursa
@@ -2775,7 +3100,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-214] Anadolu'nun kapılarını Müslüman Türklere açan 1071 Malazgirt Savaşı'nın muzaffer Selçuklu sultanı kimdir?
+### [GK-239] Anadolu'nun kapılarını Müslüman Türklere açan 1071 Malazgirt Savaşı'nın muzaffer Selçuklu sultanı kimdir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Sultan Alparslan
@@ -2788,7 +3113,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-215] Kabe'nin de içinde bulunduğu, Suudi Arabistan'da yer alan kutsal bölgeye tarihi kaynaklarda ne ad verilir?
+### [GK-240] Kabe'nin de içinde bulunduğu, Suudi Arabistan'da yer alan kutsal bölgeye tarihi kaynaklarda ne ad verilir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Hicaz
@@ -2801,7 +3126,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-216] Tarihteki en geniş topraklara sahip, üç kıtaya (Asya, Avrupa, Afrika) hükmetmiş Türk-İslam devleti hangisidir?
+### [GK-241] Tarihteki en geniş topraklara sahip, üç kıtaya (Asya, Avrupa, Afrika) hükmetmiş Türk-İslam devleti hangisidir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Osmanlı İmparatorluğu
@@ -2814,7 +3139,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-217] Orta Asya'da Türk adıyla kurulan ilk devlet hangisidir?
+### [GK-242] Orta Asya'da Türk adıyla kurulan ilk devlet hangisidir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Göktürk Devleti
@@ -2827,7 +3152,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-218] Mısır'da bulunan ve firavun mezarları olarak inşa edilen piramitlerin en büyüğü hangisidir?
+### [GK-243] Mısır'da bulunan ve firavun mezarları olarak inşa edilen piramitlerin en büyüğü hangisidir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Keops Piramidi (Gize)
@@ -2840,7 +3165,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-219] Dünyanın en uzun savunma duvarı olan ve uzaydan bile izleri görülebilen yapı hangisidir?
+### [GK-244] Dünyanın en uzun savunma duvarı olan ve uzaydan bile izleri görülebilen yapı hangisidir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Çin Seddi
@@ -2853,7 +3178,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-220] İki tarafı denizlerle ayrılmış kara parçalarını birbirine bağlayan dar su geçitlerine ne ad verilir?
+### [GK-245] İki tarafı denizlerle ayrılmış kara parçalarını birbirine bağlayan dar su geçitlerine ne ad verilir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Boğaz
@@ -2866,7 +3191,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-221] Yapay yollarla kanallar açılarak denizlerin birleştirildiği, Mısır'daki ünlü su kanalı hangisidir?
+### [GK-246] Yapay yollarla kanallar açılarak denizlerin birleştirildiği, Mısır'daki ünlü su kanalı hangisidir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Süveyş Kanalı
@@ -2879,7 +3204,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-222] Büyük Okyanus ile Atlas Okyanusu'nu birleştiren, Orta Amerika'daki ünlü yapay kanal hangisidir?
+### [GK-247] Büyük Okyanus ile Atlas Okyanusu'nu birleştiren, Orta Amerika'daki ünlü yapay kanal hangisidir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Panama Kanalı
@@ -2892,7 +3217,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-223] Atlas Okyanusu ile Akdeniz'i birbirine bağlayan, Fas ile İspanya arasındaki boğazın adı nedir?
+### [GK-248] Atlas Okyanusu ile Akdeniz'i birbirine bağlayan, Fas ile İspanya arasındaki boğazın adı nedir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Cebelitarık Boğazı
@@ -2905,7 +3230,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-224] Türkiye'nin yedi coğrafi bölgesinden yüzölçümü en büyük olanı hangisidir?
+### [GK-249] Türkiye'nin yedi coğrafi bölgesinden yüzölçümü en büyük olanı hangisidir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Doğu Anadolu Bölgesi
@@ -2918,7 +3243,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-225] Türkiye'nin nüfus yoğunluğu en fazla olan ve iki kıtada toprağı bulunan tarihi şehri hangisidir?
+### [GK-250] Türkiye'nin nüfus yoğunluğu en fazla olan ve iki kıtada toprağı bulunan tarihi şehri hangisidir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) İstanbul
@@ -2931,7 +3256,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-226] Çin'den başlayıp Anadolu üzerinden Avrupa'ya kadar uzanan tarihi ticaret yolunun adı nedir?
+### [GK-251] Çin'den başlayıp Anadolu üzerinden Avrupa'ya kadar uzanan tarihi ticaret yolunun adı nedir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) İpek Yolu
@@ -2944,7 +3269,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-227] Hindistan'dan başlayıp deniz yoluyla Kızıldeniz ve Mısır üzerinden Avrupa'ya ulaşan tarihi ticaret yolu?
+### [GK-252] Hindistan'dan başlayıp deniz yoluyla Kızıldeniz ve Mısır üzerinden Avrupa'ya ulaşan tarihi ticaret yolu?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Baharat Yolu
@@ -2957,7 +3282,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-228] Fırat ve Dicle nehirleri döküldükleri Basra Körfezi'nden önce birleşerek hangi nehir adını alırlar?
+### [GK-253] Fırat ve Dicle nehirleri döküldükleri Basra Körfezi'nden önce birleşerek hangi nehir adını alırlar?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Şattülarap
@@ -2970,7 +3295,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-229] Nevşehir ve Kayseri civarında rüzgar ve yağmurun tüfleri aşındırmasıyla oluşan dik kaya oluşumlarına ne denir?
+### [GK-254] Nevşehir ve Kayseri civarında rüzgar ve yağmurun tüfleri aşındırmasıyla oluşan dik kaya oluşumlarına ne denir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Peri Bacaları
@@ -2983,7 +3308,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-230] Denizli'de yer alan ve kalsiyum karbonatlı sıcak suların oluşturduğu beyaz basamaklı doğa harikası neresidir?
+### [GK-255] Denizli'de yer alan ve kalsiyum karbonatlı sıcak suların oluşturduğu beyaz basamaklı doğa harikası neresidir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Pamukkale Travertenleri
@@ -2996,7 +3321,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-231] I. Dünya Savaşı'nda Türk milletinin 'Çanakkale Geçilmez' destanını yazdığı zaferin tarihi hangisidir?
+### [GK-256] I. Dünya Savaşı'nda Türk milletinin 'Çanakkale Geçilmez' destanını yazdığı zaferin tarihi hangisidir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) 18 Mart 1915
@@ -3009,7 +3334,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-232] Matematiksel olarak Dünya'nın merkezine en yakın olduğu kabul edilen ekvator yarıçapı kaç kilometredir?
+### [GK-257] Matematiksel olarak Dünya'nın merkezine en yakın olduğu kabul edilen ekvator yarıçapı kaç kilometredir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Yaklaşık 6.378 km
@@ -3022,7 +3347,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-233] Türklerin bilinen en eski yazılı belgeleri olan Moğolistan'daki taş anıtların adı nedir?
+### [GK-258] Türklerin bilinen en eski yazılı belgeleri olan Moğolistan'daki taş anıtların adı nedir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Orhun Yazıtları (Göktürk Kitabeleri)
@@ -3035,7 +3360,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-234] Mevlana Celaleddin Rumi'nin türbesi (Yeşil Türbe) hangi şehrimizdedir?
+### [GK-259] Mevlana Celaleddin Rumi'nin türbesi (Yeşil Türbe) hangi şehrimizdedir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Konya
@@ -3048,7 +3373,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-235] Mimar Sinan'ın 'Ustalık Eserim' dediği Selimiye Camii hangi ilimizdedir?
+### [GK-260] Mimar Sinan'ın 'Ustalık Eserim' dediği Selimiye Camii hangi ilimizdedir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Edirne
@@ -3061,7 +3386,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-236] Osmanlı Devleti'nin Fatih Sultan Mehmet'ten önce başkentliğini yapmış, sınır şehri olan ilimiz hangisidir?
+### [GK-261] Osmanlı Devleti'nin Fatih Sultan Mehmet'ten önce başkentliğini yapmış, sınır şehri olan ilimiz hangisidir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Edirne
@@ -3074,7 +3399,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-237] Dünyanın en geniş çölü olan sıcak çölün adı nedir?
+### [GK-262] Dünyanın en geniş çölü olan sıcak çölün adı nedir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Sahra Çölü
@@ -3087,7 +3412,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-238] Türkiye'nin Asya kıtasında kalan geniş toprak parçasına ne ad verilir?
+### [GK-263] Türkiye'nin Asya kıtasında kalan geniş toprak parçasına ne ad verilir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Anadolu
@@ -3100,7 +3425,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-239] Türkiye'nin Avrupa kıtasında kalan toprak parçasına ne ad verilir?
+### [GK-264] Türkiye'nin Avrupa kıtasında kalan toprak parçasına ne ad verilir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Trakya
@@ -3113,7 +3438,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-240] Akdeniz'i Kızıldeniz'e bağlayan insan yapısı kanal hangisidir?
+### [GK-265] Akdeniz'i Kızıldeniz'e bağlayan insan yapısı kanal hangisidir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Süveyş Kanalı
@@ -3126,7 +3451,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-241] Dünyanın en tuzlu deniz suyu oranına sahip, içine girildiğinde batmadan su üstünde durulan gölü hangisidir?
+### [GK-266] Dünyanın en tuzlu deniz suyu oranına sahip, içine girildiğinde batmadan su üstünde durulan gölü hangisidir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Lut Gölü (Ölü Deniz)
@@ -3139,7 +3464,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-242] Dünya haritasını ceylan derisi üzerine çizerek dönemine göre harika doğrulukla tamamlayan Osmanlı denizcisi kimdir?
+### [GK-267] Dünya haritasını ceylan derisi üzerine çizerek dönemine göre harika doğrulukla tamamlayan Osmanlı denizcisi kimdir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Piri Reis
@@ -3152,7 +3477,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-243] Türkiye Cumhuriyeti'nin toprak alanı (yüzölçümü) yönünden en küçük coğrafi bölgesi hangisidir?
+### [GK-268] Türkiye Cumhuriyeti'nin toprak alanı (yüzölçümü) yönünden en küçük coğrafi bölgesi hangisidir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Güneydoğu Anadolu Bölgesi
@@ -3165,7 +3490,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-244] Karadeniz bölgesindeki dağların denize uzanış yönü nasıldır?
+### [GK-269] Karadeniz bölgesindeki dağların denize uzanış yönü nasıldır?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Denize Paralel uzanır
@@ -3178,7 +3503,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-245] Ege bölgesindeki dağların denize uzanış yönü nasıldır?
+### [GK-270] Ege bölgesindeki dağların denize uzanış yönü nasıldır?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Denize Dik uzanır
@@ -3191,7 +3516,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-246] Dünyanın en büyük kapalı gölü (yüzölçümü olarak en büyük göl) hangisidir?
+### [GK-271] Dünyanın en büyük kapalı gölü (yüzölçümü olarak en büyük göl) hangisidir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Hazar Denizi (Hazar Gölü)
@@ -3204,7 +3529,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-247] Tarihte ilk kağıt parayı icat eden ve kullanan ülke/medeniyet hangisidir?
+### [GK-272] Tarihte ilk kağıt parayı icat eden ve kullanan ülke/medeniyet hangisidir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Çin
@@ -3217,7 +3542,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-248] Tarihte bilinen ilk yazılı barış antlaşması hangisidir?
+### [GK-273] Tarihte bilinen ilk yazılı barış antlaşması hangisidir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Kadeş Antlaşması
@@ -3230,7 +3555,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-249] İstanbul'u fetheden Fatih Sultan Mehmet, şiirlerinde hangi lakabı (mahlası) kullanmıştır?
+### [GK-274] İstanbul'u fetheden Fatih Sultan Mehmet, şiirlerinde hangi lakabı (mahlası) kullanmıştır?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Avni
@@ -3243,7 +3568,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-250] Osmanlı tarihinin en uzun süre tahtta kalan padişahı Kanuni Sultan Süleyman, şiirlerinde hangi mahlası kullanmıştır?
+### [GK-275] Osmanlı tarihinin en uzun süre tahtta kalan padişahı Kanuni Sultan Süleyman, şiirlerinde hangi mahlası kullanmıştır?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Muhibbi
@@ -3256,7 +3581,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-251] Peygamberimizden sonra İslam devleti lideri olan Dört Halife'nin ikincisi kimdir?
+### [GK-276] Peygamberimizden sonra İslam devleti lideri olan Dört Halife'nin ikincisi kimdir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Hz. Ömer
@@ -3269,7 +3594,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-252] Kur'an-ı Kerim'in çoğaltılmasını sağlayan ve Dört Halife'nin üçüncüsü olan sahabi kimdir?
+### [GK-277] Kur'an-ı Kerim'in çoğaltılmasını sağlayan ve Dört Halife'nin üçüncüsü olan sahabi kimdir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Hz. Osman
@@ -3282,7 +3607,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-253] Peygamberimizin amcasının oğlu ve damadı olan, İslam'ın dördüncü halifesi kimdir?
+### [GK-278] Peygamberimizin amcasının oğlu ve damadı olan, İslam'ın dördüncü halifesi kimdir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Hz. Ali
@@ -3295,7 +3620,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-254] Mustafa Kemal'in Samsun'a çıkarak Kurtuluş Savaşı'nı fiilen başlattığı şanlı tarih hangisidir?
+### [GK-279] Mustafa Kemal'in Samsun'a çıkarak Kurtuluş Savaşı'nı fiilen başlattığı şanlı tarih hangisidir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) 19 Mayıs 1919
@@ -3308,7 +3633,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-255] Türkiye Büyük Millet Meclisi (TBMM) hangi tarihte Ankara'da açılmıştır?
+### [GK-280] Türkiye Büyük Millet Meclisi (TBMM) hangi tarihte Ankara'da açılmıştır?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) 23 Nisan 1920
@@ -3321,7 +3646,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-256] Dünyanın en yüksekten düşen şelalesi (yaklaşık 979 metre) olan Angel Şelalesi hangi ülkededir?
+### [GK-281] Dünyanın en yüksekten düşen şelalesi (yaklaşık 979 metre) olan Angel Şelalesi hangi ülkededir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Venezuela
@@ -3334,7 +3659,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-257] Dünyanın en büyük adası (kıta olmayan en büyük kara parçası) hangisidir?
+### [GK-282] Dünyanın en büyük adası (kıta olmayan en büyük kara parçası) hangisidir?
 * **Kategori:** Genel Kültür - Coğrafya
 * **Şıklar:**
   - A) Grönland
@@ -3347,7 +3672,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-258] İstiklal Marşı'mızın şairi olan, vatan sevgisiyle dolu ünlü edebiyatçımız kimdir?
+### [GK-283] İstiklal Marşı'mızın şairi olan, vatan sevgisiyle dolu ünlü edebiyatçımız kimdir?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Mehmet Akif Ersoy
@@ -3360,7 +3685,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-259] Osmanlı tarihinin en ünlü baş mimarı olan, Selimiye ve Süleymaniye camilerini inşa eden dahi sanatçı kimdir?
+### [GK-284] Osmanlı tarihinin en ünlü baş mimarı olan, Selimiye ve Süleymaniye camilerini inşa eden dahi sanatçı kimdir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Mimar Sinan
@@ -3373,7 +3698,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-260] İstanbul'da Sultanahmet Camii'ni inşa eden ve Kabe'nin de restorasyonunu yapan ünlü Osmanlı mimarı kimdir?
+### [GK-285] İstanbul'da Sultanahmet Camii'ni inşa eden ve Kabe'nin de restorasyonunu yapan ünlü Osmanlı mimarı kimdir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Sedefkar Mehmed Ağa
@@ -3386,7 +3711,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-261] Türk gölge oyununun en bilinen iki ana karakteri kimlerdir?
+### [GK-286] Türk gölge oyununun en bilinen iki ana karakteri kimlerdir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Karagöz ve Hacivat
@@ -3399,7 +3724,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-262] Anadolu halk ozanlarının en büyüklerinden olan, 'Uzun ince bir yoldayım' şiiriyle tanınan aşık kimdir?
+### [GK-287] Anadolu halk ozanlarının en büyüklerinden olan, 'Uzun ince bir yoldayım' şiiriyle tanınan aşık kimdir?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Aşık Veysel Şatıroğlu
@@ -3412,7 +3737,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-263] Suyu özel boyalarla süsleyerek kağıt üzerine desen çıkarma sanatına ne ad verilir?
+### [GK-288] Suyu özel boyalarla süsleyerek kağıt üzerine desen çıkarma sanatına ne ad verilir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Ebru Sanatı
@@ -3425,7 +3750,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-264] Arap harflerini kullanarak güzel ve estetik yazı yazma sanatına ne ad verilir?
+### [GK-289] Arap harflerini kullanarak güzel ve estetik yazı yazma sanatına ne ad verilir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Hat Sanatı
@@ -3438,7 +3763,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-265] El yazması kitapları altın tozu ve boyalarla süsleme, yaldızlama sanatına ne ad verilir?
+### [GK-290] El yazması kitapları altın tozu ve boyalarla süsleme, yaldızlama sanatına ne ad verilir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Tezhip Sanatı
@@ -3451,7 +3776,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-266] Osmanlı döneminde kitapları süslemek için yapılan, gölgesiz ve derinliği olmayan küçük resim sanatına ne denir?
+### [GK-291] Osmanlı döneminde kitapları süslemek için yapılan, gölgesiz ve derinliği olmayan küçük resim sanatına ne denir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Minyatür
@@ -3464,7 +3789,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-267] Toprağın pişirilip özel renkli sırlarla kaplanmasıyla yapılan, tabak ve duvar karolarını süsleyen seramik sanatı?
+### [GK-292] Toprağın pişirilip özel renkli sırlarla kaplanmasıyla yapılan, tabak ve duvar karolarını süsleyen seramik sanatı?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Çini Sanatı
@@ -3477,7 +3802,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-268] Hazırcevaplığı ve eşeğe ters binmesiyle tanınan, fıkralarıyla ders veren ünlü mizah ve bilgelik kahramanımız kimdir?
+### [GK-293] Hazırcevaplığı ve eşeğe ters binmesiyle tanınan, fıkralarıyla ders veren ünlü mizah ve bilgelik kahramanımız kimdir?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Nasreddin Hoca
@@ -3490,7 +3815,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-269] Zor durumdaki insanların yardımına koşan, saçsız ve zeki masal kahramanımız kimdir?
+### [GK-294] Zor durumdaki insanların yardımına koşan, saçsız ve zeki masal kahramanımız kimdir?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Keloğlan
@@ -3503,7 +3828,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-270] Oğuz Türklerinin kahramanlık hikayelerini, adetlerini ve dini değerlerini anlatan meşhur destansı eserin bilge yazarı?
+### [GK-295] Oğuz Türklerinin kahramanlık hikayelerini, adetlerini ve dini değerlerini anlatan meşhur destansı eserin bilge yazarı?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Dede Korkut
@@ -3516,7 +3841,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-271] Anadolu'da Türkçe şiirin öncüsü olan, 'Sevelim sevilelim' sözüyle sevgi ve hoşgörüyü yayan tasavvuf şairi kimdir?
+### [GK-296] Anadolu'da Türkçe şiirin öncüsü olan, 'Sevelim sevilelim' sözüyle sevgi ve hoşgörüyü yayan tasavvuf şairi kimdir?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Yunus Emre
@@ -3529,7 +3854,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-272] Konya'da yaşayan, 'Gel, ne olursan ol, yine gel' sözüyle tüm insanlığı sevgiye çağıran büyük İslam mutasavvıfı?
+### [GK-297] Konya'da yaşayan, 'Gel, ne olursan ol, yine gel' sözüyle tüm insanlığı sevgiye çağıran büyük İslam mutasavvıfı?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Mevlana Celaleddin Rumi
@@ -3542,7 +3867,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-273] Osmanlı döneminde sarayda ve şehirlerde çalınan, makamlara dayanan geleneksel Türk müziği türüne ne denir?
+### [GK-298] Osmanlı döneminde sarayda ve şehirlerde çalınan, makamlara dayanan geleneksel Türk müziği türüne ne denir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Klasik Türk Musikisi
@@ -3555,7 +3880,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-274] Anadolu halkının bağlama (saz) eşliğinde söylediği, yöresel hikayeleri anlatan ezgilere ne ad verilir?
+### [GK-299] Anadolu halkının bağlama (saz) eşliğinde söylediği, yöresel hikayeleri anlatan ezgilere ne ad verilir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Türkü
@@ -3568,7 +3893,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-275] Geleneksel Türk müzik aletlerinden olan, kamıştan yapılan ve üflenerek çalınan tasavvufi çalgı hangisidir?
+### [GK-300] Geleneksel Türk müzik aletlerinden olan, kamıştan yapılan ve üflenerek çalınan tasavvufi çalgı hangisidir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Ney
@@ -3581,7 +3906,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-276] Karadeniz bölgesine özgü, yayla şenliklerinde çalınan yaylı ve küçük telli çalgı hangisidir?
+### [GK-301] Karadeniz bölgesine özgü, yayla şenliklerinde çalınan yaylı ve küçük telli çalgı hangisidir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Kemençe
@@ -3594,7 +3919,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-277] Doğu Karadeniz yaylalarında keçi derisinden yapılan ve üflenerek çalınan geleneksel çalgı hangisidir?
+### [GK-302] Doğu Karadeniz yaylalarında keçi derisinden yapılan ve üflenerek çalınan geleneksel çalgı hangisidir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Tulum
@@ -3607,7 +3932,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-278] Geleneksel Türk tiyatrosunda, tek bir sanatçının taklitler yaparak hikaye anlattığı tek kişilik oyuna ne denir?
+### [GK-303] Geleneksel Türk tiyatrosunda, tek bir sanatçının taklitler yaparak hikaye anlattığı tek kişilik oyuna ne denir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Meddah
@@ -3620,7 +3945,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-279] Geleneksel Türk tiyatrosunda sahnede canlı oyuncularla oynanan, Kavuklu ve Pişekar'ın başrol olduğu tür?
+### [GK-304] Geleneksel Türk tiyatrosunda sahnede canlı oyuncularla oynanan, Kavuklu ve Pişekar'ın başrol olduğu tür?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Orta Oyunu
@@ -3633,7 +3958,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-280] Dünyanın en eski askeri bandosu olan, Osmanlı ordusuna moral vermek için çalınan müzik topluluğu nedir?
+### [GK-305] Dünyanın en eski askeri bandosu olan, Osmanlı ordusuna moral vermek için çalınan müzik topluluğu nedir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Mehter Takımı
@@ -3646,7 +3971,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-281] Ramazan aylarında oruç tutanları sahura kaldırmak için sokaklarda dolaşıp maniler söyleyen görevli kimdir?
+### [GK-306] Ramazan aylarında oruç tutanları sahura kaldırmak için sokaklarda dolaşıp maniler söyleyen görevli kimdir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Ramazan Davulcusu
@@ -3659,7 +3984,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-282] Edebiyatta sözlerin kulağa hoş gelecek şekilde dizildiği, kafiyeli yazılış biçimine ne ad verilir?
+### [GK-307] Edebiyatta sözlerin kulağa hoş gelecek şekilde dizildiği, kafiyeli yazılış biçimine ne ad verilir?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Şiir
@@ -3672,7 +3997,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-283] Ramazan ayında camilerde iki minare arasına asılan ışıklı yazı ve resimli panolara ne ad verilir?
+### [GK-308] Ramazan ayında camilerde iki minare arasına asılan ışıklı yazı ve resimli panolara ne ad verilir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Mahya
@@ -3685,7 +4010,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-284] Fıkralarıyla Karadeniz insanının zekasını ve neşesini temsil eden mizahi karakter kimdir?
+### [GK-309] Fıkralarıyla Karadeniz insanının zekasını ve neşesini temsil eden mizahi karakter kimdir?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Temel
@@ -3698,7 +4023,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-285] Osmanlı padişahlarının el yazısıyla yazdığı resmi emir ve fermanlara ne ad verilir?
+### [GK-310] Osmanlı padişahlarının el yazısıyla yazdığı resmi emir ve fermanlara ne ad verilir?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Hatt-ı Hümayun
@@ -3711,7 +4036,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-286] Kabe'nin ve Mescid-i Nebevi'nin bulunduğu kutsal şehirlerin temizliği ve güvenliği için gönderilen Osmanlı birliğine ne denirdi?
+### [GK-311] Kabe'nin ve Mescid-i Nebevi'nin bulunduğu kutsal şehirlerin temizliği ve güvenliği için gönderilen Osmanlı birliğine ne denirdi?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Surre Alayı
@@ -3724,7 +4049,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-287] Kitapların dış kabını ve sayfalarını korumak için yapılan deri veya karton kaplama sanatına ne denir?
+### [GK-312] Kitapların dış kabını ve sayfalarını korumak için yapılan deri veya karton kaplama sanatına ne denir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Cilt Sanatı
@@ -3737,7 +4062,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-288] Dünyanın en zengin tarihi arşivlerinden olan, Osmanlı devletinin tüm resmi belgelerini koruyan merkez hangisidir?
+### [GK-313] Dünyanın en zengin tarihi arşivlerinden olan, Osmanlı devletinin tüm resmi belgelerini koruyan merkez hangisidir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Devlet Arşivleri (Osmanlı Arşivi)
@@ -3750,7 +4075,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-289] Müslümanların bilim, sanat ve felsefe eserlerini tercüme edip geliştirmek için Bağdat'ta kurduğu ünlü akademi hangisidir?
+### [GK-314] Müslümanların bilim, sanat ve felsefe eserlerini tercüme edip geliştirmek için Bağdat'ta kurduğu ünlü akademi hangisidir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Beytülhikme (Bilgelik Evi)
@@ -3763,7 +4088,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-290] Masal kahramanımız Keloğlan'ın masallardaki en yakın aile ferdi (sırdaşı ve destekçisi) kimdir?
+### [GK-315] Masal kahramanımız Keloğlan'ın masallardaki en yakın aile ferdi (sırdaşı ve destekçisi) kimdir?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Anası (Keloğlan'ın Anası)
@@ -3776,7 +4101,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-291] Gölge oyununda Karagöz'ün geçimini sağlamak için yaptığı genel işler ve karakter özelliği nedir?
+### [GK-316] Gölge oyununda Karagöz'ün geçimini sağlamak için yaptığı genel işler ve karakter özelliği nedir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) İşsiz, ne bulursa yapan ve dobra bir halk adamı
@@ -3789,7 +4114,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-292] Gölge oyununda Hacivat'ın genel karakter özelliği ve mesleki duruşu nedir?
+### [GK-317] Gölge oyununda Hacivat'ın genel karakter özelliği ve mesleki duruşu nedir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Yarı aydın, düzenbaz ve arabulucu
@@ -3802,7 +4127,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-293] Nasreddin Hoca'nın meşhur fıkrasında göle ne mayaladığı anlatılır?
+### [GK-318] Nasreddin Hoca'nın meşhur fıkrasında göle ne mayaladığı anlatılır?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Yoğurt
@@ -3815,7 +4140,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-294] İstiklal Marşı'mızın ilk kelimesi (milletimize seslenen o meşhur kelime) hangisidir?
+### [GK-319] İstiklal Marşı'mızın ilk kelimesi (milletimize seslenen o meşhur kelime) hangisidir?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Korkma
@@ -3828,7 +4153,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-295] Geleneksel Türk müzik enstrümanlarından olan, telli ve mızrapla çalınan, yatay tahta çalgı hangisidir?
+### [GK-320] Geleneksel Türk müzik enstrümanlarından olan, telli ve mızrapla çalınan, yatay tahta çalgı hangisidir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Kanun
@@ -3841,7 +4166,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-296] Hat sanatında yazı yazmak için kullanılan, kamıştan yapılan özel kaleme ne ad verilir?
+### [GK-321] Hat sanatında yazı yazmak için kullanılan, kamıştan yapılan özel kaleme ne ad verilir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Celi Kalem (Cavi)
@@ -3854,7 +4179,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-297] Çini sanatında en çok kullanılan ve Türk çinisinin simgesi haline gelen parlak mavi renk hangisidir?
+### [GK-322] Çini sanatında en çok kullanılan ve Türk çinisinin simgesi haline gelen parlak mavi renk hangisidir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Turkuaz (Türk Mavisi)
@@ -3867,7 +4192,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-298] Keloğlan masallarında padişahın kızıyla evlenmek için Keloğlan'ın çözdüğü sorular ve engeller neyi temsil eder?
+### [GK-323] Keloğlan masallarında padişahın kızıyla evlenmek için Keloğlan'ın çözdüğü sorular ve engeller neyi temsil eder?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Kıvrak zeka, dürüstlük ve sabrı
@@ -3880,7 +4205,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-299] Yunus Emre'nin tüm şiirlerini bir araya getiren tarihi eserin genel adı nedir?
+### [GK-324] Yunus Emre'nin tüm şiirlerini bir araya getiren tarihi eserin genel adı nedir?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Divan
@@ -3893,7 +4218,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-300] Geleneksel ebru sanatında, boyaların su üzerinde açılmasını ve dibe çökmesini önleyen doğal madde hangisidir?
+### [GK-325] Geleneksel ebru sanatında, boyaların su üzerinde açılmasını ve dibe çökmesini önleyen doğal madde hangisidir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Öd (Sığır Ödü)
@@ -3906,7 +4231,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-301] Dede Korkut hikayelerinde geçen ve kopuz eşliğinde şiirler söyleyen bilge ozanlara ne denirdi?
+### [GK-326] Dede Korkut hikayelerinde geçen ve kopuz eşliğinde şiirler söyleyen bilge ozanlara ne denirdi?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Ozan (Aşık)
@@ -3919,7 +4244,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-302] Kaşgarlı Mahmud tarafından yazılan, ilk Türkçe sözlük ve dil ansiklopedisi olan eserin adı nedir?
+### [GK-327] Kaşgarlı Mahmud tarafından yazılan, ilk Türkçe sözlük ve dil ansiklopedisi olan eserin adı nedir?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Divan-ı Lügati't-Türk
@@ -3932,7 +4257,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-303] Yusuf Has Hacib tarafından yazılan, insana iki cihanda mutlu olmanın yolunu gösteren ilk Türkçe siyasetname?
+### [GK-328] Yusuf Has Hacib tarafından yazılan, insana iki cihanda mutlu olmanın yolunu gösteren ilk Türkçe siyasetname?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Kutadgu Bilig
@@ -3945,7 +4270,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-304] Edib Ahmed Yükneki tarafından 12. yüzyılda yazılan, ahlak ve erdem öğütleri içeren eserin adı nedir?
+### [GK-329] Edib Ahmed Yükneki tarafından 12. yüzyılda yazılan, ahlak ve erdem öğütleri içeren eserin adı nedir?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Atabetü'l-Hakayık
@@ -3958,7 +4283,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-305] Hoca Ahmed Yesevi'nin söylediği hikmetli şiirlerin toplandığı, tasavvuf edebiyatımızın ilk büyük eseri?
+### [GK-330] Hoca Ahmed Yesevi'nin söylediği hikmetli şiirlerin toplandığı, tasavvuf edebiyatımızın ilk büyük eseri?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Divan-ı Hikmet
@@ -3971,7 +4296,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-306] Karagöz gölge oyununda kadın kıyafetine girerek sahneye çıkan erkek karakterlere ne ad verilir?
+### [GK-331] Karagöz gölge oyununda kadın kıyafetine girerek sahneye çıkan erkek karakterlere ne ad verilir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Zenne
@@ -3984,7 +4309,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-307] Nasreddin Hoca meşhur fıkralarında genel olarak eşeğe nasıl biner?
+### [GK-332] Nasreddin Hoca meşhur fıkralarında genel olarak eşeğe nasıl biner?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Ters biner
@@ -3997,7 +4322,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-308] Karagöz gölge oyununun bir diğer adı olan ve Hacivat'ın tam adını taşıyan unvan nedir?
+### [GK-333] Karagöz gölge oyununun bir diğer adı olan ve Hacivat'ın tam adını taşıyan unvan nedir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Hacı İvaz (Hacı Evhad)
@@ -4010,7 +4335,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-309] İstiklal Marşı'mızı Mehmet Akif'in şiirine uygun olarak bugün söylediğimiz marş formunda besteleyen müzisyen kimdir?
+### [GK-334] İstiklal Marşı'mızı Mehmet Akif'in şiirine uygun olarak bugün söylediğimiz marş formunda besteleyen müzisyen kimdir?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Osman Zeki Üngör
@@ -4023,7 +4348,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-310] Sahneye çıkan ilk Türk kadın tiyatro oyuncusu olarak sanat tarihimize geçen isim kimdir?
+### [GK-335] Sahneye çıkan ilk Türk kadın tiyatro oyuncusu olarak sanat tarihimize geçen isim kimdir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Afife Jale
@@ -4036,7 +4361,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-311] Ebru sanatında su üzerinde açılan boyaların tamamının doğal yollarla elde edilen hangi boyalar olması esastır?
+### [GK-336] Ebru sanatında su üzerinde açılan boyaların tamamının doğal yollarla elde edilen hangi boyalar olması esastır?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Toprak ve Metal Oksit Boyalar
@@ -4049,7 +4374,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-312] Mimar Sinan'ın İstanbul'da inşa ettiği ve 'Kalfalık Eserim' dediği muazzam cami hangisidir?
+### [GK-337] Mimar Sinan'ın İstanbul'da inşa ettiği ve 'Kalfalık Eserim' dediği muazzam cami hangisidir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Süleymaniye Camii
@@ -4062,7 +4387,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-313] Mimar Sinan'ın 'Çıraklık Eserim' diyerek ilk büyük mimari başarısını sergilediği cami hangisidir?
+### [GK-338] Mimar Sinan'ın 'Çıraklık Eserim' diyerek ilk büyük mimari başarısını sergilediği cami hangisidir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Şehzade Camii
@@ -4075,7 +4400,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-314] Geleneksel Türk halı ve kilim dokumacılığında, ipleri sıkıştırmak için kullanılan tarak benzeri metal veya tahta araca ne denir?
+### [GK-339] Geleneksel Türk halı ve kilim dokumacılığında, ipleri sıkıştırmak için kullanılan tarak benzeri metal veya tahta araca ne denir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Kirkit
@@ -4088,7 +4413,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-315] Türk çini ve seramik sanatında hamurlar şekillendirilip boyandıktan sonra fırınlama işlemi yaklaşık kaç derecede yapılır?
+### [GK-340] Türk çini ve seramik sanatında hamurlar şekillendirilip boyandıktan sonra fırınlama işlemi yaklaşık kaç derecede yapılır?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) 900 - 1000 Derece
@@ -4101,7 +4426,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-316] Geleneksel Türk kültüründe çayın rengini ve sıcaklığını en iyi koruyan bardak şekli hangisidir?
+### [GK-341] Geleneksel Türk kültüründe çayın rengini ve sıcaklığını en iyi koruyan bardak şekli hangisidir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) İnce belli bardak
@@ -4114,7 +4439,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-317] İstanbul'un manevi fatihi kabul edilen, Fatih Sultan Mehmet'in de hocası olan ünlü tıp ve tasavvuf bilgini?
+### [GK-342] İstanbul'un manevi fatihi kabul edilen, Fatih Sultan Mehmet'in de hocası olan ünlü tıp ve tasavvuf bilgini?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Akşemseddin
@@ -4127,7 +4452,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-318] Mevlana Celaleddin Rumi'nin hayatını değiştiren, onun gönül dünyasını aydınlanan tasavvuf yoldaşı kimdir?
+### [GK-343] Mevlana Celaleddin Rumi'nin hayatını değiştiren, onun gönül dünyasını aydınlanan tasavvuf yoldaşı kimdir?
 * **Kategori:** Genel Kültür - Tarih
 * **Şıklar:**
   - A) Şems-i Tebrizi
@@ -4140,7 +4465,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-319] Anadolu'nun manevi mimarlarından Hacı Bektaş Veli'nin ahlak, iman ve tasavvuf esaslarını anlatan ünlü eseri?
+### [GK-344] Anadolu'nun manevi mimarlarından Hacı Bektaş Veli'nin ahlak, iman ve tasavvuf esaslarını anlatan ünlü eseri?
 * **Kategori:** Genel Kültür - Kültür Edebiyat
 * **Şıklar:**
   - A) Makalat
@@ -4153,7 +4478,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-320] Geleneksel gölge oyununun (Karagöz ve Hacivat) oynatıldığı beyaz perdeye ne ad verilir?
+### [GK-345] Geleneksel gölge oyununun (Karagöz ve Hacivat) oynatıldığı beyaz perdeye ne ad verilir?
 * **Kategori:** Genel Kültür - Kültür Sanat
 * **Şıklar:**
   - A) Küşteri Meydanı (Ayna)
@@ -4166,7 +4491,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-321] Aşağıdakilerden hangisi hadesten temizlenme yolu değildir?
+### [GK-346] Aşağıdakilerden hangisi hadesten temizlenme yolu değildir?
 * **Kategori:** Genel Kültür - İBADET
 * **Şıklar:**
   - A) Abdest almak
@@ -4179,7 +4504,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-322] Şüphesiz Allah çok tövbe edenleri, çok temizlenenleri sever ayeti aşağıdaki ibadetlerden hangisine dikkat çekmektedir?
+### [GK-347] Şüphesiz Allah çok tövbe edenleri, çok temizlenenleri sever ayeti aşağıdaki ibadetlerden hangisine dikkat çekmektedir?
 * **Kategori:** Genel Kültür - İBADET
 * **Şıklar:**
   - A) Namaz
@@ -4192,7 +4517,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-323] Kişinin kalbini ve benliğini, yalan, kibir, haset, gıybet ve benzeri bütün kötülük, günah ve çirkinliklerden arındırması hangi temizlik çeşidine girer?
+### [GK-348] Kişinin kalbini ve benliğini, yalan, kibir, haset, gıybet ve benzeri bütün kötülük, günah ve çirkinliklerden arındırması hangi temizlik çeşidine girer?
 * **Kategori:** Genel Kültür - İBADET
 * **Şıklar:**
   - A) Manevi temizlik
@@ -4205,7 +4530,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-324] Nefsini arındıran kurtuluşa ermiştir ayeti hangi temizliğe vurgu yapar?
+### [GK-349] Nefsini arındıran kurtuluşa ermiştir ayeti hangi temizliğe vurgu yapar?
 * **Kategori:** Genel Kültür - İBADET
 * **Şıklar:**
   - A) Maddi Temizlik
@@ -4218,7 +4543,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-325] Abdestsizlik veya cünüplük sebebiyle dinimizce insanda meydana geldiği kabul edilen hükmi kirliliğe ne ad verilir?
+### [GK-350] Abdestsizlik veya cünüplük sebebiyle dinimizce insanda meydana geldiği kabul edilen hükmi kirliliğe ne ad verilir?
 * **Kategori:** Genel Kültür - İBADET
 * **Şıklar:**
   - A) Taharet
@@ -4231,7 +4556,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-326] Kişinin abdest veya gusül alarak yaptığı temizliğe ne ad verilir?
+### [GK-351] Kişinin abdest veya gusül alarak yaptığı temizliğe ne ad verilir?
 * **Kategori:** Genel Kültür - İBADET
 * **Şıklar:**
   - A) Taharet
@@ -4244,7 +4569,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-327] Aşağıdakilerden hangisi necaset değildir?
+### [GK-352] Aşağıdakilerden hangisi necaset değildir?
 * **Kategori:** Genel Kültür - İBADET
 * **Şıklar:**
   - A) Kan, insan idrari ve dışkısı
@@ -4257,7 +4582,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-328] Aşağıdaki eşleştirmelerden hangisi yanlıştır?
+### [GK-353] Aşağıdaki eşleştirmelerden hangisi yanlıştır?
 * **Kategori:** Genel Kültür - İBADET
 * **Şıklar:**
   - A) Hades - Hükmi temizlik
@@ -4270,7 +4595,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-329] Temizlik anlamına gelen kelime hangisidir?
+### [GK-354] Temizlik anlamına gelen kelime hangisidir?
 * **Kategori:** Genel Kültür - İBADET
 * **Şıklar:**
   - A) Necaset
@@ -4283,7 +4608,7 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 
 ---
 
-### [GK-330] Necaset denilen maddi pisliklerden ve hades denilen hükmi pisliklerden temizlenmeye ne ad verilir?
+### [GK-355] Necaset denilen maddi pisliklerden ve hades denilen hükmi pisliklerden temizlenmeye ne ad verilir?
 * **Kategori:** Genel Kültür - İBADET
 * **Şıklar:**
   - A) Kehanet
@@ -4297,1958 +4622,2904 @@ Bu liste, **Hikmet Atlası (Cennet Bahçesi)** uygulamasındaki tüm oyunlar ve 
 ---
 
 
-## 📖 BÖLÜM 2: DERS İÇERİKLERİ VE MÜFREDAT QUİZLERİ (157 Soru)
+## 📖 BÖLÜM 2: DERS İÇERİKLERİ VE MÜFREDAT QUİZLERİ
 
-### [MÜF-1] Peygamberimiz (s.a.v.) bir Hadis-i Şerif\
+### [MÜF-1] Peygamberimiz (s.a.v.) bir Hadis-i Şerif'te hangi durumda işlerin bereketsiz olacağını bildirmiştir?
+* **Ders:** 1. Hafta - Pazartesi - Kelime-i Tevhid ve Kelime-i Şehâdeti Öğreniyorum (Slayt 13)
 * **Şıklar:**
   - A) Akşam yemeği yemeyenlerin işleri bereketsiz olur
   - B) Besmele ile başlanmayan her iş bereketsizdir
   - C) Erken kalkmayan kişilerin işleri bereketsiz olur
   - D) Sadece cuma günleri çalışmayanların işleri bereketsiz olur
 * **Doğru Cevap:** Besmele ile başlanmayan her iş bereketsizdir
+* **Hikmet Notu / Açıklama:** *Harika! Doğru cevap. Peygamberimiz (s.a.v.) "Besmele ile başlanmayan her iş bereketsizdir" buyurarak her işe Bismillahirrahmanirrahim diyerek başlamamızı öğütlemiştir.*
+* **Soru ID:** `curr_q_w1_d1_l1_slide_12`
 
 ---
 
-### [MÜF-2] Öğrendiğimiz hadis-i şerife göre
+### [MÜF-2] Öğrendiğimiz hadis-i şerife göre 'Müslüman' kelimesinin tanımı aşağıdakilerden hangisidir?
+* **Ders:** 1. Hafta - Pazartesi - İslam'ın ve İmanın Esaslarını Öğreniyorum (Slayt 13)
 * **Şıklar:**
   - A) Sadece ibadet eden kişidir.
   - B) Elinden ve dilinden hiç kimsenin zarar görmediği kişidir.
   - C) Sadece kendi ülkesinde yaşayan kişidir.
   - D) Sürekli çalışan kişidir.
 * **Doğru Cevap:** Elinden ve dilinden hiç kimsenin zarar görmediği kişidir.
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Kitabımızda da belirtildiği gibi Peygamberimiz (s.a.s) müslümanı 'elinden ve dilinden hiç kimsenin zarar görmediği kişi' olarak tanımlamıştır.*
+* **Soru ID:** `curr_q_w1_d1_l2_slide_12`
 
 ---
 
 ### [MÜF-3] Sevgili Peygamberimizin yaptığı davranışlara, ahlâkına ve hayat modeline ne denir?
+* **Ders:** 1. Hafta - Salı - İbadetin Anlamını ve Çeşitlerini Öğreniyorum (Slayt 17)
 * **Şıklar:**
   - A) Farz
   - B) Sünnet
   - C) Helâl
   - D) Sevap
 * **Doğru Cevap:** Sünnet
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Sevgili Peygamberimizin söz ve davranışlarına, ahlâkına ve hayat modeline 'sünnet' denir.*
+* **Soru ID:** `curr_q_w1_d2_l1_slide_16`
 
 ---
 
-### [MÜF-4] Peygamber Efendimize (s.a.v)
+### [MÜF-4] Peygamber Efendimize (s.a.v) 'Muhammed' ismini kim vermiştir ve bu ismin anlamı nedir?
+* **Ders:** 1. Hafta - Çarşamba - Peygamberimizin Çocukluğu ve Gençliği - Bölüm 1 (Slayt 15)
 * **Şıklar:**
   - A) Babası Abdullah - Temiz kişi
   - B) Dedesi Abdülmuttalib - Övülen kişi
   - C) Amcası Ebu Talib - Lider kişi
   - D) Sütannesi Hz. Halime - Doğru kişi
 * **Doğru Cevap:** Dedesi Abdülmuttalib - Övülen kişi
+* **Hikmet Notu / Açıklama:** *Harika! Dedesi ona yerde ve gökte övülmesi için bu muazzam ismi vermiştir.*
+* **Soru ID:** `curr_q_w1_d3_l1_slide_14`
 
 ---
 
 ### [MÜF-5] Peygamber Efendimiz (s.a.v) doğmadan 2 ay önce vefat eden babasının adı ve 6 yaşında Ebva köyünde vefat eden annesinin adı sırasıyla hangisidir?
+* **Ders:** 1. Hafta - Çarşamba - Peygamberimizin Çocukluğu ve Gençliği - Bölüm 1 (Slayt 16)
 * **Şıklar:**
   - A) Ebu Talib / Hz. Halime
   - B) Haris / Hz. Şeyma
   - C) Abdullah / Hz. Âmine
   - D) Abdülmuttalib / Hz. Fatıma
 * **Doğru Cevap:** Abdullah / Hz. Âmine
+* **Hikmet Notu / Açıklama:** *Tebrikler! Babası Abdullah, annesi ise Hz. Âmine'dir.*
+* **Soru ID:** `curr_q_w1_d3_l1_slide_15`
 
 ---
 
-### [MÜF-6] Peygamber Efendimize (s.a.v) gençliğinde dürüstlüğü ve sır tutması sebebiyle Mekkeliler tarafından verilen ve
+### [MÜF-6] Peygamber Efendimize (s.a.v) gençliğinde dürüstlüğü ve sır tutması sebebiyle Mekkeliler tarafından verilen ve 'Güvenilir' anlamına gelen lakap nedir?
+* **Ders:** 1. Hafta - Çarşamba - Peygamberimizin Çocukluğu ve Gençliği - Bölüm 2 (Slayt 15)
 * **Şıklar:**
-  - A) Seyyidül-Mürselin
-  - B) Muhammedül-Emin
-  - C) Hatemül-Enbiya
-  - D) Ebul-Kasım
-* **Doğru Cevap:** Muhammedü
+  - A) Seyyidü'l-Mürselin
+  - B) Muhammedü'l-Emin
+  - C) Hatemü'l-Enbiya
+  - D) Ebu'l-Kasım
+* **Doğru Cevap:** Muhammedü'l-Emin
+* **Hikmet Notu / Açıklama:** *Mükemmel! Gençliğinde hiç yalan söylemediği için ona Güvenilir Muhammed anlamına gelen Muhammedü'l-Emin dediler.*
+* **Soru ID:** `curr_q_w1_d3_l2_slide_14`
 
 ---
 
 ### [MÜF-7] Peygamber Efendimizin (s.a.v) 8 yaşından 25 yaşına kadar evinde kaldığı ve onu koruyan amcası kimdir?
+* **Ders:** 1. Hafta - Çarşamba - Peygamberimizin Çocukluğu ve Gençliği - Bölüm 2 (Slayt 16)
 * **Şıklar:**
   - A) Abbas
   - B) Hz. Hamza (r.a)
   - C) Ebu Talib
   - D) Ebu Leheb
 * **Doğru Cevap:** Ebu Talib
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Amcası Ebu Talib ona canı gibi bakmış ve onu tüm kötülüklerden korumuştur.*
+* **Soru ID:** `curr_q_w1_d3_l2_slide_15`
 
 ---
 
-### [MÜF-8] Peygamber Efendimizin (s.a.v), Kâbe
+### [MÜF-8] Peygamber Efendimizin (s.a.v), Kâbe'nin onarımı sırasında Hacerü'l-Esved taşının yerleştirilmesi krizini örtü kullanarak barışçıl yolla çözmesine tarihte ne ad verilir?
+* **Ders:** 1. Hafta - Çarşamba - Peygamberimizin Çocukluğu ve Gençliği - Bölüm 3 (Slayt 16)
 * **Şıklar:**
   - A) Hicret
   - B) Veda Hutbesi
   - C) Kâbe Hakemliği
   - D) Boykot
 * **Doğru Cevap:** Kâbe Hakemliği
+* **Hikmet Notu / Açıklama:** *Mükemmel! Peygamber Efendimiz (s.a.v) aklı ve adaletiyle Kâbe Hakemliği yaparak büyük bir savaşı önlemiştir.*
+* **Soru ID:** `curr_q_w1_d3_l3_slide_15`
 
 ---
 
 ### [MÜF-9] Bir kişiyi diğer kişilerden ayıran dürüstlük, temizlik, paylaşma, şefkat, sabır veya cömertlik gibi özelliklerin tamamına ne ad verilir?
+* **Ders:** 1. Hafta - Perşembe - Ahlâk Nedir? - Bölüm I: Ahlâk Kavramı ve Toplum Huzuru (Slayt 7)
 * **Şıklar:**
   - A) Gelenek
   - B) Ahlâk
   - C) Özgüven
   - D) Trafik
 * **Doğru Cevap:** Ahlâk
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Bir kişinin taşıdığı tüm bu ahlaki özelliklerin adına ahlâk denir.*
+* **Soru ID:** `curr_q_w1_d4_l1_slide_6`
 
 ---
 
 ### [MÜF-10] Dürüst, güvenilir, paylaşımcı ve iyiliksever insanların yaşadığı bir toplumda aşağıdakilerden hangisi gerçekleşir?
+* **Ders:** 1. Hafta - Perşembe - Ahlâk Nedir? - Bölüm I: Ahlâk Kavramı ve Toplum Huzuru (Slayt 8)
 * **Şıklar:**
   - A) Herkes mutsuz ve huzursuz olur.
   - B) Herkes mutlu ve huzurlu olur.
   - C) İnsanlar birbirine güvenmez.
   - D) Barış ve kardeşlik bozulur.
 * **Doğru Cevap:** Herkes mutlu ve huzurlu olur.
+* **Hikmet Notu / Açıklama:** *Harika! Birbirlerine karşı dürüst olan ve iyilik yapan insanların toplumunda herkes mutlu ve huzurlu olur.*
+* **Soru ID:** `curr_q_w1_d4_l1_slide_7`
 
 ---
 
 ### [MÜF-11] Peygamber Efendimizin hadis-i şerifine göre bizim en hayırlımız kimdir?
+* **Ders:** 1. Hafta - Perşembe - Ahlâk Nedir? - Bölüm II: İslam Güzel Ahlâktır (Slayt 7)
 * **Şıklar:**
   - A) En güçlü olanımız
   - B) Ahlâkı en güzel olanımız
   - C) En hızlı koşanımız
   - D) Çok eşyası olanımız
 * **Doğru Cevap:** Ahlâkı en güzel olanımız
+* **Hikmet Notu / Açıklama:** *Mükemmel! Peygamberimiz 'Sizin en hayırlınız, ahlâkı en güzel olanınızdır' buyurarak bize hedefi göstermiştir.*
+* **Soru ID:** `curr_q_w1_d4_l2_slide_6`
 
 ---
 
 ### [MÜF-12] Peygamberimizin tavsiyesine göre, yemek başında besmele çekmeyi unutan biri hatırlayınca ne demelidir?
+* **Ders:** 1. Hafta - Perşembe - Ahlâk Nedir? - Bölüm III: Peygamberimizin Sünneti ve Sofra Adabı (Slayt 7)
 * **Şıklar:**
   - A) Elhamdülillah
   - B) Bismillahi fi evveli-hi ve ahirihi
   - C) Bismillah
   - D) Estagfirullah
 * **Doğru Cevap:** Bismillahi fi evveli-hi ve ahirihi
+* **Hikmet Notu / Açıklama:** *Harika! Yemek başında besmeleyi unutan kimse hatırlayınca 'Bismillahi fi evveli-hi ve ahirihi' demelidir.*
+* **Soru ID:** `curr_q_w1_d4_l3_slide_6`
 
 ---
 
-### [MÜF-13] İslam
+### [MÜF-13] İslam'ın giriş kapısı olan ve 'Allah'tan başka ilah yoktur, Hz. Muhammed O'nun elçisidir' anlamına gelen söz hangisidir?
+* **Ders:** 1. Hafta - Hafta Özeti - 1. Hafta Büyük Şampiyonluk Sınavı (Slayt 3)
 * **Şıklar:**
   - A) Kelime-i Şehadet
   - B) Kelime-i Tevhid
   - C) Besmele
   - D) Elhamdülillah
 * **Doğru Cevap:** Kelime-i Tevhid
+* **Hikmet Notu / Açıklama:** *Harika! Lâ ilâhe illallah Muhammedün Resûlullah sözü Kelime-i Tevhid'dir.*
+* **Soru ID:** `curr_q_w1_eval_l1_slide_2`
 
 ---
 
 ### [MÜF-14] Peygamberimiz bir hadis-i şerifinde hangi kelime ile başlanmayan her işin bereketsiz olacağını bildirmiştir?
+* **Ders:** 1. Hafta - Hafta Özeti - 1. Hafta Büyük Şampiyonluk Sınavı (Slayt 4)
 * **Şıklar:**
   - A) Sübhanallah
   - B) Elhamdülillah
   - C) Bismillahirrahmanirrahim
   - D) Allahu Ekber
 * **Doğru Cevap:** Bismillahirrahmanirrahim
+* **Hikmet Notu / Açıklama:** *Tebrikler! Besmele ile başlamak her işe Allah'ın adıyla ve bereketiyle başlamaktır.*
+* **Soru ID:** `curr_q_w1_eval_l1_slide_3`
 
 ---
 
-### [MÜF-15] Aşağıdakilerden hangisi İslam
+### [MÜF-15] Aşağıdakilerden hangisi İslam'ın 5 temel şartından biri DEĞİLDİR?
+* **Ders:** 1. Hafta - Hafta Özeti - 1. Hafta Büyük Şampiyonluk Sınavı (Slayt 5)
 * **Şıklar:**
   - A) Namaz Kılmak
   - B) Zekât Vermek
   - C) Oruç Tutmak
   - D) Meleklere İnanmak
 * **Doğru Cevap:** Meleklere İnanmak
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Meleklere inanmak İslam'ın değil, imanın 6 esasından biridir.*
+* **Soru ID:** `curr_q_w1_eval_l1_slide_4`
 
 ---
 
-### [MÜF-16] Allah
+### [MÜF-16] Allah'ın var olması, bir olması, her şeyi yaratması ve hiçbir şeye muhtaç olmamasını ifade eden, Allah'a inananları niteleyen kavram hangisidir?
+* **Ders:** 1. Hafta - Hafta Özeti - 1. Hafta Büyük Şampiyonluk Sınavı (Slayt 6)
 * **Şıklar:**
   - A) Sünnet
   - B) Tevhid İnancı
   - C) Ahlak
   - D) Kıble
 * **Doğru Cevap:** Tevhid İnancı
+* **Hikmet Notu / Açıklama:** *Mükemmel! Allah'ın bir ve tek olmasına, her şeyi yarattığına inanmak Tevhid inancıdır.*
+* **Soru ID:** `curr_q_w1_eval_l1_slide_5`
 
 ---
 
 ### [MÜF-17] Dinimizde kesin olarak yapılması istenen işlere farz denir. Peki, kesin olarak yapılması YASAKLANAN davranışlara ne ad verilir?
+* **Ders:** 1. Hafta - Hafta Özeti - 1. Hafta Büyük Şampiyonluk Sınavı (Slayt 7)
 * **Şıklar:**
   - A) Helal
   - B) Haram
   - C) Sevap
   - D) Sünnet
 * **Doğru Cevap:** Haram
+* **Hikmet Notu / Açıklama:** *Harika! Dinimizin yenilmesini, içilmesini veya yapılmasını yasakladığı şeylere haram denir.*
+* **Soru ID:** `curr_q_w1_eval_l1_slide_6`
 
 ---
 
 ### [MÜF-18] Camilerde imamın cemaate namaz kıldırdığı, kıble yönünde bulunan özel bölüme ne ad verilir?
+* **Ders:** 1. Hafta - Hafta Özeti - 1. Hafta Büyük Şampiyonluk Sınavı (Slayt 8)
 * **Şıklar:**
   - A) Minber
   - B) Şadırvan
   - C) Mihrap
   - D) Kürsü
 * **Doğru Cevap:** Mihrap
+* **Hikmet Notu / Açıklama:** *Doğru cevap! İmamın namaz kıldırdığı oyuk yapıya mihrap adı verilir.*
+* **Soru ID:** `curr_q_w1_eval_l1_slide_7`
 
 ---
 
 ### [MÜF-19] Ezanın sözlerini rüyasında görerek Peygamberimize anlatan ve ilk ezanın okunmasına vesile olan sahabi kimdir?
+* **Ders:** 1. Hafta - Hafta Özeti - 1. Hafta Büyük Şampiyonluk Sınavı (Slayt 9)
 * **Şıklar:**
   - A) Hz. Ebubekir
   - B) Abdullah bin Zeyd
   - C) Hz. Ömer
   - D) Hz. Ali
 * **Doğru Cevap:** Abdullah bin Zeyd
+* **Hikmet Notu / Açıklama:** *Tebrikler! Abdullah bin Zeyd rüyasında ezan sözlerini görmüş, Efendimiz de bu sözleri Bilal-i Habeşi'ye okutmuştur.*
+* **Soru ID:** `curr_q_w1_eval_l1_slide_8`
 
 ---
 
 ### [MÜF-20] Sevgili Peygamberimiz Hz. Muhammed (s.a.v.) hangi yıl ve ayda dünyaya gelmiştir?
+* **Ders:** 1. Hafta - Hafta Özeti - 1. Hafta Büyük Şampiyonluk Sınavı (Slayt 10)
 * **Şıklar:**
   - A) 610 yılı Ramazan
   - B) 571 yılı Nisan
   - C) 622 yılı Muharrem
   - D) 632 yılı Rebiülevvel
 * **Doğru Cevap:** 571 yılı Nisan
+* **Hikmet Notu / Açıklama:** *Mükemmel bildin! Peygamber Efendimiz 571 yılının Nisan ayında (20 Nisan) doğmuştur.*
+* **Soru ID:** `curr_q_w1_eval_l1_slide_9`
 
 ---
 
 ### [MÜF-21] Peygamberimizin annesi Hz. Âmine vefat ettikten sonra, 8 yaşına kadar ona kim bakmış ve korumuştur?
+* **Ders:** 1. Hafta - Hafta Özeti - 1. Hafta Büyük Şampiyonluk Sınavı (Slayt 11)
 * **Şıklar:**
   - A) Amcası Ebu Talib
   - B) Sütannesi Halime
   - C) Dedesi Abdülmuttalib
   - D) Dayısı
 * **Doğru Cevap:** Dedesi Abdülmuttalib
+* **Hikmet Notu / Açıklama:** *Harika! Annesinin vefatından sonra 8 yaşına kadar dedesi Abdülmuttalib ona kucak açmıştır.*
+* **Soru ID:** `curr_q_w1_eval_l1_slide_10`
 
 ---
 
 ### [MÜF-22] Peygamberimizin gençlik yıllarında, dürüstlüğü ve özü sözü bir olması sebebiyle Mekkeliler ona hangi lakabı vermişlerdir?
+* **Ders:** 1. Hafta - Hafta Özeti - 1. Hafta Büyük Şampiyonluk Sınavı (Slayt 12)
 * **Şıklar:**
-  - A) Ebul-Kasım
-  - B) Muhammedül-Emin
-  - C) Hatemül-Enbiya
+  - A) Ebu'l-Kasım
+  - B) Muhammedü'l-Emin
+  - C) Hatemü'l-Enbiya
   - D) Resulullah
-* **Doğru Cevap:** Muhammedü
+* **Doğru Cevap:** Muhammedü'l-Emin
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Mekkeliler ona güvenilirlik ve dürüstlüğünden dolayı 'Muhammedü'l-Emin' (Güvenilir Muhammed) demişlerdir.*
+* **Soru ID:** `curr_q_w1_eval_l1_slide_11`
 
 ---
 
-### [MÜF-23] Kabe
+### [MÜF-23] Kabe'nin onarımı sırasında Hacerü'l-Esved taşını yerine kimin koyacağı konusunda kavga çıkmıştı. Bu sorunu zekasıyla ve adaletiyle çözen (Kabe Hakemliği yapan) kimdir?
+* **Ders:** 1. Hafta - Hafta Özeti - 1. Hafta Büyük Şampiyonluk Sınavı (Slayt 13)
 * **Şıklar:**
   - A) Hz. Hamza
   - B) Ebu Talib
   - C) Hz. Muhammed (s.a.s)
   - D) Hz. Ebubekir
 * **Doğru Cevap:** Hz. Muhammed (s.a.s)
+* **Hikmet Notu / Açıklama:** *Tebrikler! Peygamberimiz bir örtü üzerine taşı koyarak tüm kabilelerin taşımasına izin vermiş ve büyük bir kavgayı önlemiştir.*
+* **Soru ID:** `curr_q_w1_eval_l1_slide_12`
 
 ---
 
 ### [MÜF-24] Kişiyi diğer insanlardan ayıran dürüstlük, temizlik, paylaşma, şefkat ve cömertlik gibi özelliklerin tamamına ne ad verilir?
+* **Ders:** 1. Hafta - Hafta Özeti - 1. Hafta Büyük Şampiyonluk Sınavı (Slayt 14)
 * **Şıklar:**
   - A) Kader
   - B) Ahlâk
   - C) İbadet
   - D) İtikad
 * **Doğru Cevap:** Ahlâk
+* **Hikmet Notu / Açıklama:** *Mükemmel! Bir insanın taşıdığı bu güzel özelliklerin tamamına ahlâk adı verilir.*
+* **Soru ID:** `curr_q_w1_eval_l1_slide_13`
 
 ---
 
-### [MÜF-25] Peygamber Efendimizin
+### [MÜF-25] Peygamber Efendimizin 'Sizin en hayırlınız...' şeklinde başlayan meşhur hadisinin devamı nasıldır?
+* **Ders:** 1. Hafta - Hafta Özeti - 1. Hafta Büyük Şampiyonluk Sınavı (Slayt 15)
 * **Şıklar:**
   - A) En çok parası olanınızdır
   - B) Ahlâkı en güzel olanınızdır
   - C) Çok gezeninizdir
   - D) En güçlü olanınızdır
 * **Doğru Cevap:** Ahlâkı en güzel olanınızdır
+* **Hikmet Notu / Açıklama:** *Harika! Efendimiz 'Sizin en hayırlınız, ahlâkı en güzel olanınızdır' buyurmuştur.*
+* **Soru ID:** `curr_q_w1_eval_l1_slide_14`
 
 ---
 
 ### [MÜF-26] Yemeğe besmele ile başlamak, suyu oturarak üç yudumda içmek ve yemeği sağ el ile yemek kimin sünnetidir?
+* **Ders:** 1. Hafta - Hafta Özeti - 1. Hafta Büyük Şampiyonluk Sınavı (Slayt 16)
 * **Şıklar:**
-  - A) Hz. Musanın
-  - B) Hz. İbrahimin
-  - C) Peygamberimiz Hz. Muhammedin
+  - A) Hz. Musa'nın
+  - B) Hz. İbrahim'in
+  - C) Peygamberimiz Hz. Muhammed'in
   - D) Sahabelerin
-* **Doğru Cevap:** Peygamberimiz Hz. Muhammed
+* **Doğru Cevap:** Peygamberimiz Hz. Muhammed'in
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Bunların hepsi Sevgili Peygamberimizin sofra adabında bizlere tavsiye ettiği harika sünnetlerdir.*
+* **Soru ID:** `curr_q_w1_eval_l1_slide_15`
 
 ---
 
 ### [MÜF-27] Bir insanın elinden ve dilinden hiç kimsenin zarar görmediği, güven veren insana dinimizde ne ad verilir?
+* **Ders:** 1. Hafta - Hafta Özeti - 1. Hafta Büyük Şampiyonluk Sınavı (Slayt 17)
 * **Şıklar:**
   - A) Muhacir
   - B) Müslüman
   - C) Ensar
   - D) Hafız
 * **Doğru Cevap:** Müslüman
+* **Hikmet Notu / Açıklama:** *Muhteşem bir kapanış! Peygamberimiz 'Müslüman, elinden ve dilinden hiç kimsenin zarar görmediği kişidir' buyurmuştur.*
+* **Soru ID:** `curr_q_w1_eval_l1_slide_16`
 
 ---
 
 ### [MÜF-28] Namaz kılınacak yerin, çevrenin ve giysilerin temiz olması anlamına gelen namaza hazırlık şartı hangisidir?
+* **Ders:** 2. Hafta - Salı - Namazın Farzlarını Öğreniyorum (Slayt 9)
 * **Şıklar:**
   - A) Hadesten Tahâret
   - B) Necasetten Tahâret
   - C) Setr-i Avret
   - D) İstikbal-i Kıble
 * **Doğru Cevap:** Necasetten Tahâret
+* **Hikmet Notu / Açıklama:** *Harika! Necasetten tahâret, maddi kirlerden arınmayı ifade eder ve bize çevre temizliği disiplini kazandırır.*
+* **Soru ID:** `curr_q_w2_d2_l1_slide_8`
 
 ---
 
 ### [MÜF-29] Abdest alırken kollardan sonra yapılan, ıslak eli başın üzerine sürmeyi ifade eden fıkhî hareket hangisidir?
+* **Ders:** 2. Hafta - Salı - Namazın Farzlarını Öğreniyorum - Abdest Nasıl Alınır? (Slayt 12)
 * **Şıklar:**
   - A) Gusül
   - B) Kıyam
   - C) Mesh etmek
   - D) Tahâret
 * **Doğru Cevap:** Mesh etmek
+* **Hikmet Notu / Açıklama:** *Tebrikler! Islak elle başın, kulakların ve boynun silinmesi hareketine fıkıhta mesh etmek denir.*
+* **Soru ID:** `curr_q_w2_d2_l2_slide_11`
 
 ---
 
 ### [MÜF-30] Aşağıdakilerden hangisi abdest alırken yapılması kesinlikle şart olan 4 farzdan biri DEĞİLDİR?
+* **Ders:** 2. Hafta - Salı - Namazsın Farzlarını Öğreniyorum-Abdestin Farzları, Gusül ve Teyemmüm Fıkhı (Slayt 22)
 * **Şıklar:**
   - A) Yüzü yıkamak
   - B) Ağzı su ile çalkalamak
   - C) Başını mesh etmek
   - D) Ayakları yıkamak
 * **Doğru Cevap:** Ağzı su ile çalkalamak
+* **Hikmet Notu / Açıklama:** *Tebrikler! Ağzı çalkalamak abdestin sünnetidir; yüzü, kolları, ayakları yıkamak ve başı mesh etmek ise farzdır.*
+* **Soru ID:** `curr_q_w2_d2_l3_slide_21`
 
 ---
 
 ### [MÜF-31] Gusül (boy) abdesti alırken ağza ve burna su verdikten sonra yapılması gereken üçüncü temel farz nedir?
+* **Ders:** 2. Hafta - Salı - Namazsın Farzlarını Öğreniyorum-Abdestin Farzları, Gusül ve Teyemmüm Fıkhı (Slayt 23)
 * **Şıklar:**
   - A) Sadece ayakları yıkamak
   - B) Bütün vücudu kuru yer kalmayacak şekilde yıkamak
   - C) Başın dörtte birini mesh etmek
   - D) Niyet edip beklemek
 * **Doğru Cevap:** Bütün vücudu kuru yer kalmayacak şekilde yıkamak
+* **Hikmet Notu / Açıklama:** *Harika! Guslün 3 farzı ağza su vermek, burna su vermek ve tüm vücudu tamamen yıkamaktır.*
+* **Soru ID:** `curr_q_w2_d2_l3_slide_22`
 
 ---
 
 ### [MÜF-32] Namaz kılarken ciddiyeti tamamen bozup yanındakilerin duyacağı kadar sesli gülmenin fıkhî sonucu nedir?
+* **Ders:** 2. Hafta - Salı - Namazsın Farzlarını Öğreniyorum-Abdestin Farzları, Gusül ve Teyemmüm Fıkhı (Slayt 24)
 * **Şıklar:**
   - A) Sadece namaz bozulur
   - B) Sadece abdest bozulur
   - C) Hem namaz hem abdest bozulur
   - D) Hiçbir şey bozulmaz
 * **Doğru Cevap:** Hem namaz hem abdest bozulur
+* **Hikmet Notu / Açıklama:** *Mükemmel bildin! Namazda sesli gülmek ibadetin ciddiyetini zedelediği için fıkhen hem namazı hem abdesti iptal eder.*
+* **Soru ID:** `curr_q_w2_d2_l3_slide_23`
 
 ---
 
 ### [MÜF-33] Teyemmüm abdesti almış bir mümin, namaza duracağı esnada aniden musluktan suların aktığını duyarsa ne yapmalıdır?
+* **Ders:** 2. Hafta - Salı - Namazsın Farzlarını Öğreniyorum-Abdestin Farzları, Gusül ve Teyemmüm Fıkhı (Slayt 25)
 * **Şıklar:**
   - A) Teyemmümle namaza devam etmelidir
-  - B) Teyemmümü bozulmuştur
-  - C) suyla normal abdest almalıdır
-  - D) Namazı kazaya bırakmalıdır
-  - -) Toprağa bir kez daha ellerini vurmalıdır
+  - B) Teyemmümü bozulmuştur, suyla normal abdest almalıdır
+  - C) Namazı kazaya bırakmalıdır
+  - D) Toprağa bir kez daha ellerini vurmalıdır
 * **Doğru Cevap:** Teyemmümü bozulmuştur, suyla normal abdest almalıdır
+* **Hikmet Notu / Açıklama:** *Muazzam! 'Suyu görünce teyemmüm bozulur' kuralı gereği, su imkanı doğduğu an teyemmüm biter ve suyla abdest alınır.*
+* **Soru ID:** `curr_q_w2_d2_l3_slide_24`
 
 ---
 
 ### [MÜF-34] Peygamber Efendimize (s.a.v) 610 yılı Ramazan ayında Hira mağarasındayken gelen ilk vahiy (ilk 5 ayet) hangi surenin ayetleridir?
+* **Ders:** 2. Hafta - Çarşamba - Peygamberimize İlk Vahyin Gelişi - Bölüm 1 (Slayt 15)
 * **Şıklar:**
   - A) Bakara Suresi
   - B) Yasin Suresi
   - C) Alak Suresi
   - D) İhlas Suresi
 * **Doğru Cevap:** Alak Suresi
+* **Hikmet Notu / Açıklama:** *Harika! Cebrail'in (a.s) getirdiği ilk ayetler 'Yaratan Rabbinin adıyla oku' diye başlayan Alak Suresinin ilk 5 ayetidir.*
+* **Soru ID:** `curr_q_w2_d3_l1_slide_14`
 
 ---
 
-### [MÜF-35] Cebrail
+### [MÜF-35] Cebrail'in (a.s) Hira mağarasında Peygamber Efendimize (s.a.v) söylediği ilk söz ve ilahi emir hangisidir?
+* **Ders:** 2. Hafta - Çarşamba - Peygamberimize İlk Vahyin Gelişi - Bölüm 1 (Slayt 16)
 * **Şıklar:**
   - A) Temizlen!
   - B) Yaz!
   - C) Uyan!
   - D) Oku!
 * **Doğru Cevap:** Oku!
+* **Hikmet Notu / Açıklama:** *Doğru cevap! İslam'ın ilk emri, karanlıkları ilimle aydınlatmak için 'OKU' olmuştur.*
+* **Soru ID:** `curr_q_w2_d3_l1_slide_15`
 
 ---
 
 ### [MÜF-36] Peygamber Efendimize (s.a.v) ilk vahiy geldiğinde eve gidip durumu anlattığı ve ona inanarak yeryüzündeki İLK Müslüman olan kişi kimdir?
+* **Ders:** 2. Hafta - Çarşamba - Peygamberimize İlk Vahyin Gelişi - Bölüm 2 (Slayt 15)
 * **Şıklar:**
   - A) Hz. Ebu Bekir (r.a)
   - B) Hz. Ali (r.a)
   - C) Hz. Hatice (r.anha)
   - D) Hz. Hamza (r.a)
 * **Doğru Cevap:** Hz. Hatice (r.anha)
+* **Hikmet Notu / Açıklama:** *Mükemmel! Peygamberimize ilk inanan ve tüm servetini bu yolda harcayan eşi Hz. Hatice'dir (r.anha).*
+* **Soru ID:** `curr_q_w2_d3_l2_slide_14`
 
 ---
 
-### [MÜF-37] Peygamber Efendimizin evinde büyüyen ve henüz 10 yaşındayken ona inanarak Müslüman olan
+### [MÜF-37] Peygamber Efendimizin evinde büyüyen ve henüz 10 yaşındayken ona inanarak Müslüman olan 'İlk Çocuk' sahabi kimdir?
+* **Ders:** 2. Hafta - Çarşamba - Peygamberimize İlk Vahyin Gelişi - Bölüm 2 (Slayt 16)
 * **Şıklar:**
   - A) Hz. Zeyd (r.a)
   - B) Hz. Ömer (r.a)
   - C) Hz. Hasan (r.a)
   - D) Hz. Ali (r.a)
 * **Doğru Cevap:** Hz. Ali (r.a)
+* **Hikmet Notu / Açıklama:** *Harika! Hz. Ali (r.a) çocuk yaşta büyük bir cesaret göstererek İslam'ı seçmiştir.*
+* **Soru ID:** `curr_q_w2_d3_l2_slide_15`
 
 ---
 
-### [MÜF-38] Peygamber Efendimizin (s.a.v) gizli davet döneminden sonra tüm Mekkelileri toplayarak İslam
+### [MÜF-38] Peygamber Efendimizin (s.a.v) gizli davet döneminden sonra tüm Mekkelileri toplayarak İslam'ı açıkça ilk kez ilan ettiği meşhur tepenin adı nedir?
+* **Ders:** 2. Hafta - Çarşamba - Peygamberimize İlk Vahyin Gelişi - Bölüm 3 (Slayt 15)
 * **Şıklar:**
   - A) Uhud Dağı
   - B) Sevr Dağı
   - C) Safa Tepesi
   - D) Nur Dağı
 * **Doğru Cevap:** Safa Tepesi
+* **Hikmet Notu / Açıklama:** *Harika! Efendimiz Safa Tepesine çıkarak tüm Kureyş'e Allah'ın birliğini haykırmıştır.*
+* **Soru ID:** `curr_q_w2_d3_l3_slide_14`
 
 ---
 
-### [MÜF-39] İslam
+### [MÜF-39] İslam'ın zorlu ilk yıllarında Müslüman olarak sahabelere büyük bir güç ve cesaret veren, Mekke'nin en güçlü yiğitlerinden olan iki amca/sahabi kimdir?
+* **Ders:** 2. Hafta - Çarşamba - Peygamberimize İlk Vahyin Gelişi - Bölüm 3 (Slayt 16)
 * **Şıklar:**
   - A) Hz. Hamza (r.a) ve Hz. Ömer (r.a)
   - B) Ebu Cehil ve Ebu Leheb
   - C) Ebu Süfyan ve Ebu Talib
   - D) Hz. Zeyd (r.a) ve Hz. Bilal (r.a)
 * **Doğru Cevap:** Hz. Hamza (r.a) ve Hz. Ömer (r.a)
+* **Hikmet Notu / Açıklama:** *Mükemmel! Bu iki yiğidin İslam'ı seçmesiyle Müslümanlar Mekke'de Kabe'de açıkça namaz kılabilmiştir.*
+* **Soru ID:** `curr_q_w2_d3_l3_slide_15`
 
 ---
 
-### [MÜF-40] Kur
+### [MÜF-40] Kur'an-ı Kerim'de belirtilen, Allah'ın çok sevdiği güzel davranışlardan biri hangisidir?
+* **Ders:** 2. Hafta - Perşembe - Sevgi ve Saygı - Bölüm III: Kıymet Bilme ve Soru Bulutları (Slayt 5)
 * **Şıklar:**
   - A) Alay etmek
   - B) Kötü lakap takmak
   - C) Yardımlaşmak ve sabretmek
   - D) İsraf etmek
 * **Doğru Cevap:** Yardımlaşmak ve sabretmek
+* **Hikmet Notu / Açıklama:** *Harika! Kur'an-ı Kerim'de yardımlaşan, iyilik yapan, sabreden ve adaletli olan kimseleri Allah'ın çok sevdiği açıkça bildirilmiştir.*
+* **Soru ID:** `curr_q_w2_d4_l3_slide_4`
 
 ---
 
-### [MÜF-41] Allah
+### [MÜF-41] Allah'ın zati sıfatlarından olan ve 'Varlığının başlangıcı olmaması' anlamına gelen sıfat hangisidir?
+* **Ders:** 2. Hafta - Hafta Özeti - 2. Hafta Büyük Şampiyonluk Sınavı (Slayt 3)
 * **Şıklar:**
   - A) Vücud
   - B) Beka
   - C) Kıdem
   - D) İlim
 * **Doğru Cevap:** Kıdem
+* **Hikmet Notu / Açıklama:** *Harika! Kıdem, Allah'ın varlığının bir başlangıcı olmaması demektir.*
+* **Soru ID:** `curr_q_w2_eval_l1_slide_2`
 
 ---
 
-### [MÜF-42] Allah
+### [MÜF-42] Allah'ın her şeyi, karanlık bir gecede siyah bir karıncayı bile kusursuzca görmesi anlamına gelen subuti sıfatı hangisidir?
+* **Ders:** 2. Hafta - Hafta Özeti - 2. Hafta Büyük Şampiyonluk Sınavı (Slayt 4)
 * **Şıklar:**
   - A) Basar
   - B) İrade
   - C) Semî
   - D) Kelam
 * **Doğru Cevap:** Basar
+* **Hikmet Notu / Açıklama:** *Tebrikler! Basar, Allah'ın her şeyi görmesi demektir.*
+* **Soru ID:** `curr_q_w2_eval_l1_slide_3`
 
 ---
 
 ### [MÜF-43] Dört büyük melekten biri olan ve tabiat olaylarını (yağmur, kar, rüzgar) düzenlemekle görevli melek kimdir?
+* **Ders:** 2. Hafta - Hafta Özeti - 2. Hafta Büyük Şampiyonluk Sınavı (Slayt 5)
 * **Şıklar:**
   - A) Azrail
   - B) Cebrail
   - C) Mikail
   - D) İsrafil
 * **Doğru Cevap:** Mikail
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Tabiat olaylarını Mikail (a.s.) düzenler.*
+* **Soru ID:** `curr_q_w2_eval_l1_slide_4`
 
 ---
 
-### [MÜF-44] Allah
+### [MÜF-44] Allah'ın emir ve vahiylerini peygamberlere ulaştırmakla görevli olan kutsal bilgi meleği kimdir?
+* **Ders:** 2. Hafta - Hafta Özeti - 2. Hafta Büyük Şampiyonluk Sınavı (Slayt 6)
 * **Şıklar:**
   - A) Cebrail
   - B) İsrafil
   - C) Azrail
   - D) Mikail
 * **Doğru Cevap:** Cebrail
+* **Hikmet Notu / Açıklama:** *Mükemmel! Vahiy meleği Cebrail'dir (a.s.).*
+* **Soru ID:** `curr_q_w2_eval_l1_slide_5`
 
 ---
 
-### [MÜF-45] Aşağıdakilerden hangisi namaza hazırlık şartlarından (namazın dışındaki farzlardan) biri olan
+### [MÜF-45] Aşağıdakilerden hangisi namaza hazırlık şartlarından (namazın dışındaki farzlardan) biri olan 'Necasetten Tahâret'in anlamıdır?
+* **Ders:** 2. Hafta - Hafta Özeti - 2. Hafta Büyük Şampiyonluk Sınavı (Slayt 7)
 * **Şıklar:**
   - A) Abdest almak
   - B) Kıbleye dönmek
   - C) Elbisenin ve namaz kılınacak yerin temiz olması
   - D) Vaktin girmesi
 * **Doğru Cevap:** Elbisenin ve namaz kılınacak yerin temiz olması
+* **Hikmet Notu / Açıklama:** *Harika! Necasetten tahâret, bedenin, elbisenin ve çevrenin kirlerden temizlenmesidir.*
+* **Soru ID:** `curr_q_w2_eval_l1_slide_6`
 
 ---
 
 ### [MÜF-46] Abdest alırken yapılması kesinlikle zorunlu olan 4 farzdan biri aşağıdakilerden hangisidir?
+* **Ders:** 2. Hafta - Hafta Özeti - 2. Hafta Büyük Şampiyonluk Sınavı (Slayt 8)
 * **Şıklar:**
   - A) Ağza su vermek
   - B) Burnu temizlemek
   - C) Yüzü yıkamak
   - D) Kulakları mesh etmek
 * **Doğru Cevap:** Yüzü yıkamak
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Ağız, burun ve kulaklar sünnettir; yüzü yıkamak ise abdestin 4 farzından biridir.*
+* **Soru ID:** `curr_q_w2_eval_l1_slide_7`
 
 ---
 
 ### [MÜF-47] Su bulunmadığında veya sağlık sebebiyle kullanılamadığında temiz toprakla alınan sembolik abdest çeşidine ne denir?
+* **Ders:** 2. Hafta - Hafta Özeti - 2. Hafta Büyük Şampiyonluk Sınavı (Slayt 9)
 * **Şıklar:**
   - A) Teyemmüm
   - B) Gusül
   - C) Kıyam
   - D) Vakfe
 * **Doğru Cevap:** Teyemmüm
+* **Hikmet Notu / Açıklama:** *Tebrikler! Su olmadığında temiz toprakla teyemmüm edilir, dinimiz kolaylık dinidir.*
+* **Soru ID:** `curr_q_w2_eval_l1_slide_8`
 
 ---
 
 ### [MÜF-48] Aşağıdaki durumlardan hangisi abdesti kesinlikle BOZAR?
+* **Ders:** 2. Hafta - Hafta Özeti - 2. Hafta Büyük Şampiyonluk Sınavı (Slayt 10)
 * **Şıklar:**
   - A) Tırnak kesmek
   - B) Namazda sesli gülmek
   - C) Ağlamak
   - D) Saç taramak
 * **Doğru Cevap:** Namazda sesli gülmek
+* **Hikmet Notu / Açıklama:** *Mükemmel bildin! Namazda yanındakinin duyacağı kadar sesli gülmek fıkhen abdesti bozar.*
+* **Soru ID:** `curr_q_w2_eval_l1_slide_9`
 
 ---
 
 ### [MÜF-49] Peygamber Efendimize (s.a.s) ilk vahiy, 610 yılı Ramazan ayında hangi mağarada gelmiştir?
+* **Ders:** 2. Hafta - Hafta Özeti - 2. Hafta Büyük Şampiyonluk Sınavı (Slayt 11)
 * **Şıklar:**
   - A) Sevr Mağarası
   - B) Hira Mağarası
   - C) Kuba
   - D) Arafat
 * **Doğru Cevap:** Hira Mağarası
+* **Hikmet Notu / Açıklama:** *Harika! İlk vahiy Nur Dağı'ndaki Hira mağarasında inmiştir.*
+* **Soru ID:** `curr_q_w2_eval_l1_slide_10`
 
 ---
 
-### [MÜF-50] Cebrail
+### [MÜF-50] Cebrail'in (a.s.) Peygamberimize getirdiği ilk ayetlerin (Alak Suresi) ilk emri nedir?
+* **Ders:** 2. Hafta - Hafta Özeti - 2. Hafta Büyük Şampiyonluk Sınavı (Slayt 12)
 * **Şıklar:**
   - A) Temizlen!
   - B) Yaz!
   - C) Oku!
   - D) Kalk!
 * **Doğru Cevap:** Oku!
+* **Hikmet Notu / Açıklama:** *Doğru cevap! İslam'ın ilk emri 'Yaratan Rabbinin adıyla Oku!' olmuştur.*
+* **Soru ID:** `curr_q_w2_eval_l1_slide_11`
 
 ---
 
 ### [MÜF-51] Peygamber Efendimize peygamberliği geldikten sonra ona inanan ve destek olan İLK Müslüman kimdir?
+* **Ders:** 2. Hafta - Hafta Özeti - 2. Hafta Büyük Şampiyonluk Sınavı (Slayt 13)
 * **Şıklar:**
   - A) Hz. Ali
   - B) Hz. Ebubekir
   - C) Hz. Hatice
   - D) Hz. Ömer
 * **Doğru Cevap:** Hz. Hatice
+* **Hikmet Notu / Açıklama:** *Tebrikler! İlk inanan ve ona en büyük desteği veren eşi Hz. Hatice olmuştur.*
+* **Soru ID:** `curr_q_w2_eval_l1_slide_12`
 
 ---
 
 ### [MÜF-52] İslam dininin insanlara kazandırdığı, bir kimseyi diğerlerinden ayıran paylaşma, şefkat ve dürüstlük gibi özelliklerin tümüne ne ad verilir?
+* **Ders:** 2. Hafta - Hafta Özeti - 2. Hafta Büyük Şampiyonluk Sınavı (Slayt 14)
 * **Şıklar:**
   - A) Haya
   - B) Ahlak
   - C) Kıssa
   - D) İhram
 * **Doğru Cevap:** Ahlak
+* **Hikmet Notu / Açıklama:** *Mükemmel! Bir insanın taşıdığı bu manevi özelliklerin tümüne ahlak denir.*
+* **Soru ID:** `curr_q_w2_eval_l1_slide_13`
 
 ---
 
-### [MÜF-53] Kur
+### [MÜF-53] Kur'an-ı Kerim'de (Hucurat Suresi 11. Ayet) insanların birbirlerine karşı yapması KESİN OLARAK yasaklanan kötü davranış hangisidir?
+* **Ders:** 2. Hafta - Hafta Özeti - 2. Hafta Büyük Şampiyonluk Sınavı (Slayt 15)
 * **Şıklar:**
   - A) Oyun oynamak
   - B) Alay etmek ve kötü lakap takmak
   - C) Soru sormak
   - D) Hediyeleşmek
 * **Doğru Cevap:** Alay etmek ve kötü lakap takmak
+* **Hikmet Notu / Açıklama:** *Harika! Dinimiz insanların onuruna değer verir, alay etmeyi ve kötü lakap takmayı yasaklar.*
+* **Soru ID:** `curr_q_w2_eval_l1_slide_14`
 
 ---
 
-### [MÜF-54] Peygamber Efendimizin hadisine göre;
+### [MÜF-54] Peygamber Efendimizin hadisine göre; 'İman etmedikçe cennete giremezsiniz, birbirinizi sevmedikçe de iman etmiş olmazsınız. Aranızda ... yayınız.' Boşluğa ne gelmelidir?
+* **Ders:** 2. Hafta - Hafta Özeti - 2. Hafta Büyük Şampiyonluk Sınavı (Slayt 16)
 * **Şıklar:**
   - A) Selamı
   - B) Malı
   - C) Dedikoduyu
   - D) Korkuyu
 * **Doğru Cevap:** Selamı
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Efendimiz sevginin ve imanın şartı olarak aramızda selamı yaymamızı emretmiştir.*
+* **Soru ID:** `curr_q_w2_eval_l1_slide_15`
 
 ---
 
-### [MÜF-55] Peygamberimizin
+### [MÜF-55] Peygamberimizin 'Beş şey gelmeden önce beş şeyin kıymetini bil' uyarısında hangisi YOKTUR?
+* **Ders:** 2. Hafta - Hafta Özeti - 2. Hafta Büyük Şampiyonluk Sınavı (Slayt 17)
 * **Şıklar:**
   - A) Ölüm gelmeden hayatın
   - B) İhtiyarlamadan önce gençliğin
   - C) Zengin olmadan önce fakirliğin
   - D) Hastalıktan önce sağlığın
 * **Doğru Cevap:** Zengin olmadan önce fakirliğin
+* **Hikmet Notu / Açıklama:** *Muhteşem bir kapanış! Hadisin doğrusu 'Yoksulluk gelmeden önce zenginliğin kıymetini bil' şeklindedir.*
+* **Soru ID:** `curr_q_w2_eval_l1_slide_16`
 
 ---
 
-### [MÜF-56] Kur
+### [MÜF-56] Kur'an-ı Kerim'in indirilmeye başlandığı mübarek geceye ne ad verilir?
+* **Ders:** 3. Hafta - Pazartesi - Kitaplara İnanıyorum - Bölüm 1: İlahi Kitaplar ve Kur'an-ı Kerim (Slayt 13)
 * **Şıklar:**
   - A) Berat Gecesi
   - B) Kadir Gecesi
   - C) Mevlid Gecesi
   - D) Regaib Gecesi
 * **Doğru Cevap:** Kadir Gecesi
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Kur'an-ı Kerim, 610 yılı Ramazan ayında Kadir Gecesi'nde indirilmeye başlanmıştır.*
+* **Soru ID:** `curr_q_w3_d1_l1_slide_12`
 
 ---
 
-### [MÜF-57] Hazreti Davud
+### [MÜF-57] Hazreti Davud'a (a.s.) indirilen ilahi kitabın adı nedir?
+* **Ders:** 3. Hafta - Pazartesi - Kitaplara İnanıyorum - Bölüm 1: İlahi Kitaplar ve Kur'an-ı Kerim (Slayt 14)
 * **Şıklar:**
   - A) Tevrat
   - B) İncil
   - C) Zebur
-  - D) Kuran-ı Kerim
+  - D) Kur'an-ı Kerim
 * **Doğru Cevap:** Zebur
+* **Hikmet Notu / Açıklama:** *Harika! Zebur, Hazreti Davud'a indirilmiş olan ilahi kitaptır.*
+* **Soru ID:** `curr_q_w3_d1_l1_slide_13`
 
 ---
 
-### [MÜF-58] Kur
+### [MÜF-58] Kur'an-ı Kerim'in vahiyle tamamlanması toplam kaç yıl sürmüştür?
+* **Ders:** 3. Hafta - Pazartesi - Kitaplara İnanıyorum - Bölüm 1: İlahi Kitaplar ve Kur'an-ı Kerim (Slayt 15)
 * **Şıklar:**
   - A) 10 Yıl
   - B) 23 Yıl
   - C) 40 Yıl
   - D) 610 Yıl
 * **Doğru Cevap:** 23 Yıl
+* **Hikmet Notu / Açıklama:** *Tebrikler! Vahiy meleği Cebrail'in Kur'an'ı bölümler halinde tamamlaması toplam 23 yıl sürmüştür.*
+* **Soru ID:** `curr_q_w3_d1_l1_slide_14`
 
 ---
 
-### [MÜF-59] Kur
+### [MÜF-59] Kur'an-ı Kerim'de yer alan öğüt verici hikayelere ne ad verilir?
+* **Ders:** 3. Hafta - Pazartesi - Kitaplara İnanıyorum - Bölüm 3: Kur'an Kıssaları: Hz. Nuh'un Gemisi (Slayt 14)
 * **Şıklar:**
   - A) Hadis
   - B) Sure
   - C) Aşır
   - D) Kıssa
 * **Doğru Cevap:** Kıssa
+* **Hikmet Notu / Açıklama:** *Tebrikler! Kıssa, Kur'an'da geçmiş peygamberlerin ve toplumların hayatından anlatılan öğüt verici hikayelerdir.*
+* **Soru ID:** `curr_q_w3_d1_l3_slide_13`
 
 ---
 
-### [MÜF-60] Hazreti Nuh
+### [MÜF-60] Hazreti Nuh'un putperest kavmi tufanda yok olurken kimler kurtulmuştur?
+* **Ders:** 3. Hafta - Pazartesi - Kitaplara İnanıyorum - Bölüm 3: Kur'an Kıssaları: Hz. Nuh'un Gemisi (Slayt 15)
 * **Şıklar:**
   - A) Zengin olanlar
   - B) Dağlara kaçanlar
   - C) Hz. Nuh ve iman edenler
   - D) Put yapanlar
 * **Doğru Cevap:** Hz. Nuh ve iman edenler
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Tufandan yalnızca Allah'ın emriyle yapılan gemiye binen Hz. Nuh ve iman edenler kurtulmuştur.*
+* **Soru ID:** `curr_q_w3_d1_l3_slide_14`
 
 ---
 
 ### [MÜF-61] Namaz kılarken fıkhî olarak göğüs kafesini kıble yönünden tamamen başka bir yöne çevirmenin sonucu nedir?
+* **Ders:** 3. Hafta - Salı - Namazın Kılınışı ve Namazı Bozan Durumlar (Ortaokul Hataları Özel) (Slayt 24)
 * **Şıklar:**
-  - A) Namaz bozulmaz
-  - B) sünnettir
-  - C) Namaz bozulur
-  - D) Sadece mekruh olur
-  - -) namaz devam eder
-  - -) Abdest bozulur
+  - A) Namaz bozulmaz, sünnettir
+  - B) Namaz bozulur
+  - C) Sadece mekruh olur, namaz devam eder
+  - D) Abdest bozulur
 * **Doğru Cevap:** Namaz bozulur
+* **Hikmet Notu / Açıklama:** *Tebrikler! Kıbleye yönelmek namazın farzı olduğu için, göğsü kıbleden çevirmek namazı anında bozar.*
+* **Soru ID:** `curr_q_w3_d2_l1_slide_23`
 
 ---
 
 ### [MÜF-62] Aşağıdaki durumlardan hangisi namaz kılarken hem namazın geçerliliğini hem de aldığımız abdesti tamamen iptal eder?
+* **Ders:** 3. Hafta - Salı - Namazın Kılınışı ve Namazı Bozan Durumlar (Ortaokul Hataları Özel) (Slayt 25)
 * **Şıklar:**
   - A) Namazda terlemek
   - B) Namazda yanındakilerin duyacağı kadar sesli gülmek
   - C) Göz ucuyla duvardaki saate bakmak
   - D) Namazda sure okumak
 * **Doğru Cevap:** Namazda yanındakilerin duyacağı kadar sesli gülmek
+* **Hikmet Notu / Açıklama:** *Mükemmel bildin! Namazda sesli gülmek huzurdaki ciddiyeti zedelediği için fıkhen hem abdesti hem namazı bozar.*
+* **Soru ID:** `curr_q_w3_d2_l1_slide_24`
 
 ---
 
 ### [MÜF-63] Yatsı namazından sonra kılınan, 3. rekatında rükûya gitmeden önce tekbir alınıp ayakta Kunut duaları okunan namaz hangisidir?
+* **Ders:** 3. Hafta - Salı - Beş Vakit Namazın Rekat Anatomisi ve Ahlaki Derinliği (Slayt 12)
 * **Şıklar:**
   - A) Sabah Namazı
   - B) Cuma Namazı
   - C) Vitir Namazı
   - D) Teravih Namazı
 * **Doğru Cevap:** Vitir Namazı
+* **Hikmet Notu / Açıklama:** *Harika! 3 rekat olan ve Kunut duaları okunan bu özel namaza Vitir namazı denir.*
+* **Soru ID:** `curr_q_w3_d2_l2_slide_11`
 
 ---
 
 ### [MÜF-64] Müslümanların haftalık bayramı olan Cuma gününde, öğle namazı vaktinde cemaatle kılınması farz olan namaz kaç rekattır?
+* **Ders:** 3. Hafta - Salı - Cemaatle Namaz - Sosyalleşme ve Toplumsal Bütünleşme (Slayt 10)
 * **Şıklar:**
   - A) 2 Rekat
   - B) 4 Rekat
   - C) 5 Rekat
   - D) 10 Rekat
 * **Doğru Cevap:** 10 Rekat
+* **Hikmet Notu / Açıklama:** *Mükemmel bildin! Cuma namazı, cemaatle kılınan ve hutbesiyle toplumu aydınlatan 10 rekatlık farz bir ibatettir.*
+* **Soru ID:** `curr_q_w3_d2_l3_slide_9`
 
 ---
 
-### [MÜF-65] Peygamber Efendimizin çok sevdiği eşi Hz. Hatice (r.anha) ve onu koruyan amcası Ebu Talib
+### [MÜF-65] Peygamber Efendimizin çok sevdiği eşi Hz. Hatice (r.anha) ve onu koruyan amcası Ebu Talib'in peş peşe vefat ettiği yıla İslam tarihinde ne ad verilir?
+* **Ders:** 3. Hafta - Çarşamba - Peygamberimizin Hicreti - Bölüm 1 (Slayt 15)
 * **Şıklar:**
   - A) Asr-ı Saadet
   - B) Boykot Yılı
   - C) Fil Yılı
   - D) Hüzün Yılı
 * **Doğru Cevap:** Hüzün Yılı
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Bu iki büyük kaybın yaşandığı yıla Senetü'l-Hüzün (Hüzün Yılı) denmiştir.*
+* **Soru ID:** `curr_q_w3_d3_l1_slide_14`
 
 ---
 
 ### [MÜF-66] Mekkelilerin suikast planı yaptığı gece, hem müşrikleri oyalamak hem de emanetleri sahiplerine teslim etmek için Peygamberimizin (s.a.v) kendi yatağına yatırdığı cesur sahabi kimdir?
+* **Ders:** 3. Hafta - Çarşamba - Peygamberimizin Hicreti - Bölüm 1 (Slayt 16)
 * **Şıklar:**
   - A) Hz. Ebu Bekir (r.a)
   - B) Hz. Ömer (r.a)
   - C) Hz. Ali (r.a)
   - D) Hz. Osman (r.a)
 * **Doğru Cevap:** Hz. Ali (r.a)
+* **Hikmet Notu / Açıklama:** *Tebrikler! Hz. Ali (r.a) büyük bir fedakarlık göstererek o gece Efendimizin yatağında yatmıştır.*
+* **Soru ID:** `curr_q_w3_d3_l1_slide_15`
 
 ---
 
-### [MÜF-67] Peygamber Efendimiz (s.a.v) ve Hz. Ebu Bekir
+### [MÜF-67] Peygamber Efendimiz (s.a.v) ve Hz. Ebu Bekir'in (r.a) Mekke'den ayrıldıktan sonra izlerini kaybettirmek için 3 gün boyunca saklandıkları yer neresidir?
+* **Ders:** 3. Hafta - Çarşamba - Peygamberimizin Hicreti - Bölüm 2 (Slayt 13)
 * **Şıklar:**
   - A) Hira Mağarası
   - B) Sevr Mağarası
   - C) Arafat Dağı
   - D) Kuba Köyü
 * **Doğru Cevap:** Sevr Mağarası
+* **Hikmet Notu / Açıklama:** *Harika! Sevr mağarası, hicret yolculuğunun en stratejik sığınağı olmuştur.*
+* **Soru ID:** `curr_q_w3_d3_l2_slide_12`
 
 ---
 
-### [MÜF-68] Mağarada saklanırken müşriklerin kapıya kadar geldiğini görüp endişelenen Hz. Ebu Bekir
+### [MÜF-68] Mağarada saklanırken müşriklerin kapıya kadar geldiğini görüp endişelenen Hz. Ebu Bekir'e (r.a), Peygamberimiz (s.a.v) hangi sözü söyleyerek onu teselli etmiştir?
+* **Ders:** 3. Hafta - Çarşamba - Peygamberimizin Hicreti - Bölüm 2 (Slayt 14)
 * **Şıklar:**
-  - A) Korkma
-  - B) bizi bulamazlar
-  - C) Sessiz ol
-  - D) duyacaklar
-  - -) Üzülme
-  - -) Allah bizimle beraberdir
-  - -) Hemen arka taraftan kaçalım
+  - A) Korkma, bizi bulamazlar
+  - B) Sessiz ol, duyacaklar
+  - C) Üzülme, Allah bizimle beraberdir
+  - D) Hemen arka taraftan kaçalım
 * **Doğru Cevap:** Üzülme, Allah bizimle beraberdir
+* **Hikmet Notu / Açıklama:** *Mükemmel! 'La tahzen innallahe meana' (Üzülme Allah bizimle beraberdir) sözü eşsiz bir tevekkül örneğidir.*
+* **Soru ID:** `curr_q_w3_d3_l2_slide_13`
 
 ---
 
-### [MÜF-69] Peygamber Efendimizin (s.a.v) Mekke
+### [MÜF-69] Peygamber Efendimizin (s.a.v) Mekke'den Medine'ye (622 yılında) yaptığı bu kutsal göç yolculuğuna İslam tarihinde ne ad verilir?
+* **Ders:** 3. Hafta - Çarşamba - Peygamberimizin Hicreti - Bölüm 3 (Slayt 15)
 * **Şıklar:**
   - A) Veda Haccı
   - B) Hicret
   - C) Miraç
   - D) İsra
 * **Doğru Cevap:** Hicret
+* **Hikmet Notu / Açıklama:** *Harika! Müslümanların inançları uğruna yurtlarını terk etmesine Hicret denir.*
+* **Soru ID:** `curr_q_w3_d3_l3_slide_14`
 
 ---
 
-### [MÜF-70] Peygamber Efendimizi Medine
+### [MÜF-70] Peygamber Efendimizi Medine'de evinde 7 ay boyunca misafir eden ve kabri şu an İstanbul'da bulunan meşhur sahabi kimdir?
+* **Ders:** 3. Hafta - Çarşamba - Peygamberimizin Hicreti - Bölüm 3 (Slayt 16)
 * **Şıklar:**
   - A) Ebu Eyyüb el-Ensarî (r.a)
   - B) Hz. Ebu Bekir (r.a)
   - C) Hz. Ömer (r.a)
   - D) Hz. Bilal-i Habeşi (r.a)
 * **Doğru Cevap:** Ebu Eyyüb el-Ensarî (r.a)
+* **Hikmet Notu / Açıklama:** *Mükemmel bildin! Ebu Eyyüb el-Ensarî (r.a), Efendimizin Medine'deki ilk ev sahibi olma şerefine erişmiştir.*
+* **Soru ID:** `curr_q_w3_d3_l3_slide_15`
 
 ---
 
 ### [MÜF-71] Sorumluluk bilinci yüksek olan bir mümin çocuk, kaynakları kullanırken özellikle hangi kötü davranıştan kesinlikle sakınır?
+* **Ders:** 3. Hafta - Perşembe - Sorumluluk Bilinci - Bölüm II: Sorumluluklarım ve Tutumluluk (Slayt 5)
 * **Şıklar:**
   - A) Şükretmekten
   - B) İsraf ve ciddiyetsizlikten
   - C) Temiz olmaktan
   - D) Düzenli yatmaktan
 * **Doğru Cevap:** İsraf ve ciddiyetsizlikten
+* **Hikmet Notu / Açıklama:** *Mükemmel! Sorumluluk sahibi çocuklar Allah'ın verdiği nimetlerin değerini bilir, ekmek ve su gibi kaynakları asla israf etmezler.*
+* **Soru ID:** `curr_q_w3_d4_l2_slide_4`
 
 ---
 
 ### [MÜF-72] Bir insanın arkasından, duyduğunda üzüleceği doğru bir özelliğini konuşmaya İslam ahlakında ne ad verilir?
+* **Ders:** 3. Hafta - Perşembe - Konuşma Ahlâkı ve Dilin Gücü (Slayt 13)
 * **Şıklar:**
   - A) Tebliğ
   - B) Gıybet
   - C) İsmet
   - D) Hatim
 * **Doğru Cevap:** Gıybet
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Bir kimsenin gıyabında, hoşlanmayacağı şeyleri konuşmak gıybet olarak adlandırılır ve kul hakkıdır.*
+* **Soru ID:** `curr_q_w3_d4_l3_slide_12`
 
 ---
 
 ### [MÜF-73] Bir insanda bulunmayan kötü bir niteliği veya suçu, onun üzerine asılsız olarak atmaya ne ad verilir?
+* **Ders:** 3. Hafta - Perşembe - Konuşma Ahlâkı ve Dilin Gücü (Slayt 14)
 * **Şıklar:**
   - A) Gıybet
   - B) Dedikodu
   - C) İftira
   - D) Sıdk
 * **Doğru Cevap:** İftira
+* **Hikmet Notu / Açıklama:** *Harika! Olmayan bir şeyi birine yükleyerek onu lekelemeye iftira denir ve büyük günahtır.*
+* **Soru ID:** `curr_q_w3_d4_l3_slide_13`
 
 ---
 
 ### [MÜF-74] Peygamber Efendimizin konuşma ahlakıyla ilgili müminlere getirdiği temel ölçü hangisidir?
+* **Ders:** 3. Hafta - Perşembe - Konuşma Ahlâkı ve Dilin Gücü (Slayt 15)
 * **Şıklar:**
   - A) Her zaman çok hızlı konuşmak
   - B) Ya hayır söylemek ya da susmak
   - C) Sadece kendi haklarını düşünmek
   - D) Kelimeleri aceleyle seçmek
 * **Doğru Cevap:** Ya hayır söylemek ya da susmak
+* **Hikmet Notu / Açıklama:** *Tebrikler! Efendimiz müminleri boş ve zararlı konuşmaktan korumak için 'Ya hayır söyle ya sus' ölçüsünü getirmiştir.*
+* **Soru ID:** `curr_q_w3_d4_l3_slide_14`
 
 ---
 
-### [MÜF-75] Allah tarafından Hz. Musa
+### [MÜF-75] Allah tarafından Hz. Musa'ya (a.s.) gönderilen ilahi kitabın adı nedir?
+* **Ders:** 3. Hafta - Hafta Özeti - 3. Hafta Büyük Şampiyonluk Sınavı (Slayt 2)
 * **Şıklar:**
   - A) Zebur
   - B) Tevrat
   - C) İncil
-  - D) Kuran-ı Kerim
+  - D) Kur'an-ı Kerim
 * **Doğru Cevap:** Tevrat
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Hz. Musa'ya Tevrat, Hz. Davud'a Zebur indirilmiştir.*
+* **Soru ID:** `curr_q_w3_eval_l1_slide_1`
 
 ---
 
-### [MÜF-76] Kur
+### [MÜF-76] Kur'an-ı Kerim'de yer alan ve toplam 114 adet olan bölümlere ne ad verilir?
+* **Ders:** 3. Hafta - Hafta Özeti - 3. Hafta Büyük Şampiyonluk Sınavı (Slayt 3)
 * **Şıklar:**
   - A) Ayet
   - B) Cüz
   - C) Sure
   - D) Hatim
 * **Doğru Cevap:** Sure
+* **Hikmet Notu / Açıklama:** *Harika! Kur'an'da 114 sure ve 6236 ayet bulunur.*
+* **Soru ID:** `curr_q_w3_eval_l1_slide_2`
 
 ---
 
-### [MÜF-77] Ramazan ayında Kur
+### [MÜF-77] Ramazan ayında Kur'an-ı Kerim'i bir kişinin yüksek sesle okuyup diğerlerinin sessizce takip etmesi geleneğine ne ad verilir?
+* **Ders:** 3. Hafta - Hafta Özeti - 3. Hafta Büyük Şampiyonluk Sınavı (Slayt 4)
 * **Şıklar:**
   - A) Aşır
   - B) Mukabele
   - C) Tavaf
   - D) Vakfe
 * **Doğru Cevap:** Mukabele
+* **Hikmet Notu / Açıklama:** *Tebrikler! Bu güzel ve bereketli geleneğe mukabele denir.*
+* **Soru ID:** `curr_q_w3_eval_l1_slide_3`
 
 ---
 
-### [MÜF-78] Allah
+### [MÜF-78] Allah'ın emriyle büyük bir gemi inşa eden ve inananları büyük tufandan kurtaran peygamber kimdir?
+* **Ders:** 3. Hafta - Hafta Özeti - 3. Hafta Büyük Şampiyonluk Sınavı (Slayt 5)
 * **Şıklar:**
   - A) Hz. Adem
   - B) Hz. İbrahim
   - C) Hz. Nuh
   - D) Hz. İsa
 * **Doğru Cevap:** Hz. Nuh
+* **Hikmet Notu / Açıklama:** *Mükemmel bildin! Hz. Nuh, kendisine inananlarla birlikte tufandan gemi sayesinde kurtulmuştur.*
+* **Soru ID:** `curr_q_w3_eval_l1_slide_4`
 
 ---
 
-### [MÜF-79] Namazın içindeki farzlardan biri olan, ayaktayken Kur
+### [MÜF-79] Namazın içindeki farzlardan biri olan, ayaktayken Kur'an-ı Kerim okumaya fıkıhta ne ad verilir?
+* **Ders:** 3. Hafta - Hafta Özeti - 3. Hafta Büyük Şampiyonluk Sınavı (Slayt 6)
 * **Şıklar:**
   - A) Kıyam
   - B) Rükû
   - C) Secde
   - D) Kıraat
 * **Doğru Cevap:** Kıraat
+* **Hikmet Notu / Açıklama:** *Doğru! Namazda ayakta durmaya kıyam, ayaktayken Kur'an okumaya ise kıraat denir.*
+* **Soru ID:** `curr_q_w3_eval_l1_slide_5`
 
 ---
 
 ### [MÜF-80] Günün en yoğun anında kılınan; 4 ilk sünnet, 4 farz ve 2 son sünnet olmak üzere toplam 10 rekat olan namaz hangisidir?
+* **Ders:** 3. Hafta - Hafta Özeti - 3. Hafta Büyük Şampiyonluk Sınavı (Slayt 7)
 * **Şıklar:**
   - A) Sabah Namazı
   - B) Öğle Namazı
   - C) İkindi Namazı
   - D) Akşam Namazı
 * **Doğru Cevap:** Öğle Namazı
+* **Hikmet Notu / Açıklama:** *Harika! Öğle namazı toplam 10 rekattır ve hayatın koşuşturmasında insana huzur verir.*
+* **Soru ID:** `curr_q_w3_eval_l1_slide_6`
 
 ---
 
-### [MÜF-81] Peygamberimizin
+### [MÜF-81] Peygamberimizin 'Tek başına kılınandan 27 kat daha sevaptır' dediği ibadet şekli hangisidir?
+* **Ders:** 3. Hafta - Hafta Özeti - 3. Hafta Büyük Şampiyonluk Sınavı (Slayt 8)
 * **Şıklar:**
   - A) Cemaatle namaz kılmak
   - B) Nafile oruç tutmak
   - C) Evde namaz kılmak
   - D) Zekat vermek
 * **Doğru Cevap:** Cemaatle namaz kılmak
+* **Hikmet Notu / Açıklama:** *Tebrikler! Cemaatle namaz kılmak hem sosyalleşmeyi sağlar hem de 27 kat daha sevaptır.*
+* **Soru ID:** `curr_q_w3_eval_l1_slide_7`
 
 ---
 
 ### [MÜF-82] Ramazan ayında yatsı namazından sonra cemaatle coşkuyla kılınan 20 rekatlık sünnet namazın adı nedir?
+* **Ders:** 3. Hafta - Hafta Özeti - 3. Hafta Büyük Şampiyonluk Sınavı (Slayt 9)
 * **Şıklar:**
   - A) Vitir
   - B) Bayram
   - C) Cuma
   - D) Teravih
 * **Doğru Cevap:** Teravih
+* **Hikmet Notu / Açıklama:** *Mükemmel! Teravih namazı Ramazan akşamlarının en güzel neşesidir.*
+* **Soru ID:** `curr_q_w3_eval_l1_slide_8`
 
 ---
 
-### [MÜF-83] Mekkelilerin boykotu sonrası Hz. Hatice ve Ebu Talib
+### [MÜF-83] Mekkelilerin boykotu sonrası Hz. Hatice ve Ebu Talib'in üst üste vefat ettiği o hüzünlü seneye İslam tarihinde ne ad verilir?
+* **Ders:** 3. Hafta - Hafta Özeti - 3. Hafta Büyük Şampiyonluk Sınavı (Slayt 10)
 * **Şıklar:**
   - A) Asr-ı Saadet
   - B) Hüzün Yılı
   - C) Fil Yılı
   - D) Kadir Gecesi
 * **Doğru Cevap:** Hüzün Yılı
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Bu iki büyük kaybın yaşandığı yıla Senetü'l-Hüzün (Hüzün Yılı) denmiştir.*
+* **Soru ID:** `curr_q_w3_eval_l1_slide_9`
 
 ---
 
-### [MÜF-84] Peygamberimiz ve Hz. Ebubekir
+### [MÜF-84] Peygamberimiz ve Hz. Ebubekir'in Medine'ye hicret ederken 3 gün boyunca saklandıkları ve Allah'ın onları koruduğu mağara hangisidir?
+* **Ders:** 3. Hafta - Hafta Özeti - 3. Hafta Büyük Şampiyonluk Sınavı (Slayt 11)
 * **Şıklar:**
   - A) Hira Mağarası
   - B) Sevr Mağarası
   - C) Kuba
   - D) Arafat
 * **Doğru Cevap:** Sevr Mağarası
+* **Hikmet Notu / Açıklama:** *Harika! Efendimiz Sevr Mağarasında Hz. Ebubekir'e 'Üzülme, Allah bizimle beraberdir' demiştir.*
+* **Soru ID:** `curr_q_w3_eval_l1_slide_10`
 
 ---
 
-### [MÜF-85] Müslümanların 622 yılında Mekke
+### [MÜF-85] Müslümanların 622 yılında Mekke'den Medine'ye göç etmesi olayına ne ad verilir?
+* **Ders:** 3. Hafta - Hafta Özeti - 3. Hafta Büyük Şampiyonluk Sınavı (Slayt 12)
 * **Şıklar:**
   - A) Hicret
   - B) Tavaf
   - C) Vakfe
   - D) İhram
 * **Doğru Cevap:** Hicret
+* **Hikmet Notu / Açıklama:** *Tebrikler! Bu büyük ve zorlu göç yolculuğuna Hicret denir.*
+* **Soru ID:** `curr_q_w3_eval_l1_slide_11`
 
 ---
 
 ### [MÜF-86] İslam dininin yeryüzündeki ilk mescidi, Peygamberimiz hicret ederken hangi köyde inşa edilmiştir?
+* **Ders:** 3. Hafta - Hafta Özeti - 3. Hafta Büyük Şampiyonluk Sınavı (Slayt 13)
 * **Şıklar:**
   - A) Mina
   - B) Müzdelife
   - C) Kuba
   - D) Taif
 * **Doğru Cevap:** Kuba
+* **Hikmet Notu / Açıklama:** *Mükemmel bildin! İslam'ın ilk mescidi Medine yakınlarındaki Kuba köyünde yapılmıştır.*
+* **Soru ID:** `curr_q_w3_eval_l1_slide_12`
 
 ---
 
 ### [MÜF-87] Kâinattaki güneşin, arıların veya bulutların görevlerini aksatmadan yerine getirmesi, insana hangi ahlaki erdemi hatırlatmalıdır?
+* **Ders:** 3. Hafta - Hafta Özeti - 3. Hafta Büyük Şampiyonluk Sınavı (Slayt 14)
 * **Şıklar:**
   - A) Kıskançlık
   - B) Sorumluluk Bilinci
   - C) Gıybet
   - D) Acelecilik
 * **Doğru Cevap:** Sorumluluk Bilinci
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Tabiat görevini aksatmazken akıl sahibi insanın sorumsuz davranması düşünülemez.*
+* **Soru ID:** `curr_q_w3_eval_l1_slide_13`
 
 ---
 
 ### [MÜF-88] Bir insanın arkasından, onun duyduğunda hoşlanmayacağı doğru bir özelliğini konuşarak kul hakkına girmeye ne ad verilir?
+* **Ders:** 3. Hafta - Hafta Özeti - 3. Hafta Büyük Şampiyonluk Sınavı (Slayt 15)
 * **Şıklar:**
   - A) İftira
   - B) Sıdk
   - C) Gıybet
   - D) Tebliğ
 * **Doğru Cevap:** Gıybet
+* **Hikmet Notu / Açıklama:** *Harika! Doğru bile olsa birinin arkasından hoşlanmayacağı şekilde konuşmak gıybettir.*
+* **Soru ID:** `curr_q_w3_eval_l1_slide_14`
 
 ---
 
-### [MÜF-89] Peygamber Efendimiz dil ahlakı konusunda
+### [MÜF-89] Peygamber Efendimiz dil ahlakı konusunda 'Allah'a ve ahiret gününe iman eden kimse, ya hayır söylesin ya da...' diyerek nasıl devam etmiştir?
+* **Ders:** 3. Hafta - Hafta Özeti - 3. Hafta Büyük Şampiyonluk Sınavı (Slayt 16)
 * **Şıklar:**
   - A) Sussun
   - B) Bağırsın
   - C) Gülmesin
   - D) Uyumusun
 * **Doğru Cevap:** Sussun
+* **Hikmet Notu / Açıklama:** *Muhteşem bir final! 'Ya hayır söyle ya sus' kuralı, dilimizi kötülüklerden koruyan en büyük kalkandır.*
+* **Soru ID:** `curr_q_w3_eval_l1_slide_15`
 
 ---
 
 ### [MÜF-90] Yeryüzüne gönderilen ilk insan ve ilk peygamber kimdir?
+* **Ders:** 4. Hafta - Pazartesi - Peygamberlere İnanıyorum - Bölüm 1: Peygamberlere İman (Slayt 7)
 * **Şıklar:**
   - A) Hazreti Nuh
   - B) Hazreti İbrahim
   - C) Hazreti Adem
   - D) Hazreti Musa
 * **Doğru Cevap:** Hazreti Adem
+* **Hikmet Notu / Açıklama:** *Doğru cevap! İlk insan ve ilk peygamber Hazreti Adem'dir.*
+* **Soru ID:** `curr_q_w4_d1_l1_slide_6`
 
 ---
 
 ### [MÜF-91] Bütün insanlara bir merhamet kaynağı, rehber ve müjdeci olarak gönderilen son peygamber kimdir?
+* **Ders:** 4. Hafta - Pazartesi - Peygamberlere İnanıyorum - Bölüm 1: Peygamberlere İman (Slayt 8)
 * **Şıklar:**
   - A) Hazreti İsa
   - B) Hazreti Muhammed (s.a.s)
   - C) Hazreti Davud
   - D) Hazreti Süleyman
 * **Doğru Cevap:** Hazreti Muhammed (s.a.s)
+* **Hikmet Notu / Açıklama:** *Harika! Son peygamber Sevgili Peygamberimiz Hazreti Muhammed'dir (s.a.s).*
+* **Soru ID:** `curr_q_w4_d1_l1_slide_7`
 
 ---
 
 ### [MÜF-92] Peygamberlerin son derece akıllı, zeki ve anlayışlı olmaları anlamına gelen özellik hangisidir?
+* **Ders:** 4. Hafta - Pazartesi - Peygamberlere İnanıyorum - Bölüm 2: Peygamberlerin Özellikleri (Slayt 9)
 * **Şıklar:**
   - A) Sıdk
   - B) Fetânet
   - C) İsmet
   - D) Tebliğ
 * **Doğru Cevap:** Fetânet
+* **Hikmet Notu / Açıklama:** *Harika! Fetânet, peygamberlerin üstün zekaya ve akla sahip olmaları demektir.*
+* **Soru ID:** `curr_q_w4_d1_l2_slide_8`
 
 ---
 
-### [MÜF-93] Hazreti Musa
+### [MÜF-93] Hazreti Musa'ya Firavun karşısında destek olması için kendisi gibi peygamber olarak görevlendirilen kardeşi kimdir?
+* **Ders:** 4. Hafta - Pazartesi - Peygamberlere İnanıyorum - Bölüm 3: Kur'an Kıssaları: Hz. Musa (Slayt 10)
 * **Şıklar:**
   - A) Hazreti İsa
   - B) Hazreti Harun
   - C) Hazreti Yusuf
   - D) Hazreti İdris
 * **Doğru Cevap:** Hazreti Harun
+* **Hikmet Notu / Açıklama:** *Tebrikler! Hazreti Harun, Hazreti Musa'nın kardeşi olup onunla birlikte Firavun'a tebliğe gitmiştir.*
+* **Soru ID:** `curr_q_w4_d1_l3_slide_9`
 
 ---
 
 ### [MÜF-94] Gecenin bitmesiyle birlikte yeme içmeyi kesip oruca başlama vaktini ifade eden terim hangisidir?
+* **Ders:** 4. Hafta - Salı - Oruç Tutuyorum - İbadetin Özü ve Ramazan İklimi (Slayt 19)
 * **Şıklar:**
   - A) İftar
   - B) İmsak
   - C) Sahur
   - D) Mukabele
 * **Doğru Cevap:** İmsak
+* **Hikmet Notu / Açıklama:** *Harika! İmsak, gecenin bitmesiyle birlikte oruca başlama zamanıdır.*
+* **Soru ID:** `curr_q_w4_d2_l1_slide_18`
 
 ---
 
 ### [MÜF-95] Aşağıdaki durumlardan hangisi namaz kılarken hem namazın geçerliliğini hem de aldığımız abdesti tamamen iptal eder?
+* **Ders:** 4. Hafta - Salı - Oruç Tutuyorum - İbadetin Özü ve Ramazan İklimi (Slayt 20)
 * **Şıklar:**
   - A) Namazda terlemek
   - B) Namazda yanındakilerin duyacağı kadar sesli gülmek
   - C) Göz ucuyla duvardaki saate bakmak
   - D) Namazda sure okumak
 * **Doğru Cevap:** Namazda yanındakilerin duyacağı kadar sesli gülmek
+* **Hikmet Notu / Açıklama:** *Mükemmel bildin! Namazda sesli gülmek huzurdaki ciddiyetini zedelediği için fıkhen hem abdesti hem namazı bozar.*
+* **Soru ID:** `curr_q_w4_d2_l1_slide_19`
 
 ---
 
 ### [MÜF-96] Ramazan ayında camilerde minareler arasına asılan ışıklı, anlamlı yazılara ne ad verilir?
+* **Ders:** 4. Hafta - Salı - Oruç Tutuyorum - Sahur Bereketinden Bayram Neşesine (Slayt 19)
 * **Şıklar:**
   - A) Kandil
   - B) Mahya
   - C) Mukabele
   - D) Fitre
 * **Doğru Cevap:** Mahya
+* **Hikmet Notu / Açıklama:** *Harika! Minareleri süsleyen o ışıklı güzel yazılara mahya adı verilir.*
+* **Soru ID:** `curr_q_w4_d2_l2_slide_18`
 
 ---
 
 ### [MÜF-97] Bayram gününden bir önceki, son hazırlıkların yapıldığı ve heyecanın dorukta olduğu güne ne ad verilir?
+* **Ders:** 4. Hafta - Salı - Oruç Tutuyorum - Sahur Bereketinden Bayram Neşesine (Slayt 20)
 * **Şıklar:**
   - A) İmsak
   - B) Kadir Gecesi
   - C) Arefe
   - D) Cuma
 * **Doğru Cevap:** Arefe
+* **Hikmet Notu / Açıklama:** *Mükemmel bildin! Bayramdan bir önceki kutsal güne arefe günü denir.*
+* **Soru ID:** `curr_q_w4_d2_l2_slide_19`
 
 ---
 
-### [MÜF-98] Allah
+### [MÜF-98] Allah'ın sevgisini ve rızasını kazanmak amacıyla yapılan her türlü güzel iyiliğe, yardıma ve ahlaki davranışa ne ad verilir?
+* **Ders:** 4. Hafta - Salı - Zekâtı Öğreniyorum - Paylaşmanın ve Sadakanın Gücü (Slayt 19)
 * **Şıklar:**
   - A) Nisap
   - B) Hades
   - C) Sadaka
   - D) Kıyam
 * **Doğru Cevap:** Sadaka
+* **Hikmet Notu / Açıklama:** *Mükemmel bildin! Sadaka, gülümsemeden maddi yardıma kadar uzanan çok geniş bir iyilik yelpazesidir.*
+* **Soru ID:** `curr_q_w4_d2_l3_slide_18`
 
 ---
 
-### [MÜF-99] İslam
+### [MÜF-99] İslam'ın beş şartından biri olan zekât ibadetiyle ilgili olarak aşağıda verilen fıkhî bilgilerden hangisi DOĞRUDUR?
+* **Ders:** 4. Hafta - Salı - Zekâtı Öğreniyorum - Paylaşmanın ve Sadakanın Gücü (Slayt 20)
 * **Şıklar:**
   - A) Zekât sadece fakirlerin yerine getirmesi gereken bir ibatettir
-  - B) Zekât
-  - C) cimriliği önleyen
-  - D) mal og para ile yapılan farz bir ibatettir
-  - -) Zekât vermek için akıllı olmak şart değildir
-  - -) Sadece namaz kılanlar zekât verebilir
+  - B) Zekât, cimriliği önleyen, mal og para ile yapılan farz bir ibatettir
+  - C) Zekât vermek için akıllı olmak şart değildir
+  - D) Sadece namaz kılanlar zekât verebilir
 * **Doğru Cevap:** Zekât, cimriliği önleyen, mal ve para ile yapılan farz bir ibatettir
+* **Hikmet Notu / Açıklama:** *Tebrikler! Zekât belirli şartları taşıyan zenginlerin malıyla yaptığı, toplumsal sevgiyi artıran harika bir farzdır.*
+* **Soru ID:** `curr_q_w4_d2_l3_slide_19`
 
 ---
 
-### [MÜF-100] İnançları uğruna her şeyini Mekke
+### [MÜF-100] İnançları uğruna her şeyini Mekke'de bırakıp Medine'ye göç eden fedakar Müslümanlara ne ad verilir?
+* **Ders:** 4. Hafta - Çarşamba - Peygamberimizin Medine Hayatı - Bölüm 1 (Slayt 13)
 * **Şıklar:**
   - A) Ensar
   - B) Sahabi
   - C) Muhacir
   - D) Hafız
 * **Doğru Cevap:** Muhacir
+* **Hikmet Notu / Açıklama:** *Harika! Göç eden, yurdunu terk eden anlamında onlara 'Muhacir' denilmiştir.*
+* **Soru ID:** `curr_q_w4_d3_l1_slide_12`
 
 ---
 
-### [MÜF-101] Medine
+### [MÜF-101] Medine'de yaşayıp, Mekke'den gelen Müslümanlara evini, bağını ve kalbini açarak onlara yardım eden Müslümanlara ne ad verilir?
+* **Ders:** 4. Hafta - Çarşamba - Peygamberimizin Medine Hayatı - Bölüm 1 (Slayt 14)
 * **Şıklar:**
   - A) Havariler
   - B) Muhacir
   - C) Kureyşliler
   - D) Ensar
 * **Doğru Cevap:** Ensar
+* **Hikmet Notu / Açıklama:** *Mükemmel! Yardım edenler, kucak açanlar anlamında onlara 'Ensar' denilmiştir.*
+* **Soru ID:** `curr_q_w4_d3_l1_slide_13`
 
 ---
 
-### [MÜF-102] Peygamber Efendimizin (s.a.v) Mescid-i Nebevi
+### [MÜF-102] Peygamber Efendimizin (s.a.v) Mescid-i Nebevi'nin yanına yaptırdığı, kimsesiz ve fakir gençlerin kalarak ilim öğrendikleri ilk İslam okulunun adı nedir?
+* **Ders:** 4. Hafta - Çarşamba - Peygamberimizin Medine Hayatı - Bölüm 2 (Slayt 15)
 * **Şıklar:**
   - A) Kuba
   - B) Suffe
-  - C) Darul Nedve
+  - C) Daru'l Nedve
   - D) Ravza
 * **Doğru Cevap:** Suffe
+* **Hikmet Notu / Açıklama:** *Harika! Ashab-ı Suffe (Suffe öğrencileri) gece gündüz Kur'an ve ilim öğrenen muazzam bir ekipti.*
+* **Soru ID:** `curr_q_w4_d3_l2_slide_14`
 
 ---
 
 ### [MÜF-103] Peygamberimizin (s.a.v) 630 yılında 10 bin kişilik bir orduyla kan dökmeden fethettiği ve putlardan temizlediği şehir hangisidir?
+* **Ders:** 4. Hafta - Çarşamba - Peygamberimizin Medine Hayatı - Bölüm 2 (Slayt 16)
 * **Şıklar:**
   - A) Taif
   - B) Kudüs
   - C) Medine
   - D) Mekke
 * **Doğru Cevap:** Mekke
+* **Hikmet Notu / Açıklama:** *Mükemmel! 630 yılında Mekke fethedilmiş ve genel af ilan edilerek kalpler kazanılmıştır.*
+* **Soru ID:** `curr_q_w4_d3_l2_slide_15`
 
 ---
 
-### [MÜF-104] Peygamber Efendimizin (s.a.v) 632 yılında Arafat
+### [MÜF-104] Peygamber Efendimizin (s.a.v) 632 yılında Arafat'ta 100 binden fazla Müslümana okuduğu ve insan haklarını dünyaya duyurduğu tarihi konuşmaya ne ad verilir?
+* **Ders:** 4. Hafta - Çarşamba - Peygamberimizin Medine Hayatı - Bölüm 3 (Slayt 13)
 * **Şıklar:**
   - A) Veda Hutbesi
   - B) Hicret
   - C) Cuma Hutbesi
   - D) Safa Daveti
 * **Doğru Cevap:** Veda Hutbesi
+* **Hikmet Notu / Açıklama:** *Harika! Veda Hutbesi, insanlık tarihinin en muazzam ve kapsayıcı insan hakları evrensel bildirgesidir.*
+* **Soru ID:** `curr_q_w4_d3_l3_slide_12`
 
 ---
 
-### [MÜF-105] Sevgili Peygamberimizin (s.a.v) vefatından sonra defnedildiği ve bugün Medine
+### [MÜF-105] Sevgili Peygamberimizin (s.a.v) vefatından sonra defnedildiği ve bugün Medine'de Mescid-i Nebevi'nin içinde bulunan 'Tertemiz Bahçe' anlamındaki kabrine ne ad verilir?
+* **Ders:** 4. Hafta - Çarşamba - Peygamberimizin Medine Hayatı - Bölüm 3 (Slayt 14)
 * **Şıklar:**
   - A) Kuba Mescidi
   - B) Ravza-i Mutahhara
   - C) Sevr Mağarası
   - D) Makam-ı İbrahim
 * **Doğru Cevap:** Ravza-i Mutahhara
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Ravza-i Mutahhara, Peygamberimizin yeşil kubbe altındaki mübarek kabridir.*
+* **Soru ID:** `curr_q_w4_d3_l3_slide_13`
 
 ---
 
-### [MÜF-106] İnsanın onurunu koruyan, kötülüklere karşı asil bir sınır çizmesini sağlayan ve İslam
+### [MÜF-106] İnsanın onurunu koruyan, kötülüklere karşı asil bir sınır çizmesini sağlayan ve İslam'ın özü olarak nitelendirilen karakter erdemi hangisidir?
+* **Ders:** 4. Hafta - Perşembe - Utanma (Haya) - Karakterin Asil Kalkanı (Slayt 9)
 * **Şıklar:**
   - A) Tebliğ
   - B) Haya (Utanma)
   - C) Fetânet
   - D) Kıdem
 * **Doğru Cevap:** Haya (Utanma)
+* **Hikmet Notu / Açıklama:** *Tebrikler! Haya, müminin onurunu koruyan ve kötülüklere set çeken çok güçlü bir manevi kalkandır.*
+* **Soru ID:** `curr_q_w4_d4_l1_slide_8`
 
 ---
 
 ### [MÜF-107] Peygamber Efendimizin (s.a.s.) haya duygusunun niteliğiyle ilgili buyurduğu temel ölçü aşağıdakilerden hangisidir?
+* **Ders:** 4. Hafta - Perşembe - Utanma (Haya) - Karakterin Asil Kalkanı (Slayt 10)
 * **Şıklar:**
   - A) Haya insanı çekingen yapar.
   - B) Haya bütünüyle hayırdır.
   - C) Haya sadece büyükler içindir.
   - D) Haya pasif kalmaktır.
 * **Doğru Cevap:** Haya bütünüyle hayırdır.
+* **Hikmet Notu / Açıklama:** *Harika! Efendimiz 'Haya bütünüyle hayırdır' buyurarak bu duygunun insana sadece güzellik getireceğini bildirmiştir.*
+* **Soru ID:** `curr_q_w4_d4_l1_slide_9`
 
 ---
 
 ### [MÜF-108] Hucurat Suresi 11. ayete göre, müminlerin birbirlerine karşı yapması kesin olarak yasaklanan dil ve ahlak kusuru hangisidir?
+* **Ders:** 4. Hafta - Perşembe - Alay Etme ve Akran Zorbalığı (Slayt 8)
 * **Şıklar:**
   - A) Güler yüz göstermek
   - B) Birbirini alaya almak ve kötü lakap takmak
   - C) Emanetleri korumak
   - D) Dürüst davranmak
 * **Doğru Cevap:** Birbirini alaya almak ve kötü lakap takmak
+* **Hikmet Notu / Açıklama:** *Harika! Ayet net bir şekilde müminlerin birbirini alaya almamasını ve kötü lakaplarla çağırmamasını emreder.*
+* **Soru ID:** `curr_q_w4_d4_l2_slide_7`
 
 ---
 
 ### [MÜF-109] Peygamber Efendimizin hadis-i şerifindeki benzetmeye göre, çevresine sürekli güzellik, hayır ve ahlak yayan hayırlı bir arkadaş neye benzetilmiştir?
+* **Ders:** 4. Hafta - Perşembe - Arkadaşlık Ahlakı ve Güvenilir Dost (Emin) Olmak (Slayt 9)
 * **Şıklar:**
   - A) Demirci körüğüne
   - B) Misk taşıyan güzel kokucuya
   - C) Karanlık bulutlara
   - D) Kuru ağaç dallarına
 * **Doğru Cevap:** Misk taşıyan güzel kokucuya
+* **Hikmet Notu / Açıklama:** *Tebrikler! İyi arkadaş, etrafına mis kokular yayan bir kokucuya benzetilmiştir; onun yanında kalan her zaman güzellik bulur.*
+* **Soru ID:** `curr_q_w4_d4_l3_slide_8`
 
 ---
 
 ### [MÜF-110] Peygamberlerin her zaman doğru söylemeleri ve asla yalan söylememeleri anlamına gelen sıfatları hangisidir?
+* **Ders:** 4. Hafta - Hafta Özeti - 4. Hafta Büyük Şampiyonluk Sınavı (Slayt 2)
 * **Şıklar:**
   - A) Fetânet
   - B) Emanet
   - C) Sıdk
   - D) Tebliğ
 * **Doğru Cevap:** Sıdk
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Sıdk, peygamberlerin sarsılmaz doğruluğunu ifade eder.*
+* **Soru ID:** `curr_q_w4_eval_l1_slide_1`
 
 ---
 
 ### [MÜF-111] Peygamberlerin günah işlemekten ve kötülük yapmaktan Allah tarafından korunmuş olmalarına ne ad verilir?
+* **Ders:** 4. Hafta - Hafta Özeti - 4. Hafta Büyük Şampiyonluk Sınavı (Slayt 3)
 * **Şıklar:**
   - A) İsmet
   - B) Kelam
   - C) Kıdem
   - D) Basar
 * **Doğru Cevap:** İsmet
+* **Hikmet Notu / Açıklama:** *Harika! İsmet sıfatı, onların tertemiz ve günahsız olduklarının kanıtıdır.*
+* **Soru ID:** `curr_q_w4_eval_l1_slide_2`
 
 ---
 
-### [MÜF-112] Firavun
+### [MÜF-112] Firavun'un sarayında büyüyen, asasıyla Kızıldeniz'i ikiye ayıran büyük peygamber kimdir?
+* **Ders:** 4. Hafta - Hafta Özeti - 4. Hafta Büyük Şampiyonluk Sınavı (Slayt 4)
 * **Şıklar:**
   - A) Hz. İbrahim
   - B) Hz. Davud
   - C) Hz. Musa
   - D) Hz. İsa
 * **Doğru Cevap:** Hz. Musa
+* **Hikmet Notu / Açıklama:** *Tebrikler! Hz. Musa (a.s.), Allah'ın yardımıyla inananları Firavun'un zulmünden kurtarmıştır.*
+* **Soru ID:** `curr_q_w4_eval_l1_slide_3`
 
 ---
 
 ### [MÜF-113] Sabah ezanının okunmasıyla (gecenin bitmesiyle) birlikte yeme içmeyi kesip oruca başlama vaktine ne denir?
+* **Ders:** 4. Hafta - Hafta Özeti - 4. Hafta Büyük Şampiyonluk Sınavı (Slayt 5)
 * **Şıklar:**
   - A) İftar
   - B) Sahur
   - C) Mukabele
   - D) İmsak
 * **Doğru Cevap:** İmsak
+* **Hikmet Notu / Açıklama:** *Mükemmel! İmsak vaktiyle beraber niyet edilir ve oruç ibadeti başlar.*
+* **Soru ID:** `curr_q_w4_eval_l1_slide_4`
 
 ---
 
 ### [MÜF-114] Ramazan ayında durumu iyi olanların, bayramdan önce ihtiyaç sahiplerine verdikleri vacip sadakanın adı nedir?
+* **Ders:** 4. Hafta - Hafta Özeti - 4. Hafta Büyük Şampiyonluk Sınavı (Slayt 6)
 * **Şıklar:**
   - A) Fidye
   - B) Fitre
   - C) Gusül
   - D) Nisap
 * **Doğru Cevap:** Fitre
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Fitre, yoksulların da bayram coşkusuna katılmasını sağlayan harika bir dayanışmadır.*
+* **Soru ID:** `curr_q_w4_eval_l1_slide_5`
 
 ---
 
 ### [MÜF-115] Dinimize göre, unutarak bir şey yiyip içmek orucu bozar mı?
+* **Ders:** 4. Hafta - Hafta Özeti - 4. Hafta Büyük Şampiyonluk Sınavı (Slayt 7)
 * **Şıklar:**
-  - A) Evet
-  - B) hemen bozar
-  - C) Sadece su içmek bozmaz
-  - D) Hayır
-  - -) kesinlikle bozmaz
-  - -) Sadece Ramazanda bozar
+  - A) Evet, hemen bozar
+  - B) Sadece su içmek bozmaz
+  - C) Hayır, kesinlikle bozmaz
+  - D) Sadece Ramazan'da bozar
 * **Doğru Cevap:** Hayır, kesinlikle bozmaz
+* **Hikmet Notu / Açıklama:** *Harika! Dinimiz unutmayı kulun hatası saymaz, oruçlu olduğunu hatırlayınca ağzı yıkayıp oruca devam edilir.*
+* **Soru ID:** `curr_q_w4_eval_l1_slide_6`
 
 ---
 
 ### [MÜF-116] Zengin olan Müslümanların yılda bir kez mal ve paralarından belirli bir miktarını ihtiyaç sahiplerine vermesi ibadetine ne denir?
+* **Ders:** 4. Hafta - Hafta Özeti - 4. Hafta Büyük Şampiyonluk Sınavı (Slayt 8)
 * **Şıklar:**
   - A) Sadaka
   - B) Zekât
   - C) Hac
   - D) Umre
 * **Doğru Cevap:** Zekât
+* **Hikmet Notu / Açıklama:** *Tebrikler! Zekât, cimriliği önleyen ve toplumu sevgiyle birbirine bağlayan farz bir ibadettir.*
+* **Soru ID:** `curr_q_w4_eval_l1_slide_7`
 
 ---
 
 ### [MÜF-117] Cebimizden hiç para çıkmadan yaptığımız; gülümsemek, güzel söz söylemek veya sokak hayvanlarına su vermek gibi davranışlara ne ad verilir?
+* **Ders:** 4. Hafta - Hafta Özeti - 4. Hafta Büyük Şampiyonluk Sınavı (Slayt 9)
 * **Şıklar:**
   - A) Manevi Sadaka
   - B) Fitre
   - C) Farz
   - D) Sünnet
 * **Doğru Cevap:** Manevi Sadaka
+* **Hikmet Notu / Açıklama:** *Mükemmel bildin! Sadaka sadece para ile değil, kocaman bir gülümseme ve iyilikle de yapılır.*
+* **Soru ID:** `curr_q_w4_eval_l1_slide_8`
 
 ---
 
-### [MÜF-118] Mekke
+### [MÜF-118] Mekke'den Medine'ye hicret eden Müslümanlara 'Muhacir', Medine'de onlara evini ve kalbini açıp yardım edenlere ise ne ad verilir?
+* **Ders:** 4. Hafta - Hafta Özeti - 4. Hafta Büyük Şampiyonluk Sınavı (Slayt 10)
 * **Şıklar:**
   - A) Sahabi
   - B) Hafız
   - C) Ensar
   - D) İmam
 * **Doğru Cevap:** Ensar
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Ensar (Yardımcılar), Muhacir kardeşlerine her şeylerini vererek muazzam bir tarih yazmıştır.*
+* **Soru ID:** `curr_q_w4_eval_l1_slide_9`
 
 ---
 
 ### [MÜF-119] Peygamber Efendimizin 632 yılında yüz binden fazla Müslümanla birlikte yaptığı son hacca ne ad verilir?
+* **Ders:** 4. Hafta - Hafta Özeti - 4. Hafta Büyük Şampiyonluk Sınavı (Slayt 11)
 * **Şıklar:**
   - A) Veda Haccı
   - B) Umre
   - C) Arafat Vakfesi
   - D) Kadir Gecesi
 * **Doğru Cevap:** Veda Haccı
+* **Hikmet Notu / Açıklama:** *Harika! Bu hacda Efendimiz meşhur Veda Hutbesi'ni irad etmiş ve insan haklarını dünyaya duyurmuştur.*
+* **Soru ID:** `curr_q_w4_eval_l1_slide_10`
 
 ---
 
-### [MÜF-120] İnsanın çirkin davranışlardan kaçınmasını, özsaygısını korumasını sağlayan ve
+### [MÜF-120] İnsanın çirkin davranışlardan kaçınmasını, özsaygısını korumasını sağlayan ve 'İslam'ın ahlakı' olarak bilinen manevi kalkan hangisidir?
+* **Ders:** 4. Hafta - Hafta Özeti - 4. Hafta Büyük Şampiyonluk Sınavı (Slayt 12)
 * **Şıklar:**
   - A) Kibir
   - B) Haya (Utanma)
   - C) Haset
   - D) Öfke
 * **Doğru Cevap:** Haya (Utanma)
+* **Hikmet Notu / Açıklama:** *Tebrikler! Haya, insanın onurunu koruyan asil bir duruş ve çok güçlü bir karakter erdemidir.*
+* **Soru ID:** `curr_q_w4_eval_l1_slide_11`
 
 ---
 
 ### [MÜF-121] İnsanların fiziksel özellikleriyle, kusurlarıyla alay etmek ve onlara kötü lakaplar takmak dinimizde nasıldır?
+* **Ders:** 4. Hafta - Hafta Özeti - 4. Hafta Büyük Şampiyonluk Sınavı (Slayt 13)
 * **Şıklar:**
   - A) Sünnettir
   - B) Kul hakkıdır ve yasaktır
   - C) Sadece şakadır
   - D) Mekruhtur
 * **Doğru Cevap:** Kul hakkıdır ve yasaktır
+* **Hikmet Notu / Açıklama:** *Mükemmel! İnsan onuru dokunulmazdır. Alay etmek ve akran zorbalığı yapmak ağır bir kul hakkıdır.*
+* **Soru ID:** `curr_q_w4_eval_l1_slide_12`
 
 ---
 
-### [MÜF-122] Peygamber Efendimiz, hadisinde
+### [MÜF-122] Peygamber Efendimiz, hadisinde 'İyi arkadaşla kötü arkadaşın misalini' anlatırken iyi arkadaşı neye benzetmiştir?
+* **Ders:** 4. Hafta - Hafta Özeti - 4. Hafta Büyük Şampiyonluk Sınavı (Slayt 14)
 * **Şıklar:**
   - A) Demirci körüğüne
   - B) Kuru bir ağaca
   - C) Misk taşıyan güzel kokucuya
   - D) Rüzgarlı bir havaya
 * **Doğru Cevap:** Misk taşıyan güzel kokucuya
+* **Hikmet Notu / Açıklama:** *Doğru cevap! İyi arkadaş her zaman etrafına ahlak ve güzellik (güzel koku) yayar.*
+* **Soru ID:** `curr_q_w4_eval_l1_slide_13`
 
 ---
 
 ### [MÜF-123] Aşağıdakilerden hangisi dostluğa ve arkadaşlığa değer katan, onu güçlendiren özelliklerden biridir?
+* **Ders:** 4. Hafta - Hafta Özeti - 4. Hafta Büyük Şampiyonluk Sınavı (Slayt 15)
 * **Şıklar:**
   - A) Sır tutmak ve sadakat
   - B) Gıybet etmek
   - C) Yalan söylemek
   - D) Kıskançlık (Haset)
 * **Doğru Cevap:** Sır tutmak ve sadakat
+* **Hikmet Notu / Açıklama:** *Harika! Sır tutmak, güven ve sadakat gerçek bir dostluğun sarsılmaz temel direkleridir.*
+* **Soru ID:** `curr_q_w4_eval_l1_slide_14`
 
 ---
 
-### [MÜF-124] Maide Suresi 3. ayette Allah,
+### [MÜF-124] Maide Suresi 3. ayette Allah, 'Bugün sizin için dininizi kemale erdirdim' diyerek insanlara hangi dini seçtiğini müjdelemiştir?
+* **Ders:** 4. Hafta - Hafta Özeti - 4. Hafta Büyük Şampiyonluk Sınavı (Slayt 16)
 * **Şıklar:**
   - A) İslam
   - B) Hristiyanlık
   - C) Yahudilik
   - D) Haniflik
 * **Doğru Cevap:** İslam
+* **Hikmet Notu / Açıklama:** *Muhteşem bir kapanış! Yüce Allah, bizler için din olarak İslam'ı seçmiş ve nimetini tamamlamıştır.*
+* **Soru ID:** `curr_q_w4_eval_l1_slide_15`
 
 ---
 
 ### [MÜF-125] Dünyada yapılan iyi ya da kötü tüm işlerin karşılığını alacağımız, ölümden sonra başlayan o sonsuz hayata ne ad verilir?
+* **Ders:** 5. Hafta - Pazartesi - Âhiret Hayatına İnanıyorum - Bölüm 1: Ölüm Bir Son Değildir (Slayt 8)
 * **Şıklar:**
   - A) Asr-ı Saadet
   - B) Ahiret Hayatı
   - C) Kadir Gecesi
   - D) Tufan Dönemi
 * **Doğru Cevap:** Ahiret Hayatı
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Ölümden sonra başlayan, iyi ve kötü işlerin karşılığını göreceğimiz yeni hayata ahiret hayatı denir.*
+* **Soru ID:** `curr_q_w5_d1_l1_slide_7`
 
 ---
 
 ### [MÜF-126] Maide Suresi 119. ayete göre, içinde sonsuza kadar kalınacak cennetlerin doğrulara verileceği o büyük gün, ne günü olarak nitelendirilmiştir?
+* **Ders:** 5. Hafta - Pazartesi - Âhiret Hayatına İnanıyorum - Bölüm 2: Dünya ve Ahiret Mutluluğu (Slayt 7)
 * **Şıklar:**
   - A) Büyük Başarı
   - B) Hüzün Yılı
   - C) Tevhid Günü
   - D) Asr-ı Saadet
 * **Doğru Cevap:** Büyük Başarı
+* **Hikmet Notu / Açıklama:** *Tebrikler! Ayette cennetlerin verileceği ve Allah'ın müminlerden memnun olacağı o gün 'büyük başarı' olarak nitelendirilmiştir.*
+* **Soru ID:** `curr_q_w5_d1_l2_slide_6`
 
 ---
 
-### [MÜF-127] Allah
+### [MÜF-127] Allah'ın, olmuş ve olacak her şeyi zaman ve mekandan bağımsız olarak önceden bilmesine ne ad verilir?
+* **Ders:** 5. Hafta - Pazartesi - Kader ve Kazaya İnanıyorum (Slayt 12)
 * **Şıklar:**
   - A) Kaza
   - B) Tebliğ
   - C) Hatim
   - D) Kader
 * **Doğru Cevap:** Kader
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Allah'ın her şeyi önceden bilmesi ve planlaması 'kader' kavramı ile ifade edilir.*
+* **Soru ID:** `curr_q_w5_d1_l3_slide_11`
 
 ---
 
-### [MÜF-128] Önceden bilinen ve takdir edilen olayların, vakti ve zamanı gelince Allah
+### [MÜF-128] Önceden bilinen ve takdir edilen olayların, vakti ve zamanı gelince Allah'ın kontrolünde gerçekleşip meydana gelmesine ne ad verilir?
+* **Ders:** 5. Hafta - Pazartesi - Kader ve Kazaya İnanıyorum (Slayt 13)
 * **Şıklar:**
   - A) Kaza
   - B) Kader
   - C) Kıssa
   - D) İsmet
 * **Doğru Cevap:** Kaza
+* **Hikmet Notu / Açıklama:** *Harika! Önceden bilinen olayların zamanı gelince gerçekleşip meydana gelmesine 'kaza' denir.*
+* **Soru ID:** `curr_q_w5_d1_l3_slide_12`
 
 ---
 
-### [MÜF-129] Hac ibadeti esnasında Kâbe
+### [MÜF-129] Hac ibadeti esnasında Kâbe'nin etrafında dualar okuyarak yedi kez dönmek anlamına gelen fıkhî rükün hangisidir?
+* **Ders:** 5. Hafta - Salı - Haccı Öğreniyorum - Kutsal Yolculuğun Esasları (Slayt 20)
 * **Şıklar:**
   - A) Vakfe
   - B) Tavaf
   - C) İhram
-  - D) Say
+  - D) Sa'y
 * **Doğru Cevap:** Tavaf
+* **Hikmet Notu / Açıklama:** *Harika cevap! Kâbe etrafındaki yedi dönüşlük kutsal yürüyüşe Tavaf adı verilir.*
+* **Soru ID:** `curr_q_w5_d2_l1_slide_19`
 
 ---
 
 ### [MÜF-130] Peygamber Efendimizin (s.a.s) bir işe başlarken işlerin yolunda gitmesi için okuduğu kolaylık duası fıkhen hangisidir?
+* **Ders:** 5. Hafta - Salı - Dua Ediyorum - İbadetin Özü ve Muhtaçlık Felsefesi (Slayt 20)
 * **Şıklar:**
   - A) Allahümme leke sumtü
-  - B) Rabbim kolaylaştır
-  - C) zorlaştırma. İşimi güzellikle tamamla.
-  - D) Esselâmü aleyküm ve rahmetullah
-  - -) Sübhâne rabbiyel-azîm
+  - B) Rabbim kolaylaştır, zorlaştırma. İşimi güzellikle tamamla.
+  - C) Esselâmü aleyküm ve rahmetullah
+  - D) Sübhâne rabbiye'l-azîm
 * **Doğru Cevap:** Rabbim kolaylaştır, zorlaştırma. İşimi güzellikle tamamla.
+* **Hikmet Notu / Açıklama:** *Tebrikler! Efendimiz her işin başında 'Rabbim kolaylaştır, zorlaştırma' diyerek bereket isterdi.*
+* **Soru ID:** `curr_q_w5_d2_l2_slide_19`
 
 ---
 
-### [MÜF-131] Kur
+### [MÜF-131] Kur'an-ı Kerim'de geçen 'Rabbimiz! Hesap verileceği gün beni, anne babamı ve müminleri bağışla!' duası hangi peygambere aittir?
+* **Ders:** 5. Hafta - Salı - Peygamberlerin Duaları ve Hasan'ın Kabul Olan Duası (Slayt 16)
 * **Şıklar:**
   - A) Hazreti Musa
   - B) Hazreti İbrahim
   - C) Hazreti Eyyûb
   - D) Hazreti Süleyman
 * **Doğru Cevap:** Hazreti İbrahim
+* **Hikmet Notu / Açıklama:** *Harika cevap! Namazların son oturuşunda okuduğumuz Rabbenâğfirlî duası Hazreti İbrahim'in Kur'an'daki duasıdır.*
+* **Soru ID:** `curr_q_w5_d2_l3_slide_15`
 
 ---
 
-### [MÜF-132] Hazreti Eyyûb peygamberin amansız bir hastalığa yakalandığında Allah
+### [MÜF-132] Hazreti Eyyûb peygamberin amansız bir hastalığa yakalandığında Allah'a sığındığı sabır ve şifa cümlesi hangisidir?
+* **Ders:** 5. Hafta - Salı - Peygamberlerin Duaları ve Hasan'ın Kabul Olan Duası (Slayt 17)
 * **Şıklar:**
   - A) Rabbim gönlüme ferahlık ver
-  - B) Şüphesiz ki ben derde uğradım
-  - C) sen ise merhametlilerin en merhametlisisin
-  - D) Bize dünyada da ahirette de iyilik ver
-  - -) Rabbim beni yalnız bırakma
+  - B) Şüphesiz ki ben derde uğradım, sen ise merhametlilerin en merhametlisisin
+  - C) Bize dünyada da ahirette de iyilik ver
+  - D) Rabbim beni yalnız bırakma
 * **Doğru Cevap:** Şüphesiz ki ben derde uğradım, sen ise merhametlilerin en merhametlisisin
+* **Hikmet Notu / Açıklama:** *Tebrikler! Hazreti Eyyûb bu asil ve sabırlı duasıyla tüm insanlığa şifa ve teslimiyet rehberi olmuştur.*
+* **Soru ID:** `curr_q_w5_d2_l3_slide_16`
 
 ---
 
 ### [MÜF-133] Peygamber Efendimizi (s.a.v) hayattayken gören, onunla sohbet eden ve ona inanarak Müslüman olarak yaşayan arkadaşlarına ne ad verilir?
+* **Ders:** 5. Hafta - Çarşamba - Peygamberimizin Örnek Kişiliği - Bölüm 1 (Slayt 14)
 * **Şıklar:**
   - A) Tâbiin
   - B) Ensar
   - C) Sahabi
   - D) Muhacir
 * **Doğru Cevap:** Sahabi
+* **Hikmet Notu / Açıklama:** *Harika! Efendimizin yol arkadaşlarına, dostlarına Sahabi denir.*
+* **Soru ID:** `curr_q_w5_d3_l1_slide_13`
 
 ---
 
-### [MÜF-134] Kur
+### [MÜF-134] Kur'an-ı Kerim'de Ahzab Suresinde Peygamber Efendimiz için kullanılan ve 'En Güzel Örnek' anlamına gelen sıfat hangisidir?
+* **Ders:** 5. Hafta - Çarşamba - Peygamberimizin Örnek Kişiliği - Bölüm 1 (Slayt 15)
 * **Şıklar:**
-  - A) Hatemül-Enbiya
-  - B) Muhammedül-Emin
+  - A) Hatemü'l-Enbiya
+  - B) Muhammedü'l-Emin
   - C) Üsve-i Hasene
-  - D) Rahmeten lil-Alemin
+  - D) Rahmeten li'l-Alemin
 * **Doğru Cevap:** Üsve-i Hasene
+* **Hikmet Notu / Açıklama:** *Mükemmel bildin! Üsve-i Hasene, her konuda insanlığa en güzel rol model ve örnek demektir.*
+* **Soru ID:** `curr_q_w5_d3_l1_slide_14`
 
 ---
 
 ### [MÜF-135] Peygamber Efendimizin (s.a.v) odaya her girdiğinde ayağa kalkarak saygıyla karşıladığı, alnından öpüp kendi yerine oturttuğu kızı kimdir?
+* **Ders:** 5. Hafta - Çarşamba - Peygamberimizin Örnek Kişiliği - Bölüm 2 (Slayt 16)
 * **Şıklar:**
   - A) Hz. Hatice
   - B) Hz. Aişe
   - C) Hz. Fatıma (r.anha)
   - D) Hz. Zeynep
 * **Doğru Cevap:** Hz. Fatıma (r.anha)
+* **Hikmet Notu / Açıklama:** *Harika! Efendimiz en küçük kızı Hz. Fatıma'ya müthiş bir sevgi ve saygı göstererek tüm dünyaya örnek olmuştur.*
+* **Soru ID:** `curr_q_w5_d3_l2_slide_15`
 
 ---
 
 ### [MÜF-136] Peygamber Efendimizin camide hutbe okurken onları düşe kalka yürürken görüp dayanamayarak minberden inip kucakladığı iki sevgili torunu kimlerdir?
+* **Ders:** 5. Hafta - Çarşamba - Peygamberimizin Örnek Kişiliği - Bölüm 2 (Slayt 17)
 * **Şıklar:**
   - A) İbrahim ve Kasım
   - B) Zeyd ve Usame
   - C) Hz. Hasan ve Hz. Hüseyin
   - D) Ali ve Abdullah
 * **Doğru Cevap:** Hz. Hasan ve Hz. Hüseyin
+* **Hikmet Notu / Açıklama:** *Mükemmel! Hz. Hasan (r.a) ve Hz. Hüseyin (r.a), Efendimizin 'Onlar benim dünyadaki iki reyhanımdır' dediği torunlarıdır.*
+* **Soru ID:** `curr_q_w5_d3_l2_slide_16`
 
 ---
 
-### [MÜF-137] Peygamber Efendimizin 10 yıl hizmetinde bulunmasına rağmen
+### [MÜF-137] Peygamber Efendimizin 10 yıl hizmetinde bulunmasına rağmen 'Bana bir kez bile öf demedi, beni hiç azarlamadı' diyerek onun eşsiz hoşgörüsünü anlatan sahabi kimdir?
+* **Ders:** 5. Hafta - Çarşamba - Peygamberimizin Örnek Kişiliği - Bölüm 3 (Slayt 21)
 * **Şıklar:**
   - A) Hz. Ali (r.a)
   - B) Enes bin Malik (r.a)
   - C) Abdullah bin Ömer (r.a)
   - D) Hz. Zeyd (r.a)
 * **Doğru Cevap:** Enes bin Malik (r.a)
+* **Hikmet Notu / Açıklama:** *Mükemmel! Enes bin Malik (r.a), Efendimizin evinde büyümüş ve onun sabrına en yakından şahit olmuştur.*
+* **Soru ID:** `curr_q_w5_d3_l3_slide_20`
 
 ---
 
-### [MÜF-138] Peygamber Efendimizin (s.a.v), yıllar sonra kendisini ziyarete gelen sütannesi Hz. Halime
+### [MÜF-138] Peygamber Efendimizin (s.a.v), yıllar sonra kendisini ziyarete gelen sütannesi Hz. Halime'yi gördüğünde ayağa kalkıp hırkasını altına sermesi onun hangi ahlaki özelliğini gösterir?
+* **Ders:** 5. Hafta - Çarşamba - Peygamberimizin Örnek Kişiliği - Bölüm 3 (Slayt 22)
 * **Şıklar:**
   - A) Cesaretini
   - B) Adaletini
   - C) Vefakârlığını
   - D) Çalışkanlığını
 * **Doğru Cevap:** Vefakârlığını
+* **Hikmet Notu / Açıklama:** *Harika! Yapılan iyiliği asla unutmamak ve kıymet bilmek muazzam bir vefa örneğidir.*
+* **Soru ID:** `curr_q_w5_d3_l3_slide_21`
 
 ---
 
 ### [MÜF-139] İslam ahlakına göre her şart ve koşulda dürüst davranmak, içi dışı, özü sözü bir olmak anlamına gelen kavram hangisidir?
+* **Ders:** 5. Hafta - Perşembe - Yalan Söyleme - Güven Toplumunu Yıkan Ahlaki Hastalık (Slayt 9)
 * **Şıklar:**
   - A) Tebliğ
   - B) İsmet
   - C) Sıdk (Doğruluk)
   - D) Haset
 * **Doğru Cevap:** Sıdk (Doğruluk)
+* **Hikmet Notu / Açıklama:** *Tebrikler! Sıdk, her şartta doğruluğun ve dürüstlüğün arkasında durarak karakteri inşa eden en temel ahlak sütunudur.*
+* **Soru ID:** `curr_q_w5_d4_l1_slide_8`
 
 ---
 
 ### [MÜF-140] İslam ahlak literatüründe anne babaya hürmet göstermek, onlara iyi davranıp haklarını gözetmek anlamına gelen kavram hangisidir?
+* **Ders:** 5. Hafta - Perşembe - Anne Babaya Karşı Haklar - Vefa Borcu ve Saygı (Slayt 9)
 * **Şıklar:**
   - A) Birr-i valideyn
-  - B) Muhalefetün lil-havadis
+  - B) Muhalefetün li'l-havadis
   - C) Asr-ı Saadet
   - D) Nuh Tufanı
 * **Doğru Cevap:** Birr-i valideyn
+* **Hikmet Notu / Açıklama:** *Harika! Birr-i valideyn, müminin en temel ve asil ahlaki sorumluluklarından biri olan anne babaya saygı ve vefa gösterme görevidir.*
+* **Soru ID:** `curr_q_w5_d4_l3_slide_8`
 
 ---
 
 ### [MÜF-141] Dünyada yaptığımız iyi ya da kötü tüm işlerin karşılığını alacağımız, ölümden sonra başlayan sonsuz hayata ne ad verilir?
+* **Ders:** 5. Hafta - Hafta Özeti - 5. Hafta Büyük Şampiyonluk Sınavı (Slayt 2)
 * **Şıklar:**
   - A) Ahiret Hayatı
   - B) Kader
   - C) Kıssa
   - D) İhram
 * **Doğru Cevap:** Ahiret Hayatı
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Ölüm bir son değil, ebedi olan Ahiret hayatının başlangıcıdır.*
+* **Soru ID:** `curr_q_w5_eval_l1_slide_1`
 
 ---
 
-### [MÜF-142] Allah
+### [MÜF-142] Allah'ın, olmuş ve olacak her şeyi zaman ve mekandan bağımsız olarak önceden bilmesine ve planlamasına ne ad verilir?
+* **Ders:** 5. Hafta - Hafta Özeti - 5. Hafta Büyük Şampiyonluk Sınavı (Slayt 3)
 * **Şıklar:**
   - A) Kaza
   - B) Kader
   - C) Sıdk
   - D) Emanet
 * **Doğru Cevap:** Kader
+* **Hikmet Notu / Açıklama:** *Harika! Her şeyin ilahi bir ölçü ve planla bilinmesine Kader denir.*
+* **Soru ID:** `curr_q_w5_eval_l1_slide_2`
 
 ---
 
-### [MÜF-143] Müslümanların yılın belirli günlerinde ihrama girerek Kâbe
+### [MÜF-143] Müslümanların yılın belirli günlerinde ihrama girerek Kâbe'yi, Arafat'ı ve kutsal toprakları ziyaret etmeleri ibadetine ne denir?
+* **Ders:** 5. Hafta - Hafta Özeti - 5. Hafta Büyük Şampiyonluk Sınavı (Slayt 4)
 * **Şıklar:**
   - A) Oruç
   - B) Zekât
   - C) Hac
   - D) Umre
 * **Doğru Cevap:** Hac
+* **Hikmet Notu / Açıklama:** *Tebrikler! Hac, evrensel eşitliğin ve kardeşliğin en büyük ibadetidir.*
+* **Soru ID:** `curr_q_w5_eval_l1_slide_3`
 
 ---
 
-### [MÜF-144] Hac ibadeti esnasında Kâbe
+### [MÜF-144] Hac ibadeti esnasında Kâbe'nin etrafında dualar eşliğinde yedi kez dönmeye fıkıhta ne ad verilir?
+* **Ders:** 5. Hafta - Hafta Özeti - 5. Hafta Büyük Şampiyonluk Sınavı (Slayt 5)
 * **Şıklar:**
   - A) Vakfe
   - B) Tavaf
   - C) İhram
-  - D) Say
+  - D) Sa'y
 * **Doğru Cevap:** Tavaf
+* **Hikmet Notu / Açıklama:** *Mükemmel! Kâbe etrafındaki 7 dönüşlük kutsal yürüyüşe Tavaf denir.*
+* **Soru ID:** `curr_q_w5_eval_l1_slide_4`
 
 ---
 
-### [MÜF-145] İnsanın, sonsuz kudret sahibi olan Allah
+### [MÜF-145] İnsanın, sonsuz kudret sahibi olan Allah'a sığınmasına, O'ndan yardım istemesine ve O'nunla iletişim kurmasına ne denir?
+* **Ders:** 5. Hafta - Hafta Özeti - 5. Hafta Büyük Şampiyonluk Sınavı (Slayt 6)
 * **Şıklar:**
   - A) Haset
   - B) Gıybet
   - C) Dua
   - D) Kıssa
 * **Doğru Cevap:** Dua
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Dua, insanın Rabbiyle kurduğu en samimi bağdır.*
+* **Soru ID:** `curr_q_w5_eval_l1_slide_5`
 
 ---
 
 ### [MÜF-146] Peygamber Efendimiz (s.a.s.) bir işe başlarken işinin kolaylaşması ve güzellikle bitmesi için ettiği dua hangisidir?
+* **Ders:** 5. Hafta - Hafta Özeti - 5. Hafta Büyük Şampiyonluk Sınavı (Slayt 7)
 * **Şıklar:**
-  - A) Rabbim kolaylaştır
-  - B) zorlaştırma. İşimi güzellikle tamamla.
-  - C) Sübhanallah
-  - D) Elhamdülillah
-  - -) Allahü Ekber
+  - A) Rabbim kolaylaştır, zorlaştırma. İşimi güzellikle tamamla.
+  - B) Sübhanallah
+  - C) Elhamdülillah
+  - D) Allahü Ekber
 * **Doğru Cevap:** Rabbim kolaylaştır, zorlaştırma. İşimi güzellikle tamamla.
+* **Hikmet Notu / Açıklama:** *Harika! Bu dua, her müminin zorlandığında dilinden düşürmemesi gereken bir hazinedir.*
+* **Soru ID:** `curr_q_w5_eval_l1_slide_6`
 
 ---
 
-### [MÜF-147] Peygamber Efendimizin hayatı boyunca sergilediği ahlakı sebebiyle Kur
+### [MÜF-147] Peygamber Efendimizin hayatı boyunca sergilediği ahlakı sebebiyle Kur'an-ı Kerim'in onu tanımladığı sıfat hangisidir?
+* **Ders:** 5. Hafta - Hafta Özeti - 5. Hafta Büyük Şampiyonluk Sınavı (Slayt 8)
 * **Şıklar:**
   - A) Sadece bir uyarıcı
   - B) Üsve-i Hasene (En Güzel Örnek)
   - C) Sıradan bir kul
   - D) Yalnızca bir elçi
 * **Doğru Cevap:** Üsve-i Hasene (En Güzel Örnek)
+* **Hikmet Notu / Açıklama:** *Tebrikler! Ahzab Suresi'nde Efendimiz için bizlere 'En Güzel Örnek' (Üsve-i Hasene) olduğu müjdelenmiştir.*
+* **Soru ID:** `curr_q_w5_eval_l1_slide_7`
 
 ---
 
-### [MÜF-148] Peygamberimize inanan, onunla birlikte yaşamış, ona dost ve yol arkadaşı olmuş müminlere İslam
+### [MÜF-148] Peygamberimize inanan, onunla birlikte yaşamış, ona dost ve yol arkadaşı olmuş müminlere İslam'da ne ad verilir?
+* **Ders:** 5. Hafta - Hafta Özeti - 5. Hafta Büyük Şampiyonluk Sınavı (Slayt 9)
 * **Şıklar:**
   - A) Sahabi
   - B) Muhacir
   - C) Ensar
   - D) Hafız
 * **Doğru Cevap:** Sahabi
+* **Hikmet Notu / Açıklama:** *Mükemmel! Peygamberimizin o sadık ve vefakar arkadaşlarına Sahabi denir.*
+* **Soru ID:** `curr_q_w5_eval_l1_slide_8`
 
 ---
 
-### [MÜF-149] Peygamber Efendimizin hadisinde
+### [MÜF-149] Peygamber Efendimizin hadisinde '... edenlere Allah da merhamet eder' boşluğuna ne gelmelidir?
+* **Ders:** 5. Hafta - Hafta Özeti - 5. Hafta Büyük Şampiyonluk Sınavı (Slayt 10)
 * **Şıklar:**
   - A) Adaletli
   - B) Merhamet
   - C) Kibirli
   - D) Zalimlik
 * **Doğru Cevap:** Merhamet
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Yerdekilere merhamet edene, gökteki de merhamet eder.*
+* **Soru ID:** `curr_q_w5_eval_l1_slide_9`
 
 ---
 
 ### [MÜF-150] Gerçeği bilerek çarpıtmak, insanları aldatmak ve güven toplumunu temelinden yıkan ahlaki hastalığa ne denir?
+* **Ders:** 5. Hafta - Hafta Özeti - 5. Hafta Büyük Şampiyonluk Sınavı (Slayt 11)
 * **Şıklar:**
   - A) Gıybet
   - B) İftira
   - C) Yalan söylemek
   - D) Haset
 * **Doğru Cevap:** Yalan söylemek
+* **Hikmet Notu / Açıklama:** *Harika! Yalan, insanın onurunu ve toplumun güvenini yok eden büyük bir krizdir.*
+* **Soru ID:** `curr_q_w5_eval_l1_slide_10`
 
 ---
 
-### [MÜF-151] Bir insanın başarısını veya mutluluğunu çekememek,
+### [MÜF-151] Bir insanın başarısını veya mutluluğunu çekememek, 'onda olmasın' diyerek kendi iç huzurunu yok etmeye ne ad verilir?
+* **Ders:** 5. Hafta - Hafta Özeti - 5. Hafta Büyük Şampiyonluk Sınavı (Slayt 12)
 * **Şıklar:**
   - A) Gıpta
   - B) Haset (Kıskançlık)
   - C) Tebliğ
   - D) Sıdk
 * **Doğru Cevap:** Haset (Kıskançlık)
+* **Hikmet Notu / Açıklama:** *Tebrikler! Haset, ateşin odunu yaktığı gibi insanın içindeki iyilikleri ve huzuru yakar.*
+* **Soru ID:** `curr_q_w5_eval_l1_slide_11`
 
 ---
 
-### [MÜF-152] İslam ahlakında
+### [MÜF-152] İslam ahlakında 'Birr-i Valideyn' ne anlama gelmektedir?
+* **Ders:** 5. Hafta - Hafta Özeti - 5. Hafta Büyük Şampiyonluk Sınavı (Slayt 13)
 * **Şıklar:**
   - A) Komşu hakkını gözetmek
   - B) Anne babaya saygı göstermek ve iyilik etmek
   - C) Namazı cemaatle kılmak
   - D) Akrabaları ziyaret etmek
 * **Doğru Cevap:** Anne babaya saygı göstermek ve iyilik etmek
+* **Hikmet Notu / Açıklama:** *Mükemmel bildin! Dinimiz Allah'a kulluktan sonra anne babaya hürmeti en büyük sorumluluk sayar.*
+* **Soru ID:** `curr_q_w5_eval_l1_slide_12`
 
 ---
 
 ### [MÜF-153] İsra Suresi 23. ayette yaşlanan anne ve babamıza karşı söylememiz kesinlikle KESİN OLARAK yasaklanan kelime hangisidir?
+* **Ders:** 5. Hafta - Hafta Özeti - 5. Hafta Büyük Şampiyonluk Sınavı (Slayt 14)
 * **Şıklar:**
   - A) Tamam
   - B) Peki
   - C) Öf
   - D) Olur
 * **Doğru Cevap:** Öf
+* **Hikmet Notu / Açıklama:** *Doğru cevap! Ayet-i kerime onlara sakın 'öf' bile demememizi ve tatlı söz söylememizi emreder.*
+* **Soru ID:** `curr_q_w5_eval_l1_slide_13`
 
 ---
 
-### [MÜF-154] Kur
+### [MÜF-154] Kur'an-ı Kerim'de Hz. İbrahim'in (a.s.) Kâbe'yi inşa ettikten sonra ailesi ve müminler için ettiği af duasının başlangıcı nasıldır?
+* **Ders:** 5. Hafta - Hafta Özeti - 5. Hafta Büyük Şampiyonluk Sınavı (Slayt 15)
 * **Şıklar:**
   - A) Rabbim kolaylaştır
-  - B) Rabbimiz! Hesap verileceği gün beni
-  - C) anne babamı ve müminleri bağışla
-  - D) Allahım bize rızık ver
-  - -) Rabbim gönlüme ferahlık ver
+  - B) Rabbimiz! Hesap verileceği gün beni, anne babamı ve müminleri bağışla
+  - C) Allah'ım bize rızık ver
+  - D) Rabbim gönlüme ferahlık ver
 * **Doğru Cevap:** Rabbimiz! Hesap verileceği gün beni, anne babamı ve müminleri bağışla
+* **Hikmet Notu / Açıklama:** *Harika! Namazların sonunda okuduğumuz bu asil dua Hz. İbrahim'in Kur'an'daki duasıdır.*
+* **Soru ID:** `curr_q_w5_eval_l1_slide_14`
 
 ---
 
-### [MÜF-155] Bizi yaratan, yaşatan, sayısız nimetler veren Allah
+### [MÜF-155] Bizi yaratan, yaşatan, sayısız nimetler veren Allah'a teşekkürü ifade etmek için en çok kullandığımız zikir hangisidir?
+* **Ders:** 5. Hafta - Hafta Özeti - 5. Hafta Büyük Şampiyonluk Sınavı (Slayt 16)
 * **Şıklar:**
   - A) Elhamdülillah
   - B) Estağfirullah
   - C) Sübhanallah
   - D) Allahu Ekber
 * **Doğru Cevap:** Elhamdülillah
+* **Hikmet Notu / Açıklama:** *Muhteşem bir kapanış! Elhamdülillah, Rabbimize olan sonsuz şükrümüzün ve vefamızın en güzel ifadesidir.*
+* **Soru ID:** `curr_q_w5_eval_l1_slide_15`
 
 ---
 
 
 ## 🅰️ BÖLÜM 3: A'DAN Z'YE İSLAM ATLASI (PASSAPAROLA) SORULARI (112 Soru)
 
-### [PAS-1] [Harf: A] Namaz kılabilmek için vücudumuzun belirli azalarını usulüne uygun olarak yıkama ve mesh etme temizliği nedir?
-* **Cevap (Harf ile Başlar):** Abdest
+### [PAS-1] [Harf: A] Allah'ın izniyle eceli gelen varlıkların ruhunu teslim almakla görevli ölüm meleği kimdir?
+* **Doğru Cevap (Harf ile Başlar):** Azrail
+* **İpuçları:** Ölüm meleği • Dört büyük melekten biri
+* **Soru ID:** `pas_A_1`
+
+---
+
+### [PAS-2] [Harf: A] Namaz kılabilmek için vücudumuzun belirli azalarını usulüne uygun olarak yıkama ve mesh etme temizliği nedir?
+* **Doğru Cevap (Harf ile Başlar):** Abdest
 * **İpuçları:** Namazın ön hazırlığı • Temizlik ibadeti
+* **Soru ID:** `pas_A_2`
 
 ---
 
-### [PAS-2] [Harf: A] Yerde, gökte ve tüm evrende her şeyi yaratan, eşi ve benzeri olmayan tek ilah kimdir?
-* **Cevap (Harf ile Başlar):** Allah
+### [PAS-3] [Harf: A] Yerde, gökte ve tüm evrende her şeyi yaratan, eşi ve benzeri olmayan tek ilah kimdir?
+* **Doğru Cevap (Harf ile Başlar):** Allah
 * **İpuçları:** Yaratıcımız • Tek ilah
+* **Soru ID:** `pas_A_3`
 
 ---
 
-### [PAS-3] [Harf: A] İnsanın iyi veya kötü olarak nitelendirilmesine yol açan manevi nitelikleri ve huylarının bütününe ne ad verilir?
-* **Cevap (Harf ile Başlar):** Ahlak
+### [PAS-4] [Harf: A] İnsanın iyi veya kötü olarak nitelendirilmesine yol açan manevi nitelikleri ve huylarının bütününe ne ad verilir?
+* **Doğru Cevap (Harf ile Başlar):** Ahlak
 * **İpuçları:** Karakter yapısı • Güzel davranışlar bütünü
+* **Soru ID:** `pas_A_4`
 
 ---
 
-### [PAS-4] [Harf: B] Müslümanlar ile Mekkeli müşrikler arasında hicretten sonra yapılan ilk büyük ve zaferle sonuçlanan savaş hangisidir?
-* **Cevap (Harf ile Başlar):** Bedir
+### [PAS-5] [Harf: B] Müslümanlar ile Mekkeli müşrikler arasında hicretten sonra yapılan ilk büyük ve zaferle sonuçlanan savaş hangisidir?
+* **Doğru Cevap (Harf ile Başlar):** Bedir
 * **İpuçları:** Hicretin 2. yılı • İlk büyük zafer
+* **Soru ID:** `pas_B_1`
 
 ---
 
-### [PAS-5] [Harf: B] Peygamberimizin sesi çok güzel olduğu için ezan okumakla görevlendirdiği ilk İslam müezzini kimdir?
-* **Cevap (Harf ile Başlar):** Bilal
+### [PAS-6] [Harf: B] Her hayırlı işe başlarken söylediğimiz, "Rahmân ve Rahîm olan Allah'ın adıyla" anlamına gelen söz hangisidir?
+* **Doğru Cevap (Harf ile Başlar):** Besmele
+* **İpuçları:** Bismillah • Her hayırlı işin başı
+* **Soru ID:** `pas_B_2`
+
+---
+
+### [PAS-7] [Harf: B] Peygamberimizin sesi çok güzel olduğu için ezan okumakla görevlendirdiği ilk İslam müezzini kimdir?
+* **Doğru Cevap (Harf ile Başlar):** Bilal
 * **İpuçları:** Bilal-i Habeşi • İlk müezzin
+* **Soru ID:** `pas_B_3`
 
 ---
 
-### [PAS-6] [Harf: C] Müminlerin ahiret hayatında ebedi olarak kalacakları, içinde her türlü nimetin bulunduğu ödül yurdu neresidir?
-* **Cevap (Harf ile Başlar):** Cennet
+### [PAS-8] [Harf: B] Kabe'nin bir diğer adı olan ve "Allah'ın Evi" anlamına gelen kelime hangisidir?
+* **Doğru Cevap (Harf ile Başlar):** Beytullah
+* **İpuçları:** Allah'ın evi • Kabe'nin diğer ismi
+* **Soru ID:** `pas_B_4`
+
+---
+
+### [PAS-9] [Harf: C] Allah'tan aldığı vahiyleri peygamberlere ulaştırmakla görevli olan en büyük melek kimdir?
+* **Doğru Cevap (Harf ile Başlar):** Cebrail
+* **İpuçları:** Vahiy meleği • Ruhu'l-Kudüs
+* **Soru ID:** `pas_C_1`
+
+---
+
+### [PAS-10] [Harf: C] Müminlerin ahiret hayatında ebedi olarak kalacakları, içinde her türlü nimetin bulunduğu ödül yurdu neresidir?
+* **Doğru Cevap (Harf ile Başlar):** Cennet
 * **İpuçları:** Müminlerin ödülü • Ebedi mutluluk yurdu
+* **Soru ID:** `pas_C_2`
 
 ---
 
-### [PAS-7] [Harf: C] Müslümanların haftalık toplu ibadetlerini yaptıkları ve cemaatle namaz kıldıkları en mübarek gün hangisidir?
-* **Cevap (Harf ile Başlar):** Cuma
+### [PAS-11] [Harf: C] Müslümanların haftalık toplu ibadetlerini yaptıkları ve cemaatle namaz kıldıkları en mübarek gün hangisidir?
+* **Doğru Cevap (Harf ile Başlar):** Cuma
 * **İpuçları:** Haftalık bayram günü • Sure adı da olan gün
+* **Soru ID:** `pas_C_3`
 
 ---
 
-### [PAS-8] [Harf: C] Namazı bir imam önderliğinde arkasında durarak birlikte kılan Müslüman topluluğuna ne ad verilir?
-* **Cevap (Harf ile Başlar):** Cemaat
+### [PAS-12] [Harf: C] Namazı bir imam önderliğinde arkasında durarak birlikte kılan Müslüman topluluğuna ne ad verilir?
+* **Doğru Cevap (Harf ile Başlar):** Cemaat
 * **İpuçları:** Birlikte namaz kılanlar • Tek başına kılmanın zıttı
+* **Soru ID:** `pas_C_4`
 
 ---
 
-### [PAS-9] [Harf: Ç] Hicret esnasında Peygamberimizin aştığı, kum tepeleriyle kaplı çok sıcak coğrafi alanlara ne denir?
-* **Cevap (Harf ile Başlar):** Çöl
-* **İpuçları:** Kum denizi • Sıcak coğrafya
+### [PAS-13] [Harf: D] Dört büyük kitaptan biri olan Zebur hangi peygambere indirilmiştir?
+* **Doğru Cevap (Harf ile Başlar):** Davut
+* **İpuçları:** Zebur'un indirildiği nebi • Demiri hamur gibi şekillendiren peygamber
+* **Soru ID:** `pas_D_1`
 
 ---
 
-### [PAS-10] [Harf: Ç] Nuh peygamberin tufandan korumak için gemisine her hayvandan aldığı sayı miktarı?
-* **Cevap (Harf ile Başlar):** Çift
-* **İpuçları:** İkişer adet • Tek olmayan
+### [PAS-14] [Harf: D] Kulun Allah'a yönelerek O'ndan yardım, bağışlanma ve isteklerde bulunması, O'nunla konuşması ibadeti nedir?
+* **Doğru Cevap (Harf ile Başlar):** Dua
+* **İpuçları:** İbadetin özü • Allah'a yalvarış
+* **Soru ID:** `pas_D_2`
 
 ---
 
-### [PAS-11] [Harf: Ç] Peygamberimizin seferlerde veya savaşlarda içinde dinlendiği kumaştan yapılmış barınak türü?
-* **Cevap (Harf ile Başlar):** Çadır
-* **İpuçları:** Göçebe barınağı • Otağ
-
----
-
-### [PAS-12] [Harf: D] Dört büyük kitaptan biri olan Zebur hangi peygambere indirilmiştir?
-* **Cevap (Harf ile Başlar):** Davut
-* **İpuçları:** Zebur\un indirildiği nebi • Demiri hamur gibi şekillendiren peygamber
-
----
-
-### [PAS-13] [Harf: D] Ahiret hayatının tarlası kabul edilen, üzerinde geçici bir süre yaşadığımız gezegen/yurt neresidir?
-* **Cevap (Harf ile Başlar):** Dünya
+### [PAS-15] [Harf: D] Ahiret hayatının tarlası kabul edilen, üzerinde geçici bir süre yaşadığımız gezegen/yurt neresidir?
+* **Doğru Cevap (Harf ile Başlar):** Dünya
 * **İpuçları:** Geçici hayat • Ahiret öncesi yer
+* **Soru ID:** `pas_D_3`
 
 ---
 
-### [PAS-14] [Harf: D] Güzel ahlakın en temel kuralı olan, yalan söylememek ve doğru yoldan şaşmamak erdemi hangisidir?
-* **Cevap (Harf ile Başlar):** Dürüstlük
+### [PAS-16] [Harf: D] Güzel ahlakın en temel kuralı olan, yalan söylememek ve doğru yoldan şaşmamak erdemi hangisidir?
+* **Doğru Cevap (Harf ile Başlar):** Dürüstlük
 * **İpuçları:** Doğru sözlülük • Yalanın zıttı
+* **Soru ID:** `pas_D_4`
 
 ---
 
-### [PAS-15] [Harf: E] Namaz vaktinin girdiğini tüm insanlara bildirmek amacıyla müezzin tarafından okunan kutsal çağrı nedir?
-* **Cevap (Harf ile Başlar):** Ezan
+### [PAS-17] [Harf: E] Namaz vaktinin girdiğini tüm insanlara bildirmek amacıyla müezzin tarafından okunan kutsal çağrı nedir?
+* **Doğru Cevap (Harf ile Başlar):** Ezan
 * **İpuçları:** Namaz çağrısı • Günde 5 defa okunur
+* **Soru ID:** `pas_E_1`
 
 ---
 
-### [PAS-16] [Harf: E] Peygamberimizin en yakın dostu, hicret arkadaşı ve İslam tarihinin ilk halifesi olan sahabe kimdir?
-* **Cevap (Harf ile Başlar):** Ebubekir
+### [PAS-18] [Harf: E] Peygamberimizin en yakın dostu, hicret arkadaşı ve İslam tarihinin ilk halifesi olan sahabe kimdir?
+* **Doğru Cevap (Harf ile Başlar):** Ebubekir
 * **İpuçları:** Sıddık lakaplı sahabe • İlk halife
+* **Soru ID:** `pas_E_2`
 
 ---
 
-### [PAS-17] [Harf: E] Ahiret hayatının hiç sonu olmadığını, sonsuzluğa kadar süreceğini ifade eden kelime hangisidir?
-* **Cevap (Harf ile Başlar):** Ebedi
+### [PAS-19] [Harf: E] Allah'ın Kur'an-ı Kerim'de geçen ve en güzel isimleri anlamına gelen ifadenin adı nedir?
+* **Doğru Cevap (Harf ile Başlar):** Esmaül Hüsna
+* **İpuçları:** En güzel isimler • Allah'ın 99 ismi
+* **Soru ID:** `pas_E_3`
+
+---
+
+### [PAS-20] [Harf: E] Ahiret hayatının hiç sonu olmadığını, sonsuzluğa kadar süreceğini ifade eden kelime hangisidir?
+* **Doğru Cevap (Harf ile Başlar):** Ebedi
 * **İpuçları:** Sonsuz • Geçici olmayan
+* **Soru ID:** `pas_E_4`
 
 ---
 
-### [PAS-18] [Harf: F] Ramazan ayında oruç tutabilenlerin bayramdan önce fakirlere vermekle yükümlü olduğu vacip sadaka türü nedir?
-* **Cevap (Harf ile Başlar):** Fitre
+### [PAS-21] [Harf: F] Kur'an-ı Kerim'in ilk suresi olan ve namazın her rekatında okuduğumuz açılış suresinin adı nedir?
+* **Doğru Cevap (Harf ile Başlar):** Fatiha
+* **İpuçları:** Kur'an'ın başlangıcı • Elham suresi
+* **Soru ID:** `pas_F_1`
+
+---
+
+### [PAS-22] [Harf: F] Allah'ın biz Müslümanlardan kesin olarak yapmamızı istediği ve terk edilmesi günah olan ibadet emirlerine ne denir?
+* **Doğru Cevap (Harf ile Başlar):** Farz
+* **İpuçları:** Kesin emir • Sünnetin üstü
+* **Soru ID:** `pas_F_2`
+
+---
+
+### [PAS-23] [Harf: F] Hz. Musa'nın mucizeleri karşısında direnen, kendini tanrı ilan eden zalim Mısır hükümdarlarına ne denir?
+* **Doğru Cevap (Harf ile Başlar):** Firavun
+* **İpuçları:** Mısır kralı • Kızıldeniz'de boğulan inkarcı
+* **Soru ID:** `pas_F_3`
+
+---
+
+### [PAS-24] [Harf: F] Ramazan ayında oruç tutabilenlerin bayramdan önce fakirlere vermekle yükümlü olduğu vacip sadaka türü nedir?
+* **Doğru Cevap (Harf ile Başlar):** Fitre
 * **İpuçları:** Fıtır sadakası • Ramazan ayı bağışı
+* **Soru ID:** `pas_F_4`
 
 ---
 
-### [PAS-19] [Harf: G] Bütün vücudun hiç kuru yer kalmayacak şekilde yıkanmasıyla yapılan boy abdestine ne denir?
-* **Cevap (Harf ile Başlar):** Gusül
+### [PAS-25] [Harf: G] Bütün vücudun hiç kuru yer kalmayacak şekilde yıkanmasıyla yapılan boy abdestine ne denir?
+* **Doğru Cevap (Harf ile Başlar):** Gusül
 * **İpuçları:** Boy abdesti • Tüm vücudu yıkama
+* **Soru ID:** `pas_G_1`
 
 ---
 
-### [PAS-20] [Harf: G] Bir Müslüman kardeşimizin arkasından, duyduğunda hoşlanmayacağı doğru olan şeyleri konuşma günahı nedir?
-* **Cevap (Harf ile Başlar):** Gıybet
+### [PAS-26] [Harf: G] Bir Müslüman kardeşimizin arkasından, duyduğunda hoşlanmayacağı doğru olan şeyleri konuşma günahı nedir?
+* **Doğru Cevap (Harf ile Başlar):** Gıybet
 * **İpuçları:** Dedikodu • Ölmüş kardeş eti yemeye benzetilen günah
+* **Soru ID:** `pas_G_2`
 
 ---
 
-### [PAS-21] [Harf: G] Peygamber Efendimizin bizzat ordunun başında komutan olarak katıldığı savaşlara ne ad verilir?
-* **Cevap (Harf ile Başlar):** Gazve
+### [PAS-27] [Harf: G] Peygamber Efendimizin bizzat ordunun başında komutan olarak katıldığı savaşlara ne ad verilir?
+* **Doğru Cevap (Harf ile Başlar):** Gazve
 * **İpuçları:** Peygamberimizin katıldığı savaş • Seriyye zıttı
+* **Soru ID:** `pas_G_3`
 
 ---
 
-### [PAS-22] [Harf: G] Dinen yapılması kesinlikle yasaklanan ve yapıldığında ahirette cezası olan kötülüklere ne denir?
-* **Cevap (Harf ile Başlar):** Günah
+### [PAS-28] [Harf: G] Dinen yapılması kesinlikle yasaklanan ve yapıldığında ahirette cezası olan kötülüklere ne denir?
+* **Doğru Cevap (Harf ile Başlar):** Günah
 * **İpuçları:** Yasak davranışlar • Sevap zıttı
+* **Soru ID:** `pas_G_4`
 
 ---
 
-### [PAS-23] [Harf: H] Peygamberimizden sonra İslam devletinin başına geçen liderlere verilen genel unvan nedir?
-* **Cevap (Harf ile Başlar):** Halife
+### [PAS-29] [Harf: H] Müslümanların dinlerini özgürce yaşayabilmek için Mekke'den Medine'ye göç etmeleri olayına ne ad verilir?
+* **Doğru Cevap (Harf ile Başlar):** Hicret
+* **İpuçları:** Büyük göç • Hicri takvimin başlangıcı
+* **Soru ID:** `pas_H_1`
+
+---
+
+### [PAS-30] [Harf: H] Peygamber Efendimize ilk vahyin indirildiği Nur Dağı'nda bulunan ünlü mağaranın adı nedir?
+* **Doğru Cevap (Harf ile Başlar):** Hira
+* **İpuçları:** İlk vahiy mağarası • Nur dağındaki yer
+* **Soru ID:** `pas_H_2`
+
+---
+
+### [PAS-31] [Harf: H] Peygamberimizden sonra İslam devletinin başına geçen liderlere verilen genel unvan nedir?
+* **Doğru Cevap (Harf ile Başlar):** Halife
 * **İpuçları:** Peygamber vekili • Devlet başkanı
+* **Soru ID:** `pas_H_3`
 
 ---
 
-### [PAS-24] [Harf: H] Peygamberimizin söylediği güzel sözler, yaptığı işler ve sahabeden görüp onayladığı davranışların yazılı metinlerine ne denir?
-* **Cevap (Harf ile Başlar):** Hadis
+### [PAS-32] [Harf: H] Peygamberimizin söylediği güzel sözler, yaptığı işler ve sahabeden görüp onayladığı davranışların yazılı metinlerine ne denir?
+* **Doğru Cevap (Harf ile Başlar):** Hadis
 * **İpuçları:** Peygamber kelamı • Sünnetin yazılı hali
+* **Soru ID:** `pas_H_4`
 
 ---
 
-### [PAS-25] [Harf: I] İslam dinine göre hiçbir üstünlük veya alçaklık sebebi olmayan, insan gruplarının ten renkleri ve soyları?
-* **Cevap (Harf ile Başlar):** Irk
+### [PAS-33] [Harf: I] Kur'an-ı Kerim'de cennet tasvir edilirken altından aktığı söylenen tatlı su yataklarına ne denir?
+* **Doğru Cevap (Harf ile Başlar):** Irmak
+* **İpuçları:** Cennet nehirleri • Akan sular
+* **Soru ID:** `pas_I_1`
+
+---
+
+### [PAS-34] [Harf: I] İslam dinine göre hiçbir üstünlük veya alçaklık sebebi olmayan, insan gruplarının ten renkleri ve soyları?
+* **Doğru Cevap (Harf ile Başlar):** Irk
 * **İpuçları:** Ten rengi/kök • Millet soyu
+* **Soru ID:** `pas_I_2`
 
 ---
 
-### [PAS-26] [Harf: I] Kötü giden bir durumu düzeltmek, barıştırmak, iyileştirmek anlamına gelen dini kavram nedir?
-* **Cevap (Harf ile Başlar):** Islah
+### [PAS-35] [Harf: I] Kötü giden bir durumu düzeltmek, barıştırmak, iyileştirmek anlamına gelen dini kavram nedir?
+* **Doğru Cevap (Harf ile Başlar):** Islah
 * **İpuçları:** Düzeltme yapma • Arabuluculuk
+* **Soru ID:** `pas_I_3`
 
 ---
 
-### [PAS-27] [Harf: İ] Dört büyük kutsal kitaptan biri olan ve Hz. İsa peygambere indirilen kitap hangisidir?
-* **Cevap (Harf ile Başlar):** İncil
-* **İpuçları:** Hz. İsa\nın kitabı • Müjde anlamına gelen kitap
+### [PAS-36] [Harf: K] Yeryüzünde Allah ibadeti için inşa edilen ilk mabet olan ve namaz kılarken yöneldiğimiz Mekke'deki yapı nedir?
+* **Doğru Cevap (Harf ile Başlar):** Kabe
+* **İpuçları:** Kıblemiz • Siyah örtülü mukaddes ev
+* **Soru ID:** `pas_K_1`
 
 ---
 
-### [PAS-28] [Harf: İ] İslam dininin inanılmasını emrettiği esasları kalbiyle onaylayıp diliyle söyleyen kişilerin sahip olduğu inanç durumu?
-* **Cevap (Harf ile Başlar):** İman
-* **İpuçları:** İnanma gücü • Mümin olma şartı
-
----
-
-### [PAS-29] [Harf: İ] Yapılan her ibadeti ve güzel davranışı sadece ve sadece Allah rızasını kazanmak için samimiyetle yapmak nedir?
-* **Cevap (Harf ile Başlar):** İhlas
-* **İpuçları:** Samimiyet • Gösterişten uzak olmak
-
----
-
-### [PAS-30] [Harf: K] Allah tarafından peygamberimize indirilen ve kıyamete kadar değişmeyecek olan son ilahi kitabın adı nedir?
-* **Cevap (Harf ile Başlar):** Kuran
+### [PAS-37] [Harf: K] Allah tarafından peygamberimize indirilen ve kıyamete kadar değişmeyecek olan son ilahi kitabın adı nedir?
+* **Doğru Cevap (Harf ile Başlar):** Kuran
 * **İpuçları:** Son kitap • Mucize kitap
+* **Soru ID:** `pas_K_2`
 
 ---
 
-### [PAS-31] [Harf: K] Evrenin düzeninin bozularak yok olacağı ve insanların ahiret hesabı için diriltileceği o büyük güne ne denir?
-* **Cevap (Harf ile Başlar):** Kıyamet
+### [PAS-38] [Harf: K] Evrenin düzeninin bozularak yok olacağı ve insanların ahiret hesabı için diriltileceği o büyük güne ne denir?
+* **Doğru Cevap (Harf ile Başlar):** Kıyamet
 * **İpuçları:** Dünyanın sonu • Büyük hesap günü
+* **Soru ID:** `pas_K_3`
 
 ---
 
-### [PAS-32] [Harf: K] Cennette sadece Peygamber Efendimize ve onun ümmetine tahsis edildiği müjdelenen nehir veya havuzun adı nedir?
-* **Cevap (Harf ile Başlar):** Kevser
+### [PAS-39] [Harf: K] Cennette sadece Peygamber Efendimize ve onun ümmetine tahsis edildiği müjdelenen nehir veya havuzun adı nedir?
+* **Doğru Cevap (Harf ile Başlar):** Kevser
 * **İpuçları:** Sure adı olan nehir • Cennet havuzu
+* **Soru ID:** `pas_K_4`
 
 ---
 
-### [PAS-33] [Harf: L] Kavminin yaptığı çirkin ahlaksızlıklar yüzünden helak olduğu ve kendisi inananlarla kurtulan peygamber kimdir?
-* **Cevap (Harf ile Başlar):** Lut
+### [PAS-40] [Harf: L] Kavminin yaptığı çirkin ahlaksızlıklar yüzünden helak olduğu ve kendisi inananlarla kurtulan peygamber kimdir?
+* **Doğru Cevap (Harf ile Başlar):** Lut
 * **İpuçları:** Lut gölü kavmi peygamberi • Hz. İbrahim döneminde yaşayan elçi
+* **Soru ID:** `pas_L_1`
 
 ---
 
-### [PAS-34] [Harf: M] Dört büyük melekten biri olan, doğa olaylarını (yağmur, rüzgar) ve canlıların rızıklarını yöneten melek hangisidir?
-* **Cevap (Harf ile Başlar):** Mikail
+### [PAS-41] [Harf: L] Edebiyatımızda ve hat sanatımızda harflerinin duruşu nedeniyle Yaratıcıyı (Allah'ı) simgeleyen kırmızı çiçek hangisidir?
+* **Doğru Cevap (Harf ile Başlar):** Lale
+* **İpuçları:** Sembolik çiçek • İstanbul ile özdeşleşmiş bahar çiçeği
+* **Soru ID:** `pas_L_2`
+
+---
+
+### [PAS-42] [Harf: L] Kur'an-ı Kerim'de adı geçen, tıp bilgini ve oğluna verdiği altın değerindeki ahlak öğütleriyle tanınan hekim bilge şahsiyet?
+* **Doğru Cevap (Harf ile Başlar):** Lokman
+* **İpuçları:** Bilge hekim • Lokman Hekim
+* **Soru ID:** `pas_L_3`
+
+---
+
+### [PAS-43] [Harf: L] Allah'ın kullarına hiçbir karşılık beklemeden sunduğu ikram, ihsan, iyilik ve iyilik veriş durumuna ne denir?
+* **Doğru Cevap (Harf ile Başlar):** Lütuf
+* **İpuçları:** Bağış, ikram • Kerem sahibi olmak
+* **Soru ID:** `pas_L_4`
+
+---
+
+### [PAS-44] [Harf: M] Dört büyük melekten biri olan, doğa olaylarını (yağmur, rüzgar) ve canlıların rızıklarını yöneten melek hangisidir?
+* **Doğru Cevap (Harf ile Başlar):** Mikail
 * **İpuçları:** Doğa olayları meleği • Rızık dağıtıcısı melek
+* **Soru ID:** `pas_M_1`
 
 ---
 
-### [PAS-35] [Harf: M] Peygamberimizin hicret ettiği, içinde kabrinin (Ravza-i Mutahhara) bulunduğu nurlu şehir neresidir?
-* **Cevap (Harf ile Başlar):** Medine
-* **İpuçları:** Peygamberimizin şehri • Yesrib\in yeni adı
+### [PAS-45] [Harf: M] Sevgili Peygamberimizin doğduğu, Kabe'nin bulunduğu ve İslam'ın doğduğu en mukaddes şehir neresidir?
+* **Doğru Cevap (Harf ile Başlar):** Mekke
+* **İpuçları:** Peygamberimizin doğum yeri • Kabe'nin şehri
+* **Soru ID:** `pas_M_2`
 
 ---
 
-### [PAS-36] [Harf: M] Camilere gidildiğinde namaz vakitlerinde ezan okuyan ve kamet getiren görevli kişiye ne ad verilir?
-* **Cevap (Harf ile Başlar):** Müezzin
+### [PAS-46] [Harf: M] Peygamberimizin hicret ettiği, içinde kabrinin (Ravza-i Mutahhara) bulunduğu nurlu şehir neresidir?
+* **Doğru Cevap (Harf ile Başlar):** Medine
+* **İpuçları:** Peygamberimizin şehri • Yesrib'in yeni adı
+* **Soru ID:** `pas_M_3`
+
+---
+
+### [PAS-47] [Harf: M] Camilere gidildiğinde namaz vakitlerinde ezan okuyan ve kamet getiren görevli kişiye ne ad verilir?
+* **Doğru Cevap (Harf ile Başlar):** Müezzin
 * **İpuçları:** Ezanı seslendiren • Mescit görevlisi
+* **Soru ID:** `pas_M_4`
 
 ---
 
-### [PAS-37] [Harf: N] Yüzlerce yıl kavmini imana davet eden, inanmayanların tufanda boğulduğu, büyük bir gemi inşa eden peygamber kimdir?
-* **Cevap (Harf ile Başlar):** Nuh
+### [PAS-48] [Harf: N] Yüzlerce yıl kavmini imana davet eden, inanmayanların tufanda boğulduğu, büyük bir gemi inşa eden peygamber kimdir?
+* **Doğru Cevap (Harf ile Başlar):** Nuh
 * **İpuçları:** Tufan peygamberi • Büyük gemi yapan peygamber
+* **Soru ID:** `pas_N_1`
 
 ---
 
-### [PAS-38] [Harf: N] İbadetlerin kabul olmasının ilk şartı olan, kalbimizle neyi niçin yapacağımıza karar verme eylemine ne denir?
-* **Cevap (Harf ile Başlar):** Niyet
+### [PAS-49] [Harf: N] İslam'ın beş şartından biri olan, günde beş vakit yerine getirdiğimiz, dinin direği olan ibadet nedir?
+* **Doğru Cevap (Harf ile Başlar):** Namaz
+* **İpuçları:** Dinin direği • Günde 5 vakit ibadet
+* **Soru ID:** `pas_N_2`
+
+---
+
+### [PAS-50] [Harf: N] İbadetlerin kabul olmasının ilk şartı olan, kalbimizle neyi niçin yapacağımıza karar verme eylemine ne denir?
+* **Doğru Cevap (Harf ile Başlar):** Niyet
 * **İpuçları:** Ameller niyetlere göredir • Başlangıç kararı
+* **Soru ID:** `pas_N_3`
 
 ---
 
-### [PAS-39] [Harf: N] Kendisine yeni bir kitap verilmeyip kendinden önceki peygamberlerin kitabını tebliğ eden peygamberlere ne denir?
-* **Cevap (Harf ile Başlar):** Nebi
+### [PAS-51] [Harf: N] Kendisine yeni bir kitap verilmeyip kendinden önceki peygamberlerin kitabını tebliğ eden peygamberlere ne denir?
+* **Doğru Cevap (Harf ile Başlar):** Nebi
 * **İpuçları:** Resul olmayan elçi • Haber getiren peygamber
+* **Soru ID:** `pas_N_4`
 
 ---
 
-### [PAS-40] [Harf: Ö] Adaleti ve cesaretiyle tanınan, adaletin sembolü olan İslam tarihinin ikinci halifesi kimdir?
-* **Cevap (Harf ile Başlar):** Ömer
-* **İpuçları:** Faruk lakaplı halife • Adalet timsali halife
+### [PAS-52] [Harf: O] İslam'ın şartlarından biri olan, Ramazan ayında imsaktan akşama kadar yeme ve içmeyi bırakarak yapılan ibadet nedir?
+* **Doğru Cevap (Harf ile Başlar):** Oruç
+* **İpuçları:** Aç kalma terbiyesi • Ramazan ibadeti
+* **Soru ID:** `pas_O_1`
 
 ---
 
-### [PAS-41] [Harf: Ö] Her canlı varlığın bir gün tadacağı, dünya hayatının bitip ahiret hayatının kapısının açılması olayı nedir?
-* **Cevap (Harf ile Başlar):** Ölüm
-* **İpuçları:** Dünya hayatının sonu • Ahirete geçiş köprüsü
+### [PAS-53] [Harf: O] Uhud Savaşı'nda Peygamberimizin kesinlikle yerlerinden ayrılmamalarını emrettiği, savaşın seyrini değiştiren tepe?
+* **Doğru Cevap (Harf ile Başlar):** Okçular
+* **İpuçları:** Ayneyn tepesi askerleri • Savaşın seyrini değiştirenler
+* **Soru ID:** `pas_O_2`
 
 ---
 
-### [PAS-42] [Harf: Ö] Günün tam ortasında, güneş tam tepedeyken kılınan ve farzı 4 rekat olan namaz vakti hangisidir?
-* **Cevap (Harf ile Başlar):** Öğle
-* **İpuçları:** Gündüz kılınan ilk namaz • 10 rekatlık vakit namazı
+### [PAS-54] [Harf: O] Kur'an-ı Kerim'in her biri 20 sayfadan oluşan cüzlerinin toplam sayısı kaçtır?
+* **Doğru Cevap (Harf ile Başlar):** Otuz
+* **İpuçları:** Cüz sayısı • Bir ayın gün sayısı kadar
+* **Soru ID:** `pas_O_3`
 
 ---
 
-### [PAS-43] [Harf: P] Mekke dönemindeki müşriklerin elleriyle taştan veya tahtadan yaparak tapındıkları heykellere ne ad verilir?
-* **Cevap (Harf ile Başlar):** Put
+### [PAS-55] [Harf: P] Allah'ın gönderdiği vahiyleri insanlara bildirmek, onlara doğru yolu göstermekle görevli elçilere ne denir?
+* **Doğru Cevap (Harf ile Başlar):** Peygamber
+* **İpuçları:** Nebî veya Resûl • Allah'ın elçisi
+* **Soru ID:** `pas_P_1`
+
+---
+
+### [PAS-56] [Harf: P] Mekke dönemindeki müşriklerin elleriyle taştan veya tahtadan yaparak tapındıkları heykellere ne ad verilir?
+* **Doğru Cevap (Harf ile Başlar):** Put
 * **İpuçları:** Heykel tanrılar • İlahlaştırılan nesneler
+* **Soru ID:** `pas_P_2`
 
 ---
 
-### [PAS-44] [Harf: P] Rebiülevvel ayının 12. gecesi dünyaya gelen Sevgili Peygamberimizin doğduğu haftanın ilk günü hangisidir?
-* **Cevap (Harf ile Başlar):** Pazartesi
+### [PAS-57] [Harf: P] Rebiülevvel ayının 12. gecesi dünyaya gelen Sevgili Peygamberimizin doğduğu haftanın ilk günü hangisidir?
+* **Doğru Cevap (Harf ile Başlar):** Pazartesi
 * **İpuçları:** Haftanın ilk günü • Peygamberimizin doğum günü
+* **Soru ID:** `pas_P_3`
 
 ---
 
-### [PAS-45] [Harf: P] Dinimizin zekat, sadaka ve infak emirleriyle teşvik ettiği, elimizdeki nimetleri başkalarıyla bölüşme erdemi?
-* **Cevap (Harf ile Başlar):** Paylaşmak
+### [PAS-58] [Harf: P] Dinimizin zekat, sadaka ve infak emirleriyle teşvik ettiği, elimizdeki nimetleri başkalarıyla bölüşme erdemi?
+* **Doğru Cevap (Harf ile Başlar):** Paylaşmak
 * **İpuçları:** Bölüşmek • Cömertliğin eylemi
+* **Soru ID:** `pas_P_4`
 
 ---
 
-### [PAS-46] [Harf: R] Namaz kılarken kıyamdan sonra ellerimizi diz kapaklarımıza koyarak eğildiğimiz duruş şekline ne ad verilir?
-* **Cevap (Harf ile Başlar):** Ruku
+### [PAS-59] [Harf: R] Namaz kılarken kıyamdan sonra ellerimizi diz kapaklarımıza koyarak eğildiğimiz duruş şekline ne ad verilir?
+* **Doğru Cevap (Harf ile Başlar):** Ruku
 * **İpuçları:** Namazda eğilmek • Secdeden önceki adım
+* **Soru ID:** `pas_R_1`
 
 ---
 
-### [PAS-47] [Harf: R] Kendisine yeni bir kutsal kitap indirilen ve yeni bir şeriat getiren peygamberlere ne ad verilir?
-* **Cevap (Harf ile Başlar):** Resul
+### [PAS-60] [Harf: R] Kur'an-ı Kerim'in indirildiği, içerisinde bin aydan daha hayırlı Kadir Gecesi'ni barındıran oruç ayı hangisidir?
+* **Doğru Cevap (Harf ile Başlar):** Ramazan
+* **İpuçları:** Oruç ayı • 11 ayın sultanı
+* **Soru ID:** `pas_R_2`
+
+---
+
+### [PAS-61] [Harf: R] Kendisine yeni bir kutsal kitap indirilen ve yeni bir şeriat getiren peygamberlere ne ad verilir?
+* **Doğru Cevap (Harf ile Başlar):** Resul
 * **İpuçları:** Kitap verilen peygamber • Nebi zıttı
+* **Soru ID:** `pas_R_3`
 
 ---
 
-### [PAS-48] [Harf: S] Sevgili Peygamberimizin yaptığı, tavsiye ettiği ve bizim de yapmamız durumunda sevap kazanacağımız güzel davranışlar?
-* **Cevap (Harf ile Başlar):** Sünnet
+### [PAS-62] [Harf: R] Allah'ın tüm canlılara yemeleri, içmeleri ve hayatlarını sürdürmeleri için verdiği nimetlerin genel adı nedir?
+* **Doğru Cevap (Harf ile Başlar):** Rızık
+* **İpuçları:** Nimetler bütünü • Yiyecek ve içecekler
+* **Soru ID:** `pas_R_4`
+
+---
+
+### [PAS-63] [Harf: S] Namaz kılarken alnımızı, burnumuzu, dizlerimizi, ellerimizi ve ayaklarımızı yere koyarak Allah'a en yakın olduğumuz duruş?
+* **Doğru Cevap (Harf ile Başlar):** Secde
+* **İpuçları:** Allah'a en yakın an • Yere kapanmak
+* **Soru ID:** `pas_S_1`
+
+---
+
+### [PAS-64] [Harf: S] Sevgili Peygamberimizin yaptığı, tavsiye ettiği ve bizim de yapmamız durumunda sevap kazanacağımız güzel davranışlar?
+* **Doğru Cevap (Harf ile Başlar):** Sünnet
 * **İpuçları:** Peygamberimizin yolu • Hadislerin pratik hali
+* **Soru ID:** `pas_S_2`
 
 ---
 
-### [PAS-49] [Harf: S] Cemaatle namaz kılınırken Müslümanların omuz omuza vererek oluşturduğu düzgün sıralara ne ad verilir?
-* **Cevap (Harf ile Başlar):** Saf
+### [PAS-65] [Harf: S] Cemaatle namaz kılınırken Müslümanların omuz omuza vererek oluşturduğu düzgün sıralara ne ad verilir?
+* **Doğru Cevap (Harf ile Başlar):** Saf
 * **İpuçları:** Namaz sıraları • Sıra olmak
+* **Soru ID:** `pas_S_3`
 
 ---
 
-### [PAS-50] [Harf: S] İki Müslüman karşılaştığında birbirine esenlik ve barış dilemek için söylediği esenlik dileme sözü nedir?
-* **Cevap (Harf ile Başlar):** Selam
+### [PAS-66] [Harf: S] İki Müslüman karşılaştığında birbirine esenlik ve barış dilemek için söylediği esenlik dileme sözü nedir?
+* **Doğru Cevap (Harf ile Başlar):** Selam
 * **İpuçları:** Esselamu aleykum • Barış dileği
+* **Soru ID:** `pas_S_4`
 
 ---
 
-### [PAS-51] [Harf: Ş] Peygamber Efendimizin ahiret gününde günahkar Müslümanların affedilmesi için yapacağı şefkat dolu yardım ve dua?
-* **Cevap (Harf ile Başlar):** Şefaat
-* **İpuçları:** Peygamberimizin yardımı • Ahiret duası ve aracılığı
+### [PAS-67] [Harf: T] Dört büyük kutsal kitaptan ilki olan ve Hz. Musa peygambere indirilen kutsal kitap hangisidir?
+* **Doğru Cevap (Harf ile Başlar):** Tevrat
+* **İpuçları:** Hz. Musa'nın kitabı • Museviliğin kutsal kitabı
+* **Soru ID:** `pas_T_1`
 
 ---
 
-### [PAS-52] [Harf: T] Dört büyük kutsal kitaptan ilki olan ve Hz. Musa peygambere indirilen kutsal kitap hangisidir?
-* **Cevap (Harf ile Başlar):** Tevrat
-* **İpuçları:** Hz. Musa\nın kitabı • Museviliğin kutsal kitabı
+### [PAS-68] [Harf: T] İslam dininin en temel inancı olan, Allah'ın bir ve tek olduğuna, ortağı olmadığına inanma ilkesi nedir?
+* **Doğru Cevap (Harf ile Başlar):** Tevhid
+* **İpuçları:** Allah'ın birliği • İhlas suresinin konusu
+* **Soru ID:** `pas_T_2`
 
 ---
 
-### [PAS-53] [Harf: T] İmanın yarısı sayılan, hem bedenimizi hem elbisemizi hem de kalbimizi kirlerden arındırma eylemi nedir?
-* **Cevap (Harf ile Başlar):** Temizlik
+### [PAS-69] [Harf: T] İmanın yarısı sayılan, hem bedenimizi hem elbisemizi hem de kalbimizi kirlerden arındırma eylemi nedir?
+* **Doğru Cevap (Harf ile Başlar):** Temizlik
 * **İpuçları:** İmanın yarısıdır • Abdestin temeli
+* **Soru ID:** `pas_T_3`
 
 ---
 
-### [PAS-54] [Harf: T] Nuh peygamber zamanında inanmayanların suda boğulmasına, inananların ise gemiyle kurtulmasına yol açan büyük su felaketi?
-* **Cevap (Harf ile Başlar):** Tufan
+### [PAS-70] [Harf: T] Nuh peygamber zamanında inanmayanların suda boğulmasına, inananların ise gemiyle kurtulmasına yol açan büyük su felaketi?
+* **Doğru Cevap (Harf ile Başlar):** Tufan
 * **İpuçları:** Nuh tufanı • Su felaketi
+* **Soru ID:** `pas_T_4`
 
 ---
 
-### [PAS-55] [Harf: U] Uhud dağının eteklerinde yapılan ve okçuların tepeyi terk etmesi nedeniyle zor anlar yaşanan o meşhur savaş hangisidir?
-* **Cevap (Harf ile Başlar):** Uhud
+### [PAS-71] [Harf: U] Uhud dağının eteklerinde yapılan ve okçuların tepeyi terk etmesi nedeniyle zor anlar yaşanan o meşhur savaş hangisidir?
+* **Doğru Cevap (Harf ile Başlar):** Uhud
 * **İpuçları:** Uhud dağı savaşı • Hicretin 3. yılı
+* **Soru ID:** `pas_U_1`
 
 ---
 
-### [PAS-56] [Harf: U] Müslümanların birbirleriyle kardeş olması durumunu ifade eden Arapça kökenli kardeşlik kelimesi nedir?
-* **Cevap (Harf ile Başlar):** Uhuvvet
+### [PAS-72] [Harf: U] Hac zamanı dışında, yılın herhangi bir vaktinde Mekke'ye gidip Kabe'yi tavaf ederek yapılan ziyaret ibadeti nedir?
+* **Doğru Cevap (Harf ile Başlar):** Umre
+* **İpuçları:** Küçük hac • Belirli vakti olmayan Kabe ziyareti
+* **Soru ID:** `pas_U_2`
+
+---
+
+### [PAS-73] [Harf: U] Kur'an'da bir nevi ölüm uykusuna benzetilen, bedenin ve zihnin dinlendiği doğal dinlenme hali nedir?
+* **Doğru Cevap (Harf ile Başlar):** Uyku
+* **İpuçları:** Gece dinlenmesi • Ölümün kardeşi
+* **Soru ID:** `pas_U_3`
+
+---
+
+### [PAS-74] [Harf: U] Müslümanların birbirleriyle kardeş olması durumunu ifade eden Arapça kökenli kardeşlik kelimesi nedir?
+* **Doğru Cevap (Harf ile Başlar):** Uhuvvet
 * **İpuçları:** Kardeşlik • Müminler kardeştir ayetinin konusu
+* **Soru ID:** `pas_U_4`
 
 ---
 
-### [PAS-57] [Harf: Ü] Bir peygambere inanan ve onun gösterdiği doğru yolu takip eden insanların oluşturduğu topluluğa ne denir?
-* **Cevap (Harf ile Başlar):** Ümmet
-* **İpuçları:** Peygamber topluluğu • Biz Hz. Muhammed\in ...iyiz
+### [PAS-75] [Harf: V] Allah'ın emir ve yasaklarını melek aracılığıyla veya doğrudan göndermesi olayına ne denir?
+* **Doğru Cevap (Harf ile Başlar):** Vahiy
+* **İpuçları:** İlahi mesaj • Cebrail'in getirdiği haber
+* **Soru ID:** `pas_V_1`
 
 ---
 
-### [PAS-58] [Harf: Ü] Abdest alırken ağza su verme, burna su verme ve yüzü yıkama gibi adımları sünnete uygun olarak kaçar kez yaparız?
-* **Cevap (Harf ile Başlar):** Üç
-* **İpuçları:** Sünnet olan sayı • İkinin bir fazlası
-
----
-
-### [PAS-59] [Harf: V] Farz kadar kesin olmasa da yapılması dinen emredilen ibadetler (Örn: Bayram namazı kılmak, kurban kesmek)?
-* **Cevap (Harf ile Başlar):** Vacip
+### [PAS-76] [Harf: V] Farz kadar kesin olmasa da yapılması dinen emredilen ibadetler (Örn: Bayram namazı kılmak, kurban kesmek)?
+* **Doğru Cevap (Harf ile Başlar):** Vacip
 * **İpuçları:** Farzın bir altı • Kurban ibadetinin hükmü
+* **Soru ID:** `pas_V_2`
 
 ---
 
-### [PAS-60] [Harf: V] Peygamber Efendimizin vefat etmeden önce kalabalık bir Müslüman topluluğuna hitap ettiği son haccına ne ad verilir?
-* **Cevap (Harf ile Başlar):** Veda
+### [PAS-77] [Harf: V] Peygamber Efendimizin vefat etmeden önce kalabalık bir Müslüman topluluğuna hitap ettiği son haccına ne ad verilir?
+* **Doğru Cevap (Harf ile Başlar):** Veda
 * **İpuçları:** Veda Haccı • Son hutbenin okunduğu hac
+* **Soru ID:** `pas_V_3`
 
 ---
 
-### [PAS-61] [Harf: V] İslam dininin sevgisini ve korumasını teşvik ettiği, üzerinde doğup büyüdüğümüz bağımsız toprak parçası veya yurt?
-* **Cevap (Harf ile Başlar):** Vatan
+### [PAS-78] [Harf: V] İslam dininin sevgisini ve korumasını teşvik ettiği, üzerinde doğup büyüdüğümüz bağımsız toprak parçası veya yurt?
+* **Doğru Cevap (Harf ile Başlar):** Vatan
 * **İpuçları:** Yurt • Vatan sevgisi imandandır
+* **Soru ID:** `pas_V_4`
 
 ---
 
-### [PAS-62] [Harf: Y] Kavminden kızıp uzaklaştıktan sonra bindiği gemiden atılan ve denizde bir balığın karnında tövbe ederek kurtulan peygamber?
-* **Cevap (Harf ile Başlar):** Yunus
+### [PAS-79] [Harf: Y] Kardeşleri tarafından kıskanılıp kuyuya atılan, rüya yorumlama mucizesiyle Mısır'a maliye bakanı olan o çok yakışıklı peygamber?
+* **Doğru Cevap (Harf ile Başlar):** Yusuf
+* **İpuçları:** Güzelliğiyle ünlü peygamber • Kuyu hikayesi
+* **Soru ID:** `pas_Y_1`
+
+---
+
+### [PAS-80] [Harf: Y] Kavminden kızıp uzaklaştıktan sonra bindiği gemiden atılan ve denizde bir balığın karnında tövbe ederek kurtulan peygamber?
+* **Doğru Cevap (Harf ile Başlar):** Yunus
 * **İpuçları:** Balığın karnındaki peygamber • Ninova halkı elçisi
+* **Soru ID:** `pas_Y_2`
 
 ---
 
-### [PAS-63] [Harf: Z] Maddi durumu iyi olan Müslümanların yılda bir kez mallarının belirli bir kısmını fakirlere vermesi farz olan ibadet?
-* **Cevap (Harf ile Başlar):** Zekat
-* **İpuçları:** İslam\ın beş şartından biri • Mali temizlik ve paylaşım
+### [PAS-81] [Harf: Y] İslam'da en büyük ahlaksızlık ve günahlardan kabul edilen, dürüstlüğün zıttı olan doğru olmayan söz söyleme kötülüğü?
+* **Doğru Cevap (Harf ile Başlar):** Yalan
+* **İpuçları:** Dürüstlüğün zıttı • Münafıklık alameti olan davranış
+* **Soru ID:** `pas_Y_3`
 
 ---
 
-### [PAS-64] [Harf: Z] Dört büyük ilahi kitaptan biri olan ve Hz. Davut peygambere indirilen kutsal kitabın adı nedir?
-* **Cevap (Harf ile Başlar):** Zebur
-* **İpuçları:** Hz. Davut\nun kitabı • Mezmurlar olarak da bilinen kitap
+### [PAS-82] [Harf: Y] Kur'an-ı Kerim'in kalbi olarak nitelendirilen, adını ilk ayetindeki harflerden alan meşhur surenin adı nedir?
+* **Doğru Cevap (Harf ile Başlar):** Yasin
+* **İpuçları:** Kur'an'ın kalbi • Ölülere ve dirilere okunan meşhur sure
+* **Soru ID:** `pas_Y_4`
+
+---
+
+### [PAS-83] [Harf: Z] Maddi durumu iyi olan Müslümanların yılda bir kez mallarının belirli bir kısmını fakirlere vermesi farz olan ibadet?
+* **Doğru Cevap (Harf ile Başlar):** Zekat
+* **İpuçları:** İslam'ın beş şartından biri • Mali temizlik ve paylaşım
+* **Soru ID:** `pas_Z_1`
+
+---
+
+### [PAS-84] [Harf: Z] Dört büyük ilahi kitaptan biri olan ve Hz. Davut peygambere indirilen kutsal kitabın adı nedir?
+* **Doğru Cevap (Harf ile Başlar):** Zebur
+* **İpuçları:** Hz. Davut'nun kitabı • Mezmurlar olarak da bilinen kitap
+* **Soru ID:** `pas_Z_2`
+
+---
+
+### [PAS-85] [Harf: Z] Allah'ı anmak, O'nu dille tesbih etmek ve kalple hatırlamak için yapılan dua ve anma eylemlerine ne denir?
+* **Doğru Cevap (Harf ile Başlar):** Zikir
+* **İpuçları:** Sübhanallah, Elhamdülillah demek • Anmak, hatırlamak
+* **Soru ID:** `pas_Z_3`
+
+---
+
+### [PAS-86] [Harf: Z] Mekke'de Hz. Hacer ve Hz. İsmail çölde susuz kaldığında Kabe'nin altından mucizevi bir şekilde çıkan kutsal su?
+* **Doğru Cevap (Harf ile Başlar):** Zemzem
+* **İpuçları:** Kutsal su • Hacer validemizin bulduğu su
+* **Soru ID:** `pas_Z_4`
+
+---
+
+### [PAS-87] [Harf: Ç] Hicret esnasında Peygamberimizin aştığı, kum tepeleriyle kaplı çok sıcak coğrafi alanlara ne denir?
+* **Doğru Cevap (Harf ile Başlar):** Çöl
+* **İpuçları:** Kum denizi • Sıcak coğrafya
+* **Soru ID:** `pas_Ç_1`
+
+---
+
+### [PAS-88] [Harf: Ç] Nuh peygamberin tufandan korumak için gemisine her hayvandan aldığı sayı miktarı?
+* **Doğru Cevap (Harf ile Başlar):** Çift
+* **İpuçları:** İkişer adet • Tek olmayan
+* **Soru ID:** `pas_Ç_2`
+
+---
+
+### [PAS-89] [Harf: Ç] Peygamberimizin seferlerde veya savaşlarda içinde dinlendiği kumaştan yapılmış barınak türü?
+* **Doğru Cevap (Harf ile Başlar):** Çadır
+* **İpuçları:** Göçebe barınağı • Otağ
+* **Soru ID:** `pas_Ç_3`
+
+---
+
+### [PAS-90] [Harf: Ö] Adaleti ve cesaretiyle tanınan, adaletin sembolü olan İslam tarihinin ikinci halifesi kimdir?
+* **Doğru Cevap (Harf ile Başlar):** Ömer
+* **İpuçları:** Faruk lakaplı halife • Adalet timsali halife
+* **Soru ID:** `pas_Ö_1`
+
+---
+
+### [PAS-91] [Harf: Ö] Her canlı varlığın bir gün tadacağı, dünya hayatının bitip ahiret hayatının kapısının açılması olayı nedir?
+* **Doğru Cevap (Harf ile Başlar):** Ölüm
+* **İpuçları:** Dünya hayatının sonu • Ahirete geçiş köprüsü
+* **Soru ID:** `pas_Ö_2`
+
+---
+
+### [PAS-92] [Harf: Ö] Günün tam ortasında, güneş tam tepedeyken kılınan ve farzı 4 rekat olan namaz vakti hangisidir?
+* **Doğru Cevap (Harf ile Başlar):** Öğle
+* **İpuçları:** Gündüz kılınan ilk namaz • 10 rekatlık vakit namazı
+* **Soru ID:** `pas_Ö_3`
+
+---
+
+### [PAS-93] [Harf: Ö] Annesi ve babası hayattayken vefat etmiş olan, korunup gözetilmesi Kur'an'da sıkça emredilen küçük çocuklara ne denir?
+* **Doğru Cevap (Harf ile Başlar):** Yetim
+* **İpuçları:** Annesi veya babası vefat eden • Korunması gereken küçük yavru
+* **Soru ID:** `pas_Ö_4`
+
+---
+
+### [PAS-94] [Harf: Ü] Bir peygambere inanan ve onun gösterdiği doğru yolu takip eden insanların oluşturduğu topluluğa ne denir?
+* **Doğru Cevap (Harf ile Başlar):** Ümmet
+* **İpuçları:** Peygamber topluluğu • Biz Hz. Muhammed'in ...iyiz
+* **Soru ID:** `pas_Ü_1`
+
+---
+
+### [PAS-95] [Harf: Ü] Allah'ın merhametinden ve affından asla vazgeçmeyerek kalbimizde taşıdığımız güzel ve olumlu beklenti duygusu?
+* **Doğru Cevap (Harf ile Başlar):** Ümit
+* **İpuçları:** Umut etmek • Karamsarlığın zıttı
+* **Soru ID:** `pas_Ü_2`
+
+---
+
+### [PAS-96] [Harf: Ü] Abdest alırken ağza su verme, burna su verme ve yüzü yıkama gibi adımları sünnete uygun olarak kaçar kez yaparız?
+* **Doğru Cevap (Harf ile Başlar):** Üç
+* **İpuçları:** Sünnet olan sayı • İkinin bir fazlası
+* **Soru ID:** `pas_Ü_3`
+
+---
+
+### [PAS-97] [Harf: İ] Dört büyük kutsal kitaptan biri olan ve Hz. İsa peygambere indirilen kitap hangisidir?
+* **Doğru Cevap (Harf ile Başlar):** İncil
+* **İpuçları:** Hz. İsa'nın kitabı • Müjde anlamına gelen kitap
+* **Soru ID:** `pas_İ_1`
+
+---
+
+### [PAS-98] [Harf: İ] İslam dininin inanılmasını emrettiği esasları kalbiyle onaylayıp diliyle söyleyen kişilerin sahip olduğu inanç durumu?
+* **Doğru Cevap (Harf ile Başlar):** İman
+* **İpuçları:** İnanma gücü • Mümin olma şartı
+* **Soru ID:** `pas_İ_2`
+
+---
+
+### [PAS-99] [Harf: İ] Yapılan her ibadeti ve güzel davranışı sadece ve sadece Allah rızasını kazanmak için samimiyetle yapmak nedir?
+* **Doğru Cevap (Harf ile Başlar):** İhlas
+* **İpuçları:** Samimiyet • Gösterişten uzak olmak
+* **Soru ID:** `pas_İ_3`
+
+---
+
+### [PAS-100] [Harf: İ] Yaratıcımız Allah'a olan sevgi, saygı ve bağlılığimizi göstermek için O'nun emrettiği görevleri yerine getirmeye ne denir?
+* **Doğru Cevap (Harf ile Başlar):** İbadet
+* **İpuçları:** Kulluk görevleri • Namaz, oruç vb. genel adı
+* **Soru ID:** `pas_İ_4`
+
+---
+
+### [PAS-101] [Harf: Ş] Kelime-i Şehadet getirerek Allah'ın varlığını ve birliğini kabul edip bunu herkese ilan etme durumuna ne denir?
+* **Doğru Cevap (Harf ile Başlar):** Şehadet
+* **İpuçları:** Şahitlik etmek • Müslüman olma ilanı
+* **Soru ID:** `pas_Ş_1`
+
+---
+
+### [PAS-102] [Harf: Ş] Hz. Adem'e secde etmediği için cennetten kovulan, insanları sürekli kötülüğe ve harama teşvik eden varlık kimdir?
+* **Doğru Cevap (Harf ile Başlar):** Şeytan
+* **İpuçları:** İblis • Kötülüklerin vesvesecisi
+* **Soru ID:** `pas_Ş_2`
+
+---
+
+### [PAS-103] [Harf: Ş] Bize verdiği sağlık, akıl ve nimetler için Allah'a teşekkür edip dile getirdiğimiz hamd etme eylemi nedir?
+* **Doğru Cevap (Harf ile Başlar):** Şükür
+* **İpuçları:** Teşekkür etmek • Elhamdülillah demek
+* **Soru ID:** `pas_Ş_3`
+
+---
+
+### [PAS-104] [Harf: Ş] Peygamber Efendimizin ahiret gününde günahkar Müslümanların affedilmesi için yapacağı şefkat dolu yardım ve dua?
+* **Doğru Cevap (Harf ile Başlar):** Şefaat
+* **İpuçları:** Peygamberimizin yardımı • Ahiret duası ve aracılığı
+* **Soru ID:** `pas_Ş_4`
 
 ---
 
 
 ## 🔍 BÖLÜM 4: KELİME ARKEOLOJİSİ SORULARI (23 Soru)
+
+### [KELİME-1] Türkçe Kelime: **Ahlâk** (Arapça Kökü: *h-l-k (خ-ل-ق)*)
+* **Açıklama:** Gündelik hayatta "güzel davranışlar" olarak kullandığımız "Ahlâk" kelimesi, "Halk" (yaratılış) ve "Hâlık" (yaratıcı) kelimeleriyle aynı kökten gelir.
+* **İpuçları:**
+  - *Kişinin yaratılışındaki özü, karakter yapısı demektir.*
+  - *Mahlûkat (yaratılanlar) kelimesi ile aynı kök harflerini taşır.*
+  - *Kuran-ı Kerim'de Peygamberimiz için "büyük bir ahlak üzere" olduğu bildirilir.*
+* **Şıklar:**
+  - A) H-L-K (Yaratılış ve fıtrat ile bağdaşır)
+  - B) S-B-R (Zorluklara karşı göğüs germek)
+  - C) H-K-M (Karar vermek ve yönetmek)
+  - D) A-D-L (Denge ve adaletli olmak)
+* **Doğru Şık:** H-L-K (Yaratılış ve fıtrat ile bağdaşır)
+* **Kuran Referansı:** Kalem Suresi, 4. Ayet: "Ve şüphesiz sen, pek büyük bir ahlak üzerindesin."
+* **Hikmet Açıklaması:** *Ahlak, yapay veya dışarıdan ekleme bir maske değildir; insanın fıtratındaki (yaratılışındaki) güzelliğin dışa vurmasıdır. Yaratıcı'ya (Hâlık) yönelen insan, mahlûkata güzel ahlak ile muamele eder.*
+* **Soru ID:** `k1`
+
+---
+
+### [KELİME-2] Türkçe Kelime: **Medeniyet** (Arapça Kökü: *m-d-n (م-د-ن)*)
+* **Açıklama:** Şehirleşme, kültür ve uygarlık anlamındaki "Medeniyet" kelimesi, İslam tarihinin dönüm noktası olan bir şehre ve bir yaşam tarzına dayanır.
+* **İpuçları:**
+  - *Yathrib şehrinin hicretten sonraki yeni adıyla aynı köktendir.*
+  - *Hukukun, adaletin, kardeşliğin ve ortak kuralların geçerli olduğu toplumsal merkezdir.*
+  - *"Medine" kelimesinden türetilmiştir.*
+* **Şıklar:**
+  - A) K-T-B (Yazmak ve belgelemek)
+  - B) M-D-N (Medine, yani şehirleşmek, nizam kurmak)
+  - C) S-L-M (Boyun eğmek ve barış içinde olmak)
+  - D) A-L-M (Bilmek ve bilinç kazanmak)
+* **Doğru Şık:** M-D-N (Medine, yani şehirleşmek, nizam kurmak)
+* **Kuran Referansı:** Tevbe Suresi, 100. Ayet (Yerel halk olan Ensar ve Muhacirlerin Medine nizamındaki öncülüğü vurgulanır.)
+* **Hikmet Açıklaması:** *Gerçek medeniyet sadece beton binalardan ibaret değildir. Kökünü "Medine"den (Aydınlanmış Şehir) alan medeniyet; adalet, ahlak, yardımlaşma ve hukukun hakim olduğu erdemli bir toplum kurma çabasıdır.*
+* **Soru ID:** `k2`
+
+---
+
+### [KELİME-3] Türkçe Kelime: **Sabır** (Arapça Kökü: *s-b-r (ص-ب-ر)*)
+* **Açıklama:** Zor zamanlarda sığındığımız "Sabır" kelimesinin köken anlamı, pasif bir bekleyiş değil; son derece aktif ve zekice bir direnç formudur.
+* **İpuçları:**
+  - *Kök anlamı "geri durmak, nefsi tutmak, kendini hapsetmek ve direnmek"tir.*
+  - *Zorluk anında telaş yapmayıp mantıklı ve dirayetli adımlar atmayı simgeler.*
+  - *Kimya literatüründe sarsılmadan sabit kalan dayanıklı maddeler için de bu kök kullanılır.*
+* **Şıklar:**
+  - A) S-B-R (Nefsi korumak, zorluğa karşı kararlılıkla direnmek)
+  - B) C-H-D (Çalışmak ve mücadele etmek)
+  - C) Ş-K-R (Nimetin sahibini bilip övmek)
+  - D) T-W-K (Vekil kılmak ve teslim olmak)
+* **Doğru Şık:** S-B-R (Nefsi korumak, zorluğa karşı kararlılıkla direnmek)
+* **Kuran Referansı:** Bakara Suresi, 153. Ayet: "Ey iman edenler! Sabır ve namazla yardım dileyin. Şüphesiz Allah sabredenlerle beraberdir."
+* **Hikmet Açıklaması:** *Sabır, haksızlığa karşı öylece durup boyun eğmek değildir. Sabır; zorluk karşısında aklını, vicdanını ve inancını koruyarak çözüm üretmeye, pes etmeden doğru yolda durmaya çalışmaktır.*
+* **Soru ID:** `k3`
+
+---
+
+### [KELİME-4] Türkçe Kelime: **Adalet** (Arapça Kökü: *A-D-L (ع-د-ل)*)
+* **Açıklama:** Hukukun can damarı olan "Adalet", İslam inancında çok derin kozmik ve insani bir teraziye dayanır.
+* **İpuçları:**
+  - *Eşitlemek, dengelemek, her şeyi kendi hakkı olan yere koymak demektir.*
+  - *Kameri tartıların iki kefesinin dengede durmasına bu kelimeden türetilen "Muâdele" denir.*
+  - *Evrendeki fiziksel dengeler (kütleçekim vb.) ile ahlaki dengeler aynı mana kökünde birleşir.*
+* **Şıklar:**
+  - A) H-K-M (Bilgelikle hüküm vermek)
+  - B) A-D-L (Dengede tutmak, hakkını teslim etmek)
+  - C) R-H-M (Merhamet etmek, esirgemek)
+  - D) S-D-K (Gerçek söylemek, dürüst olmak)
+* **Doğru Şık:** A-D-L (Dengede tutmak, hakkını teslim etmek)
+* **Kuran Referansı:** Nahl Suresi, 90. Ayet: "Şüphesiz Allah, adaleti, iyilik yapmayı ve yakınlara yardım etmeyi emreder..."
+* **Hikmet Açıklaması:** *Adalet, tarafsızlıktır. Evrendeki kozmik nizam nasıl hassas bir dengeyle kurulduysa, insan ilişkileri de ancak "Adalet" terazisiyle dengede kalabilir. Güçlüye göre değil, haklıya göre karar vermek adaletin özüdür.*
+* **Soru ID:** `k4`
+
+---
+
+
+## 📅 BÖLÜM 5: KRONOLOJİ MATRİSİ SORULARI (20 Soru)
+
+### [KRO-1] Tarihi Olay: **undefined**
+* **Doğru Yıl:** undefined
+* **Kategori:** undefined
+* **Açıklama:** undefined
+* **Soru ID:** `ch1`
+
+---
+
+### [KRO-2] Tarihi Olay: **undefined**
+* **Doğru Yıl:** undefined
+* **Kategori:** undefined
+* **Açıklama:** undefined
+* **Soru ID:** `ch2`
+
+---
+
+
+## 🤔 BÖLÜM 6: HİKMET İKİLEMLERİ SENARYOLARI (10 Soru)
+
+### [İKİLEM-1] Senaryo Başlığı: **Akademik Dürüstlük ve Dostluk Sınavı**
+* **Durum / Olay:** Yarın çok önemli bir ortak ders sınavı var. En sevdiğin ve ailevi sorunlar yüzünden dersi hiç dinlememiş olan yakın arkadaşın, sınav esnasında senden kopya istiyor. Sana "Eğer vermezsen sınıfta kalırım ve ailemle aram çok açılır, bana yardım etmelisin" diyor. Sınav başlayınca yanına oturuyor ve bir işaret veriyor. Sınıfta hocanın gözü üzerinizde değil. Nasıl hareket edersin?
+* **Seçenekler & Geri Bildirimler:**
+  - **Seçenek 1:** Kopya vermem fakat bu akşam eksik olduğu zor konuları ona tek tek anlatmayı teklif ederim.
+    - *Puan:* 10
+    - *Erdem:* Dürüstlük ve Gerçek Dostluk
+    - *Geri Bildirim:* *Harika! Gerçek bir dost kötülükte (kopya çekmek kul hakkıdır) yardımlaşmaz. Onu hem haksızlıktan korudun hem de çalışarak emeğiyle başarması için fedakarlık yaptın.*
+  - **Seçenek 2:** Sadece bir iki soruya bakmasına izin veririm, ne de olsa yakın arkadaşım, onu zor durumda bırakamam.
+    - *Puan:* 3
+    - *Erdem:* Zayıf Sadakat (Hatalı Empati)
+    - *Geri Bildirim:* *Hatalı bir yaklaşım. Kopya çekmesine izin vermek, gece gündüz çalışan diğer arkadaşlarınızın emeğini gasbetmektir (kul hakkı). Ayrıca onu tembelliğe alıştırmış olursun.*
+  - **Seçenek 3:** Kopya çekmenin kul hakkı olduğunu, sınavdan sonra ona ders çalıştırabileceğimi ama sınavda yardım edemeyeceğimi açıkça söylerim.
+    - *Puan:* 10
+    - *Erdem:* Ahlaki Cesaret ve Adalet
+    - *Geri Bildirim:* *Mükemmel! Akran baskısına boyun eğmeyip doğru olanı dürüstçe yüzüne söylemek büyük bir ahlaki cesarettir. Gerçek dost kırılsa da doğruyu söyleyendir.*
+* **Soru ID:** `d1`
+
+---
+
+### [İKİLEM-2] Senaryo Başlığı: **Sosyal Medyadaki Dedikodu Yangını**
+* **Durum / Olay:** Sınıfınızın ortak mesaj grubunda, pek sevilmeyen ve yalnız kalan bir arkadaşınızın çekilmiş komik ve biraz da küçük düşürücü bir fotoğrafı paylaşılıyor. Arkasından gruptaki popüler kişiler onunla dalga geçmeye, caps yapmaya başlıyor. Mesajlar çığ gibi büyüyor ve gruptan kahkahalar yükseliyor. Sen grupta aktifsin ve bu durumun o arkadaşını ne kadar inciteceğini biliyorsun. Ne yaparsın?
+* **Seçenekler & Geri Bildirimler:**
+  - **Seçenek 1:** Gruptaki diğer popüler liderlerle aram bozulmasın diye sessiz kalırım, gruptan da çıkmam, izlerim.
+    - *Puan:* 4
+    - *Erdem:* Çekimserlik (Bana Dokunmayan Yılan)
+    - *Geri Bildirim:* *Zulme ve haksızlığa karşı sessiz kalmak, haksızlığı yapanların cesaretini artırır. Peygamberimiz bir kötülük gördüğümüzde onu elimizle, dilimizle düzeltmeyi, en azından kalbimizle buğzetmeyi emreder.*
+  - **Seçenek 2:** Gruba "Arkadaşlar bu yaptığımız açıkça alay etmektir ve gıybettir. Kul hakkına giriyoruz, bu fotoğrafı silelim ve konuyu kapatalım" yazarak net tavır koyarım.
+    - *Puan:* 10
+    - *Erdem:* Münkeri Nehiy (Kötülüğü Engellemek)
+    - *Geri Bildirim:* *Muhteşem bir cesaret! Grup baskısından korkmadan hakkı dile getirmek ve zayıfın yanında durmak tam anlamıyla "fütüvvet" (kahramanlık) ve İslam ahlakıdır.*
+  - **Seçenek 3:** Arkadaşımın üzülmesini engellemek için ona özelden yazar, sakin olmasını söylerim ama ortak gruba hiçbir şey yazmam.
+    - *Puan:* 7
+    - *Erdem:* Gizli Merhamet (Yarı Destek)
+    - *Geri Bildirim:* *Güzel ama eksik. Arkadaşını bireysel olarak teselli etmen merhametini gösterir, ancak gruptaki açık zorbalığı durdurmak için orada da hakkı savunmak gerekirdi.*
+* **Soru ID:** `d2`
+
+---
+
+### [İKİLEM-3] Senaryo Başlığı: **Emanet ve Sosyal Sorumluluk**
+* **Durum / Olay:** Yaz kursundaki arkadaşlarınla caminin bahçesinde oynarken, camiye ait güzel bir basketbol topunun yanlışlıkla çok dikenli bir çalıya kaçtığını ve patladığını görüyorsunuz. Kimsenin haberi yok. Arkadaş grubun "Bunu biz yapmadık diyelim, rüzgar fırlatmıştır" diyerek olayın üzerini kapatmak istiyor. Sen ne dersin?
+* **Seçenekler & Geri Bildirimler:**
+  - **Seçenek 1:** "Hakikat gizli kalmaz, gidip hocaya durumu dürüstçe anlatalım, harçlıklarımızla yenisini alırız" diyerek grubu dürüstlüğe sevk ederim.
+    - *Puan:* 10
+    - *Erdem:* Emanet Bilinci ve Dürüstlük
+    - *Geri Bildirim:* *Harika değer! Cami malları hepimize emanettir. Hatayı kabul etmek, dürüst olmak ve telafi yoluna gitmek İslam'ın özüdür.*
+  - **Seçenek 2:** Hocaya gidip topu patlatan arkadaşın ismini gizlice söylerim, kendi adımı karıştırmam.
+    - *Puan:* 5
+    - *Erdem:* Bireysel Sıyrılma
+    - *Geri Bildirim:* *Çözümcü değil. Arkadaşını ihbar etmek yerine, arkadaşlarınla birlikte sorumluluk alıp hocaya dürüstçe söylemeniz ve telafi etmeniz daha ahlakidir.*
+  - **Seçenek 3:** Gruptan ayrılırım, camiye girmem. Ne söylerim ne de olaya dahil olurum.
+    - *Puan:* 3
+    - *Erdem:* Sorumluluktan Kaçış
+    - *Geri Bildirim:* *Cami malları topluma aittir, yani tüyü bitmemiş yetimin hakkı vardır. "Bana ne" demek sorumlu müslümana yakışmaz.*
+* **Soru ID:** `d3`
+
+---
