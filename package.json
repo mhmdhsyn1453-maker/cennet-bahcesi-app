@@ -1,7 +1,7 @@
 {
   "name": "cennet-bahcesi",
   "private": true,
-  "version": "1.0.17",
+  "version": "1.0.20",
   "author": "Cennet Bahçesi",
   "description": "Cennet Bahçesi Uygulaması",
   "type": "module",
