@@ -20,6 +20,9 @@ import {
   UnifiedQuizQuestion,
   shuffleArray
 } from '../utils/questionPool';
+import { MosqueHangmanGame } from './games/MosqueHangmanGame';
+import { HANGMAN_QUESTIONS_DB } from '../data/games/hangmanQuestions';
+import { MEMORY_MATCH_QUESTIONS_DB } from '../data/games/memoryMatchQuestions';
 import { playSound } from './BuzzerAndTimer';
 import { PassaparolaGame } from './games/PassaparolaGame';
 
@@ -161,26 +164,15 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
   const INDIVIDUAL_GAMES = [
     { id: 'az_passaparola', title: 'A\'dan Z\'ye İslam Atlası (Passaparola)', desc: 'Tüm konulardan rastgele seçilen dini kavramları ve soruları bilerek çemberi tamamla.', icon: <BookOpen className="w-8 h-8 text-amber-500" />, comingSoon: false },
     { id: 'mosque_hangman', title: 'Cami Yapmaca (Adam Asmaca)', desc: 'Sözlükteki kavramları harf harf tahmin ederek canların ve süren bitmeden camiyi inşa et.', icon: <Landmark className="w-8 h-8 text-emerald-500" />, comingSoon: false },
-    { id: 'door_swiper', title: 'Doğru Kapıyı Seç (True/False)', desc: 'Cennet kapısına ulaşmak için önermelerin doğru mu yanlış mı olduğunu hızlıca seç.', icon: <Flame className="w-8 h-8 text-sky-500" />, comingSoon: false },
     { id: 'memory_match', title: 'Eşleştirme Kartları (Hafıza Oyunu)', desc: 'Kelimeler ile anlamlarını eşleştirerek kartları ters çevir ve eşlerini bul.', icon: <Users className="w-8 h-8 text-indigo-500" />, comingSoon: false },
-    { id: 'word_scramble', title: 'Harf Sıralama (Kelime Karıştırma)', desc: 'Karışık verilen harfleri doğru sıraya dizerek gizli dini terimi bul.', icon: <Compass className="w-8 h-8 text-orange-500" />, comingSoon: false },
-
-    // Çok Yakında (13 adet benzersiz konsept)
     { id: 'word_search', title: 'Hazine Avcısı (Kelime Avı)', desc: 'Karışık harfler tablosundaki dini kelimeleri bulup parmağınla çiz.', icon: <Compass className="w-8 h-8 text-rose-500" />, comingSoon: false },
     { id: 'millionaire_quiz', title: 'Kim Milyoner Olmak İster?', desc: 'Zorluk seviyesine göre artan 15 soruluk dini bilgi yarışması merdiveni.', icon: <Trophy className="w-8 h-8 text-yellow-500" />, comingSoon: false },
-    { id: 'fill_in_blanks', title: 'Boşluk Doldurma (Cümle Tamamla)', desc: 'Ayet ve hadislerdeki eksik kelimeleri doğru şekilde yerleştir.', icon: <BookOpen className="w-8 h-8 text-teal-500" />, comingSoon: false },
     { id: 'chronology', title: 'Sıra Sende (Zaman Şeridi)', desc: 'Tarihi olayları veya ibadet adımlarını kronolojik olarak sırala.', icon: <Clock className="w-8 h-8 text-violet-500" />, comingSoon: false },
-    { id: 'image_guess', title: 'Resim Tahmin (Görsel Bulmaca)', desc: 'Yavaşça açılan dini görsellerin ve mekanların ne olduğunu tahmin et.', icon: <Sparkles className="w-8 h-8 text-pink-500" />, comingSoon: false },
     { id: 'wheel_of_wisdom', title: 'Çark-ı Bilgi (Soru Çarkı)', desc: 'Çarkıfeleği çevir, gelen kategorideki soruyu bilerek puanları kap.', icon: <Settings className="w-8 h-8 text-purple-500" />, comingSoon: false },
     { id: 'falling_words', title: 'Kelime Avcısı (Hızlı Yazım)', desc: 'Yukarıdan düşen harfleri kelime tamamlanmadan önce sırayla vur.', icon: <Flame className="w-8 h-8 text-red-500" />, comingSoon: false },
-    { id: 'quick_quiz', title: '4 Şıklı Bilgi Testi', desc: 'Süreli ve çoktan seçmeli hızlı dini bilgi maratonu.', icon: <HelpCircle className="w-8 h-8 text-sky-600" />, comingSoon: false },
-    { id: 'honeycomb_puzzle', title: 'Petek Bulmaca (Hexagon)', desc: 'Petek hücrelerindeki harfleri birleştirerek gizli kelimeleri üret.', icon: <Award className="w-8 h-8 text-yellow-600" />, comingSoon: false },
     { id: 'maze_runner', title: 'Hazine Labirenti (Maze Quiz)', desc: 'Karakterini labirentte gezdir, doğru kapıya ulaşırken engelleri aş.', icon: <Compass className="w-8 h-8 text-emerald-600" />, comingSoon: false },
-    { id: 'word_chain', title: 'Kelime Zinciri', desc: 'Önceki kelimenin son harfiyle başlayan yeni bir dini terim türet.', icon: <Clock className="w-8 h-8 text-indigo-400" />, comingSoon: false },
     { id: 'taboo_terms', title: 'Dini Terim Kartları (Tabu)', desc: 'Yasaklı kelimeleri kullanmadan gizli terimi arkadaşlarına anlat.', icon: <Users className="w-8 h-8 text-teal-600" />, comingSoon: false },
-    { id: 'pair_matching', title: 'Eşini Bul (Kelime Eşleme)', desc: 'Kavramları sürükleyip ilgili oldukları başlıklarla eşleştir.', icon: <Trophy className="w-8 h-8 text-amber-500" />, comingSoon: false },
-    { id: 'balloon_pop', title: 'Balon Patlatmaca', desc: 'Ekranda uçuşan balonlardan sadece doğru cevabı taşıyanı patlat.', icon: <Sparkles className="w-8 h-8 text-pink-600" />, comingSoon: false },
-    { id: 'diff_finder', title: 'Farkı Bul (Görsel Arama)', desc: 'İki dini mimari resim arasındaki ince farkları bulup işaretle.', icon: <Landmark className="w-8 h-8 text-emerald-450" />, comingSoon: false }
+    { id: 'pair_matching', title: 'Eşini Bul (Kelime Eşleme)', desc: 'Kavramları sürükleyip ilgili oldukları başlıklarla eşleştir.', icon: <Trophy className="w-8 h-8 text-amber-500" />, comingSoon: false }
   ];
 
   // Takım Oyun Listesi Tanımı
@@ -255,29 +247,29 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
               {/* Bireysel Oyunlar Butonu */}
               <button
                 onClick={() => setView('individual_select')}
-                className="group text-left bg-gradient-to-br from-sky-400 via-sky-500 to-indigo-650 text-white rounded-[2.5rem] p-8 shadow-[0_15px_30px_-5px_rgba(14,165,233,0.25)] dark:shadow-[0_15px_30px_-5px_rgba(14,165,233,0.1)] hover:shadow-[0_20px_40px_-5px_rgba(14,165,233,0.4)] hover:scale-103 active:scale-97 cursor-pointer transition-all duration-300 relative overflow-hidden border-4 border-sky-300 dark:border-sky-700/50 flex flex-col justify-between min-h-[300px]"
+                className="group text-left bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 text-slate-800 dark:text-white rounded-[2.5rem] p-8 shadow-md hover:shadow-xl hover:scale-103 active:scale-97 cursor-pointer transition-all duration-300 relative overflow-hidden border-4 border-slate-200 dark:border-slate-700 hover:border-sky-500 dark:hover:border-sky-500 flex flex-col justify-between min-h-[300px]"
               >
                 {/* Floating Shapes */}
-                <div className="absolute -right-12 -bottom-12 w-48 h-48 bg-white/10 rounded-full blur-2xl group-hover:scale-120 transition-all duration-500"></div>
-                <div className="absolute right-6 top-6 text-7xl opacity-15 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">👤</div>
+                <div className="absolute -right-12 -bottom-12 w-48 h-48 bg-sky-500/5 dark:bg-sky-500/10 rounded-full blur-2xl group-hover:scale-120 transition-all duration-500"></div>
+                <div className="absolute right-6 top-6 text-7xl opacity-10 dark:opacity-20 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">👤</div>
 
                 <div>
-                  <div className="w-16 h-16 rounded-2xl bg-white/20 border border-white/30 flex items-center justify-center text-white group-hover:scale-115 group-hover:rotate-6 transition-all duration-300 shadow-inner">
+                  <div className="w-16 h-16 rounded-2xl bg-sky-50 dark:bg-sky-950/40 border border-sky-100 dark:border-sky-900/30 flex items-center justify-center text-sky-500 dark:text-sky-400 group-hover:scale-115 group-hover:rotate-6 transition-all duration-300 shadow-inner">
                     <User className="w-8 h-8" />
                   </div>
-                  <h3 className="font-display font-black text-2xl mt-6 uppercase tracking-tight">
+                  <h3 className="font-display font-black text-2xl mt-6 uppercase tracking-tight text-slate-800 dark:text-white">
                     Bireysel Oyunlar
                   </h3>
-                  <p className="text-xs text-sky-100/90 font-medium mt-2 leading-relaxed max-w-[280px]">
+                  <p className="text-xs text-slate-550 dark:text-slate-400 font-medium mt-2 leading-relaxed max-w-[280px]">
                     Tek kişi veya sırayla oynanabilen, harf tahminleri, kelime bulmacaları ve refleks tabanlı eğlenceli oyunlar alanı.
                   </p>
                 </div>
 
                 <div className="mt-8 flex justify-between items-center z-10">
-                  <div className="px-3.5 py-1.5 bg-white/20 rounded-full text-[10px] font-black uppercase tracking-widest border border-white/10">
-                    🎮 20 Farklı Oyun
+                  <div className="px-3.5 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200/50 dark:border-slate-700/55 text-slate-555 dark:text-slate-400">
+                    🎮 12 Farklı Oyun
                   </div>
-                  <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest bg-white text-indigo-600 px-4 py-2 rounded-xl shadow-md group-hover:bg-sky-50 transition-colors">
+                  <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest bg-gradient-to-r from-sky-500 to-indigo-650 text-white px-4 py-2 rounded-xl shadow-md hover:scale-105 active:scale-95 transition-all">
                     Başla ➔
                   </div>
                 </div>
@@ -286,34 +278,33 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
               {/* Takım Yarışmaları Butonu */}
               <button
                 onClick={() => setView('team_config')}
-                className="group text-left bg-gradient-to-br from-emerald-400 via-emerald-500 to-teal-655 text-white rounded-[2.5rem] p-8 shadow-[0_15px_30px_-5px_rgba(52,211,153,0.25)] dark:shadow-[0_15px_30px_-5px_rgba(52,211,153,0.1)] hover:shadow-[0_20px_40px_-5px_rgba(52,211,153,0.4)] hover:scale-103 active:scale-97 cursor-pointer transition-all duration-300 relative overflow-hidden border-4 border-emerald-300 dark:border-emerald-700/50 flex flex-col justify-between min-h-[300px]"
+                className="group text-left bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 text-slate-800 dark:text-white rounded-[2.5rem] p-8 shadow-md hover:shadow-xl hover:scale-103 active:scale-97 cursor-pointer transition-all duration-300 relative overflow-hidden border-4 border-slate-200 dark:border-slate-700 hover:border-emerald-500 dark:hover:border-emerald-500 flex flex-col justify-between min-h-[300px]"
               >
                 {/* Floating Shapes */}
-                <div className="absolute -right-12 -bottom-12 w-48 h-48 bg-white/10 rounded-full blur-2xl group-hover:scale-120 transition-all duration-500"></div>
-                <div className="absolute right-6 top-6 text-7xl opacity-15 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">👥</div>
+                <div className="absolute -right-12 -bottom-12 w-48 h-48 bg-emerald-500/5 dark:bg-emerald-500/10 rounded-full blur-2xl group-hover:scale-120 transition-all duration-500"></div>
+                <div className="absolute right-6 top-6 text-7xl opacity-10 dark:opacity-20 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">👥</div>
 
                 <div>
-                  <div className="w-16 h-16 rounded-2xl bg-white/20 border border-white/30 flex items-center justify-center text-white group-hover:scale-115 group-hover:rotate-6 transition-all duration-300 shadow-inner">
+                  <div className="w-16 h-16 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900/30 flex items-center justify-center text-emerald-500 dark:text-emerald-450 group-hover:scale-115 group-hover:rotate-6 transition-all duration-300 shadow-inner">
                     <Users className="w-8 h-8" />
                   </div>
-                  <h3 className="font-display font-black text-2xl mt-6 uppercase tracking-tight">
+                  <h3 className="font-display font-black text-2xl mt-6 uppercase tracking-tight text-slate-800 dark:text-white">
                     Takım Yarışmaları
                   </h3>
-                  <p className="text-xs text-emerald-100/90 font-medium mt-2 leading-relaxed max-w-[280px]">
+                  <p className="text-xs text-slate-555 dark:text-slate-400 font-medium mt-2 leading-relaxed max-w-[280px]">
                     Sınıfı meclislere (takımlara) bölerek tatlı bir rekabete girin! Jeopardy, halat çekme ve bomba düellosu gibi 6 büyük yarışma.
                   </p>
                 </div>
 
                 <div className="mt-8 flex justify-between items-center z-10">
-                  <div className="px-3.5 py-1.5 bg-white/20 rounded-full text-[10px] font-black uppercase tracking-widest border border-white/10">
+                  <div className="px-3.5 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200/50 dark:border-slate-700/55 text-slate-555 dark:text-slate-400">
                     🔥 6 Dev Yarışma
                   </div>
-                  <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest bg-white text-teal-700 px-4 py-2 rounded-xl shadow-md group-hover:bg-emerald-50 transition-colors">
+                  <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest bg-gradient-to-r from-emerald-500 to-teal-655 text-white px-4 py-2 rounded-xl shadow-md hover:scale-105 active:scale-95 transition-all">
                     Kurulum Yap ➔
                   </div>
                 </div>
-              </button>
-            </div>
+              </button>            </div>
           </motion.div>
         )}
 
@@ -329,41 +320,39 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
             {INDIVIDUAL_GAMES.map((game) => (
               <div
                 key={game.id}
-                className={`bg-white dark:bg-slate-800 border-3 rounded-[1.75rem] p-4.5 shadow-md relative overflow-hidden flex flex-col justify-between transition-all duration-300 ${game.comingSoon
-                    ? 'border-slate-100 dark:border-slate-850 opacity-60'
-                    : 'border-slate-200 dark:border-slate-700 hover:border-indigo-500 dark:hover:border-indigo-500 hover:shadow-lg'
-                  }`}
+                className={`group text-left bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 border-4 rounded-[2.2rem] p-6 shadow-md relative overflow-hidden flex flex-col justify-between transition-all duration-300 border-slate-200 dark:border-slate-700 hover:border-sky-500 dark:hover:border-sky-500 hover:scale-[1.03] hover:shadow-xl ${
+                  game.comingSoon ? 'opacity-65' : ''
+                }`}
               >
-                {game.comingSoon && (
-                  <div className="absolute top-3 right-3 px-2 py-0.5 bg-slate-150 dark:bg-slate-900 border border-slate-200 dark:border-slate-750 text-[9px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-wider rounded-lg">
-                    ⏳ Hazırlanıyor
-                  </div>
-                )}
+                {/* Decorative floating shape */}
+                <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-sky-500/5 dark:bg-sky-500/10 rounded-full blur-xl group-hover:scale-130 transition-all duration-500"></div>
+
                 <div>
-                  <div className="w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-900/50 flex items-center justify-center shadow-inner mb-3 [&>svg]:w-5 [&>svg]:h-5 shrink-0">
+                  {/* Large Icon Container */}
+                  <div className="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-950/40 border border-sky-100 dark:border-sky-900/30 flex items-center justify-center text-sky-500 dark:text-sky-400 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-inner [&>svg]:w-5.5 [&>svg]:h-5.5">
                     {game.icon}
                   </div>
-                  <h4 className="font-display font-black text-sm sm:text-base text-slate-800 dark:text-white uppercase tracking-tight">
+                  <h4 className="font-display font-black text-sm sm:text-base mt-4 uppercase tracking-tight text-slate-800 dark:text-white leading-tight">
                     {game.title}
                   </h4>
-                  <p className="text-[10.5px] text-slate-550 dark:text-slate-400 font-semibold mt-1.5 leading-snug">
+                  <p className="text-[11px] text-slate-550 dark:text-slate-400 font-semibold mt-2.5 leading-relaxed">
                     {game.desc}
                   </p>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-750/50 flex justify-between items-center">
-                  <span className="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
-                    Bireysel Oyun
+                <div className="mt-6 pt-4 border-t border-slate-200/60 dark:border-slate-700/50 flex justify-between items-center z-10">
+                  <span className="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-[9px] font-black uppercase tracking-widest text-slate-500 dark:text-slate-455 border border-slate-200/40 dark:border-slate-700/40">
+                    Bireysel
                   </span>
                   {!game.comingSoon ? (
                     <button
                       onClick={() => handleStartGame(game.id, game.title, false)}
-                      className="px-3 py-1.5 bg-gradient-to-r from-sky-500 to-indigo-500 text-white text-[10px] font-black uppercase tracking-wider rounded-lg shadow-md hover:shadow-indigo-500/20 hover:scale-105 active:scale-95 cursor-pointer transition-all flex items-center gap-1"
+                      className="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest bg-gradient-to-r from-sky-500 to-indigo-500 text-white px-4 py-2 rounded-xl shadow-md hover:shadow-indigo-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
                     >
-                      <Play className="w-3 h-3 fill-current" /> Oyna
+                      <Play className="w-3.5 h-3.5 fill-current" /> Oyna
                     </button>
                   ) : (
-                    <div className="text-[9px] font-black text-indigo-400 uppercase tracking-wider bg-indigo-50 dark:bg-indigo-950/20 px-2 py-0.5 rounded-md">
+                    <div className="text-[9px] font-black text-indigo-500 dark:text-indigo-400 uppercase tracking-widest bg-indigo-50 dark:bg-indigo-950/20 px-3 py-1.5 rounded-lg border border-indigo-100 dark:border-indigo-900/40">
                       Çok Yakında
                     </div>
                   )}
@@ -499,41 +488,39 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
               {TEAM_GAMES.map((game) => (
                 <div
                   key={game.id}
-                  className={`bg-white dark:bg-slate-800 border-3 rounded-[1.75rem] p-4.5 shadow-md relative overflow-hidden flex flex-col justify-between transition-all duration-300 ${game.comingSoon
-                      ? 'border-slate-100 dark:border-slate-850 opacity-60'
-                      : 'border-slate-200 dark:border-slate-700 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-lg'
-                    }`}
+                  className={`group text-left bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 border-4 rounded-[2.2rem] p-6 shadow-md relative overflow-hidden flex flex-col justify-between transition-all duration-300 border-slate-200 dark:border-slate-700 hover:border-emerald-500 dark:hover:border-emerald-500 hover:scale-[1.03] hover:shadow-xl ${
+                    game.comingSoon ? 'opacity-65' : ''
+                  }`}
                 >
-                  {game.comingSoon && (
-                    <div className="absolute top-3 right-3 px-2 py-0.5 bg-slate-150 dark:bg-slate-900 border border-slate-200 dark:border-slate-750 text-[9px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-wider rounded-lg">
-                      ⏳ Hazırlanıyor
-                    </div>
-                  )}
+                  {/* Decorative floating shape */}
+                  <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-emerald-500/5 dark:bg-emerald-500/10 rounded-full blur-xl group-hover:scale-130 transition-all duration-500"></div>
+
                   <div>
-                    <div className="w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-900/50 flex items-center justify-center shadow-inner mb-3 [&>svg]:w-5 [&>svg]:h-5 shrink-0">
+                    {/* Large Icon Container */}
+                    <div className="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900/30 flex items-center justify-center text-emerald-500 dark:text-emerald-400 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-inner [&>svg]:w-5.5 [&>svg]:h-5.5">
                       {game.icon}
                     </div>
-                    <h4 className="font-display font-black text-sm sm:text-base text-slate-800 dark:text-white uppercase tracking-tight">
+                    <h4 className="font-display font-black text-sm sm:text-base mt-4 uppercase tracking-tight text-slate-800 dark:text-white leading-tight">
                       {game.title}
                     </h4>
-                    <p className="text-[10.5px] text-slate-550 dark:text-slate-400 font-semibold mt-1.5 leading-snug">
+                    <p className="text-[11px] text-slate-555 dark:text-slate-400 font-semibold mt-2.5 leading-relaxed">
                       {game.desc}
                     </p>
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-750/50 flex justify-between items-center">
-                    <span className="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
+                  <div className="mt-6 pt-4 border-t border-slate-200/60 dark:border-slate-700/50 flex justify-between items-center z-10">
+                    <span className="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-[9px] font-black uppercase tracking-widest text-slate-500 dark:text-slate-450 border border-slate-200/40 dark:border-slate-700/40">
                       {teamCount} Takım
                     </span>
                     {!game.comingSoon ? (
                       <button
                         onClick={() => handleStartGame(game.id, game.title, true)}
-                        className="px-3 py-1.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-[10px] font-black uppercase tracking-wider rounded-lg shadow-md hover:shadow-emerald-500/20 hover:scale-105 active:scale-95 cursor-pointer transition-all flex items-center gap-1"
+                        className="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-2 rounded-xl shadow-md hover:shadow-emerald-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
                       >
-                        <Play className="w-3 h-3 fill-current" /> Başlat
+                        <Play className="w-3.5 h-3.5 fill-current" /> Başlat
                       </button>
                     ) : (
-                      <div className="text-[9px] font-black text-emerald-400 uppercase tracking-wider bg-emerald-50 dark:bg-emerald-950/20 px-2 py-0.5 rounded-md">
+                      <div className="text-[9px] font-black text-emerald-500 dark:text-emerald-400 uppercase tracking-widest bg-emerald-50 dark:bg-emerald-950/20 px-3 py-1.5 rounded-lg border border-emerald-100 dark:border-emerald-900/40">
                         Çok Yakında
                       </div>
                     )}
@@ -593,60 +580,42 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
               {activeGame.id === 'mosque_hangman' && (
                 <MosqueHangmanGame isDarkMode={isDarkMode} />
               )}
-              {activeGame.id === 'door_swiper' && (
-                <DoorSwiperGame isDarkMode={isDarkMode} />
-              )}
+              
               {activeGame.id === 'memory_match' && (
                 <MemoryMatchGame isDarkMode={isDarkMode} />
               )}
-              {activeGame.id === 'word_scramble' && (
-                <WordScrambleGame isDarkMode={isDarkMode} />
-              )}
+              
               {activeGame.id === 'millionaire_quiz' && (
                 <MillionaireQuizGame isDarkMode={isDarkMode} />
               )}
               {activeGame.id === 'word_search' && (
                 <WordSearchGame isDarkMode={isDarkMode} />
               )}
-              {activeGame.id === 'fill_in_blanks' && (
-                <FillInBlanksGame isDarkMode={isDarkMode} />
-              )}
+              
               {activeGame.id === 'chronology' && (
                 <ChronologyGame isDarkMode={isDarkMode} />
               )}
               {activeGame.id === 'wheel_of_wisdom' && (
                 <WheelOfWisdomGame isDarkMode={isDarkMode} />
               )}
-              {activeGame.id === 'image_guess' && (
-                <ImageGuessGame isDarkMode={isDarkMode} />
-              )}
+              
               {activeGame.id === 'falling_words' && (
                 <FallingWordsGame isDarkMode={isDarkMode} />
               )}
-              {activeGame.id === 'quick_quiz' && (
-                <QuickQuizGame isDarkMode={isDarkMode} />
-              )}
-              {activeGame.id === 'honeycomb_puzzle' && (
-                <HoneycombPuzzleGame isDarkMode={isDarkMode} />
-              )}
+              
+              
               {activeGame.id === 'maze_runner' && (
                 <MazeRunnerGame isDarkMode={isDarkMode} />
               )}
-              {activeGame.id === 'word_chain' && (
-                <WordChainGame isDarkMode={isDarkMode} />
-              )}
+              
               {activeGame.id === 'taboo_terms' && (
                 <TabooTermsGame isDarkMode={isDarkMode} />
               )}
               {activeGame.id === 'pair_matching' && (
                 <PairMatchingGame isDarkMode={isDarkMode} />
               )}
-              {activeGame.id === 'balloon_pop' && (
-                <BalloonPopGame isDarkMode={isDarkMode} />
-              )}
-              {activeGame.id === 'diff_finder' && (
-                <DiffFinderGame isDarkMode={isDarkMode} />
-              )}
+              
+              
               {activeGame.id === 'jeopardy_conquest' && (
                 <JeopardyConquestGame isDarkMode={isDarkMode} teams={teams} setTeams={setTeams} teamCount={teamCount} />
               )}
@@ -665,7 +634,7 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
               {activeGame.id === 'heaven_path' && (
                 <HeavenPathGame isDarkMode={isDarkMode} teams={teams} setTeams={setTeams} teamCount={teamCount} />
               )}
-              {!['az_passaparola', 'mosque_hangman', 'door_swiper', 'memory_match', 'word_scramble', 'millionaire_quiz', 'word_search', 'fill_in_blanks', 'chronology', 'wheel_of_wisdom', 'image_guess', 'falling_words', 'quick_quiz', 'honeycomb_puzzle', 'maze_runner', 'word_chain', 'taboo_terms', 'pair_matching', 'balloon_pop', 'diff_finder', 'jeopardy_conquest', 'tug_of_war', 'word_bomb', 'buzzer_duel', 'chest_guardian', 'heaven_path'].includes(activeGame.id) && (
+              {!['az_passaparola', 'mosque_hangman', 'memory_match', 'millionaire_quiz', 'word_search', 'chronology', 'wheel_of_wisdom', 'falling_words', 'maze_runner', 'taboo_terms', 'pair_matching', 'jeopardy_conquest', 'tug_of_war', 'word_bomb', 'buzzer_duel', 'chest_guardian', 'heaven_path'].includes(activeGame.id) && (
                 <div className="text-center flex flex-col items-center">
                   <div className="w-32 h-32 mb-4">
                     {titleAnimation && (
@@ -751,575 +720,6 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
 // ==========================================
 // 2. GAME 2: CAMİ YAPMACA (ADAM ASMACA)
 // ==========================================
-const MosqueHangmanGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
-  const [gameStatus, setGameStatus] = useState<'intro' | 'playing' | 'won' | 'lost'>('intro');
-  const [currentWordObj, setCurrentWordObj] = useState<VocabularyWord | null>(null);
-  const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
-  const [lives, setLives] = useState<number>(6); // Toplam 6 can
-  const [timer, setTimer] = useState<number>(90); // 90 saniye süre limit
-
-  // Yeni Kelime Seçip Oyunu Başlat
-  const handleStart = () => {
-    playSound('complete');
-    const list = getRandomVocabularyWords(1);
-    if (list.length > 0) {
-      setCurrentWordObj(list[0]);
-      setGuessedLetters([]);
-      setLives(6);
-      setTimer(90);
-      setGameStatus('playing');
-    }
-  };
-
-  // Zamanlayıcı
-  useEffect(() => {
-    if (gameStatus !== 'playing') return;
-    const interval = setInterval(() => {
-      setTimer(prev => {
-        if (prev <= 1) {
-          playSound('fail');
-          setGameStatus('lost');
-          return 0;
-        }
-        if (prev <= 10) {
-          playSound('tick');
-        }
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [gameStatus]);
-
-  // Harf Tahmin Kontrolü
-  const handleGuess = (letter: string) => {
-    if (gameStatus !== 'playing' || guessedLetters.includes(letter) || !currentWordObj) return;
-
-    const newGuesses = [...guessedLetters, letter];
-    setGuessedLetters(newGuesses);
-
-    const isInWord = currentWordObj.word.includes(letter);
-    if (!isInWord) {
-      playSound('fail');
-      const newLives = lives - 1;
-      setLives(newLives);
-      if (newLives === 0) {
-        playSound('fail');
-        setGameStatus('lost');
-      }
-    } else {
-      playSound('success');
-      // Kazanma kontrolü (Kelimedeki tüm harfler tahmin edildi mi?)
-      const allGuessed = currentWordObj.word.split('').every(l => newGuesses.includes(l));
-      if (allGuessed) {
-        playSound('complete');
-        setGameStatus('won');
-      }
-    }
-  };
-
-  // Fiziksel Klavye Desteği
-  useEffect(() => {
-    if (gameStatus !== 'playing') return;
-    const handleKeyDown = (e: KeyboardEvent) => {
-      const key = toTurkishUpperCase(e.key);
-      if (TURKISH_LETTERS.includes(key)) {
-        handleGuess(key);
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [gameStatus, guessedLetters, currentWordObj, lives]);
-
-  // Cami çiziminin hangi parçalarının tamamlanacağını gösterir (0-6 arası oran)
-  const getRevealedCount = () => {
-    if (!currentWordObj) return 0;
-    const uniqueWordLetters = new Set(currentWordObj.word.split(''));
-    const correctGuesses = [...uniqueWordLetters].filter(l => guessedLetters.includes(l));
-    const ratio = correctGuesses.length / uniqueWordLetters.size;
-
-    if (gameStatus === 'won') return 6;
-    return Math.floor(ratio * 6);
-  };
-
-  const revealedCount = getRevealedCount();
-
-  return (
-    <div className="w-full flex flex-col items-center gap-6">
-      {gameStatus === 'intro' && (
-        <div className="text-center flex flex-col items-center py-6">
-          <Landmark className="w-20 h-20 text-emerald-500 mb-4 animate-pulse" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase">
-            Cami Yapmaca (Adam Asmaca)
-          </h3>
-          <p className="text-xs text-slate-500 mt-2 max-w-md leading-relaxed">
-            Gizlenmiş olan dini kavramı harfleri tahmin ederek bulmaya çalışın. <br />
-            Her doğru tahminde caminin bir bölümü kurulacak ve renklenecektir. <br />
-            <strong>Dikkat et:</strong> Toplam 6 can hakkın ve 90 saniye süren var. Canın veya süren bitmeden camiyi tamamlamalısın!
-          </p>
-          <button
-            onClick={handleStart}
-            className="mt-6 px-10 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-lg hover:shadow-emerald-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yarışmayı Başlat! ➔
-          </button>
-        </div>
-      )}
-
-      {gameStatus === 'playing' && currentWordObj && (
-        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-
-          {/* Sol Kolon: Sevimli Cami İnşaat SVG Alanı */}
-          <div className="lg:col-span-6 flex flex-col items-center py-4 bg-white dark:bg-slate-850 border-3 border-slate-200 dark:border-slate-750 p-6 rounded-[2.5rem] shadow-md relative min-h-[300px]">
-
-            {/* Süre & Can Göstergesi (Kalpler) */}
-            <div className="w-full flex justify-between items-center mb-4 z-10 px-2">
-              <span className={`text-xs font-black flex items-center gap-1 ${timer <= 10 ? 'text-rose-500 animate-pulse text-sm font-black' : 'text-slate-500 dark:text-slate-400'}`}>
-                ⏱️ {timer} sn
-              </span>
-              <div className="flex gap-1.5 justify-center">
-                {Array.from({ length: 6 }).map((_, i) => (
-                  <Heart
-                    key={i}
-                    className={`w-5 h-5 ${i < lives ? 'text-red-500 fill-red-500 scale-110' : 'text-slate-200 dark:text-slate-750 scale-90'} transition-all duration-300`}
-                  />
-                ))}
-              </div>
-            </div>
-
-            {/* Cami İnşaat SVG */}
-            <svg viewBox="0 0 200 160" className="w-64 h-52 sm:w-80 sm:h-64 drop-shadow-md z-10 transition-all">
-              {/* Dotted fırça/kılavuz çizgiler - bitmemiş kısımları gri gösterir */}
-              <g className="stroke-slate-200 dark:stroke-slate-750 fill-none stroke-2 stroke-dasharray-[3,3] opacity-60">
-                {/* Taban */}
-                <rect x="30" y="130" width="140" height="12" rx="2" />
-                {/* Duvarlar */}
-                <rect x="55" y="65" width="90" height="65" rx="3" />
-                {/* Kubbe */}
-                <path d="M55 65 Q 100 10 145 65 Z" />
-                {/* Sol Minare */}
-                <rect x="38" y="35" width="10" height="95" rx="1" />
-                {/* Sağ Minare */}
-                <rect x="152" y="35" width="10" height="95" rx="1" />
-                {/* Alem/Hilal */}
-                <circle cx="100" cy="12" r="3" />
-              </g>
-
-              {/* Renkli parçalar aşama aşama gelir */}
-              {/* Adım 1: Zemin */}
-              {revealedCount >= 1 && (
-                <rect x="30" y="130" width="140" height="12" rx="2" className="fill-amber-600 stroke-amber-700 stroke-1.5 transition-all duration-500" />
-              )}
-              {/* Adım 2: Gövde/Duvarlar */}
-              {revealedCount >= 2 && (
-                <rect x="55" y="65" width="90" height="65" rx="3" className="fill-slate-100 dark:fill-slate-700 stroke-indigo-400/60 stroke-1.5 transition-all duration-500" />
-              )}
-              {/* Adım 3: Kubbe (Yeşil Kubbe) */}
-              {revealedCount >= 3 && (
-                <path d="M55 65 Q 100 10 145 65 Z" className="fill-emerald-500 stroke-emerald-600 stroke-1.5 transition-all duration-500" />
-              )}
-              {/* Adım 4: Sol Minare */}
-              {revealedCount >= 4 && (
-                <rect x="38" y="35" width="10" height="95" rx="1" className="fill-slate-200 dark:fill-slate-650 stroke-indigo-300/40 stroke-1.5 transition-all duration-500" />
-              )}
-              {/* Adım 5: Sağ Minare */}
-              {revealedCount >= 5 && (
-                <rect x="152" y="35" width="10" height="95" rx="1" className="fill-slate-200 dark:fill-slate-650 stroke-indigo-300/40 stroke-1.5 transition-all duration-500" />
-              )}
-              {/* Adım 6: Alem / Hilal */}
-              {revealedCount >= 6 && (
-                <g className="transition-all duration-500 animate-pulse">
-                  <path d="M98 6 A 4 4 0 1 1 102 14 A 3 3 0 1 0 98 6 Z" className="fill-yellow-400 stroke-yellow-500 stroke-0.5" />
-                  <circle cx="43" cy="33" r="2.5" className="fill-yellow-400" />
-                  <circle cx="157" cy="33" r="2.5" className="fill-yellow-400" />
-                </g>
-              )}
-            </svg>
-
-            {/* İpucu Görme Kutusu - Varsayılan Olarak Açık! */}
-            <div className="w-full text-center mt-3 z-10">
-              <div className="p-3.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl text-[11px] font-semibold text-slate-650 dark:text-slate-400 max-w-sm mx-auto leading-relaxed shadow-sm">
-                <span className="text-[10px] font-black text-emerald-600 dark:text-emerald-450 uppercase tracking-widest block mb-1">
-                  🔍 KELİME İPUCU (Kategori: {currentWordObj.category})
-                </span>
-                {currentWordObj.clue}
-              </div>
-            </div>
-          </div>
-
-          {/* Sağ Kolon: Kelime Gösterimi ve Klavye */}
-          <div className="lg:col-span-6 flex flex-col gap-5 items-center">
-
-            {/* Kelime Karakter Kutuları */}
-            <div className="flex flex-wrap gap-2.5 justify-center py-6">
-              {currentWordObj.word.split('').map((char, index) => {
-                const isGuessed = guessedLetters.includes(char);
-                return (
-                  <div
-                    key={index}
-                    className={`w-10 h-12 sm:w-12 sm:h-14 rounded-2xl border-3 flex items-center justify-center font-display font-black text-lg sm:text-xl shadow transition-all duration-300 ${isGuessed
-                        ? 'bg-white dark:bg-slate-800 border-emerald-500 text-emerald-600 dark:text-emerald-400 scale-105'
-                        : 'bg-slate-100/50 dark:bg-slate-900/50 border-slate-200 dark:border-slate-750 text-transparent'
-                      }`}
-                  >
-                    {isGuessed ? char : '_'}
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Harf Klavye Seçenekleri */}
-            <div className="w-full bg-white dark:bg-slate-850 border-3 border-slate-200 dark:border-slate-750 p-5 rounded-[2.5rem] shadow-md">
-              <span className="block text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center mb-3">
-                Klavye Tıklayarak Harf Seçin:
-              </span>
-
-              <div className="flex flex-wrap gap-1.5 justify-center">
-                {TURKISH_LETTERS.map((letter) => {
-                  const isUsed = guessedLetters.includes(letter);
-                  const isInWord = currentWordObj.word.includes(letter);
-
-                  let btnStyle = 'bg-slate-50 hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-100 border-slate-200 dark:border-slate-700';
-                  if (isUsed) {
-                    btnStyle = isInWord
-                      ? 'bg-emerald-500 border-emerald-600 text-white opacity-50 cursor-not-allowed pointer-events-none'
-                      : 'bg-rose-500 border-rose-600 text-white opacity-40 cursor-not-allowed pointer-events-none';
-                  }
-
-                  return (
-                    <button
-                      key={letter}
-                      onClick={() => handleGuess(letter)}
-                      className={`w-9 h-9 rounded-lg border-2 font-display font-black text-xs transition-all active:scale-90 cursor-pointer shadow-sm flex items-center justify-center ${btnStyle}`}
-                      disabled={isUsed}
-                    >
-                      {letter}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-          </div>
-        </div>
-      )}
-
-      {(gameStatus === 'won' || gameStatus === 'lost') && currentWordObj && (
-        <div className="text-center flex flex-col items-center py-6 w-full max-w-md bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-xl animate-scale-up">
-          {gameStatus === 'won' ? (
-            <>
-              <CheckCircle2 className="w-16 h-16 text-emerald-500 animate-bounce mb-3" />
-              <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">
-                Tebrikler! Kazandınız!
-              </h3>
-              <p className="text-xs text-slate-500 mt-2">
-                Gizli kelimeyi can hakların tükenmeden buldun ve camiyi başarıyla tamamladın!
-              </p>
-            </>
-          ) : (
-            <>
-              <XCircle className="w-16 h-16 text-rose-500 animate-pulse mb-3" />
-              <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">
-                Oyun Bitti, Kaybettiniz!
-              </h3>
-              <p className="text-xs text-slate-500 mt-2">
-                Süreniz veya canlarınız bitti ve cami yapımı maalesef yarım kaldı...
-              </p>
-            </>
-          )}
-
-          <div className="w-full flex flex-col gap-2 my-5 p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl">
-            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Gizli Kelime</span>
-            <span className="text-xl font-display font-black text-slate-800 dark:text-white tracking-widest">
-              {currentWordObj.word}
-            </span>
-            <span className="text-[10px] font-bold text-slate-550 dark:text-slate-400 mt-1 leading-normal">
-              {currentWordObj.clue}
-            </span>
-          </div>
-
-          <button
-            onClick={handleStart}
-            className="w-full py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:shadow-emerald-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yeni Kelimeyle Oyna! ➔
-          </button>
-        </div>
-      )}
-    </div>
-  );
-};
-
-// ==========================================
-// 3. GAME 3: DOĞRU KAPIYI SEÇ (TRUE/FALSE SWIPER)
-// ==========================================
-const DoorSwiperGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
-  const [gameStatus, setGameStatus] = useState<'intro' | 'playing' | 'ended'>('intro');
-  const [statements, setStatements] = useState<TrueFalseStatement[]>([]);
-  const [currentIdx, setCurrentIdx] = useState<number>(0);
-  const [timer, setTimer] = useState<number>(90); // 90 saniyelik genel süre
-  const [selectedDoor, setSelectedDoor] = useState<'correct' | 'incorrect' | null>(null);
-  const [isAnswered, setIsAnswered] = useState<boolean>(false);
-  const [score, setScore] = useState<number>(0);
-  const [correctAnswersCount, setCorrectAnswersCount] = useState<number>(0);
-
-  // Oyunu Başlat
-  const handleStart = () => {
-    playSound('complete');
-    const list = getRandomTrueFalseStatements(10);
-    setStatements(list);
-    setCurrentIdx(0);
-    setScore(0);
-    setCorrectAnswersCount(0);
-    setTimer(90);
-    setSelectedDoor(null);
-    setIsAnswered(false);
-    setGameStatus('playing');
-  };
-
-  // Zamanlayıcı
-  useEffect(() => {
-    if (gameStatus !== 'playing') return;
-    const interval = setInterval(() => {
-      setTimer(prev => {
-        if (prev <= 1) {
-          playSound('fail');
-          setGameStatus('ended');
-          return 0;
-        }
-        if (prev <= 10) {
-          playSound('tick');
-        }
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [gameStatus]);
-
-  // Fiziksel Klavye Desteği
-  useEffect(() => {
-    if (gameStatus !== 'playing') return;
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (isAnswered) {
-        if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowRight') {
-          e.preventDefault();
-          handleNextQuestion();
-        }
-        return;
-      }
-
-      if (e.key === 'ArrowLeft' || e.key.toLowerCase() === 'd') {
-        // Doğru kapısı seç
-        handleSelectDoor(true);
-      } else if (e.key === 'ArrowRight' || e.key.toLowerCase() === 'y') {
-        // Yanlış kapısı seç
-        handleSelectDoor(false);
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [gameStatus, isAnswered, currentIdx, statements]);
-
-  // Kapı Seçim Mantığı
-  const handleSelectDoor = (userChoice: boolean) => {
-    if (isAnswered || statements.length === 0) return;
-
-    const currentStatementObj = statements[currentIdx];
-    const isCorrectChoice = userChoice === currentStatementObj.isCorrect;
-
-    setIsAnswered(true);
-    setSelectedDoor(userChoice ? 'correct' : 'incorrect');
-
-    if (isCorrectChoice) {
-      playSound('success');
-      setScore(prev => prev + 20);
-      setCorrectAnswersCount(prev => prev + 1);
-    } else {
-      playSound('fail');
-    }
-  };
-
-  // Sonraki Soruya Geçiş
-  const handleNextQuestion = () => {
-    playSound('tick');
-    setSelectedDoor(null);
-    setIsAnswered(false);
-
-    if (currentIdx + 1 < statements.length) {
-      setCurrentIdx(prev => prev + 1);
-    } else {
-      playSound('complete');
-      setGameStatus('ended');
-    }
-  };
-
-  const currentStatement = statements[currentIdx];
-
-  return (
-    <div className="w-full flex flex-col items-center gap-6">
-      {gameStatus === 'intro' && (
-        <div className="text-center flex flex-col items-center py-6">
-          <Flame className="w-20 h-20 text-sky-500 mb-4 animate-bounce" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase">
-            Doğru Kapıyı Seç (Genel Karışık)
-          </h3>
-          <p className="text-xs text-slate-550 dark:text-slate-400 mt-2 max-w-md leading-relaxed">
-            Size sunulan dini/ahlaki önermeyi değerlendirin. <br />
-            Önerme **Doğruysa yeşil Cennet Kapısını**, **Yanlışsa kırmızı kapıyı** seçin. <br />
-            <strong>Kontroller:</strong> Akıllı tahtada kapılara dokunabilir, fiziksel klavyede **Sol Ok (D)** veya **Sağ Ok (Y)** tuşlarını kullanabilirsiniz!
-          </p>
-          <button
-            onClick={handleStart}
-            className="mt-6 px-10 py-3.5 bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-lg hover:shadow-indigo-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yarışmayı Başlat! ➔
-          </button>
-        </div>
-      )}
-
-      {gameStatus === 'playing' && currentStatement && (
-        <div className="w-full flex flex-col gap-6 items-center">
-
-          {/* Üst Bilgi Barı */}
-          <div className="w-full max-w-2xl flex justify-between items-center bg-white dark:bg-slate-850 border-2 border-slate-150 dark:border-slate-750 px-4 py-2.5 rounded-2xl shadow-sm text-xs font-black">
-            <span className={`flex items-center gap-1 ${timer <= 10 ? 'text-rose-500 animate-pulse text-sm font-black' : 'text-slate-500 dark:text-slate-450'}`}>
-              ⏱️ SÜRE: {timer} sn
-            </span>
-            <span className="text-slate-500 dark:text-slate-450">
-              SORU: {currentIdx + 1} / {statements.length}
-            </span>
-            <span className="text-emerald-500">
-              PUAN: {score}
-            </span>
-          </div>
-
-          {/* İddia / Önerme Balonu */}
-          <div className="w-full max-w-2xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-6 rounded-[2.5rem] shadow-md text-center min-h-[100px] flex flex-col justify-center relative">
-            <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 text-[9px] font-black tracking-widest uppercase bg-sky-50 dark:bg-sky-950/45 text-sky-650 dark:text-sky-300 px-3 py-1 rounded-full border border-sky-100 dark:border-sky-900/50">
-              Önermeyi Değerlendir
-            </span>
-            <p className="text-base sm:text-lg font-bold text-slate-850 dark:text-white leading-relaxed mt-2">
-              "{currentStatement.statement}"
-            </p>
-          </div>
-
-          {/* Kapılar Alanı */}
-          <div className="w-full max-w-2xl grid grid-cols-2 gap-6 items-center py-2">
-
-            {/* 1. DOĞRU KAPISI */}
-            <button
-              onClick={() => handleSelectDoor(true)}
-              disabled={isAnswered}
-              className={`group flex flex-col items-center justify-center p-6 bg-gradient-to-b from-emerald-400 to-emerald-600 dark:from-emerald-500 dark:to-emerald-700 text-white rounded-[2rem] border-4 border-emerald-350 dark:border-emerald-600 shadow-lg relative overflow-hidden transition-all duration-300 ${isAnswered
-                  ? selectedDoor === 'correct'
-                    ? 'ring-4 ring-emerald-300 dark:ring-emerald-800 scale-105 shadow-emerald-500/20'
-                    : 'opacity-40 scale-95 pointer-events-none'
-                  : 'hover:scale-[1.03] active:scale-97 cursor-pointer hover:shadow-emerald-500/25'
-                }`}
-            >
-              <div className="absolute inset-0 bg-white/5 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              {/* Kapı Kemeri Şekli */}
-              <div className="w-14 h-20 border-3 border-emerald-200 rounded-t-full flex items-center justify-center mb-3 group-hover:animate-pulse">
-                <Landmark className="w-6 h-6 text-emerald-100" />
-              </div>
-              <span className="font-display font-black text-lg tracking-wider uppercase">DOĞRU</span>
-              <span className="text-[9px] font-black uppercase text-emerald-100/80 mt-1 tracking-widest">
-                [Sol Yön Tuşu / D]
-              </span>
-            </button>
-
-            {/* 2. YANLIŞ KAPISI */}
-            <button
-              onClick={() => handleSelectDoor(false)}
-              disabled={isAnswered}
-              className={`group flex flex-col items-center justify-center p-6 bg-gradient-to-b from-rose-450 to-red-650 dark:from-rose-500 dark:to-red-700 text-white rounded-[2rem] border-4 border-rose-300 dark:border-red-600 shadow-lg relative overflow-hidden transition-all duration-300 ${isAnswered
-                  ? selectedDoor === 'incorrect'
-                    ? 'ring-4 ring-rose-300 dark:ring-rose-800 scale-105 shadow-rose-500/20'
-                    : 'opacity-40 scale-95 pointer-events-none'
-                  : 'hover:scale-[1.03] active:scale-97 cursor-pointer hover:shadow-rose-500/25'
-                }`}
-            >
-              <div className="absolute inset-0 bg-white/5 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              {/* Kapı Kemeri Şekli */}
-              <div className="w-14 h-20 border-3 border-rose-200 rounded-t-full flex items-center justify-center mb-3 group-hover:animate-pulse">
-                <XCircle className="w-6 h-6 text-rose-100" />
-              </div>
-              <span className="font-display font-black text-lg tracking-wider uppercase">YANLIŞ</span>
-              <span className="text-[9px] font-black uppercase text-rose-100/80 mt-1 tracking-widest">
-                [Sağ Yön Tuşu / Y]
-              </span>
-            </button>
-
-          </div>
-
-          {/* Açıklama / Geri Bildirim Alanı */}
-          {isAnswered && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="w-full max-w-2xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-5 rounded-[2rem] shadow-lg flex flex-col items-center text-center gap-3"
-            >
-              {selectedDoor === (currentStatement.isCorrect ? 'correct' : 'incorrect') ? (
-                <div className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-450 font-black text-sm uppercase">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-500" /> TEBRİKLER! DOĞRU CEVAP (+20 PUAN)
-                </div>
-              ) : (
-                <div className="flex items-center gap-1.5 text-rose-600 dark:text-rose-450 font-black text-sm uppercase">
-                  <XCircle className="w-5 h-5 text-rose-500" /> YANLIŞ CEVAP!
-                </div>
-              )}
-
-              <p className="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-350 leading-relaxed max-w-xl">
-                <strong>Gerçek Bilgi:</strong> {currentStatement.explanation}
-              </p>
-
-              <button
-                onClick={handleNextQuestion}
-                className="mt-2 px-8 py-3 bg-gradient-to-r from-sky-500 to-indigo-500 text-white text-xs font-black uppercase tracking-wider rounded-xl hover:scale-105 active:scale-95 transition-all cursor-pointer shadow-md"
-              >
-                {currentIdx + 1 === statements.length ? 'Sonuçları Gör ➔' : 'Sonraki Soru ➔'}
-              </button>
-            </motion.div>
-          )}
-
-        </div>
-      )}
-
-      {gameStatus === 'ended' && (
-        <div className="text-center flex flex-col items-center py-6 w-full max-w-md bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-xl animate-scale-up">
-          <Trophy className="w-16 h-16 text-yellow-500 animate-bounce mb-3" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">
-            Yarışma Tamamlandı!
-          </h3>
-          <p className="text-xs text-slate-500 mt-2">
-            Doğru Kapıyı Seç serüvenini başarıyla tamamladın. İşte karnen:
-          </p>
-
-          <div className="w-full flex flex-col gap-3 my-6">
-            <div className="flex items-center justify-between p-3.5 bg-sky-50 dark:bg-sky-950/20 border-2 border-sky-350 rounded-xl">
-              <span className="text-xs font-black text-sky-800 dark:text-sky-400 uppercase">🏆 Toplam Puan</span>
-              <span className="text-base font-black text-sky-950 dark:text-sky-300">{score} Puan</span>
-            </div>
-            <div className="flex items-center justify-between p-3.5 bg-emerald-50 dark:bg-emerald-950/20 border-2 border-emerald-300 rounded-xl">
-              <span className="text-xs font-black text-emerald-800 dark:text-emerald-400 uppercase">🟢 Doğru Kapılar</span>
-              <span className="text-base font-black text-emerald-950 dark:text-emerald-300">{correctAnswersCount} / {statements.length}</span>
-            </div>
-          </div>
-
-          <button
-            onClick={handleStart}
-            className="w-full py-4 bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:shadow-sky-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yeniden Oyna! ↩️
-          </button>
-        </div>
-      )}
-    </div>
-  );
-};
-
-// ==========================================
-// 4. GAME 4: EŞLEŞTİRME KARTLARI (HAFIZA OYUNU)
-// ==========================================
 interface MemoryCard {
   id: string;
   matchId: string;
@@ -1331,6 +731,7 @@ interface MemoryCard {
 
 const MemoryMatchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
   const [gameStatus, setGameStatus] = useState<'intro' | 'playing' | 'won'>('intro');
+  const [difficulty, setDifficulty] = useState<'easy' | 'medium' | 'hard'>('medium');
   const [cards, setCards] = useState<MemoryCard[]>([]);
   const [selectedIndices, setSelectedIndices] = useState<number[]>([]);
   const [score, setScore] = useState<number>(0);
@@ -1339,7 +740,14 @@ const MemoryMatchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
   // Oyunu Başlat
   const handleStart = () => {
     playSound('complete');
-    const list = getRandomVocabularyWords(4);
+    
+    // Zorluğa göre kelime sayısı (easy=5, medium=8, hard=10)
+    const wordCount = difficulty === 'easy' ? 5 : difficulty === 'medium' ? 8 : 10;
+    
+    // HANGMAN_QUESTIONS_DB havuzundan rastgele benzersiz kelimeler seçelim
+    const shuffledDB = shuffleArray(MEMORY_MATCH_QUESTIONS_DB);
+    const list = shuffledDB.slice(0, wordCount);
+    
     const generated: MemoryCard[] = [];
     list.forEach((item) => {
       generated.push({
@@ -1418,7 +826,7 @@ const MemoryMatchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
           );
           setCards(reset);
           setSelectedIndices([]);
-        }, 1200);
+        }, 1500);
       }
     }
   };
@@ -1426,19 +834,48 @@ const MemoryMatchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
   return (
     <div className="w-full flex flex-col items-center gap-6">
       {gameStatus === 'intro' && (
-        <div className="text-center flex flex-col items-center py-6">
+        <div className="text-center flex flex-col items-center py-6 w-full max-w-xl">
           <Users className="w-20 h-20 text-indigo-500 mb-4 animate-bounce" />
           <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase">
             Eşleştirme Kartları (Hafıza Oyunu)
           </h3>
-          <p className="text-xs text-slate-550 dark:text-slate-400 mt-2 max-w-md leading-relaxed">
-            Ekranda ters çevrilmiş 8 kart yer almaktadır. <br />
-            Her kelime kartını, o kelimenin anlamını içeren tanım kartı ile eşleştirmeye çalışın. <br />
-            En az hamlede tüm eşleri bularak hafıza gücünüzü kanıtlayın!
+          <p className="text-xs text-slate-555 dark:text-slate-400 mt-2 mb-6 max-w-md leading-relaxed">
+            Seçeceğiniz zorluk derecesine göre dini kelimeler ve anlamları ters çevrilmiş kartlar halinde listelenir. <br />
+            Her kelimeyi kendi dini tanımıyla eşleştirmeye çalışın! <br />
+            En az hamleyle tüm çiftleri tamamlayarak hafıza gücünüzü kanıtlayın.
           </p>
+
+          {/* Difficulty Selection */}
+          <div className="mb-6 w-full max-w-md">
+            <label className="block text-[10px] font-black text-slate-450 dark:text-slate-400 mb-3 tracking-widest uppercase text-center">
+              🎯 ZORLUK DERECESİ SEÇİN
+            </label>
+            <div className="grid grid-cols-3 gap-3">
+              {(['easy', 'medium', 'hard'] as const).map((level) => {
+                const label = level === 'easy' ? 'Kolay' : level === 'medium' ? 'Orta' : 'Zor';
+                const countText = level === 'easy' ? '10 Kart' : level === 'medium' ? '16 Kart' : '20 Kart';
+                const active = difficulty === level;
+                return (
+                  <button
+                    key={level}
+                    onClick={() => setDifficulty(level)}
+                    className={`flex flex-col items-center justify-center p-3 rounded-2xl border-3 transition-all cursor-pointer ${
+                      active
+                        ? 'bg-indigo-50 dark:bg-indigo-950/20 border-indigo-500 text-indigo-900 dark:text-indigo-400 shadow-md scale-[1.02]'
+                        : 'bg-slate-50 dark:bg-slate-900/50 border-slate-200 dark:border-slate-800 text-slate-450 dark:text-slate-500 hover:border-slate-350 dark:hover:border-slate-650'
+                    }`}
+                  >
+                    <span className="text-sm font-black tracking-tight">{label}</span>
+                    <span className="text-[9px] font-bold opacity-80 mt-0.5">{countText}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
           <button
             onClick={handleStart}
-            className="mt-6 px-10 py-3.5 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-lg hover:shadow-indigo-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
+            className="mt-4 px-10 py-3.5 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-lg hover:shadow-indigo-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
           >
             Yarışmayı Başlat! ➔
           </button>
@@ -1447,15 +884,17 @@ const MemoryMatchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
       {gameStatus === 'playing' && (
         <div className="w-full flex flex-col gap-5 items-center">
-
           {/* Skor & Hamle Barı */}
-          <div className="w-full max-w-3xl flex justify-between items-center bg-white dark:bg-slate-850 border-2 border-slate-150 dark:border-slate-750 px-4 py-2.5 rounded-2xl shadow-sm text-xs font-black">
+          <div className="w-full max-w-4xl flex justify-between items-center bg-white dark:bg-slate-800 border-2 border-slate-150 dark:border-slate-700 px-4 py-2.5 rounded-2xl shadow-sm text-xs font-black">
             <span className="text-slate-500 dark:text-slate-400">📊 Hamle Sayısı: {moves}</span>
+            <span className="text-indigo-500 dark:text-indigo-400 uppercase tracking-wide">Zorluk: {difficulty === 'easy' ? 'Kolay' : difficulty === 'medium' ? 'Orta' : 'Zor'}</span>
             <span className="text-emerald-500">🏆 Toplam Puan: {score}</span>
           </div>
 
           {/* Kartlar Grid Alanı */}
-          <div className="w-full max-w-3xl grid grid-cols-2 md:grid-cols-4 gap-4 py-2">
+          <div className={`w-full max-w-4xl grid gap-4 py-2 ${
+            difficulty === 'medium' ? 'grid-cols-2 md:grid-cols-4' : 'grid-cols-2 md:grid-cols-5'
+          }`}>
             {cards.map((card, idx) => {
               const showContent = card.isFlipped || card.isMatched;
               return (
@@ -1463,26 +902,31 @@ const MemoryMatchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                   key={card.id}
                   onClick={() => handleCardClick(idx)}
                   disabled={card.isMatched}
-                  className={`h-36 rounded-2xl border-3 flex flex-col items-center justify-center p-3 text-center transition-all duration-300 relative ${card.isMatched
-                      ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-500 text-emerald-700 dark:text-emerald-450 opacity-80 scale-95'
+                  className={`min-h-[8rem] rounded-2xl border-3 flex flex-col items-center justify-center p-3.5 text-center transition-all duration-300 relative w-full ${
+                    card.isMatched
+                      ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-500 text-emerald-700 dark:text-emerald-400 opacity-80 scale-95'
                       : showContent
                         ? 'bg-white dark:bg-slate-800 border-indigo-500 text-slate-800 dark:text-white scale-102 shadow-md'
-                        : 'bg-gradient-to-br from-indigo-550 to-violet-650 border-indigo-400 text-white hover:scale-[1.03] active:scale-97 cursor-pointer shadow-lg'
-                    }`}
+                        : 'bg-gradient-to-br from-indigo-500 to-violet-650 border-indigo-400 text-white hover:scale-[1.03] active:scale-97 cursor-pointer shadow-lg'
+                  }`}
                 >
                   {showContent ? (
-                    <div className="flex flex-col gap-1.5 justify-center items-center h-full">
-                      <span className={`font-display font-black text-xs uppercase ${card.type === 'word' ? 'text-indigo-650 dark:text-indigo-400 underline decoration-2' : 'text-[10px] text-slate-500 dark:text-slate-400 font-semibold leading-tight'}`}>
+                    <div className="flex flex-col gap-2 justify-center items-center h-full">
+                      <span className={`font-display font-black text-xs uppercase tracking-wide leading-tight ${
+                        card.type === 'word' 
+                          ? 'text-indigo-600 dark:text-indigo-400 underline decoration-2 decoration-indigo-400/50' 
+                          : 'text-[10px] text-slate-600 dark:text-slate-350 leading-snug font-semibold'
+                      }`}>
                         {card.content}
                       </span>
                       {card.isMatched && (
-                        <span className="text-[8px] font-black text-emerald-600 dark:text-emerald-450 uppercase tracking-widest">
+                        <span className="text-[8px] font-black text-emerald-600 dark:text-emerald-450 uppercase tracking-widest mt-1">
                           ✓ Eşleşti
                         </span>
                       )}
                     </div>
                   ) : (
-                    <div className="flex flex-col items-center gap-1">
+                    <div className="flex flex-col items-center gap-1.5">
                       <Sparkles className="w-6 h-6 text-indigo-200 animate-pulse" />
                       <span className="text-[10px] font-black tracking-widest uppercase text-indigo-100">
                         HİKMET
@@ -1493,28 +937,23 @@ const MemoryMatchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
               );
             })}
           </div>
-
         </div>
       )}
 
       {gameStatus === 'won' && (
-        <div className="text-center flex flex-col items-center py-6 w-full max-w-md bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-xl animate-scale-up">
+        <div className="text-center flex flex-col items-center py-8 w-full max-w-md bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-xl">
           <Trophy className="w-16 h-16 text-yellow-500 animate-bounce mb-3" />
           <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">
-            Harika Hafıza!
+            Tebrikler, Kazandınız!
           </h3>
-          <p className="text-xs text-slate-500 mt-2">
-            Tüm dini kavramları ve eşlerini başarıyla tamamladın!
+          <p className="text-xs text-slate-550 dark:text-slate-400 mt-2">
+            Tüm dini terimleri ve anlamlarını başarıyla eşleştirerek hafıza testini tamamladınız.
           </p>
 
-          <div className="w-full flex flex-col gap-3 my-6">
-            <div className="flex items-center justify-between p-3.5 bg-indigo-50 dark:bg-indigo-950/20 border-2 border-indigo-350 rounded-xl">
-              <span className="text-xs font-black text-indigo-850 dark:text-indigo-400 uppercase">🏆 Kazanılan Puan</span>
-              <span className="text-base font-black text-indigo-950 dark:text-indigo-300">{score} Puan</span>
-            </div>
-            <div className="flex items-center justify-between p-3.5 bg-emerald-50 dark:bg-emerald-950/20 border-2 border-emerald-300 rounded-xl">
-              <span className="text-xs font-black text-emerald-850 dark:text-emerald-400 uppercase">📊 Hamle Sayısı</span>
-              <span className="text-base font-black text-emerald-950 dark:text-emerald-300">{moves} Hamle</span>
+          <div className="w-full flex flex-col gap-2 my-5 p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl">
+            <div className="flex justify-between text-[10px] font-black text-slate-450 uppercase tracking-widest">
+              <span>Toplam Hamle: {moves}</span>
+              <span>Skor: {score} Puan</span>
             </div>
           </div>
 
@@ -1529,286 +968,6 @@ const MemoryMatchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
     </div>
   );
 };
-
-// ==========================================
-// 5. GAME 5: HARF SIRALAMA (ANAGRAM OYUNU)
-// ==========================================
-const WordScrambleGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
-  const [gameStatus, setGameStatus] = useState<'intro' | 'playing' | 'won' | 'lost'>('intro');
-  const [wordObj, setWordObj] = useState<VocabularyWord | null>(null);
-  const [scrambledLetters, setScrambledLetters] = useState<{ id: string; letter: string }[]>([]);
-  const [guessLetters, setGuessLetters] = useState<{ id: string; letter: string }[]>([]);
-  const [timer, setTimer] = useState<number>(60);
-  const [lives, setLives] = useState<number>(3);
-
-  // Oyunu Başlat
-  const handleStart = () => {
-    playSound('complete');
-    const list = getRandomVocabularyWords(1);
-    if (list.length > 0) {
-      const selected = list[0];
-      setWordObj(selected);
-
-      const letters = selected.word.split('').map((l, i) => ({ id: `scramble_${l}_${i}`, letter: l }));
-
-      // fisher-yates karıştırma
-      const shuffled = [...letters];
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-      }
-
-      setScrambledLetters(shuffled);
-      setGuessLetters([]);
-      setTimer(60);
-      setLives(3);
-      setGameStatus('playing');
-    }
-  };
-
-  // Zamanlayıcı
-  useEffect(() => {
-    if (gameStatus !== 'playing') return;
-    const interval = setInterval(() => {
-      setTimer(prev => {
-        if (prev <= 1) {
-          playSound('fail');
-          setGameStatus('lost');
-          return 0;
-        }
-        if (prev <= 10) {
-          playSound('tick');
-        }
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [gameStatus]);
-
-  // Fiziksel Klavye Desteği
-  useEffect(() => {
-    if (gameStatus !== 'playing') return;
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Backspace') {
-        e.preventDefault();
-        handleRemoveLastGuess();
-      } else if (e.key === 'Enter') {
-        e.preventDefault();
-        handleCheck();
-      } else {
-        const char = toTurkishUpperCase(e.key);
-        // Scrambled havuzunda bu harf var mı bulalım
-        const foundIdx = scrambledLetters.findIndex(item => item.letter === char);
-        if (foundIdx !== -1) {
-          handleSelectLetter(foundIdx);
-        }
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [gameStatus, scrambledLetters, guessLetters, wordObj, lives]);
-
-  // Harf Seç
-  const handleSelectLetter = (index: number) => {
-    playSound('tick');
-    const target = scrambledLetters[index];
-    setGuessLetters(prev => [...prev, target]);
-    setScrambledLetters(prev => prev.filter((_, i) => i !== index));
-  };
-
-  // Harfi Guess'ten geri at
-  const handleRemoveGuess = (index: number) => {
-    playSound('tick');
-    const target = guessLetters[index];
-    setScrambledLetters(prev => [...prev, target]);
-    setGuessLetters(prev => prev.filter((_, i) => i !== index));
-  };
-
-  // Backspace son harfi geri çeker
-  const handleRemoveLastGuess = () => {
-    if (guessLetters.length === 0) return;
-    handleRemoveGuess(guessLetters.length - 1);
-  };
-
-  // Kontrol Et
-  const handleCheck = () => {
-    if (!wordObj) return;
-    const currentGuessStr = guessLetters.map(item => item.letter).join('');
-
-    if (currentGuessStr === wordObj.word) {
-      playSound('complete');
-      setGameStatus('won');
-    } else {
-      playSound('fail');
-      const newLives = lives - 1;
-      setLives(newLives);
-      if (newLives === 0) {
-        setGameStatus('lost');
-      } else {
-        // Hatalı sıralama durumunda harfleri havuzuna geri yolla
-        const letters = wordObj.word.split('').map((l, i) => ({ id: `scramble_${l}_${i}`, letter: l }));
-        const shuffled = [...letters];
-        for (let i = shuffled.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-        }
-        setScrambledLetters(shuffled);
-        setGuessLetters([]);
-      }
-    }
-  };
-
-  return (
-    <div className="w-full flex flex-col items-center gap-6">
-      {gameStatus === 'intro' && (
-        <div className="text-center flex flex-col items-center py-6">
-          <Compass className="w-20 h-20 text-orange-500 mb-4 animate-spin-slow" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase">
-            Harf Sıralama (Anagram)
-          </h3>
-          <p className="text-xs text-slate-550 dark:text-slate-400 mt-2 max-w-md leading-relaxed">
-            Dini terimin harfleri karışık sırayla verilmiştir. <br />
-            Tanım ipucunu okuyarak harflere sırasıyla dokunun veya klavyeden harflere basarak doğru terimi oluşturun! <br />
-            <strong>Dikkat et:</strong> Toplam 3 canın ve 60 saniye süren var!
-          </p>
-          <button
-            onClick={handleStart}
-            className="mt-6 px-10 py-3.5 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-lg hover:shadow-orange-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yarışmayı Başlat! ➔
-          </button>
-        </div>
-      )}
-
-      {gameStatus === 'playing' && wordObj && (
-        <div className="w-full flex flex-col gap-6 items-center">
-
-          {/* Süre, Can ve Can barı */}
-          <div className="w-full max-w-2xl flex justify-between items-center bg-white dark:bg-slate-850 border-2 border-slate-150 dark:border-slate-750 px-4 py-2.5 rounded-2xl shadow-sm text-xs font-black">
-            <span className={`flex items-center gap-1 ${timer <= 10 ? 'text-rose-500 animate-pulse text-sm font-black' : 'text-slate-500'}`}>
-              ⏱️ Süre: {timer} sn
-            </span>
-            <div className="flex gap-1.5">
-              {Array.from({ length: 3 }).map((_, i) => (
-                <Heart key={i} className={`w-5 h-5 ${i < lives ? 'text-red-500 fill-red-500 scale-110' : 'text-slate-200 dark:text-slate-750 scale-90'} transition-all`} />
-              ))}
-            </div>
-          </div>
-
-          {/* İpucu Kutusu */}
-          <div className="w-full max-w-2xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-5 rounded-[2rem] shadow-sm text-center">
-            <span className="text-[10px] font-black text-indigo-500 uppercase tracking-widest block mb-1">
-              💡 KELİME İPUCU (Kategori: {wordObj.category})
-            </span>
-            <p className="text-xs sm:text-sm font-semibold text-slate-650 dark:text-slate-350 leading-relaxed">
-              {wordObj.clue}
-            </p>
-          </div>
-
-          {/* Mevcut Sıralama (Kullanıcının Tahmini) */}
-          <div className="flex flex-wrap gap-2.5 justify-center py-4 min-h-[70px] w-full max-w-2xl">
-            {guessLetters.map((item, idx) => (
-              <button
-                key={item.id}
-                onClick={() => handleRemoveGuess(idx)}
-                className="w-11 h-12 bg-white dark:bg-slate-800 border-3 border-indigo-500 text-indigo-650 dark:text-indigo-400 font-display font-black text-lg rounded-xl shadow hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center justify-center"
-              >
-                {item.letter}
-              </button>
-            ))}
-            {Array.from({ length: wordObj.word.length - guessLetters.length }).map((_, i) => (
-              <div
-                key={`empty_${i}`}
-                className="w-11 h-12 bg-slate-100/50 dark:bg-slate-900/50 border-3 border-dashed border-slate-200 dark:border-slate-750 rounded-xl flex items-center justify-center text-transparent"
-              >
-                _
-              </div>
-            ))}
-          </div>
-
-          {/* Harf Havuzu (Karışık Harfler) */}
-          <div className="w-full max-w-2xl bg-slate-50 dark:bg-slate-950/20 border-2 border-slate-200 dark:border-slate-800 p-6 rounded-[2.5rem] shadow-inner flex flex-wrap gap-3 justify-center min-h-[85px]">
-            {scrambledLetters.map((item, idx) => (
-              <button
-                key={item.id}
-                onClick={() => handleSelectLetter(idx)}
-                className="w-11 h-11 bg-white dark:bg-slate-800 border-2 border-slate-250 dark:border-slate-700 text-slate-800 dark:text-white font-display font-black text-base rounded-xl shadow-sm hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center justify-center"
-              >
-                {item.letter}
-              </button>
-            ))}
-          </div>
-
-          {/* Kontrol Butonları */}
-          <div className="flex gap-4">
-            <button
-              onClick={handleRemoveLastGuess}
-              disabled={guessLetters.length === 0}
-              className="px-6 py-3 bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-white font-black text-xs uppercase tracking-wider rounded-xl hover:scale-105 active:scale-95 transition-all cursor-pointer disabled:opacity-50"
-            >
-              ↩ Harf Geri Al
-            </button>
-            <button
-              onClick={handleCheck}
-              disabled={guessLetters.length !== wordObj.word.length}
-              className="px-8 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-xs uppercase tracking-wider rounded-xl shadow hover:scale-105 active:scale-95 transition-all cursor-pointer disabled:opacity-50"
-            >
-              ✓ Kontrol Et (Enter)
-            </button>
-          </div>
-
-        </div>
-      )}
-
-      {(gameStatus === 'won' || gameStatus === 'lost') && wordObj && (
-        <div className="text-center flex flex-col items-center py-6 w-full max-w-md bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-xl animate-scale-up">
-          {gameStatus === 'won' ? (
-            <>
-              <CheckCircle2 className="w-16 h-16 text-emerald-500 animate-bounce mb-3" />
-              <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">
-                Harika, Doğru!
-              </h3>
-              <p className="text-xs text-slate-550 mt-2">
-                Harfleri başarıyla sıralayarak dini kavramı ortaya çıkardın!
-              </p>
-            </>
-          ) : (
-            <>
-              <XCircle className="w-16 h-16 text-rose-500 animate-pulse mb-3" />
-              <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">
-                Canlar Veya Süre Bitti!
-              </h3>
-              <p className="text-xs text-slate-550 mt-2">
-                Kelime sıralamasını can hakların veya süren tükenmeden tamamlayamadın.
-              </p>
-            </>
-          )}
-
-          <div className="w-full flex flex-col gap-2 my-5 p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl">
-            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Gizli Kelime</span>
-            <span className="text-xl font-display font-black text-slate-850 dark:text-white tracking-widest">
-              {wordObj.word}
-            </span>
-            <span className="text-[10px] font-bold text-slate-550 dark:text-slate-450 mt-1 leading-normal">
-              {wordObj.clue}
-            </span>
-          </div>
-
-          <button
-            onClick={handleStart}
-            className="w-full py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:shadow-orange-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yeni Kelimeyle Oyna! ➔
-          </button>
-        </div>
-      )}
-    </div>
-  );
-};
-
-// ==========================================
-// 6. TEAM GAME 1: BİLGİ FETHİ (JEOPARDY)
-// ==========================================
 interface JeopardyCell {
   id: string;
   category: string;
@@ -3637,176 +2796,6 @@ interface BlankQuestion {
   wisdom: string;
 }
 
-const FillInBlanksGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
-  const [gameStatus, setGameStatus] = useState<'intro' | 'playing' | 'ended'>('intro');
-  const [currentIdx, setCurrentIdx] = useState<number>(0);
-  const [selectedOpt, setSelectedOpt] = useState<string | null>(null);
-  const [showFeedback, setShowFeedback] = useState<boolean>(false);
-  const [score, setScore] = useState<number>(0);
-
-  const questions: BlankQuestion[] = [
-    { text: "Namaz dinin ___ dir.", options: ["direği", "süsü", "anahtarı", "temeli"], correct: "direği", wisdom: "Namaz dinin direğidir, ibadetlerin en temelidir." },
-    { text: "Temizlik imanın ___ dir.", options: ["çeyreği", "yarısı", "tamamı", "aynası"], correct: "yarısı", wisdom: "Hem beden hem de çevre temizliği Müslümanın şiarıdır." },
-    { text: "Cennet ___ ayakları altındadır.", options: ["babaların", "öğretmenlerin", "annelerin", "büyüklerin"], correct: "annelerin", wisdom: "Annelere saygı ve sevgi cennete açılan kapıdır." },
-    { text: "Sizin en hayırlınız, ahlakı en ___ olanınızdır.", options: ["güzel", "mükemmel", "zengin", "bilgili"], correct: "güzel", wisdom: "İslam dininin nihai hedefi güzel ahlaklı nesiller yetiştirmektir." },
-    { text: "Müslüman, Müslümanın ___ dir.", options: ["kardeşidir", "dostudur", "komşusudur", "aynasıdır"], correct: "kardeşidir", wisdom: "Bütün Müslümanlar din kardeşi olarak birbirine bağlıdır." }
-  ];
-
-  const handleStart = () => {
-    playSound('complete');
-    setCurrentIdx(0);
-    setSelectedOpt(null);
-    setShowFeedback(false);
-    setScore(0);
-    setGameStatus('playing');
-  };
-
-  const handleSelect = (opt: string) => {
-    if (showFeedback) return;
-    playSound('tick');
-    setSelectedOpt(opt);
-    setShowFeedback(true);
-
-    if (opt === questions[currentIdx].correct) {
-      playSound('success');
-      setScore(prev => prev + 20);
-    } else {
-      playSound('fail');
-    }
-  };
-
-  const handleNext = () => {
-    if (currentIdx + 1 < questions.length) {
-      playSound('complete');
-      setCurrentIdx(prev => prev + 1);
-      setSelectedOpt(null);
-      setShowFeedback(false);
-    } else {
-      playSound('complete');
-      setGameStatus('ended');
-    }
-  };
-
-  const currentQ = questions[currentIdx];
-  const formattedText = currentQ ? currentQ.text.replace("___", "______") : "";
-
-  return (
-    <div className="w-full flex flex-col items-center gap-6">
-      {gameStatus === 'intro' && (
-        <div className="text-center flex flex-col items-center py-6">
-          <BookOpen className="w-20 h-20 text-teal-500 mb-4 animate-pulse" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase">
-            Boşluk Doldurma (Cümle Tamamla)
-          </h3>
-          <p className="text-xs text-slate-555 dark:text-slate-400 mt-2 max-w-md leading-relaxed">
-            Hadis-i Şerif ve dini kelimelerdeki eksik kısımları doğru şekilde tamamlayın! <br />
-            Doğru kelimeyi şıklar arasından bularak puanları toplayın.
-          </p>
-          <button
-            onClick={handleStart}
-            className="mt-6 px-10 py-3.5 bg-gradient-to-r from-teal-500 to-emerald-500 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-lg hover:shadow-teal-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yarışmayı Başlat! ➔
-          </button>
-        </div>
-      )}
-
-      {gameStatus === 'playing' && currentQ && (
-        <div className="w-full max-w-2xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-
-          <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
-            <span>Soru: {currentIdx + 1} / {questions.length}</span>
-            <span>Skor: {score} Puan</span>
-          </div>
-
-          {/* Cümle Kartı */}
-          <div className="w-full bg-slate-50 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 p-6 rounded-2xl text-center min-h-[90px] flex items-center justify-center">
-            <p className="text-base sm:text-lg font-bold text-slate-855 dark:text-white leading-relaxed">
-              {showFeedback ? currentQ.text.replace("___", `[ ${currentQ.correct.toUpperCase()} ]`) : formattedText}
-            </p>
-          </div>
-
-          {/* Şıklar */}
-          <div className="grid grid-cols-2 gap-4 w-full">
-            {currentQ.options.map(opt => {
-              const isSelected = opt === selectedOpt;
-              const isCorrect = opt === currentQ.correct;
-
-              let btnStyle = "bg-slate-50 hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-750 border-slate-200 dark:border-slate-700 text-slate-850 dark:text-white cursor-pointer hover:scale-102 active:scale-98 shadow-sm";
-              if (showFeedback) {
-                if (isCorrect) {
-                  btnStyle = "bg-emerald-500 border-emerald-600 text-white pointer-events-none";
-                } else if (isSelected) {
-                  btnStyle = "bg-rose-500 border-rose-600 text-white pointer-events-none";
-                } else {
-                  btnStyle = "opacity-40 pointer-events-none bg-slate-100 dark:bg-slate-900 text-slate-400";
-                }
-              }
-
-              return (
-                <button
-                  key={opt}
-                  onClick={() => handleSelect(opt)}
-                  disabled={showFeedback}
-                  className={`py-4 rounded-xl border-2 font-display font-black text-xs sm:text-sm uppercase tracking-wider transition-all ${btnStyle}`}
-                >
-                  {opt}
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Bilgi Kutusu ve Devam Butonu */}
-          {showFeedback && (
-            <div className="w-full flex flex-col gap-4 mt-2 animate-scale-up">
-              <div className="p-4 bg-emerald-50/50 dark:bg-emerald-950/10 border border-emerald-250 rounded-2xl text-[10px] font-semibold text-emerald-805 dark:text-emerald-450 leading-relaxed text-center">
-                <strong>İlahi Hikmet (Bilgi):</strong> {currentQ.wisdom}
-              </div>
-
-              <button
-                onClick={handleNext}
-                className="w-full py-4.5 bg-gradient-to-r from-teal-500 to-emerald-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer"
-              >
-                {currentIdx + 1 === questions.length ? 'Sonuçları Gör ➔' : 'Sonraki Cümleye Geç ➔'}
-              </button>
-            </div>
-          )}
-
-        </div>
-      )}
-
-      {gameStatus === 'ended' && (
-        <div className="text-center flex flex-col items-center py-6 w-full max-w-md bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-xl animate-scale-up">
-          <Trophy className="w-16 h-16 text-yellow-500 animate-bounce mb-3" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">
-            Tebrikler!
-          </h3>
-          <p className="text-xs text-slate-500 mt-2">
-            Boşluk doldurma maratonunu başarıyla tamamladınız!
-          </p>
-
-          <div className="w-full flex flex-col gap-2 my-5 p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl">
-            <span className="text-[10px] font-black text-slate-450 uppercase tracking-widest">TOPLAM PUAN</span>
-            <span className="text-2xl font-display font-black text-emerald-600 dark:text-emerald-450 tracking-wider mt-1">
-              {score} Puan
-            </span>
-          </div>
-
-          <button
-            onClick={handleStart}
-            className="w-full py-4 bg-gradient-to-r from-teal-500 to-emerald-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:shadow-teal-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yeniden Oyna! ↩️
-          </button>
-        </div>
-      )}
-    </div>
-  );
-};
-
-// ==========================================
-// 13. INDIVIDUAL GAME 9: SIRA SENDE (ZAMAN ŞERİDİ)
-// ==========================================
 interface ChronoLevel {
   title: string;
   correctOrder: string[];
@@ -4373,211 +3362,6 @@ interface MysteryImage {
   wisdom: string;
 }
 
-const ImageGuessGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
-  const [gameStatus, setGameStatus] = useState<'intro' | 'playing' | 'ended'>('intro');
-  const [currentIdx, setCurrentIdx] = useState<number>(0);
-  const [openedTiles, setOpenedTiles] = useState<boolean[]>([]);
-  const [guessPoints, setGuessPoints] = useState<number>(100);
-  const [showFeedback, setShowFeedback] = useState<boolean>(false);
-  const [selectedOpt, setSelectedOpt] = useState<string | null>(null);
-  const [score, setScore] = useState<number>(0);
-
-  const list: MysteryImage[] = [
-    { name: "KABE", emoji: "🕋", options: ["KABE", "MESCİD-İ NEBEVİ", "MESCİD-İ AKSA", "KUBA CAMİİ"], wisdom: "Kabe Müslümanların kıblesidir ve Mekke şehrindedir." },
-    { name: "CAMİ", emoji: "🕌", options: ["CAMİ", "KİLİSE", "MEDRESE", "KÜLLİYE"], wisdom: "Cami, Müslümanların namaz kıldığı kutsal ibadethanedir." },
-    { name: "TESBİH", emoji: "📿", options: ["TESBİH", "SECCADE", "MİHRAP", "KANDİL"], wisdom: "Tesbih Allah'ı zikrederken zikir sayılarını takip etmemizi sağlar." },
-    { name: "KUR'AN-I KERİM", emoji: "📖", options: ["KUR'AN-I KERİM", "HADİS KİTABI", "TEVRAT", "İNCİL"], wisdom: "Kur'an-ı Kerim Allah'ın Peygamberimiz'e gönderdiği son ilahi kitaptır." }
-  ];
-
-  const handleStart = () => {
-    playSound('complete');
-    setCurrentIdx(0);
-    setScore(0);
-    loadLevel(0);
-    setGameStatus('playing');
-  };
-
-  const loadLevel = (idx: number) => {
-    setOpenedTiles(Array(16).fill(false));
-    setGuessPoints(100);
-    setShowFeedback(false);
-    setSelectedOpt(null);
-  };
-
-  const handleTileClick = (tileIdx: number) => {
-    if (openedTiles[tileIdx] || showFeedback) return;
-    playSound('tick');
-
-    const newTiles = [...openedTiles];
-    newTiles[tileIdx] = true;
-    setOpenedTiles(newTiles);
-
-    setGuessPoints(prev => Math.max(20, prev - 5));
-  };
-
-  const handleSelect = (opt: string) => {
-    if (showFeedback) return;
-    setSelectedOpt(opt);
-    setShowFeedback(true);
-    setOpenedTiles(Array(16).fill(true)); // Tüm resmi aç
-
-    if (opt === list[currentIdx].name) {
-      playSound('success');
-      setScore(prev => prev + guessPoints);
-    } else {
-      playSound('fail');
-    }
-  };
-
-  const handleNext = () => {
-    if (currentIdx + 1 < list.length) {
-      playSound('complete');
-      setCurrentIdx(prev => prev + 1);
-      loadLevel(currentIdx + 1);
-    } else {
-      playSound('complete');
-      setGameStatus('ended');
-    }
-  };
-
-  const currentImg = list[currentIdx];
-
-  return (
-    <div className="w-full flex flex-col items-center gap-6">
-      {gameStatus === 'intro' && (
-        <div className="text-center flex flex-col items-center py-6">
-          <Sparkles className="w-20 h-20 text-pink-500 mb-4 animate-bounce" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase">
-            Resim Tahmin (Görsel Bulmaca)
-          </h3>
-          <p className="text-xs text-slate-555 dark:text-slate-400 mt-2 max-w-md leading-relaxed">
-            Kutuların ardına gizlenmiş kutsal eşyaları ve mekanları tahmin edin! <br />
-            Kutulara tıklayarak resmi açabilirsiniz, ancak **her açtığınız kutu kazanacağınız puanı düşürür.**
-          </p>
-          <button
-            onClick={handleStart}
-            className="mt-6 px-10 py-3.5 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-lg hover:shadow-pink-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yarışmayı Başlat! ➔
-          </button>
-        </div>
-      )}
-
-      {gameStatus === 'playing' && currentImg && (
-        <div className="w-full max-w-2xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-
-          <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
-            <span>Görsel: {currentIdx + 1} / {list.length}</span>
-            <span>Kazanılacak: {guessPoints} Puan</span>
-          </div>
-
-          {/* Görsel Grid Alanı */}
-          <div className="relative w-48 h-48 bg-slate-50 dark:bg-slate-900 border-3 border-slate-200 dark:border-slate-750 rounded-3xl flex items-center justify-center overflow-hidden shadow-inner">
-
-            {/* Emoji (Gizli Nesne) */}
-            <span className="text-7xl select-none">{currentImg.emoji}</span>
-
-            {/* Kapaklar Grid */}
-            <div className="absolute inset-0 grid grid-cols-4 grid-rows-4 gap-0.5">
-              {openedTiles.map((isOpen, idx) => {
-                return (
-                  <button
-                    key={idx}
-                    onClick={() => handleTileClick(idx)}
-                    className={`w-full h-full flex items-center justify-center font-bold text-xs transition-all ${isOpen
-                        ? 'opacity-0 pointer-events-none'
-                        : 'bg-indigo-500 border border-indigo-400 text-white hover:bg-indigo-650 cursor-pointer'
-                      }`}
-                  >
-                    {!isOpen && '?'}
-                  </button>
-                );
-              })}
-            </div>
-
-          </div>
-
-          {/* Şıklar */}
-          <div className="grid grid-cols-2 gap-4 w-full">
-            {currentImg.options.map(opt => {
-              const isSelected = opt === selectedOpt;
-              const isCorrect = opt === currentImg.name;
-
-              let btnStyle = "bg-slate-50 hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-750 border-slate-200 dark:border-slate-700 text-slate-850 dark:text-white cursor-pointer hover:scale-102 active:scale-98 shadow-sm";
-              if (showFeedback) {
-                if (isCorrect) {
-                  btnStyle = "bg-emerald-500 border-emerald-600 text-white pointer-events-none";
-                } else if (isSelected) {
-                  btnStyle = "bg-rose-500 border-rose-600 text-white pointer-events-none";
-                } else {
-                  btnStyle = "opacity-40 pointer-events-none bg-slate-100 dark:bg-slate-900 text-slate-400";
-                }
-              }
-
-              return (
-                <button
-                  key={opt}
-                  onClick={() => handleSelect(opt)}
-                  disabled={showFeedback}
-                  className={`py-4 rounded-xl border-2 font-display font-black text-xs sm:text-sm uppercase tracking-wider transition-all ${btnStyle}`}
-                >
-                  {opt}
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Feedback & Devam */}
-          {showFeedback && (
-            <div className="w-full flex flex-col gap-4 mt-2 animate-scale-up">
-              <div className="p-4 bg-emerald-50/50 dark:bg-emerald-950/10 border border-emerald-250 rounded-2xl text-[10px] font-semibold text-emerald-805 dark:text-emerald-450 leading-relaxed text-center">
-                <strong>Görsel Hikmeti:</strong> {currentImg.wisdom}
-              </div>
-
-              <button
-                onClick={handleNext}
-                className="w-full py-4.5 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer"
-              >
-                {currentIdx + 1 === list.length ? 'Sonuçları Gör ➔' : 'Sonraki Görsele Geç ➔'}
-              </button>
-            </div>
-          )}
-
-        </div>
-      )}
-
-      {gameStatus === 'ended' && (
-        <div className="text-center flex flex-col items-center py-6 w-full max-w-md bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-xl animate-scale-up">
-          <Trophy className="w-16 h-16 text-yellow-500 animate-bounce mb-3" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">
-            Tebrikler!
-          </h3>
-          <p className="text-xs text-slate-500 mt-2">
-            Tüm gizemli resimleri başarıyla buldunuz!
-          </p>
-
-          <div className="w-full flex flex-col gap-2 my-5 p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl">
-            <span className="text-[10px] font-black text-slate-450 uppercase tracking-widest">TOPLAM PUAN</span>
-            <span className="text-2xl font-display font-black text-emerald-600 dark:text-emerald-450 tracking-wider mt-1">
-              {score} Puan
-            </span>
-          </div>
-
-          <button
-            onClick={handleStart}
-            className="w-full py-4 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:shadow-pink-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yeniden Oyna! ↩️
-          </button>
-        </div>
-      )}
-    </div>
-  );
-};
-
-// ==========================================
-// 16. INDIVIDUAL GAME 12: KELİME AVCISI (DÜŞEN HARFLER)
-// ==========================================
 const FallingWordsGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
   const [gameStatus, setGameStatus] = useState<'intro' | 'playing' | 'ended' | 'lost'>('intro');
   const [targetWord, setTargetWord] = useState<string>('');
@@ -4768,404 +3552,6 @@ const FallingWordsGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => 
 
 // ==========================================
 // 17. INDIVIDUAL GAME 13: 4 ŞIKLI BİLGİ TESTİ
-// ==========================================
-const QuickQuizGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
-  const [gameStatus, setGameStatus] = useState<'intro' | 'playing' | 'ended'>('intro');
-  const [questions, setQuestions] = useState<UnifiedQuizQuestion[]>([]);
-  const [currentIdx, setCurrentIdx] = useState<number>(0);
-  const [timer, setTimer] = useState<number>(15);
-  const [selectedOpt, setSelectedOpt] = useState<string | null>(null);
-  const [showFeedback, setShowFeedback] = useState<boolean>(false);
-  const [score, setScore] = useState<number>(0);
-
-  // Geri Sayım
-  useEffect(() => {
-    if (gameStatus !== 'playing' || showFeedback) return;
-
-    const interval = setInterval(() => {
-      setTimer(prev => {
-        if (prev <= 1) {
-          clearInterval(interval);
-          handleTimeOut();
-          return 0;
-        }
-        if (prev <= 4) playSound('tick');
-        return prev - 1;
-      });
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [gameStatus, currentIdx, showFeedback]);
-
-  // Oyunu Başlat
-  const handleStart = () => {
-    playSound('complete');
-
-    // Rastgele 10 soru karıştırıp seçelim
-    const pool = getCurriculumQuizQuestions();
-    const unusedPool = filterUnusedQuestions(pool);
-    const finalPool = unusedPool.length >= 10 ? unusedPool : pool;
-    const shuffled = shuffleArray(finalPool);
-
-    const selected = shuffled.slice(0, 10);
-    setQuestions(selected);
-    selected.forEach(q => markQuestionAsUsed(q.id));
-
-    setCurrentIdx(0);
-    setScore(0);
-    setTimer(15);
-    setSelectedOpt(null);
-    setShowFeedback(false);
-    setGameStatus('playing');
-  };
-
-  const handleTimeOut = () => {
-    playSound('fail');
-    setSelectedOpt(null);
-    setShowFeedback(true);
-  };
-
-  const handleSelectOption = (opt: string) => {
-    if (showFeedback) return;
-    setSelectedOpt(opt);
-    setShowFeedback(true);
-
-    if (opt === questions[currentIdx].correct) {
-      playSound('success');
-      setScore(prev => prev + 10);
-    } else {
-      playSound('fail');
-    }
-  };
-
-  const handleNext = () => {
-    if (currentIdx + 1 < questions.length) {
-      playSound('complete');
-      setCurrentIdx(prev => prev + 1);
-      setTimer(15);
-      setSelectedOpt(null);
-      setShowFeedback(false);
-    } else {
-      playSound('complete');
-      setGameStatus('ended');
-    }
-  };
-
-  const currentQ = questions[currentIdx];
-
-  return (
-    <div className="w-full flex flex-col items-center gap-6">
-      {gameStatus === 'intro' && (
-        <div className="text-center flex flex-col items-center py-6">
-          <HelpCircle className="w-20 h-20 text-sky-500 mb-4 animate-bounce" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase">
-            4 Şıklı Bilgi Testi
-          </h3>
-          <p className="text-xs text-slate-555 dark:text-slate-400 mt-2 max-w-md leading-relaxed">
-            Zamana karşı hızlı dini bilgi maratonu! <br />
-            10 sorudan oluşan bu testte her soru için sadece **15 saniyeniz** var. <br />
-            Hızlı karar verip en yüksek skoru elde etmeye çalışın!
-          </p>
-          <button
-            onClick={handleStart}
-            className="mt-6 px-10 py-3.5 bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-lg hover:shadow-sky-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yarışmayı Başlat! ➔
-          </button>
-        </div>
-      )}
-
-      {gameStatus === 'playing' && currentQ && (
-        <div className="w-full max-w-2xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-
-          <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
-            <span>Soru: {currentIdx + 1} / {questions.length}</span>
-            <span>Skor: {score} Puan</span>
-          </div>
-
-          {/* Dairesel Sayaç */}
-          <div className={`w-14 h-14 rounded-full border-3 flex items-center justify-center font-black text-sm ${timer <= 4 ? 'border-red-500 text-red-500 animate-ping duration-500' : 'border-indigo-500 text-indigo-500'}`}>
-            {timer}s
-          </div>
-
-          {/* Soru Metni */}
-          <div className="w-full bg-slate-50 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 p-6 rounded-2xl text-center min-h-[90px] flex items-center justify-center">
-            <p className="text-base sm:text-lg font-bold text-slate-855 dark:text-white leading-relaxed">
-              "{currentQ.question}"
-            </p>
-          </div>
-
-          {/* Şıklar */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-            {currentQ.options.map(opt => {
-              const isSelected = opt === selectedOpt;
-              const isCorrect = opt === currentQ.correct;
-
-              let btnStyle = "bg-slate-50 hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-750 border-slate-200 dark:border-slate-700 text-slate-850 dark:text-white cursor-pointer hover:scale-102 active:scale-98 text-left text-xs font-semibold leading-normal p-4 rounded-xl border flex items-center";
-              if (showFeedback) {
-                if (isCorrect) {
-                  btnStyle = "bg-emerald-500 border-emerald-600 text-white pointer-events-none p-4 rounded-xl border flex items-center";
-                } else if (isSelected) {
-                  btnStyle = "bg-rose-500 border-rose-600 text-white pointer-events-none p-4 rounded-xl border flex items-center";
-                } else {
-                  btnStyle = "opacity-40 pointer-events-none bg-slate-100 dark:bg-slate-900 text-slate-400 p-4 rounded-xl border flex items-center";
-                }
-              }
-
-              return (
-                <button
-                  key={opt}
-                  onClick={() => handleSelectOption(opt)}
-                  disabled={showFeedback}
-                  className={btnStyle}
-                >
-                  {opt}
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Devam Butonu */}
-          {showFeedback && (
-            <div className="w-full flex flex-col gap-4 mt-2 animate-scale-up">
-              <div className="p-4 bg-emerald-50/50 dark:bg-emerald-950/10 border border-emerald-250 rounded-2xl text-[10px] font-semibold text-emerald-805 dark:text-emerald-450 leading-relaxed text-center">
-                <strong>İlahi Hikmet (Bilgi):</strong> {currentQ.wisdom}
-              </div>
-
-              <button
-                onClick={handleNext}
-                className="w-full py-4.5 bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer"
-              >
-                {currentIdx + 1 === questions.length ? 'Sonuçları Gör ➔' : 'Sonraki Soruya Geç ➔'}
-              </button>
-            </div>
-          )}
-
-        </div>
-      )}
-
-      {gameStatus === 'ended' && (
-        <div className="text-center flex flex-col items-center py-6 w-full max-w-md bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-xl animate-scale-up">
-          <Trophy className="w-16 h-16 text-yellow-500 animate-bounce mb-3" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">
-            Maraton Bitti!
-          </h3>
-          <p className="text-xs text-slate-500 mt-2">
-            10 soruluk hızlı bilgi yarışmasını başarıyla bitirdiniz!
-          </p>
-
-          <div className="w-full flex flex-col gap-2 my-5 p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl">
-            <span className="text-[10px] font-black text-slate-450 uppercase tracking-widest">TOPLAM SKOR</span>
-            <span className="text-2xl font-display font-black text-emerald-600 dark:text-emerald-450 tracking-wider mt-1">
-              {score} Puan
-            </span>
-          </div>
-
-          <button
-            onClick={handleStart}
-            className="w-full py-4 bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:shadow-sky-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yeniden Oyna! ↩️
-          </button>
-        </div>
-      )}
-    </div>
-  );
-};
-
-// ==========================================
-// 18. INDIVIDUAL GAME 14: PETEK BULMACA (HEXAGON)
-// ==========================================
-const HoneycombPuzzleGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
-  const [gameStatus, setGameStatus] = useState<'intro' | 'playing' | 'ended'>('intro');
-  const [targetWord, setTargetWord] = useState<string>('');
-  const [letters, setLetters] = useState<string[]>([]);
-  const [selectedIdxs, setSelectedIdxs] = useState<number[]>([]);
-  const [score, setScore] = useState<number>(0);
-  const [round, setRound] = useState<number>(1);
-
-  const wordPool = ['İHLAS', 'İMAN', 'ZEKAT', 'NAMAZ', 'SÜRE', 'MELEK', 'ORUÇ', 'KABE'];
-
-  const handleStart = () => {
-    playSound('complete');
-    setScore(0);
-    setRound(1);
-    loadNextLevel();
-    setGameStatus('playing');
-  };
-
-  const loadNextLevel = () => {
-    const word = wordPool[Math.floor(Math.random() * wordPool.length)];
-    setTargetWord(word);
-    setSelectedIdxs([]);
-
-    // 9 hücreli petek harfleri: Hedef harfler + random harfler
-    const arr = word.split('');
-    while (arr.length < 9) {
-      arr.push(TURKISH_LETTERS[Math.floor(Math.random() * TURKISH_LETTERS.length)]);
-    }
-    // Karıştır
-    const shuffledArr = shuffleArray(arr);
-    setLetters(shuffledArr);
-  };
-
-  const handleCellClick = (idx: number) => {
-    if (gameStatus !== 'playing') return;
-    playSound('tick');
-
-    if (selectedIdxs.includes(idx)) {
-      // Seçimi geri al
-      setSelectedIdxs(prev => prev.filter(i => i !== idx));
-    } else {
-      setSelectedIdxs(prev => [...prev, idx]);
-    }
-  };
-
-  const handleSubmit = () => {
-    const spelled = selectedIdxs.map(i => letters[i]).join('');
-    const revSpelled = [...selectedIdxs].reverse().map(i => letters[i]).join('');
-
-    const isMatch = spelled === targetWord || revSpelled === targetWord;
-
-    if (isMatch) {
-      playSound('success');
-      setScore(prev => prev + 100);
-
-      if (round < 4) {
-        setRound(prev => prev + 1);
-        setTimeout(() => {
-          loadNextLevel();
-        }, 1000);
-      } else {
-        setTimeout(() => {
-          playSound('complete');
-          setGameStatus('ended');
-        }, 1000);
-      }
-    } else {
-      playSound('fail');
-      setSelectedIdxs([]); // Seçimi sıfırla
-    }
-  };
-
-  return (
-    <div className="w-full flex flex-col items-center gap-6">
-      {gameStatus === 'intro' && (
-        <div className="text-center flex flex-col items-center py-6">
-          <Award className="w-20 h-20 text-yellow-500 mb-4 animate-bounce" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase">
-            Petek Bulmaca (Hexagon)
-          </h3>
-          <p className="text-xs text-slate-555 dark:text-slate-400 mt-2 max-w-md leading-relaxed">
-            Petek ızgarasındaki harfleri birleştirerek hedef kelimeyi üretin! <br />
-            Harfleri istediğiniz sırada seçebilir ve ardından **"Kelimeleri Gönder"** butonuna basarak kontrol edebilirsiniz.
-          </p>
-          <button
-            onClick={handleStart}
-            className="mt-6 px-10 py-3.5 bg-gradient-to-r from-yellow-500 to-amber-500 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-lg hover:shadow-yellow-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yarışmayı Başlat! ➔
-          </button>
-        </div>
-      )}
-
-      {gameStatus === 'playing' && (
-        <div className="w-full max-w-xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-
-          <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
-            <span>Aşama: {round} / 4</span>
-            <span>Skor: {score} Puan</span>
-          </div>
-
-          {/* Hedef Kelime İpucu */}
-          <div className="text-center">
-            <span className="text-[9px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">HEDEF KAVRAM</span>
-            <p className="text-2xl font-display font-black text-yellow-600 dark:text-yellow-450 tracking-widest mt-1">
-              {targetWord}
-            </p>
-          </div>
-
-          {/* Petek Harf Grid (3x3 şeklinde çizelim) */}
-          <div className="grid grid-cols-3 gap-3 p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-850 rounded-3xl">
-            {letters.map((letter, idx) => {
-              const isSelected = selectedIdxs.includes(idx);
-              const selectOrder = selectedIdxs.indexOf(idx);
-
-              return (
-                <button
-                  key={idx}
-                  onClick={() => handleCellClick(idx)}
-                  className={`w-14 h-16 flex flex-col items-center justify-center font-display font-black text-sm transition-all cursor-pointer shadow-sm relative ${isSelected
-                      ? 'bg-yellow-500 text-white border-3 border-yellow-600 scale-105 shadow-inner'
-                      : 'bg-white dark:bg-slate-800 border-2 border-slate-250 dark:border-slate-750 text-slate-850 dark:text-white hover:scale-103'
-                    }`}
-                  style={{
-                    clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)'
-                  }}
-                >
-                  <span>{letter}</span>
-                  {isSelected && (
-                    <span className="absolute bottom-1.5 text-[7px] font-black text-yellow-100 bg-yellow-700/60 w-3.5 h-3.5 rounded-full flex items-center justify-center">
-                      {selectOrder + 1}
-                    </span>
-                  )}
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Seçilen Harfler Önizleme */}
-          <div className="min-h-[40px] flex items-center gap-1.5">
-            {selectedIdxs.map(i => letters[i]).map((char, idx) => (
-              <span key={idx} className="w-8 h-8 rounded-lg bg-yellow-100 dark:bg-yellow-950/40 text-yellow-805 dark:text-yellow-400 font-display font-black text-xs flex items-center justify-center border border-yellow-300">
-                {char}
-              </span>
-            ))}
-          </div>
-
-          {/* Gönder Butonu */}
-          <button
-            onClick={handleSubmit}
-            disabled={selectedIdxs.length === 0}
-            className="w-full py-4.5 bg-gradient-to-r from-yellow-500 to-amber-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer disabled:opacity-40"
-          >
-            Kelimeleri Gönder! ✔️
-          </button>
-
-        </div>
-      )}
-
-      {gameStatus === 'ended' && (
-        <div className="text-center flex flex-col items-center py-6 w-full max-w-md bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-xl animate-scale-up">
-          <Trophy className="w-16 h-16 text-yellow-500 animate-bounce mb-3" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">
-            Harika Petekçi!
-          </h3>
-          <p className="text-xs text-slate-500 mt-2">
-            Petek ızgarasındaki tüm kelimeleri başarıyla birleştirdiniz!
-          </p>
-
-          <div className="w-full flex flex-col gap-2 my-5 p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl">
-            <span className="text-[10px] font-black text-slate-450 uppercase tracking-widest">TOPLAM PUAN</span>
-            <span className="text-2xl font-display font-black text-emerald-600 dark:text-emerald-450 tracking-wider mt-1">
-              {score} Puan
-            </span>
-          </div>
-
-          <button
-            onClick={handleStart}
-            className="w-full py-4 bg-gradient-to-r from-yellow-500 to-amber-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:shadow-yellow-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yeniden Oyna! ↩️
-          </button>
-        </div>
-      )}
-    </div>
-  );
-};
-
-// ==========================================
-// 19. INDIVIDUAL GAME 15: HAZİNE LABİRENTİ (MAZE RUNNER)
 // ==========================================
 interface MazeQuestionGate {
   row: number;
@@ -5471,245 +3857,6 @@ interface ChainLevel {
   correctAnswers: string[];
 }
 
-const WordChainGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
-  const [gameStatus, setGameStatus] = useState<'intro' | 'playing' | 'ended'>('intro');
-  const [currentLevel, setCurrentLevel] = useState<number>(0);
-  const [filledAnswers, setFilledAnswers] = useState<(string | null)[]>([]);
-  const [checked, setChecked] = useState<boolean>(false);
-  const [isAllCorrect, setIsAllCorrect] = useState<boolean>(false);
-
-  const levels: ChainLevel[] = [
-    {
-      words: ["NAMAZ", null, "TEVEKKÜL", null, "FARZ"],
-      correctAnswers: ["ZEKAT", "LÜTUF"],
-      options: ["ZEKAT", "LÜTUF", "İHLAS", "SÜRE"]
-    },
-    {
-      words: ["ABDEST", null, "DUA", null, "KABE"],
-      correctAnswers: ["TEVHİD", "AHLAK"],
-      options: ["TEVHİD", "AHLAK", "ORUÇ", "EZAN"]
-    },
-    {
-      words: ["İMAN", null, "EZAN", null, "TEKBİR"],
-      correctAnswers: ["NAFİLE", "NİYET"],
-      options: ["NAFİLE", "NİYET", "MELEK", "ZEKAT"]
-    }
-  ];
-
-  const handleStart = () => {
-    playSound('complete');
-    setCurrentLevel(0);
-    loadLevel(0);
-    setGameStatus('playing');
-  };
-
-  const loadLevel = (levelIdx: number) => {
-    setChecked(false);
-    setIsAllCorrect(false);
-
-    // Boş cevap kutularını ayarla (Zincirdeki null sayısı kadar)
-    const gapCount = levels[levelIdx].words.filter(w => w === null).length;
-    setFilledAnswers(Array(gapCount).fill(null));
-  };
-
-  // Şık Seç ve Boşluğa Yerleştir
-  const handleSelectOption = (opt: string) => {
-    if (checked) return;
-    playSound('tick');
-
-    // İlk boş yeri bul
-    const emptyIdx = filledAnswers.indexOf(null);
-    if (emptyIdx === -1) return; // hepsi dolu
-
-    const updated = [...filledAnswers];
-    updated[emptyIdx] = opt;
-    setFilledAnswers(updated);
-  };
-
-  // Boşluktaki seçilmiş cevabı kaldır
-  const handleRemoveAnswer = (filledIdx: number) => {
-    if (checked) return;
-    playSound('tick');
-
-    const updated = [...filledAnswers];
-    updated[filledIdx] = null;
-    setFilledAnswers(updated);
-  };
-
-  const handleCheck = () => {
-    setChecked(true);
-    const correct = levels[currentLevel].correctAnswers;
-    const checkAll = filledAnswers.every((ans, idx) => ans === correct[idx]);
-    setIsAllCorrect(checkAll);
-
-    if (checkAll) {
-      playSound('success');
-    } else {
-      playSound('fail');
-    }
-  };
-
-  const handleNext = () => {
-    if (currentLevel + 1 < levels.length) {
-      playSound('complete');
-      setCurrentLevel(prev => prev + 1);
-      loadLevel(currentLevel + 1);
-    } else {
-      playSound('complete');
-      setGameStatus('ended');
-    }
-  };
-
-  const currentL = levels[currentLevel];
-
-  // Zinciri ekrana birleştiren metin helperı
-  let gapCounter = 0;
-
-  return (
-    <div className="w-full flex flex-col items-center gap-6">
-      {gameStatus === 'intro' && (
-        <div className="text-center flex flex-col items-center py-6">
-          <Clock className="w-20 h-20 text-indigo-500 mb-4 animate-pulse" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase">
-            Kelime Zinciri
-          </h3>
-          <p className="text-xs text-slate-555 dark:text-slate-400 mt-2 max-w-md leading-relaxed">
-            Harf uyumuna dayalı zincir bulmacası! <br />
-            Her kelimenin **son harfiyle** başlayan yeni bir kelimeyi zincire ekleyip boşlukları tamamlayın. <br />
-            Örn: NAMA**Z** ➔ **Z**EKA**T** ➔ **T**EVEKKÜL...
-          </p>
-          <button
-            onClick={handleStart}
-            className="mt-6 px-10 py-3.5 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-lg hover:shadow-indigo-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yarışmayı Başlat! ➔
-          </button>
-        </div>
-      )}
-
-      {gameStatus === 'playing' && currentL && (
-        <div className="w-full max-w-2xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-
-          <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
-            <span>Aşama: {currentLevel + 1} / {levels.length}</span>
-            <span>Kelime Eşleme</span>
-          </div>
-
-          {/* Zincir Görünümü */}
-          <div className="flex flex-wrap items-center justify-center gap-3 py-4 w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-850 rounded-3xl p-4">
-            {currentL.words.map((word, idx) => {
-              if (word === null) {
-                const filledIdx = gapCounter;
-                gapCounter++;
-                const answer = filledAnswers[filledIdx];
-
-                let borderStyle = "border-dashed border-indigo-400 text-indigo-500";
-                if (checked) {
-                  const correct = currentL.correctAnswers[filledIdx];
-                  borderStyle = answer === correct ? "border-emerald-500 bg-emerald-50/20 text-emerald-650" : "border-rose-500 bg-rose-50/20 text-rose-600";
-                }
-
-                return (
-                  <div key={idx} className="flex items-center gap-2">
-                    <button
-                      onClick={() => handleRemoveAnswer(filledIdx)}
-                      disabled={checked}
-                      className={`px-4 py-2.5 rounded-xl border-2 text-[10px] font-black uppercase transition-all flex items-center justify-center min-w-[90px] h-10 ${borderStyle}`}
-                    >
-                      {answer ? answer : '[ SEÇİNİZ ]'}
-                    </button>
-                    {idx < currentL.words.length - 1 && <span className="text-slate-400">➔</span>}
-                  </div>
-                );
-              }
-
-              return (
-                <div key={idx} className="flex items-center gap-2">
-                  <div className="px-4 py-2.5 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-750 text-[10px] font-black uppercase text-slate-800 dark:text-white rounded-xl shadow-sm">
-                    {word}
-                  </div>
-                  {idx < currentL.words.length - 1 && <span className="text-slate-400">➔</span>}
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Şık Seçim Havuzu */}
-          {!checked && (
-            <div className="flex flex-col gap-2 w-full text-center">
-              <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">
-                BOŞLUKLARA EKLENEBİLİR KELİMELER (Sirayla tiklayin)
-              </span>
-              <div className="flex justify-center gap-3 mt-1.5">
-                {currentL.options.map(opt => {
-                  const isUsed = filledAnswers.includes(opt);
-                  return (
-                    <button
-                      key={opt}
-                      onClick={() => handleSelectOption(opt)}
-                      disabled={isUsed}
-                      className="px-4 py-2.5 bg-white dark:bg-slate-850 hover:bg-slate-100 dark:hover:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 disabled:opacity-40 text-[10px] font-black uppercase text-slate-750 dark:text-slate-350 rounded-xl cursor-pointer hover:scale-105 active:scale-95 transition-all shadow-sm"
-                    >
-                      {opt}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
-          {/* Kontrol Butonları */}
-          {!checked ? (
-            <button
-              onClick={handleCheck}
-              disabled={filledAnswers.includes(null)}
-              className="w-full py-4.5 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer disabled:opacity-40"
-            >
-              Zinciri Kontrol Et! 🔍
-            </button>
-          ) : (
-            <div className="w-full flex flex-col gap-4 animate-scale-up">
-              <span className={`text-xs font-black uppercase tracking-wider text-center block ${isAllCorrect ? 'text-emerald-600' : 'text-rose-500'}`}>
-                {isAllCorrect ? '🎉 Tebrikler! Harf zinciri mükemmel kuruldu.' : '❌ Zincirde harf uyumsuzluğu var. Sonraki zincire geçebilirsin.'}
-              </span>
-
-              <button
-                onClick={handleNext}
-                className="w-full py-4.5 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:scale-105 active:scale-95 transition-all cursor-pointer"
-              >
-                {currentLevel + 1 === levels.length ? 'Sonuçları Gör ➔' : 'Sonraki Zincire Geç ➔'}
-              </button>
-            </div>
-          )}
-
-        </div>
-      )}
-
-      {gameStatus === 'ended' && (
-        <div className="text-center flex flex-col items-center py-6 w-full max-w-md bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-xl animate-scale-up">
-          <Trophy className="w-16 h-16 text-yellow-500 animate-bounce mb-3" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">
-            Zincir Tamamlandı!
-          </h3>
-          <p className="text-xs text-slate-550 mt-2">
-            Tüm kelime zinciri aşamalarını başarıyla bitirdiniz!
-          </p>
-
-          <button
-            onClick={handleStart}
-            className="mt-6 w-full py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:shadow-indigo-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yeniden Oyna! ↩️
-          </button>
-        </div>
-      )}
-    </div>
-  );
-};
-
-// ==========================================
-// 21. INDIVIDUAL GAME 17: DİNİ TERİM KARTLARI (TABU)
-// ==========================================
 interface TabooCard {
   word: string;
   forbidden: string[];
@@ -6102,409 +4249,6 @@ interface BalloonQuestion {
   wrongOptions: string[];
 }
 
-const BalloonPopGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
-  const [gameStatus, setGameStatus] = useState<'intro' | 'playing' | 'ended' | 'lost'>('intro');
-  const [score, setScore] = useState<number>(0);
-  const [round, setRound] = useState<number>(1);
-  const [lives, setLives] = useState<number>(3);
-  const [currentQ, setCurrentQ] = useState<BalloonQuestion | null>(null);
-  const [balloons, setBalloons] = useState<{ text: string; isCorrect: boolean; isPopped: boolean; isWrongRed: boolean }[]>([]);
-
-  const pool: BalloonQuestion[] = [
-    { question: "Hangisi İslam'ın şartlarındandır?", correct: "Namaz Kılmak", wrongOptions: ["Sadaka Vermek", "Güler Yüzlü Olmak", "Kuran Okumak"] },
-    { question: "Hangisi imanın şartlarındandır?", correct: "Ahiret Gününe İnanmak", wrongOptions: ["Kurban Kesmek", "Zekat Vermek", "Hacca Gitmek"] },
-    { question: "Kur'an-ı Kerim'in ilk suresi hangisidir?", correct: "Fatiha Suresi", wrongOptions: ["Bakara Suresi", "Yasin Suresi", "İhlas Suresi"] },
-    { question: "Peygamber Efendimiz nerede doğmuştur?", correct: "Mekke", wrongOptions: ["Medine", "Kudüs", "Şam"] }
-  ];
-
-  const handleStart = () => {
-    playSound('complete');
-    setScore(0);
-    setRound(1);
-    setLives(3);
-    loadNextLevel(0);
-    setGameStatus('playing');
-  };
-
-  const loadNextLevel = (idx: number) => {
-    const q = pool[idx % pool.length];
-    setCurrentQ(q);
-
-    // Balonları oluştur
-    const correctB = { text: q.correct, isCorrect: true, isPopped: false, isWrongRed: false };
-    const wrongBs = q.wrongOptions.map(opt => ({ text: opt, isCorrect: false, isPopped: false, isWrongRed: false }));
-    const combined = shuffleArray([correctB, ...wrongBs]);
-
-    setBalloons(combined);
-  };
-
-  const handleBalloonClick = (bIdx: number) => {
-    if (gameStatus !== 'playing') return;
-    const clicked = balloons[bIdx];
-
-    if (clicked.isPopped || clicked.isWrongRed) return;
-
-    if (clicked.isCorrect) {
-      // Doğru! Balonu patlat
-      playSound('success');
-      setScore(prev => prev + 100);
-
-      const updated = [...balloons];
-      updated[bIdx].isPopped = true;
-      setBalloons(updated);
-
-      // Sonraki aşama
-      if (round < 4) {
-        setTimeout(() => {
-          setRound(prev => prev + 1);
-          loadNextLevel(round);
-        }, 1000);
-      } else {
-        setTimeout(() => {
-          playSound('complete');
-          setGameStatus('ended');
-        }, 1000);
-      }
-    } else {
-      // Yanlış!
-      playSound('fail');
-
-      const updated = [...balloons];
-      updated[bIdx].isWrongRed = true;
-      setBalloons(updated);
-
-      setLives(prev => {
-        const next = prev - 1;
-        if (next <= 0) {
-          setGameStatus('lost');
-        }
-        return next;
-      });
-    }
-  };
-
-  return (
-    <div className="w-full flex flex-col items-center gap-6">
-      {gameStatus === 'intro' && (
-        <div className="text-center flex flex-col items-center py-6">
-          <Sparkles className="w-20 h-20 text-pink-500 mb-4 animate-bounce" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase">
-            Balon Patlatmaca
-          </h3>
-          <p className="text-xs text-slate-555 dark:text-slate-400 mt-2 max-w-md leading-relaxed">
-            Havada uçuşan balonlar arasından sadece **doğru cevabı** taşıyan balona tıklayarak patlatın! <br />
-            Yanlış balona tıklamak can kaybettirir.
-          </p>
-          <button
-            onClick={handleStart}
-            className="mt-6 px-10 py-3.5 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-lg hover:shadow-pink-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yarışmayı Başlat! ➔
-          </button>
-        </div>
-      )}
-
-      {gameStatus === 'playing' && currentQ && (
-        <div className="w-full max-w-2xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-
-          <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
-            <span>Aşama: {round} / 4</span>
-            <span>Canlar: {'❤️'.repeat(lives)}</span>
-          </div>
-
-          {/* Soru Başlığı */}
-          <div className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 rounded-2xl text-center">
-            <p className="text-base sm:text-lg font-bold text-slate-800 dark:text-white leading-relaxed">
-              "{currentQ.question}"
-            </p>
-          </div>
-
-          {/* Balonlar Oyun Alanı */}
-          <div className="w-full min-h-[220px] relative bg-sky-50/50 dark:bg-slate-900 border-2 border-sky-100 dark:border-slate-850 p-6 rounded-3xl overflow-hidden flex flex-wrap justify-center gap-6 items-center shadow-inner">
-            {balloons.map((b, idx) => {
-              if (b.isPopped) {
-                return (
-                  <div key={idx} className="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-3 border-dashed border-emerald-400 bg-emerald-50/10 flex items-center justify-center font-display font-black text-[9px] text-emerald-600 animate-pulse uppercase">
-                    PATLADI! 💥
-                  </div>
-                );
-              }
-
-              let balloonBg = "bg-gradient-to-b from-pink-400 to-rose-500 text-white shadow-lg border-2 border-pink-300";
-              if (b.isWrongRed) {
-                balloonBg = "bg-gradient-to-b from-rose-600 to-red-700 text-white border-2 border-red-500 scale-95 opacity-50";
-              }
-
-              return (
-                <button
-                  key={idx}
-                  onClick={() => handleBalloonClick(idx)}
-                  className={`w-24 h-24 sm:w-28 sm:h-28 rounded-full flex items-center justify-center text-center p-3 font-semibold text-[9px] sm:text-xs leading-tight transition-all cursor-pointer hover:scale-105 active:scale-95 ${balloonBg}`}
-                >
-                  {b.text}
-                </button>
-              );
-            })}
-          </div>
-
-        </div>
-      )}
-
-      {(gameStatus === 'ended' || gameStatus === 'lost') && (
-        <div className="text-center flex flex-col items-center py-6 w-full max-w-md bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-xl animate-scale-up">
-          {gameStatus === 'ended' ? (
-            <>
-              <Trophy className="w-16 h-16 text-yellow-500 animate-bounce mb-3" />
-              <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">
-                Tebrikler Şampiyon!
-              </h3>
-              <p className="text-xs text-slate-550 mt-2">
-                Tüm doğru balonları başarıyla patlattınız!
-              </p>
-            </>
-          ) : (
-            <>
-              <XCircle className="w-16 h-16 text-rose-500 animate-pulse mb-3" />
-              <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">
-                Canlarınız Bitti!
-              </h3>
-              <p className="text-xs text-slate-550 mt-2">
-                Doğru balonları patlatamadan tüm canlarınızı kaybettiniz.
-              </p>
-            </>
-          )}
-
-          <div className="w-full flex flex-col gap-2 my-5 p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl">
-            <span className="text-[10px] font-black text-slate-450 uppercase tracking-widest">TOPLAM PUAN</span>
-            <span className="text-2xl font-display font-black text-emerald-600 dark:text-emerald-450 tracking-wider mt-1">
-              {score} Puan
-            </span>
-          </div>
-
-          <button
-            onClick={handleStart}
-            className="w-full py-4 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:shadow-pink-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yeniden Oyna! ↩️
-          </button>
-        </div>
-      )}
-    </div>
-  );
-};
-
-// ==========================================
-// 24. INDIVIDUAL GAME 20: FARKI BUL
-// ==========================================
-interface Difference {
-  id: string;
-  name: string;
-  x: number; // Yüzde koordinat
-  y: number;
-}
-
-const DiffFinderGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
-  const [gameStatus, setGameStatus] = useState<'intro' | 'playing' | 'ended'>('intro');
-  const [foundDiffs, setFoundDiffs] = useState<string[]>([]);
-  const [score, setScore] = useState<number>(0);
-
-  // 3 fark koordinatımız (Kandil, Minare Şerefe, Kapı Süslemesi)
-  const diffs: Difference[] = [
-    { id: "kandil", name: "Kandil Işığı / Hilal Alem", x: 50, y: 15 },
-    { id: "serefe", name: "Minare Şerefesi Süslemesi", x: 22, y: 35 },
-    { id: "kapi", name: "Cami Kapısı Yıldız Logosu", x: 50, y: 82 }
-  ];
-
-  const handleStart = () => {
-    playSound('complete');
-    setFoundDiffs([]);
-    setScore(0);
-    setGameStatus('playing');
-  };
-
-  const handleDiffClick = (diffId: string) => {
-    if (foundDiffs.includes(diffId)) return;
-    playSound('success');
-
-    setFoundDiffs(prev => [...prev, diffId]);
-    setScore(prev => prev + 150);
-
-    if (foundDiffs.length + 1 === diffs.length) {
-      setTimeout(() => {
-        playSound('complete');
-        setGameStatus('ended');
-      }, 1200);
-    }
-  };
-
-  const handleWrongClick = (e: React.MouseEvent) => {
-    // Tıklanan elemanın id'si diff değilse tık ses efekti veya ceza
-    const target = e.target as HTMLElement;
-    if (target.closest('.diff-trigger')) return;
-
-    playSound('fail');
-  };
-
-  return (
-    <div className="w-full flex flex-col items-center gap-6">
-      {gameStatus === 'intro' && (
-        <div className="text-center flex flex-col items-center py-6">
-          <Landmark className="w-20 h-20 text-emerald-500 mb-4 animate-bounce" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase">
-            Farkı Bul (Görsel Arama)
-          </h3>
-          <p className="text-xs text-slate-555 dark:text-slate-400 mt-2 max-w-md leading-relaxed">
-            Sağdaki modifiye edilmiş cami görselindeki **3 ince farkı** bulup tıklayın! <br />
-            Yanlış yere tıklamak fail sesi tetikler. Koordinatları çok dikkatli inceleyin!
-          </p>
-          <button
-            onClick={handleStart}
-            className="mt-6 px-10 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-lg hover:shadow-emerald-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yarışmayı Başlat! ➔
-          </button>
-        </div>
-      )}
-
-      {gameStatus === 'playing' && (
-        <div className="w-full max-w-4xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-
-          <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
-            <span>Bulunan Farklar: {foundDiffs.length} / 3</span>
-            <span>Skor: {score} Puan</span>
-          </div>
-
-          {/* Resimler Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full mt-2">
-
-            {/* SOL GÖRSEL: ORİJİNAL CAMİ (Vektörel Çizim) */}
-            <div className="flex flex-col items-center gap-2">
-              <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">ORİJİNAL GÖRSEL</span>
-              <div className="relative w-full aspect-square max-w-[280px] bg-sky-100 dark:bg-slate-900 border-3 border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-inner flex items-center justify-center p-4">
-
-                {/* Gövde SVG Cami */}
-                <svg className="w-full h-full text-emerald-600 dark:text-emerald-500" viewBox="0 0 100 100">
-                  {/* Gökyüzü arka plan */}
-                  <rect width="100" height="100" fill="transparent" />
-
-                  {/* Minare Sol */}
-                  <rect x="20" y="30" width="6" height="50" fill="currentColor" />
-                  <polygon points="20,30 23,20 26,30" fill="currentColor" />
-                  {/* Şerefe Sol */}
-                  <rect x="18" y="45" width="10" height="5" fill="#ca8a04" />
-
-                  {/* Cami Gövdesi */}
-                  <rect x="35" y="50" width="30" height="30" fill="currentColor" />
-                  {/* Kubbe */}
-                  <path d="M 35 50 A 15 15 0 0 1 65 50 Z" fill="currentColor" />
-                  {/* Alem */}
-                  <line x1="50" y1="35" x2="50" y2="28" stroke="#ca8a04" strokeWidth="2" />
-                  <circle cx="50" cy="26" r="2.5" fill="#ca8a04" />
-
-                  {/* Kapı */}
-                  <rect x="44" y="65" width="12" height="15" fill="#ca8a04" />
-                  {/* Kapı üstü Crescent */}
-                  <circle cx="50" cy="72" r="3" fill="currentColor" />
-                </svg>
-
-              </div>
-            </div>
-
-            {/* SAĞ GÖRSEL: MODİFİYE CAMİ (Farkların tıklanacağı yer) */}
-            <div className="flex flex-col items-center gap-2">
-              <span className="text-[9px] font-black text-indigo-500 uppercase tracking-widest">FARKI BURADA BULUN!</span>
-              <div
-                onClick={handleWrongClick}
-                className="relative w-full aspect-square max-w-[280px] bg-sky-100 dark:bg-slate-900 border-3 border-indigo-400 rounded-3xl overflow-hidden shadow-md flex items-center justify-center p-4 cursor-crosshair"
-              >
-
-                {/* Gövde SVG Cami (Modifiyeli hali) */}
-                <svg className="w-full h-full text-emerald-600 dark:text-emerald-500" viewBox="0 0 100 100">
-                  <rect width="100" height="100" fill="transparent" />
-
-                  {/* Minare Sol */}
-                  <rect x="20" y="30" width="6" height="50" fill="currentColor" />
-                  <polygon points="20,30 23,20 26,30" fill="currentColor" />
-
-                  {/* FARK 1: Sol şerefe rengi farklı (altın sarısı yerine gri) */}
-                  <rect x="18" y="45" width="10" height="5" fill="#6b7280" />
-
-                  {/* Cami Gövdesi */}
-                  <rect x="35" y="50" width="30" height="30" fill="currentColor" />
-                  {/* Kubbe */}
-                  <path d="M 35 50 A 15 15 0 0 1 65 50 Z" fill="currentColor" />
-
-                  {/* FARK 2: Kubbe alemi tepesindeki yuvarlak hilale benzeyen altın rengi eksik */}
-                  <line x1="50" y1="35" x2="50" y2="28" stroke="#ca8a04" strokeWidth="2" />
-
-                  {/* Kapı */}
-                  <rect x="44" y="65" width="12" height="15" fill="#ca8a04" />
-
-                  {/* FARK 3: Kapı üstü Crescent yerine yıldız deseni var */}
-                  <polygon points="50,69 51,71 53,71 51.5,72 52,74 50,73 48,74 48.5,72 47,71 49,71" fill="currentColor" />
-                </svg>
-
-                {/* Tıklanabilir Fark Katmanları */}
-                {diffs.map(d => {
-                  const isFound = foundDiffs.includes(d.id);
-                  return (
-                    <button
-                      key={d.id}
-                      onClick={() => handleDiffClick(d.id)}
-                      style={{
-                        left: `${d.x}%`,
-                        top: `${d.y}%`,
-                        transform: 'translate(-50%, -50%)'
-                      }}
-                      className="absolute w-8 h-8 rounded-full border border-transparent hover:border-indigo-400 flex items-center justify-center diff-trigger cursor-pointer"
-                    >
-                      {isFound && (
-                        <span className="w-6 h-6 rounded-full border-3 border-emerald-500 bg-emerald-500/10 flex items-center justify-center animate-ping duration-1000" />
-                      )}
-                    </button>
-                  );
-                })}
-
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      )}
-
-      {gameStatus === 'ended' && (
-        <div className="text-center flex flex-col items-center py-6 w-full max-w-md bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-xl animate-scale-up">
-          <Trophy className="w-16 h-16 text-yellow-500 animate-bounce mb-3" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">
-            Tebrikler Keskin Göz!
-          </h3>
-          <p className="text-xs text-slate-555 mt-2">
-            İki cami arasındaki tüm gizemli farkları başarıyla tespit ettiniz!
-          </p>
-
-          <div className="w-full flex flex-col gap-2 my-5 p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl">
-            <span className="text-[10px] font-black text-slate-450 uppercase tracking-widest">TOPLAM PUAN</span>
-            <span className="text-2xl font-display font-black text-emerald-600 dark:text-emerald-450 tracking-wider mt-1">
-              {score} Puan
-            </span>
-          </div>
-
-          <button
-            onClick={handleStart}
-            className="w-full py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:shadow-emerald-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yeniden Oyna! ↩️
-          </button>
-        </div>
-      )}
-    </div>
-  );
-};
-
-// ==========================================
-// 25. TEAM GAME 5: HAZİNE SANDIĞI KORUYUCUSU
-// ==========================================
 const ChestGuardianGame: React.FC<{
   isDarkMode: boolean;
   teams: Team[];

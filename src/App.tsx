@@ -162,7 +162,7 @@ export default function App() {
       if (hasInteractedRef.current) return;
       if (cinematicPhase !== 'splash' && audioRef.current) {
         hasInteractedRef.current = true;
-        playBackgroundMusic(35);
+        playBackgroundMusic(0);
         window.removeEventListener('click', handleFirstUserInteraction);
         window.removeEventListener('touchstart', handleFirstUserInteraction);
       }
@@ -268,7 +268,7 @@ export default function App() {
   }, []);
 
   // Helper to safely play background music and handle browser autoplay blocks + fade-in volume
-  const playBackgroundMusic = (startTime: number = 35) => {
+  const playBackgroundMusic = (startTime: number = 0) => {
     if (!audioRef.current) return;
 
     // Force load to ensure the browser fetches the audio stream
@@ -296,22 +296,22 @@ export default function App() {
 
         let vol = 0;
         const fadeInterval = setInterval(() => {
-          vol += 0.05;
-          if (vol >= 0.4) {
-            vol = 0.4;
+          vol += 0.08;
+          if (vol >= 0.8) {
+            vol = 0.8;
             clearInterval(fadeInterval);
           }
           if (audioRef.current) {
             audioRef.current.volume = vol;
           }
-        }, 200);
+        }, 100);
       })
       .catch((err) => {
         console.warn("Autoplay blocked music:", err);
         setIsMusicPlaying(false);
         // Reset volume to default so if they click the button later, it's not silent!
         if (audioRef.current) {
-          audioRef.current.volume = 0.4;
+          audioRef.current.volume = 0.8;
         }
       });
   };
@@ -532,6 +532,19 @@ export default function App() {
       <div className="max-w-6xl mx-auto px-4 w-full relative z-10 py-3 flex flex-col justify-between min-h-[calc(100vh-12rem)]" id="home-landing-dashboard">
         {/* Premium Brand Card - matching portal card design */}
         <div className="text-center mb-4 mt-2 flex flex-col items-center select-none">
+          {/* Ayet-i Kerime */}
+          <div className="w-full max-w-lg mb-4 flex flex-col items-center gap-2 px-4">
+            <p className="font-serif text-xl sm:text-2xl leading-relaxed text-emerald-800 dark:text-emerald-300 tracking-wide" dir="rtl" lang="ar">
+              قُلْ اِنَّ صَلَاتٖي وَنُسُكٖي وَمَحْيَايَ وَمَمَاتٖي لِلّٰهِ رَبِّ الْعَالَمٖينَۙ
+            </p>
+            <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 font-semibold leading-relaxed italic max-w-md">
+              "Benim namazım, (her türlü) ibadetim, hayatım ve ölümüm, hepsi âlemlerin Rabbi olan Allah içindir."
+            </p>
+            <span className="text-[9px] font-black text-emerald-600 dark:text-emerald-500 uppercase tracking-widest mt-0.5">
+              En'âm Sûresi • 162
+            </span>
+          </div>
+
           <div className="group bg-gradient-to-br from-white to-emerald-50/40 dark:from-slate-800 dark:to-emerald-950/30 border-2 border-slate-200 dark:border-slate-700 hover:border-emerald-400 dark:hover:border-emerald-600 rounded-[1.75rem] px-6 py-6 sm:px-10 sm:py-8 shadow-lg hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-500 relative overflow-hidden max-w-lg w-full">
             {/* Subtle gradient overlay on hover */}
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-transparent dark:from-emerald-900/10 dark:to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -618,23 +631,23 @@ export default function App() {
           {/* Portal 1: Elif-Ba */}
           <div
             onClick={() => { setActiveTab('elifba'); }}
-            className="group bg-gradient-to-br from-white to-emerald-50/30 border-2 border-slate-200 hover:border-emerald-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-emerald-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
+            className="group bg-gradient-to-br from-white to-emerald-50/30 dark:from-slate-800 dark:to-slate-900 border-2 border-slate-200 dark:border-slate-700 hover:border-emerald-400 dark:hover:border-emerald-500 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-emerald-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/20 dark:from-emerald-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             <div className="flex items-center gap-4 relative z-10 flex-1 min-w-0">
               <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
                 <ElifBaIcon className="w-6 h-6" />
               </div>
               <div className="flex flex-col justify-center min-w-0">
-                <h3 className="font-display font-black text-base text-slate-800 group-hover:text-emerald-700 transition-colors tracking-tight uppercase">
+                <h3 className="font-display font-black text-base text-slate-800 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors tracking-tight uppercase">
                   ELİF-BA
                 </h3>
-                <p className="text-[11px] text-slate-500 font-semibold leading-snug line-clamp-1">
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 font-semibold leading-snug line-clamp-1">
                   Harflerin doğru mahreçleri, okuma alıştırmaları ve eğlenceli harf bulmacası.
                 </p>
               </div>
             </div>
-            <div className="w-9 h-9 bg-emerald-50 text-emerald-600 group-hover:bg-emerald-500 group-hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm shrink-0 relative z-10">
+            <div className="w-9 h-9 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm shrink-0 relative z-10">
               ➔
             </div>
           </div>
@@ -642,23 +655,23 @@ export default function App() {
           {/* Portal 2: Quran */}
           <div
             onClick={() => { setActiveTab('quran'); }}
-            className="group bg-gradient-to-br from-white to-teal-50/30 border-2 border-slate-200 hover:border-teal-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-teal-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
+            className="group bg-gradient-to-br from-white to-teal-50/30 dark:from-slate-800 dark:to-slate-900 border-2 border-slate-200 dark:border-slate-700 hover:border-teal-400 dark:hover:border-teal-500 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-teal-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-teal-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-br from-teal-50/20 dark:from-teal-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             <div className="flex items-center gap-4 relative z-10 flex-1 min-w-0">
               <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-emerald-650 rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
                 <BookOpen className="w-6 h-6" />
               </div>
               <div className="flex flex-col justify-center min-w-0">
-                <h3 className="font-display font-black text-base text-slate-800 group-hover:text-teal-700 transition-colors tracking-tight uppercase">
+                <h3 className="font-display font-black text-base text-slate-800 dark:text-white group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors tracking-tight uppercase">
                   KUR'AN-I KERİM
                 </h3>
-                <p className="text-[11px] text-slate-500 font-semibold leading-snug line-clamp-1">
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 font-semibold leading-snug line-clamp-1">
                   114 sûrenin tamamını Mishaari Raashid al-Afaasee sesinden dinleyin ve okuyun.
                 </p>
               </div>
             </div>
-            <div className="w-9 h-9 bg-teal-50 text-teal-600 group-hover:bg-teal-500 group-hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm shrink-0 relative z-10">
+            <div className="w-9 h-9 bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 group-hover:bg-teal-500 group-hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm shrink-0 relative z-10">
               ➔
             </div>
           </div>
@@ -666,23 +679,23 @@ export default function App() {
           {/* Portal 3: Ezber */}
           <div
             onClick={() => { setActiveTab('ezber'); }}
-            className="group bg-gradient-to-br from-white to-violet-50/30 border-2 border-slate-200 hover:border-violet-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-violet-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
+            className="group bg-gradient-to-br from-white to-violet-50/30 dark:from-slate-800 dark:to-slate-900 border-2 border-slate-200 dark:border-slate-700 hover:border-violet-400 dark:hover:border-violet-500 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-violet-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-violet-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-br from-violet-50/20 dark:from-violet-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             <div className="flex items-center gap-4 relative z-10 flex-1 min-w-0">
               <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-fuchsia-600 rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
                 <Award className="w-6 h-6" />
               </div>
               <div className="flex flex-col justify-center min-w-0">
-                <h3 className="font-display font-black text-base text-slate-800 group-hover:text-violet-750 transition-colors tracking-tight uppercase">
+                <h3 className="font-display font-black text-base text-slate-800 dark:text-white group-hover:text-violet-700 dark:group-hover:text-violet-400 transition-colors tracking-tight uppercase">
                   EZBER LİSTESİ
                 </h3>
-                <p className="text-[11px] text-slate-500 font-semibold leading-snug line-clamp-1">
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 font-semibold leading-snug line-clamp-1">
                   Sözlü sınavlar, sûre ezber takibi ve ezber gelişim tablosu.
                 </p>
               </div>
             </div>
-            <div className="w-9 h-9 bg-violet-50 text-violet-600 group-hover:bg-violet-500 group-hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm shrink-0 relative z-10">
+            <div className="w-9 h-9 bg-violet-50 dark:bg-violet-950/40 text-violet-600 dark:text-violet-400 group-hover:bg-violet-500 group-hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm shrink-0 relative z-10">
               ➔
             </div>
           </div>
@@ -690,23 +703,23 @@ export default function App() {
           {/* Portal 4: Interactive Lessons */}
           <div
             onClick={() => { setActiveTab('lessons'); }}
-            className="group bg-gradient-to-br from-white to-amber-50/30 border-2 border-slate-200 hover:border-amber-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-amber-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
+            className="group bg-gradient-to-br from-white to-amber-50/30 dark:from-slate-800 dark:to-slate-900 border-2 border-slate-200 dark:border-slate-700 hover:border-amber-400 dark:hover:border-amber-500 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-amber-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-amber-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-br from-amber-50/20 dark:from-amber-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             <div className="flex items-center gap-4 relative z-10 flex-1 min-w-0">
               <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
                 <GraduationCap className="w-6 h-6" />
               </div>
               <div className="flex flex-col justify-center min-w-0">
-                <h3 className="font-display font-black text-base text-slate-800 group-hover:text-amber-700 transition-colors tracking-tight uppercase">
+                <h3 className="font-display font-black text-base text-slate-800 dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors tracking-tight uppercase">
                   DERS İÇERİKLERİ
                 </h3>
-                <p className="text-[11px] text-slate-500 font-semibold leading-snug line-clamp-1">
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 font-semibold leading-snug line-clamp-1">
                   Siyer, İnanç ve Ahlak dersleri için hazırlanmış interaktif slayt sunumları.
                 </p>
               </div>
             </div>
-            <div className="w-9 h-9 bg-amber-50 text-amber-600 group-hover:bg-amber-500 group-hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm shrink-0 relative z-10">
+            <div className="w-9 h-9 bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 group-hover:bg-amber-500 group-hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm shrink-0 relative z-10">
               ➔
             </div>
           </div>
@@ -714,23 +727,23 @@ export default function App() {
           {/* Portal 5: Classroom Games Tourney */}
           <div
             onClick={() => { setActiveTab('games'); }}
-            className="group bg-gradient-to-br from-white to-sky-50/30 border-2 border-slate-200 hover:border-sky-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-sky-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
+            className="group bg-gradient-to-br from-white to-sky-50/30 dark:from-slate-800 dark:to-slate-900 border-2 border-slate-200 dark:border-slate-700 hover:border-sky-400 dark:hover:border-sky-500 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-sky-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-sky-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-br from-sky-50/20 dark:from-sky-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             <div className="flex items-center gap-4 relative z-10 flex-1 min-w-0">
               <div className="w-12 h-12 bg-gradient-to-br from-sky-500 to-indigo-650 rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
                 <Gamepad2 className="w-6 h-6" />
               </div>
               <div className="flex flex-col justify-center min-w-0">
-                <h3 className="font-display font-black text-base text-slate-800 group-hover:text-sky-700 transition-colors tracking-tight uppercase">
+                <h3 className="font-display font-black text-base text-slate-800 dark:text-white group-hover:text-sky-700 dark:group-hover:text-sky-400 transition-colors tracking-tight uppercase">
                   OYUNLAR
                 </h3>
-                <p className="text-[11px] text-slate-500 font-semibold leading-snug line-clamp-1">
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 font-semibold leading-snug line-clamp-1">
                   Kelime Arkeolojisi, Kronoloji ve İkilemler gibi heyecan dolu meclis oyunları.
                 </p>
               </div>
             </div>
-            <div className="w-9 h-9 bg-sky-50 text-sky-600 group-hover:bg-sky-500 group-hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm shrink-0 relative z-10">
+            <div className="w-9 h-9 bg-sky-50 dark:bg-sky-950/40 text-sky-600 dark:text-sky-400 group-hover:bg-sky-500 group-hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm shrink-0 relative z-10">
               ➔
             </div>
           </div>
@@ -738,23 +751,23 @@ export default function App() {
           {/* Portal 6: İlahiler */}
           <div
             onClick={() => { setActiveTab('ilahiler'); }}
-            className="group bg-gradient-to-br from-white to-rose-50/30 border-2 border-slate-200 hover:border-rose-350 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-rose-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
+            className="group bg-gradient-to-br from-white to-rose-50/30 dark:from-slate-800 dark:to-slate-900 border-2 border-slate-200 dark:border-slate-700 hover:border-rose-400 dark:hover:border-rose-500 rounded-[1.5rem] p-4 shadow-sm hover:shadow-lg hover:shadow-rose-500/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer flex items-center justify-between gap-3 relative overflow-hidden md:col-span-2"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-rose-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-br from-rose-50/20 dark:from-rose-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             <div className="flex items-center gap-4 relative z-10 flex-1 min-w-0">
               <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-pink-650 rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
                 <Music className="w-6 h-6" />
               </div>
               <div className="flex flex-col justify-center min-w-0">
-                <h3 className="font-display font-black text-base text-slate-800 group-hover:text-rose-700 transition-colors tracking-tight uppercase">
+                <h3 className="font-display font-black text-base text-slate-800 dark:text-white group-hover:text-rose-700 dark:group-hover:text-rose-400 transition-colors tracking-tight uppercase">
                   İLAHİLER
                 </h3>
-                <p className="text-[11px] text-slate-500 font-semibold leading-snug line-clamp-1">
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 font-semibold leading-snug line-clamp-1">
                   Önderimiz Peygamber, Ey Sevgili ve daha fazlası; dinle ve sözleri oku.
                 </p>
               </div>
             </div>
-            <div className="w-9 h-9 bg-rose-50 text-rose-600 group-hover:bg-rose-500 group-hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm shrink-0 relative z-10">
+            <div className="w-9 h-9 bg-rose-50 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 group-hover:bg-rose-500 group-hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm shrink-0 relative z-10">
               ➔
             </div>
           </div>
