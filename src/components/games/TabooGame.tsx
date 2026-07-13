@@ -209,36 +209,53 @@ export const TabooGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => 
           </h3>
 
           <div className="space-y-6 mb-8">
-            {/* Rules Selector */}
-            <div className="grid grid-cols-2 gap-4">
-              {/* Duration */}
-              <div>
-                <label className="text-2xs text-slate-400 font-bold uppercase block mb-1.5">Süre</label>
-                <select 
-                  value={duration} 
-                  onChange={e => setDuration(Number(e.target.value))}
-                  className="w-full p-3 rounded-xl border border-white/30 dark:border-slate-850/60 bg-white/40 dark:bg-slate-900/40 text-sm font-bold outline-none cursor-pointer focus:border-teal-500"
-                >
-                  <option value={45}>45 Saniye</option>
-                  <option value={60}>60 Saniye</option>
-                  <option value={90}>90 Saniye</option>
-                  <option value={120}>120 Saniye</option>
-                  <option value={180}>180 Saniye</option>
-                </select>
+            {/* Duration Selector - Custom Pills */}
+            <div>
+              <label className="text-[10px] text-slate-400 dark:text-slate-500 font-black uppercase tracking-widest block mb-2.5">⏱️ Süre Seçimi</label>
+              <div className="grid grid-cols-5 gap-2">
+                {[
+                  { value: 45, label: '45s' },
+                  { value: 60, label: '60s' },
+                  { value: 90, label: '90s' },
+                  { value: 120, label: '2dk' },
+                  { value: 180, label: '3dk' },
+                ].map(opt => (
+                  <button
+                    key={opt.value}
+                    onClick={() => setDuration(opt.value)}
+                    className={`py-3 rounded-xl border-2 text-xs font-black uppercase tracking-wider transition-all cursor-pointer active:scale-95 ${
+                      duration === opt.value
+                        ? 'bg-teal-50 dark:bg-teal-950/30 border-teal-500 text-teal-600 dark:text-teal-400 shadow-md shadow-teal-500/10 scale-[1.03]'
+                        : 'bg-white/40 dark:bg-slate-800/40 border-slate-200/60 dark:border-slate-700/40 text-slate-400 dark:text-slate-500 hover:border-slate-300 dark:hover:border-slate-600'
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
               </div>
+            </div>
 
-              {/* Pass Limit */}
-              <div>
-                <label className="text-2xs text-slate-400 font-bold uppercase block mb-1.5">Pas Limiti</label>
-                <select 
-                  value={passLimit} 
-                  onChange={e => setPassLimit(Number(e.target.value))}
-                  className="w-full p-3 rounded-xl border border-white/30 dark:border-slate-850/60 bg-white/40 dark:bg-slate-900/40 text-sm font-bold outline-none cursor-pointer focus:border-teal-500"
-                >
-                  <option value={3}>3 Pas</option>
-                  <option value={5}>5 Pas</option>
-                  <option value={10}>10 Pas</option>
-                </select>
+            {/* Pass Limit Selector - Custom Pills */}
+            <div>
+              <label className="text-[10px] text-slate-400 dark:text-slate-500 font-black uppercase tracking-widest block mb-2.5">🔄 Pas Limiti</label>
+              <div className="grid grid-cols-3 gap-2">
+                {[
+                  { value: 3, label: '3 Pas' },
+                  { value: 5, label: '5 Pas' },
+                  { value: 10, label: '10 Pas' },
+                ].map(opt => (
+                  <button
+                    key={opt.value}
+                    onClick={() => setPassLimit(opt.value)}
+                    className={`py-3 rounded-xl border-2 text-xs font-black uppercase tracking-wider transition-all cursor-pointer active:scale-95 ${
+                      passLimit === opt.value
+                        ? 'bg-teal-50 dark:bg-teal-950/30 border-teal-500 text-teal-600 dark:text-teal-400 shadow-md shadow-teal-500/10 scale-[1.03]'
+                        : 'bg-white/40 dark:bg-slate-800/40 border-slate-200/60 dark:border-slate-700/40 text-slate-400 dark:text-slate-500 hover:border-slate-300 dark:hover:border-slate-600'
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
               </div>
             </div>
 
