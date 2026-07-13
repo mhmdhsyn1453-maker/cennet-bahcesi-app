@@ -29,7 +29,7 @@ import { WordSearchGame } from './games/WordSearchGame';
 import { MillionaireQuizGame } from './games/MillionaireQuizGame';
 import { ChronologyGame } from './games/ChronologyGame';
 import { SoruCarkiGame } from './games/SoruCarkiGame';
-import { MazeRunnerGame } from './games/MazeRunnerGame';
+import { TabooGame } from './games/TabooGame';
 // Preset Takım Verileri (Akıllı Tahta uyumlu çocuk dostu renk ve ikonlarla)
 const TEAM_PRESETS = [
   { name: 'Endülüs Yıldızları', color: 'from-amber-400 to-orange-500', bgBorder: 'border-amber-400/50', textColor: 'text-amber-500', shadowColor: 'shadow-amber-500/20', icon: 'Star' },
@@ -199,8 +199,7 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
     { id: 'millionaire_quiz', title: 'Kim Milyoner Olmak İster?', desc: 'Zorluk seviyesine göre artan 15 soruluk dini bilgi yarışması merdiveni.', icon: <Trophy className="w-8 h-8 text-yellow-500" />, comingSoon: false },
     { id: 'chronology', title: 'Zaman Şeridi', desc: 'Dini olayları, ibadet aşamalarını ve peygamberler sıralamasını doğru sırayla diz.', icon: <Clock className="w-8 h-8 text-violet-500" />, comingSoon: false },
     { id: 'wheel_of_wisdom', title: 'Soru Çarkı', desc: 'Çarkıfeleği çevir, gelen kategorideki soruları doğru bilerek puanları topla.', icon: <Settings className="w-8 h-8 text-purple-500" />, comingSoon: false },
-    { id: 'maze_runner', title: 'Hazine Labirenti (Maze Quiz)', desc: 'Karakterini labirentte gezdir, doğru kapıya ulaşırken engelleri aş.', icon: <Compass className="w-8 h-8 text-emerald-600" />, comingSoon: false },
-    { id: 'taboo_terms', title: 'Dini Terim Kartları (Tabu)', desc: 'Yasaklı kelimeleri kullanmadan gizli terimi arkadaşlarına anlat.', icon: <Users className="w-8 h-8 text-teal-600" />, comingSoon: false },
+    { id: 'taboo_terms', title: 'Tabu', desc: 'Yasaklı kelimeleri kullanmadan gizli terimi arkadaşlarına anlat.', icon: <Users className="w-8 h-8 text-teal-600" />, comingSoon: false },
     { id: 'pair_matching', title: 'Eşini Bul (Kelime Eşleme)', desc: 'Kavramları sürükleyip ilgili oldukları başlıklarla eşleştir.', icon: <Trophy className="w-8 h-8 text-amber-500" />, comingSoon: false }
   ];
 
@@ -627,13 +626,13 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
               {activeGame.id === 'wheel_of_wisdom' && (
                 <SoruCarkiGame isDarkMode={isDarkMode} />
               )}
-               {activeGame.id === 'maze_runner' && (
-                <MazeRunnerGame isDarkMode={isDarkMode} />
+              {activeGame.id === 'taboo_terms' && (
+                <TabooGame isDarkMode={isDarkMode} />
               )}
-              {['taboo_terms', 'pair_matching', 'jeopardy_conquest', 'tug_of_war', 'word_bomb', 'buzzer_duel', 'chest_guardian', 'heaven_path'].includes(activeGame.id) && (
+              {['pair_matching', 'jeopardy_conquest', 'tug_of_war', 'word_bomb', 'buzzer_duel', 'chest_guardian', 'heaven_path'].includes(activeGame.id) && (
                 <ComingSoonGame title={activeGame.title} isDarkMode={isDarkMode} />
               )}
-              {!['az_passaparola', 'mosque_hangman', 'memory_match', 'millionaire_quiz', 'word_search', 'chronology', 'wheel_of_wisdom', 'maze_runner', 'taboo_terms', 'pair_matching', 'jeopardy_conquest', 'tug_of_war', 'word_bomb', 'buzzer_duel', 'chest_guardian', 'heaven_path'].includes(activeGame.id) && (
+              {!['az_passaparola', 'mosque_hangman', 'memory_match', 'millionaire_quiz', 'word_search', 'chronology', 'wheel_of_wisdom', 'taboo_terms', 'pair_matching', 'jeopardy_conquest', 'tug_of_war', 'word_bomb', 'buzzer_duel', 'chest_guardian', 'heaven_path'].includes(activeGame.id) && (
                 <div className="text-center flex flex-col items-center">
                   <div className="w-32 h-32 mb-4">
                     {titleAnimation && (

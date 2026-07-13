@@ -594,45 +594,45 @@ export default function App() {
                 ELİF-BA  •  KUR'AN-I KERİM  •  EZBER  •  DERSLER  •  OYUNLAR  •  İLAHİLER
               </p>
             </div>
+          </div>
 
-            {/* Audio & Visual Controllers - inside card */}
-            <div className="mt-4 flex gap-3 justify-center relative z-10">
-              <button
-                onClick={(e) => togglePlayMusic(e)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-black tracking-wide uppercase transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-sm border-2 ${isMusicPlaying
-                  ? 'bg-emerald-500 hover:bg-emerald-600 text-white border-emerald-600 animate-pulse'
-                  : 'bg-white/80 dark:bg-slate-700/80 hover:bg-slate-50 dark:hover:bg-slate-600 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-600'
-                  }`}
-              >
-                {isMusicPlaying ? (
-                  <>
-                    <VolumeX className="w-4 h-4 animate-bounce" />
-                    Sesi Durdur
-                  </>
-                ) : (
-                  <>
-                    <Volume2 className="w-4 h-4" />
-                    Sesi Dinle
-                  </>
-                )}
-              </button>
-              <button
-                onClick={toggleAnimatedBg}
-                className="flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-black tracking-wide uppercase transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-sm border-2 bg-white/80 dark:bg-slate-700/80 hover:bg-slate-50 dark:hover:bg-slate-600 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-600"
-              >
-                {isAnimatedBg ? (
-                  <>
-                    <EyeOff className="w-4 h-4" />
-                    Arka Planı Sabitle
-                  </>
-                ) : (
-                  <>
-                    <Eye className="w-4 h-4" />
-                    Arka Planı Hareketlendir
-                  </>
-                )}
-              </button>
-            </div>
+          {/* Audio & Visual Controllers - separated from card, right below it */}
+          <div className="mt-4 flex gap-3 justify-center relative z-10">
+            <button
+              onClick={(e) => togglePlayMusic(e)}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-black tracking-wide uppercase transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-sm border-2 ${isMusicPlaying
+                ? 'bg-emerald-500 hover:bg-emerald-600 text-white border-emerald-600 animate-pulse'
+                : 'bg-white/80 dark:bg-slate-700/80 hover:bg-slate-50 dark:hover:bg-slate-600 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-600'
+                }`}
+            >
+              {isMusicPlaying ? (
+                <>
+                  <VolumeX className="w-4 h-4 animate-bounce" />
+                  Sesi Durdur
+                </>
+              ) : (
+                <>
+                  <Volume2 className="w-4 h-4" />
+                  Sesi Dinle
+                </>
+              )}
+            </button>
+            <button
+              onClick={toggleAnimatedBg}
+              className="flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-black tracking-wide uppercase transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-sm border-2 bg-white/80 dark:bg-slate-700/80 hover:bg-slate-50 dark:hover:bg-slate-600 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-600"
+            >
+              {isAnimatedBg ? (
+                <>
+                  <EyeOff className="w-4 h-4" />
+                  Arka Planı Sabitle
+                </>
+              ) : (
+                <>
+                  <Eye className="w-4 h-4" />
+                  Arka Planı Hareketlendir
+                </>
+              )}
+            </button>
           </div>
         </div>
 
@@ -1089,22 +1089,35 @@ export default function App() {
               playBackgroundMusic(35);
             }
           }}
-          className="fixed bottom-[20%] left-1/2 -translate-x-1/2 z-[99999] flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-white/20 dark:bg-slate-900/40 backdrop-blur-md border border-white/30 dark:border-slate-700/50 text-slate-800 dark:text-slate-200 text-xs font-black tracking-widest uppercase hover:bg-white/35 dark:hover:bg-slate-800/50 hover:border-emerald-450 dark:hover:border-emerald-500 transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-md select-none animate-fade-in"
+          className="fixed bottom-[20%] left-1/2 -translate-x-1/2 z-[99999] flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-white/20 dark:bg-slate-900/40 backdrop-blur-md border border-white/30 dark:border-slate-700/50 text-slate-800 dark:text-slate-200 text-xs font-black tracking-widest uppercase hover:bg-white/35 dark:hover:bg-slate-800/50 hover:border-emerald-500 dark:hover:border-emerald-500 transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-md select-none animate-fade-in"
         >
           <span>Girişi Atla</span>
           <span className="text-sm font-normal">➔</span>
         </button>
       )}
 
-      {/* Premium Top Right Control Panel on Homepage */}
+      {/* Premium Right Control Panel on Homepage */}
       {activeTab === 'home' && phase !== 'gameplay' && phase !== 'victory' && phase !== 'custom_editor' && (
         <div
-          className={`fixed top-6 right-6 z-50 flex items-center gap-3.5 transition-all duration-700 ease-in-out ${cinematicPhase === 'ready'
+          className={`fixed top-6 right-6 z-50 flex flex-col gap-3.5 transition-all duration-700 ease-in-out ${cinematicPhase === 'ready'
             ? 'opacity-100 translate-y-0 pointer-events-auto'
             : 'opacity-0 -translate-y-6 pointer-events-none'
             }`}
           id="homepage-control-dock"
         >
+          {/* Info & About Button */}
+          <button
+            onClick={() => { setActiveTab('about'); setPhase('map'); setActiveZone(null); setIsFocused(false); }}
+            className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 ${activeTab === 'about'
+              ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/20'
+              : 'bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)]'
+              }`}
+            title="Hakkımızda & Dua Talebi"
+          >
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <img src="/assets/logo.png" alt="Logo" className="w-12 h-12 object-contain relative z-10 group-hover:scale-110 transition-transform duration-300" />
+          </button>
+
           {/* Theme Toggle Button */}
           <button
             onClick={toggleDarkMode}
@@ -1117,18 +1130,6 @@ export default function App() {
             ) : (
               <Moon className="w-5.5 h-5.5 text-indigo-600 group-hover:-rotate-12 transition-transform duration-500" />
             )}
-          </button>
-
-          <button
-            onClick={() => { setActiveTab('about'); setPhase('map'); setActiveZone(null); setIsFocused(false); }}
-            className={`group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 ${activeTab === 'about'
-              ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/20'
-              : 'bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.06)]'
-              }`}
-            title="Hakkımızda & Dua Talebi"
-          >
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-            <img src="/assets/logo.png" alt="Logo" className="w-12 h-12 object-contain relative z-10 group-hover:scale-110 transition-transform duration-300" />
           </button>
 
           {/* Fullscreen Toggle Button */}
@@ -1309,7 +1310,7 @@ export default function App() {
       {/* 2. Main Content Flow */}
       <main className={`flex-1 py-6 flex flex-col justify-center relative z-10 transition-all ${isFocused
         ? 'p-0'
-        : (phase !== 'gameplay' && phase !== 'victory' && phase !== 'custom_editor'
+        : (phase !== 'gameplay' && phase !== 'victory' && phase !== 'custom_editor' && activeTab !== 'home'
           ? 'pl-20 pr-4 sm:pl-24 sm:pr-6'
           : 'px-4 sm:px-6')
         } transition-opacity duration-[1500ms] ease-in-out ${cinematicPhase === 'ready' ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
