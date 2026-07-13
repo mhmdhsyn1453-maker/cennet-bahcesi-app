@@ -76,12 +76,10 @@ export function filterUnusedQuestions(questions: UnifiedQuizQuestion[]): Unified
 
 const ComingSoonGame: React.FC<{ title: string; isDarkMode: boolean }> = ({ title, isDarkMode }) => {
   return (
-    <div className={`w-full max-w-md mx-auto text-center p-8 border-3 rounded-[2.5rem] shadow-2xl flex flex-col items-center gap-5 relative overflow-hidden ${
-      isDarkMode ? 'bg-[#1e293b] border-indigo-500/50 text-white' : 'bg-white border-indigo-400 text-slate-800'
-    }`}>
-      <div className={`w-20 h-20 rounded-full flex items-center justify-center shrink-0 animate-bounce ${
-        isDarkMode ? 'bg-indigo-500/20 border border-indigo-500/50 text-indigo-400' : 'bg-indigo-55 border border-indigo-200 text-indigo-600'
+    <div className={`w-full max-w-md mx-auto text-center p-8 border-3 rounded-[2.5rem] shadow-2xl flex flex-col items-center gap-5 relative overflow-hidden ${isDarkMode ? 'bg-[#1e293b] border-indigo-500/50 text-white' : 'bg-white border-indigo-400 text-slate-800'
       }`}>
+      <div className={`w-20 h-20 rounded-full flex items-center justify-center shrink-0 animate-bounce ${isDarkMode ? 'bg-indigo-500/20 border border-indigo-500/50 text-indigo-400' : 'bg-indigo-55 border border-indigo-200 text-indigo-600'
+        }`}>
         🚀
       </div>
       <h3 className={`text-2xl font-black uppercase tracking-tight ${isDarkMode ? 'text-indigo-300' : 'text-indigo-600'}`}>
@@ -199,8 +197,7 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
     { id: 'millionaire_quiz', title: 'Kim Milyoner Olmak İster?', desc: 'Zorluk seviyesine göre artan 15 soruluk dini bilgi yarışması merdiveni.', icon: <Trophy className="w-8 h-8 text-yellow-500" />, comingSoon: false },
     { id: 'chronology', title: 'Zaman Şeridi', desc: 'Dini olayları, ibadet aşamalarını ve peygamberler sıralamasını doğru sırayla diz.', icon: <Clock className="w-8 h-8 text-violet-500" />, comingSoon: false },
     { id: 'wheel_of_wisdom', title: 'Soru Çarkı', desc: 'Çarkıfeleği çevir, gelen kategorideki soruları doğru bilerek puanları topla.', icon: <Settings className="w-8 h-8 text-purple-500" />, comingSoon: false },
-    { id: 'taboo_terms', title: 'Tabu', desc: 'Yasaklı kelimeleri kullanmadan gizli terimi arkadaşlarına anlat.', icon: <Users className="w-8 h-8 text-teal-600" />, comingSoon: false },
-    { id: 'pair_matching', title: 'Eşini Bul (Kelime Eşleme)', desc: 'Kavramları sürükleyip ilgili oldukları başlıklarla eşleştir.', icon: <Trophy className="w-8 h-8 text-amber-500" />, comingSoon: false }
+    { id: 'taboo_terms', title: 'Tabu', desc: 'Yasaklı kelimeleri kullanmadan gizli terimi arkadaşlarına anlat.', icon: <Users className="w-8 h-8 text-teal-600" />, comingSoon: false }
   ];
 
   // Takım Oyun Listesi Tanımı
@@ -228,9 +225,6 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
               <h2 className="font-display font-black text-2xl tracking-normal uppercase">
                 CENNET BAHÇESİ OYUN MERKEZİ
               </h2>
-              <p className="text-xs font-semibold text-white/90">
-                Çevrimdışı İnteraktif Eğlence Portalı • <span className="text-yellow-300 font-extrabold">{quizQuestions.length + 200} Soru & Kelime Havuzu İle...</span>
-              </p>
             </div>
           </div>
           {view !== 'mode_select' && (
@@ -295,7 +289,7 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
 
                 <div className="mt-8 flex justify-between items-center z-10">
                   <div className="px-3.5 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200/50 dark:border-slate-700/55 text-slate-555 dark:text-slate-400">
-                    🎮 12 Farklı Oyun
+                    🎮 8 Farklı Oyun
                   </div>
                   <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest bg-gradient-to-r from-sky-500 to-indigo-650 text-white px-4 py-2 rounded-xl shadow-md hover:scale-105 active:scale-95 transition-all">
                     Başla ➔
@@ -348,9 +342,8 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
             {INDIVIDUAL_GAMES.map((game) => (
               <div
                 key={game.id}
-                className={`group text-left bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 border-4 rounded-[2.2rem] p-6 shadow-md relative overflow-hidden flex flex-col justify-between transition-all duration-300 border-slate-200 dark:border-slate-700 hover:border-sky-500 dark:hover:border-sky-500 hover:scale-[1.03] hover:shadow-xl ${
-                  game.comingSoon ? 'opacity-65' : ''
-                }`}
+                className={`group text-left bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 border-4 rounded-[2.2rem] p-6 shadow-md relative overflow-hidden flex flex-col justify-between transition-all duration-300 border-slate-200 dark:border-slate-700 hover:border-sky-500 dark:hover:border-sky-500 hover:scale-[1.03] hover:shadow-xl ${game.comingSoon ? 'opacity-65' : ''
+                  }`}
               >
                 {/* Decorative floating shape */}
                 <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-sky-500/5 dark:bg-sky-500/10 rounded-full blur-xl group-hover:scale-130 transition-all duration-500"></div>
@@ -414,8 +407,8 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
                     key={count}
                     onClick={() => setTeamCount(count)}
                     className={`flex flex-col items-center justify-center p-4 rounded-2xl border-3 transition-all cursor-pointer ${teamCount === count
-                        ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-500 text-emerald-900 dark:text-emerald-400 shadow-md scale-[1.02]'
-                        : 'bg-slate-50 dark:bg-slate-900/50 border-slate-200 dark:border-slate-750 text-slate-400 dark:text-slate-550 hover:border-slate-350 dark:hover:border-slate-600'
+                      ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-500 text-emerald-900 dark:text-emerald-400 shadow-md scale-[1.02]'
+                      : 'bg-slate-50 dark:bg-slate-900/50 border-slate-200 dark:border-slate-750 text-slate-400 dark:text-slate-550 hover:border-slate-350 dark:hover:border-slate-600'
                       }`}
                   >
                     <span className="text-3xl font-display font-black mb-1">{count}</span>
@@ -516,9 +509,8 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
               {TEAM_GAMES.map((game) => (
                 <div
                   key={game.id}
-                  className={`group text-left bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 border-4 rounded-[2.2rem] p-6 shadow-md relative overflow-hidden flex flex-col justify-between transition-all duration-300 border-slate-200 dark:border-slate-700 hover:border-emerald-500 dark:hover:border-emerald-500 hover:scale-[1.03] hover:shadow-xl ${
-                    game.comingSoon ? 'opacity-65' : ''
-                  }`}
+                  className={`group text-left bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 border-4 rounded-[2.2rem] p-6 shadow-md relative overflow-hidden flex flex-col justify-between transition-all duration-300 border-slate-200 dark:border-slate-700 hover:border-emerald-500 dark:hover:border-emerald-500 hover:scale-[1.03] hover:shadow-xl ${game.comingSoon ? 'opacity-65' : ''
+                    }`}
                 >
                   {/* Decorative floating shape */}
                   <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-emerald-500/5 dark:bg-emerald-500/10 rounded-full blur-xl group-hover:scale-130 transition-all duration-500"></div>
@@ -608,18 +600,18 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
               {activeGame.id === 'mosque_hangman' && (
                 <MosqueHangmanGame isDarkMode={isDarkMode} />
               )}
-              
+
               {activeGame.id === 'memory_match' && (
                 <MemoryMatchGame isDarkMode={isDarkMode} />
               )}
-              
+
               {activeGame.id === 'millionaire_quiz' && (
                 <MillionaireQuizGame isDarkMode={isDarkMode} />
               )}
               {activeGame.id === 'word_search' && (
                 <WordSearchGame isDarkMode={isDarkMode} />
               )}
-              
+
               {activeGame.id === 'chronology' && (
                 <ChronologyGame isDarkMode={isDarkMode} />
               )}
@@ -629,10 +621,10 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
               {activeGame.id === 'taboo_terms' && (
                 <TabooGame isDarkMode={isDarkMode} />
               )}
-              {['pair_matching', 'jeopardy_conquest', 'tug_of_war', 'word_bomb', 'buzzer_duel', 'chest_guardian', 'heaven_path'].includes(activeGame.id) && (
+              {['jeopardy_conquest', 'tug_of_war', 'word_bomb', 'buzzer_duel', 'chest_guardian', 'heaven_path'].includes(activeGame.id) && (
                 <ComingSoonGame title={activeGame.title} isDarkMode={isDarkMode} />
               )}
-              {!['az_passaparola', 'mosque_hangman', 'memory_match', 'millionaire_quiz', 'word_search', 'chronology', 'wheel_of_wisdom', 'taboo_terms', 'pair_matching', 'jeopardy_conquest', 'tug_of_war', 'word_bomb', 'buzzer_duel', 'chest_guardian', 'heaven_path'].includes(activeGame.id) && (
+              {!['az_passaparola', 'mosque_hangman', 'memory_match', 'millionaire_quiz', 'word_search', 'chronology', 'wheel_of_wisdom', 'taboo_terms', 'jeopardy_conquest', 'tug_of_war', 'word_bomb', 'buzzer_duel', 'chest_guardian', 'heaven_path'].includes(activeGame.id) && (
                 <div className="text-center flex flex-col items-center">
                   <div className="w-32 h-32 mb-4">
                     {titleAnimation && (
@@ -658,8 +650,8 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
                     <div
                       key={team.id}
                       className={`p-3 rounded-2xl border-2 bg-white dark:bg-slate-850 shadow-sm flex items-center justify-between transition-all ${team.active
-                          ? 'border-emerald-500 ring-3 ring-emerald-100 dark:ring-emerald-950/20'
-                          : 'border-slate-200 dark:border-slate-750'
+                        ? 'border-emerald-500 ring-3 ring-emerald-100 dark:ring-emerald-950/20'
+                        : 'border-slate-200 dark:border-slate-750'
                         }`}
                     >
                       <div className="flex items-center gap-2">
@@ -738,14 +730,14 @@ const MemoryMatchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
   // Oyunu Başlat
   const handleStart = () => {
     playSound('complete');
-    
+
     // Zorluğa göre kelime sayısı (easy=5, medium=8, hard=10)
     const wordCount = difficulty === 'easy' ? 5 : difficulty === 'medium' ? 8 : 10;
-    
+
     // HANGMAN_QUESTIONS_DB havuzundan rastgele benzersiz kelimeler seçelim
     const shuffledDB = shuffleArray(MEMORY_MATCH_QUESTIONS_DB);
     const list = shuffledDB.slice(0, wordCount);
-    
+
     const generated: MemoryCard[] = [];
     list.forEach((item) => {
       generated.push({
@@ -857,11 +849,10 @@ const MemoryMatchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                   <button
                     key={level}
                     onClick={() => setDifficulty(level)}
-                    className={`flex flex-col items-center justify-center p-3 rounded-2xl border-3 transition-all cursor-pointer ${
-                      active
-                        ? 'bg-indigo-50 dark:bg-indigo-950/20 border-indigo-500 text-indigo-900 dark:text-indigo-400 shadow-md scale-[1.02]'
-                        : 'bg-slate-50 dark:bg-slate-900/50 border-slate-200 dark:border-slate-800 text-slate-450 dark:text-slate-500 hover:border-slate-350 dark:hover:border-slate-650'
-                    }`}
+                    className={`flex flex-col items-center justify-center p-3 rounded-2xl border-3 transition-all cursor-pointer ${active
+                      ? 'bg-indigo-50 dark:bg-indigo-950/20 border-indigo-500 text-indigo-900 dark:text-indigo-400 shadow-md scale-[1.02]'
+                      : 'bg-slate-50 dark:bg-slate-900/50 border-slate-200 dark:border-slate-800 text-slate-450 dark:text-slate-500 hover:border-slate-350 dark:hover:border-slate-650'
+                      }`}
                   >
                     <span className="text-sm font-black tracking-tight">{label}</span>
                     <span className="text-[9px] font-bold opacity-80 mt-0.5">{countText}</span>
@@ -890,9 +881,8 @@ const MemoryMatchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
           </div>
 
           {/* Kartlar Grid Alanı */}
-          <div className={`w-full max-w-4xl grid gap-4 py-2 ${
-            difficulty === 'medium' ? 'grid-cols-2 md:grid-cols-4' : 'grid-cols-2 md:grid-cols-5'
-          }`}>
+          <div className={`w-full max-w-4xl grid gap-4 py-2 ${difficulty === 'medium' ? 'grid-cols-2 md:grid-cols-4' : 'grid-cols-2 md:grid-cols-5'
+            }`}>
             {cards.map((card, idx) => {
               const showContent = card.isFlipped || card.isMatched;
               return (
@@ -900,21 +890,19 @@ const MemoryMatchGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                   key={card.id}
                   onClick={() => handleCardClick(idx)}
                   disabled={card.isMatched}
-                  className={`min-h-[8rem] rounded-2xl border-3 flex flex-col items-center justify-center p-3.5 text-center transition-all duration-300 relative w-full ${
-                    card.isMatched
-                      ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-500 text-emerald-700 dark:text-emerald-400 opacity-80 scale-95'
-                      : showContent
-                        ? 'bg-white dark:bg-slate-800 border-indigo-500 text-slate-800 dark:text-white scale-102 shadow-md'
-                        : 'bg-gradient-to-br from-indigo-500 to-violet-650 border-indigo-400 text-white hover:scale-[1.03] active:scale-97 cursor-pointer shadow-lg'
-                  }`}
+                  className={`min-h-[8rem] rounded-2xl border-3 flex flex-col items-center justify-center p-3.5 text-center transition-all duration-300 relative w-full ${card.isMatched
+                    ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-500 text-emerald-700 dark:text-emerald-400 opacity-80 scale-95'
+                    : showContent
+                      ? 'bg-white dark:bg-slate-800 border-indigo-500 text-slate-800 dark:text-white scale-102 shadow-md'
+                      : 'bg-gradient-to-br from-indigo-500 to-violet-650 border-indigo-400 text-white hover:scale-[1.03] active:scale-97 cursor-pointer shadow-lg'
+                    }`}
                 >
                   {showContent ? (
                     <div className="flex flex-col gap-2 justify-center items-center h-full">
-                      <span className={`font-display font-black text-xs uppercase tracking-wide leading-tight ${
-                        card.type === 'word' 
-                          ? 'text-indigo-600 dark:text-indigo-400 underline decoration-2 decoration-indigo-400/50' 
-                          : 'text-[10px] text-slate-600 dark:text-slate-350 leading-snug font-semibold'
-                      }`}>
+                      <span className={`font-display font-black text-xs uppercase tracking-wide leading-tight ${card.type === 'word'
+                        ? 'text-indigo-600 dark:text-indigo-400 underline decoration-2 decoration-indigo-400/50'
+                        : 'text-[10px] text-slate-600 dark:text-slate-350 leading-snug font-semibold'
+                        }`}>
                         {card.content}
                       </span>
                       {card.isMatched && (
@@ -1489,8 +1477,8 @@ const TugOfWarGame: React.FC<TugOfWarGameProps> = ({ isDarkMode, teams, setTeams
                     <div
                       key={pos}
                       className={`w-6 h-6 rounded-full flex items-center justify-center text-[8px] font-black transition-all ${isCurrent
-                          ? 'bg-rose-500 text-white scale-125 ring-4 ring-rose-300 dark:ring-rose-800 animate-bounce'
-                          : 'bg-slate-200 dark:bg-slate-800 text-slate-500'
+                        ? 'bg-rose-500 text-white scale-125 ring-4 ring-rose-300 dark:ring-rose-800 animate-bounce'
+                        : 'bg-slate-200 dark:bg-slate-800 text-slate-500'
                         }`}
                     >
                       {pos === 0 ? '🚩' : isCurrent ? '🔴' : '•'}
@@ -1535,10 +1523,10 @@ const TugOfWarGame: React.FC<TugOfWarGameProps> = ({ isDarkMode, teams, setTeams
                     key={opt}
                     onClick={() => playSound('tick')}
                     className={`p-4 text-left rounded-2xl border-2 text-xs font-bold leading-normal transition-all hover:scale-102 flex gap-3 items-center ${showReveal
-                        ? isCorrectOpt
-                          ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-500 text-emerald-700 dark:text-emerald-450 ring-2 ring-emerald-300'
-                          : 'bg-slate-55 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-400 opacity-60'
-                        : 'bg-slate-50 hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-750 border-slate-200 dark:border-slate-700 text-slate-850 dark:text-white cursor-pointer'
+                      ? isCorrectOpt
+                        ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-500 text-emerald-700 dark:text-emerald-450 ring-2 ring-emerald-300'
+                        : 'bg-slate-55 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-400 opacity-60'
+                      : 'bg-slate-50 hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-750 border-slate-200 dark:border-slate-700 text-slate-850 dark:text-white cursor-pointer'
                       }`}
                   >
                     <span className="w-6 h-6 rounded-lg bg-indigo-500 text-white font-black text-[10px] flex items-center justify-center shrink-0">
@@ -1844,10 +1832,10 @@ const WordBombGame: React.FC<WordBombGameProps> = ({ isDarkMode, teams, setTeams
                 <div
                   key={team.id}
                   className={`p-3.5 rounded-2xl border-2 text-center transition-all ${isEliminated
-                      ? 'bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800 opacity-40 line-through text-slate-400'
-                      : idx === activeTeamIdx
-                        ? 'border-red-500 bg-red-50/20 ring-3 ring-red-150 dark:ring-red-950/20 text-slate-800 dark:text-white font-black'
-                        : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white'
+                    ? 'bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800 opacity-40 line-through text-slate-400'
+                    : idx === activeTeamIdx
+                      ? 'border-red-500 bg-red-50/20 ring-3 ring-red-150 dark:ring-red-950/20 text-slate-800 dark:text-white font-black'
+                      : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white'
                     }`}
                 >
                   <span className="text-[10px] font-black uppercase tracking-wider block">{team.name}</span>
@@ -2069,10 +2057,10 @@ const BuzzerDuelGame: React.FC<BuzzerDuelGameProps> = ({ isDarkMode, teams, setT
                   <div
                     key={opt}
                     className={`p-3.5 rounded-2xl border text-xs font-semibold leading-normal flex gap-3 items-center ${showReveal
-                        ? isCorrectOpt
-                          ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-400 text-emerald-700 dark:text-emerald-450 ring-2 ring-emerald-300'
-                          : 'bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-400 opacity-60'
-                        : 'bg-slate-50/50 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-350'
+                      ? isCorrectOpt
+                        ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-400 text-emerald-700 dark:text-emerald-450 ring-2 ring-emerald-300'
+                        : 'bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-400 opacity-60'
+                      : 'bg-slate-50/50 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-350'
                       }`}
                   >
                     <span className="w-5 h-5 rounded bg-indigo-500 text-white font-black text-[9px] flex items-center justify-center shrink-0">
@@ -2213,388 +2201,6 @@ interface ChainLevel {
   correctAnswers: string[];
 }
 
-interface TabooCard {
-  word: string;
-  forbidden: string[];
-}
-
-const TabooTermsGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
-  const [gameStatus, setGameStatus] = useState<'intro' | 'playing' | 'ended'>('intro');
-  const [cards, setCards] = useState<TabooCard[]>([]);
-  const [currentIdx, setCurrentIdx] = useState<number>(0);
-  const [timer, setTimer] = useState<number>(60);
-  const [score, setScore] = useState<number>(0);
-  const [tabooCount, setTabooCount] = useState<number>(0);
-  const [correctCount, setCorrectCount] = useState<number>(0);
-
-  const cardPool: TabooCard[] = [
-    { word: "NAMAZ", forbidden: ["KILMAK", "SECCADE", "İBADET"] },
-    { word: "ZEKAT", forbidden: ["PARA", "FAKİR", "YILDA BİR"] },
-    { word: "KABE", forbidden: ["MEKKE", "HAC", "KIBLE"] },
-    { word: "ORUÇ", forbidden: ["YEMEK", "SAHUR", "RAMAZAN"] },
-    { word: "ABDEST", forbidden: ["SU", "YIKAMAK", "NAMAZ"] }
-  ];
-
-  useEffect(() => {
-    if (gameStatus !== 'playing') return;
-
-    const interval = setInterval(() => {
-      setTimer(prev => {
-        if (prev <= 1) {
-          clearInterval(interval);
-          playSound('complete');
-          setGameStatus('ended');
-          return 0;
-        }
-        if (prev <= 5) playSound('tick');
-        return prev - 1;
-      });
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [gameStatus]);
-
-  const handleStart = () => {
-    playSound('complete');
-    // Kartları karıştır
-    const shuffled = shuffleArray(cardPool);
-    setCards(shuffled);
-    setCurrentIdx(0);
-    setTimer(60);
-    setScore(0);
-    setTabooCount(0);
-    setCorrectCount(0);
-    setGameStatus('playing');
-  };
-
-  const handleCorrect = () => {
-    playSound('success');
-    setScore(prev => prev + 100);
-    setCorrectCount(prev => prev + 1);
-    nextCard();
-  };
-
-  const handleTaboo = () => {
-    playSound('fail');
-    setScore(prev => Math.max(0, prev - 20));
-    setTabooCount(prev => prev + 1);
-    nextCard();
-  };
-
-  const nextCard = () => {
-    if (currentIdx + 1 < cards.length) {
-      setCurrentIdx(prev => prev + 1);
-    } else {
-      playSound('complete');
-      setGameStatus('ended');
-    }
-  };
-
-  const currentCard = cards[currentIdx];
-
-  return (
-    <div className="w-full flex flex-col items-center gap-6">
-      {gameStatus === 'intro' && (
-        <div className="text-center flex flex-col items-center py-6">
-          <Users className="w-20 h-20 text-teal-500 mb-4 animate-bounce" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase">
-            Dini Terim Kartları (Tabu)
-          </h3>
-          <p className="text-xs text-slate-555 dark:text-slate-400 mt-2 max-w-md leading-relaxed">
-            Arkadaşlarınıza en üstteki kelimeyi altındaki 3 yasaklı kelimeyi kullanmadan anlatın! <br />
-            **60 saniye** içinde olabildiğince çok kelime anlatmaya çalışın.
-          </p>
-          <button
-            onClick={handleStart}
-            className="mt-6 px-10 py-3.5 bg-gradient-to-r from-teal-500 to-emerald-500 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-lg hover:shadow-teal-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yarışmayı Başlat! ➔
-          </button>
-        </div>
-      )}
-
-      {gameStatus === 'playing' && currentCard && (
-        <div className="w-full max-w-sm bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-
-          <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
-            <span>Süre: {timer}s</span>
-            <span>Skor: {score} Puan</span>
-          </div>
-
-          {/* Tabu Kartı Tasarımı */}
-          <div className="w-full bg-gradient-to-b from-teal-50 to-white dark:from-slate-900 dark:to-slate-850 border-3 border-teal-500 p-6 rounded-3xl flex flex-col items-center gap-4 shadow-md text-center">
-            <span className="text-[9px] font-black text-teal-600 dark:text-teal-450 tracking-widest uppercase">ANLATILACAK KELİME</span>
-            <span className="text-3xl font-display font-black text-teal-650 dark:text-teal-400 tracking-wider">
-              {currentCard.word}
-            </span>
-
-            <div className="w-full h-px bg-teal-200 dark:bg-teal-900/60 my-2" />
-
-            <span className="text-[9px] font-black text-rose-500 tracking-widest uppercase">YASAKLI KELİMELER</span>
-            <div className="flex flex-col gap-2 w-full">
-              {currentCard.forbidden.map(word => (
-                <div key={word} className="py-2.5 bg-rose-50/50 dark:bg-rose-950/20 border border-rose-150 dark:border-rose-900/50 rounded-xl text-xs font-black text-rose-700 dark:text-rose-400 uppercase tracking-wider">
-                  {word}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Aksiyon Butonları */}
-          <div className="grid grid-cols-2 gap-4 w-full">
-            <button
-              onClick={handleTaboo}
-              className="py-4 bg-gradient-to-r from-rose-550 to-red-550 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow hover:scale-105 active:scale-95 transition-all cursor-pointer"
-            >
-              TABU / PAS 🚫
-            </button>
-            <button
-              onClick={handleCorrect}
-              className="py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow hover:scale-105 active:scale-95 transition-all cursor-pointer"
-            >
-              DOĞRU ✔️
-            </button>
-          </div>
-
-        </div>
-      )}
-
-      {gameStatus === 'ended' && (
-        <div className="text-center flex flex-col items-center py-6 w-full max-w-md bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-xl animate-scale-up">
-          <Trophy className="w-16 h-16 text-yellow-500 animate-bounce mb-3" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">
-            Süre Bitti!
-          </h3>
-          <p className="text-xs text-slate-550 mt-2">
-            Harika anlattınız! İşte skor özetiniz:
-          </p>
-
-          <div className="w-full flex flex-col gap-3 my-5 p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl text-left text-xs font-bold text-slate-600 dark:text-slate-400">
-            <div className="flex justify-between">
-              <span>Doğru Kelimeler:</span>
-              <span className="text-emerald-600">{correctCount}</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Tabu/Pas Sayısı:</span>
-              <span className="text-rose-550">{tabooCount}</span>
-            </div>
-            <div className="h-px bg-slate-200 dark:bg-slate-800 my-1" />
-            <div className="flex justify-between text-sm font-black">
-              <span>TOPLAM SKOR:</span>
-              <span className="text-indigo-650 dark:text-indigo-400">{score} Puan</span>
-            </div>
-          </div>
-
-          <button
-            onClick={handleStart}
-            className="w-full py-4 bg-gradient-to-r from-teal-500 to-emerald-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:shadow-teal-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yeniden Oyna! ↩️
-          </button>
-        </div>
-      )}
-    </div>
-  );
-};
-
-// ==========================================
-// 22. INDIVIDUAL GAME 18: EŞİNİ BUL (KELİME EŞLEME)
-// ==========================================
-interface MatchItem {
-  id: string;
-  concept: string;
-  description: string;
-}
-
-const PairMatchingGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
-  const [gameStatus, setGameStatus] = useState<'intro' | 'playing' | 'ended'>('intro');
-  const [items, setItems] = useState<MatchItem[]>([]);
-  const [selectedConcept, setSelectedConcept] = useState<string | null>(null);
-  const [selectedDesc, setSelectedDesc] = useState<string | null>(null);
-  const [matchedIds, setMatchedIds] = useState<string[]>([]);
-  const [score, setScore] = useState<number>(0);
-
-  const pool: MatchItem[] = [
-    { id: "1", concept: "ZEKAT", description: "Yılda bir kez malın kırkta birini fakire vermek." },
-    { id: "2", concept: "ORUÇ", description: "İmsaktan akşama kadar ibadet amacıyla yememek." },
-    { id: "3", concept: "KABE", description: "Mekke'de bulunan Müslümanların kutsal kıblesi." },
-    { id: "4", concept: "SİYER", description: "Peygamber Efendimiz'in hayatını inceleyen dal." }
-  ];
-
-  const handleStart = () => {
-    playSound('complete');
-    setItems(pool);
-    setSelectedConcept(null);
-    setSelectedDesc(null);
-    setMatchedIds([]);
-    setScore(0);
-    setGameStatus('playing');
-  };
-
-  const handleConceptSelect = (concept: string) => {
-    if (gameStatus !== 'playing') return;
-    playSound('tick');
-    setSelectedConcept(concept);
-
-    if (selectedDesc) {
-      checkMatch(concept, selectedDesc);
-    }
-  };
-
-  const handleDescSelect = (desc: string) => {
-    if (gameStatus !== 'playing') return;
-    playSound('tick');
-    setSelectedDesc(desc);
-
-    if (selectedConcept) {
-      checkMatch(selectedConcept, desc);
-    }
-  };
-
-  const checkMatch = (concept: string, desc: string) => {
-    const itemCon = items.find(i => i.concept === concept);
-    const itemDesc = items.find(i => i.description === desc);
-
-    if (itemCon && itemDesc && itemCon.id === itemDesc.id) {
-      // Eşleşti!
-      playSound('success');
-      setMatchedIds(prev => [...prev, itemCon.id]);
-      setScore(prev => prev + 100);
-
-      // Oyun bitti mi
-      if (matchedIds.length + 1 === items.length) {
-        setTimeout(() => {
-          playSound('complete');
-          setGameStatus('ended');
-        }, 1000);
-      }
-    } else {
-      playSound('fail');
-    }
-
-    // Seçimleri temizle
-    setSelectedConcept(null);
-    setSelectedDesc(null);
-  };
-
-  return (
-    <div className="w-full flex flex-col items-center gap-6">
-      {gameStatus === 'intro' && (
-        <div className="text-center flex flex-col items-center py-6">
-          <Trophy className="w-20 h-20 text-amber-500 mb-4 animate-bounce" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase">
-            Eşini Bul (Kelime Eşleme)
-          </h3>
-          <p className="text-xs text-slate-555 dark:text-slate-400 mt-2 max-w-md leading-relaxed">
-            Soldaki dini kavramları sağdaki doğru açıklamalarıyla eşleştirin! <br />
-            Bir kavram ve bir açıklama seçtiğinizde eşleşme otomatik olarak kontrol edilecektir.
-          </p>
-          <button
-            onClick={handleStart}
-            className="mt-6 px-10 py-3.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-lg hover:shadow-amber-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yarışmayı Başlat! ➔
-          </button>
-        </div>
-      )}
-
-      {gameStatus === 'playing' && (
-        <div className="w-full max-w-3xl bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 items-center">
-
-          <div className="flex justify-between w-full text-[10px] font-black text-slate-450 uppercase tracking-widest">
-            <span>Eşleşen: {matchedIds.length} / {items.length}</span>
-            <span>Skor: {score} Puan</span>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mt-2">
-
-            {/* Sol: Kavramlar */}
-            <div className="flex flex-col gap-3">
-              <span className="text-[9px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center">KAVRAMLAR</span>
-              {items.map(item => {
-                const isMatched = matchedIds.includes(item.id);
-                const isSelected = selectedConcept === item.concept;
-
-                let borderStyle = "border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-white";
-                if (isMatched) {
-                  borderStyle = "border-emerald-500 bg-emerald-50/20 text-emerald-600 opacity-60 pointer-events-none";
-                } else if (isSelected) {
-                  borderStyle = "border-amber-500 bg-amber-50/20 text-amber-600 scale-102";
-                }
-
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => handleConceptSelect(item.concept)}
-                    disabled={isMatched}
-                    className={`py-3.5 rounded-xl border-2 font-display font-black text-xs sm:text-sm uppercase tracking-wide cursor-pointer transition-all hover:scale-102 active:scale-98 ${borderStyle}`}
-                  >
-                    {item.concept}
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Sağ: Açıklamalar (Karışık listelenmeli) */}
-            <div className="flex flex-col gap-3">
-              <span className="text-[9px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center">AÇIKLAMALAR</span>
-              {[...items].sort((a, b) => b.id.localeCompare(a.id)).map(item => {
-                const isMatched = matchedIds.includes(item.id);
-                const isSelected = selectedDesc === item.description;
-
-                let borderStyle = "border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-white";
-                if (isMatched) {
-                  borderStyle = "border-emerald-500 bg-emerald-50/20 text-emerald-600 opacity-60 pointer-events-none";
-                } else if (isSelected) {
-                  borderStyle = "border-amber-500 bg-amber-50/20 text-amber-600 scale-102";
-                }
-
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => handleDescSelect(item.description)}
-                    disabled={isMatched}
-                    className={`py-3.5 px-4 rounded-xl border-2 text-[10px] sm:text-xs font-semibold leading-normal text-left cursor-pointer transition-all hover:scale-102 active:scale-98 min-h-[58px] ${borderStyle}`}
-                  >
-                    {item.description}
-                  </button>
-                );
-              })}
-            </div>
-
-          </div>
-
-        </div>
-      )}
-
-      {gameStatus === 'ended' && (
-        <div className="text-center flex flex-col items-center py-6 w-full max-w-md bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-xl animate-scale-up">
-          <Trophy className="w-16 h-16 text-yellow-500 animate-bounce mb-3" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">
-            Harika Eşleme!
-          </h3>
-          <p className="text-xs text-slate-550 mt-2">
-            Tüm dini kavramları açıklamalarıyla doğru şekilde eşleştirdiniz!
-          </p>
-
-          <div className="w-full flex flex-col gap-2 my-5 p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl">
-            <span className="text-[10px] font-black text-slate-450 uppercase tracking-widest">TOPLAM PUAN</span>
-            <span className="text-2xl font-display font-black text-emerald-600 dark:text-emerald-450 tracking-wider mt-1">
-              {score} Puan
-            </span>
-          </div>
-
-          <button
-            onClick={handleStart}
-            className="w-full py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:shadow-amber-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yeniden Oyna! ↩️
-          </button>
-        </div>
-      )}
-    </div>
-  );
-};
 
 // ==========================================
 // 23. INDIVIDUAL GAME 19: BALON PATLATMACA
@@ -2734,8 +2340,8 @@ const ChestGuardianGame: React.FC<{
                 <div
                   key={idx}
                   className={`p-4 border-2 rounded-2xl text-center flex flex-col gap-1 shadow-sm ${active
-                      ? 'border-yellow-500 bg-yellow-50/20 dark:bg-yellow-950/20 scale-102 font-black text-yellow-650 dark:text-yellow-450 animate-pulse'
-                      : 'border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-350'
+                    ? 'border-yellow-500 bg-yellow-50/20 dark:bg-yellow-950/20 scale-102 font-black text-yellow-650 dark:text-yellow-450 animate-pulse'
+                    : 'border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-350'
                     }`}
                 >
                   <span className="text-[8px] font-black uppercase tracking-widest">TAKIM {idx + 1}</span>
