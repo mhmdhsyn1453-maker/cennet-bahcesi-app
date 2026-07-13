@@ -160,6 +160,18 @@ export default function App() {
 
     const handleFirstUserInteraction = () => {
       if (hasInteractedRef.current) return;
+
+      // Auto fullscreen on first click
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen()
+          .then(() => {
+            setIsFullscreen(true);
+          })
+          .catch(err => {
+            console.warn("Auto fullscreen failed or was blocked by browser:", err);
+          });
+      }
+
       if (cinematicPhase !== 'splash' && audioRef.current) {
         hasInteractedRef.current = true;
         playBackgroundMusic(0);
@@ -532,22 +544,21 @@ export default function App() {
       <div className="max-w-6xl mx-auto px-4 w-full relative z-10 py-3 flex flex-col justify-between min-h-[calc(100vh-12rem)]" id="home-landing-dashboard">
         {/* Premium Brand Card - matching portal card design */}
         <div className="text-center mb-4 mt-2 flex flex-col items-center select-none">
-          {/* Ayet-i Kerime */}
-          <div className="w-full max-w-lg mb-4 flex flex-col items-center gap-2 px-4">
-            <p className="font-serif text-xl sm:text-2xl leading-relaxed text-emerald-800 dark:text-emerald-300 tracking-wide" dir="rtl" lang="ar">
-              قُلْ اِنَّ صَلَاتٖي وَنُسُكٖي وَمَحْيَايَ وَمَمَاتٖي لِلّٰهِ رَبِّ الْعَالَمٖينَۙ
-            </p>
-            <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 font-semibold leading-relaxed italic max-w-md">
-              "Benim namazım, (her türlü) ibadetim, hayatım ve ölümüm, hepsi âlemlerin Rabbi olan Allah içindir."
-            </p>
-            <span className="text-[9px] font-black text-emerald-600 dark:text-emerald-500 uppercase tracking-widest mt-0.5">
-              En'âm Sûresi • 162
-            </span>
-          </div>
-
           <div className="group bg-gradient-to-br from-white to-emerald-50/40 dark:from-slate-800 dark:to-emerald-950/30 border-2 border-slate-200 dark:border-slate-700 hover:border-emerald-400 dark:hover:border-emerald-600 rounded-[1.75rem] px-6 py-6 sm:px-10 sm:py-8 shadow-lg hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-500 relative overflow-hidden max-w-lg w-full">
             {/* Subtle gradient overlay on hover */}
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-transparent dark:from-emerald-900/10 dark:to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+            {/* Ayah - En'am 162 */}
+            <div className="relative z-10 flex flex-col items-center mb-4">
+              <p className="font-serif text-xl sm:text-2xl leading-relaxed text-emerald-800 dark:text-emerald-300 text-center" dir="rtl" lang="ar">
+                قُلْ اِنَّ صَلَاتي وَنُسُكي وَمَحْيَايَ وَمَمَاتي لِلّٰهِ رَبِّ الْعَالَمينَۙ
+              </p>
+              <div className="w-16 h-px bg-emerald-500/30 dark:bg-emerald-400/30 rounded-full my-2.5" />
+              <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 font-semibold leading-relaxed text-center max-w-sm italic">
+                "Benim namazım, (her türlü) ibadetim, hayatım ve ölümüm, hepsi âlemlerin Rabbi olan Allah içindir."
+                <span className="block text-[9px] text-slate-400 dark:text-slate-500 mt-1 not-italic font-bold tracking-wide">— En'âm Sûresi, 162</span>
+              </p>
+            </div>
 
             {/* Logo Calligraphy */}
             <div className="relative z-10 flex flex-col items-center">
@@ -792,7 +803,7 @@ export default function App() {
         {/* Header Section */}
         <div className="flex flex-col items-center gap-2 text-center mt-0">
           <div className="w-24 h-24 rounded-2xl bg-white shadow-xl border border-slate-200 dark:border-slate-700 flex items-center justify-center p-2 overflow-hidden hover:scale-105 transition-transform duration-300 shrink-0">
-            <img src="assets/logo.png" alt="Cennet Bahçesi Logo" className="w-full h-full object-contain" />
+            <img src="/assets/logo.png" alt="Cennet Bahçesi Logo" className="w-full h-full object-contain" />
           </div>
           <h1 className="text-3xl sm:text-4xl font-black text-slate-800 dark:text-slate-100 font-display tracking-tight mt-2">
             Cennet Bahçesi
@@ -1045,7 +1056,7 @@ export default function App() {
 
       {/* Glassmorphic Background Video for Homepage and lessons tab fullscreen */}
       {((activeTab === 'home') || ((activeTab === 'lessons' || activeTab === 'ezber') && isFocused)) && isAnimatedBg && (
-        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-gradient-to-br from-[#f3ede2] to-[#c7b99a] dark:from-[#0d1e3d] dark:to-[#0a192f]">
           <video
             ref={videoRef}
             autoPlay
@@ -1053,7 +1064,7 @@ export default function App() {
             muted
             playsInline
             className="w-full h-full object-cover scale-102 animate-fade-in"
-            src="assets/bg-video.mp4"
+            src="/assets/bg-video.mp4"
           />
           {/* Glass blur overlay: fades out (opacity-0) when splash ends, revealing the clear video during cinematic phase */}
           <div
@@ -1117,7 +1128,7 @@ export default function App() {
             title="Hakkımızda & Dua Talebi"
           >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-            <img src="assets/logo.png" alt="Logo" className="w-12 h-12 object-contain relative z-10 group-hover:scale-110 transition-transform duration-300" />
+            <img src="/assets/logo.png" alt="Logo" className="w-12 h-12 object-contain relative z-10 group-hover:scale-110 transition-transform duration-300" />
           </button>
 
           {/* Fullscreen Toggle Button */}
@@ -1290,7 +1301,7 @@ export default function App() {
             title="Hakkımızda & Dua Talebi"
           >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-            <img src="assets/logo.png" alt="Logo" className="w-12 h-12 object-contain relative z-10 group-hover:scale-110 transition-transform duration-300 relative z-10" />
+            <img src="/assets/logo.png" alt="Logo" className="w-12 h-12 object-contain relative z-10 group-hover:scale-110 transition-transform duration-300 relative z-10" />
           </button>
         </div>
       )}

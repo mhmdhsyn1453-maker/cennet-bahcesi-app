@@ -32,9 +32,9 @@ export const EZBER_ITEMS: EzberItem[] = [
     baslik: 'Ettehiyyâtü',
     kategori: 'dualar',
     satirlar: [
-      { arapca: 'اَلتَّحِيَّاتُ لِلّٰهِ وَالصَّلَوَاتُ وَالطَّيِّbَاتُ', okunusu: 'Et-tehiyyâtü lillâhi ves-salevâtü vet-tayyibât', anlami: 'Her türlü hürmet, salavat ve bütün güzel şeyler Allah\'a mahsustur.' },
-      { arapca: 'اَلسَّلَامُ عَلَيْكَ اَيُّهَا النَّبِيُw وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُهُ', okunusu: 'Es-selâmü aleyke eyyühen-nebiyyü ve rahmetullâhi ve berekâtüh', anlami: 'Ey Peygamber! Allah\'ın selamı, rahmeti ve bereketi senin üzerine olsun.' },
-      { arapca: 'اَلسَّلَامُ عَلَيْنَا وَعَلٰى عِبَادِ اللّٰهِ الصَّالِح۪ينَ', okunusu: 'Es-selâmü aleynâ ve alâ ibâdillâhis-salihîn', anlami: 'Selam bizim üzerimize ve Allah\'ın salih kullarının üzerine olsun.' },
+      { arapca: 'اَلتَّحِيَّاتُ لِلّٰهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ', okunusu: 'Et-tehiyyâtü lillâhi ves-salevâtü vet-tayyibât', anlami: 'Her türlü hürmet, salavat ve bütün güzel şeyler Allah\'a mahsustur.' },
+      { arapca: 'اَلسَّلَامُ عَلَيْكَ اَيُّهَا النَّبِيُّ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُهُ', okunusu: 'Es-selâmü aleyke eyyühen-nebiyyü ve rahmetullâhi ve berekâtüh', anlami: 'Ey Peygamber! Allah\'ın selamı, rahmeti ve bereketi senin üzerine olsun.' },
+      { arapca: 'اَلسَّلَامُ عَلَيْنَا وَعَلٰى عِبَادِ اللّٰهِ الصَّالِحينَ', okunusu: 'Es-selâmü aleynâ ve alâ ibâdillâhis-salihîn', anlami: 'Selam bizim üzerimize ve Allah\'ın salih kullarının üzerine olsun.' },
       { arapca: 'اَشْهَدُ اَنْ لَٓا اِلٰهَ اِلَّا اللّٰهُ وَاَشْهَدُ اَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ', okunusu: 'Eşhedü en lâ ilâhe illallâh ve eşhedü enne Muhammeden abdühû ve rasûlüh', anlami: 'Şahitlik ederim ki Allah\'tan başka ilah yoktur. Yine şahitlik ederim ki Muhammed O\'nun kulu ve elçisidir.' }
     ]
   },
@@ -44,8 +44,8 @@ export const EZBER_ITEMS: EzberItem[] = [
     kategori: 'dualar',
     satirlar: [
       { arapca: 'اَللّٰهُمَّ صَلِّ عَلٰى مُحَمَّدٍ وَعَلٰى اٰلِ مُحَمَّدٍ', okunusu: 'Allâhümme salli alâ Muhammedin ve alâ âli Muhammed', anlami: 'Allah\'ım! Muhammed\'e ve Muhammed\'in ailesine rahmet eyle,' },
-      { arapca: 'كَمَا صَلَّيْتَ عَلٰى اِبْرٰه۪يمَ وَعَلٰى اٰلِ اِبْرٰه۪يمَ', okunusu: 'kemâ salleyte alâ İbrâhîme ve alâ âli İbrâhîm', anlami: 'tıpkı İbrahim\'e ve İbrahim\'in ailesine rahmet eylediğin gibi.' },
-      { arapca: 'اِنَّكَ حَم۪يدٌ مَج۪يدٌ', okunusu: 'inneke hamîdün mecîd', anlami: 'Şüphesiz Sen övülmeye layıksın, şerefi yüce olansın.' }
+      { arapca: 'كَمَا صَلَّيْتَ عَلٰى اِبْرٰهيمَ وَعَلٰى اٰلِ اِبْرٰهيمَ', okunusu: 'kemâ salleyte alâ İbrâhîme ve alâ âli İbrâhîm', anlami: 'tıpkı İbrahim\'e ve İbrahim\'in ailesine rahmet eylediğin gibi.' },
+      { arapca: 'اِنَّكَ حَميدٌ مَجيدٌ', okunusu: 'inneke hamîdün mecîd', anlami: 'Şüphesiz Sen övülmeye layıksın, şerefi yüce olansın.' }
     ]
   },
   {
@@ -54,8 +54,8 @@ export const EZBER_ITEMS: EzberItem[] = [
     kategori: 'dualar',
     satirlar: [
       { arapca: 'اَللّٰهُمَّ بَارِكْ عَلٰى مُحَمَّدٍ وَعَلٰى اٰلِ مُحَمَّدٍ', okunusu: 'Allâhümme bârik alâ Muhammedin ve alâ âli Muhammed', anlami: 'Allah\'ım! Muhammed\'e ve Muhammed\'in ailesine hayır ve bereket ihsan eyle,' },
-      { arapca: 'كَمَا بَارَكْتَ عَلٰى اِبْرٰه۪يمَ وَعَلٰى اٰلِ اِبْرٰه۪يمَ', okunusu: 'kemâ bârakte alâ İbrâhîme ve alâ âli İbrâhîm', anlami: 'tıpkı İbrahim\'e ve İbrahim\'in ailesine bereket ihsan ettiğin gibi.' },
-      { arapca: 'اِنَّكَ hَم۪يدٌ مَج۪يدٌ', okunusu: 'inneke hamîdün mecîd', anlami: 'Şüphesiz Sen övülmeye layıksın, şerefi yüce olansın.' }
+      { arapca: 'كَمَا بَارَكْتَ عَلٰى اِبْرٰهيمَ وَعَلٰى اٰلِ اِبْرٰهيمَ', okunusu: 'kemâ bârakte alâ İbrâhîme ve alâ âli İbrâhîm', anlami: 'tıpkı İbrahim\'e ve İbrahim\'in ailesine bereket ihsan ettiğin gibi.' },
+      { arapca: 'اِنَّكَ حَمِيدٌ مَجيدٌ', okunusu: 'inneke hamîdün mecîd', anlami: 'Şüphesiz Sen övülmeye layıksın, şerefi yüce olansın.' }
     ]
   },
   {
@@ -73,8 +73,8 @@ export const EZBER_ITEMS: EzberItem[] = [
     baslik: 'Rabbenâğfirlî',
     kategori: 'dualar',
     satirlar: [
-      { arapca: 'رَبَّنَا اغْفِرْ ل۪ي وَلِوَالِدَيَّ', okunusu: 'Rabbenâğfirlî ve li-vâlideyye', anlami: 'Rabbimiz! Beni, anne ve babamı bağışla,' },
-      { arapca: 'وَلِلْمُؤْمِن۪ينَ يَوْمَ يَقُومُ الْحِسَابُ', okunusu: 've lil-mü\'minîne yevme yekûmül-hisâb', anlami: 'hesabın görüleceği gün bütün müminleri de bağışla.' }
+      { arapca: 'رَبَّنَا اغْفِرْ لي وَلِوَالِدَيَّ', okunusu: 'Rabbenâğfirlî ve li-vâlideyye', anlami: 'Rabbimiz! Beni, anne ve babamı bağışla,' },
+      { arapca: 'وَلِلْمُؤْمِنينَ يَوْمَ يَقُومُ الْحِسَابُ', okunusu: 've lil-mü\'minîne yevme yekûmül-hisâb', anlami: 'hesabın görüleceği gün bütün müminleri de bağışla.' }
     ]
   },
   {
@@ -82,9 +82,9 @@ export const EZBER_ITEMS: EzberItem[] = [
     baslik: 'Kunut Duaları - 1',
     kategori: 'dualar',
     satirlar: [
-      { arapca: 'اَللّٰهُمَّ اِنَّا نَسْتَع۪ينُكَ وَنَسْتَغْفِرُكَ وَنَسْتَهْد۪يكَ', okunusu: 'Allâhümme innâ nesteînüke ve nesteğfirüke ve nestehdîk', anlami: 'Allah\'ım! Biz Senden yardım dileriz, günahlarimizi bağışlamani isteriz ve Senden hidayet dileriz.' },
+      { arapca: 'اَللّٰهُمَّ اِنَّا نَسْتَعينُكَ وَنَسْتَغْفِرُكَ وَنَسْتَهْديكَ', okunusu: 'Allâhümme innâ nesteînüke ve nesteğfirüke ve nestehdîk', anlami: 'Allah\'ım! Biz Senden yardım dileriz, günahlarimizi bağışlamani isteriz ve Senden hidayet dileriz.' },
       { arapca: 'وَنُؤْمِنُ بِكَ وَنَتُوبُ اِلَيْكَ وَنَتَوَكَّلُ عَلَيْكَ', okunusu: 've nü\'minü bike ve netûbü ileyke ve netevekkelü aleyk', anlami: 'Sana inanırız, Sana tövbe ederiz ve sadece Sana dayanıp güveniriz.' },
-      { arapca: 'وَنُثْن۪ي عَلَيْكَ الْخَيْرَ كُلَّهُ نَشْكُرُكَ وَلَا نَkْفُرُكَ', okunusu: 've nüsnî aleykel-hayra küllehû neşkürük ve lâ nekfürük', anlami: 'Seni bütün hayırlarla överiz. Sana şükrederiz ve Sana asla nankörlük etmeyiz.' },
+      { arapca: 'وَنُثْني عَلَيْكَ الْخَيْرَ كُلَّهُ نَشْكُرُكَ وَلَا نَكْفُرُكَ', okunusu: 've nüsnî aleykel-hayra küllehû neşkürük ve lâ nekfürük', anlami: 'Seni bütün hayırlarla överiz. Sana şükrederiz ve Sana asla nankörlük etmeyiz.' },
       { arapca: 'وَنَخْلَعُ وَنَتْرُكُ مَنْ يَفْجُرُكَ', okunusu: 've nahleü ve netrükü mey-yefcürük', anlami: 'Sana isyan edip karşı gelenleri tamamen dışlar ve bırakırız.' }
     ]
   },
@@ -93,7 +93,7 @@ export const EZBER_ITEMS: EzberItem[] = [
     baslik: 'Kunut Duaları - 2',
     kategori: 'dualar',
     satirlar: [
-      { arapca: 'اَللّٰهُمَّ اِيَّاكَ نَعْبُدُ وَلَكَ نُصَلّ۪ي وَنَسْجُdُ', okunusu: 'Allâhümme iyyâke na\'büdü ve leke nüsallî ve nescüd', anlami: 'Allah\'ım! Biz ancak Sana kulluk ederiz, yalnız Senin rızan için namaz kılar ve secde ederiz.' },
+      { arapca: 'اَللّٰهُمَّ اِيَّاكَ نَعْبُدُ وَلَكَ نُصَلّي وَنَسْجُدُ', okunusu: 'Allâhümme iyyâke na\'büdü ve leke nüsallî ve nescüd', anlami: 'Allah\'ım! Biz ancak Sana kulluk ederiz, yalnız Senin rızan için namaz kılar ve secde ederiz.' },
       { arapca: 'وَاِلَيْكَ نَسْعٰى وَنَحْفِدُ', okunusu: 've ileyke nes\'â ve nahfid', anlami: 'Sadece Sana yönelir, Sana kavuşmak için koşar ve çabalarız.' },
       { arapca: 'نَرْجُو رَحْمَتَكَ وَنَخْشٰى عَذَابَكَ', okunusu: 'nercû rahmeteke ve nahşâ azâbek', anlami: 'Rahmetini umar, azabından korkarız.' },
       { arapca: 'اِنَّ عَذَابَكَ بِالْكُفَّارِ مُلْحِقٌ', okunusu: 'inne azâbeke bil-küffâri mülhık', anlami: 'Şüphesiz Senin azabın kafirlere mutlaka ulaşacaktır.' }
@@ -104,8 +104,8 @@ export const EZBER_ITEMS: EzberItem[] = [
     baslik: 'Âmentü',
     kategori: 'dualar',
     satirlar: [
-      { arapca: 'اٰمَنْتُ بِاللّٰهِ وَمَلٰٓئِكَتِه۪ وَكُتُbِه۪ وَرُسُلِه۪', okunusu: 'Âmentü billâhi ve melâiketihî ve kütübihî ve rusülihî', anlami: 'Allah\'a, meleklerine, kitaplarına, peygamberlerine inandım.' },
-      { arapca: 'وَالْيَوْمِ الْاٰخِرِ وَبِالْقَدَرِ خَيْرِه۪ وَشَرِّه۪ مِنَ اللّٰهِ تَعَالٰى', okunusu: 'vel-yevmil-âhıri ve bil-kaderi hayrihî ve şerrihî minallâhi teâlâ', anlami: 'Ahiret gününe, kadere; hayrın da şerrin de Allah Teâlâ\'dan geldiğine inandım.' },
+      { arapca: 'اٰمَنْتُ بِاللّٰهِ وَمَلٰٓئِكَتِه وَكُتُبِهِ وَرُسُلِه', okunusu: 'Âmentü billâhi ve melâiketihî ve kütübihî ve rusülihî', anlami: 'Allah\'a, meleklerine, kitaplarına, peygamberlerine inandım.' },
+      { arapca: 'وَالْيَوْمِ الْاٰخِرِ وَبِالْقَدَرِ خَيْرِه وَشَرِّه مِنَ اللّٰهِ تَعَالٰى', okunusu: 'vel-yevmil-âhıri ve bil-kaderi hayrihî ve şerrihî minallâhi teâlâ', anlami: 'Ahiret gününe, kadere; hayrın da şerrin de Allah Teâlâ\'dan geldiğine inandım.' },
       { arapca: 'وَالْبَعْثُ بَعْدَ الْمَوْتِ حَقٌّ', okunusu: 'vel-ba\'sü ba\'del-mevti hakk', anlami: 'Ölümden sonra dirilmek de gerçektir.' },
       { arapca: 'اَشْهَدُ اَنْ لَٓا اِلٰهَ اِلَّا اللّٰهُ وَاَشْهَدُ اَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ', okunusu: 'Eşhedü en lâ ilâhe illallâh ve eşhedü enne Muhammeden abdühû ve rasûlüh', anlami: 'Şahitlik ederim ki Allah\'tan başka ilah yoktur. Ve yine şahitlik ederim ki Muhammed O\'nun kulu ve elçisidir.' }
     ]
@@ -118,13 +118,13 @@ export const EZBER_ITEMS: EzberItem[] = [
     arapcaName: 'سُورَةُ الْفَاتِحَةِ',
     kategori: 'sureler',
     satirlar: [
-      { arapca: 'بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ', okunusu: 'Bismillâhir-rahmânir-rahîm', anlami: 'Rahmân ve Rahîm olan Allah\'ın adıyla.' },
-      { arapca: 'اَلْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَۙ', okunusu: 'El-hamdü lillâhi rabbil-âlemîn', anlami: 'Hamd (övme ve övülme), âlemlerin Rabbi olan Allah\'a mahsustur.' },
-      { arapca: 'اَلرَّحْمٰنِ الرَّح۪يمِۙ', okunusu: 'Er-rahmânir-rahîm', anlami: 'O, Rahmân\'dır, Rahîm\'dir.' },
-      { arapca: 'مَالِكِ يَوْمِ الدّ۪ينِۜ', okunusu: 'Mâliki yevmid-dîn', anlami: 'Hesap ve ceza gününün (ahiretin) tek hâkimidir.' },
-      { arapca: 'إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَع۪ينُۜ', okunusu: 'İyyâke na\'büdü ve iyyâke nesteîn', anlami: 'Rabbimiz! Ancak Sana kulluk eder ve yalnız Senden yardım dileriz.' },
-      { arapca: 'اِهْدِنَا الصِّرَاطَ الْمُسْتَق۪يمَۙ', okunusu: 'İhdinas-sırâtal-müstakîm', anlami: 'Bizi dosdoğru yola ilet.' },
-      { arapca: 'صِرَاطَ الَّذ۪ينَ أَنْعَمْتَ عَلَيْهِمْۙ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالّ۪ينَ', okunusu: 'Sırâtallezîne en\'amte aleyhim, ğayril-mağdûbi aleyhim veled-dâllîn', anlami: 'Kendilerine lütuf ve ikramda bulunduğun kimselerin yoluna ilet; gazaba uğramışların ve sapmışların yoluna değil.' }
+      { arapca: 'بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحيمِ', okunusu: 'Bismillâhir-rahmânir-rahîm', anlami: 'Rahmân ve Rahîm olan Allah\'ın adıyla.' },
+      { arapca: 'اَلْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمينَۙ', okunusu: 'El-hamdü lillâhi rabbil-âlemîn', anlami: 'Hamd (övme ve övülme), âlemlerin Rabbi olan Allah\'a mahsustur.' },
+      { arapca: 'اَلرَّحْمٰنِ الرَّحيمِۙ', okunusu: 'Er-rahmânir-rahîm', anlami: 'O, Rahmân\'dır, Rahîm\'dir.' },
+      { arapca: 'مَالِكِ يَوْمِ الدّينِۜ', okunusu: 'Mâliki yevmid-dîn', anlami: 'Hesap ve ceza gününün (ahiretin) tek hâkimidir.' },
+      { arapca: 'إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعينُۜ', okunusu: 'İyyâke na\'büdü ve iyyâke nesteîn', anlami: 'Rabbimiz! Ancak Sana kulluk eder ve yalnız Senden yardım dileriz.' },
+      { arapca: 'اِهْدِنَا الصِّرَاطَ الْمُسْتَقيمَۙ', okunusu: 'İhdinas-sırâtal-müstakîm', anlami: 'Bizi dosdoğru yola ilet.' },
+      { arapca: 'صِرَاطَ الَّذينَ أَنْعَمْتَ عَلَيْهِمْۙ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالّينَ', okunusu: 'Sırâtallezîne en\'amte aleyhim, ğayril-mağdûbi aleyhim veled-dâllîn', anlami: 'Kendilerine lütuf ve ikramda bulunduğun kimselerin yoluna ilet; gazaba uğramışların ve sapmışların yoluna değil.' }
     ]
   },
   {
@@ -133,11 +133,11 @@ export const EZBER_ITEMS: EzberItem[] = [
     arapcaName: 'سُورَةُ الْفِيلِ',
     kategori: 'sureler',
     satirlar: [
-      { arapca: 'اَلَمْ تَرَ كَيْفَ فَعَلَ رَبُwكَ بِاَصْحَابِ الْف۪يلِۜ', okunusu: 'Elem tere keyfe feale rabbüke bi-ashâbil-fîl', anlami: 'Rabbinin, fil sahiplerine ne yaptığını görmedin mi?' },
-      { arapca: 'اَلَمْ يَجْعَلْ كَيْدَهُمْ ف۪ي تَضْل۪يلٍۙ', okunusu: 'Elem yec\'al keydehüm fî tadlîl', anlami: 'Onların tuzaklarını boşa çıkarmadı mı?' },
-      { arapca: 'وَاَرْسَلَ عَلَيْهِمْ طَيْرًا اَبَاب۪يلَۙ', okunusu: 'Ve ersele aleyhim tayran ebâbîl', anlami: 'Onların üzerlerine sürü sürü (ebabil) kuşları gönderdi.' },
-      { arapca: 'تَرْم۪يهِمْ بِحِجَارَةٍ مِنْ سِجّ۪يلٍۙ', okunusu: 'Termîhim bi-hıcâratim min siccîl', anlami: 'O kuşlar, fil sahiplerinin üzerlerine çamurdan pişirilmiş taşlar atıyorlardı.' },
-      { arapca: 'Fَجَعَلَهُمْ كَعَصْفٍ مَأْكُولٍ', okunusu: 'Fe-cealehüm ke-asfim me\'kûl', anlami: 'Nihayet onları yenilmiş ekin yaprağı gibi yaptı.' }
+      { arapca: 'اَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِاَصْحَابِ الْفيلِۜ', okunusu: 'Elem tere keyfe feale rabbüke bi-ashâbil-fîl', anlami: 'Rabbinin, fil sahiplerine ne yaptığını görmedin mi?' },
+      { arapca: 'اَلَمْ يَجْعَلْ كَيْدَهُمْ في تَضْليلٍۙ', okunusu: 'Elem yec\'al keydehüm fî tadlîl', anlami: 'Onların tuzaklarını boşa çıkarmadı mı?' },
+      { arapca: 'وَاَرْسَلَ عَلَيْهِمْ طَيْرًا اَبَابيلَۙ', okunusu: 'Ve ersele aleyhim tayran ebâbîl', anlami: 'Onların üzerlerine sürü sürü (ebabil) kuşları gönderdi.' },
+      { arapca: 'تَرْميهِمْ بِحِجَارَةٍ مِنْ سِجّيلٍۙ', okunusu: 'Termîhim bi-hıcâratim min siccîl', anlami: 'O kuşlar, fil sahiplerinin üzerlerine çamurdan pişirilmiş taşlar atıyorlardı.' },
+      { arapca: 'فَجَعَلَهُمْ كَعَصْفٍ مَأْكُولٍ', okunusu: 'Fe-cealehüm ke-asfim me\'kûl', anlami: 'Nihayet onları yenilmiş ekin yaprağı gibi yaptı.' }
     ]
   },
   {
@@ -146,10 +146,10 @@ export const EZBER_ITEMS: EzberItem[] = [
     arapcaName: 'سُورَةُ قُرَيْشٍ',
     kategori: 'sureler',
     satirlar: [
-      { arapca: 'لِا۪يلَافِ قُرَيْشٍۙ', okunusu: 'Li-îlâfi Kureyş', anlami: 'Kureyş\'i ısındırıp alıştırdığı için;' },
-      { arapca: 'ا۪يلَافِهِمْ رِحْلَةَ الشِّتَٓاءِ وَالصَّيْفِۚ', okunusu: 'Îlâfihim rihleteş-şitâi ves-sayf', anlami: 'Kış ve yaz seyahatlerine onları alıştırıp ısındırdığı için,' },
-      { arapca: 'Fَلْيَعْبُدُوا رَبَّ هٰذَا الْبَيْتِۙ', okunusu: 'Felyea\'büdû rabbe hâzel-beyt', anlami: 'artık onlar bu Beyt\'in (Kabe\'nin) Rabbine ibadet etsinler.' },
-      { arapca: 'اَلَّذ۪ٓي اَطْعَمَهُمْ مِنْ جُوعٍۙ وَاٰمَنَهُمْ مِنْ خَوْفٍ', okunusu: 'Ellezî at\'amehüm min cûıv-ve âmenehüm min havf', anlami: 'O Rab ki kendilerini açlıktan kurtarıp doyurdu ve her türlü korkudan emin kıldı.' }
+      { arapca: 'لِايلَافِ قُرَيْشٍۙ', okunusu: 'Li-îlâfi Kureyş', anlami: 'Kureyş\'i ısındırıp alıştırdığı için;' },
+      { arapca: 'ايلَافِهِمْ رِحْلَةَ الشِّتَٓاءِ وَالصَّيْفِۚ', okunusu: 'Îlâfihim rihleteş-şitâi ves-sayf', anlami: 'Kış ve yaz seyahatlerine onları alıştırıp ısındırdığı için,' },
+      { arapca: 'فَلْيَعْبُدُوا رَبَّ هٰذَا الْبَيْتِۙ', okunusu: 'Felyea\'büdû rabbe hâzel-beyt', anlami: 'artık onlar bu Beyt\'in (Kabe\'nin) Rabbine ibadet etsinler.' },
+      { arapca: 'اَلَّذٓي اَطْعَمَهُمْ مِنْ جُوعٍۙ وَاٰمَنَهُمْ مِنْ خَوْفٍ', okunusu: 'Ellezî at\'amehüm min cûıv-ve âmenehüm min havf', anlami: 'O Rab ki kendilerini açlıktan kurtarıp doyurdu ve her türlü korkudan emin kıldı.' }
     ]
   },
   {
@@ -158,12 +158,12 @@ export const EZBER_ITEMS: EzberItem[] = [
     arapcaName: 'سُورَةُ الْمَاعُونِ',
     kategori: 'sureler',
     satirlar: [
-      { arapca: 'اَرَاَيْتَ الَّذ۪ي يُكَذِّبُ بِالدّ۪inِۜ', okunusu: 'Era\'eytellezî yükezzibü bid-dîn', anlami: 'Gördün mü o hesap gününü yalanlayanı?' },
-      { arapca: 'Fَذٰلِكَ الَّذ۪ي يَدُعُّ الْيَت۪يمَۙ', okunusu: 'Fe-zâlikellezî yedu\'ul-yetîm', anlami: 'İşte yetimi itip kakan odur;' },
-      { arapca: 'وَلَا يَحُضُّ عَلٰى طَعَامِ الْمِسْك۪ينِۜ', okunusu: 'Ve lâ yehuddu alâ taâmil-miskîn', anlami: 'yoksulu doyurmaya teşvik etmeyen de odur.' },
-      { arapca: 'Fَوَيْلٌ لِلْمُصَلّ۪ينَۙ', okunusu: 'Fe-veylül lil-musallîn', anlami: 'Yazıklar olsun o namaz kılanlara ki,' },
-      { arapca: 'اَلَّذ۪ينَ هُمْ عَنْ صَلَاتِهِمْ سَاهُونَۙ', okunusu: 'Ellezîne hüm an salâtihim sâhûn', anlami: 'onlar kıldıkları namazdan gafildirler (özensizdirler).' },
-      { arapca: 'اَلَّذ۪ينَ هُمْ يُرَٓاؤُنَ', okunusu: 'Ellezîne hüm yürâûn', anlami: 'Onlar gösteriş yaparlar,' },
+      { arapca: 'اَرَاَيْتَ الَّذي يُكَذِّبُ بِالدِّينِِۜ', okunusu: 'Era\'eytellezî yükezzibü bid-dîn', anlami: 'Gördün mü o hesap gününü yalanlayanı?' },
+      { arapca: 'فَذٰلِكَ الَّذي يَدُعُّ الْيَتيمَۙ', okunusu: 'Fe-zâlikellezî yedu\'ul-yetîm', anlami: 'İşte yetimi itip kakan odur;' },
+      { arapca: 'وَلَا يَحُضُّ عَلٰى طَعَامِ الْمِسْكينِۜ', okunusu: 'Ve lâ yehuddu alâ taâmil-miskîn', anlami: 'yoksulu doyurmaya teşvik etmeyen de odur.' },
+      { arapca: 'فَوَيْلٌ لِلْمُصَلّينَۙ', okunusu: 'Fe-veylül lil-musallîn', anlami: 'Yazıklar olsun o namaz kılanlara ki,' },
+      { arapca: 'اَلَّذينَ هُمْ عَنْ صَلَاتِهِمْ سَاهُونَۙ', okunusu: 'Ellezîne hüm an salâtihim sâhûn', anlami: 'onlar kıldıkları namazdan gafildirler (özensizdirler).' },
+      { arapca: 'اَلَّذينَ هُمْ يُرَٓاؤُنَ', okunusu: 'Ellezîne hüm yürâûn', anlami: 'Onlar gösteriş yaparlar,' },
       { arapca: 'وَيَمْنَعُونَ الْمَاعُونَ', okunusu: 'Ve yemneûnely-mâûn', anlami: 've ufacık bir yardıma bile engel olurlar.' }
     ]
   },
@@ -174,7 +174,7 @@ export const EZBER_ITEMS: EzberItem[] = [
     kategori: 'sureler',
     satirlar: [
       { arapca: 'إِنَّٓا اَعْطَيْنَاكَ الْكَوْثَرَۜ', okunusu: 'İnnâ a\'taynâkel-kevser', anlami: 'Şüphesiz Biz sana Kevser\'i (bol nimet, feyiz ve bereketi) verdik.' },
-      { arapca: 'Fَصَلِّ لِرَبِّكَ وَانْحَرْۜ', okunusu: 'Fesalli lirabbike venhar', anlami: 'Öyleyse sadece Rabbin için namaz kıl ve kurban kes.' },
+      { arapca: 'فَصَلِّ لِرَبِّكَ وَانْحَرْۜ', okunusu: 'Fesalli lirabbike venhar', anlami: 'Öyleyse sadece Rabbin için namaz kıl ve kurban kes.' },
       { arapca: 'إِنَّ شَانِئَكَ هُوَ الْاَبْتَرُ', okunusu: 'İnne şânieke hüvel-ebter', anlami: 'Asıl soyu kesik olan, şüphesiz sana kin duyup düşmanlık edendir.' }
     ]
   },
@@ -189,7 +189,7 @@ export const EZBER_ITEMS: EzberItem[] = [
       { arapca: 'وَلَٓا اَنْتُمْ عَابِدُونَ مَٓا اَعْبُدُۚ', okunusu: 'Ve lâ entüm âbidûne mâ a\'büd', anlami: 'Siz de benim kulluk ettiğime kulluk edecek değilsiniz.' },
       { arapca: 'وَلَٓا اَنَا۠ عَابِدٌ مَا عَبَدْتُمْۙ', okunusu: 'Ve lâ ene âbidüm mâ abedtüm', anlami: 'Ben sizin taptıklarınıza tapacak değilim.' },
       { arapca: 'وَلَٓا اَنْتُمْ عَابِدُونَ مَٓا اَعْبُدُۜ', okunusu: 'Ve lâ entüm âbidûne mâ a\'büd', anlami: 'Siz de benim kulluk ettiğime kulluk edecek değilsiniz.' },
-      { arapca: 'لَكُمْ د۪ينُكُمْ وَلِيَ د۪ينِ', okunusu: 'Leküm dînüküm veliye dîn', anlami: 'Sizin dininiz size, benim dinim banadır.' }
+      { arapca: 'لَكُمْ دينُكُمْ وَلِيَ دينِ', okunusu: 'Leküm dînüküm veliye dîn', anlami: 'Sizin dininiz size, benim dinim banadır.' }
     ]
   },
   {
@@ -199,8 +199,8 @@ export const EZBER_ITEMS: EzberItem[] = [
     kategori: 'sureler',
     satirlar: [
       { arapca: 'اِذَا جَٓاءَ نَصْرُ اللّٰهِ وَالْفَتْحُۙ', okunusu: 'İzâ câe nasrullâhi vel-feth', anlami: 'Allah\'ın yardımı ve zafer (Mekke\'nin fethi) geldiği zaman,' },
-      { arapca: 'وَرَاَيْتَ النَّاسَ يَدْخُلُونَ F۪ي د۪ينِ اللّٰهِ اَفْوَاجًاۙ', okunusu: 'Ve raeyten-nâse yedhulûne fî dînillâhi efvâcâ', anlami: 've insanların Allah\'ın dinine dalga dalga girdiğini gördüğünde,' },
-      { arapca: 'Fَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُۜ اِنَّهُ كَانَ تَوَّابًا', okunusu: 'Fesebbıh bihamdi rabbike vestağfirh, innehû kâne tevvâbâ', anlami: 'hemen Rabbini hamd ile tesbih et ve O\'ndan bağışlanma dile. Şüphesiz O, tövbeleri çokça kabul edendir.' }
+      { arapca: 'وَرَاَيْتَ النَّاسَ يَدْخُلُونَ فِي دينِ اللّٰهِ اَفْوَاجًاۙ', okunusu: 'Ve raeyten-nâse yedhulûne fî dînillâhi efvâcâ', anlami: 've insanların Allah\'ın dinine dalga dalga girdiğini gördüğünde,' },
+      { arapca: 'فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُۜ اِنَّهُ كَانَ تَوَّابًا', okunusu: 'Fesebbıh bihamdi rabbike vestağfirh, innehû kâne tevvâbâ', anlami: 'hemen Rabbini hamd ile tesbih et ve O\'ndan bağışlanma dile. Şüphesiz O, tövbeleri çokça kabul edendir.' }
     ]
   },
   {
@@ -209,11 +209,11 @@ export const EZBER_ITEMS: EzberItem[] = [
     arapcaName: 'سُورَةُ لَهَبٍ',
     kategori: 'sureler',
     satirlar: [
-      { arapca: 'تَبَّتْ يَدَٓا اَب۪ي لَهَبٍ وَتَبَّۜ', okunusu: 'Tebbet yedâ ebî lehebiv-vetebb', anlami: 'Ebu Leheb\'in iki eli kurusun! Kurudu da.' },
+      { arapca: 'تَبَّتْ يَدَٓا اَبي لَهَبٍ وَتَبَّۜ', okunusu: 'Tebbet yedâ ebî lehebiv-vetebb', anlami: 'Ebu Leheb\'in iki eli kurusun! Kurudu da.' },
       { arapca: 'مَٓا اَغْنٰى عَنْهُ مَالُهُ وَمَا كَسَبَۜ', okunusu: 'Mâ eğnâ anhü mâlühû ve mâ keseb', anlami: 'Ona ne malı fayda verdi ne de kazandıkları.' },
       { arapca: 'سَيَصْلٰى نَارًا ذَاتَ لَهَبٍۚ', okunusu: 'Seyaslâ nâran zâte leheb', anlami: 'O, alev alev yanan bir ateşe girecektir.' },
       { arapca: 'وَامْرَاَتُهُۜ حَمَّالَةَ الْخَطَبِۚ', okunusu: 'Vemraetühû hammâletel-hatab', anlami: 'Boynunda bükülmüş hurma lifinden bir ip olduğu halde odun taşıyan karısı da (ateşe girecektir).' },
-      { arapca: 'F۪ي ج۪يدِهَا حَبْلٌ مِنْ مَسَدٍ', okunusu: 'Fî cîdihâ hablüm mim-mesed', anlami: 'Onun da boynunda liften örülmüş bir ip olacaktır.' }
+      { arapca: 'فِي جيدِهَا حَبْلٌ مِنْ مَسَدٍ', okunusu: 'Fî cîdihâ hablüm mim-mesed', anlami: 'Onun da boynunda liften örülmüş bir ip olacaktır.' }
     ]
   },
   {
@@ -251,7 +251,7 @@ export const EZBER_ITEMS: EzberItem[] = [
       { arapca: 'مَلِكِ النَّاسِۙ', okunusu: 'Melikin-nâs', anlami: 'insanların tek hâkimine,' },
       { arapca: 'اِلٰهِ النَّاسِۙ', okunusu: 'İlâhin-nâs', anlami: 'insanların gerçek ilahına;' },
       { arapca: 'مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِۙ', okunusu: 'Min şerril-vesvâsil-hannâs', anlami: 'o sinsi fısıldayıcının kötülüğünden.' },
-      { arapca: 'اَلَّذ۪ي يُوَسْوِسُ F۪ي صُدُورِ النَّاسِۙ', okunusu: 'Ellezî yüvesvisü fî sudûrin-nâs', anlami: 'O ki insanların kalplerine vesvese verir,' },
+      { arapca: 'اَلَّذي يُوَسْوِسُ فِي صُدُورِ النَّاسِۙ', okunusu: 'Ellezî yüvesvisü fî sudûrin-nâs', anlami: 'O ki insanların kalplerine vesvese verir,' },
       { arapca: 'مِنَ الْجِنَّةِ وَالنَّاسِ', okunusu: 'Minel-cinneti ven-nâs', anlami: 'gerek cinlerden gerekse insanlardan olsun.' }
     ]
   },
@@ -299,7 +299,7 @@ export const EZBER_ITEMS: EzberItem[] = [
       { arapca: '【 ١ 】 اَللّٰهُمَّ اَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْاِكْرَامِۜ', okunusu: '1. ADIM: Selam verdikten sonra okunur → Allâhümme entes-selâmü ve minkes-selâmü tebârakte yâ zel-celâli vel-ikrâm', anlami: 'Farz namazın selamından hemen sonra: Allah\'ım! Sen selamsın, selamet Sendendir. Ey celal ve ikram sahibi olan Rabbim, Sen ne yücesin!' },
       { arapca: '【 ٢ 】 عَلٰى رَسُولِنَا صَلَوَاتٌ', okunusu: '2. ADIM: Hoca/Müezzin yüksek sesle der → Alâ rasûlinâ salevât! (Cemaat salavat-ı şerife getirir)', anlami: 'Peygamberimiz Hz. Muhammed\'e salât ve selam olsun.' },
       { arapca: '【 ٣ 】 سُبْحَانَ اللّٰهِ وَالْحَمْدُ لِلّٰهِ وَلَٓا اِلٰهَ اِلَّا اللّٰهُ وَاللّٰهُ اَكْبَرُ', okunusu: '3. ADIM: Hep birlikte okunur → Sübhânallâhi vel-hamdü lillâhi ve lâ ilâhe illallâhü vallâhü ekber', anlami: 'Allah noksan sıfatlardan uzaktır, hamd Allah\'adır, Allah\'tan başka ilah yoktur ve Allah en büyüktür.' },
-      { arapca: 'وَلَا حَوْلَ وَلَا قُوَّةَ اِلَّا بِاللّٰهِ الْعَلِيِّ الْعَظ۪يمِۜ', okunusu: '(Devamı) ve lâ havle ve lâ kuvvete illâ billâhil-aliyyil-azîm', anlami: 'Güç ve kuvvet ancak şanı çok yüce ve azametli olan Allah\'ın yardımıyladır.' },
+      { arapca: 'وَلَا حَوْلَ وَلَا قُوَّةَ اِلَّا بِاللّٰهِ الْعَلِيِّ الْعَظيمِۜ', okunusu: '(Devamı) ve lâ havle ve lâ kuvvete illâ billâhil-aliyyil-azîm', anlami: 'Güç ve kuvvet ancak şanı çok yüce ve azametli olan Allah\'ın yardımıyladır.' },
       { arapca: '【 ٤ 】 سُبْحَانَ اللّٰهِ × ٣٣', okunusu: '4. ADIM: Tesbihata geçilir → Sübhânallâh (33 defa çekilir)', anlami: 'Allah\'ı tüm noksanlıklardan tenzih ederim.' },
       { arapca: '【 ٥ 】 اَلْحَمْدُ لِلّٰهِ × ٣٣', okunusu: '5. ADIM: Elhamdülillâh (33 defa çekilir)', anlami: 'Hamd, teşekkür Allah\'adır.' },
       { arapca: '【 ٦ 】 اَللّٰهُ اَكْبَرُ × ٣٣', okunusu: '6. ADIM: Allāhü ekber (33 defa çekilir)', anlami: 'Allah en büyüktür.' }
@@ -449,7 +449,7 @@ export const EzberPortali: React.FC<EzberPortaliProps> = ({
           <div className="max-w-2xl mx-auto w-full space-y-6">
             {selectedItemForModal.kategori === 'sureler' && selectedItemForModal.id !== 'fatiha' && (
               <div className="text-center py-4 text-3xl font-serif text-emerald-850 dark:text-emerald-450 select-none border-b border-amber-900/5 pb-5">
-                بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ
+                بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحيمِ
               </div>
             )}
             <div

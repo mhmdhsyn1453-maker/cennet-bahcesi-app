@@ -41,7 +41,7 @@ const cleanBismillah = (text: string, surahNumber: number): string => {
   if (surahNumber === 1 || surahNumber === 9) {
     return text;
   }
-  
+
   const isArabicLetter = (ch: string): boolean => {
     const code = ch.charCodeAt(0);
     if (code >= 0x0621 && code <= 0x064A) return true;
@@ -109,13 +109,13 @@ const FALLBACK_POPULAR_SURAHS: Surah[] = [
     numberOfAyahs: 7,
     revelationType: "Meccan",
     verses: [
-      { number: 1, text: "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ", translation: "Rahmân ve Rahîm olan Allah'ın adıyla." },
-      { number: 2, text: "اَلْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَۙ", translation: "Hamd, âlemlerin Rabbi olan Allah'a mahsustur." },
-      { number: 3, text: "اَلرَّحْمٰنِ الرَّح۪يمِۙ", translation: "O, Rahmân'dır ve Rahîm'dir." },
-      { number: 4, text: "مَالِكِ يَوْمِ الدّ۪ينِۜ", translation: "O, hesap gününün (âhiretin) tek hâkimidir." },
-      { number: 5, text: "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَع۪ينُۜ", translation: "Rabbimiz! Ancak sana kulluk eder ve yalnız senden yardım dileriz." },
-      { number: 6, text: "اِهْدِنَا الصِّرَاطَ الْمُسْتَق۪يمَۙ", translation: "Bizi dosdoğru yola ilet." },
-      { number: 7, text: "صِرَاطَ الَّذ۪ينَ أَنْعَمْتَ عَلَيْهِمْۙ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالّ۪ينَ", translation: "Kendilerine lütuf ve ikramda bulunduğun kimselerin yoluna ilet; gazaba uğramışların ve sapmışların yoluna değil." }
+      { number: 1, text: "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحيمِ", translation: "Rahmân ve Rahîm olan Allah'ın adıyla." },
+      { number: 2, text: "اَلْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمينَۙ", translation: "Hamd, âlemlerin Rabbi olan Allah'a mahsustur." },
+      { number: 3, text: "اَلرَّحْمٰنِ الرَّحيمِۙ", translation: "O, Rahmân'dır ve Rahîm'dir." },
+      { number: 4, text: "مَالِكِ يَوْمِ الدّينِۜ", translation: "O, hesap gününün (âhiretin) tek hâkimidir." },
+      { number: 5, text: "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعينُۜ", translation: "Rabbimiz! Ancak sana kulluk eder ve yalnız senden yardım dileriz." },
+      { number: 6, text: "اِهْدِنَا الصِّرَاطَ الْمُسْتَقيمَۙ", translation: "Bizi dosdoğru yola ilet." },
+      { number: 7, text: "صِرَاطَ الَّذينَ أَنْعَمْتَ عَلَيْهِمْۙ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالّينَ", translation: "Kendilerine lütuf ve ikramda bulunduğun kimselerin yoluna ilet; gazaba uğramışların ve sapmışların yoluna değil." }
     ]
   },
   {
@@ -172,7 +172,7 @@ const FALLBACK_POPULAR_SURAHS: Surah[] = [
       { number: 2, text: "مَلِكِ النَّاسِۙ", translation: "İnsanların biricik sahibine ve yöneticisine," },
       { number: 3, text: "إِلٰهِ النَّاسِۙ", translation: "İnsanların gerçek ilahına;" },
       { number: 4, text: "مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِۙ", translation: "Sinsi fısıldayıcının kötülüğünden," },
-      { number: 5, text: "اَلَّذ۪ي يُوَسْوِسُ فِي صُدُورِ النَّاسِۙ", translation: "O ki insanların kalplerine fısıltılar verir," },
+      { number: 5, text: "اَلَّذي يُوَسْوِسُ فِي صُدُورِ النَّاسِۙ", translation: "O ki insanların kalplerine fısıltılar verir," },
       { number: 6, text: "مِنَ الْجِنَّةِ وَالنَّاسِ", translation: "Gerek cinlerden, gerekse insanlardan gelen kötülüklerden." }
     ]
   }
@@ -220,18 +220,18 @@ const ELIFBA_LETTERS: ElifbaLetter[] = [
 
 // ─── 114 SÛRE TÜRKÇE İSİM HARİTASI ──────────────────────────────
 const TURKCE_SURE_ISIMLERI: Record<number, string> = {
-  1:'Fâtiha',2:'Bakara',3:'Âl-i İmrân',4:'Nisâ',5:'Mâide',6:"En'âm",7:"A'râf",8:'Enfâl',9:'Tevbe',10:'Yûnus',
-  11:'Hûd',12:'Yûsuf',13:"Ra'd",14:'İbrâhîm',15:'Hicr',16:'Nahl',17:'İsrâ',18:'Kehf',19:'Meryem',20:'Tâ-Hâ',
-  21:'Enbiyâ',22:'Hac',23:"Mü'minûn",24:'Nûr',25:'Furkân',26:'Şuarâ',27:'Neml',28:'Kasas',29:'Ankebût',30:'Rûm',
-  31:'Lokman',32:'Secde',33:'Ahzâb',34:"Sebe'",35:'Fâtır',36:'Yâsîn',37:'Sâffât',38:'Sâd',39:'Zümer',40:"Mü'min",
-  41:'Fussilet',42:'Şûrâ',43:'Zuhruf',44:'Duhân',45:'Câsiye',46:'Ahkâf',47:'Muhammed',48:'Fetih',49:'Hucurât',50:'Kâf',
-  51:'Zâriyât',52:'Tûr',53:'Necm',54:'Kamer',55:'Rahmân',56:'Vâkıa',57:'Hadîd',58:'Mücâdele',59:'Haşr',60:'Mümtehine',
-  61:'Saff',62:"Cum'a",63:'Münâfikûn',64:'Tegâbün',65:'Talâk',66:'Tahrîm',67:'Mülk',68:'Kalem',69:'Hâkka',70:'Meâric',
-  71:'Nûh',72:'Cin',73:'Müzzemmil',74:'Müddessir',75:'Kıyâmet',76:'İnsân',77:'Mürselât',78:"Nebe'",79:'Nâziât',80:'Abese',
-  81:'Tekvîr',82:'İnfitâr',83:'Mutaffifîn',84:'İnşikâk',85:'Bürûc',86:'Târık',87:"A'lâ",88:'Gâşiye',89:'Fecr',90:'Beled',
-  91:'Şems',92:'Leyl',93:'Duhâ',94:'İnşirâh',95:'Tîn',96:'Alak',97:'Kadir',98:'Beyyine',99:'Zilzâl',100:'Âdiyât',
-  101:'Kâria',102:'Tekâsür',103:'Asr',104:'Hümeze',105:'Fîl',106:'Kureyş',107:'Mâûn',108:'Kevser',109:'Kâfirûn',110:'Nasr',
-  111:'Tebbet',112:'İhlâs',113:'Felak',114:'Nâs'
+  1: 'Fâtiha', 2: 'Bakara', 3: 'Âl-i İmrân', 4: 'Nisâ', 5: 'Mâide', 6: "En'âm", 7: "A'râf", 8: 'Enfâl', 9: 'Tevbe', 10: 'Yûnus',
+  11: 'Hûd', 12: 'Yûsuf', 13: "Ra'd", 14: 'İbrâhîm', 15: 'Hicr', 16: 'Nahl', 17: 'İsrâ', 18: 'Kehf', 19: 'Meryem', 20: 'Tâ-Hâ',
+  21: 'Enbiyâ', 22: 'Hac', 23: "Mü'minûn", 24: 'Nûr', 25: 'Furkân', 26: 'Şuarâ', 27: 'Neml', 28: 'Kasas', 29: 'Ankebût', 30: 'Rûm',
+  31: 'Lokman', 32: 'Secde', 33: 'Ahzâb', 34: "Sebe'", 35: 'Fâtır', 36: 'Yâsîn', 37: 'Sâffât', 38: 'Sâd', 39: 'Zümer', 40: "Mü'min",
+  41: 'Fussilet', 42: 'Şûrâ', 43: 'Zuhruf', 44: 'Duhân', 45: 'Câsiye', 46: 'Ahkâf', 47: 'Muhammed', 48: 'Fetih', 49: 'Hucurât', 50: 'Kâf',
+  51: 'Zâriyât', 52: 'Tûr', 53: 'Necm', 54: 'Kamer', 55: 'Rahmân', 56: 'Vâkıa', 57: 'Hadîd', 58: 'Mücâdele', 59: 'Haşr', 60: 'Mümtehine',
+  61: 'Saff', 62: "Cum'a", 63: 'Münâfikûn', 64: 'Tegâbün', 65: 'Talâk', 66: 'Tahrîm', 67: 'Mülk', 68: 'Kalem', 69: 'Hâkka', 70: 'Meâric',
+  71: 'Nûh', 72: 'Cin', 73: 'Müzzemmil', 74: 'Müddessir', 75: 'Kıyâmet', 76: 'İnsân', 77: 'Mürselât', 78: "Nebe'", 79: 'Nâziât', 80: 'Abese',
+  81: 'Tekvîr', 82: 'İnfitâr', 83: 'Mutaffifîn', 84: 'İnşikâk', 85: 'Bürûc', 86: 'Târık', 87: "A'lâ", 88: 'Gâşiye', 89: 'Fecr', 90: 'Beled',
+  91: 'Şems', 92: 'Leyl', 93: 'Duhâ', 94: 'İnşirâh', 95: 'Tîn', 96: 'Alak', 97: 'Kadir', 98: 'Beyyine', 99: 'Zilzâl', 100: 'Âdiyât',
+  101: 'Kâria', 102: 'Tekâsür', 103: 'Asr', 104: 'Hümeze', 105: 'Fîl', 106: 'Kureyş', 107: 'Mâûn', 108: 'Kevser', 109: 'Kâfirûn', 110: 'Nasr',
+  111: 'Tebbet', 112: 'İhlâs', 113: 'Felak', 114: 'Nâs'
 };
 
 /** Sure numarasından Türkçe isim döndürür */
@@ -273,7 +273,7 @@ const ClickableWord: React.FC<{
 
   const handleClick = () => {
     setShowTip(true);
-   
+
     setTimeout(() => setShowTip(false), 3000);
   };
 
@@ -325,7 +325,7 @@ const HarekeCard: React.FC<{
 
   const handleClick = () => {
     setShowTip(true);
-   
+
     setTimeout(() => setShowTip(false), 2500);
   };
 
@@ -333,9 +333,9 @@ const HarekeCard: React.FC<{
     <div className="relative">
       <button
         onClick={handleClick}
-        className="aspect-square p-2 bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-600 rounded-2xl flex flex-col items-center justify-center gap-1 transition-all cursor-pointer hover:border-emerald-400 dark:hover:border-emerald-500 hover:shadow-md active:scale-95"
+        className="w-full aspect-square p-1 sm:p-1.5 bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-600 rounded-2xl flex flex-col items-center justify-center transition-all cursor-pointer hover:border-emerald-400 dark:hover:border-emerald-500 hover:shadow-md active:scale-95"
       >
-        <span className="text-3xl font-serif font-bold text-slate-800 dark:text-slate-100 select-none" dir="rtl">
+        <span className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-slate-800 dark:text-slate-100 select-none whitespace-nowrap leading-none" dir="rtl">
           {bilesik.bilesik}
         </span>
       </button>
@@ -428,10 +428,10 @@ const HarfKutusu: React.FC<{ h: any; hideName: boolean; playAudio: boolean }> = 
       const audio = new Audio(audioUrl);
       audio.play().catch(err => {
         console.warn("Harf ses dosyası çalınamadı:", audioUrl, err);
-       
+
       });
     } else {
-     
+
     }
   };
 
@@ -452,7 +452,7 @@ const HarfKutusu: React.FC<{ h: any; hideName: boolean; playAudio: boolean }> = 
         className="aspect-square w-full p-2 bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-600 rounded-2xl flex flex-col items-center justify-center gap-3 transition-all cursor-pointer hover:border-emerald-400 dark:hover:border-emerald-500 hover:shadow-lg active:scale-95"
       >
         <span className="text-4xl font-bold select-none text-slate-800 dark:text-slate-100 mt-2">{h.harf}</span>
-        
+
         {/* Name list with more separation (gap-3 on button + extra margin/padding) */}
         {!hideName ? (
           <span className="text-[10px] font-black bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full mt-1.5 mb-1.5 transition-opacity duration-300">
@@ -500,12 +500,12 @@ const HarflerTablosu: React.FC<{ page: ElifbaPage }> = ({ page }) => {
     const shuffled = shuffleArray(originalLetters);
     setShuffledList(shuffled);
     setIsShuffled(true);
-   
+
   };
 
   const handleResetOrder = () => {
     setIsShuffled(false);
-   
+
   };
 
   const lettersToRender = isShuffled ? shuffledList : originalLetters;
@@ -517,11 +517,10 @@ const HarflerTablosu: React.FC<{ page: ElifbaPage }> = ({ page }) => {
         {/* Sesli Okunuş Toggle */}
         <button
           onClick={() => { setPlayAudio(!playAudio); }}
-          className={`w-14 h-14 rounded-full flex items-center justify-center shadow-md border-3 transition-all hover:scale-110 active:scale-95 cursor-pointer bg-white dark:bg-slate-800 ${
-            playAudio
+          className={`w-14 h-14 rounded-full flex items-center justify-center shadow-md border-3 transition-all hover:scale-110 active:scale-95 cursor-pointer bg-white dark:bg-slate-800 ${playAudio
               ? 'border-teal-500 text-teal-600 dark:text-teal-400 ring-4 ring-teal-100 dark:ring-teal-900/20'
               : 'border-slate-200 dark:border-slate-650 text-slate-400 dark:text-slate-500 hover:border-slate-350'
-          }`}
+            }`}
           title={playAudio ? "Harf Seslerini Kapat" : "Harf Seslerini Aç"}
         >
           {playAudio ? <Volume2 className="w-6 h-6" /> : <VolumeX className="w-6 h-6" />}
@@ -530,11 +529,10 @@ const HarflerTablosu: React.FC<{ page: ElifbaPage }> = ({ page }) => {
         {/* Türkçe İsimleri Göster/Gizle Toggle */}
         <button
           onClick={() => { setHideNames(!hideNames); }}
-          className={`w-14 h-14 rounded-full flex items-center justify-center shadow-md border-3 transition-all hover:scale-110 active:scale-95 cursor-pointer bg-white dark:bg-slate-800 ${
-            !hideNames
+          className={`w-14 h-14 rounded-full flex items-center justify-center shadow-md border-3 transition-all hover:scale-110 active:scale-95 cursor-pointer bg-white dark:bg-slate-800 ${!hideNames
               ? 'border-emerald-500 text-emerald-600 dark:text-emerald-400 ring-4 ring-emerald-100 dark:ring-emerald-900/20'
               : 'border-slate-200 dark:border-slate-650 text-slate-400 dark:text-slate-500 hover:border-slate-350'
-          }`}
+            }`}
           title={hideNames ? "Türkçe İsimleri Göster" : "Türkçe İsimleri Gizle"}
         >
           {hideNames ? <Eye className="w-6 h-6" /> : <EyeOff className="w-6 h-6" />}
@@ -543,11 +541,10 @@ const HarflerTablosu: React.FC<{ page: ElifbaPage }> = ({ page }) => {
         {/* Harfleri Karıştır */}
         <button
           onClick={handleShuffle}
-          className={`w-14 h-14 rounded-full flex items-center justify-center shadow-md border-3 transition-all hover:scale-110 active:scale-95 cursor-pointer bg-white dark:bg-slate-800 ${
-            isShuffled
+          className={`w-14 h-14 rounded-full flex items-center justify-center shadow-md border-3 transition-all hover:scale-110 active:scale-95 cursor-pointer bg-white dark:bg-slate-800 ${isShuffled
               ? 'border-indigo-500 text-indigo-600 dark:text-indigo-400 ring-4 ring-indigo-100 dark:ring-indigo-900/20'
               : 'border-slate-200 dark:border-slate-600 text-slate-400 dark:text-slate-500 hover:border-slate-350'
-          }`}
+            }`}
           title="Harfleri Karıştır"
         >
           <Shuffle className="w-6 h-6" />
@@ -556,11 +553,10 @@ const HarflerTablosu: React.FC<{ page: ElifbaPage }> = ({ page }) => {
         {/* Sıraya Göre Diz / Özüne Dön */}
         <button
           onClick={handleResetOrder}
-          className={`w-14 h-14 rounded-full flex items-center justify-center shadow-md border-3 transition-all hover:scale-110 active:scale-95 cursor-pointer bg-white dark:bg-slate-800 ${
-            !isShuffled
+          className={`w-14 h-14 rounded-full flex items-center justify-center shadow-md border-3 transition-all hover:scale-110 active:scale-95 cursor-pointer bg-white dark:bg-slate-800 ${!isShuffled
               ? 'border-amber-500 text-amber-600 dark:text-amber-400 ring-4 ring-amber-100 dark:ring-amber-900/20'
               : 'border-slate-200 dark:border-slate-600 text-slate-400 dark:text-slate-500 hover:border-slate-350'
-          }`}
+            }`}
           title="Alfabetik Sırala / Özüne Dön"
         >
           <SortAsc className="w-6 h-6" />
@@ -657,7 +653,7 @@ const PageRenderer: React.FC<{ page: ElifbaPage }> = ({ page }) => {
                 {label?.aciklama && (
                   <p className="text-xs text-slate-500 dark:text-slate-400 font-medium mb-3 ml-5">{label.aciklama}</p>
                 )}
-                <div className="grid grid-cols-5 sm:grid-cols-7 md:grid-cols-9 gap-2">
+                <div className="grid grid-cols-5 sm:grid-cols-7 md:grid-cols-9 gap-2" dir="rtl">
                   {items.map((b, i) => (
                     <HarekeCard key={`${harekeKey}-${i}`} bilesik={b} />
                   ))}
@@ -673,7 +669,7 @@ const PageRenderer: React.FC<{ page: ElifbaPage }> = ({ page }) => {
                 <Sparkles className="w-4 h-4 text-amber-500" />
                 ALIŞTIRMA KELİMELERİ
               </h4>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3" dir="rtl">
                 {page.alistirmaKelimeleri.map((k, i) => (
                   <ClickableWord key={i} kelime={k} size="md" />
                 ))}
@@ -694,9 +690,9 @@ const PageRenderer: React.FC<{ page: ElifbaPage }> = ({ page }) => {
             </div>
           )}
           {page.alistirmaKelimeleri && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" dir="rtl">
               {page.alistirmaKelimeleri.map((k, i) => (
-                <ClickableWord key={i} kelime={k} size="lg" />
+                <ClickableWord key={i} kelime={k} size="md" />
               ))}
             </div>
           )}
@@ -725,12 +721,12 @@ const PageRenderer: React.FC<{ page: ElifbaPage }> = ({ page }) => {
 
 // ─── ANA BİLEŞEN ─────────────────────────────────────────────────
 
-export const KuranElifba: React.FC<KuranElifbaProps> = ({ 
-  initialTab = 'elifba', 
+export const KuranElifba: React.FC<KuranElifbaProps> = ({
+  initialTab = 'elifba',
   isDarkMode = false,
   toggleDarkMode,
   isFocused = false,
-  setIsFocused 
+  setIsFocused
 }) => {
   const [activeTab, setActiveTab] = useState<'elifba' | 'kuran'>(initialTab);
   const [isMobile, setIsMobile] = useState(false);
@@ -757,14 +753,14 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
   const goNextPage = () => {
     if (currentPageIndex < totalPages - 1) {
       setCurrentPageIndex(prev => prev + 1);
-     
+
     }
   };
 
   const goPrevPage = () => {
     if (currentPageIndex > 0) {
       setCurrentPageIndex(prev => prev - 1);
-     
+
     }
   };
 
@@ -811,7 +807,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
 
     const newFlipped = [...memoryFlipped, cardId];
     setMemoryFlipped(newFlipped);
-   
+
 
     if (newFlipped.length === 2) {
       setMemoryMoves(prev => prev + 1);
@@ -1027,7 +1023,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
         if (type === 'elifba') {
           if (currentPageIndex > 0) {
             setCurrentPageIndex(prev => prev - 1);
-           
+
           }
         } else {
           if (isMobile) {
@@ -1035,14 +1031,14 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
           } else {
             if (rightPageNum > 1) handleSelectMushafPage(rightPageNum - 2);
           }
-         
+
         }
       } else {
         // Dragged RIGHT -> Go to NEXT page (RTL: page increases)
         if (type === 'elifba') {
           if (currentPageIndex < totalPages - 1) {
             setCurrentPageIndex(prev => prev + 1);
-           
+
           }
         } else {
           if (isMobile) {
@@ -1050,7 +1046,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
           } else {
             if (leftPageNum < 604) handleSelectMushafPage(rightPageNum + 2);
           }
-         
+
         }
       }
     }
@@ -1085,7 +1081,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
 
     setMushafPage(pageNumber);
     setLoadingMushafDetail(true);
-    
+
     if (!isAuto) {
       stopAllAudio();
     } else {
@@ -1108,7 +1104,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
 
         if (arJson.code === 200 && trJson.code === 200) {
           return arJson.data.ayahs.map((ayah: any, index: number) => {
-            const cleanText = ayah.numberInSurah === 1 
+            const cleanText = ayah.numberInSurah === 1
               ? cleanBismillah(ayah.text, ayah.surah.number)
               : ayah.text;
 
@@ -1155,7 +1151,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
     setQuizLetter(randomTarget);
     setQuizFeedback(null);
     setQuizSelectedChar(null);
-    
+
     if (currentMode === 'isim-bul') {
       // Show letter → find name
       const others = ELIFBA_LETTERS.filter(l => l.char !== randomTarget.char);
@@ -1206,7 +1202,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
   const handleQuizAnswer = (selected: ElifbaLetter) => {
     if (quizFeedback) return; // prevent double-click
     setQuizSelectedChar(selected.char);
-    
+
     if (quizLetter && selected.char === quizLetter.char) {
       const streakBonus = quizStreak >= 3 ? 5 : 0;
       setQuizFeedback('correct');
@@ -1538,13 +1534,13 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
       if (container) {
         const containerRect = container.getBoundingClientRect();
         const elementRect = ayahEl.getBoundingClientRect();
-        
+
         // Check if the ayah element is fully visible in the container with a 20px padding margin
         const isVisible = (
           elementRect.top >= containerRect.top + 20 &&
           elementRect.bottom <= containerRect.bottom - 20
         );
-        
+
         if (!isVisible) {
           const relativeTop = elementRect.top - containerRect.top + container.scrollTop;
           container.scrollTo({
@@ -1560,8 +1556,8 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
   const filteredSurahs = surahsList.filter(s => {
     const q = searchQuery.toLowerCase();
     const turkceName = getTurkceSureIsmi(s.number).toLowerCase();
-    return turkceName.includes(q) || 
-      s.englishName.toLowerCase().includes(q) || 
+    return turkceName.includes(q) ||
+      s.englishName.toLowerCase().includes(q) ||
       s.number.toString() === searchQuery.trim();
   });
 
@@ -1605,7 +1601,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
         {/* Elegant Gold/Emerald border frame around the page text block */}
         <div className="absolute inset-2 border-2 border-amber-700/10 dark:border-emerald-700/20 rounded-[1.5rem] pointer-events-none z-0" />
         <div className="absolute inset-3 border border-amber-700/5 dark:border-emerald-700/10 rounded-[1.3rem] pointer-events-none z-0" />
-        
+
         {/* Page content */}
         <div id={`mushaf-scroll-container-${pageNum}`} className="flex-1 overflow-y-auto p-4 space-y-6 relative z-10 scrollbar-amber">
           {surahSegments.map((seg) => (
@@ -1625,12 +1621,12 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
               {/* Bismillah Banner at Surah Start (except Fatiha 1 and At-Tawbah 9) */}
               {seg.verses.some(v => v.number === 1) && seg.surahNumber !== 1 && seg.surahNumber !== 9 && (
                 <div className="text-center py-2 text-xl font-serif text-emerald-850 dark:text-emerald-400 select-none">
-                  بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ
+                  بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحيمِ
                 </div>
               )}
 
               {/* Continuous Text Block for this Surah's verses on this page */}
-              <div 
+              <div
                 className="text-right text-3xl sm:text-4xl leading-[2.3] sm:leading-[2.5] font-serif text-slate-900 dark:text-slate-100 font-bold tracking-wide select-text whitespace-normal"
                 dir="rtl"
                 style={{ fontFamily: "'Amiri', 'Traditional Arabic', 'Noto Naskh Arabic', serif", wordSpacing: '2px' }}
@@ -1639,12 +1635,11 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                   const isCurrentPlaying = currentPlayingAyahKey === `${seg.surahNumber}_${verse.number}`;
                   return (
                     <React.Fragment key={verse.number}>
-                      <span 
+                      <span
                         id={`ayah-span-${seg.surahNumber}-${verse.number}`}
                         onClick={() => handlePlayAyah(seg.surahNumber, verse.number)}
-                        className={`cursor-pointer rounded hover:bg-emerald-500/10 dark:hover:bg-emerald-500/25 px-1 py-0.5 transition-colors ${
-                          isCurrentPlaying ? 'bg-emerald-500/25 dark:bg-emerald-500/40 text-emerald-800 dark:text-emerald-300 ring-2 ring-emerald-500/30' : ''
-                        }`}
+                        className={`cursor-pointer rounded hover:bg-emerald-500/10 dark:hover:bg-emerald-500/25 px-1 py-0.5 transition-colors ${isCurrentPlaying ? 'bg-emerald-500/25 dark:bg-emerald-500/40 text-emerald-800 dark:text-emerald-300 ring-2 ring-emerald-500/30' : ''
+                          }`}
                         title="Ayeti Dinle"
                       >
                         {verse.text}
@@ -1676,11 +1671,10 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
         </div>
       )}
       {/* 1. Header Hero Panel */}
-      <div className={`bg-gradient-to-r ${
-        activeTab === 'elifba' 
-          ? 'from-emerald-500 via-emerald-600 to-teal-650 border-emerald-700' 
+      <div className={`bg-gradient-to-r ${activeTab === 'elifba'
+          ? 'from-emerald-500 via-emerald-600 to-teal-650 border-emerald-700'
           : 'from-teal-600 via-teal-700 to-sky-700 border-teal-800'
-      } p-6 rounded-[2.5rem] shadow-md border-b-6 mb-8 flex items-center justify-between text-white relative overflow-hidden`}>
+        } p-6 rounded-[2.5rem] shadow-md border-b-6 mb-8 flex items-center justify-between text-white relative overflow-hidden`}>
         <div className="absolute -top-12 -left-12 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
         <div className="relative z-10 flex items-center gap-4">
           <div className="w-14 h-14 bg-white/20 backdrop-blur-md border-2 border-white rounded-3xl flex items-center justify-center text-white shadow-inner">
@@ -1695,8 +1689,8 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
               {activeTab === 'elifba' ? 'ELİF-BA' : "KUR'AN-I KERİM"}
             </h2>
             <p className="text-sm font-medium text-white/90">
-              {activeTab === 'elifba' 
-                ? 'Diyanet müfredatı, harflerin doğru mahreçleri, okuma alıştırmaları ve eğlenceli harf bulmacası.' 
+              {activeTab === 'elifba'
+                ? 'Diyanet müfredatı, harflerin doğru mahreçleri, okuma alıştırmaları ve eğlenceli harf bulmacası.'
                 : '114 sûrenin tamamını dinleme, arapça okuma ve türkçe diyanet meali takibi.'
               }
             </p>
@@ -1716,7 +1710,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
             {/* Elifba Sub-Mode Selector */}
             <div className="flex flex-row gap-1 bg-slate-100/80 dark:bg-slate-700/50 p-1.5 rounded-full border border-slate-200 dark:border-slate-600 w-full shadow-inner mb-6">
               {[
-                { id: 'ders', label: 'DİYANET DERSLERİ', icon: GraduationCap, activeBg: 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md' },
+                { id: 'ders', label: 'ELİFBA DERSLERİ', icon: GraduationCap, activeBg: 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md' },
                 { id: 'memory', label: 'HAFIZA OYUNU', icon: Grid3X3, activeBg: 'bg-gradient-to-r from-indigo-500 to-violet-500 text-white shadow-md', action: initMemoryGame },
                 { id: 'quiz', label: 'HARF BULMACASI', icon: Target, activeBg: 'bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-md', action: resetQuiz }
               ].map((item) => {
@@ -1728,13 +1722,12 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                     onClick={() => {
                       setElifbaSubMode(item.id as any);
                       if (item.action) item.action();
-                     
+
                     }}
-                    className={`py-2.5 px-4 rounded-full text-[10px] sm:text-xs font-black tracking-wide transition-all uppercase cursor-pointer flex-1 flex items-center justify-center gap-2 ${
-                      isSelected
+                    className={`py-2.5 px-4 rounded-full text-[10px] sm:text-xs font-black tracking-wide transition-all uppercase cursor-pointer flex-1 flex items-center justify-center gap-2 ${isSelected
                         ? `${item.activeBg} transform scale-[1.01]`
                         : 'bg-transparent text-slate-600 dark:text-slate-350 hover:text-slate-900 dark:hover:text-white hover:bg-white/60 dark:hover:bg-slate-700/60'
-                    }`}
+                      }`}
                   >
                     <IconComponent className={`w-3.5 h-3.5 shrink-0 ${isSelected ? 'text-white' : 'text-slate-450 dark:text-slate-400'}`} />
                     <span className="font-extrabold">{item.label}</span>
@@ -1766,7 +1759,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                         <span>{currentPage.konuNo}. Konu — {currentPage.baslik}</span>
                         <span className={`transition-transform duration-200 text-[10px] ${isElifbaDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
                       </button>
-                      
+
                       <AnimatePresence>
                         {isElifbaDropdownOpen && (
                           <motion.div
@@ -1783,13 +1776,12 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                                   onClick={() => {
                                     setCurrentPageIndex(idx);
                                     setIsElifbaDropdownOpen(false);
-                                   
+
                                   }}
-                                  className={`w-full text-left px-4 py-3 text-xs font-semibold hover:bg-slate-50 dark:hover:bg-slate-700/50 border-b border-slate-100 dark:border-slate-700/40 flex items-center justify-between ${
-                                    isSelected 
-                                      ? 'bg-teal-50/50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-400 font-bold' 
+                                  className={`w-full text-left px-4 py-3 text-xs font-semibold hover:bg-slate-50 dark:hover:bg-slate-700/50 border-b border-slate-100 dark:border-slate-700/40 flex items-center justify-between ${isSelected
+                                      ? 'bg-teal-50/50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-400 font-bold'
                                       : 'text-slate-700 dark:text-slate-200'
-                                  }`}
+                                    }`}
                                 >
                                   <span>{p.konuNo}. Konu (Sf. {p.sayfaNo}) — {p.baslik}</span>
                                   {isSelected && <span className="text-teal-600 dark:text-teal-400">✓</span>}
@@ -1805,16 +1797,15 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => {
-                         
+
                           if (setIsFocused) {
                             setIsFocused(!isFocused);
                           }
                         }}
-                        className={`px-4 py-2.5 rounded-xl border-2 transition-all cursor-pointer flex items-center gap-1.5 font-black text-xs ${
-                          isFocused
+                        className={`px-4 py-2.5 rounded-xl border-2 transition-all cursor-pointer flex items-center gap-1.5 font-black text-xs ${isFocused
                             ? 'bg-amber-500 border-amber-600 text-white hover:bg-amber-650'
                             : 'border-slate-200 dark:border-slate-500 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-650'
-                        }`}
+                          }`}
                         title={isFocused ? 'Normal Ekrana Dön (Menüyü Göster)' : 'Tam Ekran Modu (Menüyü Gizle)'}
                       >
                         {isFocused ? <Minimize2 className="w-4.5 h-4.5" /> : <Maximize2 className="w-4.5 h-4.5" />}
@@ -1847,7 +1838,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                 </div>
 
                 {/* Page Content with Swipe / Drag Gestures */}
-                <div 
+                <div
                   onTouchStart={(e) => handleSwipeStart(e.touches[0].clientX)}
                   onTouchMove={(e) => handleSwipeMove(e.touches[0].clientX)}
                   onTouchEnd={() => handleSwipeEnd('elifba')}
@@ -1976,15 +1967,14 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                             key={card.id}
                             onClick={() => handleMemoryCardClick(card.id)}
                             disabled={isMatched || memoryLocked}
-                            className={`relative aspect-square rounded-2xl border-3 flex items-center justify-center transition-all cursor-pointer ${
-                              isMatched
+                            className={`relative aspect-square rounded-2xl border-3 flex items-center justify-center transition-all cursor-pointer ${isMatched
                                 ? 'bg-emerald-50 dark:bg-emerald-900/20 border-emerald-300 dark:border-emerald-700 opacity-60'
                                 : showFace
                                   ? card.type === 'letter'
                                     ? 'bg-indigo-50 dark:bg-indigo-900/20 border-indigo-400 dark:border-indigo-600 shadow-md -translate-y-1'
                                     : 'bg-amber-50 dark:bg-amber-900/20 border-amber-400 dark:border-amber-600 shadow-md -translate-y-1'
                                   : 'bg-slate-100 dark:bg-slate-700 border-slate-200 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-600 hover:border-slate-300 dark:hover:border-slate-500 hover:-translate-y-0.5'
-                            }`}
+                              }`}
                           >
                             <AnimatePresence mode="wait">
                               {showFace ? (
@@ -1996,11 +1986,10 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                                   transition={{ duration: 0.2 }}
                                   className="flex flex-col items-center gap-1"
                                 >
-                                  <span className={`font-bold select-none ${
-                                    card.type === 'letter'
+                                  <span className={`font-bold select-none ${card.type === 'letter'
                                       ? 'text-3xl text-indigo-700 dark:text-indigo-300'
                                       : 'text-sm text-amber-700 dark:text-amber-300'
-                                  }`}>
+                                    }`}>
                                     {card.content}
                                   </span>
                                   {isMatched && <CheckCircle className="w-4 h-4 text-emerald-500" />}
@@ -2077,167 +2066,167 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                       </p>
                     </div>
                   ) :
-                  quizFinished ? (
-                    /* ── SONUÇ EKRANI ── */
-                    <div className="text-center py-8">
-                      <motion.div
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        transition={{ type: 'spring', stiffness: 200 }}
-                        className="w-24 h-24 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center text-5xl mx-auto mb-6 shadow-xl"
-                      >
-                        🏆
-                      </motion.div>
-                      <h3 className="font-display font-black text-2xl text-slate-800 dark:text-slate-100 mb-2">Tebrikler!</h3>
-                      <p className="text-sm text-slate-500 dark:text-slate-400 font-medium mb-8">Bulmaca turu tamamlandı!</p>
+                    quizFinished ? (
+                      /* ── SONUÇ EKRANI ── */
+                      <div className="text-center py-8">
+                        <motion.div
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ type: 'spring', stiffness: 200 }}
+                          className="w-24 h-24 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center text-5xl mx-auto mb-6 shadow-xl"
+                        >
+                          🏆
+                        </motion.div>
+                        <h3 className="font-display font-black text-2xl text-slate-800 dark:text-slate-100 mb-2">Tebrikler!</h3>
+                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium mb-8">Bulmaca turu tamamlandı!</p>
 
-                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-lg mx-auto mb-8">
-                        <div className="bg-emerald-50 dark:bg-emerald-900/20 border-2 border-emerald-200 dark:border-emerald-800 rounded-2xl p-4">
-                          <div className="text-2xl font-black text-emerald-600 dark:text-emerald-400">{quizScore}</div>
-                          <div className="text-[10px] font-black text-emerald-800 dark:text-emerald-300 uppercase tracking-widest mt-1">TOPLAM PUAN</div>
-                        </div>
-                        <div className="bg-sky-50 dark:bg-sky-900/20 border-2 border-sky-200 dark:border-sky-800 rounded-2xl p-4">
-                          <div className="text-2xl font-black text-sky-600 dark:text-sky-400">{quizCorrect}/{QUIZ_TOTAL_ROUNDS}</div>
-                          <div className="text-[10px] font-black text-sky-800 dark:text-sky-300 uppercase tracking-widest mt-1">DOĞRU</div>
-                        </div>
-                        <div className="bg-rose-50 dark:bg-rose-900/20 border-2 border-rose-200 dark:border-rose-800 rounded-2xl p-4">
-                          <div className="text-2xl font-black text-rose-600 dark:text-rose-400">{quizWrong}</div>
-                          <div className="text-[10px] font-black text-rose-800 dark:text-rose-300 uppercase tracking-widest mt-1">YANLIŞ</div>
-                        </div>
-                        <div className="bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-200 dark:border-amber-800 rounded-2xl p-4">
-                          <div className="text-2xl font-black text-amber-600 dark:text-amber-400">🔥 {quizBestStreak}</div>
-                          <div className="text-[10px] font-black text-amber-800 dark:text-amber-300 uppercase tracking-widest mt-1">EN İYİ SERİ</div>
-                        </div>
-                      </div>
-
-                      {/* Grade */}
-                      <div className="mb-6">
-                        {quizCorrect >= 9 ? (
-                          <span className="text-lg font-black text-emerald-600 dark:text-emerald-400">⭐ MÜKEMMEL! Elif-Ba Ustası! ⭐</span>
-                        ) : quizCorrect >= 7 ? (
-                          <span className="text-lg font-black text-sky-600 dark:text-sky-400">👏 Çok İyi! Harika gidiyorsun!</span>
-                        ) : quizCorrect >= 5 ? (
-                          <span className="text-lg font-black text-amber-600 dark:text-amber-400">💪 İyi! Biraz daha pratik yapmalısın.</span>
-                        ) : (
-                          <span className="text-lg font-black text-rose-600 dark:text-rose-400">📚 Tekrar çalışmalısın, pes etme!</span>
-                        )}
-                      </div>
-
-                      <div className="flex items-center justify-center gap-3">
-                        <button onClick={() => startQuizWithMode('isim-bul')} className="btn-game-primary text-xs">
-                          <RotateCcw className="w-4 h-4" /> İsim Bul Modu
-                        </button>
-                        <button onClick={() => startQuizWithMode('harf-bul')} className="btn-game-secondary text-xs">
-                          <RotateCcw className="w-4 h-4" /> Harf Bul Modu
-                        </button>
-                      </div>
-                    </div>
-                  ) : quizLetter ? (
-                    /* ── OYUN EKRANI ── */
-                    <div>
-                      {/* Top Stats Bar */}
-                      <div className="flex items-center justify-between mb-5 pb-4 border-b-2 border-slate-100 dark:border-slate-700">
-                        <div className="flex items-center gap-4">
-                          <div className="flex items-center gap-1.5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-200 dark:border-amber-700 px-3 py-1.5 rounded-xl">
-                            <Trophy className="w-4 h-4 text-amber-500" />
-                            <span className="font-black text-sm text-amber-700 dark:text-amber-300">{quizScore}</span>
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-lg mx-auto mb-8">
+                          <div className="bg-emerald-50 dark:bg-emerald-900/20 border-2 border-emerald-200 dark:border-emerald-800 rounded-2xl p-4">
+                            <div className="text-2xl font-black text-emerald-600 dark:text-emerald-400">{quizScore}</div>
+                            <div className="text-[10px] font-black text-emerald-800 dark:text-emerald-300 uppercase tracking-widest mt-1">TOPLAM PUAN</div>
                           </div>
-                          {quizStreak >= 2 && (
-                            <motion.div
-                              initial={{ scale: 0 }}
-                              animate={{ scale: 1 }}
-                              className="flex items-center gap-1 bg-orange-50 dark:bg-orange-900/20 border-2 border-orange-200 dark:border-orange-700 px-3 py-1.5 rounded-xl"
-                            >
-                              <Zap className="w-4 h-4 text-orange-500" />
-                              <span className="font-black text-sm text-orange-700 dark:text-orange-300">{quizStreak}x Seri!</span>
-                            </motion.div>
+                          <div className="bg-sky-50 dark:bg-sky-900/20 border-2 border-sky-200 dark:border-sky-800 rounded-2xl p-4">
+                            <div className="text-2xl font-black text-sky-600 dark:text-sky-400">{quizCorrect}/{QUIZ_TOTAL_ROUNDS}</div>
+                            <div className="text-[10px] font-black text-sky-800 dark:text-sky-300 uppercase tracking-widest mt-1">DOĞRU</div>
+                          </div>
+                          <div className="bg-rose-50 dark:bg-rose-900/20 border-2 border-rose-200 dark:border-rose-800 rounded-2xl p-4">
+                            <div className="text-2xl font-black text-rose-600 dark:text-rose-400">{quizWrong}</div>
+                            <div className="text-[10px] font-black text-rose-800 dark:text-rose-300 uppercase tracking-widest mt-1">YANLIŞ</div>
+                          </div>
+                          <div className="bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-200 dark:border-amber-800 rounded-2xl p-4">
+                            <div className="text-2xl font-black text-amber-600 dark:text-amber-400">🔥 {quizBestStreak}</div>
+                            <div className="text-[10px] font-black text-amber-800 dark:text-amber-300 uppercase tracking-widest mt-1">EN İYİ SERİ</div>
+                          </div>
+                        </div>
+
+                        {/* Grade */}
+                        <div className="mb-6">
+                          {quizCorrect >= 9 ? (
+                            <span className="text-lg font-black text-emerald-600 dark:text-emerald-400">⭐ MÜKEMMEL! Elif-Ba Ustası! ⭐</span>
+                          ) : quizCorrect >= 7 ? (
+                            <span className="text-lg font-black text-sky-600 dark:text-sky-400">👏 Çok İyi! Harika gidiyorsun!</span>
+                          ) : quizCorrect >= 5 ? (
+                            <span className="text-lg font-black text-amber-600 dark:text-amber-400">💪 İyi! Biraz daha pratik yapmalısın.</span>
+                          ) : (
+                            <span className="text-lg font-black text-rose-600 dark:text-rose-400">📚 Tekrar çalışmalısın, pes etme!</span>
                           )}
                         </div>
-                        <div className="flex items-center gap-3">
-                          <div className="flex items-center gap-1.5">
-                            <CheckCircle className="w-4 h-4 text-emerald-500" />
-                            <span className="font-black text-xs text-emerald-700 dark:text-emerald-400">{quizCorrect}</span>
-                          </div>
-                          <div className="flex items-center gap-1.5">
-                            <XCircle className="w-4 h-4 text-rose-500" />
-                            <span className="font-black text-xs text-rose-700 dark:text-rose-400">{quizWrong}</span>
-                          </div>
+
+                        <div className="flex items-center justify-center gap-3">
+                          <button onClick={() => startQuizWithMode('isim-bul')} className="btn-game-primary text-xs">
+                            <RotateCcw className="w-4 h-4" /> İsim Bul Modu
+                          </button>
+                          <button onClick={() => startQuizWithMode('harf-bul')} className="btn-game-secondary text-xs">
+                            <RotateCcw className="w-4 h-4" /> Harf Bul Modu
+                          </button>
                         </div>
                       </div>
-
-                      {/* Progress Bar */}
-                      <div className="mb-6">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest">
-                            {quizMode === 'isim-bul' ? '📝 HARFİN İSMİNİ BUL' : '🔤 İSMİN HARFİNİ BUL'}
-                          </span>
-                          <span className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase">
-                            TUR {quizRound}/{QUIZ_TOTAL_ROUNDS}
-                          </span>
-                        </div>
-                        <div className="w-full h-2.5 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
-                          <motion.div
-                            className="h-full bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full"
-                            initial={{ width: 0 }}
-                            animate={{ width: `${(quizRound / QUIZ_TOTAL_ROUNDS) * 100}%` }}
-                            transition={{ duration: 0.5 }}
-                          />
-                        </div>
-                      </div>
-
-                      {/* Question Card */}
-                      <div className="text-center mb-8">
-                        <AnimatePresence mode="wait">
-                          <motion.div
-                            key={quizLetter.char + quizRound}
-                            initial={{ opacity: 0, scale: 0.8, rotateY: 90 }}
-                            animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-                            exit={{ opacity: 0, scale: 0.8, rotateY: -90 }}
-                            transition={{ duration: 0.3 }}
-                            className="inline-flex items-center justify-center w-32 h-32 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-[2rem] text-white shadow-xl mb-4"
-                          >
-                            {quizMode === 'isim-bul' ? (
-                              <span className="text-6xl font-bold select-none">{quizLetter.char}</span>
-                            ) : (
-                              <span className="text-2xl font-black select-none">{quizLetter.turkishName}</span>
+                    ) : quizLetter ? (
+                      /* ── OYUN EKRANI ── */
+                      <div>
+                        {/* Top Stats Bar */}
+                        <div className="flex items-center justify-between mb-5 pb-4 border-b-2 border-slate-100 dark:border-slate-700">
+                          <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-1.5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-200 dark:border-amber-700 px-3 py-1.5 rounded-xl">
+                              <Trophy className="w-4 h-4 text-amber-500" />
+                              <span className="font-black text-sm text-amber-700 dark:text-amber-300">{quizScore}</span>
+                            </div>
+                            {quizStreak >= 2 && (
+                              <motion.div
+                                initial={{ scale: 0 }}
+                                animate={{ scale: 1 }}
+                                className="flex items-center gap-1 bg-orange-50 dark:bg-orange-900/20 border-2 border-orange-200 dark:border-orange-700 px-3 py-1.5 rounded-xl"
+                              >
+                                <Zap className="w-4 h-4 text-orange-500" />
+                                <span className="font-black text-sm text-orange-700 dark:text-orange-300">{quizStreak}x Seri!</span>
+                              </motion.div>
                             )}
-                          </motion.div>
-                        </AnimatePresence>
-                        <p className="text-sm font-bold text-slate-600 dark:text-slate-400">
-                          {quizMode === 'isim-bul'
-                            ? 'Bu harfin doğru ismi hangisidir?'
-                            : 'Bu ismin doğru harfi hangisidir?'
-                          }
-                        </p>
-                      </div>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="flex items-center gap-1.5">
+                              <CheckCircle className="w-4 h-4 text-emerald-500" />
+                              <span className="font-black text-xs text-emerald-700 dark:text-emerald-400">{quizCorrect}</span>
+                            </div>
+                            <div className="flex items-center gap-1.5">
+                              <XCircle className="w-4 h-4 text-rose-500" />
+                              <span className="font-black text-xs text-rose-700 dark:text-rose-400">{quizWrong}</span>
+                            </div>
+                          </div>
+                        </div>
 
-                      {/* Options */}
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto">
-                        {quizOptions.map((opt) => {
-                          const isCorrectAnswer = quizLetter && opt.char === quizLetter.char;
-                          const isThisSelected = quizSelectedChar === opt.char;
-                          let optionStyle = 'bg-white dark:bg-slate-700 border-slate-200 dark:border-slate-500 text-slate-800 dark:text-slate-100 hover:border-indigo-400 dark:hover:border-indigo-500 hover:bg-indigo-50/50 dark:hover:bg-indigo-900/20';
+                        {/* Progress Bar */}
+                        <div className="mb-6">
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest">
+                              {quizMode === 'isim-bul' ? '📝 HARFİN İSMİNİ BUL' : '🔤 İSMİN HARFİNİ BUL'}
+                            </span>
+                            <span className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase">
+                              TUR {quizRound}/{QUIZ_TOTAL_ROUNDS}
+                            </span>
+                          </div>
+                          <div className="w-full h-2.5 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                            <motion.div
+                              className="h-full bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full"
+                              initial={{ width: 0 }}
+                              animate={{ width: `${(quizRound / QUIZ_TOTAL_ROUNDS) * 100}%` }}
+                              transition={{ duration: 0.5 }}
+                            />
+                          </div>
+                        </div>
 
-                          if (quizFeedback && isCorrectAnswer) {
-                            optionStyle = 'bg-emerald-50 dark:bg-emerald-900/30 border-emerald-500 text-emerald-800 dark:text-emerald-200 shadow-[0_0_12px_rgba(16,185,129,0.3)]';
-                          } else if (quizFeedback === 'wrong' && isThisSelected) {
-                            optionStyle = 'bg-rose-50 dark:bg-rose-900/30 border-rose-500 text-rose-800 dark:text-rose-200 shadow-[0_0_12px_rgba(244,63,94,0.3)]';
-                          }
-
-                          return (
-                            <button
-                              key={opt.char}
-                              onClick={() => handleQuizAnswer(opt)}
-                              disabled={quizFeedback !== null}
-                              className={`border-3 font-display font-black p-5 rounded-2xl text-base transition-all cursor-pointer shadow-sm disabled:cursor-default ${optionStyle}`}
+                        {/* Question Card */}
+                        <div className="text-center mb-8">
+                          <AnimatePresence mode="wait">
+                            <motion.div
+                              key={quizLetter.char + quizRound}
+                              initial={{ opacity: 0, scale: 0.8, rotateY: 90 }}
+                              animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+                              exit={{ opacity: 0, scale: 0.8, rotateY: -90 }}
+                              transition={{ duration: 0.3 }}
+                              className="inline-flex items-center justify-center w-32 h-32 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-[2rem] text-white shadow-xl mb-4"
                             >
-                              {quizMode === 'isim-bul' ? opt.turkishName : opt.char}
-                            </button>
-                          );
-                        })}
+                              {quizMode === 'isim-bul' ? (
+                                <span className="text-6xl font-bold select-none">{quizLetter.char}</span>
+                              ) : (
+                                <span className="text-2xl font-black select-none">{quizLetter.turkishName}</span>
+                              )}
+                            </motion.div>
+                          </AnimatePresence>
+                          <p className="text-sm font-bold text-slate-600 dark:text-slate-400">
+                            {quizMode === 'isim-bul'
+                              ? 'Bu harfin doğru ismi hangisidir?'
+                              : 'Bu ismin doğru harfi hangisidir?'
+                            }
+                          </p>
+                        </div>
+
+                        {/* Options */}
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto">
+                          {quizOptions.map((opt) => {
+                            const isCorrectAnswer = quizLetter && opt.char === quizLetter.char;
+                            const isThisSelected = quizSelectedChar === opt.char;
+                            let optionStyle = 'bg-white dark:bg-slate-700 border-slate-200 dark:border-slate-500 text-slate-800 dark:text-slate-100 hover:border-indigo-400 dark:hover:border-indigo-500 hover:bg-indigo-50/50 dark:hover:bg-indigo-900/20';
+
+                            if (quizFeedback && isCorrectAnswer) {
+                              optionStyle = 'bg-emerald-50 dark:bg-emerald-900/30 border-emerald-500 text-emerald-800 dark:text-emerald-200 shadow-[0_0_12px_rgba(16,185,129,0.3)]';
+                            } else if (quizFeedback === 'wrong' && isThisSelected) {
+                              optionStyle = 'bg-rose-50 dark:bg-rose-900/30 border-rose-500 text-rose-800 dark:text-rose-200 shadow-[0_0_12px_rgba(244,63,94,0.3)]';
+                            }
+
+                            return (
+                              <button
+                                key={opt.char}
+                                onClick={() => handleQuizAnswer(opt)}
+                                disabled={quizFeedback !== null}
+                                className={`border-3 font-display font-black p-5 rounded-2xl text-base transition-all cursor-pointer shadow-sm disabled:cursor-default ${optionStyle}`}
+                              >
+                                {quizMode === 'isim-bul' ? opt.turkishName : opt.char}
+                              </button>
+                            );
+                          })}
+                        </div>
                       </div>
-                    </div>
-                  ) : null}
+                    ) : null}
                 </div>
               </motion.div>
             )}
@@ -2252,26 +2241,24 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
           >
             {/* Sidebar (Col 4) */}
             <div className="lg:col-span-4 bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-600 rounded-[2rem] p-5 shadow-sm h-[650px] flex flex-col">
-              
+
               {/* View Mode Toggle: Mushaf vs Meal */}
               <div className="flex gap-1.5 mb-4 bg-slate-50 dark:bg-slate-700/50 p-1.5 rounded-2xl border border-slate-100 dark:border-slate-600 select-none">
                 <button
                   onClick={() => { setQuranViewMode('mushaf'); }}
-                  className={`flex-1 py-2.5 rounded-xl text-[10px] font-black tracking-wide uppercase transition-all cursor-pointer ${
-                    quranViewMode === 'mushaf'
+                  className={`flex-1 py-2.5 rounded-xl text-[10px] font-black tracking-wide uppercase transition-all cursor-pointer ${quranViewMode === 'mushaf'
                       ? 'bg-emerald-500 text-white shadow-sm'
                       : 'text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200'
-                  }`}
+                    }`}
                 >
                   MUSHAF
                 </button>
                 <button
                   onClick={() => { setQuranViewMode('meal'); }}
-                  className={`flex-1 py-2.5 rounded-xl text-[10px] font-black tracking-wide uppercase transition-all cursor-pointer ${
-                    quranViewMode === 'meal'
+                  className={`flex-1 py-2.5 rounded-xl text-[10px] font-black tracking-wide uppercase transition-all cursor-pointer ${quranViewMode === 'meal'
                       ? 'bg-emerald-500 text-white shadow-sm'
                       : 'text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200'
-                  }`}
+                    }`}
                 >
                   MEAL
                 </button>
@@ -2280,7 +2267,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
               {quranViewMode === 'mushaf' ? (
                 <>
                   <span className="text-xs font-black text-slate-500 dark:text-slate-400 uppercase tracking-wider block mb-3 pl-1">📖 MUSHAF CÜZ VE SAYFALARI</span>
-                  
+
                   {/* Search input for Mushaf */}
                   <div className="relative mb-3">
                     <input
@@ -2323,7 +2310,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                               handleSelectMushafPage(getJuzStartPage(res.value));
                               setOpenJuzIndex(res.value);
                             }
-                           
+
                           }}
                           className="w-full text-left py-2 px-3 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-650 rounded-xl text-xs font-black text-slate-800 dark:text-slate-200 hover:border-emerald-500 transition-all cursor-pointer flex items-center gap-1.5 shadow-sm"
                         >
@@ -2341,21 +2328,19 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                   <div className="flex gap-1.5 mb-3 bg-slate-50 dark:bg-slate-700/50 p-1.5 rounded-2xl border border-slate-100 dark:border-slate-600 select-none shrink-0">
                     <button
                       onClick={() => { setMushafListMode('juz'); }}
-                      className={`flex-1 py-1.5 rounded-xl text-[9px] font-black tracking-wider uppercase transition-all cursor-pointer ${
-                        mushafListMode === 'juz'
+                      className={`flex-1 py-1.5 rounded-xl text-[9px] font-black tracking-wider uppercase transition-all cursor-pointer ${mushafListMode === 'juz'
                           ? 'bg-slate-700 dark:bg-slate-600 text-white shadow-sm'
                           : 'text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200'
-                      }`}
+                        }`}
                     >
                       CÜZ LİSTESİ
                     </button>
                     <button
                       onClick={() => { setMushafListMode('surah'); }}
-                      className={`flex-1 py-1.5 rounded-xl text-[9px] font-black tracking-wider uppercase transition-all cursor-pointer ${
-                        mushafListMode === 'surah'
+                      className={`flex-1 py-1.5 rounded-xl text-[9px] font-black tracking-wider uppercase transition-all cursor-pointer ${mushafListMode === 'surah'
                           ? 'bg-slate-700 dark:bg-slate-600 text-white shadow-sm'
                           : 'text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200'
-                      }`}
+                        }`}
                     >
                       SÛRE LİSTESİ
                     </button>
@@ -2368,7 +2353,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                         const filteredJuzList = Array.from({ length: 30 }, (_, i) => i + 1).filter(juzNum => {
                           const q = searchQuery.toLowerCase().trim();
                           if (!q) return true;
-                          
+
                           const isNum = /^\d+$/.test(q);
                           if (isNum) {
                             const num = parseInt(q, 10);
@@ -2378,48 +2363,46 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                               return juzNum === pageJuz;
                             }
                           }
-                          
+
                           const cuzMatch = q.match(/c(?:ü|u)z\s*(\d+)/) || q.match(/(\d+)\s*\.?\s*c(?:ü|u)z/);
                           if (cuzMatch) {
                             const num = parseInt(cuzMatch[1], 10);
                             return juzNum === num;
                           }
-                          
+
                           return true;
                         });
 
                         return filteredJuzList.map((juzNum) => {
                           const isOpen = openJuzIndex === juzNum;
                           const { start, end } = getJuzPageRange(juzNum);
-                          
+
                           return (
                             <div key={juzNum} className="border border-slate-100 dark:border-slate-700 rounded-xl overflow-hidden shadow-sm">
                               <button
                                 onClick={() => {
                                   setOpenJuzIndex(isOpen ? null : juzNum);
-                                 
+
                                 }}
-                                className={`w-full p-3 text-left font-display font-black text-xs flex items-center justify-between transition-colors ${
-                                  isOpen 
-                                    ? 'bg-emerald-50/50 dark:bg-emerald-950/20 text-emerald-800 dark:text-emerald-300' 
+                                className={`w-full p-3 text-left font-display font-black text-xs flex items-center justify-between transition-colors ${isOpen
+                                    ? 'bg-emerald-50/50 dark:bg-emerald-950/20 text-emerald-800 dark:text-emerald-300'
                                     : 'bg-slate-50/50 dark:bg-slate-700 hover:bg-slate-100/60 dark:hover:bg-slate-650 text-slate-700 dark:text-slate-200'
-                                }`}
+                                  }`}
                               >
                                 <span>{juzNum}. CÜZ</span>
                                 <span className="text-[10px] opacity-70 font-semibold">Sayfa {start}-{end}</span>
                               </button>
-                              
+
                               {isOpen && (
                                 <div className="p-3 bg-slate-50/50 dark:bg-slate-700/30 grid grid-cols-5 gap-1.5 border-t border-slate-100 dark:border-slate-700/80">
                                   {Array.from({ length: end - start + 1 }, (_, i) => start + i).map((pNum) => (
                                     <button
                                       key={pNum}
                                       onClick={() => { handleSelectMushafPage(pNum); }}
-                                      className={`py-2 text-[10px] font-black rounded-lg border-2 cursor-pointer transition-all ${
-                                        mushafPage === pNum
+                                      className={`py-2 text-[10px] font-black rounded-lg border-2 cursor-pointer transition-all ${mushafPage === pNum
                                           ? 'bg-emerald-500 border-emerald-600 text-white shadow-sm'
                                           : 'bg-white dark:bg-slate-700 border-slate-100 dark:border-slate-650 text-slate-650 dark:text-slate-300 hover:border-slate-350 dark:hover:border-slate-500'
-                                      }`}
+                                        }`}
                                     >
                                       {pNum}
                                     </button>
@@ -2435,26 +2418,25 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                       surahsList.filter(s => {
                         const q = searchQuery.toLowerCase().trim();
                         const turkceName = getTurkceSureIsmi(s.number).toLowerCase();
-                        return turkceName.includes(q) || 
-                          s.englishName.toLowerCase().includes(q) || 
+                        return turkceName.includes(q) ||
+                          s.englishName.toLowerCase().includes(q) ||
                           s.number.toString() === q;
                       }).map((surah) => {
                         const startPage = SURAH_START_PAGES[surah.number] || 1;
                         const isCurrentlyOnThisSurahStartPage = mushafPage === startPage;
-                        
+
                         return (
                           <button
                             key={surah.number}
                             onClick={() => {
                               handleSelectMushafPage(startPage);
                               setSelectedSurah(surah); // Also set active surah meta
-                             
+
                             }}
-                            className={`w-full p-3.5 rounded-xl border-2 cursor-pointer flex items-center justify-between transition-all ${
-                              isCurrentlyOnThisSurahStartPage
+                            className={`w-full p-3.5 rounded-xl border-2 cursor-pointer flex items-center justify-between transition-all ${isCurrentlyOnThisSurahStartPage
                                 ? 'bg-emerald-50 dark:bg-emerald-900/30 border-emerald-500 text-emerald-900 dark:text-emerald-200 shadow-sm'
                                 : 'bg-white dark:bg-slate-700 border-slate-100 dark:border-slate-600 hover:border-slate-350 dark:hover:border-slate-500 text-slate-700 dark:text-slate-200'
-                            }`}
+                              }`}
                           >
                             <div className="flex items-center gap-3">
                               <span className={`w-7 h-7 rounded-lg text-[10px] font-black flex items-center justify-center ${isCurrentlyOnThisSurahStartPage ? 'bg-emerald-500 text-white' : 'bg-slate-100 dark:bg-slate-650 text-slate-500 dark:text-slate-300'}`}>
@@ -2476,7 +2458,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                 // MEAL mode sidebar (standard Surah list selector)
                 <>
                   <span className="text-xs font-black text-slate-500 dark:text-slate-400 uppercase tracking-wider block mb-3 pl-1">📚 MEAL SÛRE SEÇİM KÜTÜPHANESİ</span>
-                  
+
                   {/* Search input for Meal */}
                   <div className="relative mb-3">
                     <input
@@ -2505,8 +2487,8 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                       {surahsList.filter(s => {
                         const q = searchQuery.toLowerCase().trim();
                         const turkceName = getTurkceSureIsmi(s.number).toLowerCase();
-                        return turkceName.includes(q) || 
-                          s.englishName.toLowerCase().includes(q) || 
+                        return turkceName.includes(q) ||
+                          s.englishName.toLowerCase().includes(q) ||
                           s.number.toString() === q;
                       }).map((surah) => {
                         const isSelected = selectedSurah?.number === surah.number;
@@ -2514,11 +2496,10 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                           <button
                             key={surah.number}
                             onClick={() => { handleSelectSurah(surah); }}
-                            className={`w-full p-3.5 rounded-xl border-2 cursor-pointer flex items-center justify-between transition-all ${
-                              isSelected
+                            className={`w-full p-3.5 rounded-xl border-2 cursor-pointer flex items-center justify-between transition-all ${isSelected
                                 ? 'bg-emerald-50 dark:bg-emerald-900/30 border-emerald-500 text-emerald-900 dark:text-emerald-200 shadow-sm'
                                 : 'bg-white dark:bg-slate-700 border-slate-100 dark:border-slate-600 hover:border-slate-350 dark:hover:border-slate-500 text-slate-700 dark:text-slate-200'
-                            }`}
+                              }`}
                           >
                             <div className="flex items-center gap-3">
                               <span className={`w-7 h-7 rounded-lg text-xs font-black flex items-center justify-center ${isSelected ? 'bg-emerald-500 text-white' : 'bg-slate-100 dark:bg-slate-650 text-slate-500 dark:text-slate-300'}`}>
@@ -2549,7 +2530,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                   </div>
                 ) : selectedSurah ? (
                   <div className="bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-600 rounded-[2rem] p-6 shadow-sm flex flex-col h-[650px]">
-                    
+
                     {/* Surah Header & Recital Controls */}
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b-2 border-slate-100 dark:border-slate-700 pb-4 mb-4 gap-4">
                       <div className="flex items-center gap-3">
@@ -2566,7 +2547,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                         <button
                           onClick={() => {
                             setIsFullscreenQuran(true);
-                           
+
                             if (selectedSurah?.number !== 9 && basmalaAnimData) {
                               setShowFullscreenBasmalaIntro(true);
                               playBasmalaIntroAudio();
@@ -2592,10 +2573,10 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                         <div className="p-4 sm:p-6 bg-slate-50/70 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-650 rounded-2xl">
                           {selectedSurah.number !== 1 && selectedSurah.number !== 9 && (
                             <div className="text-center py-4 mb-6 text-xl font-bold arabic-text text-emerald-700/80 dark:text-emerald-400/80 tracking-wide font-serif border-b border-dashed border-slate-150 dark:border-slate-600 select-none">
-                              بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ
+                              بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحيمِ
                             </div>
                           )}
-                          <div 
+                          <div
                             className="text-right text-3xl sm:text-4xl leading-[2.3] sm:leading-[2.5] font-serif text-slate-900 dark:text-slate-100 font-extrabold tracking-wide select-text whitespace-normal"
                             dir="rtl"
                             style={{ fontFamily: "'Amiri', 'Traditional Arabic', 'Noto Naskh Arabic', serif", wordSpacing: '2px' }}
@@ -2614,7 +2595,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                         /* Meal Modu: Turkish translation only (no Arabic) */
                         <div className="space-y-3">
                           {selectedSurah.verses?.map((verse) => (
-                            <div 
+                            <div
                               key={verse.number}
                               className="p-4 bg-slate-50/50 dark:bg-slate-700/30 border border-slate-100 dark:border-slate-700 rounded-xl"
                             >
@@ -2658,7 +2639,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                           {isMobile ? `Sayfa ${mushafPage}` : `${rightPageNum}. ve ${leftPageNum}. Sayfalar`}
                         </span>
                       </div>
-                      
+
                       <div className="flex items-center gap-2">
                         {/* Left navigation arrow: Sonraki (moves left, page increases in RTL) */}
                         <button
@@ -2668,7 +2649,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                             } else {
                               if (leftPageNum < 604) handleSelectMushafPage(rightPageNum + 2);
                             }
-                           
+
                           }}
                           disabled={isMobile ? mushafPage >= 604 : leftPageNum >= 604}
                           className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-650 rounded-xl text-slate-700 dark:text-slate-200 text-xs font-black flex items-center gap-1 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed border border-slate-250 dark:border-slate-600"
@@ -2680,7 +2661,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                         <button
                           onClick={() => {
                             setIsFullscreenQuran(true);
-                           
+
                             // Fullscreen intro plays Besmele if it's not Surah 9 Tevbe starting page (starts on p. 187)
                             if (rightPageNum !== 9 && basmalaAnimData) {
                               setShowFullscreenBasmalaIntro(true);
@@ -2721,7 +2702,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                             } else {
                               if (rightPageNum > 1) handleSelectMushafPage(rightPageNum - 2);
                             }
-                           
+
                           }}
                           disabled={isMobile ? mushafPage <= 1 : rightPageNum <= 1}
                           className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 rounded-xl text-slate-700 dark:text-slate-200 text-xs font-black flex items-center gap-1 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed border border-slate-250 dark:border-slate-600"
@@ -2733,7 +2714,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                     </div>
 
                     {/* Book Spread Container (Dual-Page) with Swipe / Drag Gestures */}
-                    <div 
+                    <div
                       onTouchStart={(e) => handleSwipeStart(e.touches[0].clientX)}
                       onTouchMove={(e) => handleSwipeMove(e.touches[0].clientX)}
                       onTouchEnd={() => handleSwipeEnd('kuran')}
@@ -2781,7 +2762,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
       {/* ═══ TAM EKRAN KUR'AN OKUTMA MODU ═══ */}
       {isFullscreenQuran && (
         <div className="fixed inset-0 z-[9999] bg-[#faf6ef] dark:bg-[#0d1117] flex flex-col" style={{ fontFamily: "'Amiri', 'Traditional Arabic', 'Noto Naskh Arabic', serif" }}>
-          
+
           {/* Besmele Lottie Intro overlay inside fullscreen */}
           <AnimatePresence>
             {showFullscreenBasmalaIntro && basmalaAnimData && (
@@ -2792,9 +2773,9 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                 className={`absolute inset-0 z-[10000] ${isDarkMode ? 'bg-[#0d1117]' : 'bg-[#faf6ef]'} flex flex-col items-center justify-center select-none`}
               >
                 <div className="w-[350px] h-[350px] sm:w-[550px] sm:h-[550px] flex items-center justify-center">
-                  <Lottie 
-                    animationData={basmalaAnimData} 
-                    loop={false} 
+                  <Lottie
+                    animationData={basmalaAnimData}
+                    loop={false}
                     style={{ filter: isDarkMode ? 'invert(1) brightness(1.2)' : 'none' }}
                     onComplete={() => {
                       if (basmalaSafetyTimerRef.current) clearTimeout(basmalaSafetyTimerRef.current);
@@ -2872,7 +2853,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                 </div>
               )}
             </div>
-            
+
             {/* Center section: Navigation */}
             <div className="flex items-center justify-center gap-3">
               {quranViewMode === 'mushaf' && (
@@ -2885,7 +2866,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                       } else {
                         if (leftPageNum < 604) handleSelectMushafPage(rightPageNum + 2);
                       }
-                     
+
                     }}
                     disabled={isMobile ? mushafPage >= 604 : leftPageNum >= 604}
                     className="px-3 py-2 rounded-xl bg-white/25 hover:bg-white/35 text-white text-xs font-black disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1.5 transition-all border border-white/10 active:scale-95"
@@ -2914,7 +2895,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                       } else {
                         if (rightPageNum > 1) handleSelectMushafPage(rightPageNum - 2);
                       }
-                     
+
                     }}
                     disabled={isMobile ? mushafPage <= 1 : rightPageNum <= 1}
                     className="px-3 py-2 rounded-xl bg-white/25 hover:bg-white/35 text-white text-xs font-black disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer flex items-center gap-1.5 transition-all border border-white/10 active:scale-95"
@@ -2949,9 +2930,9 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
               )}
 
               <button
-                onClick={() => { 
-                  setIsFullscreenQuran(false); 
-                  stopBasmalaIntroAudio(); 
+                onClick={() => {
+                  setIsFullscreenQuran(false);
+                  stopBasmalaIntroAudio();
                 }}
                 className="px-3 py-2 bg-rose-600 hover:bg-rose-700 text-white text-xs font-black uppercase tracking-wider rounded-xl transition-all hover:scale-105 active:scale-95 flex items-center gap-1.5 cursor-pointer shadow-md shadow-rose-600/20 border border-rose-700"
                 title="KÜÇÜLT"
@@ -2979,7 +2960,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
                 </div>
 
                 {selectedSurah?.verses?.map((verse) => (
-                  <div 
+                  <div
                     key={verse.number}
                     className="p-5 bg-white/80 dark:bg-slate-800/40 border border-slate-200/60 dark:border-slate-700 rounded-2xl flex flex-col gap-1.5"
                   >
@@ -2993,7 +2974,7 @@ export const KuranElifba: React.FC<KuranElifbaProps> = ({
             </div>
           ) : (
             /* Dual-Page Fullscreen Mushaf Layout with Swipe / Drag Gestures */
-            <div 
+            <div
               onTouchStart={(e) => handleSwipeStart(e.touches[0].clientX)}
               onTouchMove={(e) => handleSwipeMove(e.touches[0].clientX)}
               onTouchEnd={() => handleSwipeEnd('kuran')}
