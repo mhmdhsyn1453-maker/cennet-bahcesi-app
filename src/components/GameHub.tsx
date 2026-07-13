@@ -29,8 +29,7 @@ import { WordSearchGame } from './games/WordSearchGame';
 import { MillionaireQuizGame } from './games/MillionaireQuizGame';
 import { ChronologyGame } from './games/ChronologyGame';
 import { SoruCarkiGame } from './games/SoruCarkiGame';
-import { FallingWordsGame } from './games/FallingWordsGame';
-
+import { MazeRunnerGame } from './games/MazeRunnerGame';
 // Preset Takım Verileri (Akıllı Tahta uyumlu çocuk dostu renk ve ikonlarla)
 const TEAM_PRESETS = [
   { name: 'Endülüs Yıldızları', color: 'from-amber-400 to-orange-500', bgBorder: 'border-amber-400/50', textColor: 'text-amber-500', shadowColor: 'shadow-amber-500/20', icon: 'Star' },
@@ -200,7 +199,6 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
     { id: 'millionaire_quiz', title: 'Kim Milyoner Olmak İster?', desc: 'Zorluk seviyesine göre artan 15 soruluk dini bilgi yarışması merdiveni.', icon: <Trophy className="w-8 h-8 text-yellow-500" />, comingSoon: false },
     { id: 'chronology', title: 'Zaman Şeridi', desc: 'Dini olayları, ibadet aşamalarını ve peygamberler sıralamasını doğru sırayla diz.', icon: <Clock className="w-8 h-8 text-violet-500" />, comingSoon: false },
     { id: 'wheel_of_wisdom', title: 'Soru Çarkı', desc: 'Çarkıfeleği çevir, gelen kategorideki soruları doğru bilerek puanları topla.', icon: <Settings className="w-8 h-8 text-purple-500" />, comingSoon: false },
-    { id: 'falling_words', title: 'Kelime Avcısı (Hızlı Yazım)', desc: 'Yukarıdan düşen harfleri kelime tamamlanmadan önce sırayla vur.', icon: <Flame className="w-8 h-8 text-red-500" />, comingSoon: false },
     { id: 'maze_runner', title: 'Hazine Labirenti (Maze Quiz)', desc: 'Karakterini labirentte gezdir, doğru kapıya ulaşırken engelleri aş.', icon: <Compass className="w-8 h-8 text-emerald-600" />, comingSoon: false },
     { id: 'taboo_terms', title: 'Dini Terim Kartları (Tabu)', desc: 'Yasaklı kelimeleri kullanmadan gizli terimi arkadaşlarına anlat.', icon: <Users className="w-8 h-8 text-teal-600" />, comingSoon: false },
     { id: 'pair_matching', title: 'Eşini Bul (Kelime Eşleme)', desc: 'Kavramları sürükleyip ilgili oldukları başlıklarla eşleştir.', icon: <Trophy className="w-8 h-8 text-amber-500" />, comingSoon: false }
@@ -629,13 +627,13 @@ export const GameHub: React.FC<GameHubProps> = ({ isDarkMode = false }) => {
               {activeGame.id === 'wheel_of_wisdom' && (
                 <SoruCarkiGame isDarkMode={isDarkMode} />
               )}
-              {activeGame.id === 'falling_words' && (
-                <FallingWordsGame isDarkMode={isDarkMode} />
+               {activeGame.id === 'maze_runner' && (
+                <MazeRunnerGame isDarkMode={isDarkMode} />
               )}
-              {['maze_runner', 'taboo_terms', 'pair_matching', 'jeopardy_conquest', 'tug_of_war', 'word_bomb', 'buzzer_duel', 'chest_guardian', 'heaven_path'].includes(activeGame.id) && (
+              {['taboo_terms', 'pair_matching', 'jeopardy_conquest', 'tug_of_war', 'word_bomb', 'buzzer_duel', 'chest_guardian', 'heaven_path'].includes(activeGame.id) && (
                 <ComingSoonGame title={activeGame.title} isDarkMode={isDarkMode} />
               )}
-              {!['az_passaparola', 'mosque_hangman', 'memory_match', 'millionaire_quiz', 'word_search', 'chronology', 'wheel_of_wisdom', 'falling_words', 'maze_runner', 'taboo_terms', 'pair_matching', 'jeopardy_conquest', 'tug_of_war', 'word_bomb', 'buzzer_duel', 'chest_guardian', 'heaven_path'].includes(activeGame.id) && (
+              {!['az_passaparola', 'mosque_hangman', 'memory_match', 'millionaire_quiz', 'word_search', 'chronology', 'wheel_of_wisdom', 'maze_runner', 'taboo_terms', 'pair_matching', 'jeopardy_conquest', 'tug_of_war', 'word_bomb', 'buzzer_duel', 'chest_guardian', 'heaven_path'].includes(activeGame.id) && (
                 <div className="text-center flex flex-col items-center">
                   <div className="w-32 h-32 mb-4">
                     {titleAnimation && (
@@ -2205,305 +2203,7 @@ interface MysteryImage {
   wisdom: string;
 }
 
-// FallingWordsGame was moved to games/FallingWordsGame.tsx
-
-// ==========================================
-// 17. INDIVIDUAL GAME 13: 4 ŞIKLI BİLGİ TESTİ
-// ==========================================
-interface MazeQuestionGate {
-  row: number;
-  col: number;
-  question: UnifiedQuizQuestion;
-}
-
-const MazeRunnerGame: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
-  const [gameStatus, setGameStatus] = useState<'intro' | 'playing' | 'ended'>('intro');
-  const [playerPos, setPlayerPos] = useState<{ r: number; c: number }>({ r: 0, c: 0 });
-  const [gates, setGates] = useState<MazeQuestionGate[]>([]);
-  const [activeGate, setActiveGate] = useState<MazeQuestionGate | null>(null);
-  const [showAnswerResult, setShowAnswerResult] = useState<boolean>(false);
-  const [selectedOpt, setSelectedOpt] = useState<string | null>(null);
-  const [isAnswerCorrect, setIsAnswerCorrect] = useState<boolean>(false);
-
-  const gridSize = 6;
-
-  // Labirent Duvarları
-  const walls = [
-    '1_1', '2_1', '3_1', '1_3', '2_3', '3_3', '4_4', '4_3'
-  ];
-
-  // Oyunu Başlat
-  const handleStart = () => {
-    playSound('complete');
-    setPlayerPos({ r: 0, c: 0 });
-
-    // Soru kapılarını oluştur (farklı ve kullanılmamış sorular seç)
-    const pool = getCurriculumQuizQuestions();
-    const unusedPool = filterUnusedQuestions(pool);
-    const finalPool = unusedPool.length >= 2 ? unusedPool : pool;
-
-    // Karıştırıp iki farklı soru seçelim
-    const shuffled = shuffleArray(finalPool);
-    const g1: MazeQuestionGate = { row: 2, col: 2, question: shuffled[0] };
-    const g2: MazeQuestionGate = { row: 4, col: 2, question: shuffled[1] };
-
-    markQuestionAsUsed(shuffled[0].id);
-    markQuestionAsUsed(shuffled[1].id);
-
-    setGates([g1, g2]);
-    setActiveGate(null);
-    setShowAnswerResult(false);
-    setGameStatus('playing');
-  };
-
-  // Karakteri Hareket Ettir (Yön tuşları)
-  const handleMove = (direction: 'up' | 'down' | 'left' | 'right') => {
-    if (gameStatus !== 'playing' || activeGate) return;
-
-    let newR = playerPos.r;
-    let newC = playerPos.c;
-
-    if (direction === 'up') newR = playerPos.r - 1;
-    if (direction === 'down') newR = playerPos.r + 1;
-    if (direction === 'left') newC = playerPos.c - 1;
-    if (direction === 'right') newC = playerPos.c + 1;
-
-    // Limit kontrolü
-    if (newR < 0 || newR >= gridSize || newC < 0 || newC >= gridSize) return;
-
-    // Duvar kontrolü
-    if (walls.includes(`${newR}_${newC}`)) {
-      playSound('fail');
-      return;
-    }
-
-    // Kapı kontrolü
-    const gateIndex = gates.findIndex(g => g.row === newR && g.col === newC);
-    if (gateIndex !== -1) {
-      // Kapı kapalıysa soru tetikle
-      playSound('tick');
-      setActiveGate(gates[gateIndex]);
-      setShowAnswerResult(false);
-      setSelectedOpt(null);
-      return;
-    }
-
-    playSound('tick');
-    setPlayerPos({ r: newR, c: newC });
-
-    // Hedef/Çıkış kontrolü
-    if (newR === 5 && newC === 5) {
-      playSound('complete');
-      setGameStatus('ended');
-    }
-  };
-
-  // Kapı Sorusu Cevap Seç
-  const handleSelectOption = (opt: string) => {
-    if (!activeGate || showAnswerResult) return;
-    setSelectedOpt(opt);
-    setShowAnswerResult(true);
-
-    const isCorrect = opt === activeGate.question.correct;
-    setIsAnswerCorrect(isCorrect);
-
-    if (isCorrect) {
-      playSound('success');
-    } else {
-      playSound('fail');
-    }
-  };
-
-  // Sorudan Sonra Devam Et
-  const handleContinue = () => {
-    if (!activeGate) return;
-
-    if (isAnswerCorrect) {
-      // Kapıyı kaldır (açıldı)
-      const updated = gates.filter(g => !(g.row === activeGate.row && g.col === activeGate.col));
-      setGates(updated);
-
-      // Karakteri o koordinata taşı
-      setPlayerPos({ r: activeGate.row, c: activeGate.col });
-    }
-
-    setActiveGate(null);
-    setShowAnswerResult(false);
-  };
-
-  return (
-    <div className="w-full flex flex-col items-center gap-6">
-      {gameStatus === 'intro' && (
-        <div className="text-center flex flex-col items-center py-6">
-          <Compass className="w-20 h-20 text-emerald-500 mb-4 animate-spin-slow" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase">
-            Hazine Labirenti (Maze Quiz)
-          </h3>
-          <p className="text-xs text-slate-555 dark:text-slate-400 mt-2 max-w-md leading-relaxed">
-            Karakterinizi hareket ettirerek labirentin sonundaki hazine sandığına (🏆) ulaşın! <br />
-            Yolunuza çıkacak kilitli soru kapılarını açmak için dini sorulara doğru cevap verin. <br />
-            Gri alanlar geçilmez duvarları temsil eder.
-          </p>
-          <button
-            onClick={handleStart}
-            className="mt-6 px-10 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-lg hover:shadow-emerald-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yarışmayı Başlat! ➔
-          </button>
-        </div>
-      )}
-
-      {gameStatus === 'playing' && (
-        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-
-          {/* Sol Kolon: Harita Grid */}
-          <div className="lg:col-span-6 flex flex-col items-center">
-            <div className="bg-white dark:bg-slate-850 border-3 border-slate-200 dark:border-slate-700 p-4 rounded-[2.5rem] shadow-lg">
-              <div className="grid grid-cols-6 gap-1 bg-slate-100 dark:bg-slate-900 p-1.5 rounded-2xl">
-                {Array.from({ length: gridSize }).map((_, r) =>
-                  Array.from({ length: gridSize }).map((_, c) => {
-                    const isPlayer = playerPos.r === r && playerPos.c === c;
-                    const isGoal = r === 5 && c === 5;
-                    const isWall = walls.includes(`${r}_${c}`);
-                    const isGate = gates.some(g => g.row === r && g.col === c);
-
-                    let cellStyle = "bg-white dark:bg-slate-800 text-slate-800 dark:text-white";
-                    if (isWall) cellStyle = "bg-slate-300 dark:bg-slate-700";
-                    if (isGate) cellStyle = "bg-amber-400 text-white animate-pulse border border-amber-500";
-
-                    return (
-                      <div
-                        key={`${r}_${c}`}
-                        className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center font-black text-base shadow-sm relative ${cellStyle}`}
-                      >
-                        {isPlayer ? '🧑‍🚀' : isGoal ? '🏆' : isGate ? '🚪' : ''}
-                      </div>
-                    );
-                  })
-                )}
-              </div>
-            </div>
-          </div>
-
-          {/* Sağ Kolon: Yön Düğmeleri ve Soru Modalı */}
-          <div className="lg:col-span-6 flex flex-col items-center gap-6">
-
-            {/* Navigasyon Okları */}
-            {!activeGate && (
-              <div className="flex flex-col items-center gap-2 p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-inner w-56">
-                <button
-                  onClick={() => handleMove('up')}
-                  className="w-12 h-12 bg-white dark:bg-slate-800 border-2 border-slate-250 dark:border-slate-700 rounded-xl font-black text-base cursor-pointer shadow hover:scale-105 active:scale-95 transition-all flex items-center justify-center"
-                >
-                  ▲
-                </button>
-                <div className="flex gap-2 justify-center w-full">
-                  <button
-                    onClick={() => handleMove('left')}
-                    className="w-12 h-12 bg-white dark:bg-slate-800 border-2 border-slate-250 dark:border-slate-700 rounded-xl font-black text-base cursor-pointer shadow hover:scale-105 active:scale-95 transition-all flex items-center justify-center"
-                  >
-                    ◀
-                  </button>
-                  <button
-                    onClick={() => handleMove('down')}
-                    className="w-12 h-12 bg-white dark:bg-slate-800 border-2 border-slate-250 dark:border-slate-700 rounded-xl font-black text-base cursor-pointer shadow hover:scale-105 active:scale-95 transition-all flex items-center justify-center"
-                  >
-                    ▼
-                  </button>
-                  <button
-                    onClick={() => handleMove('right')}
-                    className="w-12 h-12 bg-white dark:bg-slate-800 border-2 border-slate-250 dark:border-slate-700 rounded-xl font-black text-base cursor-pointer shadow hover:scale-105 active:scale-95 transition-all flex items-center justify-center"
-                  >
-                    ▶
-                  </button>
-                </div>
-              </div>
-            )}
-
-            {/* Soru Modalı */}
-            {activeGate && (
-              <div className="w-full bg-white dark:bg-slate-800 border-3 border-amber-500 p-6 rounded-[2.5rem] shadow-xl flex flex-col gap-4 animate-scale-up">
-                <span className="text-[9px] font-black text-amber-600 uppercase tracking-widest bg-amber-50 dark:bg-amber-950/40 px-3.5 py-1.5 rounded-full border border-amber-100 dark:border-amber-900/50 w-fit">
-                  🔑 KİLİTLİ KAPI SORUSU
-                </span>
-
-                <p className="text-xs sm:text-sm font-bold text-slate-855 dark:text-white leading-relaxed mt-1">
-                  "{activeGate.question.question}"
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
-                  {activeGate.question.options.map(opt => {
-                    const isSelected = opt === selectedOpt;
-                    const isCorrect = opt === activeGate.question.correct;
-
-                    let btnStyle = "bg-slate-50 hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-750 border-slate-200 dark:border-slate-700 text-slate-850 dark:text-white cursor-pointer hover:scale-102 active:scale-98 text-left text-xs font-semibold leading-normal p-3 rounded-xl border flex items-center";
-                    if (showAnswerResult) {
-                      if (isCorrect) {
-                        btnStyle = "bg-emerald-500 border-emerald-600 text-white pointer-events-none p-3 rounded-xl border flex items-center";
-                      } else if (isSelected) {
-                        btnStyle = "bg-rose-500 border-rose-600 text-white pointer-events-none p-3 rounded-xl border flex items-center";
-                      } else {
-                        btnStyle = "opacity-40 pointer-events-none bg-slate-100 dark:bg-slate-900 text-slate-400 p-3 rounded-xl border flex items-center";
-                      }
-                    }
-
-                    return (
-                      <button
-                        key={opt}
-                        onClick={() => handleSelectOption(opt)}
-                        disabled={showAnswerResult}
-                        className={btnStyle}
-                      >
-                        {opt}
-                      </button>
-                    );
-                  })}
-                </div>
-
-                {showAnswerResult && (
-                  <div className="w-full flex flex-col gap-3 mt-1 animate-scale-up">
-                    <div className="p-3 bg-emerald-50/50 dark:bg-emerald-950/10 border border-emerald-250 rounded-2xl text-[9px] font-semibold text-emerald-805 dark:text-emerald-450 leading-relaxed">
-                      <strong>Doğru Cevap:</strong> {activeGate.question.correct} <br />
-                      <strong>İlahi Hikmet:</strong> {activeGate.question.wisdom}
-                    </div>
-
-                    <button
-                      onClick={handleContinue}
-                      className="w-full py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-black uppercase text-xs tracking-wider rounded-xl cursor-pointer hover:scale-105 active:scale-95 transition-all shadow"
-                    >
-                      {isAnswerCorrect ? 'Kapıyı Aç ve İlerle 🔓' : 'Kapı Kilitli Kaldı 🚪'}
-                    </button>
-                  </div>
-                )}
-              </div>
-            )}
-
-          </div>
-
-        </div>
-      )}
-
-      {gameStatus === 'ended' && (
-        <div className="text-center flex flex-col items-center py-6 w-full max-w-md bg-white dark:bg-slate-800 border-3 border-slate-200 dark:border-slate-700 p-8 rounded-[2.5rem] shadow-xl animate-scale-up">
-          <Trophy className="w-16 h-16 text-yellow-500 animate-bounce mb-3" />
-          <h3 className="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tight">
-            Hazine Bulundu!
-          </h3>
-          <p className="text-xs text-slate-550 mt-2">
-            Tüm kilitli kapıları aşarak labirentin sonundaki büyük hazineye ulaştınız!
-          </p>
-
-          <button
-            onClick={handleStart}
-            className="mt-6 w-full py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-black uppercase text-xs tracking-wider rounded-2xl shadow-lg hover:shadow-emerald-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          >
-            Yeniden Keşfet! ↩️
-          </button>
-        </div>
-      )}
-    </div>
-  );
-};
+// MazeRunnerGame was moved to games/MazeRunnerGame.tsx
 
 // ==========================================
 // 20. INDIVIDUAL GAME 16: KELİME ZİNCİRİ
