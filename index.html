@@ -19,27 +19,10 @@
           navigator.serviceWorker.register('/sw.js')
             .then(reg => {
               console.log('ServiceWorker registered:', reg.scope);
-              // Yeni SW bulunduğunda otomatik güncelle
-              reg.addEventListener('updatefound', () => {
-                const newWorker = reg.installing;
-                if (newWorker) {
-                  newWorker.addEventListener('statechange', () => {
-                    if (newWorker.state === 'activated') {
-                      // Yeni versiyon aktif olduğunda sayfayı yenile
-                      if (navigator.serviceWorker.controller) {
-                        window.location.reload();
-                      }
-                    }
-                  });
-                }
-              });
+              // Her 30 dakikada bir güncelleme kontrolü yap (sessizce)
+              setInterval(() => reg.update(), 30 * 60 * 1000);
             })
             .catch(err => console.log('ServiceWorker registration failed:', err));
-          
-          // SW controller değiştiğinde sayfayı yenile
-          navigator.serviceWorker.addEventListener('controllerchange', () => {
-            window.location.reload();
-          });
         });
       }
     </script>

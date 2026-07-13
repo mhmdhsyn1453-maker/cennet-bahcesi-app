@@ -1,9 +1,13 @@
-// Service Worker - Network First Strategy
-// Bu strateji ile F5 yapıldığında her zaman en güncel sürüm gelir.
-// Ağa ulaşılamazsa cache'ten servis edilir (çevrimdışı destek).
+// Service Worker - Hibrit Akıllı Cache Stratejisi
+// ✅ Uygulama her zaman ANINDA cache'ten açılır (hızlı açılış)
+// ✅ Arka planda güncelleme kontrolü yapar (sessiz güncelleme)
+// ✅ Yeni sürüm varsa bir sonraki açılışta otomatik gelir
+// ✅ İnternet yoksa çevrimdışı çalışır
 
-const CACHE_NAME = 'cennet-bahcesi-v3';
-const STATIC_ASSETS = [
+const CACHE_NAME = 'cennet-bahcesi-v4';
+
+// Sadece resimler ve statik dosyalar önceden cache'lenir (pre-cache)
+const PRECACHE_ASSETS = [
   '/favicon.ico',
   '/manifest.json',
   '/assets/logo.png',
@@ -27,18 +31,20 @@ const STATIC_ASSETS = [
   '/assets/img/namaz/8.webp'
 ];
 
-// Install: Sadece statik asset'leri (resimler vb.) cache'le
+// ============ INSTALL ============
+// Statik dosyaları önceden cache'le
 self.addEventListener('install', (e) => {
   e.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(STATIC_ASSETS);
-    }).catch(err => console.log('SW install cache failed:', err))
+      return cache.addAll(PRECACHE_ASSETS);
+    }).catch(err => console.log('SW: Pre-cache failed:', err))
   );
-  // Yeni SW'yi hemen aktif et, bekleme yapmadan
+  // Yeni SW'yi hemen aktif et
   self.skipWaiting();
 });
 
-// Activate: Eski cache'leri temizle
+// ============ ACTIVATE ============
+// Eski cache versiyonlarını temizle
 self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys().then((keys) => {
@@ -52,53 +58,79 @@ self.addEventListener('activate', (e) => {
       );
     })
   );
-  // Açık olan tüm sayfaları hemen kontrol et
+  // Tüm açık sekmeleri hemen kontrol altına al
   self.clients.claim();
 });
 
-// Fetch: NETWORK FIRST stratejisi
-// HTML, JS, CSS için → Önce ağdan çek, başarısız olursa cache'ten sun
-// Resimler için → Önce ağdan çek, cache'e kaydet, başarısız olursa cache'ten sun
+// ============ FETCH ============
 self.addEventListener('fetch', (e) => {
   const request = e.request;
 
   // Sadece GET isteklerini yönet
   if (request.method !== 'GET') return;
 
-  // Navigation istekleri (HTML sayfaları) - Her zaman ağdan çek
+  // Harici istekleri (CDN, Google Fonts vs.) yönetme
+  if (!request.url.startsWith(self.location.origin)) return;
+
+  // --- STRATEJİ 1: HTML Navigation istekleri ---
+  // Stale-While-Revalidate: Önce cache'ten sun, arka planda ağdan güncelle
   if (request.mode === 'navigate') {
     e.respondWith(
-      fetch(request)
-        .then(response => {
-          // Başarılı ağ yanıtını cache'e de kaydet
-          const clone = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(request, clone));
-          return response;
-        })
-        .catch(() => caches.match(request).then(r => r || caches.match('/')))
+      caches.match(request).then((cachedResponse) => {
+        // Arka planda ağdan taze kopyayı çek ve cache'e kaydet
+        const fetchPromise = fetch(request).then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const clone = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
+          }
+          return networkResponse;
+        }).catch(() => null); // Ağ hatası olursa sessizce geç
+
+        // Cache varsa HEMEN sun (anında açılış), yoksa ağ yanıtını bekle
+        return cachedResponse || fetchPromise;
+      })
     );
     return;
   }
 
-  // JS, CSS ve diğer dosyalar - Network first
+  // --- STRATEJİ 2: Hash'li dosyalar (index-BfABbWOY.js gibi) ---
+  // Vite hash'li dosya üretir — dosya adı değişmedikçe içerik aynıdır
+  // Bu dosyalar değişmez (immutable), cache-first güvenlidir
+  if (request.url.includes('/assets/') && request.url.match(/\.[a-f0-9]{8,}\./)) {
+    e.respondWith(
+      caches.match(request).then((cachedResponse) => {
+        if (cachedResponse) return cachedResponse;
+        // Cache'te yoksa ağdan çek ve cache'e kaydet
+        return fetch(request).then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const clone = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
+          }
+          return networkResponse;
+        });
+      })
+    );
+    return;
+  }
+
+  // --- STRATEJİ 3: Diğer tüm dosyalar (resimler, manifest vb.) ---
+  // Stale-While-Revalidate: Cache'ten hemen sun, arka planda güncelle
   e.respondWith(
-    fetch(request)
-      .then(response => {
-        // Geçerli yanıtları cache'e kaydet
-        if (response.status === 200) {
-          const clone = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(request, clone));
+    caches.match(request).then((cachedResponse) => {
+      const fetchPromise = fetch(request).then((networkResponse) => {
+        if (networkResponse && networkResponse.status === 200) {
+          const clone = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
         }
-        return response;
-      })
-      .catch(() => {
-        // Ağ başarısız olursa cache'ten sun
-        return caches.match(request);
-      })
+        return networkResponse;
+      }).catch(() => null);
+
+      return cachedResponse || fetchPromise;
+    })
   );
 });
 
-// SW güncellendiğinde tüm açık sekmelere haber ver
+// SW güncellendiğinde mesaj dinle
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
