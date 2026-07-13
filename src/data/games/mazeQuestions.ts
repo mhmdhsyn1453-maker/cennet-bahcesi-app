@@ -9,100 +9,191 @@ export interface MazeQuestion {
 
 export const MAZE_QUESTIONS_DB: MazeQuestion[] = [
   {
-    "id": "mz_q_1",
-    "category": "Ahlak ve Edep",
-    "question": "Bir kimsenin arkasından hoşlanmayacağı şekilde konuşmaya ne ad verilir?",
+    "id": "mz_ahlak_1",
+    "category": "İslami Ahlak & Edep",
+    "question": "Bir Müslümanın arkasından onun hoşlanmayacağı şekilde konuşup çekiştirmesine ne ad verilir?",
     "options": [
-      "Gıybet",
       "İftira",
-      "Haset",
-      "Riya"
-    ],
-    "correct": "Gıybet",
-    "wisdom": "Gıybet, arkadan konuşarak kardeşinin etini yemeye benzetilen büyük bir ahlaki kusurdur."
-  },
-  {
-    "id": "mz_q_2",
-    "category": "Ahlak ve Edep",
-    "question": "Başkasında olan nimetleri çekemeyip o nimetin yok olmasını istemeye ne ad verilir?",
-    "options": [
-      "Haset",
-      "Kibir",
+      "Bühtan",
       "Riya",
       "Gıybet"
+    ],
+    "correct": "Gıybet",
+    "wisdom": "Gıybet, kardeşinin ölü etini yemeye benzetilmiş büyük bir ahlaki kusurdur."
+  },
+  {
+    "id": "mz_ahlak_2",
+    "category": "İslami Ahlak & Edep",
+    "question": "Bir kimseye işlemediği bir suçu, yapmadığı bir davranışı kasıtlı olarak yüklemeye ne ad verilir?",
+    "options": [
+      "Haset",
+      "Gıybet",
+      "İftira",
+      "Kibir"
+    ],
+    "correct": "İftira",
+    "wisdom": "İftira, kul hakkı doğuran ve toplumu zehirleyen büyük günahlardandır."
+  },
+  {
+    "id": "mz_ahlak_3",
+    "category": "İslami Ahlak & Edep",
+    "question": "Başkasındaki nimetleri ve başarıları kıskanıp, o nimetin ondan yok olmasını istemeye ne ad verilir?",
+    "options": [
+      "Kibir",
+      "Haset",
+      "Riya",
+      "Gıpta"
     ],
     "correct": "Haset",
     "wisdom": "Haset, ateşin odunu yakıp bitirdiği gibi insanın güzel amellerini bitirir."
   },
   {
-    "id": "mz_q_3",
-    "category": "Ahlak ve Edep",
-    "question": "Alçakgönüllü olmak, kibirden uzak durmak ve insanlara değer vermek hangi ahlaki kavramla ifade edilir?",
+    "id": "mz_ahlak_4",
+    "category": "İslami Ahlak & Edep",
+    "question": "Başkasının sahip olduğu güzel bir nimete imrenerek 'keşke benim de olsa' demeye ne ad verilir?",
     "options": [
-      "Tevazu",
+      "Haset",
+      "Riya",
+      "Kibir",
+      "Gıpta"
+    ],
+    "correct": "Gıpta",
+    "wisdom": "Gıpta, hasetten farklı olarak kıskançlık içermez ve İslam'da caiz görülmüştür."
+  },
+  {
+    "id": "mz_ahlak_5",
+    "category": "İslami Ahlak & Edep",
+    "question": "Kendini başkalarından üstün görmek, insanları küçümseyip hakkı kabul etmemek hangi ahlaki hastalıktır?",
+    "options": [
+      "Kibir",
+      "Haset",
+      "Riya",
+      "Tevazu"
+    ],
+    "correct": "Kibir",
+    "wisdom": "Kalbinde zerre kadar kibir olan kimse cennete giremez."
+  },
+  {
+    "id": "mz_ahlak_6",
+    "category": "İslami Ahlak & Edep",
+    "question": "Alçakgönüllü olmak, kibirden uzak durup insanlara eşit ve değerli davranmak hangi kavramdır?",
+    "options": [
       "Sıdk",
       "Adalet",
-      "Vefa"
+      "Haya",
+      "Tevazu"
     ],
     "correct": "Tevazu",
-    "wisdom": "Tevazu, Müslümanın şerefini artıran ve Allah katında onu yükselten güzel bir ahlaki özelliktir."
+    "wisdom": "Tevazu, müminin şerefini ve Allah katındaki değerini artıran güzel bir haslettir."
   },
   {
-    "id": "mz_q_4",
-    "category": "Ahlak ve Edep",
-    "question": "İbadet ve güzel davranışları sadece Allah rızası için yapmaya, araya riya karıştırmamaya ne ad verilir?",
+    "id": "mz_ahlak_7",
+    "category": "İslami Ahlak & Edep",
+    "question": "İbadetleri veya iyilikleri Allah rızası için değil, insanların beğenisi ve övgüsü için yapmaya ne denir?",
     "options": [
-      "İhlas",
-      "Tevazu",
-      "Sıdk",
-      "Haya"
-    ],
-    "correct": "İhlas",
-    "wisdom": "İhlas, ibadetlerin özü ve kabul şartıdır. Ameller ancak ihlas ile değer kazanır."
-  },
-  {
-    "id": "mz_q_5",
-    "category": "Ahlak ve Edep",
-    "question": "İbadetleri ve güzel davranışları başkalarına gösteriş yapmak ve övgü almak için yapmaya ne ad verilir?",
-    "options": [
-      "Riya",
-      "Haset",
       "Kibir",
-      "İftira"
+      "İhlas",
+      "Riya",
+      "Haset"
     ],
     "correct": "Riya",
-    "wisdom": "Riya, gizli şirk olarak adlandırılmıştır ve amellerin sevabını tamamen yok eder."
+    "wisdom": "Riya, ibadetlerin sevabını yok eden 'gizli şirk' olarak tanımlanmıştır."
   },
   {
-    "id": "mz_q_6",
-    "category": "Ahlak ve Edep",
-    "question": "Sözünde ve davranışlarında doğru olmak, yalandan kaçınmak hangi kavramla ifade edilir?",
+    "id": "mz_ahlak_8",
+    "category": "İslami Ahlak & Edep",
+    "question": "İbadet ve güzel amelleri sadece ve sadece Allah rızasını gözeterek yapmaya ne ad verilir?",
     "options": [
+      "Riya",
+      "İhlas",
+      "Sıdk",
+      "Tevazu"
+    ],
+    "correct": "İhlas",
+    "wisdom": "İhlas, ibadetlerin özü ve kabul edilme şartıdır."
+  },
+  {
+    "id": "mz_ahlak_9",
+    "category": "İslami Ahlak & Edep",
+    "question": "Sözünde, özünde ve davranışlarında doğru olmak, yalan söylememek hangi peygamberi vasıftır?",
+    "options": [
+      "İsmet",
       "Sıdk",
       "Emanet",
-      "Fetanet",
-      "İsmet"
+      "Fetanet"
     ],
     "correct": "Sıdk",
-    "wisdom": "Sıdk, peygamberlerin de en önemli vasıflarından biri olup dürüstlük demektir."
+    "wisdom": "Sıdk dürüstlüktür ve insanı iyiliğe, iyilik de cennete götürür."
   },
   {
-    "id": "mz_q_7",
-    "category": "Ahlak ve Edep",
-    "question": "Kötü ve çirkin şeylerden utanıp uzak durmak, edep sınırlarını korumak anlamına gelen kavram nedir?",
+    "id": "mz_ahlak_10",
+    "category": "İslami Ahlak & Edep",
+    "question": "Kötü, çirkin ve günahtan utanıp uzak durmak, edep sınırlarını korumak anlamına gelen kavram nedir?",
     "options": [
-      "Haya",
       "İhlas",
+      "Adalet",
       "Vefa",
-      "Adalet"
+      "Haya"
     ],
     "correct": "Haya",
-    "wisdom": "Haya imandandır ve imandan olan haya, sahibini her türlü çirkinlikten korur."
+    "wisdom": "Haya imandandır ve imandan olan haya sadece hayır getirir."
   },
   {
-    "id": "mz_q_8",
-    "category": "Ahlak ve Edep",
-    "question": "Zorluklar, musibetler ve ibadetlerin zorlukları karşısında yılgınlık göstermeyip direnme gücüne ne ad verilir?",
+    "id": "mz_ahlak_11",
+    "category": "İslami Ahlak & Edep",
+    "question": "Korunması için verilen bir şeyi hakkıyla korumak ve sahibine güvenilir olmak hangi kavramdır?",
+    "options": [
+      "Sıdk",
+      "Vefa",
+      "Emanet",
+      "Adalet"
+    ],
+    "correct": "Emanet",
+    "wisdom": "Emanet, müminin en temel vasfıdır; emanete hıyanet ise münafıklık alametidir."
+  },
+  {
+    "id": "mz_ahlak_12",
+    "category": "İslami Ahlak & Edep",
+    "question": "Her şeye hakkını vermek, hak sahibine hakkını teslim etmek ve eşitliği gözetmek nedir?",
+    "options": [
+      "Kanaat",
+      "Vefa",
+      "Merhamet",
+      "Adalet"
+    ],
+    "correct": "Adalet",
+    "wisdom": "Adalet mülkün temelidir ve Allah adaleti ve iyiliği emreder."
+  },
+  {
+    "id": "mz_ahlak_13",
+    "category": "İslami Ahlak & Edep",
+    "question": "Başkalarının acılarına şefkat göstermek, yumuşak kalpli olmak ve koruyup kollamak nedir?",
+    "options": [
+      "Adalet",
+      "Sabır",
+      "İhlas",
+      "Merhamet"
+    ],
+    "correct": "Merhamet",
+    "wisdom": "Yerdekilere merhamet edin ki göktekiler de size merhamet etsin."
+  },
+  {
+    "id": "mz_ahlak_14",
+    "category": "İslami Ahlak & Edep",
+    "question": "Verdiği sözde durmak, iyilikleri unutmamak ve dostluğu devam ettirmek hangi kavramdır?",
+    "options": [
+      "Sıdk",
+      "Haya",
+      "Tevazu",
+      "Vefa"
+    ],
+    "correct": "Vefa",
+    "wisdom": "Ahde vefa göstermek, imanın gereği ve peygamber ahlakındandır."
+  },
+  {
+    "id": "mz_ahlak_15",
+    "category": "İslami Ahlak & Edep",
+    "question": "Zorluklar, musibetler ve ibadetlerin zorlukları karşısında direnip yılgınlık göstermeme gücü nedir?",
     "options": [
       "Sabır",
       "Şükür",
@@ -113,2518 +204,2492 @@ export const MAZE_QUESTIONS_DB: MazeQuestion[] = [
     "wisdom": "Sabır, ilk darbe anında gösterilen dirençtir ve sonu selamet olan bir hazinedir."
   },
   {
-    "id": "mz_q_9",
-    "category": "Ahlak ve Edep",
-    "question": "Allah'ın verdiği nimetlere karşı dille ve bedenle teşekkür edip nimetleri O'nun yolunda kullanmaya ne ad verilir?",
+    "id": "mz_ahlak_16",
+    "category": "İslami Ahlak & Edep",
+    "question": "Allah'ın verdiği nimetlere karşı teşekkür edip o nimetleri O'nun rızasına uygun kullanmak nedir?",
     "options": [
-      "Şükür",
-      "Sabır",
       "Kanaat",
-      "Tevazu"
+      "Tevazu",
+      "Şükür",
+      "Sabır"
     ],
     "correct": "Şükür",
-    "wisdom": "Şükür, nimeti artırır ve Allah'ın sevgisini kazanmaya vesile olur."
+    "wisdom": "Şükür, eldeki nimetleri artırır ve Allah'ın sevgisini kazanmaya vesiledir."
   },
   {
-    "id": "mz_q_10",
-    "category": "Ahlak ve Edep",
-    "question": "Eldeki nimetlerle yetinip açgözlülükten ve hırstan uzak durmaya ne ad verilir?",
+    "id": "mz_ahlak_17",
+    "category": "İslami Ahlak & Edep",
+    "question": "Eldeki nimetlerle yetinip hırstan ve açgözlülükten uzak durmaya ne ad verilir?",
     "options": [
-      "Kanaat",
-      "Zühd",
       "Tevazu",
-      "İhlas"
+      "Zühd",
+      "İhlas",
+      "Kanaat"
     ],
     "correct": "Kanaat",
     "wisdom": "Kanaat, tükenmeyen bir hazinedir ve insanı başkalarına boyun eğmekten korur."
   },
   {
-    "id": "mz_q_11",
-    "category": "Ahlak ve Edep",
-    "question": "Korunması için verilen bir şeyi korumak ve sahibine geri vermek, güvenilir olmak hangi kavramdır?",
+    "id": "mz_ahlak_18",
+    "category": "İslami Ahlak & Edep",
+    "question": "Dünyalık şeylere aşırı bağlanmamak, kalpten dünya sevgisini çıkarıp ahirete yönelmek nedir?",
     "options": [
-      "Emanet",
-      "Sıdk",
-      "Adalet",
-      "Vefa"
-    ],
-    "correct": "Emanet",
-    "wisdom": "Emanet, müminin en önemli vasıflarındandır ve emanete hıyanet münafıklık alametidir."
-  },
-  {
-    "id": "mz_q_12",
-    "category": "Ahlak ve Edep",
-    "question": "Her şeye hakkını vermek, hak sahibine hakkını teslim etmek ve eşitliği gözetmek nedir?",
-    "options": [
-      "Adalet",
-      "Merhamet",
-      "Vefa",
+      "Zühd",
+      "İhlas",
+      "Riya",
       "Kanaat"
     ],
-    "correct": "Adalet",
-    "wisdom": "Adalet mülkün temelidir ve Allah adaleti, iyiliği ve akrabaya yardımı emreder."
+    "correct": "Zühd",
+    "wisdom": "Zühd, dünya nimetlerini tamamen terk etmek değil, onlara köle olmamaktır."
   },
   {
-    "id": "mz_q_13",
-    "category": "Ahlak ve Edep",
-    "question": "Başkalarının acılarına ortak olmak, acımak, şefkat göstermek ve yumuşak kalpli olmak nedir?",
-    "options": [
-      "Merhamet",
-      "Adalet",
-      "Sabır",
-      "İhlas"
-    ],
-    "correct": "Merhamet",
-    "wisdom": "Yerdekilere merhamet edin ki göktekiler de size merhamet etsin."
-  },
-  {
-    "id": "mz_q_14",
-    "category": "Ahlak ve Edep",
-    "question": "Verdiği sözde durmak, dostluk ve sevgiyi devam ettirmek, iyilikleri unutmamak hangi kavramdır?",
-    "options": [
-      "Vefa",
-      "Sıdk",
-      "Tevazu",
-      "Haya"
-    ],
-    "correct": "Vefa",
-    "wisdom": "Ahde vefa göstermek, imanın gereği ve peygamber ahlakındandır."
-  },
-  {
-    "id": "mz_q_15",
-    "category": "Ahlak ve Edep",
-    "question": "Kendini başkalarından üstün görmek, insanları küçümsemek ve hakkı kabul etmemek nedir?",
-    "options": [
-      "Kibir",
-      "Haset",
-      "Riya",
-      "Gıybet"
-    ],
-    "correct": "Kibir",
-    "wisdom": "Kalbinde zerre kadar kibir olan kimse cennete giremez."
-  },
-  {
-    "id": "mz_q_16",
-    "category": "Ahlak ve Edep",
-    "question": "Peygamberimiz (s.a.v.)'e göre asıl güçlü pehlivan kimdir?",
-    "options": [
-      "Öfkesini yenen",
-      "Çok yük kaldıran",
-      "Herkesi güreşte yenen",
-      "Çok hızlı koşan"
-    ],
-    "correct": "Öfkesini yenen",
-    "wisdom": "Gerçek güç, kas gücü değil, öfkelendiğinde nefsine hakim olabilmektir."
-  },
-  {
-    "id": "mz_q_17",
-    "category": "Ahlak ve Edep",
-    "question": "Kur'an-ı Kerim'de anne babaya karşı söylenmesi yasaklanan en küçük kelime hangisidir?",
-    "options": [
-      "Öf",
-      "Hayır",
-      "Git",
-      "Yeter"
-    ],
-    "correct": "Öf",
-    "wisdom": "Anne babaya 'öf' bile demek yasaklanmış, onlara tatlı söz söylenmesi emredilmiştir."
-  },
-  {
-    "id": "mz_q_18",
-    "category": "Ahlak ve Edep",
-    "question": "Peygamberimiz (s.a.v.) komşu hakkına o kadar vurgu yapmıştır ki, komşunun ne olacağını neredeyse sanmıştır?",
-    "options": [
-      "Mirasçı",
-      "Kardeş",
-      "Ortak",
-      "Veli"
-    ],
-    "correct": "Mirasçı",
-    "wisdom": "Cebrail bana komşu hakkını o kadar tavsiye etti ki, onu mirasçı kılacak sandım."
-  },
-  {
-    "id": "mz_q_19",
-    "category": "Ahlak ve Edep",
-    "question": "Müslümanlar arasında sevgi bağlarını güçlendiren, Peygamberimizin yaymamızı emrettiği davranış nedir?",
-    "options": [
-      "Selamlaşmak",
-      "Hediyeleşmek",
-      "Yemek yemek",
-      "Gülümsemek"
-    ],
-    "correct": "Selamlaşmak",
-    "wisdom": "Aranızda selamı yayın ki birbirinizi sevesiniz."
-  },
-  {
-    "id": "mz_q_20",
-    "category": "Ahlak ve Edep",
-    "question": "Hakkında kesin bilgi olmayan bir konuda suizan yapmaktan kaçınmak neden emredilmiştir?",
-    "options": [
-      "Zannın çoğu günahtır",
-      "Zan yorar",
-      "Zan vakit kaybettirir",
-      "Zan günahtır"
-    ],
-    "correct": "Zannın çoğu günahtır",
-    "wisdom": "Zandan kaçınınız çünkü zannın bir kısmı günahtır ve büyük günahlara kapı açar."
-  },
-  {
-    "id": "mz_q_21",
-    "category": "Ahlak ve Edep",
-    "question": "Akrabayı ziyaret etmek, onlarla ilişkiyi koparmamak hangi ahlaki kavramdır?",
+    "id": "mz_ahlak_19",
+    "category": "İslami Ahlak & Edep",
+    "question": "Akrabayı ziyaret etmek, onlarla iyi ilişkiler kurup yardımlaşmak hangi ahlaki kavramdır?",
     "options": [
       "Sıla-i Rahim",
-      "İsar",
+      "Vefa",
       "Fütüvvet",
-      "Vefa"
+      "İsar"
     ],
     "correct": "Sıla-i Rahim",
-    "wisdom": "Akrabalık bağlarını korumak ömrü uzatır ve rızkı bereketlendirir."
+    "wisdom": "Sıla-i rahim yapmak ömrü uzatır ve rızkı bereketlendirir."
   },
   {
-    "id": "mz_q_22",
-    "category": "Ahlak ve Edep",
+    "id": "mz_ahlak_20",
+    "category": "İslami Ahlak & Edep",
     "question": "Kendisi ihtiyaç içinde olduğu halde başkasını kendine tercih etmeye ne ad verilir?",
     "options": [
       "İsar",
-      "Cömertlik",
+      "Tevazu",
       "Zühd",
-      "Tevazu"
+      "Cömertlik"
     ],
     "correct": "İsar",
     "wisdom": "İsar, cömertliğin en yüksek zirvesidir ve sahabe ahlakıdır."
   },
   {
-    "id": "mz_q_23",
-    "category": "Ahlak ve Edep",
-    "question": "Mülkünü ve imkanlarını başkalarıyla cömertçe paylaşma ahlakı nedir?",
+    "id": "mz_ahlak_21",
+    "category": "İslami Ahlak & Edep",
+    "question": "Sahip olunan imkanları başkalarıyla cömertçe paylaşma ahlakı nedir?",
     "options": [
-      "Cömertlik",
-      "Kanaat",
+      "Adalet",
       "Zühd",
-      "Adalet"
+      "Cömertlik",
+      "Kanaat"
     ],
     "correct": "Cömertlik",
     "wisdom": "Cömert insan Allah'a yakın, cennete yakın ve insanlara yakındır."
   },
   {
-    "id": "mz_q_24",
-    "category": "Ahlak ve Edep",
-    "question": "Malını saklamak, hayır yolunda harcamaktan kaçınmak ahlakı nedir?",
+    "id": "mz_ahlak_22",
+    "category": "İslami Ahlak & Edep",
+    "question": "Nimetleri gereksiz yere harcamak, saçıp savurmak ve israf etmek ne ad verilir?",
     "options": [
-      "Cimrilik",
-      "Kanaat",
-      "İktisat",
-      "Zühd"
-    ],
-    "correct": "Cimrilik",
-    "wisdom": "Cimrilik kalbi daraltır ve insanı dünyada rezil, ahirette mahrum eder."
-  },
-  {
-    "id": "mz_q_25",
-    "category": "Ahlak ve Edep",
-    "question": "Nimetleri gereksiz yere harcamak, saçıp savurmak ne ad verilir?",
-    "options": [
-      "İsraf",
-      "Cömertlik",
       "Riya",
-      "Kibir"
+      "İsraf",
+      "Kibir",
+      "Cömertlik"
     ],
     "correct": "İsraf",
     "wisdom": "İsraf haram kılınmıştır. Yiyiniz, içiniz fakat israf etmeyiniz."
   },
   {
-    "id": "mz_q_26",
-    "category": "Ahlak ve Edep",
+    "id": "mz_ahlak_23",
+    "category": "İslami Ahlak & Edep",
     "question": "Harcamalarda dengeli olmak, tasarruflu davranmak hangi kavramdır?",
     "options": [
+      "Zühd",
       "İktisat",
       "Kanaat",
-      "Zühd",
       "Cimrilik"
     ],
     "correct": "İktisat",
     "wisdom": "İktisat eden (tasarruflu davranan) fakirleşmez."
   },
   {
-    "id": "mz_q_27",
-    "category": "Ahlak ve Edep",
-    "question": "Peygamberimiz'e göre haya ile iman arasındaki ilişki nasıldır?",
+    "id": "mz_ahlak_24",
+    "category": "İslami Ahlak & Edep",
+    "question": "Peygamberimiz'e göre 'Yanı başındaki komşusu açken' tok yatan kimsenin durumu nedir?",
     "options": [
-      "Birlikte bulunurlar",
-      "Farklıdırlar",
-      "İlişkisi yoktur",
-      "Haya daha üstündür"
+      "Münafıktır",
+      "Günahkar değildir",
+      "Kafirdir",
+      "Bizden değildir"
     ],
-    "correct": "Birlikte bulunurlar",
-    "wisdom": "Haya ve iman bir aradadır. Biri giderse diğeri de gider."
+    "correct": "Bizden değildir",
+    "wisdom": "Komşusu açken tok yatan kamil mümin olamaz."
   },
   {
-    "id": "mz_q_28",
-    "category": "Ahlak ve Edep",
-    "question": "Başkalarıyla konuşurken kırıcı olmayan, güzel ve yumuşak konuşmaya ne denir?",
+    "id": "mz_ahlak_25",
+    "category": "İslami Ahlak & Edep",
+    "question": "Anne babaya karşı söylenmesi Kur'an-ı Kerim'de yasaklanan en küçük kırıcı kelime hangisidir?",
     "options": [
-      "Kavli Leyyin",
+      "Git",
+      "Hayır",
+      "Yeter",
+      "Öf"
+    ],
+    "correct": "Öf",
+    "wisdom": "Anne babaya 'öf' bile demek yasaklanmış, onlara tatlı söz söylenmesi emredilmiştir."
+  },
+  {
+    "id": "mz_ahlak_26",
+    "category": "İslami Ahlak & Edep",
+    "question": "Konuşurken kırıcı olmayan, güzel ve yumuşak konuşmaya ne denir?",
+    "options": [
       "Sıdk",
       "Fetanet",
-      "Vefa"
+      "Vefa",
+      "Kavli Leyyin"
     ],
     "correct": "Kavli Leyyin",
     "wisdom": "Güzel ve tatlı söz sadakadır ve kalpleri birbirine ısındırır."
   },
   {
-    "id": "mz_q_29",
-    "category": "Ahlak ve Edep",
+    "id": "mz_ahlak_27",
+    "category": "İslami Ahlak & Edep",
     "question": "İnsanların gizli hallerini, kusurlarını ve özel hayatlarını araştırmaya ne ad verilir?",
     "options": [
-      "Tecessüs",
+      "Haset",
       "Gıybet",
       "İftira",
-      "Haset"
+      "Tecessüs"
     ],
     "correct": "Tecessüs",
     "wisdom": "Müslümanların gizli hallerini ve ayıplarını araştırmayınız."
   },
   {
-    "id": "mz_q_30",
-    "category": "Ahlak ve Edep",
-    "question": "İnsanların davranışlarını iyiye yormak, iyi niyetli düşünmek nedir?",
+    "id": "mz_ahlak_28",
+    "category": "İslami Ahlak & Edep",
+    "question": "Müslümanları küçümseyerek taklit etmek veya dalga geçmek İslam'da nasıl karşılanır?",
     "options": [
-      "Hüsnü Zan",
-      "Suizan",
-      "Gıybet",
-      "Riya"
+      "Mekruhtur",
+      "Haramdır",
+      "Helaldir",
+      "Caizdir"
     ],
-    "correct": "Hüsnü Zan",
-    "wisdom": "Müminler hakkında iyi düşünmek, imanın güzelliğindendir."
+    "correct": "Haramdır",
+    "wisdom": "Bir topluluk diğer bir toplulukla alay etmesin; belki onlar kendilerinden hayırlıdır."
   },
   {
-    "id": "mz_q_31",
-    "category": "Ahlak ve Edep",
-    "question": "İnsanlar hakkında kötü ve olumsuz düşüncelere sahip olmaya ne denir?",
+    "id": "mz_ahlak_29",
+    "category": "İslami Ahlak & Edep",
+    "question": "İnsanlara hoşlanmadıkları adlarla hitap etmek hakkında Kur'an ne söyler?",
     "options": [
-      "Suizan",
-      "Hüsnü Zan",
-      "Gıybet",
-      "Haset"
+      "Kötü lakap takmayın",
+      "Helaldir",
+      "Önemsizdir",
+      "Sadece büyüklere serbesttir"
     ],
-    "correct": "Suizan",
-    "wisdom": "Kötü zanda bulunmak ilişkileri zedeler ve günahtır."
-  },
-  {
-    "id": "mz_q_32",
-    "category": "Ahlak ve Edep",
-    "question": "Bir kimseye işlemediği bir suçu veya kötü bir davranışı isnat etmeye ne denir?",
-    "options": [
-      "İftira",
-      "Gıybet",
-      "Haset",
-      "Kibir"
-    ],
-    "correct": "İftira",
-    "wisdom": "İftira atmak kul hakkıdır ve büyük günahlardan biridir."
-  },
-  {
-    "id": "mz_q_33",
-    "category": "Ahlak ve Edep",
-    "question": "Başkalarını küçümseyerek, taklit ederek veya lakap takarak dalga geçmek nedir?",
-    "options": [
-      "Alay etmek",
-      "Tecessüs",
-      "Gıybet",
-      "İftira"
-    ],
-    "correct": "Alay etmek",
-    "wisdom": "Bir topluluk diğer bir toplulukla alay etmesin; belki onlar kendilerinden daha hayırlıdır."
-  },
-  {
-    "id": "mz_q_34",
-    "category": "Ahlak ve Edep",
-    "question": "İnsanlara hoşlanmadıkları adlarla hitap etmek Kur'an'da nasıl yasaklanmıştır?",
-    "options": [
-      "Lakap takmayın denerek",
-      "Önemli değildir denerek",
-      "Zorunludur denerek",
-      "Sadece büyüklere yasaktır denerek"
-    ],
-    "correct": "Lakap takmayın denerek",
+    "correct": "Kötü lakap takmayın",
     "wisdom": "Birbirinize kötü lakaplar takmayın. İmandan sonra fasıklık ne kötüdür!"
   },
   {
-    "id": "mz_q_35",
-    "category": "Ahlak ve Edep",
+    "id": "mz_ahlak_30",
+    "category": "İslami Ahlak & Edep",
     "question": "Peygamberimiz öfkelendiğimizde ne yapmamızı tavsiye etmiştir?",
     "options": [
+      "Bağırmayı",
+      "Uyumayı",
       "Abdest almayı",
-      "Koşmayı",
-      "Yemek yemeyi",
-      "Uyumayı"
+      "Koşmayı"
     ],
     "correct": "Abdest almayı",
     "wisdom": "Öfke şeytandandır, şeytan ateşten yaratılmıştır. Ateşi söndüren ise sudur, bu yüzden abdest alın."
   },
   {
-    "id": "mz_q_36",
-    "category": "Ahlak ve Edep",
-    "question": "Peygamberimizin susuz bir köpeğe su verdiği için günahları bağışlandığını bildirdiği kişi kimdir?",
-    "options": [
-      "Yolcu bir adam",
-      "Bir sahabe",
-      "Bir kadın",
-      "Bir çoban"
-    ],
-    "correct": "Yolcu bir adam",
-    "wisdom": "Her canlıya yapılan iyilikte bir sevap vardır."
-  },
-  {
-    "id": "mz_q_37",
-    "category": "Ahlak ve Edep",
-    "question": "Yoldaki bir taşı veya dikeni kenara çekmek İslam'da ne olarak kabul edilir?",
-    "options": [
-      "Sadaka",
-      "Farz",
-      "Mekruh",
-      "Zekat"
-    ],
-    "correct": "Sadaka",
-    "wisdom": "İnsanlara eziyet veren şeyleri yoldan kaldırmak sadakadır."
-  },
-  {
-    "id": "mz_q_38",
-    "category": "Ahlak ve Edep",
-    "question": "Verilen sözü tutmamak kimlerin alameti olarak sayılmıştır?",
-    "options": [
-      "Münafıkların",
-      "Kafirlerin",
-      "Müşriklerin",
-      "Fasıkların"
-    ],
-    "correct": "Münafıkların",
-    "wisdom": "Münafığın alameti üçtür: Konuştuğunda yalan söyler, söz verdiğinde cayar, emanete hıyanet eder."
-  },
-  {
-    "id": "mz_q_39",
-    "category": "Ahlak ve Edep",
-    "question": "Peygamberimiz Müslümanları birbirine kenetlenmiş neye benzetmiştir?",
-    "options": [
-      "Bina tuğlalarına",
-      "Ağaç yapraklarına",
-      "Deniz dalgalarına",
-      "Bulutlara"
-    ],
-    "correct": "Bina tuğlalarına",
-    "wisdom": "Müslümanlar birbirine kenetlenmiş bir bina gibidir, birbirlerini desteklerler."
-  },
-  {
-    "id": "mz_q_40",
-    "category": "Ahlak ve Edep",
+    "id": "mz_ahlak_31",
+    "category": "İslami Ahlak & Edep",
     "question": "Müslüman kimdir sorusuna Peygamberimiz nasıl cevap vermiştir?",
     "options": [
-      "Elinin ve dilinin güvenilir olduğu kimsedir",
-      "Çok namaz kılandır",
-      "Çok oruç tutandır",
-      "Çok zengin olandır"
+      "Sadece namaz kılandır",
+      "Çok zengin olandır",
+      "Çok seyahat edendir",
+      "Elinin ve dilinin güvenilir olduğu kimsedir"
     ],
     "correct": "Elinin ve dilinin güvenilir olduğu kimsedir",
     "wisdom": "Müslüman, diğer Müslümanların elinden ve dilinden güvende olduğu kimsedir."
   },
   {
-    "id": "mz_q_41",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 41)",
+    "id": "mz_ahlak_32",
+    "category": "İslami Ahlak & Edep",
+    "question": "Müslümanlar arasında sevgi bağlarını güçlendiren davranış nedir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Yemek yemek",
+      "Selamlaşmak",
+      "Hediyeleşmek",
+      "Gülümsemek"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 41)"
+    "correct": "Selamlaşmak",
+    "wisdom": "Aranızda selamı yayın ki birbirinizi sevesiniz."
   },
   {
-    "id": "mz_q_42",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 42)",
+    "id": "mz_ahlak_33",
+    "category": "İslami Ahlak & Edep",
+    "question": "Peygamberimiz 'Ben ancak ... tamamlamak için gönderildim' buyurmuştur?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Güzel ahlakı",
+      "Devleti",
+      "Savaşları",
+      "Ticareti"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 42)"
+    "correct": "Güzel ahlakı",
+    "wisdom": "Ben ancak güzel ahlakı tamamlamak için gönderildim."
   },
   {
-    "id": "mz_q_43",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 43)",
+    "id": "mz_ahlak_34",
+    "category": "İslami Ahlak & Edep",
+    "question": "Müminlerin iman bakımından en mükemmeli kimdir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "En çok parası olanı",
+      "En güçlü olanı",
+      "En yaşlı olanı",
+      "Ahlakı en güzel olanı"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 43)"
+    "correct": "Ahlakı en güzel olanı",
+    "wisdom": "Müminlerin iman bakımından en mükemmeli, ahlakı en güzel olanıdır."
   },
   {
-    "id": "mz_q_44",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 44)",
+    "id": "mz_ahlak_35",
+    "category": "İslami Ahlak & Edep",
+    "question": "Peygamberimiz'in 'Temizlik ... yarısıdır' buyurduğu kavram hangisidir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Ahlakın",
+      "Hayatın",
+      "Sağlığın",
+      "İmanın"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 44)"
+    "correct": "İmanın",
+    "wisdom": "Temizlik imanın yarısıdır."
   },
   {
-    "id": "mz_q_45",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 45)",
+    "id": "mz_ahlak_36",
+    "category": "İslami Ahlak & Edep",
+    "question": "Münafığın özelliklerinden biri aşağıdakilerden hangisidir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Namaz kılmak",
+      "Sadaka vermek",
+      "Çok dua etmek",
+      "Sözünde durmamak"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 45)"
+    "correct": "Sözünde durmamak",
+    "wisdom": "Münafığın alameti üçtür: Yalan söyler, sözünden döner, emanete hıyanet eder."
   },
   {
-    "id": "mz_q_46",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 46)",
+    "id": "mz_ahlak_37",
+    "category": "İslami Ahlak & Edep",
+    "question": "Müslüman kardeşinin yüzüne gülümsemek İslam'da ne olarak kabul edilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Sadaka",
+      "Mekruh",
+      "Farz",
+      "Zekat"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 46)"
+    "correct": "Sadaka",
+    "wisdom": "Müslüman kardeşine tebessüm etmen bir sadakadır."
   },
   {
-    "id": "mz_q_47",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 47)",
+    "id": "mz_ahlak_38",
+    "category": "İslami Ahlak & Edep",
+    "question": "Hayvanlara eziyet etmek İslam ahlakına göre nasıl bir davranıştır?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Caizdir",
+      "Büyük günahtır",
+      "Mübahtır",
+      "Önemsizdir"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 47)"
+    "correct": "Büyük günahtır",
+    "wisdom": "Her canlıya yapılan iyilikte bir sevap, eziyette ise günah vardır."
   },
   {
-    "id": "mz_q_48",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 48)",
+    "id": "mz_ahlak_39",
+    "category": "İslami Ahlak & Edep",
+    "question": "Allah katında şehitlerin bile bağışlanmayan tek günahı hangisidir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Gıybet",
+      "Kul hakkı",
+      "Namaz kılmamak",
+      "Yalan söylemek"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 48)"
+    "correct": "Kul hakkı",
+    "wisdom": "Allah kul hakkıyla gelenin günahını hak sahibi helal etmedikçe bağışlamaz."
   },
   {
-    "id": "mz_q_49",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 49)",
+    "id": "mz_ahlak_40",
+    "category": "İslami Ahlak & Edep",
+    "question": "Birine sır verildiğinde o sırrı saklamak hangi ahlaki kavramla ilişkilidir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Emanet",
+      "Adalet",
+      "Vefa",
+      "Sıdk"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 49)"
+    "correct": "Emanet",
+    "wisdom": "Verilen sırlar da birer emanettir ve ifşa edilmesi hıyanettir."
   },
   {
-    "id": "mz_q_50",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 50)",
+    "id": "mz_ahlak_41",
+    "category": "İslami Ahlak & Edep",
+    "question": "41. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 50)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_51",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 51)",
+    "id": "mz_ahlak_42",
+    "category": "İslami Ahlak & Edep",
+    "question": "42. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 51)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_52",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 52)",
+    "id": "mz_ahlak_43",
+    "category": "İslami Ahlak & Edep",
+    "question": "43. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 52)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_53",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 53)",
+    "id": "mz_ahlak_44",
+    "category": "İslami Ahlak & Edep",
+    "question": "44. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 53)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_54",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 54)",
+    "id": "mz_ahlak_45",
+    "category": "İslami Ahlak & Edep",
+    "question": "45. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 54)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_55",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 55)",
+    "id": "mz_ahlak_46",
+    "category": "İslami Ahlak & Edep",
+    "question": "46. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 55)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_56",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 56)",
+    "id": "mz_ahlak_47",
+    "category": "İslami Ahlak & Edep",
+    "question": "47. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 56)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_57",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 57)",
+    "id": "mz_ahlak_48",
+    "category": "İslami Ahlak & Edep",
+    "question": "48. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 57)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_58",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 58)",
+    "id": "mz_ahlak_49",
+    "category": "İslami Ahlak & Edep",
+    "question": "49. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 58)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_59",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 59)",
+    "id": "mz_ahlak_50",
+    "category": "İslami Ahlak & Edep",
+    "question": "50. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 59)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_60",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 60)",
+    "id": "mz_ahlak_51",
+    "category": "İslami Ahlak & Edep",
+    "question": "51. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 60)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_61",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 61)",
+    "id": "mz_ahlak_52",
+    "category": "İslami Ahlak & Edep",
+    "question": "52. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 61)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_62",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 62)",
+    "id": "mz_ahlak_53",
+    "category": "İslami Ahlak & Edep",
+    "question": "53. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 62)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_63",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 63)",
+    "id": "mz_ahlak_54",
+    "category": "İslami Ahlak & Edep",
+    "question": "54. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 63)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_64",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 64)",
+    "id": "mz_ahlak_55",
+    "category": "İslami Ahlak & Edep",
+    "question": "55. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 64)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_65",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 65)",
+    "id": "mz_ahlak_56",
+    "category": "İslami Ahlak & Edep",
+    "question": "56. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 65)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_66",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 66)",
+    "id": "mz_ahlak_57",
+    "category": "İslami Ahlak & Edep",
+    "question": "57. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 66)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_67",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 67)",
+    "id": "mz_ahlak_58",
+    "category": "İslami Ahlak & Edep",
+    "question": "58. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 67)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_68",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 68)",
+    "id": "mz_ahlak_59",
+    "category": "İslami Ahlak & Edep",
+    "question": "59. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 68)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_69",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 69)",
+    "id": "mz_ahlak_60",
+    "category": "İslami Ahlak & Edep",
+    "question": "60. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 69)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_70",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 70)",
+    "id": "mz_ahlak_61",
+    "category": "İslami Ahlak & Edep",
+    "question": "61. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 70)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_71",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 71)",
+    "id": "mz_ahlak_62",
+    "category": "İslami Ahlak & Edep",
+    "question": "62. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 71)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_72",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 72)",
+    "id": "mz_ahlak_63",
+    "category": "İslami Ahlak & Edep",
+    "question": "63. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 72)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_73",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 73)",
+    "id": "mz_ahlak_64",
+    "category": "İslami Ahlak & Edep",
+    "question": "64. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 73)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_74",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 74)",
+    "id": "mz_ahlak_65",
+    "category": "İslami Ahlak & Edep",
+    "question": "65. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 74)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_75",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 75)",
+    "id": "mz_ahlak_66",
+    "category": "İslami Ahlak & Edep",
+    "question": "66. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 75)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_76",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 76)",
+    "id": "mz_ahlak_67",
+    "category": "İslami Ahlak & Edep",
+    "question": "67. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 76)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_77",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 77)",
+    "id": "mz_ahlak_68",
+    "category": "İslami Ahlak & Edep",
+    "question": "68. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 77)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_78",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 78)",
+    "id": "mz_ahlak_69",
+    "category": "İslami Ahlak & Edep",
+    "question": "69. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 78)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_79",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 79)",
+    "id": "mz_ahlak_70",
+    "category": "İslami Ahlak & Edep",
+    "question": "70. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 79)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_80",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 80)",
+    "id": "mz_ahlak_71",
+    "category": "İslami Ahlak & Edep",
+    "question": "71. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 80)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_81",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 81)",
+    "id": "mz_ahlak_72",
+    "category": "İslami Ahlak & Edep",
+    "question": "72. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 81)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_82",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 82)",
+    "id": "mz_ahlak_73",
+    "category": "İslami Ahlak & Edep",
+    "question": "73. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 82)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_83",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 83)",
+    "id": "mz_ahlak_74",
+    "category": "İslami Ahlak & Edep",
+    "question": "74. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 83)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_84",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 84)",
+    "id": "mz_ahlak_75",
+    "category": "İslami Ahlak & Edep",
+    "question": "75. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 84)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_85",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 85)",
+    "id": "mz_ahlak_76",
+    "category": "İslami Ahlak & Edep",
+    "question": "76. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 85)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_86",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 86)",
+    "id": "mz_ahlak_77",
+    "category": "İslami Ahlak & Edep",
+    "question": "77. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 86)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_87",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 87)",
+    "id": "mz_ahlak_78",
+    "category": "İslami Ahlak & Edep",
+    "question": "78. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 87)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_88",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 88)",
+    "id": "mz_ahlak_79",
+    "category": "İslami Ahlak & Edep",
+    "question": "79. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 88)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_89",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 89)",
+    "id": "mz_ahlak_80",
+    "category": "İslami Ahlak & Edep",
+    "question": "80. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 89)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_90",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 90)",
+    "id": "mz_ahlak_81",
+    "category": "İslami Ahlak & Edep",
+    "question": "81. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 90)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_91",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 91)",
+    "id": "mz_ahlak_82",
+    "category": "İslami Ahlak & Edep",
+    "question": "82. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 91)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_92",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 92)",
+    "id": "mz_ahlak_83",
+    "category": "İslami Ahlak & Edep",
+    "question": "83. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 92)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_93",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 93)",
+    "id": "mz_ahlak_84",
+    "category": "İslami Ahlak & Edep",
+    "question": "84. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 93)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_94",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 94)",
+    "id": "mz_ahlak_85",
+    "category": "İslami Ahlak & Edep",
+    "question": "85. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 94)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_95",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 95)",
+    "id": "mz_ahlak_86",
+    "category": "İslami Ahlak & Edep",
+    "question": "86. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 95)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_96",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 96)",
+    "id": "mz_ahlak_87",
+    "category": "İslami Ahlak & Edep",
+    "question": "87. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 96)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_97",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 97)",
+    "id": "mz_ahlak_88",
+    "category": "İslami Ahlak & Edep",
+    "question": "88. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 97)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_98",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 98)",
+    "id": "mz_ahlak_89",
+    "category": "İslami Ahlak & Edep",
+    "question": "89. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 98)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_99",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 99)",
+    "id": "mz_ahlak_90",
+    "category": "İslami Ahlak & Edep",
+    "question": "90. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 99)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_100",
-    "category": "Ahlak ve Edep",
-    "question": "Aşağıdaki davranışlardan hangisi İslam ahlakına ve edep kurallarına en uygundur? (Soru 100)",
+    "id": "mz_ahlak_91",
+    "category": "İslami Ahlak & Edep",
+    "question": "91. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
     "options": [
-      "Büyüklere saygı, küçüklere sevgi göstermek",
-      "Kendi çıkarını her şeyin üstünde tutmak",
-      "İnsanların hatalarını araştırmak",
-      "Başkalarıyla alay etmek"
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
     ],
-    "correct": "Büyüklere saygı, küçüklere sevgi göstermek",
-    "wisdom": "İslam ahlakı sevgi, saygı, hoşgörü ve dürüstlük temelleri üzerine kuruludur. (Ahlak Soru 100)"
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
   },
   {
-    "id": "mz_q_101",
+    "id": "mz_ahlak_92",
+    "category": "İslami Ahlak & Edep",
+    "question": "92. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
+    "options": [
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
+    ],
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
+  },
+  {
+    "id": "mz_ahlak_93",
+    "category": "İslami Ahlak & Edep",
+    "question": "93. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
+    "options": [
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
+    ],
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
+  },
+  {
+    "id": "mz_ahlak_94",
+    "category": "İslami Ahlak & Edep",
+    "question": "94. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
+    "options": [
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
+    ],
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
+  },
+  {
+    "id": "mz_ahlak_95",
+    "category": "İslami Ahlak & Edep",
+    "question": "95. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
+    "options": [
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
+    ],
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
+  },
+  {
+    "id": "mz_ahlak_96",
+    "category": "İslami Ahlak & Edep",
+    "question": "96. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
+    "options": [
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
+    ],
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
+  },
+  {
+    "id": "mz_ahlak_97",
+    "category": "İslami Ahlak & Edep",
+    "question": "97. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
+    "options": [
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
+    ],
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
+  },
+  {
+    "id": "mz_ahlak_98",
+    "category": "İslami Ahlak & Edep",
+    "question": "98. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
+    "options": [
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
+    ],
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
+  },
+  {
+    "id": "mz_ahlak_99",
+    "category": "İslami Ahlak & Edep",
+    "question": "99. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
+    "options": [
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
+    ],
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
+  },
+  {
+    "id": "mz_ahlak_100",
+    "category": "İslami Ahlak & Edep",
+    "question": "100. Kibirlenmeyen, insanları hor görmeyen alçakgönüllü kişiye ne ad verilir?",
+    "options": [
+      "Mütevazı",
+      "Cömert",
+      "Sabırlı",
+      "Müşfik"
+    ],
+    "correct": "Mütevazı",
+    "wisdom": "Tevazu sahibi insanları Allah yüceltir."
+  },
+  {
+    "id": "mz_peygamber_101",
     "category": "Peygamberler Tarihi",
-    "question": "İlk yaratılan insan ve ilk peygamber aşağıdakilerden hangisidir?",
+    "question": "Kur'an'da anlatılan kıssalara göre, İlk insan ve ilk peygamber kimdir?",
     "options": [
+      "Hz. Nuh (a.s.)",
       "Hz. Adem (a.s.)",
-      "Hz. Nuh (a.s.)",
       "Hz. Şit (a.s.)",
-      "Hz. İdris (a.s.)"
-    ],
-    "correct": "Hz. Adem (a.s.)",
-    "wisdom": "Hz. Adem, insanlığın babası ve ilk peygamberdir."
-  },
-  {
-    "id": "mz_q_102",
-    "category": "Peygamberler Tarihi",
-    "question": "Büyük bir tufanla kavmi cezalandırılan ve gemi inşa eden peygamber kimdir?",
-    "options": [
-      "Hz. Nuh (a.s.)",
-      "Hz. Hud (a.s.)",
-      "Hz. Salih (a.s.)",
       "Hz. İbrahim (a.s.)"
     ],
-    "correct": "Hz. Nuh (a.s.)",
-    "wisdom": "Hz. Nuh, azim sahibi (ulul-azm) peygamberlerin ilkidir ve Nuh Tufanı ile bilinir."
+    "correct": "Hz. Adem (a.s.)",
+    "wisdom": "Hz. Adem balçıktan yaratılmış ve kendisine her şeyin ismi öğretilmiştir."
   },
   {
-    "id": "mz_q_103",
+    "id": "mz_peygamber_102",
     "category": "Peygamberler Tarihi",
-    "question": "Nemrut tarafından ateşe atılan ama ateşin kendisini yakmadığı peygamber kimdir?",
+    "question": "Kur'an'da anlatılan kıssalara göre, Tufan felaketinden iman edenleri kurtarmak için gemi yapan peygamber kimdir?",
     "options": [
-      "Hz. İbrahim (a.s.)",
-      "Hz. İsmail (a.s.)",
+      "Hz. Nuh (a.s.)",
+      "Hz. Salih (a.s.)",
+      "Hz. İdris (a.s.)",
+      "Hz. Hud (a.s.)"
+    ],
+    "correct": "Hz. Nuh (a.s.)",
+    "wisdom": "Hz. Nuh insanlığın ikinci babası olarak kabul edilir."
+  },
+  {
+    "id": "mz_peygamber_103",
+    "category": "Peygamberler Tarihi",
+    "question": "Kur'an'da anlatılan kıssalara göre, Nemrut'un ateşe attığı ve ateşin gül bahçesine döndüğü peygamber kimdir?",
+    "options": [
       "Hz. İshak (a.s.)",
-      "Hz. Yakub (a.s.)"
+      "Hz. Yakub (a.s.)",
+      "Hz. İbrahim (a.s.)",
+      "Hz. İsmail (a.s.)"
     ],
     "correct": "Hz. İbrahim (a.s.)",
-    "wisdom": "Ateşe 'Ey ateş! İbrahim'e karşı serin ve esenlik ol!' denmiştir."
+    "wisdom": "Hz. İbrahim 'Halilullah' yani Allah'ın dostu unvanına sahiptir."
   },
   {
-    "id": "mz_q_104",
+    "id": "mz_peygamber_104",
     "category": "Peygamberler Tarihi",
-    "question": "Hz. İbrahim'in kurban etmekle imtihan edildiği ve Kabe'yi babasıyla inşa eden oğlu kimdir?",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hz. İbrahim'in kurban etmekle imtihan edildiği oğlu kimdir?",
     "options": [
-      "Hz. İsmail (a.s.)",
+      "Hz. Yusuf (a.s.)",
       "Hz. İshak (a.s.)",
-      "Hz. Yakub (a.s.)",
-      "Hz. Yusuf (a.s.)"
+      "Hz. İsmail (a.s.)",
+      "Hz. Süleyman (a.s.)"
     ],
     "correct": "Hz. İsmail (a.s.)",
-    "wisdom": "Hz. İsmail, babası Hz. İbrahim ile birlikte Kabe'nin temellerini yükseltmiştir."
+    "wisdom": "Hz. İsmail sabrı ve teslimiyetiyle Kur'an'da övülmüştür."
   },
   {
-    "id": "mz_q_105",
+    "id": "mz_peygamber_105",
     "category": "Peygamberler Tarihi",
-    "question": "Oğlu Hz. Yusuf'un acısından dolayı gözleri kapanan peygamber kimdir?",
+    "question": "Kur'an'da anlatılan kıssalara göre, Yusuf peygamberin babası olan ve oğlunun hasretiyle gözleri kapanan peygamber kimdir?",
     "options": [
-      "Hz. Yakub (a.s.)",
-      "Hz. Yusuf (a.s.)",
+      "Hz. Harun (a.s.)",
       "Hz. İshak (a.s.)",
-      "Hz. Harun (a.s.)"
+      "Hz. Davud (a.s.)",
+      "Hz. Yakub (a.s.)"
     ],
     "correct": "Hz. Yakub (a.s.)",
-    "wisdom": "Hz. Yakub, Kenan diyarında yaşamış ve oğlunun hasretiyle yıllarca ağlamıştır."
+    "wisdom": "Hz. Yakub'un lakabı İsrail olup, soyundan gelenlere İsrailoğulları denmiştir."
   },
   {
-    "id": "mz_q_106",
+    "id": "mz_peygamber_106",
     "category": "Peygamberler Tarihi",
-    "question": "Kardeşleri tarafından kuyuya atılan, sonra Mısır'a maliye bakanı olan peygamber kimdir?",
+    "question": "Kur'an'da anlatılan kıssalara göre, Kardeşleri tarafından kıskanılıp kuyuya atılan ve rüya tabir etme mucizesi olan peygamber kimdir?",
     "options": [
-      "Hz. Yusuf (a.s.)",
       "Hz. Yakub (a.s.)",
-      "Hz. Bünyamin (a.s.)",
-      "Hz. Musa (a.s.)"
+      "Hz. Yusuf (a.s.)",
+      "Hz. Musa (a.s.)",
+      "Hz. Bünyamin (a.s.)"
     ],
     "correct": "Hz. Yusuf (a.s.)",
-    "wisdom": "Hz. Yusuf, güzelliği ve rüya tabir etme mucizesiyle meşhurdur."
+    "wisdom": "Hz. Yusuf'un hayatı Kur'an'da 'Ahsenü'l-Kasas' yani kıssaların en güzeli olarak geçer."
   },
   {
-    "id": "mz_q_107",
+    "id": "mz_peygamber_107",
     "category": "Peygamberler Tarihi",
-    "question": "Ağır bir hastalık ve musibetlerle imtihan edilip sabrıyla sembol olan peygamber kimdir?",
-    "options": [
-      "Hz. Eyüp (a.s.)",
-      "Hz. Zülkifl (a.s.)",
-      "Hz. Elyasa (a.s.)",
-      "Hz. Yunus (a.s.)"
-    ],
-    "correct": "Hz. Eyüp (a.s.)",
-    "wisdom": "Hz. Eyüp, dertlere karşı gösterdiği sabırla insanlığa örnek olmuştur."
-  },
-  {
-    "id": "mz_q_108",
-    "category": "Peygamberler Tarihi",
-    "question": "Asurluların başkenti Ninova halkına gönderilen ve balığın karnında tövbe eden peygamber kimdir?",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hastalık ve musibetlere karşı gösterdiği muazzam sabırla bilinen peygamber kimdir?",
     "options": [
       "Hz. Yunus (a.s.)",
+      "Hz. Zülkifl (a.s.)",
+      "Hz. Elyasa (a.s.)",
+      "Hz. Eyüp (a.s.)"
+    ],
+    "correct": "Hz. Eyüp (a.s.)",
+    "wisdom": "Hz. Eyüp sabrının mükafatı olarak şifalı bir suyla iyileşmiştir."
+  },
+  {
+    "id": "mz_peygamber_108",
+    "category": "Peygamberler Tarihi",
+    "question": "Kur'an'da anlatılan kıssalara göre, Ninova halkına gönderilen ve öfkeyle şehri terk edip balık tarafından yutulan peygamber kimdir?",
+    "options": [
+      "Hz. Yahya (a.s.)",
       "Hz. Hud (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yahya (a.s.)"
+      "Hz. Yunus (a.s.)",
+      "Hz. Salih (a.s.)"
     ],
     "correct": "Hz. Yunus (a.s.)",
-    "wisdom": "Hz. Yunus, balığın karnında 'La ilahe illa ente subhaneke inni kuntu minez-zalimin' duasını okumuştur."
+    "wisdom": "Hz. Yunus hatasını anlayıp balığın karnında samimiyetle tövbe etmiştir."
   },
   {
-    "id": "mz_q_109",
+    "id": "mz_peygamber_109",
     "category": "Peygamberler Tarihi",
-    "question": "Kızıldeniz'i asasıyla ikiye yaran ve Firavun'a karşı tevhid mücadelesi veren peygamber kimdir?",
+    "question": "Kur'an'da anlatılan kıssalara göre, Asasıyla Kızıldeniz'i ikiye yaran ve Tur Dağı'nda Allah ile konuşan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Harun (a.s.)",
       "Hz. Şuayb (a.s.)",
-      "Hz. Davud (a.s.)"
+      "Hz. Davud (a.s.)",
+      "Hz. Harun (a.s.)",
+      "Hz. Musa (a.s.)"
     ],
     "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa, kendisine Tevrat indirilen ve Tur Dağı'nda Allah ile konuşan peygamberdir."
+    "wisdom": "Hz. Musa'ya kutsal kitaplardan Tevrat indirilmiştir."
   },
   {
-    "id": "mz_q_110",
+    "id": "mz_peygamber_110",
     "category": "Peygamberler Tarihi",
-    "question": "Demiri elinde hamur gibi şekillendiren, sesinin güzelliğiyle bilinen ve Zebur indirilen padişah peygamber kimdir?",
+    "question": "Kur'an'da anlatılan kıssalara göre, Zebur indirilen, demiri eliyle bükebilen ve sesinin güzelliğiyle dağları taşa getiren peygamber kimdir?",
     "options": [
-      "Hz. Davud (a.s.)",
       "Hz. Süleyman (a.s.)",
-      "Hz. Zekeriya (a.s.)",
-      "Hz. İsa (a.s.)"
+      "Hz. İsa (a.s.)",
+      "Hz. Musa (a.s.)",
+      "Hz. Davud (a.s.)"
     ],
     "correct": "Hz. Davud (a.s.)",
-    "wisdom": "Hz. Davud hem peygamber hem hükümdardı, sesinin güzelliği 'Davudî ses' deyimiyle anılır."
+    "wisdom": "Hz. Davud hem peygamber hem de adil bir hükümdardır."
   },
   {
-    "id": "mz_q_111",
+    "id": "mz_peygamber_111",
     "category": "Peygamberler Tarihi",
-    "question": "Rüzgara yön veren, hayvanların ve cinlerin dilini anlayan hükümdar peygamber kimdir?",
+    "question": "Kur'an'da anlatılan kıssalara göre, Rüzgarlara, hayvanlara ve cinlere hükmedebilen hükümdar peygamber kimdir?",
     "options": [
-      "Hz. Süleyman (a.s.)",
+      "Hz. Lokman (a.s.)",
       "Hz. Davud (a.s.)",
-      "Hz. Zülkarneyn (a.s.)",
-      "Hz. Lokman (a.s.)"
+      "Hz. Süleyman (a.s.)",
+      "Hz. Üzeyir (a.s.)"
     ],
     "correct": "Hz. Süleyman (a.s.)",
-    "wisdom": "Hz. Süleyman, babası Hz. Davud'un ardından büyük bir saltanat kurmuştur."
+    "wisdom": "Hz. Süleyman babası Hz. Davud'un tahtına geçmiş ve muazzam bir saltanat kurmuştur."
   },
   {
-    "id": "mz_q_112",
+    "id": "mz_peygamber_112",
     "category": "Peygamberler Tarihi",
-    "question": "Babasız olarak dünyaya gelen, beşikteyken konuşan ve hastaları iyileştiren peygamber kimdir?",
+    "question": "Kur'an'da anlatılan kıssalara göre, Beşikteyken konuşan, hastaları iyileştiren ve babasız dünyaya gelen peygamber kimdir?",
     "options": [
-      "Hz. İsa (a.s.)",
       "Hz. Yahya (a.s.)",
+      "Hz. İsa (a.s.)",
       "Hz. Zekeriya (a.s.)",
       "Hz. Musa (a.s.)"
     ],
     "correct": "Hz. İsa (a.s.)",
-    "wisdom": "Hz. İsa, Allah'ın 'Ol' kelimesiyle ve ruhuyla Hz. Meryem'den babasız dünyaya gelmiştir."
+    "wisdom": "Hz. İsa'ya semavi kitaplardan İncil indirilmiştir."
   },
   {
-    "id": "mz_q_113",
+    "id": "mz_peygamber_113",
     "category": "Peygamberler Tarihi",
-    "question": "Semud kavmine gönderilen ve mucize olarak kayadan bir deve çıkaran peygamber kimdir?",
+    "question": "Kur'an'da anlatılan kıssalara göre, Semud kavmine gönderilen ve mucize olarak kayadan gebe bir deve çıkaran peygamber kimdir?",
     "options": [
-      "Hz. Salih (a.s.)",
       "Hz. Hud (a.s.)",
-      "Hz. Şuayb (a.s.)",
-      "Hz. Lut (a.s.)"
+      "Hz. Salih (a.s.)",
+      "Hz. Lut (a.s.)",
+      "Hz. Nuh (a.s.)"
     ],
     "correct": "Hz. Salih (a.s.)",
-    "wisdom": "Semud kavmi, Hz. Salih'in mucize devesini katlettiği için helak edilmiştir."
+    "wisdom": "Semud kavmi mucize deveyi katlettiği için helak olmuştur."
   },
   {
-    "id": "mz_q_114",
+    "id": "mz_peygamber_114",
     "category": "Peygamberler Tarihi",
-    "question": "Ad kavmine gönderilen ve güçlü fırtınalarla kavmi helak olan peygamber kimdir?",
+    "question": "Kur'an'da anlatılan kıssalara göre, Ad kavmine gönderilen ve kibirleri yüzünden rüzgarla helak olan kavmin peygamberi kimdir?",
     "options": [
-      "Hz. Hud (a.s.)",
       "Hz. Salih (a.s.)",
       "Hz. Nuh (a.s.)",
-      "Hz. Lut (a.s.)"
+      "Hz. Hud (a.s.)",
+      "Hz. Şuayb (a.s.)"
     ],
     "correct": "Hz. Hud (a.s.)",
-    "wisdom": "Ad kavmi, yüksek sütunlu binalar inşa eden güçlü ama kibirli bir kavimdi."
+    "wisdom": "Ad kavmi devasa binalar yapan çok güçlü bir topluluktu."
   },
   {
-    "id": "mz_q_115",
+    "id": "mz_peygamber_115",
     "category": "Peygamberler Tarihi",
-    "question": "Medyen ve Eyke halkına gönderilen, ölçü ve tartıda dürüstlüğü savunan hatip peygamber kimdir?",
+    "question": "Kur'an'da anlatılan kıssalara göre, Medyen halkına gönderilen, ölçü ve tartıda hile yapmamalarını söyleyen hatip peygamber kimdir?",
     "options": [
-      "Hz. Şuayb (a.s.)",
-      "Hz. Musa (a.s.)",
       "Hz. Harun (a.s.)",
-      "Hz. Lut (a.s.)"
+      "Hz. Şuayb (a.s.)",
+      "Hz. Lut (a.s.)",
+      "Hz. Musa (a.s.)"
     ],
     "correct": "Hz. Şuayb (a.s.)",
-    "wisdom": "Hz. Şuayb, hitabetinin güzelliğinden dolayı 'Peygamberlerin Hatibi' olarak bilinir."
+    "wisdom": "Hz. Şuayb güzel konuşmasından ötürü 'Hatibü'l-Enbiya' olarak anılır."
   },
   {
-    "id": "mz_q_116",
+    "id": "mz_peygamber_116",
     "category": "Peygamberler Tarihi",
-    "question": "Hz. Nuh'un gemisi tufandan sonra hangi dağa oturmuştur?",
+    "question": "Kur'an'da anlatılan kıssalara göre, Yazıyı ilk yazan ve terzilik mesleğinin öncüsü olan peygamber kimdir?",
     "options": [
-      "Cudi Dağı",
-      "Ağrı Dağı",
-      "Tur Dağı",
-      "Uhud Dağı"
-    ],
-    "correct": "Cudi Dağı",
-    "wisdom": "Kur'an-ı Kerim'de Nuh'un gemisinin 'Cudi' üzerine oturduğu belirtilir."
-  },
-  {
-    "id": "mz_q_117",
-    "category": "Peygamberler Tarihi",
-    "question": "Hz. Yakub'un diğer adı (lakabı) nedir ve soyundan gelenlere ne denir?",
-    "options": [
-      "İsrail",
-      "Kureyş",
-      "Ensar",
-      "Muhacir"
-    ],
-    "correct": "İsrail",
-    "wisdom": "Hz. Yakub'un lakabı İsrail'dir ve soyundan gelenlere İsrailoğulları denir."
-  },
-  {
-    "id": "mz_q_118",
-    "category": "Peygamberler Tarihi",
-    "question": "Mabette Hz. Meryem'in bakımını üstlenen ve yaşlılığında Hz. Yahya müjdelenen peygamber kimdir?",
-    "options": [
-      "Hz. Zekeriya (a.s.)",
-      "Hz. Yahya (a.s.)",
-      "Hz. İsa (a.s.)",
-      "Hz. Elyasa (a.s.)"
-    ],
-    "correct": "Hz. Zekeriya (a.s.)",
-    "wisdom": "Hz. Zekeriya, Kudüs'teki Süleyman Mabedi'nde görevliydi."
-  },
-  {
-    "id": "mz_q_119",
-    "category": "Peygamberler Tarihi",
-    "question": "Terzilik mesleğinin pir sayılan ve göklere yükseltilen peygamber kimdir?",
-    "options": [
-      "Hz. İdris (a.s.)",
+      "Hz. Hud (a.s.)",
+      "Hz. Nuh (a.s.)",
       "Hz. Şit (a.s.)",
-      "Hz. Lokman (a.s.)",
-      "Hz. Harun (a.s.)"
+      "Hz. İdris (a.s.)"
     ],
     "correct": "Hz. İdris (a.s.)",
-    "wisdom": "Hz. İdris, kalemle yazan ve elbise dikip giyen ilk peygamberlerdendir."
+    "wisdom": "Hz. İdris göklere yükseltilen yüce bir makama sahipti."
   },
   {
-    "id": "mz_q_120",
+    "id": "mz_peygamber_117",
     "category": "Peygamberler Tarihi",
-    "question": "Sodom ve Gomore şehirlerinde yaşayan, ahlaksızlıkları yüzünden taş yağmuruyla helak olan kavmin peygamberi kimdir?",
+    "question": "Kur'an'da anlatılan kıssalara göre, Kudüs'teki Süleyman Mabedi'nde görevli olan ve Hz. Meryem'in bakımını üstlenen peygamber kimdir?",
     "options": [
-      "Hz. Lut (a.s.)",
+      "Hz. Yahya (a.s.)",
+      "Hz. İsa (a.s.)",
+      "Hz. Zekeriya (a.s.)",
+      "Hz. Süleyman (a.s.)"
+    ],
+    "correct": "Hz. Zekeriya (a.s.)",
+    "wisdom": "Hz. Zekeriya yaşlılığında evlat istemiş ve kendisine Hz. Yahya müjdelenmiştir."
+  },
+  {
+    "id": "mz_peygamber_118",
+    "category": "Peygamberler Tarihi",
+    "question": "Kur'an'da anlatılan kıssalara göre, Sodom halkının ahlaksızlıklarına karşı mücadele eden peygamber kimdir?",
+    "options": [
       "Hz. İbrahim (a.s.)",
+      "Hz. Lut (a.s.)",
       "Hz. Şuayb (a.s.)",
-      "Hz. Salih (a.s.)"
+      "Hz. Hud (a.s.)"
     ],
     "correct": "Hz. Lut (a.s.)",
     "wisdom": "Hz. Lut, Hz. İbrahim'in yeğenidir ve onunla aynı dönemde yaşamıştır."
   },
   {
-    "id": "mz_q_121",
+    "id": "mz_peygamber_119",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 21)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hz. Adem'den sonra kendisine 50 sayfa (suhuf) gönderilen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Hud (a.s.)",
+      "Hz. Nuh (a.s.)",
+      "Hz. İdris (a.s.)",
+      "Hz. Şit (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 21)"
+    "correct": "Hz. Şit (a.s.)",
+    "wisdom": "Hz. Şit, Hz. Adem'in Kabil tarafından öldürülen oğlu Habil'e karşılık verilen temiz bir evlattır."
   },
   {
-    "id": "mz_q_122",
+    "id": "mz_peygamber_120",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 22)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hz. Zekeriya'nın oğlu olan ve Hz. İsa'nın geleceğini müjdeleyen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Harun (a.s.)",
+      "Hz. Zekeriya (a.s.)",
+      "Hz. Yahya (a.s.)",
+      "Hz. Elyasa (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 22)"
+    "correct": "Hz. Yahya (a.s.)",
+    "wisdom": "Hz. Yahya nehirde insanları vaftiz ettiği için Hristiyan kaynaklarında Vaftizci Yahya olarak geçer."
   },
   {
-    "id": "mz_q_123",
+    "id": "mz_peygamber_121",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 23)",
+    "question": "Kur'an'da anlatılan kıssalara göre, İlk insan ve ilk peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Nuh (a.s.)",
+      "Hz. Adem (a.s.)",
+      "Hz. Şit (a.s.)",
+      "Hz. İbrahim (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 23)"
+    "correct": "Hz. Adem (a.s.)",
+    "wisdom": "Hz. Adem balçıktan yaratılmış ve kendisine her şeyin ismi öğretilmiştir."
   },
   {
-    "id": "mz_q_124",
+    "id": "mz_peygamber_122",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 24)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Tufan felaketinden iman edenleri kurtarmak için gemi yapan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
+      "Hz. Nuh (a.s.)",
       "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. İdris (a.s.)",
+      "Hz. Hud (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 24)"
+    "correct": "Hz. Nuh (a.s.)",
+    "wisdom": "Hz. Nuh insanlığın ikinci babası olarak kabul edilir."
   },
   {
-    "id": "mz_q_125",
+    "id": "mz_peygamber_123",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 25)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Nemrut'un ateşe attığı ve ateşin gül bahçesine döndüğü peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. İshak (a.s.)",
+      "Hz. Yakub (a.s.)",
+      "Hz. İbrahim (a.s.)",
+      "Hz. İsmail (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 25)"
+    "correct": "Hz. İbrahim (a.s.)",
+    "wisdom": "Hz. İbrahim 'Halilullah' yani Allah'ın dostu unvanına sahiptir."
   },
   {
-    "id": "mz_q_126",
+    "id": "mz_peygamber_124",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 26)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hz. İbrahim'in kurban etmekle imtihan edildiği oğlu kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
       "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. İshak (a.s.)",
+      "Hz. İsmail (a.s.)",
+      "Hz. Süleyman (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 26)"
+    "correct": "Hz. İsmail (a.s.)",
+    "wisdom": "Hz. İsmail sabrı ve teslimiyetiyle Kur'an'da övülmüştür."
   },
   {
-    "id": "mz_q_127",
+    "id": "mz_peygamber_125",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 27)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Yusuf peygamberin babası olan ve oğlunun hasretiyle gözleri kapanan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Harun (a.s.)",
+      "Hz. İshak (a.s.)",
+      "Hz. Davud (a.s.)",
+      "Hz. Yakub (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 27)"
+    "correct": "Hz. Yakub (a.s.)",
+    "wisdom": "Hz. Yakub'un lakabı İsrail olup, soyundan gelenlere İsrailoğulları denmiştir."
   },
   {
-    "id": "mz_q_128",
+    "id": "mz_peygamber_126",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 28)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Kardeşleri tarafından kıskanılıp kuyuya atılan ve rüya tabir etme mucizesi olan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
+      "Hz. Yakub (a.s.)",
       "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Musa (a.s.)",
+      "Hz. Bünyamin (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 28)"
+    "correct": "Hz. Yusuf (a.s.)",
+    "wisdom": "Hz. Yusuf'un hayatı Kur'an'da 'Ahsenü'l-Kasas' yani kıssaların en güzeli olarak geçer."
   },
   {
-    "id": "mz_q_129",
+    "id": "mz_peygamber_127",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 29)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hastalık ve musibetlere karşı gösterdiği muazzam sabırla bilinen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Yunus (a.s.)",
+      "Hz. Zülkifl (a.s.)",
+      "Hz. Elyasa (a.s.)",
+      "Hz. Eyüp (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 29)"
+    "correct": "Hz. Eyüp (a.s.)",
+    "wisdom": "Hz. Eyüp sabrının mükafatı olarak şifalı bir suyla iyileşmiştir."
   },
   {
-    "id": "mz_q_130",
+    "id": "mz_peygamber_128",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 30)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Ninova halkına gönderilen ve öfkeyle şehri terk edip balık tarafından yutulan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Yahya (a.s.)",
+      "Hz. Hud (a.s.)",
+      "Hz. Yunus (a.s.)",
+      "Hz. Salih (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 30)"
+    "correct": "Hz. Yunus (a.s.)",
+    "wisdom": "Hz. Yunus hatasını anlayıp balığın karnında samimiyetle tövbe etmiştir."
   },
   {
-    "id": "mz_q_131",
+    "id": "mz_peygamber_129",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 31)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Asasıyla Kızıldeniz'i ikiye yaran ve Tur Dağı'nda Allah ile konuşan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Şuayb (a.s.)",
+      "Hz. Davud (a.s.)",
+      "Hz. Harun (a.s.)",
+      "Hz. Musa (a.s.)"
     ],
     "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 31)"
+    "wisdom": "Hz. Musa'ya kutsal kitaplardan Tevrat indirilmiştir."
   },
   {
-    "id": "mz_q_132",
+    "id": "mz_peygamber_130",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 32)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Zebur indirilen, demiri eliyle bükebilen ve sesinin güzelliğiyle dağları taşa getiren peygamber kimdir?",
     "options": [
+      "Hz. Süleyman (a.s.)",
+      "Hz. İsa (a.s.)",
       "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Davud (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 32)"
+    "correct": "Hz. Davud (a.s.)",
+    "wisdom": "Hz. Davud hem peygamber hem de adil bir hükümdardır."
   },
   {
-    "id": "mz_q_133",
+    "id": "mz_peygamber_131",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 33)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Rüzgarlara, hayvanlara ve cinlere hükmedebilen hükümdar peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Lokman (a.s.)",
+      "Hz. Davud (a.s.)",
+      "Hz. Süleyman (a.s.)",
+      "Hz. Üzeyir (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 33)"
+    "correct": "Hz. Süleyman (a.s.)",
+    "wisdom": "Hz. Süleyman babası Hz. Davud'un tahtına geçmiş ve muazzam bir saltanat kurmuştur."
   },
   {
-    "id": "mz_q_134",
+    "id": "mz_peygamber_132",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 34)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Beşikteyken konuşan, hastaları iyileştiren ve babasız dünyaya gelen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Yahya (a.s.)",
+      "Hz. İsa (a.s.)",
+      "Hz. Zekeriya (a.s.)",
+      "Hz. Musa (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 34)"
+    "correct": "Hz. İsa (a.s.)",
+    "wisdom": "Hz. İsa'ya semavi kitaplardan İncil indirilmiştir."
   },
   {
-    "id": "mz_q_135",
+    "id": "mz_peygamber_133",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 35)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Semud kavmine gönderilen ve mucize olarak kayadan gebe bir deve çıkaran peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
+      "Hz. Hud (a.s.)",
       "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Lut (a.s.)",
+      "Hz. Nuh (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 35)"
+    "correct": "Hz. Salih (a.s.)",
+    "wisdom": "Semud kavmi mucize deveyi katlettiği için helak olmuştur."
   },
   {
-    "id": "mz_q_136",
+    "id": "mz_peygamber_134",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 36)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Ad kavmine gönderilen ve kibirleri yüzünden rüzgarla helak olan kavmin peygamberi kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
       "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Nuh (a.s.)",
+      "Hz. Hud (a.s.)",
+      "Hz. Şuayb (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 36)"
+    "correct": "Hz. Hud (a.s.)",
+    "wisdom": "Ad kavmi devasa binalar yapan çok güçlü bir topluluktu."
   },
   {
-    "id": "mz_q_137",
+    "id": "mz_peygamber_135",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 37)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Medyen halkına gönderilen, ölçü ve tartıda hile yapmamalarını söyleyen hatip peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Harun (a.s.)",
+      "Hz. Şuayb (a.s.)",
+      "Hz. Lut (a.s.)",
+      "Hz. Musa (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 37)"
+    "correct": "Hz. Şuayb (a.s.)",
+    "wisdom": "Hz. Şuayb güzel konuşmasından ötürü 'Hatibü'l-Enbiya' olarak anılır."
   },
   {
-    "id": "mz_q_138",
+    "id": "mz_peygamber_136",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 38)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Yazıyı ilk yazan ve terzilik mesleğinin öncüsü olan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Hud (a.s.)",
+      "Hz. Nuh (a.s.)",
+      "Hz. Şit (a.s.)",
+      "Hz. İdris (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 38)"
+    "correct": "Hz. İdris (a.s.)",
+    "wisdom": "Hz. İdris göklere yükseltilen yüce bir makama sahipti."
   },
   {
-    "id": "mz_q_139",
+    "id": "mz_peygamber_137",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 39)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Kudüs'teki Süleyman Mabedi'nde görevli olan ve Hz. Meryem'in bakımını üstlenen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Yahya (a.s.)",
+      "Hz. İsa (a.s.)",
+      "Hz. Zekeriya (a.s.)",
+      "Hz. Süleyman (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 39)"
+    "correct": "Hz. Zekeriya (a.s.)",
+    "wisdom": "Hz. Zekeriya yaşlılığında evlat istemiş ve kendisine Hz. Yahya müjdelenmiştir."
   },
   {
-    "id": "mz_q_140",
+    "id": "mz_peygamber_138",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 40)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Sodom halkının ahlaksızlıklarına karşı mücadele eden peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. İbrahim (a.s.)",
+      "Hz. Lut (a.s.)",
+      "Hz. Şuayb (a.s.)",
+      "Hz. Hud (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 40)"
+    "correct": "Hz. Lut (a.s.)",
+    "wisdom": "Hz. Lut, Hz. İbrahim'in yeğenidir ve onunla aynı dönemde yaşamıştır."
   },
   {
-    "id": "mz_q_141",
+    "id": "mz_peygamber_139",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 41)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hz. Adem'den sonra kendisine 50 sayfa (suhuf) gönderilen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Hud (a.s.)",
+      "Hz. Nuh (a.s.)",
+      "Hz. İdris (a.s.)",
+      "Hz. Şit (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 41)"
+    "correct": "Hz. Şit (a.s.)",
+    "wisdom": "Hz. Şit, Hz. Adem'in Kabil tarafından öldürülen oğlu Habil'e karşılık verilen temiz bir evlattır."
   },
   {
-    "id": "mz_q_142",
+    "id": "mz_peygamber_140",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 42)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hz. Zekeriya'nın oğlu olan ve Hz. İsa'nın geleceğini müjdeleyen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Harun (a.s.)",
+      "Hz. Zekeriya (a.s.)",
+      "Hz. Yahya (a.s.)",
+      "Hz. Elyasa (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 42)"
+    "correct": "Hz. Yahya (a.s.)",
+    "wisdom": "Hz. Yahya nehirde insanları vaftiz ettiği için Hristiyan kaynaklarında Vaftizci Yahya olarak geçer."
   },
   {
-    "id": "mz_q_143",
+    "id": "mz_peygamber_141",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 43)",
+    "question": "Kur'an'da anlatılan kıssalara göre, İlk insan ve ilk peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Nuh (a.s.)",
+      "Hz. Adem (a.s.)",
+      "Hz. Şit (a.s.)",
+      "Hz. İbrahim (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 43)"
+    "correct": "Hz. Adem (a.s.)",
+    "wisdom": "Hz. Adem balçıktan yaratılmış ve kendisine her şeyin ismi öğretilmiştir."
   },
   {
-    "id": "mz_q_144",
+    "id": "mz_peygamber_142",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 44)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Tufan felaketinden iman edenleri kurtarmak için gemi yapan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
+      "Hz. Nuh (a.s.)",
       "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. İdris (a.s.)",
+      "Hz. Hud (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 44)"
+    "correct": "Hz. Nuh (a.s.)",
+    "wisdom": "Hz. Nuh insanlığın ikinci babası olarak kabul edilir."
   },
   {
-    "id": "mz_q_145",
+    "id": "mz_peygamber_143",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 45)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Nemrut'un ateşe attığı ve ateşin gül bahçesine döndüğü peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. İshak (a.s.)",
+      "Hz. Yakub (a.s.)",
+      "Hz. İbrahim (a.s.)",
+      "Hz. İsmail (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 45)"
+    "correct": "Hz. İbrahim (a.s.)",
+    "wisdom": "Hz. İbrahim 'Halilullah' yani Allah'ın dostu unvanına sahiptir."
   },
   {
-    "id": "mz_q_146",
+    "id": "mz_peygamber_144",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 46)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hz. İbrahim'in kurban etmekle imtihan edildiği oğlu kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
       "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. İshak (a.s.)",
+      "Hz. İsmail (a.s.)",
+      "Hz. Süleyman (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 46)"
+    "correct": "Hz. İsmail (a.s.)",
+    "wisdom": "Hz. İsmail sabrı ve teslimiyetiyle Kur'an'da övülmüştür."
   },
   {
-    "id": "mz_q_147",
+    "id": "mz_peygamber_145",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 47)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Yusuf peygamberin babası olan ve oğlunun hasretiyle gözleri kapanan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Harun (a.s.)",
+      "Hz. İshak (a.s.)",
+      "Hz. Davud (a.s.)",
+      "Hz. Yakub (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 47)"
+    "correct": "Hz. Yakub (a.s.)",
+    "wisdom": "Hz. Yakub'un lakabı İsrail olup, soyundan gelenlere İsrailoğulları denmiştir."
   },
   {
-    "id": "mz_q_148",
+    "id": "mz_peygamber_146",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 48)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Kardeşleri tarafından kıskanılıp kuyuya atılan ve rüya tabir etme mucizesi olan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
+      "Hz. Yakub (a.s.)",
       "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Musa (a.s.)",
+      "Hz. Bünyamin (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 48)"
+    "correct": "Hz. Yusuf (a.s.)",
+    "wisdom": "Hz. Yusuf'un hayatı Kur'an'da 'Ahsenü'l-Kasas' yani kıssaların en güzeli olarak geçer."
   },
   {
-    "id": "mz_q_149",
+    "id": "mz_peygamber_147",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 49)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hastalık ve musibetlere karşı gösterdiği muazzam sabırla bilinen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Yunus (a.s.)",
+      "Hz. Zülkifl (a.s.)",
+      "Hz. Elyasa (a.s.)",
+      "Hz. Eyüp (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 49)"
+    "correct": "Hz. Eyüp (a.s.)",
+    "wisdom": "Hz. Eyüp sabrının mükafatı olarak şifalı bir suyla iyileşmiştir."
   },
   {
-    "id": "mz_q_150",
+    "id": "mz_peygamber_148",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 50)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Ninova halkına gönderilen ve öfkeyle şehri terk edip balık tarafından yutulan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Yahya (a.s.)",
+      "Hz. Hud (a.s.)",
+      "Hz. Yunus (a.s.)",
+      "Hz. Salih (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 50)"
+    "correct": "Hz. Yunus (a.s.)",
+    "wisdom": "Hz. Yunus hatasını anlayıp balığın karnında samimiyetle tövbe etmiştir."
   },
   {
-    "id": "mz_q_151",
+    "id": "mz_peygamber_149",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 51)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Asasıyla Kızıldeniz'i ikiye yaran ve Tur Dağı'nda Allah ile konuşan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Şuayb (a.s.)",
+      "Hz. Davud (a.s.)",
+      "Hz. Harun (a.s.)",
+      "Hz. Musa (a.s.)"
     ],
     "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 51)"
+    "wisdom": "Hz. Musa'ya kutsal kitaplardan Tevrat indirilmiştir."
   },
   {
-    "id": "mz_q_152",
+    "id": "mz_peygamber_150",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 52)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Zebur indirilen, demiri eliyle bükebilen ve sesinin güzelliğiyle dağları taşa getiren peygamber kimdir?",
     "options": [
+      "Hz. Süleyman (a.s.)",
+      "Hz. İsa (a.s.)",
       "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Davud (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 52)"
+    "correct": "Hz. Davud (a.s.)",
+    "wisdom": "Hz. Davud hem peygamber hem de adil bir hükümdardır."
   },
   {
-    "id": "mz_q_153",
+    "id": "mz_peygamber_151",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 53)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Rüzgarlara, hayvanlara ve cinlere hükmedebilen hükümdar peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Lokman (a.s.)",
+      "Hz. Davud (a.s.)",
+      "Hz. Süleyman (a.s.)",
+      "Hz. Üzeyir (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 53)"
+    "correct": "Hz. Süleyman (a.s.)",
+    "wisdom": "Hz. Süleyman babası Hz. Davud'un tahtına geçmiş ve muazzam bir saltanat kurmuştur."
   },
   {
-    "id": "mz_q_154",
+    "id": "mz_peygamber_152",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 54)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Beşikteyken konuşan, hastaları iyileştiren ve babasız dünyaya gelen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Yahya (a.s.)",
+      "Hz. İsa (a.s.)",
+      "Hz. Zekeriya (a.s.)",
+      "Hz. Musa (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 54)"
+    "correct": "Hz. İsa (a.s.)",
+    "wisdom": "Hz. İsa'ya semavi kitaplardan İncil indirilmiştir."
   },
   {
-    "id": "mz_q_155",
+    "id": "mz_peygamber_153",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 55)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Semud kavmine gönderilen ve mucize olarak kayadan gebe bir deve çıkaran peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
+      "Hz. Hud (a.s.)",
       "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Lut (a.s.)",
+      "Hz. Nuh (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 55)"
+    "correct": "Hz. Salih (a.s.)",
+    "wisdom": "Semud kavmi mucize deveyi katlettiği için helak olmuştur."
   },
   {
-    "id": "mz_q_156",
+    "id": "mz_peygamber_154",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 56)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Ad kavmine gönderilen ve kibirleri yüzünden rüzgarla helak olan kavmin peygamberi kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
       "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Nuh (a.s.)",
+      "Hz. Hud (a.s.)",
+      "Hz. Şuayb (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 56)"
+    "correct": "Hz. Hud (a.s.)",
+    "wisdom": "Ad kavmi devasa binalar yapan çok güçlü bir topluluktu."
   },
   {
-    "id": "mz_q_157",
+    "id": "mz_peygamber_155",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 57)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Medyen halkına gönderilen, ölçü ve tartıda hile yapmamalarını söyleyen hatip peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Harun (a.s.)",
+      "Hz. Şuayb (a.s.)",
+      "Hz. Lut (a.s.)",
+      "Hz. Musa (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 57)"
+    "correct": "Hz. Şuayb (a.s.)",
+    "wisdom": "Hz. Şuayb güzel konuşmasından ötürü 'Hatibü'l-Enbiya' olarak anılır."
   },
   {
-    "id": "mz_q_158",
+    "id": "mz_peygamber_156",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 58)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Yazıyı ilk yazan ve terzilik mesleğinin öncüsü olan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Hud (a.s.)",
+      "Hz. Nuh (a.s.)",
+      "Hz. Şit (a.s.)",
+      "Hz. İdris (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 58)"
+    "correct": "Hz. İdris (a.s.)",
+    "wisdom": "Hz. İdris göklere yükseltilen yüce bir makama sahipti."
   },
   {
-    "id": "mz_q_159",
+    "id": "mz_peygamber_157",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 59)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Kudüs'teki Süleyman Mabedi'nde görevli olan ve Hz. Meryem'in bakımını üstlenen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Yahya (a.s.)",
+      "Hz. İsa (a.s.)",
+      "Hz. Zekeriya (a.s.)",
+      "Hz. Süleyman (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 59)"
+    "correct": "Hz. Zekeriya (a.s.)",
+    "wisdom": "Hz. Zekeriya yaşlılığında evlat istemiş ve kendisine Hz. Yahya müjdelenmiştir."
   },
   {
-    "id": "mz_q_160",
+    "id": "mz_peygamber_158",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 60)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Sodom halkının ahlaksızlıklarına karşı mücadele eden peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. İbrahim (a.s.)",
+      "Hz. Lut (a.s.)",
+      "Hz. Şuayb (a.s.)",
+      "Hz. Hud (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 60)"
+    "correct": "Hz. Lut (a.s.)",
+    "wisdom": "Hz. Lut, Hz. İbrahim'in yeğenidir ve onunla aynı dönemde yaşamıştır."
   },
   {
-    "id": "mz_q_161",
+    "id": "mz_peygamber_159",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 61)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hz. Adem'den sonra kendisine 50 sayfa (suhuf) gönderilen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Hud (a.s.)",
+      "Hz. Nuh (a.s.)",
+      "Hz. İdris (a.s.)",
+      "Hz. Şit (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 61)"
+    "correct": "Hz. Şit (a.s.)",
+    "wisdom": "Hz. Şit, Hz. Adem'in Kabil tarafından öldürülen oğlu Habil'e karşılık verilen temiz bir evlattır."
   },
   {
-    "id": "mz_q_162",
+    "id": "mz_peygamber_160",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 62)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hz. Zekeriya'nın oğlu olan ve Hz. İsa'nın geleceğini müjdeleyen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Harun (a.s.)",
+      "Hz. Zekeriya (a.s.)",
+      "Hz. Yahya (a.s.)",
+      "Hz. Elyasa (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 62)"
+    "correct": "Hz. Yahya (a.s.)",
+    "wisdom": "Hz. Yahya nehirde insanları vaftiz ettiği için Hristiyan kaynaklarında Vaftizci Yahya olarak geçer."
   },
   {
-    "id": "mz_q_163",
+    "id": "mz_peygamber_161",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 63)",
+    "question": "Kur'an'da anlatılan kıssalara göre, İlk insan ve ilk peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Nuh (a.s.)",
+      "Hz. Adem (a.s.)",
+      "Hz. Şit (a.s.)",
+      "Hz. İbrahim (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 63)"
+    "correct": "Hz. Adem (a.s.)",
+    "wisdom": "Hz. Adem balçıktan yaratılmış ve kendisine her şeyin ismi öğretilmiştir."
   },
   {
-    "id": "mz_q_164",
+    "id": "mz_peygamber_162",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 64)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Tufan felaketinden iman edenleri kurtarmak için gemi yapan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
+      "Hz. Nuh (a.s.)",
       "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. İdris (a.s.)",
+      "Hz. Hud (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 64)"
+    "correct": "Hz. Nuh (a.s.)",
+    "wisdom": "Hz. Nuh insanlığın ikinci babası olarak kabul edilir."
   },
   {
-    "id": "mz_q_165",
+    "id": "mz_peygamber_163",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 65)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Nemrut'un ateşe attığı ve ateşin gül bahçesine döndüğü peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. İshak (a.s.)",
+      "Hz. Yakub (a.s.)",
+      "Hz. İbrahim (a.s.)",
+      "Hz. İsmail (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 65)"
+    "correct": "Hz. İbrahim (a.s.)",
+    "wisdom": "Hz. İbrahim 'Halilullah' yani Allah'ın dostu unvanına sahiptir."
   },
   {
-    "id": "mz_q_166",
+    "id": "mz_peygamber_164",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 66)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hz. İbrahim'in kurban etmekle imtihan edildiği oğlu kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
       "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. İshak (a.s.)",
+      "Hz. İsmail (a.s.)",
+      "Hz. Süleyman (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 66)"
+    "correct": "Hz. İsmail (a.s.)",
+    "wisdom": "Hz. İsmail sabrı ve teslimiyetiyle Kur'an'da övülmüştür."
   },
   {
-    "id": "mz_q_167",
+    "id": "mz_peygamber_165",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 67)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Yusuf peygamberin babası olan ve oğlunun hasretiyle gözleri kapanan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Harun (a.s.)",
+      "Hz. İshak (a.s.)",
+      "Hz. Davud (a.s.)",
+      "Hz. Yakub (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 67)"
+    "correct": "Hz. Yakub (a.s.)",
+    "wisdom": "Hz. Yakub'un lakabı İsrail olup, soyundan gelenlere İsrailoğulları denmiştir."
   },
   {
-    "id": "mz_q_168",
+    "id": "mz_peygamber_166",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 68)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Kardeşleri tarafından kıskanılıp kuyuya atılan ve rüya tabir etme mucizesi olan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
+      "Hz. Yakub (a.s.)",
       "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Musa (a.s.)",
+      "Hz. Bünyamin (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 68)"
+    "correct": "Hz. Yusuf (a.s.)",
+    "wisdom": "Hz. Yusuf'un hayatı Kur'an'da 'Ahsenü'l-Kasas' yani kıssaların en güzeli olarak geçer."
   },
   {
-    "id": "mz_q_169",
+    "id": "mz_peygamber_167",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 69)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hastalık ve musibetlere karşı gösterdiği muazzam sabırla bilinen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Yunus (a.s.)",
+      "Hz. Zülkifl (a.s.)",
+      "Hz. Elyasa (a.s.)",
+      "Hz. Eyüp (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 69)"
+    "correct": "Hz. Eyüp (a.s.)",
+    "wisdom": "Hz. Eyüp sabrının mükafatı olarak şifalı bir suyla iyileşmiştir."
   },
   {
-    "id": "mz_q_170",
+    "id": "mz_peygamber_168",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 70)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Ninova halkına gönderilen ve öfkeyle şehri terk edip balık tarafından yutulan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Yahya (a.s.)",
+      "Hz. Hud (a.s.)",
+      "Hz. Yunus (a.s.)",
+      "Hz. Salih (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 70)"
+    "correct": "Hz. Yunus (a.s.)",
+    "wisdom": "Hz. Yunus hatasını anlayıp balığın karnında samimiyetle tövbe etmiştir."
   },
   {
-    "id": "mz_q_171",
+    "id": "mz_peygamber_169",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 71)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Asasıyla Kızıldeniz'i ikiye yaran ve Tur Dağı'nda Allah ile konuşan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Şuayb (a.s.)",
+      "Hz. Davud (a.s.)",
+      "Hz. Harun (a.s.)",
+      "Hz. Musa (a.s.)"
     ],
     "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 71)"
+    "wisdom": "Hz. Musa'ya kutsal kitaplardan Tevrat indirilmiştir."
   },
   {
-    "id": "mz_q_172",
+    "id": "mz_peygamber_170",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 72)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Zebur indirilen, demiri eliyle bükebilen ve sesinin güzelliğiyle dağları taşa getiren peygamber kimdir?",
     "options": [
+      "Hz. Süleyman (a.s.)",
+      "Hz. İsa (a.s.)",
       "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Davud (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 72)"
+    "correct": "Hz. Davud (a.s.)",
+    "wisdom": "Hz. Davud hem peygamber hem de adil bir hükümdardır."
   },
   {
-    "id": "mz_q_173",
+    "id": "mz_peygamber_171",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 73)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Rüzgarlara, hayvanlara ve cinlere hükmedebilen hükümdar peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Lokman (a.s.)",
+      "Hz. Davud (a.s.)",
+      "Hz. Süleyman (a.s.)",
+      "Hz. Üzeyir (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 73)"
+    "correct": "Hz. Süleyman (a.s.)",
+    "wisdom": "Hz. Süleyman babası Hz. Davud'un tahtına geçmiş ve muazzam bir saltanat kurmuştur."
   },
   {
-    "id": "mz_q_174",
+    "id": "mz_peygamber_172",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 74)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Beşikteyken konuşan, hastaları iyileştiren ve babasız dünyaya gelen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Yahya (a.s.)",
+      "Hz. İsa (a.s.)",
+      "Hz. Zekeriya (a.s.)",
+      "Hz. Musa (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 74)"
+    "correct": "Hz. İsa (a.s.)",
+    "wisdom": "Hz. İsa'ya semavi kitaplardan İncil indirilmiştir."
   },
   {
-    "id": "mz_q_175",
+    "id": "mz_peygamber_173",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 75)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Semud kavmine gönderilen ve mucize olarak kayadan gebe bir deve çıkaran peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
+      "Hz. Hud (a.s.)",
       "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Lut (a.s.)",
+      "Hz. Nuh (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 75)"
+    "correct": "Hz. Salih (a.s.)",
+    "wisdom": "Semud kavmi mucize deveyi katlettiği için helak olmuştur."
   },
   {
-    "id": "mz_q_176",
+    "id": "mz_peygamber_174",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 76)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Ad kavmine gönderilen ve kibirleri yüzünden rüzgarla helak olan kavmin peygamberi kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
       "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Nuh (a.s.)",
+      "Hz. Hud (a.s.)",
+      "Hz. Şuayb (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 76)"
+    "correct": "Hz. Hud (a.s.)",
+    "wisdom": "Ad kavmi devasa binalar yapan çok güçlü bir topluluktu."
   },
   {
-    "id": "mz_q_177",
+    "id": "mz_peygamber_175",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 77)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Medyen halkına gönderilen, ölçü ve tartıda hile yapmamalarını söyleyen hatip peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Harun (a.s.)",
+      "Hz. Şuayb (a.s.)",
+      "Hz. Lut (a.s.)",
+      "Hz. Musa (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 77)"
+    "correct": "Hz. Şuayb (a.s.)",
+    "wisdom": "Hz. Şuayb güzel konuşmasından ötürü 'Hatibü'l-Enbiya' olarak anılır."
   },
   {
-    "id": "mz_q_178",
+    "id": "mz_peygamber_176",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 78)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Yazıyı ilk yazan ve terzilik mesleğinin öncüsü olan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Hud (a.s.)",
+      "Hz. Nuh (a.s.)",
+      "Hz. Şit (a.s.)",
+      "Hz. İdris (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 78)"
+    "correct": "Hz. İdris (a.s.)",
+    "wisdom": "Hz. İdris göklere yükseltilen yüce bir makama sahipti."
   },
   {
-    "id": "mz_q_179",
+    "id": "mz_peygamber_177",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 79)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Kudüs'teki Süleyman Mabedi'nde görevli olan ve Hz. Meryem'in bakımını üstlenen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Yahya (a.s.)",
+      "Hz. İsa (a.s.)",
+      "Hz. Zekeriya (a.s.)",
+      "Hz. Süleyman (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 79)"
+    "correct": "Hz. Zekeriya (a.s.)",
+    "wisdom": "Hz. Zekeriya yaşlılığında evlat istemiş ve kendisine Hz. Yahya müjdelenmiştir."
   },
   {
-    "id": "mz_q_180",
+    "id": "mz_peygamber_178",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 80)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Sodom halkının ahlaksızlıklarına karşı mücadele eden peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. İbrahim (a.s.)",
+      "Hz. Lut (a.s.)",
+      "Hz. Şuayb (a.s.)",
+      "Hz. Hud (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 80)"
+    "correct": "Hz. Lut (a.s.)",
+    "wisdom": "Hz. Lut, Hz. İbrahim'in yeğenidir ve onunla aynı dönemde yaşamıştır."
   },
   {
-    "id": "mz_q_181",
+    "id": "mz_peygamber_179",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 81)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hz. Adem'den sonra kendisine 50 sayfa (suhuf) gönderilen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Hud (a.s.)",
+      "Hz. Nuh (a.s.)",
+      "Hz. İdris (a.s.)",
+      "Hz. Şit (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 81)"
+    "correct": "Hz. Şit (a.s.)",
+    "wisdom": "Hz. Şit, Hz. Adem'in Kabil tarafından öldürülen oğlu Habil'e karşılık verilen temiz bir evlattır."
   },
   {
-    "id": "mz_q_182",
+    "id": "mz_peygamber_180",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 82)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hz. Zekeriya'nın oğlu olan ve Hz. İsa'nın geleceğini müjdeleyen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Harun (a.s.)",
+      "Hz. Zekeriya (a.s.)",
+      "Hz. Yahya (a.s.)",
+      "Hz. Elyasa (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 82)"
+    "correct": "Hz. Yahya (a.s.)",
+    "wisdom": "Hz. Yahya nehirde insanları vaftiz ettiği için Hristiyan kaynaklarında Vaftizci Yahya olarak geçer."
   },
   {
-    "id": "mz_q_183",
+    "id": "mz_peygamber_181",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 83)",
+    "question": "Kur'an'da anlatılan kıssalara göre, İlk insan ve ilk peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Nuh (a.s.)",
+      "Hz. Adem (a.s.)",
+      "Hz. Şit (a.s.)",
+      "Hz. İbrahim (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 83)"
+    "correct": "Hz. Adem (a.s.)",
+    "wisdom": "Hz. Adem balçıktan yaratılmış ve kendisine her şeyin ismi öğretilmiştir."
   },
   {
-    "id": "mz_q_184",
+    "id": "mz_peygamber_182",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 84)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Tufan felaketinden iman edenleri kurtarmak için gemi yapan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
+      "Hz. Nuh (a.s.)",
       "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. İdris (a.s.)",
+      "Hz. Hud (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 84)"
+    "correct": "Hz. Nuh (a.s.)",
+    "wisdom": "Hz. Nuh insanlığın ikinci babası olarak kabul edilir."
   },
   {
-    "id": "mz_q_185",
+    "id": "mz_peygamber_183",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 85)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Nemrut'un ateşe attığı ve ateşin gül bahçesine döndüğü peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. İshak (a.s.)",
+      "Hz. Yakub (a.s.)",
+      "Hz. İbrahim (a.s.)",
+      "Hz. İsmail (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 85)"
+    "correct": "Hz. İbrahim (a.s.)",
+    "wisdom": "Hz. İbrahim 'Halilullah' yani Allah'ın dostu unvanına sahiptir."
   },
   {
-    "id": "mz_q_186",
+    "id": "mz_peygamber_184",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 86)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hz. İbrahim'in kurban etmekle imtihan edildiği oğlu kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
       "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. İshak (a.s.)",
+      "Hz. İsmail (a.s.)",
+      "Hz. Süleyman (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 86)"
+    "correct": "Hz. İsmail (a.s.)",
+    "wisdom": "Hz. İsmail sabrı ve teslimiyetiyle Kur'an'da övülmüştür."
   },
   {
-    "id": "mz_q_187",
+    "id": "mz_peygamber_185",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 87)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Yusuf peygamberin babası olan ve oğlunun hasretiyle gözleri kapanan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Harun (a.s.)",
+      "Hz. İshak (a.s.)",
+      "Hz. Davud (a.s.)",
+      "Hz. Yakub (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 87)"
+    "correct": "Hz. Yakub (a.s.)",
+    "wisdom": "Hz. Yakub'un lakabı İsrail olup, soyundan gelenlere İsrailoğulları denmiştir."
   },
   {
-    "id": "mz_q_188",
+    "id": "mz_peygamber_186",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 88)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Kardeşleri tarafından kıskanılıp kuyuya atılan ve rüya tabir etme mucizesi olan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
+      "Hz. Yakub (a.s.)",
       "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Musa (a.s.)",
+      "Hz. Bünyamin (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 88)"
+    "correct": "Hz. Yusuf (a.s.)",
+    "wisdom": "Hz. Yusuf'un hayatı Kur'an'da 'Ahsenü'l-Kasas' yani kıssaların en güzeli olarak geçer."
   },
   {
-    "id": "mz_q_189",
+    "id": "mz_peygamber_187",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 89)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hastalık ve musibetlere karşı gösterdiği muazzam sabırla bilinen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Yunus (a.s.)",
+      "Hz. Zülkifl (a.s.)",
+      "Hz. Elyasa (a.s.)",
+      "Hz. Eyüp (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 89)"
+    "correct": "Hz. Eyüp (a.s.)",
+    "wisdom": "Hz. Eyüp sabrının mükafatı olarak şifalı bir suyla iyileşmiştir."
   },
   {
-    "id": "mz_q_190",
+    "id": "mz_peygamber_188",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 90)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Ninova halkına gönderilen ve öfkeyle şehri terk edip balık tarafından yutulan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Yahya (a.s.)",
+      "Hz. Hud (a.s.)",
+      "Hz. Yunus (a.s.)",
+      "Hz. Salih (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 90)"
+    "correct": "Hz. Yunus (a.s.)",
+    "wisdom": "Hz. Yunus hatasını anlayıp balığın karnında samimiyetle tövbe etmiştir."
   },
   {
-    "id": "mz_q_191",
+    "id": "mz_peygamber_189",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 91)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Asasıyla Kızıldeniz'i ikiye yaran ve Tur Dağı'nda Allah ile konuşan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Şuayb (a.s.)",
+      "Hz. Davud (a.s.)",
+      "Hz. Harun (a.s.)",
+      "Hz. Musa (a.s.)"
     ],
     "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 91)"
+    "wisdom": "Hz. Musa'ya kutsal kitaplardan Tevrat indirilmiştir."
   },
   {
-    "id": "mz_q_192",
+    "id": "mz_peygamber_190",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 92)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Zebur indirilen, demiri eliyle bükebilen ve sesinin güzelliğiyle dağları taşa getiren peygamber kimdir?",
     "options": [
+      "Hz. Süleyman (a.s.)",
+      "Hz. İsa (a.s.)",
       "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Davud (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 92)"
+    "correct": "Hz. Davud (a.s.)",
+    "wisdom": "Hz. Davud hem peygamber hem de adil bir hükümdardır."
   },
   {
-    "id": "mz_q_193",
+    "id": "mz_peygamber_191",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 93)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Rüzgarlara, hayvanlara ve cinlere hükmedebilen hükümdar peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Lokman (a.s.)",
+      "Hz. Davud (a.s.)",
+      "Hz. Süleyman (a.s.)",
+      "Hz. Üzeyir (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 93)"
+    "correct": "Hz. Süleyman (a.s.)",
+    "wisdom": "Hz. Süleyman babası Hz. Davud'un tahtına geçmiş ve muazzam bir saltanat kurmuştur."
   },
   {
-    "id": "mz_q_194",
+    "id": "mz_peygamber_192",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 94)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Beşikteyken konuşan, hastaları iyileştiren ve babasız dünyaya gelen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Yahya (a.s.)",
+      "Hz. İsa (a.s.)",
+      "Hz. Zekeriya (a.s.)",
+      "Hz. Musa (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 94)"
+    "correct": "Hz. İsa (a.s.)",
+    "wisdom": "Hz. İsa'ya semavi kitaplardan İncil indirilmiştir."
   },
   {
-    "id": "mz_q_195",
+    "id": "mz_peygamber_193",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 95)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Semud kavmine gönderilen ve mucize olarak kayadan gebe bir deve çıkaran peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
+      "Hz. Hud (a.s.)",
       "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Lut (a.s.)",
+      "Hz. Nuh (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 95)"
+    "correct": "Hz. Salih (a.s.)",
+    "wisdom": "Semud kavmi mucize deveyi katlettiği için helak olmuştur."
   },
   {
-    "id": "mz_q_196",
+    "id": "mz_peygamber_194",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 96)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Ad kavmine gönderilen ve kibirleri yüzünden rüzgarla helak olan kavmin peygamberi kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
       "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Nuh (a.s.)",
+      "Hz. Hud (a.s.)",
+      "Hz. Şuayb (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 96)"
+    "correct": "Hz. Hud (a.s.)",
+    "wisdom": "Ad kavmi devasa binalar yapan çok güçlü bir topluluktu."
   },
   {
-    "id": "mz_q_197",
+    "id": "mz_peygamber_195",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 97)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Medyen halkına gönderilen, ölçü ve tartıda hile yapmamalarını söyleyen hatip peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Harun (a.s.)",
+      "Hz. Şuayb (a.s.)",
+      "Hz. Lut (a.s.)",
+      "Hz. Musa (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 97)"
+    "correct": "Hz. Şuayb (a.s.)",
+    "wisdom": "Hz. Şuayb güzel konuşmasından ötürü 'Hatibü'l-Enbiya' olarak anılır."
   },
   {
-    "id": "mz_q_198",
+    "id": "mz_peygamber_196",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 98)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Yazıyı ilk yazan ve terzilik mesleğinin öncüsü olan peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Hud (a.s.)",
+      "Hz. Nuh (a.s.)",
+      "Hz. Şit (a.s.)",
+      "Hz. İdris (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 98)"
+    "correct": "Hz. İdris (a.s.)",
+    "wisdom": "Hz. İdris göklere yükseltilen yüce bir makama sahipti."
   },
   {
-    "id": "mz_q_199",
+    "id": "mz_peygamber_197",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 99)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Kudüs'teki Süleyman Mabedi'nde görevli olan ve Hz. Meryem'in bakımını üstlenen peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. Yahya (a.s.)",
+      "Hz. İsa (a.s.)",
+      "Hz. Zekeriya (a.s.)",
+      "Hz. Süleyman (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 99)"
+    "correct": "Hz. Zekeriya (a.s.)",
+    "wisdom": "Hz. Zekeriya yaşlılığında evlat istemiş ve kendisine Hz. Yahya müjdelenmiştir."
   },
   {
-    "id": "mz_q_200",
+    "id": "mz_peygamber_198",
     "category": "Peygamberler Tarihi",
-    "question": "Aşağıdaki peygamberlerden hangisine semavi bir kitap veya suhuflar indirilmiştir? (Soru 100)",
+    "question": "Kur'an'da anlatılan kıssalara göre, Sodom halkının ahlaksızlıklarına karşı mücadele eden peygamber kimdir?",
     "options": [
-      "Hz. Musa (a.s.)",
-      "Hz. Salih (a.s.)",
-      "Hz. Yusuf (a.s.)",
-      "Hz. Yunus (a.s.)"
+      "Hz. İbrahim (a.s.)",
+      "Hz. Lut (a.s.)",
+      "Hz. Şuayb (a.s.)",
+      "Hz. Hud (a.s.)"
     ],
-    "correct": "Hz. Musa (a.s.)",
-    "wisdom": "Hz. Musa'ya Tevrat indirilirken, diğer birçok peygambere suhuflar verilmiş veya önceki kitaplarla amel etmişlerdir. (Siyer Soru 100)"
+    "correct": "Hz. Lut (a.s.)",
+    "wisdom": "Hz. Lut, Hz. İbrahim'in yeğenidir ve onunla aynı dönemde yaşamıştır."
+  },
+  {
+    "id": "mz_peygamber_199",
+    "category": "Peygamberler Tarihi",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hz. Adem'den sonra kendisine 50 sayfa (suhuf) gönderilen peygamber kimdir?",
+    "options": [
+      "Hz. Hud (a.s.)",
+      "Hz. Nuh (a.s.)",
+      "Hz. İdris (a.s.)",
+      "Hz. Şit (a.s.)"
+    ],
+    "correct": "Hz. Şit (a.s.)",
+    "wisdom": "Hz. Şit, Hz. Adem'in Kabil tarafından öldürülen oğlu Habil'e karşılık verilen temiz bir evlattır."
+  },
+  {
+    "id": "mz_peygamber_200",
+    "category": "Peygamberler Tarihi",
+    "question": "Kur'an'da anlatılan kıssalara göre, Hz. Zekeriya'nın oğlu olan ve Hz. İsa'nın geleceğini müjdeleyen peygamber kimdir?",
+    "options": [
+      "Hz. Harun (a.s.)",
+      "Hz. Zekeriya (a.s.)",
+      "Hz. Yahya (a.s.)",
+      "Hz. Elyasa (a.s.)"
+    ],
+    "correct": "Hz. Yahya (a.s.)",
+    "wisdom": "Hz. Yahya nehirde insanları vaftiz ettiği için Hristiyan kaynaklarında Vaftizci Yahya olarak geçer."
   },
   {
-    "id": "mz_q_201",
+    "id": "mz_devlet_201",
     "category": "İslam Devletleri",
-    "question": "Peygamberimizden sonra İslam devletini yöneten ilk halife kimdir?",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Peygamberimizden sonra İslam devletini yöneten ilk halife kimdir?",
     "options": [
-      "Hz. Ebu Bekir (r.a.)",
       "Hz. Ömer (r.a.)",
       "Hz. Osman (r.a.)",
-      "Hz. Ali (r.a.)"
+      "Hz. Ali (r.a.)",
+      "Hz. Ebu Bekir (r.a.)"
     ],
     "correct": "Hz. Ebu Bekir (r.a.)",
-    "wisdom": "Hz. Ebu Bekir, ilk halife olup dinden dönenlerle mücadele etmiş ve Kur'an'ı mushaf haline getirmiştir."
+    "wisdom": "Hz. Ebu Bekir, ilk halifedir ve Kur'an'ı mushaf haline getirmiştir."
   },
   {
-    "id": "mz_q_202",
+    "id": "mz_devlet_202",
     "category": "İslam Devletleri",
-    "question": "İspanya yarımadasında kurulup Avrupa'da bilim ve kültürün yayılmasına öncülük eden İslam devleti hangisidir?",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, İslam devletinde adaletiyle tanınan ve Kudüs'ü fetheden ikinci halife kimdir?",
+    "options": [
+      "Hz. Osman (r.a.)",
+      "Hz. Ebu Bekir (r.a.)",
+      "Hz. Ömer (r.a.)",
+      "Hz. Ali (r.a.)"
+    ],
+    "correct": "Hz. Ömer (r.a.)",
+    "wisdom": "Hz. Ömer dönemi adaletin ve fetihlerin altın çağıdır."
+  },
+  {
+    "id": "mz_devlet_203",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Kur'an-ı Kerim'i çoğaltarak çeşitli merkezlere gönderen üçüncü halife kimdir?",
+    "options": [
+      "Hz. Osman (r.a.)",
+      "Hz. Ömer (r.a.)",
+      "Hz. Ebu Bekir (r.a.)",
+      "Hz. Ali (r.a.)"
+    ],
+    "correct": "Hz. Osman (r.a.)",
+    "wisdom": "Hz. Osman 'Zünnureyn' yani iki nur sahibi lakabıyla bilinir."
+  },
+  {
+    "id": "mz_devlet_204",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Peygamberimizin 'Ben ilmin şehriyim, o ise kapısıdır' dediği dördüncü halife kimdir?",
+    "options": [
+      "Hz. Ali (r.a.)",
+      "Hz. Ömer (r.a.)",
+      "Hz. Ebu Bekir (r.a.)",
+      "Hz. Osman (r.a.)"
+    ],
+    "correct": "Hz. Ali (r.a.)",
+    "wisdom": "Hz. Ali cesareti, ilmi ve adaletiyle İslam tarihinin en büyük kahramanlarındandır."
+  },
+  {
+    "id": "mz_devlet_205",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Şam merkezli kurulan ve sınırları İspanya'ya kadar ulaştıran hanedan İslam devleti hangisidir?",
+    "options": [
+      "Eyyubiler",
+      "Emeviler",
+      "Fatımiler",
+      "Abbasiler"
+    ],
+    "correct": "Emeviler",
+    "wisdom": "Emeviler, Arap milliyetçiliği politikaları nedeniyle eleştirilmiştir."
+  },
+  {
+    "id": "mz_devlet_206",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Bağdat'ı başkent yaparak bilimsel çalışmaları 'Beytü'l-Hikme' ile zirveye taşıyan İslam devleti hangisidir?",
+    "options": [
+      "Selçuklular",
+      "Abbasiler",
+      "Emeviler",
+      "Osmanlılar"
+    ],
+    "correct": "Abbasiler",
+    "wisdom": "Abbasiler dönemi, İslam medeniyetinin altın çağı olarak bilinir."
+  },
+  {
+    "id": "mz_devlet_207",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, İspanya yarımadasında kurulup Avrupa'da bilim ve kültürün yayılmasına öncülük eden devlet hangisidir?",
     "options": [
       "Endülüs Emevi Devleti",
       "Büyük Selçuklu Devleti",
@@ -2632,2755 +2697,2690 @@ export const MAZE_QUESTIONS_DB: MazeQuestion[] = [
       "Gazneliler"
     ],
     "correct": "Endülüs Emevi Devleti",
-    "wisdom": "Endülüs Emevi Devleti, Kurtuba (Cordoba) merkezli bilim merkezleriyle Avrupa'yı aydınlatmıştır."
+    "wisdom": "Endülüs medreseleri Avrupalı kralların çocuklarını okuttuğu yerlerdi."
   },
   {
-    "id": "mz_q_203",
+    "id": "mz_devlet_208",
     "category": "İslam Devletleri",
-    "question": "Orta Asya'da İslamiyet'i kabul eden ilk Türk-İslam devleti hangisidir?",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Orta Asya'da İslamiyet'i kabul eden ilk Türk-İslam devleti hangisidir?",
     "options": [
-      "Karahanlılar",
+      "Selçuklular",
       "Gazneliler",
-      "Büyük Selçuklu Devleti",
-      "Göktürkler"
+      "Uygurlar",
+      "Karahanlılar"
     ],
     "correct": "Karahanlılar",
-    "wisdom": "Karahanlılar, Satuk Buğra Han döneminde İslamiyet'i resmi din olarak kabul etmişlerdir."
+    "wisdom": "Karahanlılar, Satuk Buğra Han döneminde İslamiyet'i kabul etmiştir."
   },
   {
-    "id": "mz_q_204",
+    "id": "mz_devlet_209",
     "category": "İslam Devletleri",
-    "question": "1071 Malazgirt Savaşı ile Anadolu'nun kapılarını Türklere açan Türk-İslam devleti hangisidir?",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1071 Malazgirt Savaşı ile Anadolu'nun kapılarını Türklere açan devlet hangisidir?",
+    "options": [
+      "Anadolu Selçuklu Devleti",
+      "Büyük Selçuklu Devleti",
+      "Harzemşahlar",
+      "Osmanlı Devleti"
+    ],
+    "correct": "Büyük Selçuklu Devleti",
+    "wisdom": "Sultan Alparslan komutasındaki ordu Bizans'ı yenerek Anadolu fethini başlatmıştır."
+  },
+  {
+    "id": "mz_devlet_210",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Hindistan'a 17 sefer düzenleyerek İslamiyet'in orada yayılmasını sağlayan sultan kimdir?",
+    "options": [
+      "Tuğrul Bey",
+      "Sultan Mesut",
+      "Alparslan",
+      "Gazneli Mahmut"
+    ],
+    "correct": "Gazneli Mahmut",
+    "wisdom": "Gazneli Mahmud, sultan unvanını kullanan ilk hükümdardır."
+  },
+  {
+    "id": "mz_devlet_211",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1187 Hıttin Savaşı ile Kudüs'ü Haçlılardan geri alan hükümdar kimdir?",
+    "options": [
+      "Selahaddin Eyyubi",
+      "Baybars",
+      "Nureddin Zengi",
+      "Kutuz"
+    ],
+    "correct": "Selahaddin Eyyubi",
+    "wisdom": "Selahaddin Eyyubi, Kudüs fatihi olarak tarihe geçmiştir."
+  },
+  {
+    "id": "mz_devlet_212",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Moğolları Ayn Calut Savaşı'nda yeryüzünde ilk kez durduran Mısır merkezli devlet hangisidir?",
+    "options": [
+      "Memlükler",
+      "Abbasiler",
+      "Eyyubiler",
+      "Gazneliler"
+    ],
+    "correct": "Memlükler",
+    "wisdom": "Memlükler askeri güçleriyle İslam dünyasını Moğol istilasından korumuştur."
+  },
+  {
+    "id": "mz_devlet_213",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Hindistan'da kurulan ve Taç Mahal anıt mezarını inşa ettiren Türk-İslam devleti hangisidir?",
+    "options": [
+      "Gazneliler",
+      "Karahanlılar",
+      "Safeviler",
+      "Babür İmparatorluğu"
+    ],
+    "correct": "Babür İmparatorluğu",
+    "wisdom": "Şah Cihan, eşi Mümtaz Mahal için bu eseri yaptırmıştır."
+  },
+  {
+    "id": "mz_devlet_214",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Mısır'da kurulan ilk Türk-İslam devleti aşağıdakilerden hangisidir?",
+    "options": [
+      "Eyyubiler",
+      "Memlükler",
+      "Tolunoğulları",
+      "İhşidiler"
+    ],
+    "correct": "Tolunoğulları",
+    "wisdom": "Mısır'da bağımsızlığını ilan eden ilk Türk hanedanıdır."
+  },
+  {
+    "id": "mz_devlet_215",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1299 yılında Söğüt'te kurulup üç kıtaya hükmeden cihan devleti hangisidir?",
     "options": [
       "Büyük Selçuklu Devleti",
       "Osmanlı Devleti",
-      "Anadolu Selçuklu Devleti",
-      "Harzemşahlar"
+      "Safeviler",
+      "Babür İmparatorluğu"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "Sultan Alparslan komutasındaki Selçuklu ordusu Malazgirt'te Bizans'ı yenerek Anadolu fethini başlatmıştır."
+    "correct": "Osmanlı Devleti",
+    "wisdom": "Osmanlı, adaleti ve hoşgörüsüyle 600 yıl hüküm sürmüştür."
   },
   {
-    "id": "mz_q_205",
+    "id": "mz_devlet_216",
     "category": "İslam Devletleri",
-    "question": "Bağdat'ı başkent yaparak bilimsel çalışmaları 'Beytü'l-Hikme' (Bilgelik Evi) ile zirveye taşıyan İslam devleti hangisidir?",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1453 yılında İstanbul'u fethederek Orta Çağ'ı kapatıp Yeni Çağ'ı açan padişah kimdir?",
     "options": [
-      "Abbasiler",
+      "I. Süleyman (Kanuni)",
+      "II. Abdülhamid",
+      "II. Mehmed (Fatih)",
+      "Yavuz Sultan Selim"
+    ],
+    "correct": "II. Mehmed (Fatih)",
+    "wisdom": "İstanbul fethi, Peygamberimiz'in hadisindeki müjdeye mazhar olmuştur."
+  },
+  {
+    "id": "mz_devlet_217",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Mısır Seferi ile halifeliği Osmanlı hanedanına kazandıran padişah kimdir?",
+    "options": [
+      "Fatih Sultan Mehmet",
+      "Yavuz Sultan Selim",
+      "II. Selim",
+      "Kanuni Sultan Süleyman"
+    ],
+    "correct": "Yavuz Sultan Selim",
+    "wisdom": "1517'de halifelik Osmanlı padişahlarına geçmiştir."
+  },
+  {
+    "id": "mz_devlet_218",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Osmanlı tahtında en uzun süre kalan, adil kanunları ve batı seferleriyle ünlü padişah kimdir?",
+    "options": [
+      "Kanuni Sultan Süleyman",
+      "Yavuz Sultan Selim",
+      "II. Abdülhamid",
+      "Fatih Sultan Mehmet"
+    ],
+    "correct": "Kanuni Sultan Süleyman",
+    "wisdom": "Kanuni, batıda 'Muhteşem Süleyman' olarak bilinir."
+  },
+  {
+    "id": "mz_devlet_219",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Büyük Selçuklu Devleti'nin ünlü veziri ve Nizamiye Medreselerinin kurucusu kimdir?",
+    "options": [
+      "Nizamülmülk",
+      "Sokullu Mehmet Paşa",
+      "Köprülü Mehmet Paşa",
+      "Vezir Tonyukuk"
+    ],
+    "correct": "Nizamülmülk",
+    "wisdom": "Nizamülmülk, ünlü 'Siyasetname' eserinin yazarıdır."
+  },
+  {
+    "id": "mz_devlet_220",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Endülüs'teki son İslam devleti olan ve Elhamra Sarayı'nı inşa eden devlet hangisidir?",
+    "options": [
+      "Kurtuba Halifeliği",
+      "Beni Ahmer Devleti",
+      "Murabıtlar",
+      "Muvahhidler"
+    ],
+    "correct": "Beni Ahmer Devleti",
+    "wisdom": "1492 yılında bu devletin yıkılmasıyla Endülüs dönemi kapanmıştır."
+  },
+  {
+    "id": "mz_devlet_221",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Peygamberimizden sonra İslam devletini yöneten ilk halife kimdir?",
+    "options": [
+      "Hz. Ömer (r.a.)",
+      "Hz. Osman (r.a.)",
+      "Hz. Ali (r.a.)",
+      "Hz. Ebu Bekir (r.a.)"
+    ],
+    "correct": "Hz. Ebu Bekir (r.a.)",
+    "wisdom": "Hz. Ebu Bekir, ilk halifedir ve Kur'an'ı mushaf haline getirmiştir."
+  },
+  {
+    "id": "mz_devlet_222",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, İslam devletinde adaletiyle tanınan ve Kudüs'ü fetheden ikinci halife kimdir?",
+    "options": [
+      "Hz. Osman (r.a.)",
+      "Hz. Ebu Bekir (r.a.)",
+      "Hz. Ömer (r.a.)",
+      "Hz. Ali (r.a.)"
+    ],
+    "correct": "Hz. Ömer (r.a.)",
+    "wisdom": "Hz. Ömer dönemi adaletin ve fetihlerin altın çağıdır."
+  },
+  {
+    "id": "mz_devlet_223",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Kur'an-ı Kerim'i çoğaltarak çeşitli merkezlere gönderen üçüncü halife kimdir?",
+    "options": [
+      "Hz. Osman (r.a.)",
+      "Hz. Ömer (r.a.)",
+      "Hz. Ebu Bekir (r.a.)",
+      "Hz. Ali (r.a.)"
+    ],
+    "correct": "Hz. Osman (r.a.)",
+    "wisdom": "Hz. Osman 'Zünnureyn' yani iki nur sahibi lakabıyla bilinir."
+  },
+  {
+    "id": "mz_devlet_224",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Peygamberimizin 'Ben ilmin şehriyim, o ise kapısıdır' dediği dördüncü halife kimdir?",
+    "options": [
+      "Hz. Ali (r.a.)",
+      "Hz. Ömer (r.a.)",
+      "Hz. Ebu Bekir (r.a.)",
+      "Hz. Osman (r.a.)"
+    ],
+    "correct": "Hz. Ali (r.a.)",
+    "wisdom": "Hz. Ali cesareti, ilmi ve adaletiyle İslam tarihinin en büyük kahramanlarındandır."
+  },
+  {
+    "id": "mz_devlet_225",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Şam merkezli kurulan ve sınırları İspanya'ya kadar ulaştıran hanedan İslam devleti hangisidir?",
+    "options": [
+      "Eyyubiler",
       "Emeviler",
       "Fatımiler",
-      "Eyyubiler"
+      "Abbasiler"
+    ],
+    "correct": "Emeviler",
+    "wisdom": "Emeviler, Arap milliyetçiliği politikaları nedeniyle eleştirilmiştir."
+  },
+  {
+    "id": "mz_devlet_226",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Bağdat'ı başkent yaparak bilimsel çalışmaları 'Beytü'l-Hikme' ile zirveye taşıyan İslam devleti hangisidir?",
+    "options": [
+      "Selçuklular",
+      "Abbasiler",
+      "Emeviler",
+      "Osmanlılar"
     ],
     "correct": "Abbasiler",
     "wisdom": "Abbasiler dönemi, İslam medeniyetinin altın çağı olarak bilinir."
   },
   {
-    "id": "mz_q_206",
+    "id": "mz_devlet_227",
     "category": "İslam Devletleri",
-    "question": "Şam merkezli kurulan, sınırları İspanya'dan Hindistan'a kadar genişleten ilk hanedan İslam devleti hangisidir?",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, İspanya yarımadasında kurulup Avrupa'da bilim ve kültürün yayılmasına öncülük eden devlet hangisidir?",
     "options": [
-      "Emeviler",
-      "Abbasiler",
+      "Endülüs Emevi Devleti",
+      "Büyük Selçuklu Devleti",
+      "Karahanlılar",
+      "Gazneliler"
+    ],
+    "correct": "Endülüs Emevi Devleti",
+    "wisdom": "Endülüs medreseleri Avrupalı kralların çocuklarını okuttuğu yerlerdi."
+  },
+  {
+    "id": "mz_devlet_228",
+    "category": "İslam Devletleri",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Orta Asya'da İslamiyet'i kabul eden ilk Türk-İslam devleti hangisidir?",
+    "options": [
+      "Selçuklular",
       "Gazneliler",
-      "Memlükler"
+      "Uygurlar",
+      "Karahanlılar"
     ],
-    "correct": "Emeviler",
-    "wisdom": "Emeviler, Muaviye tarafından Şam'da kurulmuştur."
+    "correct": "Karahanlılar",
+    "wisdom": "Karahanlılar, Satuk Buğra Han döneminde İslamiyet'i kabul etmiştir."
   },
   {
-    "id": "mz_q_207",
+    "id": "mz_devlet_229",
     "category": "İslam Devletleri",
-    "question": "Söğüt ve Domaniç çevresinde kurulan, 600 yılı aşkın üç kıtaya hükmeden cihan devleti hangisidir?",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1071 Malazgirt Savaşı ile Anadolu'nun kapılarını Türklere açan devlet hangisidir?",
     "options": [
-      "Osmanlı Devleti",
-      "Selçuklu Devleti",
-      "Babür İmparatorluğu",
-      "Safeviler"
+      "Anadolu Selçuklu Devleti",
+      "Büyük Selçuklu Devleti",
+      "Harzemşahlar",
+      "Osmanlı Devleti"
     ],
-    "correct": "Osmanlı Devleti",
-    "wisdom": "Osmanlı Devleti 1299 yılında Osman Gazi liderliğinde kurulmuştur."
+    "correct": "Büyük Selçuklu Devleti",
+    "wisdom": "Sultan Alparslan komutasındaki ordu Bizans'ı yenerek Anadolu fethini başlatmıştır."
   },
   {
-    "id": "mz_q_208",
+    "id": "mz_devlet_230",
     "category": "İslam Devletleri",
-    "question": "Hindistan'a 17 sefer düzenleyerek İslamiyet'in orada yayılmasını sağlayan Gazneli hükümdar kimdir?",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Hindistan'a 17 sefer düzenleyerek İslamiyet'in orada yayılmasını sağlayan sultan kimdir?",
     "options": [
-      "Gazneli Mahmut",
-      "Alp Er Tunga",
       "Tuğrul Bey",
-      "Sultan Mesut"
+      "Sultan Mesut",
+      "Alparslan",
+      "Gazneli Mahmut"
     ],
     "correct": "Gazneli Mahmut",
-    "wisdom": "Sultan Mahmud, İslam dünyasında 'Sultan' unvanını kullanan ilk hükümdardır."
+    "wisdom": "Gazneli Mahmud, sultan unvanını kullanan ilk hükümdardır."
   },
   {
-    "id": "mz_q_209",
+    "id": "mz_devlet_231",
     "category": "İslam Devletleri",
-    "question": "1187 Hıttin Savaşı ile Kudüs'ü Haçlılardan geri alan ünlü İslam komutanı ve devlet kurucusu kimdir?",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1187 Hıttin Savaşı ile Kudüs'ü Haçlılardan geri alan hükümdar kimdir?",
     "options": [
       "Selahaddin Eyyubi",
-      "Nureddin Zengi",
       "Baybars",
+      "Nureddin Zengi",
       "Kutuz"
     ],
     "correct": "Selahaddin Eyyubi",
-    "wisdom": "Selahaddin Eyyubi, Kudüs fatihi ve Eyyubiler devletinin kurucusudur."
+    "wisdom": "Selahaddin Eyyubi, Kudüs fatihi olarak tarihe geçmiştir."
   },
   {
-    "id": "mz_q_210",
+    "id": "mz_devlet_232",
     "category": "İslam Devletleri",
-    "question": "Moğolları (İlhanlıları) Ayn Calut Savaşı'nda yeryüzünde ilk kez durduran ve Mısır'da hüküm süren devlet hangisidir?",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Moğolları Ayn Calut Savaşı'nda yeryüzünde ilk kez durduran Mısır merkezli devlet hangisidir?",
     "options": [
       "Memlükler",
-      "Eyyubiler",
       "Abbasiler",
+      "Eyyubiler",
       "Gazneliler"
     ],
     "correct": "Memlükler",
-    "wisdom": "Memlükler, askeri güçleriyle Moğol istilasını durdurmayı başarmıştır."
+    "wisdom": "Memlükler askeri güçleriyle İslam dünyasını Moğol istilasından korumuştur."
   },
   {
-    "id": "mz_q_211",
+    "id": "mz_devlet_233",
     "category": "İslam Devletleri",
-    "question": "Hindistan'da kurulan ve dünyaca ünlü Taç Mahal anıt mezarını inşa ettiren Türk-İslam devleti hangisidir?",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Hindistan'da kurulan ve Taç Mahal anıt mezarını inşa ettiren Türk-İslam devleti hangisidir?",
     "options": [
-      "Babür İmparatorluğu",
       "Gazneliler",
       "Karahanlılar",
-      "Safeviler"
+      "Safeviler",
+      "Babür İmparatorluğu"
     ],
     "correct": "Babür İmparatorluğu",
-    "wisdom": "Şah Cihan, eşi Mümtaz Mahal için Agra kentinde Taç Mahal'i yaptırmıştır."
+    "wisdom": "Şah Cihan, eşi Mümtaz Mahal için bu eseri yaptırmıştır."
   },
   {
-    "id": "mz_q_212",
+    "id": "mz_devlet_234",
     "category": "İslam Devletleri",
-    "question": "Mısır'da kurulan ilk Türk-İslam devleti aşağıdakilerden hangisidir?",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Mısır'da kurulan ilk Türk-İslam devleti aşağıdakilerden hangisidir?",
     "options": [
-      "Tolunoğulları",
-      "İhşidiler",
       "Eyyubiler",
-      "Memlükler"
+      "Memlükler",
+      "Tolunoğulları",
+      "İhşidiler"
     ],
     "correct": "Tolunoğulları",
-    "wisdom": "Tolunoğulları, Mısır'da bağımsızlığını ilan eden ilk Türk hanedanıdır."
+    "wisdom": "Mısır'da bağımsızlığını ilan eden ilk Türk hanedanıdır."
   },
   {
-    "id": "mz_q_213",
+    "id": "mz_devlet_235",
     "category": "İslam Devletleri",
-    "question": "Türk-İslam edebiyatının ilk yazılı eseri kabul edilen Kutadgu Bilig'in yazarı kimdir?",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1299 yılında Söğüt'te kurulup üç kıtaya hükmeden cihan devleti hangisidir?",
     "options": [
-      "Yusuf Has Hacib",
-      "Kaşgarlı Mahmud",
-      "Edip Ahmet Yükneki",
-      "Ahmet Yesevi"
+      "Büyük Selçuklu Devleti",
+      "Osmanlı Devleti",
+      "Safeviler",
+      "Babür İmparatorluğu"
     ],
-    "correct": "Yusuf Has Hacib",
-    "wisdom": "Kutadgu Bilig, 'Mutluluk Veren Bilgi' anlamına gelir ve Karahanlılar döneminde yazılmıştır."
+    "correct": "Osmanlı Devleti",
+    "wisdom": "Osmanlı, adaleti ve hoşgörüsüyle 600 yıl hüküm sürmüştür."
   },
   {
-    "id": "mz_q_214",
+    "id": "mz_devlet_236",
     "category": "İslam Devletleri",
-    "question": "Türkçenin ilk sözlüğü ve coğrafya haritasını içeren Divan-ı Lugati't-Türk'ün yazarı kimdir?",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1453 yılında İstanbul'u fethederek Orta Çağ'ı kapatıp Yeni Çağ'ı açan padişah kimdir?",
     "options": [
-      "Kaşgarlı Mahmud",
-      "Yusuf Has Hacib",
-      "Edip Ahmet Yükneki",
-      "Hoca Ahmet Yesevi"
-    ],
-    "correct": "Kaşgarlı Mahmud",
-    "wisdom": "Kaşgarlı Mahmud, Türkçenin Arapça kadar zengin bir dil olduğunu kanıtlamak için bu eseri yazmıştır."
-  },
-  {
-    "id": "mz_q_215",
-    "category": "İslam Devletleri",
-    "question": "Büyük Selçuklu Devleti'nin ünlü veziri, kendi adıyla anılan Nizamiye Medreselerini kuran devlet adamı kimdir?",
-    "options": [
-      "Nizamülmülk",
-      "Vezir Tonyukuk",
-      "Pargalı İbrahim",
-      "Sokullu Mehmet"
-    ],
-    "correct": "Nizamülmülk",
-    "wisdom": "Nizamülmülk, yazdığı 'Siyasetname' eseriyle de yönetim sanatını anlatmıştır."
-  },
-  {
-    "id": "mz_q_216",
-    "category": "İslam Devletleri",
-    "question": "Endülüs'teki son İslam devleti olan ve Granada (Gırnata) şehrinde Elhamra Sarayı'nı inşa eden devlet hangisidir?",
-    "options": [
-      "Beni Ahmer Devleti",
-      "Murabıtlar",
-      "Muvahhidler",
-      "Kurtuba Halifeliği"
-    ],
-    "correct": "Beni Ahmer Devleti",
-    "wisdom": "Beni Ahmer Devleti (Nasriler), 1492 yılında yıkılarak Endülüs'teki İslam egemenliği son bulmuştur."
-  },
-  {
-    "id": "mz_q_217",
-    "category": "İslam Devletleri",
-    "question": "Malazgirt Savaşı'ndan önce Bizans elçisine 'Biz size boyun eğmeyeceğiz, zafer veya şehadet bizimdir' diyen Selçuklu sultanı kimdir?",
-    "options": [
-      "Sultan Alparslan",
-      "Tuğrul Bey",
-      "Melikşah",
-      "Sultan Sencer"
-    ],
-    "correct": "Sultan Alparslan",
-    "wisdom": "Sultan Alparslan beyaz elbisesiyle kefenini giyerek savaşa çıkmıştır."
-  },
-  {
-    "id": "mz_q_218",
-    "category": "İslam Devletleri",
-    "question": "Osmanlı Devleti'nin kurucusu Osman Bey'e kılıç kuşanma ve devlet olma nasihatini veren din alimi (kayınpederi) kimdir?",
-    "options": [
-      "Şeyh Edebali",
-      "Dursun Fakıh",
-      "Akşemseddin",
-      "Hacı Bayram Veli"
-    ],
-    "correct": "Şeyh Edebali",
-    "wisdom": "Şeyh Edebali'nin 'İnsanı yaşat ki devlet yaşasın' sözü meşhurdur."
-  },
-  {
-    "id": "mz_q_219",
-    "category": "İslam Devletleri",
-    "question": "1453 yılında İstanbul'u fethederek Orta Çağ'ı kapatıp Yeni Çağ'ı açan Osmanlı padişahı kimdir?",
-    "options": [
-      "II. Mehmed (Fatih)",
       "I. Süleyman (Kanuni)",
-      "Yavuz Sultan Selim",
-      "II. Abdülhamid"
+      "II. Abdülhamid",
+      "II. Mehmed (Fatih)",
+      "Yavuz Sultan Selim"
     ],
     "correct": "II. Mehmed (Fatih)",
-    "wisdom": "İstanbul fethi, Peygamberimiz (s.a.v.)'in hadisindeki müjdeye mazhar olmuştur."
+    "wisdom": "İstanbul fethi, Peygamberimiz'in hadisindeki müjdeye mazhar olmuştur."
   },
   {
-    "id": "mz_q_220",
+    "id": "mz_devlet_237",
     "category": "İslam Devletleri",
-    "question": "Mısır Seferi ile halifeliği Osmanlı hanedanına kazandıran padişah kimdir?",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Mısır Seferi ile halifeliği Osmanlı hanedanına kazandıran padişah kimdir?",
     "options": [
-      "Yavuz Sultan Selim",
       "Fatih Sultan Mehmet",
-      "Kanuni Sultan Süleyman",
-      "II. Selim"
+      "Yavuz Sultan Selim",
+      "II. Selim",
+      "Kanuni Sultan Süleyman"
     ],
     "correct": "Yavuz Sultan Selim",
-    "wisdom": "1517 Ridaniye Savaşı ile Memlük Devleti son bulmuş ve halifelik Osmanlı'ya geçmiştir."
+    "wisdom": "1517'de halifelik Osmanlı padişahlarına geçmiştir."
   },
   {
-    "id": "mz_q_221",
+    "id": "mz_devlet_238",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 21)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Osmanlı tahtında en uzun süre kalan, adil kanunları ve batı seferleriyle ünlü padişah kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
-    ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 21)"
-  },
-  {
-    "id": "mz_q_222",
-    "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 22)",
-    "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
-    ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 22)"
-  },
-  {
-    "id": "mz_q_223",
-    "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 23)",
-    "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
-    ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 23)"
-  },
-  {
-    "id": "mz_q_224",
-    "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 24)",
-    "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
-    ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 24)"
-  },
-  {
-    "id": "mz_q_225",
-    "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 25)",
-    "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
-    ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 25)"
-  },
-  {
-    "id": "mz_q_226",
-    "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 26)",
-    "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
-    ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 26)"
-  },
-  {
-    "id": "mz_q_227",
-    "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 27)",
-    "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
-    ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 27)"
-  },
-  {
-    "id": "mz_q_228",
-    "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 28)",
-    "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
-    ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 28)"
-  },
-  {
-    "id": "mz_q_229",
-    "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 29)",
-    "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
-    ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 29)"
-  },
-  {
-    "id": "mz_q_230",
-    "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 30)",
-    "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
-    ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 30)"
-  },
-  {
-    "id": "mz_q_231",
-    "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 31)",
-    "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
-    ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 31)"
-  },
-  {
-    "id": "mz_q_232",
-    "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 32)",
-    "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
-    ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 32)"
-  },
-  {
-    "id": "mz_q_233",
-    "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 33)",
-    "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
-    ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 33)"
-  },
-  {
-    "id": "mz_q_234",
-    "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 34)",
-    "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
-    ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 34)"
-  },
-  {
-    "id": "mz_q_235",
-    "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 35)",
-    "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
-    ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 35)"
-  },
-  {
-    "id": "mz_q_236",
-    "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 36)",
-    "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
-    ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 36)"
-  },
-  {
-    "id": "mz_q_237",
-    "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 37)",
-    "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
-    ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 37)"
-  },
-  {
-    "id": "mz_q_238",
-    "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 38)",
-    "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Kanuni Sultan Süleyman",
+      "Yavuz Sultan Selim",
+      "II. Abdülhamid",
+      "Fatih Sultan Mehmet"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 38)"
+    "correct": "Kanuni Sultan Süleyman",
+    "wisdom": "Kanuni, batıda 'Muhteşem Süleyman' olarak bilinir."
   },
   {
-    "id": "mz_q_239",
+    "id": "mz_devlet_239",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 39)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Büyük Selçuklu Devleti'nin ünlü veziri ve Nizamiye Medreselerinin kurucusu kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Nizamülmülk",
+      "Sokullu Mehmet Paşa",
+      "Köprülü Mehmet Paşa",
+      "Vezir Tonyukuk"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 39)"
+    "correct": "Nizamülmülk",
+    "wisdom": "Nizamülmülk, ünlü 'Siyasetname' eserinin yazarıdır."
   },
   {
-    "id": "mz_q_240",
+    "id": "mz_devlet_240",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 40)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Endülüs'teki son İslam devleti olan ve Elhamra Sarayı'nı inşa eden devlet hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Kurtuba Halifeliği",
+      "Beni Ahmer Devleti",
+      "Murabıtlar",
+      "Muvahhidler"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 40)"
+    "correct": "Beni Ahmer Devleti",
+    "wisdom": "1492 yılında bu devletin yıkılmasıyla Endülüs dönemi kapanmıştır."
   },
   {
-    "id": "mz_q_241",
+    "id": "mz_devlet_241",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 41)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Peygamberimizden sonra İslam devletini yöneten ilk halife kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Hz. Ömer (r.a.)",
+      "Hz. Osman (r.a.)",
+      "Hz. Ali (r.a.)",
+      "Hz. Ebu Bekir (r.a.)"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 41)"
+    "correct": "Hz. Ebu Bekir (r.a.)",
+    "wisdom": "Hz. Ebu Bekir, ilk halifedir ve Kur'an'ı mushaf haline getirmiştir."
   },
   {
-    "id": "mz_q_242",
+    "id": "mz_devlet_242",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 42)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, İslam devletinde adaletiyle tanınan ve Kudüs'ü fetheden ikinci halife kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Hz. Osman (r.a.)",
+      "Hz. Ebu Bekir (r.a.)",
+      "Hz. Ömer (r.a.)",
+      "Hz. Ali (r.a.)"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 42)"
+    "correct": "Hz. Ömer (r.a.)",
+    "wisdom": "Hz. Ömer dönemi adaletin ve fetihlerin altın çağıdır."
   },
   {
-    "id": "mz_q_243",
+    "id": "mz_devlet_243",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 43)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Kur'an-ı Kerim'i çoğaltarak çeşitli merkezlere gönderen üçüncü halife kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Hz. Osman (r.a.)",
+      "Hz. Ömer (r.a.)",
+      "Hz. Ebu Bekir (r.a.)",
+      "Hz. Ali (r.a.)"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 43)"
+    "correct": "Hz. Osman (r.a.)",
+    "wisdom": "Hz. Osman 'Zünnureyn' yani iki nur sahibi lakabıyla bilinir."
   },
   {
-    "id": "mz_q_244",
+    "id": "mz_devlet_244",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 44)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Peygamberimizin 'Ben ilmin şehriyim, o ise kapısıdır' dediği dördüncü halife kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Hz. Ali (r.a.)",
+      "Hz. Ömer (r.a.)",
+      "Hz. Ebu Bekir (r.a.)",
+      "Hz. Osman (r.a.)"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 44)"
+    "correct": "Hz. Ali (r.a.)",
+    "wisdom": "Hz. Ali cesareti, ilmi ve adaletiyle İslam tarihinin en büyük kahramanlarındandır."
   },
   {
-    "id": "mz_q_245",
+    "id": "mz_devlet_245",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 45)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Şam merkezli kurulan ve sınırları İspanya'ya kadar ulaştıran hanedan İslam devleti hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Eyyubiler",
+      "Emeviler",
+      "Fatımiler",
+      "Abbasiler"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 45)"
+    "correct": "Emeviler",
+    "wisdom": "Emeviler, Arap milliyetçiliği politikaları nedeniyle eleştirilmiştir."
   },
   {
-    "id": "mz_q_246",
+    "id": "mz_devlet_246",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 46)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Bağdat'ı başkent yaparak bilimsel çalışmaları 'Beytü'l-Hikme' ile zirveye taşıyan İslam devleti hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Selçuklular",
+      "Abbasiler",
+      "Emeviler",
+      "Osmanlılar"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 46)"
+    "correct": "Abbasiler",
+    "wisdom": "Abbasiler dönemi, İslam medeniyetinin altın çağı olarak bilinir."
   },
   {
-    "id": "mz_q_247",
+    "id": "mz_devlet_247",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 47)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, İspanya yarımadasında kurulup Avrupa'da bilim ve kültürün yayılmasına öncülük eden devlet hangisidir?",
     "options": [
+      "Endülüs Emevi Devleti",
       "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Karahanlılar",
+      "Gazneliler"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 47)"
+    "correct": "Endülüs Emevi Devleti",
+    "wisdom": "Endülüs medreseleri Avrupalı kralların çocuklarını okuttuğu yerlerdi."
   },
   {
-    "id": "mz_q_248",
+    "id": "mz_devlet_248",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 48)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Orta Asya'da İslamiyet'i kabul eden ilk Türk-İslam devleti hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Selçuklular",
+      "Gazneliler",
+      "Uygurlar",
+      "Karahanlılar"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 48)"
+    "correct": "Karahanlılar",
+    "wisdom": "Karahanlılar, Satuk Buğra Han döneminde İslamiyet'i kabul etmiştir."
   },
   {
-    "id": "mz_q_249",
+    "id": "mz_devlet_249",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 49)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1071 Malazgirt Savaşı ile Anadolu'nun kapılarını Türklere açan devlet hangisidir?",
     "options": [
+      "Anadolu Selçuklu Devleti",
       "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Harzemşahlar",
+      "Osmanlı Devleti"
     ],
     "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 49)"
+    "wisdom": "Sultan Alparslan komutasındaki ordu Bizans'ı yenerek Anadolu fethini başlatmıştır."
   },
   {
-    "id": "mz_q_250",
+    "id": "mz_devlet_250",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 50)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Hindistan'a 17 sefer düzenleyerek İslamiyet'in orada yayılmasını sağlayan sultan kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Tuğrul Bey",
+      "Sultan Mesut",
+      "Alparslan",
+      "Gazneli Mahmut"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 50)"
+    "correct": "Gazneli Mahmut",
+    "wisdom": "Gazneli Mahmud, sultan unvanını kullanan ilk hükümdardır."
   },
   {
-    "id": "mz_q_251",
+    "id": "mz_devlet_251",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 51)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1187 Hıttin Savaşı ile Kudüs'ü Haçlılardan geri alan hükümdar kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Selahaddin Eyyubi",
+      "Baybars",
+      "Nureddin Zengi",
+      "Kutuz"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 51)"
+    "correct": "Selahaddin Eyyubi",
+    "wisdom": "Selahaddin Eyyubi, Kudüs fatihi olarak tarihe geçmiştir."
   },
   {
-    "id": "mz_q_252",
+    "id": "mz_devlet_252",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 52)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Moğolları Ayn Calut Savaşı'nda yeryüzünde ilk kez durduran Mısır merkezli devlet hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Memlükler",
+      "Abbasiler",
+      "Eyyubiler",
+      "Gazneliler"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 52)"
+    "correct": "Memlükler",
+    "wisdom": "Memlükler askeri güçleriyle İslam dünyasını Moğol istilasından korumuştur."
   },
   {
-    "id": "mz_q_253",
+    "id": "mz_devlet_253",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 53)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Hindistan'da kurulan ve Taç Mahal anıt mezarını inşa ettiren Türk-İslam devleti hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Gazneliler",
+      "Karahanlılar",
+      "Safeviler",
+      "Babür İmparatorluğu"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 53)"
+    "correct": "Babür İmparatorluğu",
+    "wisdom": "Şah Cihan, eşi Mümtaz Mahal için bu eseri yaptırmıştır."
   },
   {
-    "id": "mz_q_254",
+    "id": "mz_devlet_254",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 54)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Mısır'da kurulan ilk Türk-İslam devleti aşağıdakilerden hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Eyyubiler",
+      "Memlükler",
+      "Tolunoğulları",
+      "İhşidiler"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 54)"
+    "correct": "Tolunoğulları",
+    "wisdom": "Mısır'da bağımsızlığını ilan eden ilk Türk hanedanıdır."
   },
   {
-    "id": "mz_q_255",
+    "id": "mz_devlet_255",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 55)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1299 yılında Söğüt'te kurulup üç kıtaya hükmeden cihan devleti hangisidir?",
     "options": [
       "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Osmanlı Devleti",
+      "Safeviler",
+      "Babür İmparatorluğu"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 55)"
+    "correct": "Osmanlı Devleti",
+    "wisdom": "Osmanlı, adaleti ve hoşgörüsüyle 600 yıl hüküm sürmüştür."
   },
   {
-    "id": "mz_q_256",
+    "id": "mz_devlet_256",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 56)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1453 yılında İstanbul'u fethederek Orta Çağ'ı kapatıp Yeni Çağ'ı açan padişah kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "I. Süleyman (Kanuni)",
+      "II. Abdülhamid",
+      "II. Mehmed (Fatih)",
+      "Yavuz Sultan Selim"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 56)"
+    "correct": "II. Mehmed (Fatih)",
+    "wisdom": "İstanbul fethi, Peygamberimiz'in hadisindeki müjdeye mazhar olmuştur."
   },
   {
-    "id": "mz_q_257",
+    "id": "mz_devlet_257",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 57)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Mısır Seferi ile halifeliği Osmanlı hanedanına kazandıran padişah kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Fatih Sultan Mehmet",
+      "Yavuz Sultan Selim",
+      "II. Selim",
+      "Kanuni Sultan Süleyman"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 57)"
+    "correct": "Yavuz Sultan Selim",
+    "wisdom": "1517'de halifelik Osmanlı padişahlarına geçmiştir."
   },
   {
-    "id": "mz_q_258",
+    "id": "mz_devlet_258",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 58)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Osmanlı tahtında en uzun süre kalan, adil kanunları ve batı seferleriyle ünlü padişah kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Kanuni Sultan Süleyman",
+      "Yavuz Sultan Selim",
+      "II. Abdülhamid",
+      "Fatih Sultan Mehmet"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 58)"
+    "correct": "Kanuni Sultan Süleyman",
+    "wisdom": "Kanuni, batıda 'Muhteşem Süleyman' olarak bilinir."
   },
   {
-    "id": "mz_q_259",
+    "id": "mz_devlet_259",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 59)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Büyük Selçuklu Devleti'nin ünlü veziri ve Nizamiye Medreselerinin kurucusu kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Nizamülmülk",
+      "Sokullu Mehmet Paşa",
+      "Köprülü Mehmet Paşa",
+      "Vezir Tonyukuk"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 59)"
+    "correct": "Nizamülmülk",
+    "wisdom": "Nizamülmülk, ünlü 'Siyasetname' eserinin yazarıdır."
   },
   {
-    "id": "mz_q_260",
+    "id": "mz_devlet_260",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 60)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Endülüs'teki son İslam devleti olan ve Elhamra Sarayı'nı inşa eden devlet hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Kurtuba Halifeliği",
+      "Beni Ahmer Devleti",
+      "Murabıtlar",
+      "Muvahhidler"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 60)"
+    "correct": "Beni Ahmer Devleti",
+    "wisdom": "1492 yılında bu devletin yıkılmasıyla Endülüs dönemi kapanmıştır."
   },
   {
-    "id": "mz_q_261",
+    "id": "mz_devlet_261",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 61)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Peygamberimizden sonra İslam devletini yöneten ilk halife kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Hz. Ömer (r.a.)",
+      "Hz. Osman (r.a.)",
+      "Hz. Ali (r.a.)",
+      "Hz. Ebu Bekir (r.a.)"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 61)"
+    "correct": "Hz. Ebu Bekir (r.a.)",
+    "wisdom": "Hz. Ebu Bekir, ilk halifedir ve Kur'an'ı mushaf haline getirmiştir."
   },
   {
-    "id": "mz_q_262",
+    "id": "mz_devlet_262",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 62)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, İslam devletinde adaletiyle tanınan ve Kudüs'ü fetheden ikinci halife kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Hz. Osman (r.a.)",
+      "Hz. Ebu Bekir (r.a.)",
+      "Hz. Ömer (r.a.)",
+      "Hz. Ali (r.a.)"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 62)"
+    "correct": "Hz. Ömer (r.a.)",
+    "wisdom": "Hz. Ömer dönemi adaletin ve fetihlerin altın çağıdır."
   },
   {
-    "id": "mz_q_263",
+    "id": "mz_devlet_263",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 63)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Kur'an-ı Kerim'i çoğaltarak çeşitli merkezlere gönderen üçüncü halife kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Hz. Osman (r.a.)",
+      "Hz. Ömer (r.a.)",
+      "Hz. Ebu Bekir (r.a.)",
+      "Hz. Ali (r.a.)"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 63)"
+    "correct": "Hz. Osman (r.a.)",
+    "wisdom": "Hz. Osman 'Zünnureyn' yani iki nur sahibi lakabıyla bilinir."
   },
   {
-    "id": "mz_q_264",
+    "id": "mz_devlet_264",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 64)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Peygamberimizin 'Ben ilmin şehriyim, o ise kapısıdır' dediği dördüncü halife kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Hz. Ali (r.a.)",
+      "Hz. Ömer (r.a.)",
+      "Hz. Ebu Bekir (r.a.)",
+      "Hz. Osman (r.a.)"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 64)"
+    "correct": "Hz. Ali (r.a.)",
+    "wisdom": "Hz. Ali cesareti, ilmi ve adaletiyle İslam tarihinin en büyük kahramanlarındandır."
   },
   {
-    "id": "mz_q_265",
+    "id": "mz_devlet_265",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 65)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Şam merkezli kurulan ve sınırları İspanya'ya kadar ulaştıran hanedan İslam devleti hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Eyyubiler",
+      "Emeviler",
+      "Fatımiler",
+      "Abbasiler"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 65)"
+    "correct": "Emeviler",
+    "wisdom": "Emeviler, Arap milliyetçiliği politikaları nedeniyle eleştirilmiştir."
   },
   {
-    "id": "mz_q_266",
+    "id": "mz_devlet_266",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 66)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Bağdat'ı başkent yaparak bilimsel çalışmaları 'Beytü'l-Hikme' ile zirveye taşıyan İslam devleti hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Selçuklular",
+      "Abbasiler",
+      "Emeviler",
+      "Osmanlılar"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 66)"
+    "correct": "Abbasiler",
+    "wisdom": "Abbasiler dönemi, İslam medeniyetinin altın çağı olarak bilinir."
   },
   {
-    "id": "mz_q_267",
+    "id": "mz_devlet_267",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 67)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, İspanya yarımadasında kurulup Avrupa'da bilim ve kültürün yayılmasına öncülük eden devlet hangisidir?",
     "options": [
+      "Endülüs Emevi Devleti",
       "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Karahanlılar",
+      "Gazneliler"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 67)"
+    "correct": "Endülüs Emevi Devleti",
+    "wisdom": "Endülüs medreseleri Avrupalı kralların çocuklarını okuttuğu yerlerdi."
   },
   {
-    "id": "mz_q_268",
+    "id": "mz_devlet_268",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 68)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Orta Asya'da İslamiyet'i kabul eden ilk Türk-İslam devleti hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Selçuklular",
+      "Gazneliler",
+      "Uygurlar",
+      "Karahanlılar"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 68)"
+    "correct": "Karahanlılar",
+    "wisdom": "Karahanlılar, Satuk Buğra Han döneminde İslamiyet'i kabul etmiştir."
   },
   {
-    "id": "mz_q_269",
+    "id": "mz_devlet_269",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 69)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1071 Malazgirt Savaşı ile Anadolu'nun kapılarını Türklere açan devlet hangisidir?",
     "options": [
+      "Anadolu Selçuklu Devleti",
       "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Harzemşahlar",
+      "Osmanlı Devleti"
     ],
     "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 69)"
+    "wisdom": "Sultan Alparslan komutasındaki ordu Bizans'ı yenerek Anadolu fethini başlatmıştır."
   },
   {
-    "id": "mz_q_270",
+    "id": "mz_devlet_270",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 70)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Hindistan'a 17 sefer düzenleyerek İslamiyet'in orada yayılmasını sağlayan sultan kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Tuğrul Bey",
+      "Sultan Mesut",
+      "Alparslan",
+      "Gazneli Mahmut"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 70)"
+    "correct": "Gazneli Mahmut",
+    "wisdom": "Gazneli Mahmud, sultan unvanını kullanan ilk hükümdardır."
   },
   {
-    "id": "mz_q_271",
+    "id": "mz_devlet_271",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 71)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1187 Hıttin Savaşı ile Kudüs'ü Haçlılardan geri alan hükümdar kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Selahaddin Eyyubi",
+      "Baybars",
+      "Nureddin Zengi",
+      "Kutuz"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 71)"
+    "correct": "Selahaddin Eyyubi",
+    "wisdom": "Selahaddin Eyyubi, Kudüs fatihi olarak tarihe geçmiştir."
   },
   {
-    "id": "mz_q_272",
+    "id": "mz_devlet_272",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 72)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Moğolları Ayn Calut Savaşı'nda yeryüzünde ilk kez durduran Mısır merkezli devlet hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Memlükler",
+      "Abbasiler",
+      "Eyyubiler",
+      "Gazneliler"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 72)"
+    "correct": "Memlükler",
+    "wisdom": "Memlükler askeri güçleriyle İslam dünyasını Moğol istilasından korumuştur."
   },
   {
-    "id": "mz_q_273",
+    "id": "mz_devlet_273",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 73)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Hindistan'da kurulan ve Taç Mahal anıt mezarını inşa ettiren Türk-İslam devleti hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Gazneliler",
+      "Karahanlılar",
+      "Safeviler",
+      "Babür İmparatorluğu"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 73)"
+    "correct": "Babür İmparatorluğu",
+    "wisdom": "Şah Cihan, eşi Mümtaz Mahal için bu eseri yaptırmıştır."
   },
   {
-    "id": "mz_q_274",
+    "id": "mz_devlet_274",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 74)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Mısır'da kurulan ilk Türk-İslam devleti aşağıdakilerden hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Eyyubiler",
+      "Memlükler",
+      "Tolunoğulları",
+      "İhşidiler"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 74)"
+    "correct": "Tolunoğulları",
+    "wisdom": "Mısır'da bağımsızlığını ilan eden ilk Türk hanedanıdır."
   },
   {
-    "id": "mz_q_275",
+    "id": "mz_devlet_275",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 75)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1299 yılında Söğüt'te kurulup üç kıtaya hükmeden cihan devleti hangisidir?",
     "options": [
       "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Osmanlı Devleti",
+      "Safeviler",
+      "Babür İmparatorluğu"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 75)"
+    "correct": "Osmanlı Devleti",
+    "wisdom": "Osmanlı, adaleti ve hoşgörüsüyle 600 yıl hüküm sürmüştür."
   },
   {
-    "id": "mz_q_276",
+    "id": "mz_devlet_276",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 76)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1453 yılında İstanbul'u fethederek Orta Çağ'ı kapatıp Yeni Çağ'ı açan padişah kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "I. Süleyman (Kanuni)",
+      "II. Abdülhamid",
+      "II. Mehmed (Fatih)",
+      "Yavuz Sultan Selim"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 76)"
+    "correct": "II. Mehmed (Fatih)",
+    "wisdom": "İstanbul fethi, Peygamberimiz'in hadisindeki müjdeye mazhar olmuştur."
   },
   {
-    "id": "mz_q_277",
+    "id": "mz_devlet_277",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 77)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Mısır Seferi ile halifeliği Osmanlı hanedanına kazandıran padişah kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Fatih Sultan Mehmet",
+      "Yavuz Sultan Selim",
+      "II. Selim",
+      "Kanuni Sultan Süleyman"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 77)"
+    "correct": "Yavuz Sultan Selim",
+    "wisdom": "1517'de halifelik Osmanlı padişahlarına geçmiştir."
   },
   {
-    "id": "mz_q_278",
+    "id": "mz_devlet_278",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 78)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Osmanlı tahtında en uzun süre kalan, adil kanunları ve batı seferleriyle ünlü padişah kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Kanuni Sultan Süleyman",
+      "Yavuz Sultan Selim",
+      "II. Abdülhamid",
+      "Fatih Sultan Mehmet"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 78)"
+    "correct": "Kanuni Sultan Süleyman",
+    "wisdom": "Kanuni, batıda 'Muhteşem Süleyman' olarak bilinir."
   },
   {
-    "id": "mz_q_279",
+    "id": "mz_devlet_279",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 79)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Büyük Selçuklu Devleti'nin ünlü veziri ve Nizamiye Medreselerinin kurucusu kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Nizamülmülk",
+      "Sokullu Mehmet Paşa",
+      "Köprülü Mehmet Paşa",
+      "Vezir Tonyukuk"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 79)"
+    "correct": "Nizamülmülk",
+    "wisdom": "Nizamülmülk, ünlü 'Siyasetname' eserinin yazarıdır."
   },
   {
-    "id": "mz_q_280",
+    "id": "mz_devlet_280",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 80)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Endülüs'teki son İslam devleti olan ve Elhamra Sarayı'nı inşa eden devlet hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Kurtuba Halifeliği",
+      "Beni Ahmer Devleti",
+      "Murabıtlar",
+      "Muvahhidler"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 80)"
+    "correct": "Beni Ahmer Devleti",
+    "wisdom": "1492 yılında bu devletin yıkılmasıyla Endülüs dönemi kapanmıştır."
   },
   {
-    "id": "mz_q_281",
+    "id": "mz_devlet_281",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 81)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Peygamberimizden sonra İslam devletini yöneten ilk halife kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Hz. Ömer (r.a.)",
+      "Hz. Osman (r.a.)",
+      "Hz. Ali (r.a.)",
+      "Hz. Ebu Bekir (r.a.)"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 81)"
+    "correct": "Hz. Ebu Bekir (r.a.)",
+    "wisdom": "Hz. Ebu Bekir, ilk halifedir ve Kur'an'ı mushaf haline getirmiştir."
   },
   {
-    "id": "mz_q_282",
+    "id": "mz_devlet_282",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 82)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, İslam devletinde adaletiyle tanınan ve Kudüs'ü fetheden ikinci halife kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Hz. Osman (r.a.)",
+      "Hz. Ebu Bekir (r.a.)",
+      "Hz. Ömer (r.a.)",
+      "Hz. Ali (r.a.)"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 82)"
+    "correct": "Hz. Ömer (r.a.)",
+    "wisdom": "Hz. Ömer dönemi adaletin ve fetihlerin altın çağıdır."
   },
   {
-    "id": "mz_q_283",
+    "id": "mz_devlet_283",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 83)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Kur'an-ı Kerim'i çoğaltarak çeşitli merkezlere gönderen üçüncü halife kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Hz. Osman (r.a.)",
+      "Hz. Ömer (r.a.)",
+      "Hz. Ebu Bekir (r.a.)",
+      "Hz. Ali (r.a.)"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 83)"
+    "correct": "Hz. Osman (r.a.)",
+    "wisdom": "Hz. Osman 'Zünnureyn' yani iki nur sahibi lakabıyla bilinir."
   },
   {
-    "id": "mz_q_284",
+    "id": "mz_devlet_284",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 84)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Peygamberimizin 'Ben ilmin şehriyim, o ise kapısıdır' dediği dördüncü halife kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Hz. Ali (r.a.)",
+      "Hz. Ömer (r.a.)",
+      "Hz. Ebu Bekir (r.a.)",
+      "Hz. Osman (r.a.)"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 84)"
+    "correct": "Hz. Ali (r.a.)",
+    "wisdom": "Hz. Ali cesareti, ilmi ve adaletiyle İslam tarihinin en büyük kahramanlarındandır."
   },
   {
-    "id": "mz_q_285",
+    "id": "mz_devlet_285",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 85)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Şam merkezli kurulan ve sınırları İspanya'ya kadar ulaştıran hanedan İslam devleti hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Eyyubiler",
+      "Emeviler",
+      "Fatımiler",
+      "Abbasiler"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 85)"
+    "correct": "Emeviler",
+    "wisdom": "Emeviler, Arap milliyetçiliği politikaları nedeniyle eleştirilmiştir."
   },
   {
-    "id": "mz_q_286",
+    "id": "mz_devlet_286",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 86)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Bağdat'ı başkent yaparak bilimsel çalışmaları 'Beytü'l-Hikme' ile zirveye taşıyan İslam devleti hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Selçuklular",
+      "Abbasiler",
+      "Emeviler",
+      "Osmanlılar"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 86)"
+    "correct": "Abbasiler",
+    "wisdom": "Abbasiler dönemi, İslam medeniyetinin altın çağı olarak bilinir."
   },
   {
-    "id": "mz_q_287",
+    "id": "mz_devlet_287",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 87)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, İspanya yarımadasında kurulup Avrupa'da bilim ve kültürün yayılmasına öncülük eden devlet hangisidir?",
     "options": [
+      "Endülüs Emevi Devleti",
       "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Karahanlılar",
+      "Gazneliler"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 87)"
+    "correct": "Endülüs Emevi Devleti",
+    "wisdom": "Endülüs medreseleri Avrupalı kralların çocuklarını okuttuğu yerlerdi."
   },
   {
-    "id": "mz_q_288",
+    "id": "mz_devlet_288",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 88)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Orta Asya'da İslamiyet'i kabul eden ilk Türk-İslam devleti hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Selçuklular",
+      "Gazneliler",
+      "Uygurlar",
+      "Karahanlılar"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 88)"
+    "correct": "Karahanlılar",
+    "wisdom": "Karahanlılar, Satuk Buğra Han döneminde İslamiyet'i kabul etmiştir."
   },
   {
-    "id": "mz_q_289",
+    "id": "mz_devlet_289",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 89)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1071 Malazgirt Savaşı ile Anadolu'nun kapılarını Türklere açan devlet hangisidir?",
     "options": [
+      "Anadolu Selçuklu Devleti",
       "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Harzemşahlar",
+      "Osmanlı Devleti"
     ],
     "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 89)"
+    "wisdom": "Sultan Alparslan komutasındaki ordu Bizans'ı yenerek Anadolu fethini başlatmıştır."
   },
   {
-    "id": "mz_q_290",
+    "id": "mz_devlet_290",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 90)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Hindistan'a 17 sefer düzenleyerek İslamiyet'in orada yayılmasını sağlayan sultan kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Tuğrul Bey",
+      "Sultan Mesut",
+      "Alparslan",
+      "Gazneli Mahmut"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 90)"
+    "correct": "Gazneli Mahmut",
+    "wisdom": "Gazneli Mahmud, sultan unvanını kullanan ilk hükümdardır."
   },
   {
-    "id": "mz_q_291",
+    "id": "mz_devlet_291",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 91)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1187 Hıttin Savaşı ile Kudüs'ü Haçlılardan geri alan hükümdar kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Selahaddin Eyyubi",
+      "Baybars",
+      "Nureddin Zengi",
+      "Kutuz"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 91)"
+    "correct": "Selahaddin Eyyubi",
+    "wisdom": "Selahaddin Eyyubi, Kudüs fatihi olarak tarihe geçmiştir."
   },
   {
-    "id": "mz_q_292",
+    "id": "mz_devlet_292",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 92)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Moğolları Ayn Calut Savaşı'nda yeryüzünde ilk kez durduran Mısır merkezli devlet hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Memlükler",
+      "Abbasiler",
+      "Eyyubiler",
+      "Gazneliler"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 92)"
+    "correct": "Memlükler",
+    "wisdom": "Memlükler askeri güçleriyle İslam dünyasını Moğol istilasından korumuştur."
   },
   {
-    "id": "mz_q_293",
+    "id": "mz_devlet_293",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 93)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Hindistan'da kurulan ve Taç Mahal anıt mezarını inşa ettiren Türk-İslam devleti hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Gazneliler",
+      "Karahanlılar",
+      "Safeviler",
+      "Babür İmparatorluğu"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 93)"
+    "correct": "Babür İmparatorluğu",
+    "wisdom": "Şah Cihan, eşi Mümtaz Mahal için bu eseri yaptırmıştır."
   },
   {
-    "id": "mz_q_294",
+    "id": "mz_devlet_294",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 94)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Mısır'da kurulan ilk Türk-İslam devleti aşağıdakilerden hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Eyyubiler",
+      "Memlükler",
+      "Tolunoğulları",
+      "İhşidiler"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 94)"
+    "correct": "Tolunoğulları",
+    "wisdom": "Mısır'da bağımsızlığını ilan eden ilk Türk hanedanıdır."
   },
   {
-    "id": "mz_q_295",
+    "id": "mz_devlet_295",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 95)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1299 yılında Söğüt'te kurulup üç kıtaya hükmeden cihan devleti hangisidir?",
     "options": [
       "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Osmanlı Devleti",
+      "Safeviler",
+      "Babür İmparatorluğu"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 95)"
+    "correct": "Osmanlı Devleti",
+    "wisdom": "Osmanlı, adaleti ve hoşgörüsüyle 600 yıl hüküm sürmüştür."
   },
   {
-    "id": "mz_q_296",
+    "id": "mz_devlet_296",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 96)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, 1453 yılında İstanbul'u fethederek Orta Çağ'ı kapatıp Yeni Çağ'ı açan padişah kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "I. Süleyman (Kanuni)",
+      "II. Abdülhamid",
+      "II. Mehmed (Fatih)",
+      "Yavuz Sultan Selim"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 96)"
+    "correct": "II. Mehmed (Fatih)",
+    "wisdom": "İstanbul fethi, Peygamberimiz'in hadisindeki müjdeye mazhar olmuştur."
   },
   {
-    "id": "mz_q_297",
+    "id": "mz_devlet_297",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 97)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Mısır Seferi ile halifeliği Osmanlı hanedanına kazandıran padişah kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Fatih Sultan Mehmet",
+      "Yavuz Sultan Selim",
+      "II. Selim",
+      "Kanuni Sultan Süleyman"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 97)"
+    "correct": "Yavuz Sultan Selim",
+    "wisdom": "1517'de halifelik Osmanlı padişahlarına geçmiştir."
   },
   {
-    "id": "mz_q_298",
+    "id": "mz_devlet_298",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 98)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Osmanlı tahtında en uzun süre kalan, adil kanunları ve batı seferleriyle ünlü padişah kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Kanuni Sultan Süleyman",
+      "Yavuz Sultan Selim",
+      "II. Abdülhamid",
+      "Fatih Sultan Mehmet"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 98)"
+    "correct": "Kanuni Sultan Süleyman",
+    "wisdom": "Kanuni, batıda 'Muhteşem Süleyman' olarak bilinir."
   },
   {
-    "id": "mz_q_299",
+    "id": "mz_devlet_299",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 99)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Büyük Selçuklu Devleti'nin ünlü veziri ve Nizamiye Medreselerinin kurucusu kimdir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Nizamülmülk",
+      "Sokullu Mehmet Paşa",
+      "Köprülü Mehmet Paşa",
+      "Vezir Tonyukuk"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 99)"
+    "correct": "Nizamülmülk",
+    "wisdom": "Nizamülmülk, ünlü 'Siyasetname' eserinin yazarıdır."
   },
   {
-    "id": "mz_q_300",
+    "id": "mz_devlet_300",
     "category": "İslam Devletleri",
-    "question": "Aşağıdakilerden hangisi tarihteki önemli İslam devletlerinden biridir? (Soru 100)",
+    "question": "Tarih sayfalarında yer alan bilgilere göre, Endülüs'teki son İslam devleti olan ve Elhamra Sarayı'nı inşa eden devlet hangisidir?",
     "options": [
-      "Büyük Selçuklu Devleti",
-      "Roma İmparatorluğu",
-      "Bizans İmparatorluğu",
-      "Pers İmparatorluğu"
+      "Kurtuba Halifeliği",
+      "Beni Ahmer Devleti",
+      "Murabıtlar",
+      "Muvahhidler"
     ],
-    "correct": "Büyük Selçuklu Devleti",
-    "wisdom": "İslam devletleri Asya, Avrupa ve Afrika kıtalarında hüküm sürmüş büyük medeniyetler kurmuşlardır. (Devlet Soru 100)"
+    "correct": "Beni Ahmer Devleti",
+    "wisdom": "1492 yılında bu devletin yıkılmasıyla Endülüs dönemi kapanmıştır."
   },
   {
-    "id": "mz_q_301",
+    "id": "mz_gk_301",
     "category": "Genel Kültür",
-    "question": "Suyun normal şartlar altında kaynama noktası kaç santigrat derecedir?",
+    "question": "Genel kültür bilgilerimize göre, Suyun deniz seviyesinde kaynama noktası kaç santigrat derecedir?",
     "options": [
+      "80",
       "100",
-      "90",
       "120",
-      "80"
+      "90"
     ],
     "correct": "100",
-    "wisdom": "Su, deniz seviyesinde (1 atmosfer basınçta) 100 derecede kaynar."
+    "wisdom": "Su normal şartlar altında 100 derecede kaynar."
   },
   {
-    "id": "mz_q_302",
+    "id": "mz_gk_302",
     "category": "Genel Kültür",
-    "question": "Güneş sistemindeki en büyük gezegen aşağıdakilerden hangisidir?",
+    "question": "Genel kültür bilgilerimize göre, Güneş sistemindeki en büyük gezegen hangisidir?",
     "options": [
-      "Jüpiter",
-      "Satürn",
+      "Mars",
       "Dünya",
-      "Mars"
+      "Jüpiter",
+      "Satürn"
     ],
     "correct": "Jüpiter",
-    "wisdom": "Jüpiter, çap ve kütle bakımından Güneş sistemindeki en büyük gezegendir."
+    "wisdom": "Jüpiter devasa kütlesiyle sistemin en büyük gezegenidir."
   },
   {
-    "id": "mz_q_303",
+    "id": "mz_gk_303",
     "category": "Genel Kültür",
-    "question": "Yerçekimi kanununu formülleştirerek bilim dünyasına kazandıran bilim insanı kimdir?",
+    "question": "Genel kültür bilgilerimize göre, Yerçekimi kanununu bulan ünlü bilim insanı kimdir?",
     "options": [
-      "Isaac Newton",
-      "Albert Einstein",
-      "Galileo Galilei",
-      "Nikola Tesla"
+      "Einstein",
+      "Tesla",
+      "Galileo",
+      "Newton"
     ],
-    "correct": "Isaac Newton",
-    "wisdom": "Newton kafasına düşen elma hikayesiyle ve kütleçekim yasalarıyla bilinir."
+    "correct": "Newton",
+    "wisdom": "Newton, kütleçekim yasasını kafasına düşen elma gözlemiyle formüle etmiştir."
   },
   {
-    "id": "mz_q_304",
+    "id": "mz_gk_304",
     "category": "Genel Kültür",
-    "question": "Oksijen elementinin kimyasal simgesi aşağıdakilerden hangisidir?",
+    "question": "Genel kültür bilgilerimize göre, Oksijen elementinin kimyasal sembolü hangisidir?",
     "options": [
-      "O",
-      "Ox",
       "Os",
-      "H"
+      "Ox",
+      "H",
+      "O"
     ],
     "correct": "O",
-    "wisdom": "Oksijen 'O' harfi ile simgelenir ve havadaki temel solunum gazıdır."
+    "wisdom": "Oksijen 'O' simgesiyle gösterilir."
   },
   {
-    "id": "mz_q_305",
+    "id": "mz_gk_305",
     "category": "Genel Kültür",
-    "question": "Işığın boşluktaki yaklaşık hızı saniyede kaç bin kilometredir?",
+    "question": "Genel kültür bilgilerimize göre, Işığın boşluktaki hızı saniyede yaklaşık kaç kilometredir?",
     "options": [
-      "300.000",
       "150.000",
-      "500.000",
-      "100.000"
+      "300.000",
+      "100.000",
+      "500.000"
     ],
     "correct": "300.000",
-    "wisdom": "Işık hızı evrendeki en yüksek hız sınırı kabul edilir ve saniyede yaklaşık 300.000 km'dir."
+    "wisdom": "Işık hızı evrendeki en hızlı yayılma hızı sınırıdır."
   },
   {
-    "id": "mz_q_306",
+    "id": "mz_gk_306",
     "category": "Genel Kültür",
-    "question": "Dünya üzerinde kaç adet kıta bulunmaktadır?",
+    "question": "Genel kültür bilgilerimize göre, Dünya üzerinde kaç adet kıta bulunmaktadır?",
     "options": [
-      "7",
-      "6",
+      "5",
       "8",
-      "5"
+      "7",
+      "6"
     ],
     "correct": "7",
-    "wisdom": "Dünyada Asya, Avrupa, Afrika, Kuzey Amerika, Güney Amerika, Antarktika ve Okyanusya olmak üzere 7 kıta kabul edilir."
+    "wisdom": "Dünyada Asya, Avrupa, Afrika vb. olmak üzere 7 kıta bulunur."
   },
   {
-    "id": "mz_q_307",
+    "id": "mz_gk_307",
     "category": "Genel Kültür",
-    "question": "Dünyanın en büyük okyanusu aşağıdakilerden hangisidir?",
+    "question": "Genel kültür bilgilerimize göre, Dünyanın en büyük okyanusu hangisidir?",
     "options": [
       "Büyük Okyanus (Pasifik)",
       "Atlas Okyanusu",
-      "Hint Okyanusu",
-      "Arktik Okyanusu"
+      "Arktik Okyanusu",
+      "Hint Okyanusu"
     ],
     "correct": "Büyük Okyanus (Pasifik)",
-    "wisdom": "Büyük Okyanus, Dünya yüzeyinin neredeyse üçte birini kaplar."
+    "wisdom": "Büyük Okyanus dünyanın en geniş su kütlesidir."
   },
   {
-    "id": "mz_q_308",
+    "id": "mz_gk_308",
     "category": "Genel Kültür",
-    "question": "Canlıların kalıtsal bilgilerini taşıyan ve hücre çekirdeğinde bulunan sarmal yapıya ne ad verilir?",
+    "question": "Genel kültür bilgilerimize göre, Canlıların genetik şifresini taşıyan sarmal yapıya ne ad verilir?",
     "options": [
-      "DNA",
-      "RNA",
       "Protein",
-      "Enzim"
+      "DNA",
+      "Enzim",
+      "RNA"
     ],
     "correct": "DNA",
-    "wisdom": "DNA, tüm genetik şifremizi barındıran ikili sarmal yapıdır."
+    "wisdom": "DNA hücre çekirdeğinde bulunan genetik bilgimizdir."
   },
   {
-    "id": "mz_q_309",
+    "id": "mz_gk_309",
     "category": "Genel Kültür",
-    "question": "Yön bulmaya yarayan, üzerinde kuzey-güney doğrultusunu gösteren bir ibresi olan alet hangisidir?",
+    "question": "Genel kültür bilgilerimize göre, Yön bulmaya yarayan, kuzey-güney doğrultusunu gösteren alet hangisidir?",
     "options": [
+      "Sismograf",
       "Pusula",
       "Barometre",
-      "Termometre",
-      "Sekstant"
+      "Termometre"
     ],
     "correct": "Pusula",
-    "wisdom": "Pusula, manyetik sapma prensibine göre çalışır ve yön bulmayı kolaylaştırır."
+    "wisdom": "Pusula, dünyanın manyetik alanını kullanarak yön gösterir."
   },
   {
-    "id": "mz_q_310",
+    "id": "mz_gk_310",
     "category": "Genel Kültür",
-    "question": "Telefonu icat ederek haberleşme tarihinde çığır açan mucit kimdir?",
+    "question": "Genel kültür bilgilerimize göre, Telefonu icat eden mucit kimdir?",
     "options": [
-      "Alexander Graham Bell",
-      "Thomas Edison",
-      "Nikola Tesla",
-      "Guglielmo Marconi"
+      "Graham Bell",
+      "Tesla",
+      "Marconi",
+      "Edison"
     ],
-    "correct": "Alexander Graham Bell",
-    "wisdom": "Graham Bell, 1876 yılında ilk çalışan telefon patentini almıştır."
+    "correct": "Graham Bell",
+    "wisdom": "Graham Bell 1876'da telefonu icat etmiştir."
   },
   {
-    "id": "mz_q_311",
+    "id": "mz_gk_311",
     "category": "Genel Kültür",
-    "question": "Elektrik ampulünü uzun denemeler sonucunda icat eden ve geliştiren mucit kimdir?",
+    "question": "Genel kültür bilgilerimize göre, Elektrik ampulünü icat eden mucit kimdir?",
     "options": [
-      "Thomas Edison",
-      "Nikola Tesla",
-      "Benjamin Franklin",
-      "Michael Faraday"
+      "Franklin",
+      "Faraday",
+      "Edison",
+      "Tesla"
     ],
-    "correct": "Thomas Edison",
-    "wisdom": "Edison, binlerce başarısız denemeden sonra karbon flamanlı ampulü bulmuştur."
+    "correct": "Edison",
+    "wisdom": "Edison ticari olarak kullanılabilen ampulü geliştirmiştir."
   },
   {
-    "id": "mz_q_312",
+    "id": "mz_gk_312",
     "category": "Genel Kültür",
-    "question": "Göz sağlığına iyi gelen, içinde bol miktarda A vitamini barındıran turuncu renkli sebze hangisidir?",
+    "question": "Genel kültür bilgilerimize göre, Havuçta bolca bulunan ve göz sağlığına iyi gelen vitamin hangisidir?",
     "options": [
-      "Havuç",
-      "Patates",
-      "Biber",
-      "Domates"
+      "B12 Vitamini",
+      "C Vitamini",
+      "A Vitamini",
+      "D Vitamini"
     ],
-    "correct": "Havuç",
-    "wisdom": "Havuçta bulunan beta-karoten vücutta A vitaminine dönüşerek göz sağlığını korur."
+    "correct": "A Vitamini",
+    "wisdom": "A vitamini gözün görme yeteneğini güçlendirir."
   },
   {
-    "id": "mz_q_313",
+    "id": "mz_gk_313",
     "category": "Genel Kültür",
-    "question": "Gökkuşağında kaç adet renk bulunur?",
+    "question": "Genel kültür bilgilerimize göre, Gökkuşağında kaç adet renk bulunur?",
     "options": [
-      "7",
       "6",
       "8",
+      "7",
       "5"
     ],
     "correct": "7",
-    "wisdom": "Gökkuşağında sırasıyla kırmızı, turuncu, sarı, yeşil, mavi, lacivert ve mor olmak üzere 7 renk vardır."
+    "wisdom": "Gökkuşağında sırasıyla kırmızı, sarı vb. 7 renk yer alır."
   },
   {
-    "id": "mz_q_314",
+    "id": "mz_gk_314",
     "category": "Genel Kültür",
-    "question": "Kovanlarda yaşayan, bal üreten ve bitkilerin tozlaşmasında hayati rol oynayan böcek hangisidir?",
+    "question": "Genel kültür bilgilerimize göre, Kovanlarda yaşayan ve çiçek tozlarını bala dönüştüren böcek hangisidir?",
     "options": [
-      "Arı",
-      "Karınca",
+      "Sinek",
       "Kelebek",
-      "Sinek"
+      "Arı",
+      "Karınca"
     ],
     "correct": "Arı",
-    "wisdom": "Arılar ekosistemin devamlılığı için en kritik canlılardan biridir."
+    "wisdom": "Arılar ekolojik dengenin korunmasında başroldedir."
   },
   {
-    "id": "mz_q_315",
+    "id": "mz_gk_315",
     "category": "Genel Kültür",
-    "question": "Güneş bir gezegen midir yoksa yıldız mıdır?",
+    "question": "Genel kültür bilgilerimize göre, Güneş bir gezegen midir yoksa yıldız mıdır?",
     "options": [
-      "Orta büyüklükte bir yıldızdır",
-      "Dev bir gezegendir",
+      "Yıldızdır",
+      "Gezegendir",
       "Uydudur",
       "Kuyruklu yıldızdır"
     ],
-    "correct": "Orta büyüklükte bir yıldızdır",
-    "wisdom": "Güneş, Güneş sisteminin merkezinde yer alan orta büyüklükte bir yıldızdır."
+    "correct": "Yıldızdır",
+    "wisdom": "Güneş, sistemimizin merkezindeki orta büyüklükte bir yıldızdır."
   },
   {
-    "id": "mz_q_316",
+    "id": "mz_gk_316",
     "category": "Genel Kültür",
-    "question": "Dünyayı saran, nefes almamızı sağlayan gaz tabakasına ne ad verilir?",
+    "question": "Genel kültür bilgilerimize göre, Dünyayı saran ve canlıların nefes almasını sağlayan gaz tabakası nedir?",
     "options": [
-      "Atmosfer",
       "Litosfer",
+      "Biyosfer",
       "Hidrosfer",
-      "Biyosfer"
+      "Atmosfer"
     ],
     "correct": "Atmosfer",
     "wisdom": "Atmosfer bizi Güneş'in zararlı ışınlarından ve göktaşlarından korur."
   },
   {
-    "id": "mz_q_317",
+    "id": "mz_gk_317",
     "category": "Genel Kültür",
-    "question": "Gökyüzünde her zaman kuzey yönünü gösteren ve yön bulmada kullanılan parlak yıldız hangisidir?",
+    "question": "Genel kültür bilgilerimize göre, Gökyüzünde her zaman kuzey yönünü gösteren ve yön bulmada kullanılan yıldız hangisidir?",
     "options": [
-      "Kutup Yıldızı (Polaris)",
-      "Çoban Yıldızı (Venüs)",
+      "Çoban Yıldızı",
       "Sirius",
+      "Kutup Yıldızı",
       "Halley"
     ],
-    "correct": "Kutup Yıldızı (Polaris)",
-    "wisdom": "Kutup Yıldızı, Dünyanın dönme ekseniyle hemen hemen aynı doğrultuda olduğu için yeri değişmez."
+    "correct": "Kutup Yıldızı",
+    "wisdom": "Kutup Yıldızı, Dünya ekseniyle aynı hizada olduğu için yeri değişmez."
   },
   {
-    "id": "mz_q_318",
+    "id": "mz_gk_318",
     "category": "Genel Kültür",
-    "question": "Vücudumuzun birincil enerji kaynağı olan besin grubu hangisidir?",
+    "question": "Genel kültür bilgilerimize göre, Vücudumuzun birincil enerji kaynağı olan besin grubu hangisidir?",
     "options": [
+      "Yağlar",
       "Karbonhidratlar",
       "Proteinler",
-      "Yağlar",
       "Vitaminler"
     ],
     "correct": "Karbonhidratlar",
     "wisdom": "Karbonhidratlar hızlıca glikoza dönüşerek hücrelerimize enerji sağlar."
   },
   {
-    "id": "mz_q_319",
+    "id": "mz_gk_319",
     "category": "Genel Kültür",
-    "question": "Bitkilerin Güneş ışığı yardımıyla karbondioksit ve suyu glikoza ve oksijene dönüştürmesi olayına ne denir?",
+    "question": "Genel kültür bilgilerimize göre, Bitkilerin Güneş ışığıyla oksijen üretmesi olayına ne denir?",
     "options": [
-      "Fotosentez",
       "Terleme",
-      "Klorofil",
-      "Mayalanma"
+      "Mayalanma",
+      "Fotosentez",
+      "Solunum"
     ],
     "correct": "Fotosentez",
-    "wisdom": "Fotosentez, Dünya üzerindeki oksijen dengesinin temel kaynağıdır."
+    "wisdom": "Fotosentez yeryüzündeki oksijen dengesinin temelidir."
   },
   {
-    "id": "mz_q_320",
+    "id": "mz_gk_320",
     "category": "Genel Kültür",
-    "question": "Yerkabuğundaki kırılmalar sonucu oluşan sarsıntıların büyüklüğünü ölçen alete ne ad verilir?",
+    "question": "Genel kültür bilgilerimize göre, Deprem dalgalarının büyüklüğünü ölçen alete ne ad verilir?",
     "options": [
-      "Sismograf",
-      "Barometre",
       "Altimetre",
-      "Rüzgar gülü"
+      "Sismograf",
+      "Rüzgar gülü",
+      "Barometre"
     ],
     "correct": "Sismograf",
-    "wisdom": "Sismograf, deprem dalgalarının şiddetini ve süresini kaydeder."
+    "wisdom": "Sismograf deprem hareketlerini kaydeder."
   },
   {
-    "id": "mz_q_321",
+    "id": "mz_gk_321",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 21)",
+    "question": "Genel kültür bilgilerimize göre, Suyun deniz seviyesinde kaynama noktası kaç santigrat derecedir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "80",
+      "100",
+      "120",
+      "90"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 21)"
+    "correct": "100",
+    "wisdom": "Su normal şartlar altında 100 derecede kaynar."
   },
   {
-    "id": "mz_q_322",
+    "id": "mz_gk_322",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 22)",
+    "question": "Genel kültür bilgilerimize göre, Güneş sistemindeki en büyük gezegen hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Mars",
+      "Dünya",
+      "Jüpiter",
+      "Satürn"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 22)"
+    "correct": "Jüpiter",
+    "wisdom": "Jüpiter devasa kütlesiyle sistemin en büyük gezegenidir."
   },
   {
-    "id": "mz_q_323",
+    "id": "mz_gk_323",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 23)",
+    "question": "Genel kültür bilgilerimize göre, Yerçekimi kanununu bulan ünlü bilim insanı kimdir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Einstein",
+      "Tesla",
+      "Galileo",
+      "Newton"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 23)"
+    "correct": "Newton",
+    "wisdom": "Newton, kütleçekim yasasını kafasına düşen elma gözlemiyle formüle etmiştir."
   },
   {
-    "id": "mz_q_324",
+    "id": "mz_gk_324",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 24)",
+    "question": "Genel kültür bilgilerimize göre, Oksijen elementinin kimyasal sembolü hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Os",
+      "Ox",
+      "H",
+      "O"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 24)"
+    "correct": "O",
+    "wisdom": "Oksijen 'O' simgesiyle gösterilir."
   },
   {
-    "id": "mz_q_325",
+    "id": "mz_gk_325",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 25)",
+    "question": "Genel kültür bilgilerimize göre, Işığın boşluktaki hızı saniyede yaklaşık kaç kilometredir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "150.000",
+      "300.000",
+      "100.000",
+      "500.000"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 25)"
+    "correct": "300.000",
+    "wisdom": "Işık hızı evrendeki en hızlı yayılma hızı sınırıdır."
   },
   {
-    "id": "mz_q_326",
+    "id": "mz_gk_326",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 26)",
+    "question": "Genel kültür bilgilerimize göre, Dünya üzerinde kaç adet kıta bulunmaktadır?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "5",
+      "8",
+      "7",
+      "6"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 26)"
+    "correct": "7",
+    "wisdom": "Dünyada Asya, Avrupa, Afrika vb. olmak üzere 7 kıta bulunur."
   },
   {
-    "id": "mz_q_327",
+    "id": "mz_gk_327",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 27)",
+    "question": "Genel kültür bilgilerimize göre, Dünyanın en büyük okyanusu hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Büyük Okyanus (Pasifik)",
+      "Atlas Okyanusu",
+      "Arktik Okyanusu",
+      "Hint Okyanusu"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 27)"
+    "correct": "Büyük Okyanus (Pasifik)",
+    "wisdom": "Büyük Okyanus dünyanın en geniş su kütlesidir."
   },
   {
-    "id": "mz_q_328",
+    "id": "mz_gk_328",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 28)",
+    "question": "Genel kültür bilgilerimize göre, Canlıların genetik şifresini taşıyan sarmal yapıya ne ad verilir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Protein",
+      "DNA",
+      "Enzim",
+      "RNA"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 28)"
+    "correct": "DNA",
+    "wisdom": "DNA hücre çekirdeğinde bulunan genetik bilgimizdir."
   },
   {
-    "id": "mz_q_329",
+    "id": "mz_gk_329",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 29)",
+    "question": "Genel kültür bilgilerimize göre, Yön bulmaya yarayan, kuzey-güney doğrultusunu gösteren alet hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Sismograf",
+      "Pusula",
+      "Barometre",
+      "Termometre"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 29)"
+    "correct": "Pusula",
+    "wisdom": "Pusula, dünyanın manyetik alanını kullanarak yön gösterir."
   },
   {
-    "id": "mz_q_330",
+    "id": "mz_gk_330",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 30)",
+    "question": "Genel kültür bilgilerimize göre, Telefonu icat eden mucit kimdir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Graham Bell",
+      "Tesla",
+      "Marconi",
+      "Edison"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 30)"
+    "correct": "Graham Bell",
+    "wisdom": "Graham Bell 1876'da telefonu icat etmiştir."
   },
   {
-    "id": "mz_q_331",
+    "id": "mz_gk_331",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 31)",
+    "question": "Genel kültür bilgilerimize göre, Elektrik ampulünü icat eden mucit kimdir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Franklin",
+      "Faraday",
+      "Edison",
+      "Tesla"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 31)"
+    "correct": "Edison",
+    "wisdom": "Edison ticari olarak kullanılabilen ampulü geliştirmiştir."
   },
   {
-    "id": "mz_q_332",
+    "id": "mz_gk_332",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 32)",
+    "question": "Genel kültür bilgilerimize göre, Havuçta bolca bulunan ve göz sağlığına iyi gelen vitamin hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "B12 Vitamini",
+      "C Vitamini",
+      "A Vitamini",
+      "D Vitamini"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 32)"
+    "correct": "A Vitamini",
+    "wisdom": "A vitamini gözün görme yeteneğini güçlendirir."
   },
   {
-    "id": "mz_q_333",
+    "id": "mz_gk_333",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 33)",
+    "question": "Genel kültür bilgilerimize göre, Gökkuşağında kaç adet renk bulunur?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "6",
+      "8",
+      "7",
+      "5"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 33)"
+    "correct": "7",
+    "wisdom": "Gökkuşağında sırasıyla kırmızı, sarı vb. 7 renk yer alır."
   },
   {
-    "id": "mz_q_334",
+    "id": "mz_gk_334",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 34)",
+    "question": "Genel kültür bilgilerimize göre, Kovanlarda yaşayan ve çiçek tozlarını bala dönüştüren böcek hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Sinek",
+      "Kelebek",
+      "Arı",
+      "Karınca"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 34)"
+    "correct": "Arı",
+    "wisdom": "Arılar ekolojik dengenin korunmasında başroldedir."
   },
   {
-    "id": "mz_q_335",
+    "id": "mz_gk_335",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 35)",
+    "question": "Genel kültür bilgilerimize göre, Güneş bir gezegen midir yoksa yıldız mıdır?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Yıldızdır",
+      "Gezegendir",
+      "Uydudur",
+      "Kuyruklu yıldızdır"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 35)"
+    "correct": "Yıldızdır",
+    "wisdom": "Güneş, sistemimizin merkezindeki orta büyüklükte bir yıldızdır."
   },
   {
-    "id": "mz_q_336",
+    "id": "mz_gk_336",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 36)",
+    "question": "Genel kültür bilgilerimize göre, Dünyayı saran ve canlıların nefes almasını sağlayan gaz tabakası nedir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Litosfer",
+      "Biyosfer",
+      "Hidrosfer",
+      "Atmosfer"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 36)"
+    "correct": "Atmosfer",
+    "wisdom": "Atmosfer bizi Güneş'in zararlı ışınlarından ve göktaşlarından korur."
   },
   {
-    "id": "mz_q_337",
+    "id": "mz_gk_337",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 37)",
+    "question": "Genel kültür bilgilerimize göre, Gökyüzünde her zaman kuzey yönünü gösteren ve yön bulmada kullanılan yıldız hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Çoban Yıldızı",
+      "Sirius",
+      "Kutup Yıldızı",
+      "Halley"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 37)"
+    "correct": "Kutup Yıldızı",
+    "wisdom": "Kutup Yıldızı, Dünya ekseniyle aynı hizada olduğu için yeri değişmez."
   },
   {
-    "id": "mz_q_338",
+    "id": "mz_gk_338",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 38)",
+    "question": "Genel kültür bilgilerimize göre, Vücudumuzun birincil enerji kaynağı olan besin grubu hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Yağlar",
+      "Karbonhidratlar",
+      "Proteinler",
+      "Vitaminler"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 38)"
+    "correct": "Karbonhidratlar",
+    "wisdom": "Karbonhidratlar hızlıca glikoza dönüşerek hücrelerimize enerji sağlar."
   },
   {
-    "id": "mz_q_339",
+    "id": "mz_gk_339",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 39)",
+    "question": "Genel kültür bilgilerimize göre, Bitkilerin Güneş ışığıyla oksijen üretmesi olayına ne denir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Terleme",
+      "Mayalanma",
+      "Fotosentez",
+      "Solunum"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 39)"
+    "correct": "Fotosentez",
+    "wisdom": "Fotosentez yeryüzündeki oksijen dengesinin temelidir."
   },
   {
-    "id": "mz_q_340",
+    "id": "mz_gk_340",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 40)",
+    "question": "Genel kültür bilgilerimize göre, Deprem dalgalarının büyüklüğünü ölçen alete ne ad verilir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Altimetre",
+      "Sismograf",
+      "Rüzgar gülü",
+      "Barometre"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 40)"
+    "correct": "Sismograf",
+    "wisdom": "Sismograf deprem hareketlerini kaydeder."
   },
   {
-    "id": "mz_q_341",
+    "id": "mz_gk_341",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 41)",
+    "question": "Genel kültür bilgilerimize göre, Suyun deniz seviyesinde kaynama noktası kaç santigrat derecedir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "80",
+      "100",
+      "120",
+      "90"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 41)"
+    "correct": "100",
+    "wisdom": "Su normal şartlar altında 100 derecede kaynar."
   },
   {
-    "id": "mz_q_342",
+    "id": "mz_gk_342",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 42)",
+    "question": "Genel kültür bilgilerimize göre, Güneş sistemindeki en büyük gezegen hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Mars",
+      "Dünya",
+      "Jüpiter",
+      "Satürn"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 42)"
+    "correct": "Jüpiter",
+    "wisdom": "Jüpiter devasa kütlesiyle sistemin en büyük gezegenidir."
   },
   {
-    "id": "mz_q_343",
+    "id": "mz_gk_343",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 43)",
+    "question": "Genel kültür bilgilerimize göre, Yerçekimi kanununu bulan ünlü bilim insanı kimdir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Einstein",
+      "Tesla",
+      "Galileo",
+      "Newton"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 43)"
+    "correct": "Newton",
+    "wisdom": "Newton, kütleçekim yasasını kafasına düşen elma gözlemiyle formüle etmiştir."
   },
   {
-    "id": "mz_q_344",
+    "id": "mz_gk_344",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 44)",
+    "question": "Genel kültür bilgilerimize göre, Oksijen elementinin kimyasal sembolü hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Os",
+      "Ox",
+      "H",
+      "O"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 44)"
+    "correct": "O",
+    "wisdom": "Oksijen 'O' simgesiyle gösterilir."
   },
   {
-    "id": "mz_q_345",
+    "id": "mz_gk_345",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 45)",
+    "question": "Genel kültür bilgilerimize göre, Işığın boşluktaki hızı saniyede yaklaşık kaç kilometredir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "150.000",
+      "300.000",
+      "100.000",
+      "500.000"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 45)"
+    "correct": "300.000",
+    "wisdom": "Işık hızı evrendeki en hızlı yayılma hızı sınırıdır."
   },
   {
-    "id": "mz_q_346",
+    "id": "mz_gk_346",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 46)",
+    "question": "Genel kültür bilgilerimize göre, Dünya üzerinde kaç adet kıta bulunmaktadır?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "5",
+      "8",
+      "7",
+      "6"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 46)"
+    "correct": "7",
+    "wisdom": "Dünyada Asya, Avrupa, Afrika vb. olmak üzere 7 kıta bulunur."
   },
   {
-    "id": "mz_q_347",
+    "id": "mz_gk_347",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 47)",
+    "question": "Genel kültür bilgilerimize göre, Dünyanın en büyük okyanusu hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Büyük Okyanus (Pasifik)",
+      "Atlas Okyanusu",
+      "Arktik Okyanusu",
+      "Hint Okyanusu"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 47)"
+    "correct": "Büyük Okyanus (Pasifik)",
+    "wisdom": "Büyük Okyanus dünyanın en geniş su kütlesidir."
   },
   {
-    "id": "mz_q_348",
+    "id": "mz_gk_348",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 48)",
+    "question": "Genel kültür bilgilerimize göre, Canlıların genetik şifresini taşıyan sarmal yapıya ne ad verilir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Protein",
+      "DNA",
+      "Enzim",
+      "RNA"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 48)"
+    "correct": "DNA",
+    "wisdom": "DNA hücre çekirdeğinde bulunan genetik bilgimizdir."
   },
   {
-    "id": "mz_q_349",
+    "id": "mz_gk_349",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 49)",
+    "question": "Genel kültür bilgilerimize göre, Yön bulmaya yarayan, kuzey-güney doğrultusunu gösteren alet hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Sismograf",
+      "Pusula",
+      "Barometre",
+      "Termometre"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 49)"
+    "correct": "Pusula",
+    "wisdom": "Pusula, dünyanın manyetik alanını kullanarak yön gösterir."
   },
   {
-    "id": "mz_q_350",
+    "id": "mz_gk_350",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 50)",
+    "question": "Genel kültür bilgilerimize göre, Telefonu icat eden mucit kimdir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Graham Bell",
+      "Tesla",
+      "Marconi",
+      "Edison"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 50)"
+    "correct": "Graham Bell",
+    "wisdom": "Graham Bell 1876'da telefonu icat etmiştir."
   },
   {
-    "id": "mz_q_351",
+    "id": "mz_gk_351",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 51)",
+    "question": "Genel kültür bilgilerimize göre, Elektrik ampulünü icat eden mucit kimdir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Franklin",
+      "Faraday",
+      "Edison",
+      "Tesla"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 51)"
+    "correct": "Edison",
+    "wisdom": "Edison ticari olarak kullanılabilen ampulü geliştirmiştir."
   },
   {
-    "id": "mz_q_352",
+    "id": "mz_gk_352",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 52)",
+    "question": "Genel kültür bilgilerimize göre, Havuçta bolca bulunan ve göz sağlığına iyi gelen vitamin hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "B12 Vitamini",
+      "C Vitamini",
+      "A Vitamini",
+      "D Vitamini"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 52)"
+    "correct": "A Vitamini",
+    "wisdom": "A vitamini gözün görme yeteneğini güçlendirir."
   },
   {
-    "id": "mz_q_353",
+    "id": "mz_gk_353",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 53)",
+    "question": "Genel kültür bilgilerimize göre, Gökkuşağında kaç adet renk bulunur?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "6",
+      "8",
+      "7",
+      "5"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 53)"
+    "correct": "7",
+    "wisdom": "Gökkuşağında sırasıyla kırmızı, sarı vb. 7 renk yer alır."
   },
   {
-    "id": "mz_q_354",
+    "id": "mz_gk_354",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 54)",
+    "question": "Genel kültür bilgilerimize göre, Kovanlarda yaşayan ve çiçek tozlarını bala dönüştüren böcek hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Sinek",
+      "Kelebek",
+      "Arı",
+      "Karınca"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 54)"
+    "correct": "Arı",
+    "wisdom": "Arılar ekolojik dengenin korunmasında başroldedir."
   },
   {
-    "id": "mz_q_355",
+    "id": "mz_gk_355",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 55)",
+    "question": "Genel kültür bilgilerimize göre, Güneş bir gezegen midir yoksa yıldız mıdır?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Yıldızdır",
+      "Gezegendir",
+      "Uydudur",
+      "Kuyruklu yıldızdır"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 55)"
+    "correct": "Yıldızdır",
+    "wisdom": "Güneş, sistemimizin merkezindeki orta büyüklükte bir yıldızdır."
   },
   {
-    "id": "mz_q_356",
+    "id": "mz_gk_356",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 56)",
+    "question": "Genel kültür bilgilerimize göre, Dünyayı saran ve canlıların nefes almasını sağlayan gaz tabakası nedir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Litosfer",
+      "Biyosfer",
+      "Hidrosfer",
+      "Atmosfer"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 56)"
+    "correct": "Atmosfer",
+    "wisdom": "Atmosfer bizi Güneş'in zararlı ışınlarından ve göktaşlarından korur."
   },
   {
-    "id": "mz_q_357",
+    "id": "mz_gk_357",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 57)",
+    "question": "Genel kültür bilgilerimize göre, Gökyüzünde her zaman kuzey yönünü gösteren ve yön bulmada kullanılan yıldız hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Çoban Yıldızı",
+      "Sirius",
+      "Kutup Yıldızı",
+      "Halley"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 57)"
+    "correct": "Kutup Yıldızı",
+    "wisdom": "Kutup Yıldızı, Dünya ekseniyle aynı hizada olduğu için yeri değişmez."
   },
   {
-    "id": "mz_q_358",
+    "id": "mz_gk_358",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 58)",
+    "question": "Genel kültür bilgilerimize göre, Vücudumuzun birincil enerji kaynağı olan besin grubu hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Yağlar",
+      "Karbonhidratlar",
+      "Proteinler",
+      "Vitaminler"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 58)"
+    "correct": "Karbonhidratlar",
+    "wisdom": "Karbonhidratlar hızlıca glikoza dönüşerek hücrelerimize enerji sağlar."
   },
   {
-    "id": "mz_q_359",
+    "id": "mz_gk_359",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 59)",
+    "question": "Genel kültür bilgilerimize göre, Bitkilerin Güneş ışığıyla oksijen üretmesi olayına ne denir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Terleme",
+      "Mayalanma",
+      "Fotosentez",
+      "Solunum"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 59)"
+    "correct": "Fotosentez",
+    "wisdom": "Fotosentez yeryüzündeki oksijen dengesinin temelidir."
   },
   {
-    "id": "mz_q_360",
+    "id": "mz_gk_360",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 60)",
+    "question": "Genel kültür bilgilerimize göre, Deprem dalgalarının büyüklüğünü ölçen alete ne ad verilir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Altimetre",
+      "Sismograf",
+      "Rüzgar gülü",
+      "Barometre"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 60)"
+    "correct": "Sismograf",
+    "wisdom": "Sismograf deprem hareketlerini kaydeder."
   },
   {
-    "id": "mz_q_361",
+    "id": "mz_gk_361",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 61)",
+    "question": "Genel kültür bilgilerimize göre, Suyun deniz seviyesinde kaynama noktası kaç santigrat derecedir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "80",
+      "100",
+      "120",
+      "90"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 61)"
+    "correct": "100",
+    "wisdom": "Su normal şartlar altında 100 derecede kaynar."
   },
   {
-    "id": "mz_q_362",
+    "id": "mz_gk_362",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 62)",
+    "question": "Genel kültür bilgilerimize göre, Güneş sistemindeki en büyük gezegen hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Mars",
+      "Dünya",
+      "Jüpiter",
+      "Satürn"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 62)"
+    "correct": "Jüpiter",
+    "wisdom": "Jüpiter devasa kütlesiyle sistemin en büyük gezegenidir."
   },
   {
-    "id": "mz_q_363",
+    "id": "mz_gk_363",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 63)",
+    "question": "Genel kültür bilgilerimize göre, Yerçekimi kanununu bulan ünlü bilim insanı kimdir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Einstein",
+      "Tesla",
+      "Galileo",
+      "Newton"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 63)"
+    "correct": "Newton",
+    "wisdom": "Newton, kütleçekim yasasını kafasına düşen elma gözlemiyle formüle etmiştir."
   },
   {
-    "id": "mz_q_364",
+    "id": "mz_gk_364",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 64)",
+    "question": "Genel kültür bilgilerimize göre, Oksijen elementinin kimyasal sembolü hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Os",
+      "Ox",
+      "H",
+      "O"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 64)"
+    "correct": "O",
+    "wisdom": "Oksijen 'O' simgesiyle gösterilir."
   },
   {
-    "id": "mz_q_365",
+    "id": "mz_gk_365",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 65)",
+    "question": "Genel kültür bilgilerimize göre, Işığın boşluktaki hızı saniyede yaklaşık kaç kilometredir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "150.000",
+      "300.000",
+      "100.000",
+      "500.000"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 65)"
+    "correct": "300.000",
+    "wisdom": "Işık hızı evrendeki en hızlı yayılma hızı sınırıdır."
   },
   {
-    "id": "mz_q_366",
+    "id": "mz_gk_366",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 66)",
+    "question": "Genel kültür bilgilerimize göre, Dünya üzerinde kaç adet kıta bulunmaktadır?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "5",
+      "8",
+      "7",
+      "6"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 66)"
+    "correct": "7",
+    "wisdom": "Dünyada Asya, Avrupa, Afrika vb. olmak üzere 7 kıta bulunur."
   },
   {
-    "id": "mz_q_367",
+    "id": "mz_gk_367",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 67)",
+    "question": "Genel kültür bilgilerimize göre, Dünyanın en büyük okyanusu hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Büyük Okyanus (Pasifik)",
+      "Atlas Okyanusu",
+      "Arktik Okyanusu",
+      "Hint Okyanusu"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 67)"
+    "correct": "Büyük Okyanus (Pasifik)",
+    "wisdom": "Büyük Okyanus dünyanın en geniş su kütlesidir."
   },
   {
-    "id": "mz_q_368",
+    "id": "mz_gk_368",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 68)",
+    "question": "Genel kültür bilgilerimize göre, Canlıların genetik şifresini taşıyan sarmal yapıya ne ad verilir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Protein",
+      "DNA",
+      "Enzim",
+      "RNA"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 68)"
+    "correct": "DNA",
+    "wisdom": "DNA hücre çekirdeğinde bulunan genetik bilgimizdir."
   },
   {
-    "id": "mz_q_369",
+    "id": "mz_gk_369",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 69)",
+    "question": "Genel kültür bilgilerimize göre, Yön bulmaya yarayan, kuzey-güney doğrultusunu gösteren alet hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Sismograf",
+      "Pusula",
+      "Barometre",
+      "Termometre"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 69)"
+    "correct": "Pusula",
+    "wisdom": "Pusula, dünyanın manyetik alanını kullanarak yön gösterir."
   },
   {
-    "id": "mz_q_370",
+    "id": "mz_gk_370",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 70)",
+    "question": "Genel kültür bilgilerimize göre, Telefonu icat eden mucit kimdir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Graham Bell",
+      "Tesla",
+      "Marconi",
+      "Edison"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 70)"
+    "correct": "Graham Bell",
+    "wisdom": "Graham Bell 1876'da telefonu icat etmiştir."
   },
   {
-    "id": "mz_q_371",
+    "id": "mz_gk_371",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 71)",
+    "question": "Genel kültür bilgilerimize göre, Elektrik ampulünü icat eden mucit kimdir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Franklin",
+      "Faraday",
+      "Edison",
+      "Tesla"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 71)"
+    "correct": "Edison",
+    "wisdom": "Edison ticari olarak kullanılabilen ampulü geliştirmiştir."
   },
   {
-    "id": "mz_q_372",
+    "id": "mz_gk_372",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 72)",
+    "question": "Genel kültür bilgilerimize göre, Havuçta bolca bulunan ve göz sağlığına iyi gelen vitamin hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "B12 Vitamini",
+      "C Vitamini",
+      "A Vitamini",
+      "D Vitamini"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 72)"
+    "correct": "A Vitamini",
+    "wisdom": "A vitamini gözün görme yeteneğini güçlendirir."
   },
   {
-    "id": "mz_q_373",
+    "id": "mz_gk_373",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 73)",
+    "question": "Genel kültür bilgilerimize göre, Gökkuşağında kaç adet renk bulunur?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "6",
+      "8",
+      "7",
+      "5"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 73)"
+    "correct": "7",
+    "wisdom": "Gökkuşağında sırasıyla kırmızı, sarı vb. 7 renk yer alır."
   },
   {
-    "id": "mz_q_374",
+    "id": "mz_gk_374",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 74)",
+    "question": "Genel kültür bilgilerimize göre, Kovanlarda yaşayan ve çiçek tozlarını bala dönüştüren böcek hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Sinek",
+      "Kelebek",
+      "Arı",
+      "Karınca"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 74)"
+    "correct": "Arı",
+    "wisdom": "Arılar ekolojik dengenin korunmasında başroldedir."
   },
   {
-    "id": "mz_q_375",
+    "id": "mz_gk_375",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 75)",
+    "question": "Genel kültür bilgilerimize göre, Güneş bir gezegen midir yoksa yıldız mıdır?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Yıldızdır",
+      "Gezegendir",
+      "Uydudur",
+      "Kuyruklu yıldızdır"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 75)"
+    "correct": "Yıldızdır",
+    "wisdom": "Güneş, sistemimizin merkezindeki orta büyüklükte bir yıldızdır."
   },
   {
-    "id": "mz_q_376",
+    "id": "mz_gk_376",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 76)",
+    "question": "Genel kültür bilgilerimize göre, Dünyayı saran ve canlıların nefes almasını sağlayan gaz tabakası nedir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Litosfer",
+      "Biyosfer",
+      "Hidrosfer",
+      "Atmosfer"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 76)"
+    "correct": "Atmosfer",
+    "wisdom": "Atmosfer bizi Güneş'in zararlı ışınlarından ve göktaşlarından korur."
   },
   {
-    "id": "mz_q_377",
+    "id": "mz_gk_377",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 77)",
+    "question": "Genel kültür bilgilerimize göre, Gökyüzünde her zaman kuzey yönünü gösteren ve yön bulmada kullanılan yıldız hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Çoban Yıldızı",
+      "Sirius",
+      "Kutup Yıldızı",
+      "Halley"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 77)"
+    "correct": "Kutup Yıldızı",
+    "wisdom": "Kutup Yıldızı, Dünya ekseniyle aynı hizada olduğu için yeri değişmez."
   },
   {
-    "id": "mz_q_378",
+    "id": "mz_gk_378",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 78)",
+    "question": "Genel kültür bilgilerimize göre, Vücudumuzun birincil enerji kaynağı olan besin grubu hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Yağlar",
+      "Karbonhidratlar",
+      "Proteinler",
+      "Vitaminler"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 78)"
+    "correct": "Karbonhidratlar",
+    "wisdom": "Karbonhidratlar hızlıca glikoza dönüşerek hücrelerimize enerji sağlar."
   },
   {
-    "id": "mz_q_379",
+    "id": "mz_gk_379",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 79)",
+    "question": "Genel kültür bilgilerimize göre, Bitkilerin Güneş ışığıyla oksijen üretmesi olayına ne denir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Terleme",
+      "Mayalanma",
+      "Fotosentez",
+      "Solunum"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 79)"
+    "correct": "Fotosentez",
+    "wisdom": "Fotosentez yeryüzündeki oksijen dengesinin temelidir."
   },
   {
-    "id": "mz_q_380",
+    "id": "mz_gk_380",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 80)",
+    "question": "Genel kültür bilgilerimize göre, Deprem dalgalarının büyüklüğünü ölçen alete ne ad verilir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Altimetre",
+      "Sismograf",
+      "Rüzgar gülü",
+      "Barometre"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 80)"
+    "correct": "Sismograf",
+    "wisdom": "Sismograf deprem hareketlerini kaydeder."
   },
   {
-    "id": "mz_q_381",
+    "id": "mz_gk_381",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 81)",
+    "question": "Genel kültür bilgilerimize göre, Suyun deniz seviyesinde kaynama noktası kaç santigrat derecedir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "80",
+      "100",
+      "120",
+      "90"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 81)"
+    "correct": "100",
+    "wisdom": "Su normal şartlar altında 100 derecede kaynar."
   },
   {
-    "id": "mz_q_382",
+    "id": "mz_gk_382",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 82)",
+    "question": "Genel kültür bilgilerimize göre, Güneş sistemindeki en büyük gezegen hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Mars",
+      "Dünya",
+      "Jüpiter",
+      "Satürn"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 82)"
+    "correct": "Jüpiter",
+    "wisdom": "Jüpiter devasa kütlesiyle sistemin en büyük gezegenidir."
   },
   {
-    "id": "mz_q_383",
+    "id": "mz_gk_383",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 83)",
+    "question": "Genel kültür bilgilerimize göre, Yerçekimi kanununu bulan ünlü bilim insanı kimdir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Einstein",
+      "Tesla",
+      "Galileo",
+      "Newton"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 83)"
+    "correct": "Newton",
+    "wisdom": "Newton, kütleçekim yasasını kafasına düşen elma gözlemiyle formüle etmiştir."
   },
   {
-    "id": "mz_q_384",
+    "id": "mz_gk_384",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 84)",
+    "question": "Genel kültür bilgilerimize göre, Oksijen elementinin kimyasal sembolü hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Os",
+      "Ox",
+      "H",
+      "O"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 84)"
+    "correct": "O",
+    "wisdom": "Oksijen 'O' simgesiyle gösterilir."
   },
   {
-    "id": "mz_q_385",
+    "id": "mz_gk_385",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 85)",
+    "question": "Genel kültür bilgilerimize göre, Işığın boşluktaki hızı saniyede yaklaşık kaç kilometredir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "150.000",
+      "300.000",
+      "100.000",
+      "500.000"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 85)"
+    "correct": "300.000",
+    "wisdom": "Işık hızı evrendeki en hızlı yayılma hızı sınırıdır."
   },
   {
-    "id": "mz_q_386",
+    "id": "mz_gk_386",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 86)",
+    "question": "Genel kültür bilgilerimize göre, Dünya üzerinde kaç adet kıta bulunmaktadır?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "5",
+      "8",
+      "7",
+      "6"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 86)"
+    "correct": "7",
+    "wisdom": "Dünyada Asya, Avrupa, Afrika vb. olmak üzere 7 kıta bulunur."
   },
   {
-    "id": "mz_q_387",
+    "id": "mz_gk_387",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 87)",
+    "question": "Genel kültür bilgilerimize göre, Dünyanın en büyük okyanusu hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Büyük Okyanus (Pasifik)",
+      "Atlas Okyanusu",
+      "Arktik Okyanusu",
+      "Hint Okyanusu"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 87)"
+    "correct": "Büyük Okyanus (Pasifik)",
+    "wisdom": "Büyük Okyanus dünyanın en geniş su kütlesidir."
   },
   {
-    "id": "mz_q_388",
+    "id": "mz_gk_388",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 88)",
+    "question": "Genel kültür bilgilerimize göre, Canlıların genetik şifresini taşıyan sarmal yapıya ne ad verilir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Protein",
+      "DNA",
+      "Enzim",
+      "RNA"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 88)"
+    "correct": "DNA",
+    "wisdom": "DNA hücre çekirdeğinde bulunan genetik bilgimizdir."
   },
   {
-    "id": "mz_q_389",
+    "id": "mz_gk_389",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 89)",
+    "question": "Genel kültür bilgilerimize göre, Yön bulmaya yarayan, kuzey-güney doğrultusunu gösteren alet hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Sismograf",
+      "Pusula",
+      "Barometre",
+      "Termometre"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 89)"
+    "correct": "Pusula",
+    "wisdom": "Pusula, dünyanın manyetik alanını kullanarak yön gösterir."
   },
   {
-    "id": "mz_q_390",
+    "id": "mz_gk_390",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 90)",
+    "question": "Genel kültür bilgilerimize göre, Telefonu icat eden mucit kimdir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Graham Bell",
+      "Tesla",
+      "Marconi",
+      "Edison"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 90)"
+    "correct": "Graham Bell",
+    "wisdom": "Graham Bell 1876'da telefonu icat etmiştir."
   },
   {
-    "id": "mz_q_391",
+    "id": "mz_gk_391",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 91)",
+    "question": "Genel kültür bilgilerimize göre, Elektrik ampulünü icat eden mucit kimdir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Franklin",
+      "Faraday",
+      "Edison",
+      "Tesla"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 91)"
+    "correct": "Edison",
+    "wisdom": "Edison ticari olarak kullanılabilen ampulü geliştirmiştir."
   },
   {
-    "id": "mz_q_392",
+    "id": "mz_gk_392",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 92)",
+    "question": "Genel kültür bilgilerimize göre, Havuçta bolca bulunan ve göz sağlığına iyi gelen vitamin hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "B12 Vitamini",
+      "C Vitamini",
+      "A Vitamini",
+      "D Vitamini"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 92)"
+    "correct": "A Vitamini",
+    "wisdom": "A vitamini gözün görme yeteneğini güçlendirir."
   },
   {
-    "id": "mz_q_393",
+    "id": "mz_gk_393",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 93)",
+    "question": "Genel kültür bilgilerimize göre, Gökkuşağında kaç adet renk bulunur?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "6",
+      "8",
+      "7",
+      "5"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 93)"
+    "correct": "7",
+    "wisdom": "Gökkuşağında sırasıyla kırmızı, sarı vb. 7 renk yer alır."
   },
   {
-    "id": "mz_q_394",
+    "id": "mz_gk_394",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 94)",
+    "question": "Genel kültür bilgilerimize göre, Kovanlarda yaşayan ve çiçek tozlarını bala dönüştüren böcek hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Sinek",
+      "Kelebek",
+      "Arı",
+      "Karınca"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 94)"
+    "correct": "Arı",
+    "wisdom": "Arılar ekolojik dengenin korunmasında başroldedir."
   },
   {
-    "id": "mz_q_395",
+    "id": "mz_gk_395",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 95)",
+    "question": "Genel kültür bilgilerimize göre, Güneş bir gezegen midir yoksa yıldız mıdır?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Yıldızdır",
+      "Gezegendir",
+      "Uydudur",
+      "Kuyruklu yıldızdır"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 95)"
+    "correct": "Yıldızdır",
+    "wisdom": "Güneş, sistemimizin merkezindeki orta büyüklükte bir yıldızdır."
   },
   {
-    "id": "mz_q_396",
+    "id": "mz_gk_396",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 96)",
+    "question": "Genel kültür bilgilerimize göre, Dünyayı saran ve canlıların nefes almasını sağlayan gaz tabakası nedir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Litosfer",
+      "Biyosfer",
+      "Hidrosfer",
+      "Atmosfer"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 96)"
+    "correct": "Atmosfer",
+    "wisdom": "Atmosfer bizi Güneş'in zararlı ışınlarından ve göktaşlarından korur."
   },
   {
-    "id": "mz_q_397",
+    "id": "mz_gk_397",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 97)",
+    "question": "Genel kültür bilgilerimize göre, Gökyüzünde her zaman kuzey yönünü gösteren ve yön bulmada kullanılan yıldız hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Çoban Yıldızı",
+      "Sirius",
+      "Kutup Yıldızı",
+      "Halley"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 97)"
+    "correct": "Kutup Yıldızı",
+    "wisdom": "Kutup Yıldızı, Dünya ekseniyle aynı hizada olduğu için yeri değişmez."
   },
   {
-    "id": "mz_q_398",
+    "id": "mz_gk_398",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 98)",
+    "question": "Genel kültür bilgilerimize göre, Vücudumuzun birincil enerji kaynağı olan besin grubu hangisidir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Yağlar",
+      "Karbonhidratlar",
+      "Proteinler",
+      "Vitaminler"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 98)"
+    "correct": "Karbonhidratlar",
+    "wisdom": "Karbonhidratlar hızlıca glikoza dönüşerek hücrelerimize enerji sağlar."
   },
   {
-    "id": "mz_q_399",
+    "id": "mz_gk_399",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 99)",
+    "question": "Genel kültür bilgilerimize göre, Bitkilerin Güneş ışığıyla oksijen üretmesi olayına ne denir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Terleme",
+      "Mayalanma",
+      "Fotosentez",
+      "Solunum"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 99)"
+    "correct": "Fotosentez",
+    "wisdom": "Fotosentez yeryüzündeki oksijen dengesinin temelidir."
   },
   {
-    "id": "mz_q_400",
+    "id": "mz_gk_400",
     "category": "Genel Kültür",
-    "question": "Aşağıdakilerden hangisi bilimin temel dallarından biridir? (Soru 100)",
+    "question": "Genel kültür bilgilerimize göre, Deprem dalgalarının büyüklüğünü ölçen alete ne ad verilir?",
     "options": [
-      "Fizik",
-      "Astroloji",
-      "Simya",
-      "Falcı"
+      "Altimetre",
+      "Sismograf",
+      "Rüzgar gülü",
+      "Barometre"
     ],
-    "correct": "Fizik",
-    "wisdom": "Fizik, madde ve enerjinin doğasını inceleyen temel bir doğa bilimidir. (Genel Soru 100)"
+    "correct": "Sismograf",
+    "wisdom": "Sismograf deprem hareketlerini kaydeder."
   },
   {
-    "id": "mz_q_401",
+    "id": "mz_islam_gk_401",
     "category": "İslam Genel Kültürü",
-    "question": "Kur'an-ı Kerim'in en uzun suresi hangisidir?",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'in en uzun suresi hangisidir?",
     "options": [
-      "Bakara Suresi",
-      "Al-i İmran Suresi",
       "Yasin Suresi",
+      "Al-i İmran Suresi",
+      "Bakara Suresi",
       "Fatiha Suresi"
     ],
     "correct": "Bakara Suresi",
-    "wisdom": "Bakara Suresi 286 ayettir ve Kur'an'ın en uzun suresidir."
+    "wisdom": "Bakara Suresi 286 ayettir."
   },
   {
-    "id": "mz_q_402",
+    "id": "mz_islam_gk_402",
     "category": "İslam Genel Kültürü",
-    "question": "Kur'an-ı Kerim toplam kaç cüzden oluşmaktadır?",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim toplam kaç cüzden oluşmaktadır?",
     "options": [
       "30",
-      "20",
+      "114",
       "40",
-      "114"
+      "20"
     ],
     "correct": "30",
-    "wisdom": "Kur'an-ı Kerim, her biri 20 sayfadan oluşan 30 cüze ayrılmıştır."
+    "wisdom": "Kur'an her biri 20 sayfalık 30 cüze ayrılmıştır."
   },
   {
-    "id": "mz_q_403",
+    "id": "mz_islam_gk_403",
     "category": "İslam Genel Kültürü",
-    "question": "Kur'an-ı Kerim'de toplam kaç sure bulunmaktadır?",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'de toplam kaç sure bulunmaktadır?",
     "options": [
-      "114",
-      "110",
+      "6666",
       "120",
-      "6666"
+      "110",
+      "114"
     ],
     "correct": "114",
-    "wisdom": "Kur'an-ı Kerim Fatiha suresiyle başlar, Nas suresiyle biter ve 114 sureden oluşur."
+    "wisdom": "Kur'an 114 sure barındırır."
   },
   {
-    "id": "mz_q_404",
+    "id": "mz_islam_gk_404",
     "category": "İslam Genel Kültürü",
-    "question": "Kur'an-ı Kerim'in ilk inen ayetleri hangi surededir?",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'in ilk inen ayetleri hangi surededir?",
     "options": [
-      "Alak Suresi",
-      "Fatiha Suresi",
       "Müddessir Suresi",
-      "Kalem Suresi"
+      "Kalem Suresi",
+      "Fatiha Suresi",
+      "Alak Suresi"
     ],
     "correct": "Alak Suresi",
-    "wisdom": "İlk vahiy Nur Dağı'ndaki Hira Mağarası'nda Alak Suresi'nin ilk 5 ayeti ('Oku!' emri) olarak inmiştir."
+    "wisdom": "İlk vahiy Nur Dağı'ndaki Hira Mağarası'nda 'Oku!' emriyle Alak Suresi olarak inmiştir."
   },
   {
-    "id": "mz_q_405",
+    "id": "mz_islam_gk_405",
     "category": "İslam Genel Kültürü",
-    "question": "Allah'ın en güzel isimlerine genel olarak ne ad verilir?",
+    "question": "İslam genel kültürü bilgisine göre, Allah'ın en güzel isimlerine ne ad verilir?",
     "options": [
-      "Esma-i Hüsna",
       "Esma-i Nebi",
+      "Esma-i Hüsna",
       "Sıfat-ı Subutiyye",
       "Kelime-i Tevhid"
     ],
     "correct": "Esma-i Hüsna",
-    "wisdom": "Esma-i Hüsna, Allah'ın güzel ve yüce 99 ismini ifade eder."
+    "wisdom": "Esma-i Hüsna Allah'ın 99 ismini ifade eder."
   },
   {
-    "id": "mz_q_406",
+    "id": "mz_islam_gk_406",
     "category": "İslam Genel Kültürü",
-    "question": "Hadis ilminde en güvenilir altı hadis kitabına ne ad verilir?",
+    "question": "İslam genel kültürü bilgisine göre, En güvenilir altı hadis kitabına ne ad verilir?",
     "options": [
       "Kütüb-i Sitte",
-      "Kütüb-i Erbaa",
+      "Sahih-i Buhari",
       "Riyazü's-Salihin",
-      "Sahih-i Buhari"
+      "Kütüb-i Erbaa"
     ],
     "correct": "Kütüb-i Sitte",
-    "wisdom": "Kütüb-i Sitte, Buhari ve Müslim başta olmak üzere en muteber 6 hadis derlemesidir."
+    "wisdom": "Buhari ve Müslim gibi en sahih 6 hadis derlemesidir."
   },
   {
-    "id": "mz_q_407",
+    "id": "mz_islam_gk_407",
     "category": "İslam Genel Kültürü",
-    "question": "Müslümanların ilk kıblesi olan ve Kudüs'te bulunan kutsal mescid hangisidir?",
+    "question": "İslam genel kültürü bilgisine göre, Müslümanların ilk kıblesi olan ve Kudüs'te bulunan mescid hangisidir?",
     "options": [
-      "Mescid-i Aksa",
-      "Mescid-i Haram",
       "Mescid-i Nebevi",
+      "Mescid-i Haram",
+      "Mescid-i Aksa",
       "Kuba Mescidi"
     ],
     "correct": "Mescid-i Aksa",
-    "wisdom": "Mescid-i Aksa, Peygamberimizin İsra ve Mirac hadisesini yaşadığı mübarek mekandır."
+    "wisdom": "Mescid-i Aksa İsra ve Mirac olaylarının yaşandığı yerdir."
   },
   {
-    "id": "mz_q_408",
+    "id": "mz_islam_gk_408",
     "category": "İslam Genel Kültürü",
-    "question": "İslam tarihinde inşa edilen ilk mescit aşağıdakilerden hangisidir?",
+    "question": "İslam genel kültürü bilgisine göre, İslam tarihinde inşa edilen ilk mescit hangisidir?",
     "options": [
       "Kuba Mescidi",
+      "Mescid-i Aksa",
       "Mescid-i Nebevi",
-      "Mescid-i Haram",
-      "Mescid-i Aksa"
+      "Mescid-i Haram"
     ],
     "correct": "Kuba Mescidi",
-    "wisdom": "Kuba Mescidi, hicret esnasında Medine yakınlarındaki Kuba köyünde bizzat Peygamberimiz tarafından yapılmıştır."
+    "wisdom": "Kuba mescidi hicret esnasında Peygamberimiz tarafından yapılmıştır."
   },
   {
-    "id": "mz_q_409",
+    "id": "mz_islam_gk_409",
     "category": "İslam Genel Kültürü",
-    "question": "Hicri takvimin başlangıcı olarak kabul edilen tarihi olay hangisidir?",
+    "question": "İslam genel kültürü bilgisine göre, Hicri takvimin başlangıcı olarak kabul edilen tarihi olay hangisidir?",
     "options": [
       "Hicret (622)",
-      "Mekke'nin Fethi",
+      "İlk Vahiy",
       "Peygamberimizin Doğumu",
-      "İlk Vahiy"
+      "Mekke'nin Fethi"
     ],
     "correct": "Hicret (622)",
-    "wisdom": "Hicri takvim, Müslümanların Mekke'den Medine'ye hicretini (622) başlangıç kabul eder."
+    "wisdom": "622 yılındaki Hicret, takvimin başlangıcıdır."
   },
   {
-    "id": "mz_q_410",
+    "id": "mz_islam_gk_410",
     "category": "İslam Genel Kültürü",
-    "question": "Şaban ayının 15. gecesi olan, günahların bağışlanması ve temize çıkma anlamına gelen kandil gecesi hangisidir?",
+    "question": "İslam genel kültürü bilgisine göre, Şaban ayının 15. gecesi olan af ve mağfiret gecesi hangisidir?",
     "options": [
       "Berat Kandili",
-      "Kadir Gecesi",
+      "Regaip Kandili",
       "Mevlid Kandili",
-      "Regaip Kandili"
+      "Kadir Gecesi"
     ],
     "correct": "Berat Kandili",
-    "wisdom": "Berat, kurtuluş ve af gecesidir."
+    "wisdom": "Berat, kurtuluş ve günahlardan arınma gecesidir."
   },
   {
-    "id": "mz_q_411",
+    "id": "mz_islam_gk_411",
     "category": "İslam Genel Kültürü",
-    "question": "Kur'an-ı Kerim'in indirilmeye başlandığı, bin aydan daha hayırlı olan mübarek gece hangisidir?",
+    "question": "İslam genel kültürü bilgisine göre, Bin aydan daha hayırlı olduğu Kur'an'da bildirilen gece hangisidir?",
     "options": [
-      "Kadir Gecesi",
       "Miraç Gecesi",
       "Regaip Gecesi",
+      "Kadir Gecesi",
       "Mevlid Gecesi"
     ],
     "correct": "Kadir Gecesi",
-    "wisdom": "Kadir Gecesi, Kur'an'da bin aydan daha hayırlı olduğu müjdelenen tek gecedir."
+    "wisdom": "Kadir gecesi Kur'an'ın indirilmeye başlandığı gecedir."
   },
   {
-    "id": "mz_q_412",
+    "id": "mz_islam_gk_412",
     "category": "İslam Genel Kültürü",
-    "question": "Peygamberlerin iddialarını doğrulamak için Allah'ın izniyle gösterdikleri olağanüstü olaylara ne ad verilir?",
+    "question": "İslam genel kültürü bilgisine göre, Peygamberlerin iddialarını doğrulamak için Allah'ın izniyle gösterdikleri olağanüstü olaylara ne denir?",
     "options": [
-      "Mucize",
-      "Keramet",
       "İstidrac",
-      "İrhas"
+      "İrhas",
+      "Keramet",
+      "Mucize"
     ],
     "correct": "Mucize",
-    "wisdom": "Mucize sadece peygamberlere has, akılları aciz bırakan olağanüstü olaylardır."
+    "wisdom": "Mucizeler insanları aciz bırakan ilahi yardımlardır."
   },
   {
-    "id": "mz_q_413",
+    "id": "mz_islam_gk_413",
     "category": "İslam Genel Kültürü",
-    "question": "Peygamber olmayan salih veli kulların gösterdiği olağanüstü hallere ne ad verilir?",
+    "question": "İslam genel kültürü bilgisine göre, Peygamber olmayan salih kulların gösterdiği olağanüstü hallere ne denir?",
     "options": [
+      "Sihir",
       "Keramet",
       "Mucize",
-      "Sihir",
       "İstidrac"
     ],
     "correct": "Keramet",
-    "wisdom": "Keramet, Allah'ın salih kullarına bir ikramıdır."
+    "wisdom": "Keramet, salih kullara ikram edilen olağanüstülüklerdir."
   },
   {
-    "id": "mz_q_414",
+    "id": "mz_islam_gk_414",
     "category": "İslam Genel Kültürü",
-    "question": "Kur'an-ı Kerim ayetlerini açıklayan, yorumlayan ve derinlemesine inceleyen bilim dalına ne ad verilir?",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an ayetlerini açıklayan ve yorumlayan bilim dalı hangisidir?",
     "options": [
       "Tefsir",
       "Hadis",
@@ -5388,1273 +5388,1273 @@ export const MAZE_QUESTIONS_DB: MazeQuestion[] = [
       "Kelam"
     ],
     "correct": "Tefsir",
-    "wisdom": "Tefsir ilmiyle uğraşan alimlere 'Müfessir' denir."
+    "wisdom": "Tefsir alimlerine Müfessir denir."
   },
   {
-    "id": "mz_q_415",
+    "id": "mz_islam_gk_415",
     "category": "İslam Genel Kültürü",
-    "question": "Peygamber Efendimiz'in söz, davranış ve onaylarına (takrirlerine) ne ad verilir?",
+    "question": "İslam genel kültürü bilgisine göre, Peygamber Efendimiz'in söz, davranış ve onaylarına ne ad verilir?",
     "options": [
-      "Hadis / Sünnet",
       "Fıkıh",
-      "Ayet",
-      "İcma"
+      "İcma",
+      "Hadis / Sünnet",
+      "Ayet"
     ],
     "correct": "Hadis / Sünnet",
-    "wisdom": "Hadisler, Kur'an-ı Kerim'den sonra İslam dininin ikinci temel kaynağıdır."
+    "wisdom": "Hadisler dinimizin ikinci temel kaynağıdır."
   },
   {
-    "id": "mz_q_416",
+    "id": "mz_islam_gk_416",
     "category": "İslam Genel Kültürü",
-    "question": "İslam hukukunu, ibadetlerin yapılış şekillerini ve günlük yaşam kurallarını inceleyen bilim dalı hangisidir?",
+    "question": "İslam genel kültürü bilgisine göre, İslam hukukunu ve ibadetlerin yapılış şekillerini inceleyen ilim dalı hangisidir?",
     "options": [
       "Fıkıh",
-      "Kelam",
+      "Tefsir",
       "Tasavvuf",
-      "Tefsir"
+      "Kelam"
     ],
     "correct": "Fıkıh",
-    "wisdom": "Fıkıh alimlerine 'Fakih' denir ve pratik dini hükümleri incelerler."
+    "wisdom": "Fıkıh pratik hayat kurallarını inceler."
   },
   {
-    "id": "mz_q_417",
+    "id": "mz_islam_gk_417",
     "category": "İslam Genel Kültürü",
-    "question": "İslam inanç esaslarını akli ve nakli delillerle savunup açıklayan ilim dalı hangisidir?",
+    "question": "İslam genel kültürü bilgisine göre, İslam inanç esaslarını akli ve nakli delillerle savunan ilim dalı hangisidir?",
     "options": [
-      "Kelam",
-      "Fıkıh",
       "Hadis",
-      "Siyer"
+      "Siyer",
+      "Kelam",
+      "Fıkıh"
     ],
     "correct": "Kelam",
-    "wisdom": "Kelam ilmi, inanca yönelik şüpheleri gidermeyi amaçlar."
+    "wisdom": "Kelam inanca yönelik şüpheleri gidermeyi amaçlar."
   },
   {
-    "id": "mz_q_418",
+    "id": "mz_islam_gk_418",
     "category": "İslam Genel Kültürü",
-    "question": "Peygamber Efendimiz Hz. Muhammed (s.a.v.)'in hayatını ve savaşlarını konu edinen bilim dalına ne denir?",
+    "question": "İslam genel kültürü bilgisine göre, Peygamber Efendimiz'in hayatını konu edinen bilim dalı hangisidir?",
     "options": [
+      "Tasavvuf",
       "Siyer",
       "Tefsir",
-      "Kelam",
-      "Tasavvuf"
+      "Kelam"
     ],
     "correct": "Siyer",
-    "wisdom": "Siyer kitapları Peygamberimizin doğumu, çocukluğu, gençliği ve peygamberlik dönemini anlatır."
+    "wisdom": "Siyer, peygamberimizin hayatını kronolojik olarak anlatır."
   },
   {
-    "id": "mz_q_419",
+    "id": "mz_islam_gk_419",
     "category": "İslam Genel Kültürü",
-    "question": "Kur'an-ı Kerim'de yaygın olarak kabul edilen toplam ayet sayısı kaçtır?",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'de yer alan numaralandırılmış ayetlerin toplamı kaçtır?",
     "options": [
-      "6236 veya 6666",
+      "6666",
       "6000",
-      "7000",
-      "5555"
+      "6236",
+      "7000"
     ],
-    "correct": "6236 veya 6666",
-    "wisdom": "Surelerdeki numaralandırılmış ayetlerin toplamı 6236'dır, besmelelerle ve bazı sayımlarla 6666 olarak da ifade edilir."
+    "correct": "6236",
+    "wisdom": "Resmi numaralandırmada 6236 ayet bulunmaktadır."
   },
   {
-    "id": "mz_q_420",
+    "id": "mz_islam_gk_420",
     "category": "İslam Genel Kültürü",
-    "question": "Kur'an-ı Kerim'in tamamını ezbere bilen kişiye ne ad verilir?",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'in tamamını ezbere bilen kişiye ne ad verilir?",
     "options": [
-      "Hafız",
       "Müezzin",
+      "Kari",
       "İmam",
-      "Kari"
+      "Hafız"
     ],
     "correct": "Hafız",
-    "wisdom": "Hafızlık, Kur'an'ın lafzını zihinde koruyarak günümüze ulaştıran şerefli bir makamdır."
+    "wisdom": "Hafızlık Kur'an'ın sözlü olarak korunmasını sağlar."
   },
   {
-    "id": "mz_q_421",
+    "id": "mz_islam_gk_421",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 21)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'in en uzun suresi hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Yasin Suresi",
+      "Al-i İmran Suresi",
+      "Bakara Suresi",
+      "Fatiha Suresi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 21)"
+    "correct": "Bakara Suresi",
+    "wisdom": "Bakara Suresi 286 ayettir."
   },
   {
-    "id": "mz_q_422",
+    "id": "mz_islam_gk_422",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 22)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim toplam kaç cüzden oluşmaktadır?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "30",
+      "114",
+      "40",
+      "20"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 22)"
+    "correct": "30",
+    "wisdom": "Kur'an her biri 20 sayfalık 30 cüze ayrılmıştır."
   },
   {
-    "id": "mz_q_423",
+    "id": "mz_islam_gk_423",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 23)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'de toplam kaç sure bulunmaktadır?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "6666",
+      "120",
+      "110",
+      "114"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 23)"
+    "correct": "114",
+    "wisdom": "Kur'an 114 sure barındırır."
   },
   {
-    "id": "mz_q_424",
+    "id": "mz_islam_gk_424",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 24)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'in ilk inen ayetleri hangi surededir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Müddessir Suresi",
+      "Kalem Suresi",
+      "Fatiha Suresi",
+      "Alak Suresi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 24)"
+    "correct": "Alak Suresi",
+    "wisdom": "İlk vahiy Nur Dağı'ndaki Hira Mağarası'nda 'Oku!' emriyle Alak Suresi olarak inmiştir."
   },
   {
-    "id": "mz_q_425",
+    "id": "mz_islam_gk_425",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 25)",
+    "question": "İslam genel kültürü bilgisine göre, Allah'ın en güzel isimlerine ne ad verilir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Esma-i Nebi",
+      "Esma-i Hüsna",
+      "Sıfat-ı Subutiyye",
+      "Kelime-i Tevhid"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 25)"
+    "correct": "Esma-i Hüsna",
+    "wisdom": "Esma-i Hüsna Allah'ın 99 ismini ifade eder."
   },
   {
-    "id": "mz_q_426",
+    "id": "mz_islam_gk_426",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 26)",
+    "question": "İslam genel kültürü bilgisine göre, En güvenilir altı hadis kitabına ne ad verilir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Kütüb-i Sitte",
+      "Sahih-i Buhari",
+      "Riyazü's-Salihin",
+      "Kütüb-i Erbaa"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 26)"
+    "correct": "Kütüb-i Sitte",
+    "wisdom": "Buhari ve Müslim gibi en sahih 6 hadis derlemesidir."
   },
   {
-    "id": "mz_q_427",
+    "id": "mz_islam_gk_427",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 27)",
+    "question": "İslam genel kültürü bilgisine göre, Müslümanların ilk kıblesi olan ve Kudüs'te bulunan mescid hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Mescid-i Nebevi",
+      "Mescid-i Haram",
+      "Mescid-i Aksa",
+      "Kuba Mescidi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 27)"
+    "correct": "Mescid-i Aksa",
+    "wisdom": "Mescid-i Aksa İsra ve Mirac olaylarının yaşandığı yerdir."
   },
   {
-    "id": "mz_q_428",
+    "id": "mz_islam_gk_428",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 28)",
+    "question": "İslam genel kültürü bilgisine göre, İslam tarihinde inşa edilen ilk mescit hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Kuba Mescidi",
+      "Mescid-i Aksa",
+      "Mescid-i Nebevi",
+      "Mescid-i Haram"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 28)"
+    "correct": "Kuba Mescidi",
+    "wisdom": "Kuba mescidi hicret esnasında Peygamberimiz tarafından yapılmıştır."
   },
   {
-    "id": "mz_q_429",
+    "id": "mz_islam_gk_429",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 29)",
+    "question": "İslam genel kültürü bilgisine göre, Hicri takvimin başlangıcı olarak kabul edilen tarihi olay hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Hicret (622)",
+      "İlk Vahiy",
+      "Peygamberimizin Doğumu",
+      "Mekke'nin Fethi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 29)"
+    "correct": "Hicret (622)",
+    "wisdom": "622 yılındaki Hicret, takvimin başlangıcıdır."
   },
   {
-    "id": "mz_q_430",
+    "id": "mz_islam_gk_430",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 30)",
+    "question": "İslam genel kültürü bilgisine göre, Şaban ayının 15. gecesi olan af ve mağfiret gecesi hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Berat Kandili",
+      "Regaip Kandili",
+      "Mevlid Kandili",
+      "Kadir Gecesi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 30)"
+    "correct": "Berat Kandili",
+    "wisdom": "Berat, kurtuluş ve günahlardan arınma gecesidir."
   },
   {
-    "id": "mz_q_431",
+    "id": "mz_islam_gk_431",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 31)",
+    "question": "İslam genel kültürü bilgisine göre, Bin aydan daha hayırlı olduğu Kur'an'da bildirilen gece hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Miraç Gecesi",
+      "Regaip Gecesi",
+      "Kadir Gecesi",
+      "Mevlid Gecesi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 31)"
+    "correct": "Kadir Gecesi",
+    "wisdom": "Kadir gecesi Kur'an'ın indirilmeye başlandığı gecedir."
   },
   {
-    "id": "mz_q_432",
+    "id": "mz_islam_gk_432",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 32)",
+    "question": "İslam genel kültürü bilgisine göre, Peygamberlerin iddialarını doğrulamak için Allah'ın izniyle gösterdikleri olağanüstü olaylara ne denir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "İstidrac",
+      "İrhas",
+      "Keramet",
+      "Mucize"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 32)"
+    "correct": "Mucize",
+    "wisdom": "Mucizeler insanları aciz bırakan ilahi yardımlardır."
   },
   {
-    "id": "mz_q_433",
+    "id": "mz_islam_gk_433",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 33)",
+    "question": "İslam genel kültürü bilgisine göre, Peygamber olmayan salih kulların gösterdiği olağanüstü hallere ne denir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Sihir",
+      "Keramet",
+      "Mucize",
+      "İstidrac"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 33)"
+    "correct": "Keramet",
+    "wisdom": "Keramet, salih kullara ikram edilen olağanüstülüklerdir."
   },
   {
-    "id": "mz_q_434",
+    "id": "mz_islam_gk_434",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 34)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an ayetlerini açıklayan ve yorumlayan bilim dalı hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Tefsir",
+      "Hadis",
+      "Fıkıh",
+      "Kelam"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 34)"
+    "correct": "Tefsir",
+    "wisdom": "Tefsir alimlerine Müfessir denir."
   },
   {
-    "id": "mz_q_435",
+    "id": "mz_islam_gk_435",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 35)",
+    "question": "İslam genel kültürü bilgisine göre, Peygamber Efendimiz'in söz, davranış ve onaylarına ne ad verilir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Fıkıh",
+      "İcma",
+      "Hadis / Sünnet",
+      "Ayet"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 35)"
+    "correct": "Hadis / Sünnet",
+    "wisdom": "Hadisler dinimizin ikinci temel kaynağıdır."
   },
   {
-    "id": "mz_q_436",
+    "id": "mz_islam_gk_436",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 36)",
+    "question": "İslam genel kültürü bilgisine göre, İslam hukukunu ve ibadetlerin yapılış şekillerini inceleyen ilim dalı hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Fıkıh",
+      "Tefsir",
+      "Tasavvuf",
+      "Kelam"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 36)"
+    "correct": "Fıkıh",
+    "wisdom": "Fıkıh pratik hayat kurallarını inceler."
   },
   {
-    "id": "mz_q_437",
+    "id": "mz_islam_gk_437",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 37)",
+    "question": "İslam genel kültürü bilgisine göre, İslam inanç esaslarını akli ve nakli delillerle savunan ilim dalı hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Hadis",
+      "Siyer",
+      "Kelam",
+      "Fıkıh"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 37)"
+    "correct": "Kelam",
+    "wisdom": "Kelam inanca yönelik şüpheleri gidermeyi amaçlar."
   },
   {
-    "id": "mz_q_438",
+    "id": "mz_islam_gk_438",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 38)",
+    "question": "İslam genel kültürü bilgisine göre, Peygamber Efendimiz'in hayatını konu edinen bilim dalı hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Tasavvuf",
+      "Siyer",
+      "Tefsir",
+      "Kelam"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 38)"
+    "correct": "Siyer",
+    "wisdom": "Siyer, peygamberimizin hayatını kronolojik olarak anlatır."
   },
   {
-    "id": "mz_q_439",
+    "id": "mz_islam_gk_439",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 39)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'de yer alan numaralandırılmış ayetlerin toplamı kaçtır?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "6666",
+      "6000",
+      "6236",
+      "7000"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 39)"
+    "correct": "6236",
+    "wisdom": "Resmi numaralandırmada 6236 ayet bulunmaktadır."
   },
   {
-    "id": "mz_q_440",
+    "id": "mz_islam_gk_440",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 40)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'in tamamını ezbere bilen kişiye ne ad verilir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Müezzin",
+      "Kari",
+      "İmam",
+      "Hafız"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 40)"
+    "correct": "Hafız",
+    "wisdom": "Hafızlık Kur'an'ın sözlü olarak korunmasını sağlar."
   },
   {
-    "id": "mz_q_441",
+    "id": "mz_islam_gk_441",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 41)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'in en uzun suresi hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Yasin Suresi",
+      "Al-i İmran Suresi",
+      "Bakara Suresi",
+      "Fatiha Suresi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 41)"
+    "correct": "Bakara Suresi",
+    "wisdom": "Bakara Suresi 286 ayettir."
   },
   {
-    "id": "mz_q_442",
+    "id": "mz_islam_gk_442",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 42)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim toplam kaç cüzden oluşmaktadır?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "30",
+      "114",
+      "40",
+      "20"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 42)"
+    "correct": "30",
+    "wisdom": "Kur'an her biri 20 sayfalık 30 cüze ayrılmıştır."
   },
   {
-    "id": "mz_q_443",
+    "id": "mz_islam_gk_443",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 43)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'de toplam kaç sure bulunmaktadır?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "6666",
+      "120",
+      "110",
+      "114"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 43)"
+    "correct": "114",
+    "wisdom": "Kur'an 114 sure barındırır."
   },
   {
-    "id": "mz_q_444",
+    "id": "mz_islam_gk_444",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 44)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'in ilk inen ayetleri hangi surededir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Müddessir Suresi",
+      "Kalem Suresi",
+      "Fatiha Suresi",
+      "Alak Suresi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 44)"
+    "correct": "Alak Suresi",
+    "wisdom": "İlk vahiy Nur Dağı'ndaki Hira Mağarası'nda 'Oku!' emriyle Alak Suresi olarak inmiştir."
   },
   {
-    "id": "mz_q_445",
+    "id": "mz_islam_gk_445",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 45)",
+    "question": "İslam genel kültürü bilgisine göre, Allah'ın en güzel isimlerine ne ad verilir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Esma-i Nebi",
+      "Esma-i Hüsna",
+      "Sıfat-ı Subutiyye",
+      "Kelime-i Tevhid"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 45)"
+    "correct": "Esma-i Hüsna",
+    "wisdom": "Esma-i Hüsna Allah'ın 99 ismini ifade eder."
   },
   {
-    "id": "mz_q_446",
+    "id": "mz_islam_gk_446",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 46)",
+    "question": "İslam genel kültürü bilgisine göre, En güvenilir altı hadis kitabına ne ad verilir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Kütüb-i Sitte",
+      "Sahih-i Buhari",
+      "Riyazü's-Salihin",
+      "Kütüb-i Erbaa"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 46)"
+    "correct": "Kütüb-i Sitte",
+    "wisdom": "Buhari ve Müslim gibi en sahih 6 hadis derlemesidir."
   },
   {
-    "id": "mz_q_447",
+    "id": "mz_islam_gk_447",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 47)",
+    "question": "İslam genel kültürü bilgisine göre, Müslümanların ilk kıblesi olan ve Kudüs'te bulunan mescid hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Mescid-i Nebevi",
+      "Mescid-i Haram",
+      "Mescid-i Aksa",
+      "Kuba Mescidi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 47)"
+    "correct": "Mescid-i Aksa",
+    "wisdom": "Mescid-i Aksa İsra ve Mirac olaylarının yaşandığı yerdir."
   },
   {
-    "id": "mz_q_448",
+    "id": "mz_islam_gk_448",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 48)",
+    "question": "İslam genel kültürü bilgisine göre, İslam tarihinde inşa edilen ilk mescit hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Kuba Mescidi",
+      "Mescid-i Aksa",
+      "Mescid-i Nebevi",
+      "Mescid-i Haram"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 48)"
+    "correct": "Kuba Mescidi",
+    "wisdom": "Kuba mescidi hicret esnasında Peygamberimiz tarafından yapılmıştır."
   },
   {
-    "id": "mz_q_449",
+    "id": "mz_islam_gk_449",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 49)",
+    "question": "İslam genel kültürü bilgisine göre, Hicri takvimin başlangıcı olarak kabul edilen tarihi olay hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Hicret (622)",
+      "İlk Vahiy",
+      "Peygamberimizin Doğumu",
+      "Mekke'nin Fethi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 49)"
+    "correct": "Hicret (622)",
+    "wisdom": "622 yılındaki Hicret, takvimin başlangıcıdır."
   },
   {
-    "id": "mz_q_450",
+    "id": "mz_islam_gk_450",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 50)",
+    "question": "İslam genel kültürü bilgisine göre, Şaban ayının 15. gecesi olan af ve mağfiret gecesi hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Berat Kandili",
+      "Regaip Kandili",
+      "Mevlid Kandili",
+      "Kadir Gecesi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 50)"
+    "correct": "Berat Kandili",
+    "wisdom": "Berat, kurtuluş ve günahlardan arınma gecesidir."
   },
   {
-    "id": "mz_q_451",
+    "id": "mz_islam_gk_451",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 51)",
+    "question": "İslam genel kültürü bilgisine göre, Bin aydan daha hayırlı olduğu Kur'an'da bildirilen gece hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Miraç Gecesi",
+      "Regaip Gecesi",
+      "Kadir Gecesi",
+      "Mevlid Gecesi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 51)"
+    "correct": "Kadir Gecesi",
+    "wisdom": "Kadir gecesi Kur'an'ın indirilmeye başlandığı gecedir."
   },
   {
-    "id": "mz_q_452",
+    "id": "mz_islam_gk_452",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 52)",
+    "question": "İslam genel kültürü bilgisine göre, Peygamberlerin iddialarını doğrulamak için Allah'ın izniyle gösterdikleri olağanüstü olaylara ne denir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "İstidrac",
+      "İrhas",
+      "Keramet",
+      "Mucize"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 52)"
+    "correct": "Mucize",
+    "wisdom": "Mucizeler insanları aciz bırakan ilahi yardımlardır."
   },
   {
-    "id": "mz_q_453",
+    "id": "mz_islam_gk_453",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 53)",
+    "question": "İslam genel kültürü bilgisine göre, Peygamber olmayan salih kulların gösterdiği olağanüstü hallere ne denir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Sihir",
+      "Keramet",
+      "Mucize",
+      "İstidrac"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 53)"
+    "correct": "Keramet",
+    "wisdom": "Keramet, salih kullara ikram edilen olağanüstülüklerdir."
   },
   {
-    "id": "mz_q_454",
+    "id": "mz_islam_gk_454",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 54)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an ayetlerini açıklayan ve yorumlayan bilim dalı hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Tefsir",
+      "Hadis",
+      "Fıkıh",
+      "Kelam"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 54)"
+    "correct": "Tefsir",
+    "wisdom": "Tefsir alimlerine Müfessir denir."
   },
   {
-    "id": "mz_q_455",
+    "id": "mz_islam_gk_455",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 55)",
+    "question": "İslam genel kültürü bilgisine göre, Peygamber Efendimiz'in söz, davranış ve onaylarına ne ad verilir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Fıkıh",
+      "İcma",
+      "Hadis / Sünnet",
+      "Ayet"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 55)"
+    "correct": "Hadis / Sünnet",
+    "wisdom": "Hadisler dinimizin ikinci temel kaynağıdır."
   },
   {
-    "id": "mz_q_456",
+    "id": "mz_islam_gk_456",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 56)",
+    "question": "İslam genel kültürü bilgisine göre, İslam hukukunu ve ibadetlerin yapılış şekillerini inceleyen ilim dalı hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Fıkıh",
+      "Tefsir",
+      "Tasavvuf",
+      "Kelam"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 56)"
+    "correct": "Fıkıh",
+    "wisdom": "Fıkıh pratik hayat kurallarını inceler."
   },
   {
-    "id": "mz_q_457",
+    "id": "mz_islam_gk_457",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 57)",
+    "question": "İslam genel kültürü bilgisine göre, İslam inanç esaslarını akli ve nakli delillerle savunan ilim dalı hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Hadis",
+      "Siyer",
+      "Kelam",
+      "Fıkıh"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 57)"
+    "correct": "Kelam",
+    "wisdom": "Kelam inanca yönelik şüpheleri gidermeyi amaçlar."
   },
   {
-    "id": "mz_q_458",
+    "id": "mz_islam_gk_458",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 58)",
+    "question": "İslam genel kültürü bilgisine göre, Peygamber Efendimiz'in hayatını konu edinen bilim dalı hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Tasavvuf",
+      "Siyer",
+      "Tefsir",
+      "Kelam"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 58)"
+    "correct": "Siyer",
+    "wisdom": "Siyer, peygamberimizin hayatını kronolojik olarak anlatır."
   },
   {
-    "id": "mz_q_459",
+    "id": "mz_islam_gk_459",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 59)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'de yer alan numaralandırılmış ayetlerin toplamı kaçtır?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "6666",
+      "6000",
+      "6236",
+      "7000"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 59)"
+    "correct": "6236",
+    "wisdom": "Resmi numaralandırmada 6236 ayet bulunmaktadır."
   },
   {
-    "id": "mz_q_460",
+    "id": "mz_islam_gk_460",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 60)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'in tamamını ezbere bilen kişiye ne ad verilir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Müezzin",
+      "Kari",
+      "İmam",
+      "Hafız"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 60)"
+    "correct": "Hafız",
+    "wisdom": "Hafızlık Kur'an'ın sözlü olarak korunmasını sağlar."
   },
   {
-    "id": "mz_q_461",
+    "id": "mz_islam_gk_461",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 61)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'in en uzun suresi hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Yasin Suresi",
+      "Al-i İmran Suresi",
+      "Bakara Suresi",
+      "Fatiha Suresi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 61)"
+    "correct": "Bakara Suresi",
+    "wisdom": "Bakara Suresi 286 ayettir."
   },
   {
-    "id": "mz_q_462",
+    "id": "mz_islam_gk_462",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 62)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim toplam kaç cüzden oluşmaktadır?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "30",
+      "114",
+      "40",
+      "20"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 62)"
+    "correct": "30",
+    "wisdom": "Kur'an her biri 20 sayfalık 30 cüze ayrılmıştır."
   },
   {
-    "id": "mz_q_463",
+    "id": "mz_islam_gk_463",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 63)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'de toplam kaç sure bulunmaktadır?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "6666",
+      "120",
+      "110",
+      "114"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 63)"
+    "correct": "114",
+    "wisdom": "Kur'an 114 sure barındırır."
   },
   {
-    "id": "mz_q_464",
+    "id": "mz_islam_gk_464",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 64)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'in ilk inen ayetleri hangi surededir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Müddessir Suresi",
+      "Kalem Suresi",
+      "Fatiha Suresi",
+      "Alak Suresi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 64)"
+    "correct": "Alak Suresi",
+    "wisdom": "İlk vahiy Nur Dağı'ndaki Hira Mağarası'nda 'Oku!' emriyle Alak Suresi olarak inmiştir."
   },
   {
-    "id": "mz_q_465",
+    "id": "mz_islam_gk_465",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 65)",
+    "question": "İslam genel kültürü bilgisine göre, Allah'ın en güzel isimlerine ne ad verilir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Esma-i Nebi",
+      "Esma-i Hüsna",
+      "Sıfat-ı Subutiyye",
+      "Kelime-i Tevhid"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 65)"
+    "correct": "Esma-i Hüsna",
+    "wisdom": "Esma-i Hüsna Allah'ın 99 ismini ifade eder."
   },
   {
-    "id": "mz_q_466",
+    "id": "mz_islam_gk_466",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 66)",
+    "question": "İslam genel kültürü bilgisine göre, En güvenilir altı hadis kitabına ne ad verilir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Kütüb-i Sitte",
+      "Sahih-i Buhari",
+      "Riyazü's-Salihin",
+      "Kütüb-i Erbaa"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 66)"
+    "correct": "Kütüb-i Sitte",
+    "wisdom": "Buhari ve Müslim gibi en sahih 6 hadis derlemesidir."
   },
   {
-    "id": "mz_q_467",
+    "id": "mz_islam_gk_467",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 67)",
+    "question": "İslam genel kültürü bilgisine göre, Müslümanların ilk kıblesi olan ve Kudüs'te bulunan mescid hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Mescid-i Nebevi",
+      "Mescid-i Haram",
+      "Mescid-i Aksa",
+      "Kuba Mescidi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 67)"
+    "correct": "Mescid-i Aksa",
+    "wisdom": "Mescid-i Aksa İsra ve Mirac olaylarının yaşandığı yerdir."
   },
   {
-    "id": "mz_q_468",
+    "id": "mz_islam_gk_468",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 68)",
+    "question": "İslam genel kültürü bilgisine göre, İslam tarihinde inşa edilen ilk mescit hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Kuba Mescidi",
+      "Mescid-i Aksa",
+      "Mescid-i Nebevi",
+      "Mescid-i Haram"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 68)"
+    "correct": "Kuba Mescidi",
+    "wisdom": "Kuba mescidi hicret esnasında Peygamberimiz tarafından yapılmıştır."
   },
   {
-    "id": "mz_q_469",
+    "id": "mz_islam_gk_469",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 69)",
+    "question": "İslam genel kültürü bilgisine göre, Hicri takvimin başlangıcı olarak kabul edilen tarihi olay hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Hicret (622)",
+      "İlk Vahiy",
+      "Peygamberimizin Doğumu",
+      "Mekke'nin Fethi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 69)"
+    "correct": "Hicret (622)",
+    "wisdom": "622 yılındaki Hicret, takvimin başlangıcıdır."
   },
   {
-    "id": "mz_q_470",
+    "id": "mz_islam_gk_470",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 70)",
+    "question": "İslam genel kültürü bilgisine göre, Şaban ayının 15. gecesi olan af ve mağfiret gecesi hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Berat Kandili",
+      "Regaip Kandili",
+      "Mevlid Kandili",
+      "Kadir Gecesi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 70)"
+    "correct": "Berat Kandili",
+    "wisdom": "Berat, kurtuluş ve günahlardan arınma gecesidir."
   },
   {
-    "id": "mz_q_471",
+    "id": "mz_islam_gk_471",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 71)",
+    "question": "İslam genel kültürü bilgisine göre, Bin aydan daha hayırlı olduğu Kur'an'da bildirilen gece hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Miraç Gecesi",
+      "Regaip Gecesi",
+      "Kadir Gecesi",
+      "Mevlid Gecesi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 71)"
+    "correct": "Kadir Gecesi",
+    "wisdom": "Kadir gecesi Kur'an'ın indirilmeye başlandığı gecedir."
   },
   {
-    "id": "mz_q_472",
+    "id": "mz_islam_gk_472",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 72)",
+    "question": "İslam genel kültürü bilgisine göre, Peygamberlerin iddialarını doğrulamak için Allah'ın izniyle gösterdikleri olağanüstü olaylara ne denir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "İstidrac",
+      "İrhas",
+      "Keramet",
+      "Mucize"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 72)"
+    "correct": "Mucize",
+    "wisdom": "Mucizeler insanları aciz bırakan ilahi yardımlardır."
   },
   {
-    "id": "mz_q_473",
+    "id": "mz_islam_gk_473",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 73)",
+    "question": "İslam genel kültürü bilgisine göre, Peygamber olmayan salih kulların gösterdiği olağanüstü hallere ne denir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Sihir",
+      "Keramet",
+      "Mucize",
+      "İstidrac"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 73)"
+    "correct": "Keramet",
+    "wisdom": "Keramet, salih kullara ikram edilen olağanüstülüklerdir."
   },
   {
-    "id": "mz_q_474",
+    "id": "mz_islam_gk_474",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 74)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an ayetlerini açıklayan ve yorumlayan bilim dalı hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Tefsir",
+      "Hadis",
+      "Fıkıh",
+      "Kelam"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 74)"
+    "correct": "Tefsir",
+    "wisdom": "Tefsir alimlerine Müfessir denir."
   },
   {
-    "id": "mz_q_475",
+    "id": "mz_islam_gk_475",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 75)",
+    "question": "İslam genel kültürü bilgisine göre, Peygamber Efendimiz'in söz, davranış ve onaylarına ne ad verilir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Fıkıh",
+      "İcma",
+      "Hadis / Sünnet",
+      "Ayet"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 75)"
+    "correct": "Hadis / Sünnet",
+    "wisdom": "Hadisler dinimizin ikinci temel kaynağıdır."
   },
   {
-    "id": "mz_q_476",
+    "id": "mz_islam_gk_476",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 76)",
+    "question": "İslam genel kültürü bilgisine göre, İslam hukukunu ve ibadetlerin yapılış şekillerini inceleyen ilim dalı hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Fıkıh",
+      "Tefsir",
+      "Tasavvuf",
+      "Kelam"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 76)"
+    "correct": "Fıkıh",
+    "wisdom": "Fıkıh pratik hayat kurallarını inceler."
   },
   {
-    "id": "mz_q_477",
+    "id": "mz_islam_gk_477",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 77)",
+    "question": "İslam genel kültürü bilgisine göre, İslam inanç esaslarını akli ve nakli delillerle savunan ilim dalı hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Hadis",
+      "Siyer",
+      "Kelam",
+      "Fıkıh"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 77)"
+    "correct": "Kelam",
+    "wisdom": "Kelam inanca yönelik şüpheleri gidermeyi amaçlar."
   },
   {
-    "id": "mz_q_478",
+    "id": "mz_islam_gk_478",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 78)",
+    "question": "İslam genel kültürü bilgisine göre, Peygamber Efendimiz'in hayatını konu edinen bilim dalı hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Tasavvuf",
+      "Siyer",
+      "Tefsir",
+      "Kelam"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 78)"
+    "correct": "Siyer",
+    "wisdom": "Siyer, peygamberimizin hayatını kronolojik olarak anlatır."
   },
   {
-    "id": "mz_q_479",
+    "id": "mz_islam_gk_479",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 79)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'de yer alan numaralandırılmış ayetlerin toplamı kaçtır?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "6666",
+      "6000",
+      "6236",
+      "7000"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 79)"
+    "correct": "6236",
+    "wisdom": "Resmi numaralandırmada 6236 ayet bulunmaktadır."
   },
   {
-    "id": "mz_q_480",
+    "id": "mz_islam_gk_480",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 80)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'in tamamını ezbere bilen kişiye ne ad verilir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Müezzin",
+      "Kari",
+      "İmam",
+      "Hafız"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 80)"
+    "correct": "Hafız",
+    "wisdom": "Hafızlık Kur'an'ın sözlü olarak korunmasını sağlar."
   },
   {
-    "id": "mz_q_481",
+    "id": "mz_islam_gk_481",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 81)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'in en uzun suresi hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Yasin Suresi",
+      "Al-i İmran Suresi",
+      "Bakara Suresi",
+      "Fatiha Suresi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 81)"
+    "correct": "Bakara Suresi",
+    "wisdom": "Bakara Suresi 286 ayettir."
   },
   {
-    "id": "mz_q_482",
+    "id": "mz_islam_gk_482",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 82)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim toplam kaç cüzden oluşmaktadır?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "30",
+      "114",
+      "40",
+      "20"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 82)"
+    "correct": "30",
+    "wisdom": "Kur'an her biri 20 sayfalık 30 cüze ayrılmıştır."
   },
   {
-    "id": "mz_q_483",
+    "id": "mz_islam_gk_483",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 83)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'de toplam kaç sure bulunmaktadır?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "6666",
+      "120",
+      "110",
+      "114"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 83)"
+    "correct": "114",
+    "wisdom": "Kur'an 114 sure barındırır."
   },
   {
-    "id": "mz_q_484",
+    "id": "mz_islam_gk_484",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 84)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'in ilk inen ayetleri hangi surededir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Müddessir Suresi",
+      "Kalem Suresi",
+      "Fatiha Suresi",
+      "Alak Suresi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 84)"
+    "correct": "Alak Suresi",
+    "wisdom": "İlk vahiy Nur Dağı'ndaki Hira Mağarası'nda 'Oku!' emriyle Alak Suresi olarak inmiştir."
   },
   {
-    "id": "mz_q_485",
+    "id": "mz_islam_gk_485",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 85)",
+    "question": "İslam genel kültürü bilgisine göre, Allah'ın en güzel isimlerine ne ad verilir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Esma-i Nebi",
+      "Esma-i Hüsna",
+      "Sıfat-ı Subutiyye",
+      "Kelime-i Tevhid"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 85)"
+    "correct": "Esma-i Hüsna",
+    "wisdom": "Esma-i Hüsna Allah'ın 99 ismini ifade eder."
   },
   {
-    "id": "mz_q_486",
+    "id": "mz_islam_gk_486",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 86)",
+    "question": "İslam genel kültürü bilgisine göre, En güvenilir altı hadis kitabına ne ad verilir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Kütüb-i Sitte",
+      "Sahih-i Buhari",
+      "Riyazü's-Salihin",
+      "Kütüb-i Erbaa"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 86)"
+    "correct": "Kütüb-i Sitte",
+    "wisdom": "Buhari ve Müslim gibi en sahih 6 hadis derlemesidir."
   },
   {
-    "id": "mz_q_487",
+    "id": "mz_islam_gk_487",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 87)",
+    "question": "İslam genel kültürü bilgisine göre, Müslümanların ilk kıblesi olan ve Kudüs'te bulunan mescid hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Mescid-i Nebevi",
+      "Mescid-i Haram",
+      "Mescid-i Aksa",
+      "Kuba Mescidi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 87)"
+    "correct": "Mescid-i Aksa",
+    "wisdom": "Mescid-i Aksa İsra ve Mirac olaylarının yaşandığı yerdir."
   },
   {
-    "id": "mz_q_488",
+    "id": "mz_islam_gk_488",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 88)",
+    "question": "İslam genel kültürü bilgisine göre, İslam tarihinde inşa edilen ilk mescit hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Kuba Mescidi",
+      "Mescid-i Aksa",
+      "Mescid-i Nebevi",
+      "Mescid-i Haram"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 88)"
+    "correct": "Kuba Mescidi",
+    "wisdom": "Kuba mescidi hicret esnasında Peygamberimiz tarafından yapılmıştır."
   },
   {
-    "id": "mz_q_489",
+    "id": "mz_islam_gk_489",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 89)",
+    "question": "İslam genel kültürü bilgisine göre, Hicri takvimin başlangıcı olarak kabul edilen tarihi olay hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Hicret (622)",
+      "İlk Vahiy",
+      "Peygamberimizin Doğumu",
+      "Mekke'nin Fethi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 89)"
+    "correct": "Hicret (622)",
+    "wisdom": "622 yılındaki Hicret, takvimin başlangıcıdır."
   },
   {
-    "id": "mz_q_490",
+    "id": "mz_islam_gk_490",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 90)",
+    "question": "İslam genel kültürü bilgisine göre, Şaban ayının 15. gecesi olan af ve mağfiret gecesi hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Berat Kandili",
+      "Regaip Kandili",
+      "Mevlid Kandili",
+      "Kadir Gecesi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 90)"
+    "correct": "Berat Kandili",
+    "wisdom": "Berat, kurtuluş ve günahlardan arınma gecesidir."
   },
   {
-    "id": "mz_q_491",
+    "id": "mz_islam_gk_491",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 91)",
+    "question": "İslam genel kültürü bilgisine göre, Bin aydan daha hayırlı olduğu Kur'an'da bildirilen gece hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Miraç Gecesi",
+      "Regaip Gecesi",
+      "Kadir Gecesi",
+      "Mevlid Gecesi"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 91)"
+    "correct": "Kadir Gecesi",
+    "wisdom": "Kadir gecesi Kur'an'ın indirilmeye başlandığı gecedir."
   },
   {
-    "id": "mz_q_492",
+    "id": "mz_islam_gk_492",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 92)",
+    "question": "İslam genel kültürü bilgisine göre, Peygamberlerin iddialarını doğrulamak için Allah'ın izniyle gösterdikleri olağanüstü olaylara ne denir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "İstidrac",
+      "İrhas",
+      "Keramet",
+      "Mucize"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 92)"
+    "correct": "Mucize",
+    "wisdom": "Mucizeler insanları aciz bırakan ilahi yardımlardır."
   },
   {
-    "id": "mz_q_493",
+    "id": "mz_islam_gk_493",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 93)",
+    "question": "İslam genel kültürü bilgisine göre, Peygamber olmayan salih kulların gösterdiği olağanüstü hallere ne denir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Sihir",
+      "Keramet",
+      "Mucize",
+      "İstidrac"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 93)"
+    "correct": "Keramet",
+    "wisdom": "Keramet, salih kullara ikram edilen olağanüstülüklerdir."
   },
   {
-    "id": "mz_q_494",
+    "id": "mz_islam_gk_494",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 94)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an ayetlerini açıklayan ve yorumlayan bilim dalı hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Tefsir",
+      "Hadis",
+      "Fıkıh",
+      "Kelam"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 94)"
+    "correct": "Tefsir",
+    "wisdom": "Tefsir alimlerine Müfessir denir."
   },
   {
-    "id": "mz_q_495",
+    "id": "mz_islam_gk_495",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 95)",
+    "question": "İslam genel kültürü bilgisine göre, Peygamber Efendimiz'in söz, davranış ve onaylarına ne ad verilir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Fıkıh",
+      "İcma",
+      "Hadis / Sünnet",
+      "Ayet"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 95)"
+    "correct": "Hadis / Sünnet",
+    "wisdom": "Hadisler dinimizin ikinci temel kaynağıdır."
   },
   {
-    "id": "mz_q_496",
+    "id": "mz_islam_gk_496",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 96)",
+    "question": "İslam genel kültürü bilgisine göre, İslam hukukunu ve ibadetlerin yapılış şekillerini inceleyen ilim dalı hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Fıkıh",
+      "Tefsir",
+      "Tasavvuf",
+      "Kelam"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 96)"
+    "correct": "Fıkıh",
+    "wisdom": "Fıkıh pratik hayat kurallarını inceler."
   },
   {
-    "id": "mz_q_497",
+    "id": "mz_islam_gk_497",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 97)",
+    "question": "İslam genel kültürü bilgisine göre, İslam inanç esaslarını akli ve nakli delillerle savunan ilim dalı hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Hadis",
+      "Siyer",
+      "Kelam",
+      "Fıkıh"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 97)"
+    "correct": "Kelam",
+    "wisdom": "Kelam inanca yönelik şüpheleri gidermeyi amaçlar."
   },
   {
-    "id": "mz_q_498",
+    "id": "mz_islam_gk_498",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 98)",
+    "question": "İslam genel kültürü bilgisine göre, Peygamber Efendimiz'in hayatını konu edinen bilim dalı hangisidir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Tasavvuf",
+      "Siyer",
+      "Tefsir",
+      "Kelam"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 98)"
+    "correct": "Siyer",
+    "wisdom": "Siyer, peygamberimizin hayatını kronolojik olarak anlatır."
   },
   {
-    "id": "mz_q_499",
+    "id": "mz_islam_gk_499",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 99)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'de yer alan numaralandırılmış ayetlerin toplamı kaçtır?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "6666",
+      "6000",
+      "6236",
+      "7000"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 99)"
+    "correct": "6236",
+    "wisdom": "Resmi numaralandırmada 6236 ayet bulunmaktadır."
   },
   {
-    "id": "mz_q_500",
+    "id": "mz_islam_gk_500",
     "category": "İslam Genel Kültürü",
-    "question": "Aşağıdaki kavramlardan hangisi İslam dininin temel inanç esaslarından biridir? (Soru 100)",
+    "question": "İslam genel kültürü bilgisine göre, Kur'an-ı Kerim'in tamamını ezbere bilen kişiye ne ad verilir?",
     "options": [
-      "Meleklere iman",
-      "Hacca gitmek",
-      "Zekat vermek",
-      "Namaz kılmak"
+      "Müezzin",
+      "Kari",
+      "İmam",
+      "Hafız"
     ],
-    "correct": "Meleklere iman",
-    "wisdom": "İnanç esasları (imanın şartları) kalbi tasdiki gerektirirken, ibadetler ameli uygulamalardır. (İslam GK Soru 100)"
+    "correct": "Hafız",
+    "wisdom": "Hafızlık Kur'an'ın sözlü olarak korunmasını sağlar."
   },
   {
-    "id": "mz_q_501",
+    "id": "mz_bilim_501",
     "category": "İslami Bilim Adamları",
-    "question": "Matematikte 'Sıfır' (0) rakamını ilk kez kullanan ve cebir biliminin kurucusu olan bilim insanı kimdir?",
+    "question": "Bilim tarihi araştırmalarına göre, Cebir biliminin kurucusu olan ve 'Sıfır' (0) rakamını ilk kez kullanan bilgin kimdir?",
     "options": [
       "El-Harezmi",
       "İbn-i Sina",
-      "Biruni",
-      "Farabi"
+      "Farabi",
+      "Biruni"
     ],
     "correct": "El-Harezmi",
-    "wisdom": "El-Harezmi, cebir kelimesine adını veren 'El-Kitabü'l-Muhtasar fi Hisabi'l-Cebri ve'l-Mukabele' eserinin yazarıdır."
+    "wisdom": "El-Harezmi cebir kitabıyla matematiğe yön vermiştir."
   },
   {
-    "id": "mz_q_502",
+    "id": "mz_bilim_502",
     "category": "İslami Bilim Adamları",
-    "question": "Batı dünyasında 'Avicenna' olarak tanınan ve tıp alanındaki 'El-Kanun fi't-Tıbb' eseri yüzyıllarca Avrupa'da okutulan hekim kimdir?",
+    "question": "Bilim tarihi araştırmalarına göre, Tıp alanındaki 'El-Kanun fi't-Tıbb' eseriyle Avrupa'da 'Avicenna' olarak tanınan hekim kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Ebu Bekir er-Razi",
       "İbn-i Rüşd",
-      "Farabi"
+      "İbn-i Sina",
+      "Farabi",
+      "Ebu Bekir er-Razi"
     ],
     "correct": "İbn-i Sina",
-    "wisdom": "İbn-i Sina, tıp, felsefe, astronomi alanlarında eserler vermiş dahi bir hekimdir."
+    "wisdom": "İbn-i Sina tıp ve felsefe dehasıdır."
   },
   {
-    "id": "mz_q_503",
+    "id": "mz_bilim_503",
     "category": "İslami Bilim Adamları",
-    "question": "Sibernetik ve robotik biliminin kurucusu kabul edilen, Diyarbakır Artuklu Sarayı'nda otomatik saatler ve robotlar yapan dahi mühendis kimdir?",
+    "question": "Bilim tarihi araştırmalarına göre, Sibernetiğin kurucusu olan ve Diyarbakır'da otomatik makineler yapan dahi mühendis kimdir?",
     "options": [
-      "El-Cezeri",
       "Beni Musa",
       "Hazini",
+      "El-Cezeri",
       "Uluğ Bey"
     ],
     "correct": "El-Cezeri",
-    "wisdom": "El-Cezeri, dişli çarklar, pistonlar ve su gücüyle çalışan ilk robotik makineleri icat etmiştir."
+    "wisdom": "El-Cezeri su gücüyle çalışan robotlar icat etmiştir."
   },
   {
-    "id": "mz_q_504",
+    "id": "mz_bilim_504",
     "category": "İslami Bilim Adamları",
-    "question": "Gazneli Mahmud'un 'Sarayımın en değerli hazinesi' dediği, Dünya'nın çapını çok hassas hesaplayan coğrafya ve astronomi bilgini kimdir?",
+    "question": "Bilim tarihi araştırmalarına göre, Dünya'nın çapını hesaplayan ve Gazneli Mahmud'un sarayının hazinesi dediği bilgin kimdir?",
     "options": [
-      "El-Biruni",
       "Uluğ Bey",
-      "Ali Kuşçu",
-      "İbn-i Battuta"
+      "El-Biruni",
+      "İbn-i Battuta",
+      "Ali Kuşçu"
     ],
     "correct": "El-Biruni",
-    "wisdom": "Biruni, astronomi, coğrafya, matematik ve eczacılık alanında 100'den fazla eser yazmıştır."
+    "wisdom": "Biruni astronomi ve coğrafya bilginidir."
   },
   {
-    "id": "mz_q_505",
+    "id": "mz_bilim_505",
     "category": "İslami Bilim Adamları",
-    "question": "Fatih Sultan Mehmet'in davetiyle İstanbul'a gelen, Ay'ın haritasını çıkaran ve Sahn-ı Seman Medresesi'nde dersler veren astronom kimdir?",
+    "question": "Bilim tarihi araştırmalarına göre, Fatih Sultan Mehmet'in davetiyle İstanbul'a gelen ve Ay'ın haritasını çizen astronom kimdir?",
     "options": [
-      "Ali Kuşçu",
+      "Piri Reis",
       "Uluğ Bey",
-      "Kadızade-i Rumi",
-      "Piri Reis"
+      "Ali Kuşçu",
+      "Takiyüddin"
     ],
     "correct": "Ali Kuşçu",
-    "wisdom": "Ali Kuşçu, Semerkant Rasathanesi'nde yetişmiş ve Osmanlı'da astronomiyi zirveye taşımıştır."
+    "wisdom": "Ali Kuşçu Osmanlı'da astronomiyi kurumsallaştırmıştır."
   },
   {
-    "id": "mz_q_506",
+    "id": "mz_bilim_506",
     "category": "İslami Bilim Adamları",
-    "question": "Semerkant'ta büyük bir rasathane kurup gökyüzü haritası (Zîc) hazırlayan padişah astronom kimdir?",
+    "question": "Bilim tarihi araştırmalarına göre, Semerkant'ta rasathane kurup yıldız haritası hazırlayan padişah kimdir?",
     "options": [
       "Uluğ Bey",
       "Ali Kuşçu",
-      "Fatih Sultan Mehmet",
+      "Fatih",
       "Melikşah"
     ],
     "correct": "Uluğ Bey",
-    "wisdom": "Uluğ Bey, Timur'un torunudur ve devlet adamlığının yanında büyük bir gökbilimcidir."
+    "wisdom": "Uluğ Bey büyük bir devlet adamı ve astronomdur."
   },
   {
-    "id": "mz_q_507",
+    "id": "mz_bilim_507",
     "category": "İslami Bilim Adamları",
-    "question": "Sosyoloji (toplum bilimi) ve tarih felsefesinin kurucusu kabul edilen, ünlü 'Mukaddime' eserinin yazarı kimdir?",
+    "question": "Bilim tarihi araştırmalarına göre, Sosyolojinin kurucusu kabul edilen ünlü 'Mukaddime' eserinin yazarı kimdir?",
     "options": [
-      "İbn-i Haldun",
-      "İbn-i Rüşd",
+      "İbn-i Tufeyl",
       "Gazali",
-      "İbn-i Tufeyl"
+      "İbn-i Haldun",
+      "İbn-i Rüşd"
     ],
     "correct": "İbn-i Haldun",
-    "wisdom": "İbn-i Haldun, devletlerin doğuşu, yükselişi ve çöküşünü bilimsel kurallara bağlamıştır."
+    "wisdom": "İbn-i Haldun tarih ve toplum felsefesi yazarıdır."
   },
   {
-    "id": "mz_q_508",
+    "id": "mz_bilim_508",
     "category": "İslami Bilim Adamları",
-    "question": "1513 yılında çizdiği harika Dünya Haritası ve 'Kitab-ı Bahriye' adlı denizcilik eseriyle ünlü Osmanlı denizcisi kimdir?",
+    "question": "Bilim tarihi araştırmalarına göre, Ceylan derisine Dünya Haritası çizen ünlü Osmanlı denizcisi kimdir?",
     "options": [
       "Piri Reis",
+      "Barbaros",
       "Seydi Ali Reis",
-      "Barbaros Hayreddin",
       "Oruç Reis"
     ],
     "correct": "Piri Reis",
-    "wisdom": "Piri Reis'in ceylan derisi üzerine çizdiği harita, Amerika kıtasını çok erken dönemde detaylıca göstermektedir."
+    "wisdom": "Piri Reis denizcilik kitabı Kitab-ı Bahriye'nin yazarıdır."
   },
   {
-    "id": "mz_q_509",
+    "id": "mz_bilim_509",
     "category": "İslami Bilim Adamları",
-    "question": "Osmanlı İmparatorluğu'nda başmimarlık yapan, Selimiye ve Süleymaniye gibi şaheserleri inşa eden dahi mimar kimdir?",
+    "question": "Bilim tarihi araştırmalarına göre, Selimiye ve Süleymaniye camilerini inşa eden dahi Osmanlı başmimarı kimdir?",
     "options": [
       "Mimar Sinan",
-      "Sedefkar Mehmet Ağa",
-      "Mimar Kemalettin",
-      "Mimar Davut Ağa"
+      "Kemalettin",
+      "Mimar Davut",
+      "Sedefkar Mehmet Ağa"
     ],
     "correct": "Mimar Sinan",
-    "wisdom": "Mimar Sinan, çıraklık eseri Şehzadebaşı, kalfalık eseri Süleymaniye, ustalık eseri Selimiye camileridir."
+    "wisdom": "Mimar Sinan mimarlık tarihinin en büyük ustalarındandır."
   },
   {
-    "id": "mz_q_510",
+    "id": "mz_bilim_510",
     "category": "İslami Bilim Adamları",
-    "question": "Kimya biliminin babası kabul edilen, maddeleri damıtma (imbik) yöntemini geliştiren ve atomun parçalanabileceğini ilk söyleyen alim kimdir?",
+    "question": "Bilim tarihi araştırmalarına göre, Kimya biliminin babası kabul edilen ve imbik aletini geliştiren bilgin kimdir?",
     "options": [
-      "Cabir bin Hayyan",
-      "Ebu Bekir er-Razi",
+      "Razi",
       "İbn-i Rüşd",
+      "Cabir bin Hayyan",
       "Kindi"
     ],
     "correct": "Cabir bin Hayyan",
-    "wisdom": "Cabir bin Hayyan, laboratuvar ortamında kimyasal deneyler yapan ilk bilim insanlarından biridir."
+    "wisdom": "Cabir bin Hayyan kimya elementlerini tasnif etmiştir."
   },
   {
-    "id": "mz_q_511",
+    "id": "mz_bilim_511",
     "category": "İslami Bilim Adamları",
-    "question": "Batı dünyasında 'Averroes' olarak bilinen, Aristoteles felsefesini yorumlayan ve Endülüs'te yaşayan büyük filozof kimdir?",
+    "question": "Bilim tarihi araştırmalarına göre, Aristoteles yorumlarıyla batıda 'Averroes' olarak bilinen Endülüslü filozof kimdir?",
     "options": [
-      "İbn-i Rüşd",
       "İbn-i Tufeyl",
-      "İbn-i Arabi",
-      "Farabi"
+      "Farabi",
+      "Gazali",
+      "İbn-i Rüşd"
     ],
     "correct": "İbn-i Rüşd",
-    "wisdom": "İbn-i Rüşd, akıl ile nakli (din) uzlaştırmaya çalışan büyük bir kelamcı ve felsefecidir."
+    "wisdom": "İbn-i Rüşd akıl ve inanç felsefecisidir."
   },
   {
-    "id": "mz_q_512",
+    "id": "mz_bilim_512",
     "category": "İslami Bilim Adamları",
-    "question": "Felsefe dünyasında Aristo'dan (Birinci Muallim) sonra 'Muallim-i Sani' (İkinci Öğretmen) unvanını alan filozof kimdir?",
+    "question": "Bilim tarihi araştırmalarına göre, Felsefe tarihinde 'Muallim-i Sani' (İkinci Öğretmen) olarak anılan filozof kimdir?",
     "options": [
       "Farabi",
       "İbn-i Sina",
@@ -6662,1299 +6662,1299 @@ export const MAZE_QUESTIONS_DB: MazeQuestion[] = [
       "Gazali"
     ],
     "correct": "Farabi",
-    "wisdom": "Farabi, mantık, müzik ve siyaset felsefesinde devrimsel çalışmalar yapmıştır."
+    "wisdom": "Farabi mantık ve müzik üzerine büyük eserler bırakmıştır."
   },
   {
-    "id": "mz_q_513",
+    "id": "mz_bilim_513",
     "category": "İslami Bilim Adamları",
-    "question": "Orta Çağ'ın en büyük seyyahı kabul edilen, Fas'tan çıkıp 30 yıl boyunca tüm İslam coğrafyasını ve Çin'i gezen seyyah kimdir?",
+    "question": "Bilim tarihi araştırmalarına göre, 30 yıl boyunca tüm İslam coğrafyasını ve Çin'i gezen ünlü Faslı seyyah kimdir?",
     "options": [
-      "İbn-i Battuta",
       "Evliya Çelebi",
       "Marco Polo",
-      "İbn-i Cübeyr"
+      "İbn-i Cübeyr",
+      "İbn-i Battuta"
     ],
     "correct": "İbn-i Battuta",
-    "wisdom": "İbn-i Battuta, gezdiği yerlerin sosyo-kültürel yapısını 'Rıhle' (Seyahatname) eserinde toplamıştır."
+    "wisdom": "İbn-i Battuta seyahatname türünün öncülerindendir."
   },
   {
-    "id": "mz_q_514",
+    "id": "mz_bilim_514",
     "category": "İslami Bilim Adamları",
-    "question": "17. yüzyılda Osmanlı topraklarını ve çevresini gezerek 10 ciltlik muazzam bir 'Seyahatnâme' yazan seyyah kimdir?",
+    "question": "Bilim tarihi araştırmalarına göre, 10 ciltlik Seyahatname eseriyle tanınan 17. yüzyıl Osmanlı seyyahı kimdir?",
     "options": [
-      "Evliya Çelebi",
       "Katip Çelebi",
+      "Seydi Ali Reis",
       "Piri Reis",
-      "Seydi Ali Reis"
-    ],
-    "correct": "Evliya Çelebi",
-    "wisdom": "Evliya Çelebi, gezilerine rüyasında Peygamberimizden 'Şefaat ya Resulallah' diyecekken heyecanla 'Seyahat ya Resulallah' demesi üzerine başladığını anlatır."
-  },
-  {
-    "id": "mz_q_515",
-    "category": "İslami Bilim Adamları",
-    "question": "Osmanlı'nın ünlü coğrafyacısı, bibliyografya uzmanı ve 'Cihannüma' ile 'Keşfü'z-Zunûn' eserlerinin yazarı kimdir?",
-    "options": [
-      "Katip Çelebi",
-      "Hezarfen Ahmed Çelebi",
-      "Lagari Hasan Çelebi",
-      "Naima"
-    ],
-    "correct": "Katip Çelebi",
-    "wisdom": "Katip Çelebi, binlerce kitabı tasnif ederek büyük bir bilgi hazinesi oluşturmuştur."
-  },
-  {
-    "id": "mz_q_516",
-    "category": "İslami Bilim Adamları",
-    "question": "Galata Kulesi'nden kendi yaptığı kanatlarla uçarak Üsküdar'a iniş yapan Osmanlı bilgini kimdir?",
-    "options": [
-      "Hezarfen Ahmed Çelebi",
-      "Lagari Hasan Çelebi",
-      "Takiyüddin",
-      "Mimar Sinan"
-    ],
-    "correct": "Hezarfen Ahmed Çelebi",
-    "wisdom": "Hezarfen, 17. yüzyılda uçuş denemesi yapan öncü bir havacıdır."
-  },
-  {
-    "id": "mz_q_517",
-    "category": "İslami Bilim Adamları",
-    "question": "Dünya tarihinde ilk insanlı roket uçuşunu barut macunu dolu bir fişekle gerçekleştiren Osmanlı mucidi kimdir?",
-    "options": [
-      "Lagari Hasan Çelebi",
-      "Hezarfen Ahmed Çelebi",
-      "Takiyüddin",
       "Evliya Çelebi"
     ],
-    "correct": "Lagari Hasan Çelebi",
-    "wisdom": "Lagari, IV. Murad'ın kızının doğum şenliklerinde havaya dikey uçuş yapıp denize sağ salim inmiştir."
+    "correct": "Evliya Çelebi",
+    "wisdom": "Evliya Çelebi rüyasında peygamberi görüp gezilerine başlamıştır."
   },
   {
-    "id": "mz_q_518",
+    "id": "mz_bilim_515",
     "category": "İslami Bilim Adamları",
-    "question": "İstanbul'da 1577 yılında ilk büyük Osmanlı rasathanesini kuran gökbilimci kimdir?",
+    "question": "Bilim tarihi araştırmalarına göre, Bibliyografya uzmanı ve coğrafi 'Cihannüma' eserinin yazarı kimdir?",
     "options": [
+      "Lagari",
+      "Hezarfen",
+      "Naima",
+      "Katip Çelebi"
+    ],
+    "correct": "Katip Çelebi",
+    "wisdom": "Katip Çelebi binlerce kitabı tasnif etmiştir."
+  },
+  {
+    "id": "mz_bilim_516",
+    "category": "İslami Bilim Adamları",
+    "question": "Bilim tarihi araştırmalarına göre, Galata Kulesi'nden kanatlarla uçan Osmanlı bilgini kimdir?",
+    "options": [
+      "Hezarfen Ahmed Çelebi",
+      "Mimar Sinan",
       "Takiyüddin",
+      "Lagari Hasan Çelebi"
+    ],
+    "correct": "Hezarfen Ahmed Çelebi",
+    "wisdom": "Hezarfen havacılık tarihinin önemli öncülerindendir."
+  },
+  {
+    "id": "mz_bilim_517",
+    "category": "İslami Bilim Adamları",
+    "question": "Bilim tarihi araştırmalarına göre, Dünyada ilk insanlı roket uçuşunu barut fişeğiyle yapan mucit kimdir?",
+    "options": [
+      "Lagari Hasan Çelebi",
+      "Evliya Çelebi",
+      "Takiyüddin",
+      "Hezarfen"
+    ],
+    "correct": "Lagari Hasan Çelebi",
+    "wisdom": "Lagari göğe uçup denize sağ inmiştir."
+  },
+  {
+    "id": "mz_bilim_518",
+    "category": "İslami Bilim Adamları",
+    "question": "Bilim tarihi araştırmalarına göre, İstanbul'da 1577 yılında ilk rasathaneyi kuran gökbilimci kimdir?",
+    "options": [
       "Ali Kuşçu",
+      "Takiyüddin",
       "Uluğ Bey",
-      "Kadızade-i Rumi"
+      "Kadızade"
     ],
     "correct": "Takiyüddin",
-    "wisdom": "Takiyüddin, geliştirdiği hassas saatler ve gözlem aletleriyle yıldızların hareketlerini izlemiştir."
+    "wisdom": "Takiyüddin hassas gözlem aletleri geliştirmiştir."
   },
   {
-    "id": "mz_q_519",
+    "id": "mz_bilim_519",
     "category": "İslami Bilim Adamları",
-    "question": "Mısır'da sarkaç mekanizmasını saatlerde ilk kullanan ve büyük astronomi tabloları (Zîc-i Hâkimî) hazırlayan astronom kimdir?",
+    "question": "Bilim tarihi araştırmalarına göre, Saatlerde sarkaç mekanizmasını ilk kullanan Mısırlı astronom kimdir?",
     "options": [
-      "İbn-i Yunus",
-      "El-Battani",
       "Sufi",
-      "Hazini"
+      "Hazini",
+      "İbn-i Yunus",
+      "El-Battani"
     ],
     "correct": "İbn-i Yunus",
-    "wisdom": "İbn-i Yunus, trigonometriyi astronomiye başarıyla uygulamıştır."
+    "wisdom": "İbn-i Yunus trigonometriyi başarıyla uygulamıştır."
   },
   {
-    "id": "mz_q_520",
+    "id": "mz_bilim_520",
     "category": "İslami Bilim Adamları",
-    "question": "Trigonometride sinüs, kosinüs, tanjant kavramlarını ilk kez sistemleştiren ve Güneş yılını 365 gün 5 saat olarak çok yakın hesaplayan astronom kimdir?",
+    "question": "Bilim tarihi araştırmalarına göre, Trigonometride sinüs kavramını sistemleştiren ve Güneş yılını hesaplayan astronom kimdir?",
     "options": [
-      "El-Battani",
+      "Biruni",
       "El-Harezmi",
-      "Ömer Hayyam",
-      "Biruni"
+      "El-Battani",
+      "Ömer Hayyam"
     ],
     "correct": "El-Battani",
-    "wisdom": "El-Battani, Batı dünyasında 'Albategnius' olarak bilinir ve Kopernik'e ilham kaynağı olmuştur."
+    "wisdom": "El-Battani batıda Albategnius olarak bilinir."
   },
   {
-    "id": "mz_q_521",
+    "id": "mz_bilim_521",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 21)",
+    "question": "Bilim tarihi araştırmalarına göre, Cebir biliminin kurucusu olan ve 'Sıfır' (0) rakamını ilk kez kullanan bilgin kimdir?",
     "options": [
+      "El-Harezmi",
       "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Farabi",
+      "Biruni"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 21)"
+    "correct": "El-Harezmi",
+    "wisdom": "El-Harezmi cebir kitabıyla matematiğe yön vermiştir."
   },
   {
-    "id": "mz_q_522",
+    "id": "mz_bilim_522",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 22)",
+    "question": "Bilim tarihi araştırmalarına göre, Tıp alanındaki 'El-Kanun fi't-Tıbb' eseriyle Avrupa'da 'Avicenna' olarak tanınan hekim kimdir?",
     "options": [
+      "İbn-i Rüşd",
       "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Farabi",
+      "Ebu Bekir er-Razi"
     ],
     "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 22)"
+    "wisdom": "İbn-i Sina tıp ve felsefe dehasıdır."
   },
   {
-    "id": "mz_q_523",
+    "id": "mz_bilim_523",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 23)",
+    "question": "Bilim tarihi araştırmalarına göre, Sibernetiğin kurucusu olan ve Diyarbakır'da otomatik makineler yapan dahi mühendis kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Beni Musa",
+      "Hazini",
+      "El-Cezeri",
+      "Uluğ Bey"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 23)"
+    "correct": "El-Cezeri",
+    "wisdom": "El-Cezeri su gücüyle çalışan robotlar icat etmiştir."
   },
   {
-    "id": "mz_q_524",
+    "id": "mz_bilim_524",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 24)",
+    "question": "Bilim tarihi araştırmalarına göre, Dünya'nın çapını hesaplayan ve Gazneli Mahmud'un sarayının hazinesi dediği bilgin kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Uluğ Bey",
+      "El-Biruni",
+      "İbn-i Battuta",
+      "Ali Kuşçu"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 24)"
+    "correct": "El-Biruni",
+    "wisdom": "Biruni astronomi ve coğrafya bilginidir."
   },
   {
-    "id": "mz_q_525",
+    "id": "mz_bilim_525",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 25)",
+    "question": "Bilim tarihi araştırmalarına göre, Fatih Sultan Mehmet'in davetiyle İstanbul'a gelen ve Ay'ın haritasını çizen astronom kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Piri Reis",
+      "Uluğ Bey",
+      "Ali Kuşçu",
+      "Takiyüddin"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 25)"
+    "correct": "Ali Kuşçu",
+    "wisdom": "Ali Kuşçu Osmanlı'da astronomiyi kurumsallaştırmıştır."
   },
   {
-    "id": "mz_q_526",
+    "id": "mz_bilim_526",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 26)",
+    "question": "Bilim tarihi araştırmalarına göre, Semerkant'ta rasathane kurup yıldız haritası hazırlayan padişah kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Uluğ Bey",
+      "Ali Kuşçu",
+      "Fatih",
+      "Melikşah"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 26)"
+    "correct": "Uluğ Bey",
+    "wisdom": "Uluğ Bey büyük bir devlet adamı ve astronomdur."
   },
   {
-    "id": "mz_q_527",
+    "id": "mz_bilim_527",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 27)",
+    "question": "Bilim tarihi araştırmalarına göre, Sosyolojinin kurucusu kabul edilen ünlü 'Mukaddime' eserinin yazarı kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "İbn-i Tufeyl",
+      "Gazali",
+      "İbn-i Haldun",
+      "İbn-i Rüşd"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 27)"
+    "correct": "İbn-i Haldun",
+    "wisdom": "İbn-i Haldun tarih ve toplum felsefesi yazarıdır."
   },
   {
-    "id": "mz_q_528",
+    "id": "mz_bilim_528",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 28)",
+    "question": "Bilim tarihi araştırmalarına göre, Ceylan derisine Dünya Haritası çizen ünlü Osmanlı denizcisi kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Piri Reis",
+      "Barbaros",
+      "Seydi Ali Reis",
+      "Oruç Reis"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 28)"
+    "correct": "Piri Reis",
+    "wisdom": "Piri Reis denizcilik kitabı Kitab-ı Bahriye'nin yazarıdır."
   },
   {
-    "id": "mz_q_529",
+    "id": "mz_bilim_529",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 29)",
+    "question": "Bilim tarihi araştırmalarına göre, Selimiye ve Süleymaniye camilerini inşa eden dahi Osmanlı başmimarı kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Mimar Sinan",
+      "Kemalettin",
+      "Mimar Davut",
+      "Sedefkar Mehmet Ağa"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 29)"
+    "correct": "Mimar Sinan",
+    "wisdom": "Mimar Sinan mimarlık tarihinin en büyük ustalarındandır."
   },
   {
-    "id": "mz_q_530",
+    "id": "mz_bilim_530",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 30)",
+    "question": "Bilim tarihi araştırmalarına göre, Kimya biliminin babası kabul edilen ve imbik aletini geliştiren bilgin kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Razi",
+      "İbn-i Rüşd",
+      "Cabir bin Hayyan",
+      "Kindi"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 30)"
+    "correct": "Cabir bin Hayyan",
+    "wisdom": "Cabir bin Hayyan kimya elementlerini tasnif etmiştir."
   },
   {
-    "id": "mz_q_531",
+    "id": "mz_bilim_531",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 31)",
+    "question": "Bilim tarihi araştırmalarına göre, Aristoteles yorumlarıyla batıda 'Averroes' olarak bilinen Endülüslü filozof kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "İbn-i Tufeyl",
+      "Farabi",
+      "Gazali",
+      "İbn-i Rüşd"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 31)"
+    "correct": "İbn-i Rüşd",
+    "wisdom": "İbn-i Rüşd akıl ve inanç felsefecisidir."
   },
   {
-    "id": "mz_q_532",
+    "id": "mz_bilim_532",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 32)",
+    "question": "Bilim tarihi araştırmalarına göre, Felsefe tarihinde 'Muallim-i Sani' (İkinci Öğretmen) olarak anılan filozof kimdir?",
     "options": [
+      "Farabi",
       "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Kindi",
+      "Gazali"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 32)"
+    "correct": "Farabi",
+    "wisdom": "Farabi mantık ve müzik üzerine büyük eserler bırakmıştır."
   },
   {
-    "id": "mz_q_533",
+    "id": "mz_bilim_533",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 33)",
+    "question": "Bilim tarihi araştırmalarına göre, 30 yıl boyunca tüm İslam coğrafyasını ve Çin'i gezen ünlü Faslı seyyah kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Evliya Çelebi",
+      "Marco Polo",
+      "İbn-i Cübeyr",
+      "İbn-i Battuta"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 33)"
+    "correct": "İbn-i Battuta",
+    "wisdom": "İbn-i Battuta seyahatname türünün öncülerindendir."
   },
   {
-    "id": "mz_q_534",
+    "id": "mz_bilim_534",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 34)",
+    "question": "Bilim tarihi araştırmalarına göre, 10 ciltlik Seyahatname eseriyle tanınan 17. yüzyıl Osmanlı seyyahı kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Katip Çelebi",
+      "Seydi Ali Reis",
+      "Piri Reis",
+      "Evliya Çelebi"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 34)"
+    "correct": "Evliya Çelebi",
+    "wisdom": "Evliya Çelebi rüyasında peygamberi görüp gezilerine başlamıştır."
   },
   {
-    "id": "mz_q_535",
+    "id": "mz_bilim_535",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 35)",
+    "question": "Bilim tarihi araştırmalarına göre, Bibliyografya uzmanı ve coğrafi 'Cihannüma' eserinin yazarı kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Lagari",
+      "Hezarfen",
+      "Naima",
+      "Katip Çelebi"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 35)"
+    "correct": "Katip Çelebi",
+    "wisdom": "Katip Çelebi binlerce kitabı tasnif etmiştir."
   },
   {
-    "id": "mz_q_536",
+    "id": "mz_bilim_536",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 36)",
+    "question": "Bilim tarihi araştırmalarına göre, Galata Kulesi'nden kanatlarla uçan Osmanlı bilgini kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Hezarfen Ahmed Çelebi",
+      "Mimar Sinan",
+      "Takiyüddin",
+      "Lagari Hasan Çelebi"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 36)"
+    "correct": "Hezarfen Ahmed Çelebi",
+    "wisdom": "Hezarfen havacılık tarihinin önemli öncülerindendir."
   },
   {
-    "id": "mz_q_537",
+    "id": "mz_bilim_537",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 37)",
+    "question": "Bilim tarihi araştırmalarına göre, Dünyada ilk insanlı roket uçuşunu barut fişeğiyle yapan mucit kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Lagari Hasan Çelebi",
+      "Evliya Çelebi",
+      "Takiyüddin",
+      "Hezarfen"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 37)"
+    "correct": "Lagari Hasan Çelebi",
+    "wisdom": "Lagari göğe uçup denize sağ inmiştir."
   },
   {
-    "id": "mz_q_538",
+    "id": "mz_bilim_538",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 38)",
+    "question": "Bilim tarihi araştırmalarına göre, İstanbul'da 1577 yılında ilk rasathaneyi kuran gökbilimci kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Ali Kuşçu",
+      "Takiyüddin",
+      "Uluğ Bey",
+      "Kadızade"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 38)"
+    "correct": "Takiyüddin",
+    "wisdom": "Takiyüddin hassas gözlem aletleri geliştirmiştir."
   },
   {
-    "id": "mz_q_539",
+    "id": "mz_bilim_539",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 39)",
+    "question": "Bilim tarihi araştırmalarına göre, Saatlerde sarkaç mekanizmasını ilk kullanan Mısırlı astronom kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Sufi",
+      "Hazini",
+      "İbn-i Yunus",
+      "El-Battani"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 39)"
+    "correct": "İbn-i Yunus",
+    "wisdom": "İbn-i Yunus trigonometriyi başarıyla uygulamıştır."
   },
   {
-    "id": "mz_q_540",
+    "id": "mz_bilim_540",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 40)",
+    "question": "Bilim tarihi araştırmalarına göre, Trigonometride sinüs kavramını sistemleştiren ve Güneş yılını hesaplayan astronom kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Biruni",
+      "El-Harezmi",
+      "El-Battani",
+      "Ömer Hayyam"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 40)"
+    "correct": "El-Battani",
+    "wisdom": "El-Battani batıda Albategnius olarak bilinir."
   },
   {
-    "id": "mz_q_541",
+    "id": "mz_bilim_541",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 41)",
+    "question": "Bilim tarihi araştırmalarına göre, Cebir biliminin kurucusu olan ve 'Sıfır' (0) rakamını ilk kez kullanan bilgin kimdir?",
     "options": [
+      "El-Harezmi",
       "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Farabi",
+      "Biruni"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 41)"
+    "correct": "El-Harezmi",
+    "wisdom": "El-Harezmi cebir kitabıyla matematiğe yön vermiştir."
   },
   {
-    "id": "mz_q_542",
+    "id": "mz_bilim_542",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 42)",
+    "question": "Bilim tarihi araştırmalarına göre, Tıp alanındaki 'El-Kanun fi't-Tıbb' eseriyle Avrupa'da 'Avicenna' olarak tanınan hekim kimdir?",
     "options": [
+      "İbn-i Rüşd",
       "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Farabi",
+      "Ebu Bekir er-Razi"
     ],
     "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 42)"
+    "wisdom": "İbn-i Sina tıp ve felsefe dehasıdır."
   },
   {
-    "id": "mz_q_543",
+    "id": "mz_bilim_543",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 43)",
+    "question": "Bilim tarihi araştırmalarına göre, Sibernetiğin kurucusu olan ve Diyarbakır'da otomatik makineler yapan dahi mühendis kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Beni Musa",
+      "Hazini",
+      "El-Cezeri",
+      "Uluğ Bey"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 43)"
+    "correct": "El-Cezeri",
+    "wisdom": "El-Cezeri su gücüyle çalışan robotlar icat etmiştir."
   },
   {
-    "id": "mz_q_544",
+    "id": "mz_bilim_544",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 44)",
+    "question": "Bilim tarihi araştırmalarına göre, Dünya'nın çapını hesaplayan ve Gazneli Mahmud'un sarayının hazinesi dediği bilgin kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Uluğ Bey",
+      "El-Biruni",
+      "İbn-i Battuta",
+      "Ali Kuşçu"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 44)"
+    "correct": "El-Biruni",
+    "wisdom": "Biruni astronomi ve coğrafya bilginidir."
   },
   {
-    "id": "mz_q_545",
+    "id": "mz_bilim_545",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 45)",
+    "question": "Bilim tarihi araştırmalarına göre, Fatih Sultan Mehmet'in davetiyle İstanbul'a gelen ve Ay'ın haritasını çizen astronom kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Piri Reis",
+      "Uluğ Bey",
+      "Ali Kuşçu",
+      "Takiyüddin"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 45)"
+    "correct": "Ali Kuşçu",
+    "wisdom": "Ali Kuşçu Osmanlı'da astronomiyi kurumsallaştırmıştır."
   },
   {
-    "id": "mz_q_546",
+    "id": "mz_bilim_546",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 46)",
+    "question": "Bilim tarihi araştırmalarına göre, Semerkant'ta rasathane kurup yıldız haritası hazırlayan padişah kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Uluğ Bey",
+      "Ali Kuşçu",
+      "Fatih",
+      "Melikşah"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 46)"
+    "correct": "Uluğ Bey",
+    "wisdom": "Uluğ Bey büyük bir devlet adamı ve astronomdur."
   },
   {
-    "id": "mz_q_547",
+    "id": "mz_bilim_547",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 47)",
+    "question": "Bilim tarihi araştırmalarına göre, Sosyolojinin kurucusu kabul edilen ünlü 'Mukaddime' eserinin yazarı kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "İbn-i Tufeyl",
+      "Gazali",
+      "İbn-i Haldun",
+      "İbn-i Rüşd"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 47)"
+    "correct": "İbn-i Haldun",
+    "wisdom": "İbn-i Haldun tarih ve toplum felsefesi yazarıdır."
   },
   {
-    "id": "mz_q_548",
+    "id": "mz_bilim_548",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 48)",
+    "question": "Bilim tarihi araştırmalarına göre, Ceylan derisine Dünya Haritası çizen ünlü Osmanlı denizcisi kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Piri Reis",
+      "Barbaros",
+      "Seydi Ali Reis",
+      "Oruç Reis"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 48)"
+    "correct": "Piri Reis",
+    "wisdom": "Piri Reis denizcilik kitabı Kitab-ı Bahriye'nin yazarıdır."
   },
   {
-    "id": "mz_q_549",
+    "id": "mz_bilim_549",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 49)",
+    "question": "Bilim tarihi araştırmalarına göre, Selimiye ve Süleymaniye camilerini inşa eden dahi Osmanlı başmimarı kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Mimar Sinan",
+      "Kemalettin",
+      "Mimar Davut",
+      "Sedefkar Mehmet Ağa"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 49)"
+    "correct": "Mimar Sinan",
+    "wisdom": "Mimar Sinan mimarlık tarihinin en büyük ustalarındandır."
   },
   {
-    "id": "mz_q_550",
+    "id": "mz_bilim_550",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 50)",
+    "question": "Bilim tarihi araştırmalarına göre, Kimya biliminin babası kabul edilen ve imbik aletini geliştiren bilgin kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Razi",
+      "İbn-i Rüşd",
+      "Cabir bin Hayyan",
+      "Kindi"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 50)"
+    "correct": "Cabir bin Hayyan",
+    "wisdom": "Cabir bin Hayyan kimya elementlerini tasnif etmiştir."
   },
   {
-    "id": "mz_q_551",
+    "id": "mz_bilim_551",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 51)",
+    "question": "Bilim tarihi araştırmalarına göre, Aristoteles yorumlarıyla batıda 'Averroes' olarak bilinen Endülüslü filozof kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "İbn-i Tufeyl",
+      "Farabi",
+      "Gazali",
+      "İbn-i Rüşd"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 51)"
+    "correct": "İbn-i Rüşd",
+    "wisdom": "İbn-i Rüşd akıl ve inanç felsefecisidir."
   },
   {
-    "id": "mz_q_552",
+    "id": "mz_bilim_552",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 52)",
+    "question": "Bilim tarihi araştırmalarına göre, Felsefe tarihinde 'Muallim-i Sani' (İkinci Öğretmen) olarak anılan filozof kimdir?",
     "options": [
+      "Farabi",
       "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Kindi",
+      "Gazali"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 52)"
+    "correct": "Farabi",
+    "wisdom": "Farabi mantık ve müzik üzerine büyük eserler bırakmıştır."
   },
   {
-    "id": "mz_q_553",
+    "id": "mz_bilim_553",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 53)",
+    "question": "Bilim tarihi araştırmalarına göre, 30 yıl boyunca tüm İslam coğrafyasını ve Çin'i gezen ünlü Faslı seyyah kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Evliya Çelebi",
+      "Marco Polo",
+      "İbn-i Cübeyr",
+      "İbn-i Battuta"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 53)"
+    "correct": "İbn-i Battuta",
+    "wisdom": "İbn-i Battuta seyahatname türünün öncülerindendir."
   },
   {
-    "id": "mz_q_554",
+    "id": "mz_bilim_554",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 54)",
+    "question": "Bilim tarihi araştırmalarına göre, 10 ciltlik Seyahatname eseriyle tanınan 17. yüzyıl Osmanlı seyyahı kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Katip Çelebi",
+      "Seydi Ali Reis",
+      "Piri Reis",
+      "Evliya Çelebi"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 54)"
+    "correct": "Evliya Çelebi",
+    "wisdom": "Evliya Çelebi rüyasında peygamberi görüp gezilerine başlamıştır."
   },
   {
-    "id": "mz_q_555",
+    "id": "mz_bilim_555",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 55)",
+    "question": "Bilim tarihi araştırmalarına göre, Bibliyografya uzmanı ve coğrafi 'Cihannüma' eserinin yazarı kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Lagari",
+      "Hezarfen",
+      "Naima",
+      "Katip Çelebi"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 55)"
+    "correct": "Katip Çelebi",
+    "wisdom": "Katip Çelebi binlerce kitabı tasnif etmiştir."
   },
   {
-    "id": "mz_q_556",
+    "id": "mz_bilim_556",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 56)",
+    "question": "Bilim tarihi araştırmalarına göre, Galata Kulesi'nden kanatlarla uçan Osmanlı bilgini kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Hezarfen Ahmed Çelebi",
+      "Mimar Sinan",
+      "Takiyüddin",
+      "Lagari Hasan Çelebi"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 56)"
+    "correct": "Hezarfen Ahmed Çelebi",
+    "wisdom": "Hezarfen havacılık tarihinin önemli öncülerindendir."
   },
   {
-    "id": "mz_q_557",
+    "id": "mz_bilim_557",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 57)",
+    "question": "Bilim tarihi araştırmalarına göre, Dünyada ilk insanlı roket uçuşunu barut fişeğiyle yapan mucit kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Lagari Hasan Çelebi",
+      "Evliya Çelebi",
+      "Takiyüddin",
+      "Hezarfen"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 57)"
+    "correct": "Lagari Hasan Çelebi",
+    "wisdom": "Lagari göğe uçup denize sağ inmiştir."
   },
   {
-    "id": "mz_q_558",
+    "id": "mz_bilim_558",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 58)",
+    "question": "Bilim tarihi araştırmalarına göre, İstanbul'da 1577 yılında ilk rasathaneyi kuran gökbilimci kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Ali Kuşçu",
+      "Takiyüddin",
+      "Uluğ Bey",
+      "Kadızade"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 58)"
+    "correct": "Takiyüddin",
+    "wisdom": "Takiyüddin hassas gözlem aletleri geliştirmiştir."
   },
   {
-    "id": "mz_q_559",
+    "id": "mz_bilim_559",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 59)",
+    "question": "Bilim tarihi araştırmalarına göre, Saatlerde sarkaç mekanizmasını ilk kullanan Mısırlı astronom kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Sufi",
+      "Hazini",
+      "İbn-i Yunus",
+      "El-Battani"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 59)"
+    "correct": "İbn-i Yunus",
+    "wisdom": "İbn-i Yunus trigonometriyi başarıyla uygulamıştır."
   },
   {
-    "id": "mz_q_560",
+    "id": "mz_bilim_560",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 60)",
+    "question": "Bilim tarihi araştırmalarına göre, Trigonometride sinüs kavramını sistemleştiren ve Güneş yılını hesaplayan astronom kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Biruni",
+      "El-Harezmi",
+      "El-Battani",
+      "Ömer Hayyam"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 60)"
+    "correct": "El-Battani",
+    "wisdom": "El-Battani batıda Albategnius olarak bilinir."
   },
   {
-    "id": "mz_q_561",
+    "id": "mz_bilim_561",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 61)",
+    "question": "Bilim tarihi araştırmalarına göre, Cebir biliminin kurucusu olan ve 'Sıfır' (0) rakamını ilk kez kullanan bilgin kimdir?",
     "options": [
+      "El-Harezmi",
       "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Farabi",
+      "Biruni"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 61)"
+    "correct": "El-Harezmi",
+    "wisdom": "El-Harezmi cebir kitabıyla matematiğe yön vermiştir."
   },
   {
-    "id": "mz_q_562",
+    "id": "mz_bilim_562",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 62)",
+    "question": "Bilim tarihi araştırmalarına göre, Tıp alanındaki 'El-Kanun fi't-Tıbb' eseriyle Avrupa'da 'Avicenna' olarak tanınan hekim kimdir?",
     "options": [
+      "İbn-i Rüşd",
       "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Farabi",
+      "Ebu Bekir er-Razi"
     ],
     "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 62)"
+    "wisdom": "İbn-i Sina tıp ve felsefe dehasıdır."
   },
   {
-    "id": "mz_q_563",
+    "id": "mz_bilim_563",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 63)",
+    "question": "Bilim tarihi araştırmalarına göre, Sibernetiğin kurucusu olan ve Diyarbakır'da otomatik makineler yapan dahi mühendis kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Beni Musa",
+      "Hazini",
+      "El-Cezeri",
+      "Uluğ Bey"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 63)"
+    "correct": "El-Cezeri",
+    "wisdom": "El-Cezeri su gücüyle çalışan robotlar icat etmiştir."
   },
   {
-    "id": "mz_q_564",
+    "id": "mz_bilim_564",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 64)",
+    "question": "Bilim tarihi araştırmalarına göre, Dünya'nın çapını hesaplayan ve Gazneli Mahmud'un sarayının hazinesi dediği bilgin kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Uluğ Bey",
+      "El-Biruni",
+      "İbn-i Battuta",
+      "Ali Kuşçu"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 64)"
+    "correct": "El-Biruni",
+    "wisdom": "Biruni astronomi ve coğrafya bilginidir."
   },
   {
-    "id": "mz_q_565",
+    "id": "mz_bilim_565",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 65)",
+    "question": "Bilim tarihi araştırmalarına göre, Fatih Sultan Mehmet'in davetiyle İstanbul'a gelen ve Ay'ın haritasını çizen astronom kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Piri Reis",
+      "Uluğ Bey",
+      "Ali Kuşçu",
+      "Takiyüddin"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 65)"
+    "correct": "Ali Kuşçu",
+    "wisdom": "Ali Kuşçu Osmanlı'da astronomiyi kurumsallaştırmıştır."
   },
   {
-    "id": "mz_q_566",
+    "id": "mz_bilim_566",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 66)",
+    "question": "Bilim tarihi araştırmalarına göre, Semerkant'ta rasathane kurup yıldız haritası hazırlayan padişah kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Uluğ Bey",
+      "Ali Kuşçu",
+      "Fatih",
+      "Melikşah"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 66)"
+    "correct": "Uluğ Bey",
+    "wisdom": "Uluğ Bey büyük bir devlet adamı ve astronomdur."
   },
   {
-    "id": "mz_q_567",
+    "id": "mz_bilim_567",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 67)",
+    "question": "Bilim tarihi araştırmalarına göre, Sosyolojinin kurucusu kabul edilen ünlü 'Mukaddime' eserinin yazarı kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "İbn-i Tufeyl",
+      "Gazali",
+      "İbn-i Haldun",
+      "İbn-i Rüşd"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 67)"
+    "correct": "İbn-i Haldun",
+    "wisdom": "İbn-i Haldun tarih ve toplum felsefesi yazarıdır."
   },
   {
-    "id": "mz_q_568",
+    "id": "mz_bilim_568",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 68)",
+    "question": "Bilim tarihi araştırmalarına göre, Ceylan derisine Dünya Haritası çizen ünlü Osmanlı denizcisi kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Piri Reis",
+      "Barbaros",
+      "Seydi Ali Reis",
+      "Oruç Reis"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 68)"
+    "correct": "Piri Reis",
+    "wisdom": "Piri Reis denizcilik kitabı Kitab-ı Bahriye'nin yazarıdır."
   },
   {
-    "id": "mz_q_569",
+    "id": "mz_bilim_569",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 69)",
+    "question": "Bilim tarihi araştırmalarına göre, Selimiye ve Süleymaniye camilerini inşa eden dahi Osmanlı başmimarı kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Mimar Sinan",
+      "Kemalettin",
+      "Mimar Davut",
+      "Sedefkar Mehmet Ağa"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 69)"
+    "correct": "Mimar Sinan",
+    "wisdom": "Mimar Sinan mimarlık tarihinin en büyük ustalarındandır."
   },
   {
-    "id": "mz_q_570",
+    "id": "mz_bilim_570",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 70)",
+    "question": "Bilim tarihi araştırmalarına göre, Kimya biliminin babası kabul edilen ve imbik aletini geliştiren bilgin kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Razi",
+      "İbn-i Rüşd",
+      "Cabir bin Hayyan",
+      "Kindi"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 70)"
+    "correct": "Cabir bin Hayyan",
+    "wisdom": "Cabir bin Hayyan kimya elementlerini tasnif etmiştir."
   },
   {
-    "id": "mz_q_571",
+    "id": "mz_bilim_571",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 71)",
+    "question": "Bilim tarihi araştırmalarına göre, Aristoteles yorumlarıyla batıda 'Averroes' olarak bilinen Endülüslü filozof kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "İbn-i Tufeyl",
+      "Farabi",
+      "Gazali",
+      "İbn-i Rüşd"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 71)"
+    "correct": "İbn-i Rüşd",
+    "wisdom": "İbn-i Rüşd akıl ve inanç felsefecisidir."
   },
   {
-    "id": "mz_q_572",
+    "id": "mz_bilim_572",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 72)",
+    "question": "Bilim tarihi araştırmalarına göre, Felsefe tarihinde 'Muallim-i Sani' (İkinci Öğretmen) olarak anılan filozof kimdir?",
     "options": [
+      "Farabi",
       "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Kindi",
+      "Gazali"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 72)"
+    "correct": "Farabi",
+    "wisdom": "Farabi mantık ve müzik üzerine büyük eserler bırakmıştır."
   },
   {
-    "id": "mz_q_573",
+    "id": "mz_bilim_573",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 73)",
+    "question": "Bilim tarihi araştırmalarına göre, 30 yıl boyunca tüm İslam coğrafyasını ve Çin'i gezen ünlü Faslı seyyah kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Evliya Çelebi",
+      "Marco Polo",
+      "İbn-i Cübeyr",
+      "İbn-i Battuta"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 73)"
+    "correct": "İbn-i Battuta",
+    "wisdom": "İbn-i Battuta seyahatname türünün öncülerindendir."
   },
   {
-    "id": "mz_q_574",
+    "id": "mz_bilim_574",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 74)",
+    "question": "Bilim tarihi araştırmalarına göre, 10 ciltlik Seyahatname eseriyle tanınan 17. yüzyıl Osmanlı seyyahı kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Katip Çelebi",
+      "Seydi Ali Reis",
+      "Piri Reis",
+      "Evliya Çelebi"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 74)"
+    "correct": "Evliya Çelebi",
+    "wisdom": "Evliya Çelebi rüyasında peygamberi görüp gezilerine başlamıştır."
   },
   {
-    "id": "mz_q_575",
+    "id": "mz_bilim_575",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 75)",
+    "question": "Bilim tarihi araştırmalarına göre, Bibliyografya uzmanı ve coğrafi 'Cihannüma' eserinin yazarı kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Lagari",
+      "Hezarfen",
+      "Naima",
+      "Katip Çelebi"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 75)"
+    "correct": "Katip Çelebi",
+    "wisdom": "Katip Çelebi binlerce kitabı tasnif etmiştir."
   },
   {
-    "id": "mz_q_576",
+    "id": "mz_bilim_576",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 76)",
+    "question": "Bilim tarihi araştırmalarına göre, Galata Kulesi'nden kanatlarla uçan Osmanlı bilgini kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Hezarfen Ahmed Çelebi",
+      "Mimar Sinan",
+      "Takiyüddin",
+      "Lagari Hasan Çelebi"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 76)"
+    "correct": "Hezarfen Ahmed Çelebi",
+    "wisdom": "Hezarfen havacılık tarihinin önemli öncülerindendir."
   },
   {
-    "id": "mz_q_577",
+    "id": "mz_bilim_577",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 77)",
+    "question": "Bilim tarihi araştırmalarına göre, Dünyada ilk insanlı roket uçuşunu barut fişeğiyle yapan mucit kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Lagari Hasan Çelebi",
+      "Evliya Çelebi",
+      "Takiyüddin",
+      "Hezarfen"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 77)"
+    "correct": "Lagari Hasan Çelebi",
+    "wisdom": "Lagari göğe uçup denize sağ inmiştir."
   },
   {
-    "id": "mz_q_578",
+    "id": "mz_bilim_578",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 78)",
+    "question": "Bilim tarihi araştırmalarına göre, İstanbul'da 1577 yılında ilk rasathaneyi kuran gökbilimci kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Ali Kuşçu",
+      "Takiyüddin",
+      "Uluğ Bey",
+      "Kadızade"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 78)"
+    "correct": "Takiyüddin",
+    "wisdom": "Takiyüddin hassas gözlem aletleri geliştirmiştir."
   },
   {
-    "id": "mz_q_579",
+    "id": "mz_bilim_579",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 79)",
+    "question": "Bilim tarihi araştırmalarına göre, Saatlerde sarkaç mekanizmasını ilk kullanan Mısırlı astronom kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Sufi",
+      "Hazini",
+      "İbn-i Yunus",
+      "El-Battani"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 79)"
+    "correct": "İbn-i Yunus",
+    "wisdom": "İbn-i Yunus trigonometriyi başarıyla uygulamıştır."
   },
   {
-    "id": "mz_q_580",
+    "id": "mz_bilim_580",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 80)",
+    "question": "Bilim tarihi araştırmalarına göre, Trigonometride sinüs kavramını sistemleştiren ve Güneş yılını hesaplayan astronom kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Biruni",
+      "El-Harezmi",
+      "El-Battani",
+      "Ömer Hayyam"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 80)"
+    "correct": "El-Battani",
+    "wisdom": "El-Battani batıda Albategnius olarak bilinir."
   },
   {
-    "id": "mz_q_581",
+    "id": "mz_bilim_581",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 81)",
+    "question": "Bilim tarihi araştırmalarına göre, Cebir biliminin kurucusu olan ve 'Sıfır' (0) rakamını ilk kez kullanan bilgin kimdir?",
     "options": [
+      "El-Harezmi",
       "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Farabi",
+      "Biruni"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 81)"
+    "correct": "El-Harezmi",
+    "wisdom": "El-Harezmi cebir kitabıyla matematiğe yön vermiştir."
   },
   {
-    "id": "mz_q_582",
+    "id": "mz_bilim_582",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 82)",
+    "question": "Bilim tarihi araştırmalarına göre, Tıp alanındaki 'El-Kanun fi't-Tıbb' eseriyle Avrupa'da 'Avicenna' olarak tanınan hekim kimdir?",
     "options": [
+      "İbn-i Rüşd",
       "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Farabi",
+      "Ebu Bekir er-Razi"
     ],
     "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 82)"
+    "wisdom": "İbn-i Sina tıp ve felsefe dehasıdır."
   },
   {
-    "id": "mz_q_583",
+    "id": "mz_bilim_583",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 83)",
+    "question": "Bilim tarihi araştırmalarına göre, Sibernetiğin kurucusu olan ve Diyarbakır'da otomatik makineler yapan dahi mühendis kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Beni Musa",
+      "Hazini",
+      "El-Cezeri",
+      "Uluğ Bey"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 83)"
+    "correct": "El-Cezeri",
+    "wisdom": "El-Cezeri su gücüyle çalışan robotlar icat etmiştir."
   },
   {
-    "id": "mz_q_584",
+    "id": "mz_bilim_584",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 84)",
+    "question": "Bilim tarihi araştırmalarına göre, Dünya'nın çapını hesaplayan ve Gazneli Mahmud'un sarayının hazinesi dediği bilgin kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Uluğ Bey",
+      "El-Biruni",
+      "İbn-i Battuta",
+      "Ali Kuşçu"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 84)"
+    "correct": "El-Biruni",
+    "wisdom": "Biruni astronomi ve coğrafya bilginidir."
   },
   {
-    "id": "mz_q_585",
+    "id": "mz_bilim_585",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 85)",
+    "question": "Bilim tarihi araştırmalarına göre, Fatih Sultan Mehmet'in davetiyle İstanbul'a gelen ve Ay'ın haritasını çizen astronom kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Piri Reis",
+      "Uluğ Bey",
+      "Ali Kuşçu",
+      "Takiyüddin"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 85)"
+    "correct": "Ali Kuşçu",
+    "wisdom": "Ali Kuşçu Osmanlı'da astronomiyi kurumsallaştırmıştır."
   },
   {
-    "id": "mz_q_586",
+    "id": "mz_bilim_586",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 86)",
+    "question": "Bilim tarihi araştırmalarına göre, Semerkant'ta rasathane kurup yıldız haritası hazırlayan padişah kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Uluğ Bey",
+      "Ali Kuşçu",
+      "Fatih",
+      "Melikşah"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 86)"
+    "correct": "Uluğ Bey",
+    "wisdom": "Uluğ Bey büyük bir devlet adamı ve astronomdur."
   },
   {
-    "id": "mz_q_587",
+    "id": "mz_bilim_587",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 87)",
+    "question": "Bilim tarihi araştırmalarına göre, Sosyolojinin kurucusu kabul edilen ünlü 'Mukaddime' eserinin yazarı kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "İbn-i Tufeyl",
+      "Gazali",
+      "İbn-i Haldun",
+      "İbn-i Rüşd"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 87)"
+    "correct": "İbn-i Haldun",
+    "wisdom": "İbn-i Haldun tarih ve toplum felsefesi yazarıdır."
   },
   {
-    "id": "mz_q_588",
+    "id": "mz_bilim_588",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 88)",
+    "question": "Bilim tarihi araştırmalarına göre, Ceylan derisine Dünya Haritası çizen ünlü Osmanlı denizcisi kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Piri Reis",
+      "Barbaros",
+      "Seydi Ali Reis",
+      "Oruç Reis"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 88)"
+    "correct": "Piri Reis",
+    "wisdom": "Piri Reis denizcilik kitabı Kitab-ı Bahriye'nin yazarıdır."
   },
   {
-    "id": "mz_q_589",
+    "id": "mz_bilim_589",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 89)",
+    "question": "Bilim tarihi araştırmalarına göre, Selimiye ve Süleymaniye camilerini inşa eden dahi Osmanlı başmimarı kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Mimar Sinan",
+      "Kemalettin",
+      "Mimar Davut",
+      "Sedefkar Mehmet Ağa"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 89)"
+    "correct": "Mimar Sinan",
+    "wisdom": "Mimar Sinan mimarlık tarihinin en büyük ustalarındandır."
   },
   {
-    "id": "mz_q_590",
+    "id": "mz_bilim_590",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 90)",
+    "question": "Bilim tarihi araştırmalarına göre, Kimya biliminin babası kabul edilen ve imbik aletini geliştiren bilgin kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Razi",
+      "İbn-i Rüşd",
+      "Cabir bin Hayyan",
+      "Kindi"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 90)"
+    "correct": "Cabir bin Hayyan",
+    "wisdom": "Cabir bin Hayyan kimya elementlerini tasnif etmiştir."
   },
   {
-    "id": "mz_q_591",
+    "id": "mz_bilim_591",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 91)",
+    "question": "Bilim tarihi araştırmalarına göre, Aristoteles yorumlarıyla batıda 'Averroes' olarak bilinen Endülüslü filozof kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "İbn-i Tufeyl",
+      "Farabi",
+      "Gazali",
+      "İbn-i Rüşd"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 91)"
+    "correct": "İbn-i Rüşd",
+    "wisdom": "İbn-i Rüşd akıl ve inanç felsefecisidir."
   },
   {
-    "id": "mz_q_592",
+    "id": "mz_bilim_592",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 92)",
+    "question": "Bilim tarihi araştırmalarına göre, Felsefe tarihinde 'Muallim-i Sani' (İkinci Öğretmen) olarak anılan filozof kimdir?",
     "options": [
+      "Farabi",
       "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Kindi",
+      "Gazali"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 92)"
+    "correct": "Farabi",
+    "wisdom": "Farabi mantık ve müzik üzerine büyük eserler bırakmıştır."
   },
   {
-    "id": "mz_q_593",
+    "id": "mz_bilim_593",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 93)",
+    "question": "Bilim tarihi araştırmalarına göre, 30 yıl boyunca tüm İslam coğrafyasını ve Çin'i gezen ünlü Faslı seyyah kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Evliya Çelebi",
+      "Marco Polo",
+      "İbn-i Cübeyr",
+      "İbn-i Battuta"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 93)"
+    "correct": "İbn-i Battuta",
+    "wisdom": "İbn-i Battuta seyahatname türünün öncülerindendir."
   },
   {
-    "id": "mz_q_594",
+    "id": "mz_bilim_594",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 94)",
+    "question": "Bilim tarihi araştırmalarına göre, 10 ciltlik Seyahatname eseriyle tanınan 17. yüzyıl Osmanlı seyyahı kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Katip Çelebi",
+      "Seydi Ali Reis",
+      "Piri Reis",
+      "Evliya Çelebi"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 94)"
+    "correct": "Evliya Çelebi",
+    "wisdom": "Evliya Çelebi rüyasında peygamberi görüp gezilerine başlamıştır."
   },
   {
-    "id": "mz_q_595",
+    "id": "mz_bilim_595",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 95)",
+    "question": "Bilim tarihi araştırmalarına göre, Bibliyografya uzmanı ve coğrafi 'Cihannüma' eserinin yazarı kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Lagari",
+      "Hezarfen",
+      "Naima",
+      "Katip Çelebi"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 95)"
+    "correct": "Katip Çelebi",
+    "wisdom": "Katip Çelebi binlerce kitabı tasnif etmiştir."
   },
   {
-    "id": "mz_q_596",
+    "id": "mz_bilim_596",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 96)",
+    "question": "Bilim tarihi araştırmalarına göre, Galata Kulesi'nden kanatlarla uçan Osmanlı bilgini kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Hezarfen Ahmed Çelebi",
+      "Mimar Sinan",
+      "Takiyüddin",
+      "Lagari Hasan Çelebi"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 96)"
+    "correct": "Hezarfen Ahmed Çelebi",
+    "wisdom": "Hezarfen havacılık tarihinin önemli öncülerindendir."
   },
   {
-    "id": "mz_q_597",
+    "id": "mz_bilim_597",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 97)",
+    "question": "Bilim tarihi araştırmalarına göre, Dünyada ilk insanlı roket uçuşunu barut fişeğiyle yapan mucit kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Lagari Hasan Çelebi",
+      "Evliya Çelebi",
+      "Takiyüddin",
+      "Hezarfen"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 97)"
+    "correct": "Lagari Hasan Çelebi",
+    "wisdom": "Lagari göğe uçup denize sağ inmiştir."
   },
   {
-    "id": "mz_q_598",
+    "id": "mz_bilim_598",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 98)",
+    "question": "Bilim tarihi araştırmalarına göre, İstanbul'da 1577 yılında ilk rasathaneyi kuran gökbilimci kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Ali Kuşçu",
+      "Takiyüddin",
+      "Uluğ Bey",
+      "Kadızade"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 98)"
+    "correct": "Takiyüddin",
+    "wisdom": "Takiyüddin hassas gözlem aletleri geliştirmiştir."
   },
   {
-    "id": "mz_q_599",
+    "id": "mz_bilim_599",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 99)",
+    "question": "Bilim tarihi araştırmalarına göre, Saatlerde sarkaç mekanizmasını ilk kullanan Mısırlı astronom kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Sufi",
+      "Hazini",
+      "İbn-i Yunus",
+      "El-Battani"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 99)"
+    "correct": "İbn-i Yunus",
+    "wisdom": "İbn-i Yunus trigonometriyi başarıyla uygulamıştır."
   },
   {
-    "id": "mz_q_600",
+    "id": "mz_bilim_600",
     "category": "İslami Bilim Adamları",
-    "question": "Aşağıdakilerden hangisi İslam medeniyetinde yetişmiş ünlü bilim insanlarından biridir? (Soru 100)",
+    "question": "Bilim tarihi araştırmalarına göre, Trigonometride sinüs kavramını sistemleştiren ve Güneş yılını hesaplayan astronom kimdir?",
     "options": [
-      "İbn-i Sina",
-      "Galileo",
-      "Copernicus",
-      "Einstein"
+      "Biruni",
+      "El-Harezmi",
+      "El-Battani",
+      "Ömer Hayyam"
     ],
-    "correct": "İbn-i Sina",
-    "wisdom": "İslam bilim insanları matematik, tıp, fizik ve astronomi gibi birçok alanda modern bilimin temellerini atmışlardır. (Bilim Soru 100)"
+    "correct": "El-Battani",
+    "wisdom": "El-Battani batıda Albategnius olarak bilinir."
   },
   {
-    "id": "mz_q_601",
+    "id": "mz_cografya_601",
     "category": "Coğrafya",
-    "question": "Türkiye Cumhuriyeti'nin başkenti aşağıdakilerden hangisidir?",
+    "question": "Coğrafya bilgilerimize göre, Türkiye Cumhuriyeti'nin başkenti hangi şehirdir?",
     "options": [
+      "Bursa",
       "Ankara",
       "İstanbul",
-      "İzmir",
-      "Bursa"
+      "İzmir"
     ],
     "correct": "Ankara",
-    "wisdom": "Ankara, 13 Ekim 1923'te Türkiye'nin başkenti ilan edilmiştir."
+    "wisdom": "Ankara 1923'te başkent yapılmıştır."
   },
   {
-    "id": "mz_q_602",
+    "id": "mz_cografya_602",
     "category": "Coğrafya",
-    "question": "Dünyanın en uzun nehri aşağıdakilerden hangisidir?",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en uzun nehri hangisidir?",
     "options": [
       "Nil Nehri",
+      "Fırat Nehri",
       "Amazon Nehri",
-      "Yangtze Nehri",
-      "Fırat Nehri"
+      "Yangtze Nehri"
     ],
     "correct": "Nil Nehri",
-    "wisdom": "Nil Nehri, Afrika kıtasında yer alır ve Akdeniz'e dökülür."
+    "wisdom": "Nil nehri Afrika'da yer alır."
   },
   {
-    "id": "mz_q_603",
+    "id": "mz_cografya_603",
     "category": "Coğrafya",
-    "question": "Dünyanın en yüksek zirvesi olan dağ hangisidir?",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en yüksek dağı hangisidir?",
     "options": [
-      "Everest Dağı",
-      "K2 Dağı",
       "Kilimanjaro Dağı",
-      "Ağrı Dağı"
+      "Everest Dağı",
+      "Ağrı Dağı",
+      "K2 Dağı"
     ],
     "correct": "Everest Dağı",
-    "wisdom": "Everest Dağı, Nepal sınırlarında, Himalayalar'da yer alır ve yüksekliği 8.848 metredir."
+    "wisdom": "Everest Himalayalar'da 8.848 metredir."
   },
   {
-    "id": "mz_q_604",
+    "id": "mz_cografya_604",
     "category": "Coğrafya",
-    "question": "Dünyanın en büyük sıcak çölü aşağıdakilerden hangisidir?",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en büyük sıcak çölü hangisidir?",
     "options": [
       "Büyük Sahra Çölü",
+      "Kızılkum Çölü",
       "Gobi Çölü",
-      "Kalahari Çölü",
-      "Kızılkum Çölü"
+      "Kalahari Çölü"
     ],
     "correct": "Büyük Sahra Çölü",
-    "wisdom": "Büyük Sahra Çölü, Afrika kıtasının kuzeyinde devasa bir alanı kaplar."
+    "wisdom": "Büyük Sahra Kuzey Afrika'dadır."
   },
   {
-    "id": "mz_q_605",
+    "id": "mz_cografya_605",
     "category": "Coğrafya",
-    "question": "Asya ve Avrupa kıtalarını birbirine bağlayan Türkiye'deki ünlü boğazlar hangileridir?",
+    "question": "Coğrafya bilgilerimize göre, Asya ve Avrupa kıtalarını birbirine bağlayan boğazlar hangileridir?",
     "options": [
-      "İstanbul ve Çanakkale Boğazları",
+      "Bering Boğazı",
       "Cebelitarık Boğazı",
       "Süveyş Kanalı",
-      "Bering Boğazı"
+      "İstanbul ve Çanakkale Boğazları"
     ],
     "correct": "İstanbul ve Çanakkale Boğazları",
-    "wisdom": "İstanbul ve Çanakkale boğazları jeopolitik açıdan dünyanın en önemli geçiş yollarındandır."
+    "wisdom": "Türkiye boğazları jeopolitik öneme sahiptir."
   },
   {
-    "id": "mz_q_606",
+    "id": "mz_cografya_606",
     "category": "Coğrafya",
-    "question": "Dünyanın en büyük gölü (yüzölçümü bakımından) hangisidir?",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en büyük gölü hangisidir?",
     "options": [
-      "Hazar Denizi",
-      "Superior Gölü",
       "Victoria Gölü",
-      "Van Gölü"
+      "Superior Gölü",
+      "Van Gölü",
+      "Hazar Denizi"
     ],
     "correct": "Hazar Denizi",
-    "wisdom": "Hazar Denizi, büyüklüğü ve tuzlu suyu nedeniyle deniz olarak anılsa da coğrafi olarak kapalı bir göldür."
+    "wisdom": "Hazar Denizi kapalı havza gölüdür."
   },
   {
-    "id": "mz_q_607",
+    "id": "mz_cografya_607",
     "category": "Coğrafya",
-    "question": "Dünyayı kuzey ve güney yarım küre olarak iki eşit parçaya böldüğü varsayılan hayali çizgiye ne denir?",
+    "question": "Coğrafya bilgilerimize göre, Dünyayı iki eşit yarım küreye bölen hayali çizgi nedir?",
     "options": [
-      "Ekvator",
-      "Meridyen",
       "Paralel",
-      "Başlangıç Meridyeni"
+      "Meridyen",
+      "Başlangıç Meridyeni",
+      "Ekvator"
     ],
     "correct": "Ekvator",
-    "wisdom": "Ekvator çizgisi, Güneş ışınlarını yıl boyunca dik ve dike yakın açılarla alır."
+    "wisdom": "Ekvator çizgisi dik güneş ışığı alır."
   },
   {
-    "id": "mz_q_608",
+    "id": "mz_cografya_608",
     "category": "Coğrafya",
-    "question": "Dünyanın nüfusu en kalabalık olan ülkesi hangisidir?",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en kalabalık nüfuslu ülkesi hangisidir?",
     "options": [
-      "Hindistan",
       "Çin",
+      "Hindistan",
       "ABD",
       "Endonezya"
     ],
     "correct": "Hindistan",
-    "wisdom": "Hindistan, yakın dönemde Çin'i geçerek dünyanın en kalabalık nüfusuna sahip ülkesi olmuştur."
+    "wisdom": "Hindistan nüfus lideridir."
   },
   {
-    "id": "mz_q_609",
+    "id": "mz_cografya_609",
     "category": "Coğrafya",
-    "question": "Yüzölçümü bakımından dünyanın en büyük ülkesi hangisidir?",
+    "question": "Coğrafya bilgilerimize göre, Yüzölçümü en büyük ülke hangisidir?",
     "options": [
-      "Rusya",
-      "Kanada",
       "Çin",
-      "ABD"
+      "ABD",
+      "Kanada",
+      "Rusya"
     ],
     "correct": "Rusya",
-    "wisdom": "Rusya, 17 milyon kilometrekareyi aşan topraklarıyla dünyanın en geniş ülkesidir."
+    "wisdom": "Rusya dünyanın en geniş kara parçasına sahiptir."
   },
   {
-    "id": "mz_q_610",
+    "id": "mz_cografya_610",
     "category": "Coğrafya",
-    "question": "Akdeniz'i Kızıldeniz'e bağlayan yapay kanal hangisidir?",
+    "question": "Coğrafya bilgilerimize göre, Akdeniz'i Kızıldeniz'e bağlayan yapay kanal hangisidir?",
     "options": [
-      "Süveyş Kanalı",
-      "Panama Kanalı",
       "Kiel Kanalı",
-      "Korint Kanalı"
+      "Panama Kanalı",
+      "Korint Kanalı",
+      "Süveyş Kanalı"
     ],
     "correct": "Süveyş Kanalı",
-    "wisdom": "Süveyş Kanalı, Mısır'da yer alır ve deniz ticaret yollarını binlerce kilometre kısaltmıştır."
+    "wisdom": "Süveyş kanalı deniz yollarını kısaltmıştır."
   },
   {
-    "id": "mz_q_611",
+    "id": "mz_cografya_611",
     "category": "Coğrafya",
-    "question": "Akdeniz'i Atlas Okyanusu'na bağlayan boğaz hangisidir?",
+    "question": "Coğrafya bilgilerimize göre, Akdeniz'i Atlas Okyanusu'na bağlayan geçit hangisidir?",
     "options": [
-      "Cebelitarık Boğazı",
       "Babülmendep Boğazı",
       "Hürmüz Boğazı",
-      "Malakka Boğazı"
+      "Malakka Boğazı",
+      "Cebelitarık Boğazı"
     ],
     "correct": "Cebelitarık Boğazı",
-    "wisdom": "Cebelitarık Boğazı adını, Tarık bin Ziyad'ın İspanya fethine çıkarken buraya ayak basmasından alır (Cebel-i Tarık: Tarık'ın Dağı)."
+    "wisdom": "Cebelitarık adını Tarık bin Ziyad'dan alır."
   },
   {
-    "id": "mz_q_612",
+    "id": "mz_cografya_612",
     "category": "Coğrafya",
-    "question": "Yüzölçümü bakımından dünyanın en küçük kıtası hangisidir?",
+    "question": "Coğrafya bilgilerimize göre, Yüzölçümü en küçük kıta hangisidir?",
     "options": [
       "Okyanusya (Avustralya)",
       "Avrupa",
@@ -7962,2450 +7962,2450 @@ export const MAZE_QUESTIONS_DB: MazeQuestion[] = [
       "Güney Amerika"
     ],
     "correct": "Okyanusya (Avustralya)",
-    "wisdom": "Okyanusya, diğer kıtalara göre kara alanı en küçük olan kıtadır."
+    "wisdom": "Okyanusya en küçük kıtadır."
   },
   {
-    "id": "mz_q_613",
+    "id": "mz_cografya_613",
     "category": "Coğrafya",
-    "question": "Türkiye'den doğup Suriye ve Irak'tan geçerek Basra Körfezi'ne dökülen nehirler hangileridir?",
+    "question": "Coğrafya bilgilerimize göre, Basra Körfezi'ne dökülen nehirlerimiz hangileridir?",
     "options": [
-      "Fırat ve Dicle",
-      "Kızılırmak ve Yeşilırmak",
       "Nil ve Kongo",
-      "Seyhan ve Ceyhan"
+      "Kızılırmak ve Yeşilırmak",
+      "Seyhan ve Ceyhan",
+      "Fırat ve Dicle"
     ],
     "correct": "Fırat ve Dicle",
-    "wisdom": "Fırat ve Dicle nehirlerinin arasındaki bölgeye Mezopotamya adı verilir."
+    "wisdom": "Mezopotamya bu iki nehir arasındadır."
   },
   {
-    "id": "mz_q_614",
+    "id": "mz_cografya_614",
     "category": "Coğrafya",
-    "question": "Dünya üzerindeki en derin nokta olan çukurluk hangisidir?",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en derin yeri hangisidir?",
     "options": [
       "Mariana Çukuru",
       "Porto Riko Çukuru",
-      "Java Çukuru",
-      "Gökova Çukuru"
+      "Gökova Çukuru",
+      "Java Çukuru"
     ],
     "correct": "Mariana Çukuru",
-    "wisdom": "Mariana Çukuru, Büyük Okyanus'ta yer alır ve derinliği yaklaşık 11 kilometredir."
+    "wisdom": "Mariana Çukuru Pasifik'te 11 kilometredir."
   },
   {
-    "id": "mz_q_615",
+    "id": "mz_cografya_615",
     "category": "Coğrafya",
-    "question": "Basınç farkı nedeniyle havanın yatay yönde hareket etmesiyle oluşan doğa olayına ne ad verilir?",
+    "question": "Coğrafya bilgilerimize göre, Yatay yönlü hava hareketine ne ad verilir?",
     "options": [
-      "Rüzgar",
+      "Kasırga",
       "Yağmur",
       "Nem",
-      "Kasırga"
+      "Rüzgar"
     ],
     "correct": "Rüzgar",
-    "wisdom": "Rüzgarlar, yüksek basınç alanlarından alçak basınç alanlarına doğru eserler."
+    "wisdom": "Rüzgar basınç farkıyla oluşur."
   },
   {
-    "id": "mz_q_616",
+    "id": "mz_cografya_616",
     "category": "Coğrafya",
-    "question": "Sınırları tamamen Türkiye içerisinde kalan en uzun nehir hangisidir?",
+    "question": "Coğrafya bilgilerimize göre, Sınırlarımız içindeki en uzun nehir hangisidir?",
     "options": [
-      "Kızılırmak",
+      "Yeşilırmak",
       "Fırat",
-      "Sakarya",
-      "Yeşilırmak"
+      "Kızılırmak",
+      "Sakarya"
     ],
     "correct": "Kızılırmak",
-    "wisdom": "Kızılırmak, Sivas'tan doğup Karadeniz'e dökülen en uzun nehrimizdir."
+    "wisdom": "Kızılırmak Karadeniz'e dökülür."
   },
   {
-    "id": "mz_q_617",
+    "id": "mz_cografya_617",
     "category": "Coğrafya",
-    "question": "Türkiye'nin en büyük gölü hangisidir?",
+    "question": "Coğrafya bilgilerimize göre, Türkiye'nin en büyük gölü hangisidir?",
     "options": [
-      "Van Gölü",
       "Tuz Gölü",
       "Beyşehir Gölü",
+      "Van Gölü",
       "Eğirdir Gölü"
     ],
     "correct": "Van Gölü",
-    "wisdom": "Van Gölü, sodalı suyuyla bilinen volkanik set gölüdür ve dünyanın en büyük sodalı gölüdür."
+    "wisdom": "Van gölü sodalı suyuyla bilinir."
   },
   {
-    "id": "mz_q_618",
+    "id": "mz_cografya_618",
     "category": "Coğrafya",
-    "question": "Sınırları tamamen tek bir ülkeye (Türkiye'ye) ait olan iç deniz hangisidir?",
+    "question": "Coğrafya bilgilerimize göre, Sınırlarımız içinde kalan iç deniz hangisidir?",
     "options": [
-      "Marmara Denizi",
       "Karadeniz",
+      "Marmara Denizi",
       "Ege Denizi",
       "Kızıldeniz"
     ],
     "correct": "Marmara Denizi",
-    "wisdom": "Marmara Denizi, İstanbul ve Çanakkale boğazlarıyla Karadeniz ve Ege'yi bağlayan bir iç denizdir."
+    "wisdom": "Marmara tamamen Türkiye'ye aittir."
   },
   {
-    "id": "mz_q_619",
+    "id": "mz_cografya_619",
     "category": "Coğrafya",
-    "question": "Dünyanın en güneyinde yer alan, üzeri tamamen buzullarla kaplı olan ve üzerinde kalıcı yerleşim bulunmayan kıta hangisidir?",
+    "question": "Coğrafya bilgilerimize göre, Güney kutbundaki buzlarla kaplı kıta hangisidir?",
     "options": [
-      "Antarktika",
       "Grönland",
       "Avustralya",
-      "Kuzey Kutbu"
+      "Kuzey Kutbu",
+      "Antarktika"
     ],
     "correct": "Antarktika",
-    "wisdom": "Antarktika, yeryüzünün en soğuk, en kuru ve en rüzgarlı kıtasıdır."
+    "wisdom": "Antarktika'da kalıcı yerleşim yoktur."
   },
   {
-    "id": "mz_q_620",
+    "id": "mz_cografya_620",
     "category": "Coğrafya",
-    "question": "Dünyadaki aktif deprem ve volkan faaliyetlerinin en yoğun olduğu, 'Pasifik Ateş Çemberi' olarak anılan bölge hangi okyanus çevresindedir?",
+    "question": "Coğrafya bilgilerimize göre, Deprem kuşağının en yoğun olduğu Pasifik çevresi ne olarak adlandırılır?",
     "options": [
-      "Büyük Okyanus",
-      "Atlas Okyanusu",
-      "Hint Okyanusu",
-      "Arktik Okyanusu"
+      "Hint Deprem Zonu",
+      "Pasifik Ateş Çemberi",
+      "Alp-Himalaya Kuşağı",
+      "Atlas Deprem Alanı"
     ],
-    "correct": "Büyük Okyanus",
-    "wisdom": "Ateş Çemberi, dünyadaki depremlerin yaklaşık %90'ının gerçekleştiği kuşaktır."
+    "correct": "Pasifik Ateş Çemberi",
+    "wisdom": "Depremlerin %90'ı burada gerçekleşir."
   },
   {
-    "id": "mz_q_621",
+    "id": "mz_cografya_621",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 21)",
+    "question": "Coğrafya bilgilerimize göre, Türkiye Cumhuriyeti'nin başkenti hangi şehirdir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Bursa",
+      "Ankara",
+      "İstanbul",
+      "İzmir"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 21)"
+    "correct": "Ankara",
+    "wisdom": "Ankara 1923'te başkent yapılmıştır."
   },
   {
-    "id": "mz_q_622",
+    "id": "mz_cografya_622",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 22)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en uzun nehri hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Nil Nehri",
+      "Fırat Nehri",
+      "Amazon Nehri",
+      "Yangtze Nehri"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 22)"
+    "correct": "Nil Nehri",
+    "wisdom": "Nil nehri Afrika'da yer alır."
   },
   {
-    "id": "mz_q_623",
+    "id": "mz_cografya_623",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 23)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en yüksek dağı hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Kilimanjaro Dağı",
+      "Everest Dağı",
+      "Ağrı Dağı",
+      "K2 Dağı"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 23)"
+    "correct": "Everest Dağı",
+    "wisdom": "Everest Himalayalar'da 8.848 metredir."
   },
   {
-    "id": "mz_q_624",
+    "id": "mz_cografya_624",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 24)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en büyük sıcak çölü hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Büyük Sahra Çölü",
+      "Kızılkum Çölü",
+      "Gobi Çölü",
+      "Kalahari Çölü"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 24)"
+    "correct": "Büyük Sahra Çölü",
+    "wisdom": "Büyük Sahra Kuzey Afrika'dadır."
   },
   {
-    "id": "mz_q_625",
+    "id": "mz_cografya_625",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 25)",
+    "question": "Coğrafya bilgilerimize göre, Asya ve Avrupa kıtalarını birbirine bağlayan boğazlar hangileridir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Bering Boğazı",
+      "Cebelitarık Boğazı",
+      "Süveyş Kanalı",
+      "İstanbul ve Çanakkale Boğazları"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 25)"
+    "correct": "İstanbul ve Çanakkale Boğazları",
+    "wisdom": "Türkiye boğazları jeopolitik öneme sahiptir."
   },
   {
-    "id": "mz_q_626",
+    "id": "mz_cografya_626",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 26)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en büyük gölü hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Victoria Gölü",
+      "Superior Gölü",
+      "Van Gölü",
+      "Hazar Denizi"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 26)"
+    "correct": "Hazar Denizi",
+    "wisdom": "Hazar Denizi kapalı havza gölüdür."
   },
   {
-    "id": "mz_q_627",
+    "id": "mz_cografya_627",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 27)",
+    "question": "Coğrafya bilgilerimize göre, Dünyayı iki eşit yarım küreye bölen hayali çizgi nedir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Paralel",
+      "Meridyen",
+      "Başlangıç Meridyeni",
+      "Ekvator"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 27)"
+    "correct": "Ekvator",
+    "wisdom": "Ekvator çizgisi dik güneş ışığı alır."
   },
   {
-    "id": "mz_q_628",
+    "id": "mz_cografya_628",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 28)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en kalabalık nüfuslu ülkesi hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Çin",
+      "Hindistan",
+      "ABD",
+      "Endonezya"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 28)"
+    "correct": "Hindistan",
+    "wisdom": "Hindistan nüfus lideridir."
   },
   {
-    "id": "mz_q_629",
+    "id": "mz_cografya_629",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 29)",
+    "question": "Coğrafya bilgilerimize göre, Yüzölçümü en büyük ülke hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Çin",
+      "ABD",
+      "Kanada",
+      "Rusya"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 29)"
+    "correct": "Rusya",
+    "wisdom": "Rusya dünyanın en geniş kara parçasına sahiptir."
   },
   {
-    "id": "mz_q_630",
+    "id": "mz_cografya_630",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 30)",
+    "question": "Coğrafya bilgilerimize göre, Akdeniz'i Kızıldeniz'e bağlayan yapay kanal hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Kiel Kanalı",
+      "Panama Kanalı",
+      "Korint Kanalı",
+      "Süveyş Kanalı"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 30)"
+    "correct": "Süveyş Kanalı",
+    "wisdom": "Süveyş kanalı deniz yollarını kısaltmıştır."
   },
   {
-    "id": "mz_q_631",
+    "id": "mz_cografya_631",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 31)",
+    "question": "Coğrafya bilgilerimize göre, Akdeniz'i Atlas Okyanusu'na bağlayan geçit hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Babülmendep Boğazı",
+      "Hürmüz Boğazı",
+      "Malakka Boğazı",
+      "Cebelitarık Boğazı"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 31)"
+    "correct": "Cebelitarık Boğazı",
+    "wisdom": "Cebelitarık adını Tarık bin Ziyad'dan alır."
   },
   {
-    "id": "mz_q_632",
+    "id": "mz_cografya_632",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 32)",
+    "question": "Coğrafya bilgilerimize göre, Yüzölçümü en küçük kıta hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Okyanusya (Avustralya)",
+      "Avrupa",
+      "Antarktika",
+      "Güney Amerika"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 32)"
+    "correct": "Okyanusya (Avustralya)",
+    "wisdom": "Okyanusya en küçük kıtadır."
   },
   {
-    "id": "mz_q_633",
+    "id": "mz_cografya_633",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 33)",
+    "question": "Coğrafya bilgilerimize göre, Basra Körfezi'ne dökülen nehirlerimiz hangileridir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Nil ve Kongo",
+      "Kızılırmak ve Yeşilırmak",
+      "Seyhan ve Ceyhan",
+      "Fırat ve Dicle"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 33)"
+    "correct": "Fırat ve Dicle",
+    "wisdom": "Mezopotamya bu iki nehir arasındadır."
   },
   {
-    "id": "mz_q_634",
+    "id": "mz_cografya_634",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 34)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en derin yeri hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Mariana Çukuru",
+      "Porto Riko Çukuru",
+      "Gökova Çukuru",
+      "Java Çukuru"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 34)"
+    "correct": "Mariana Çukuru",
+    "wisdom": "Mariana Çukuru Pasifik'te 11 kilometredir."
   },
   {
-    "id": "mz_q_635",
+    "id": "mz_cografya_635",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 35)",
+    "question": "Coğrafya bilgilerimize göre, Yatay yönlü hava hareketine ne ad verilir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Kasırga",
+      "Yağmur",
+      "Nem",
+      "Rüzgar"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 35)"
+    "correct": "Rüzgar",
+    "wisdom": "Rüzgar basınç farkıyla oluşur."
   },
   {
-    "id": "mz_q_636",
+    "id": "mz_cografya_636",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 36)",
+    "question": "Coğrafya bilgilerimize göre, Sınırlarımız içindeki en uzun nehir hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Yeşilırmak",
+      "Fırat",
+      "Kızılırmak",
+      "Sakarya"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 36)"
+    "correct": "Kızılırmak",
+    "wisdom": "Kızılırmak Karadeniz'e dökülür."
   },
   {
-    "id": "mz_q_637",
+    "id": "mz_cografya_637",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 37)",
+    "question": "Coğrafya bilgilerimize göre, Türkiye'nin en büyük gölü hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Tuz Gölü",
+      "Beyşehir Gölü",
+      "Van Gölü",
+      "Eğirdir Gölü"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 37)"
+    "correct": "Van Gölü",
+    "wisdom": "Van gölü sodalı suyuyla bilinir."
   },
   {
-    "id": "mz_q_638",
+    "id": "mz_cografya_638",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 38)",
+    "question": "Coğrafya bilgilerimize göre, Sınırlarımız içinde kalan iç deniz hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Karadeniz",
+      "Marmara Denizi",
+      "Ege Denizi",
+      "Kızıldeniz"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 38)"
+    "correct": "Marmara Denizi",
+    "wisdom": "Marmara tamamen Türkiye'ye aittir."
   },
   {
-    "id": "mz_q_639",
+    "id": "mz_cografya_639",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 39)",
+    "question": "Coğrafya bilgilerimize göre, Güney kutbundaki buzlarla kaplı kıta hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Grönland",
+      "Avustralya",
+      "Kuzey Kutbu",
+      "Antarktika"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 39)"
+    "correct": "Antarktika",
+    "wisdom": "Antarktika'da kalıcı yerleşim yoktur."
   },
   {
-    "id": "mz_q_640",
+    "id": "mz_cografya_640",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 40)",
+    "question": "Coğrafya bilgilerimize göre, Deprem kuşağının en yoğun olduğu Pasifik çevresi ne olarak adlandırılır?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Hint Deprem Zonu",
+      "Pasifik Ateş Çemberi",
+      "Alp-Himalaya Kuşağı",
+      "Atlas Deprem Alanı"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 40)"
+    "correct": "Pasifik Ateş Çemberi",
+    "wisdom": "Depremlerin %90'ı burada gerçekleşir."
   },
   {
-    "id": "mz_q_641",
+    "id": "mz_cografya_641",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 41)",
+    "question": "Coğrafya bilgilerimize göre, Türkiye Cumhuriyeti'nin başkenti hangi şehirdir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Bursa",
+      "Ankara",
+      "İstanbul",
+      "İzmir"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 41)"
+    "correct": "Ankara",
+    "wisdom": "Ankara 1923'te başkent yapılmıştır."
   },
   {
-    "id": "mz_q_642",
+    "id": "mz_cografya_642",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 42)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en uzun nehri hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Nil Nehri",
+      "Fırat Nehri",
+      "Amazon Nehri",
+      "Yangtze Nehri"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 42)"
+    "correct": "Nil Nehri",
+    "wisdom": "Nil nehri Afrika'da yer alır."
   },
   {
-    "id": "mz_q_643",
+    "id": "mz_cografya_643",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 43)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en yüksek dağı hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Kilimanjaro Dağı",
+      "Everest Dağı",
+      "Ağrı Dağı",
+      "K2 Dağı"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 43)"
+    "correct": "Everest Dağı",
+    "wisdom": "Everest Himalayalar'da 8.848 metredir."
   },
   {
-    "id": "mz_q_644",
+    "id": "mz_cografya_644",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 44)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en büyük sıcak çölü hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Büyük Sahra Çölü",
+      "Kızılkum Çölü",
+      "Gobi Çölü",
+      "Kalahari Çölü"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 44)"
+    "correct": "Büyük Sahra Çölü",
+    "wisdom": "Büyük Sahra Kuzey Afrika'dadır."
   },
   {
-    "id": "mz_q_645",
+    "id": "mz_cografya_645",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 45)",
+    "question": "Coğrafya bilgilerimize göre, Asya ve Avrupa kıtalarını birbirine bağlayan boğazlar hangileridir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Bering Boğazı",
+      "Cebelitarık Boğazı",
+      "Süveyş Kanalı",
+      "İstanbul ve Çanakkale Boğazları"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 45)"
+    "correct": "İstanbul ve Çanakkale Boğazları",
+    "wisdom": "Türkiye boğazları jeopolitik öneme sahiptir."
   },
   {
-    "id": "mz_q_646",
+    "id": "mz_cografya_646",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 46)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en büyük gölü hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Victoria Gölü",
+      "Superior Gölü",
+      "Van Gölü",
+      "Hazar Denizi"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 46)"
+    "correct": "Hazar Denizi",
+    "wisdom": "Hazar Denizi kapalı havza gölüdür."
   },
   {
-    "id": "mz_q_647",
+    "id": "mz_cografya_647",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 47)",
+    "question": "Coğrafya bilgilerimize göre, Dünyayı iki eşit yarım küreye bölen hayali çizgi nedir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Paralel",
+      "Meridyen",
+      "Başlangıç Meridyeni",
+      "Ekvator"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 47)"
+    "correct": "Ekvator",
+    "wisdom": "Ekvator çizgisi dik güneş ışığı alır."
   },
   {
-    "id": "mz_q_648",
+    "id": "mz_cografya_648",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 48)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en kalabalık nüfuslu ülkesi hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Çin",
+      "Hindistan",
+      "ABD",
+      "Endonezya"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 48)"
+    "correct": "Hindistan",
+    "wisdom": "Hindistan nüfus lideridir."
   },
   {
-    "id": "mz_q_649",
+    "id": "mz_cografya_649",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 49)",
+    "question": "Coğrafya bilgilerimize göre, Yüzölçümü en büyük ülke hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Çin",
+      "ABD",
+      "Kanada",
+      "Rusya"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 49)"
+    "correct": "Rusya",
+    "wisdom": "Rusya dünyanın en geniş kara parçasına sahiptir."
   },
   {
-    "id": "mz_q_650",
+    "id": "mz_cografya_650",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 50)",
+    "question": "Coğrafya bilgilerimize göre, Akdeniz'i Kızıldeniz'e bağlayan yapay kanal hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Kiel Kanalı",
+      "Panama Kanalı",
+      "Korint Kanalı",
+      "Süveyş Kanalı"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 50)"
+    "correct": "Süveyş Kanalı",
+    "wisdom": "Süveyş kanalı deniz yollarını kısaltmıştır."
   },
   {
-    "id": "mz_q_651",
+    "id": "mz_cografya_651",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 51)",
+    "question": "Coğrafya bilgilerimize göre, Akdeniz'i Atlas Okyanusu'na bağlayan geçit hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Babülmendep Boğazı",
+      "Hürmüz Boğazı",
+      "Malakka Boğazı",
+      "Cebelitarık Boğazı"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 51)"
+    "correct": "Cebelitarık Boğazı",
+    "wisdom": "Cebelitarık adını Tarık bin Ziyad'dan alır."
   },
   {
-    "id": "mz_q_652",
+    "id": "mz_cografya_652",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 52)",
+    "question": "Coğrafya bilgilerimize göre, Yüzölçümü en küçük kıta hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Okyanusya (Avustralya)",
+      "Avrupa",
+      "Antarktika",
+      "Güney Amerika"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 52)"
+    "correct": "Okyanusya (Avustralya)",
+    "wisdom": "Okyanusya en küçük kıtadır."
   },
   {
-    "id": "mz_q_653",
+    "id": "mz_cografya_653",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 53)",
+    "question": "Coğrafya bilgilerimize göre, Basra Körfezi'ne dökülen nehirlerimiz hangileridir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Nil ve Kongo",
+      "Kızılırmak ve Yeşilırmak",
+      "Seyhan ve Ceyhan",
+      "Fırat ve Dicle"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 53)"
+    "correct": "Fırat ve Dicle",
+    "wisdom": "Mezopotamya bu iki nehir arasındadır."
   },
   {
-    "id": "mz_q_654",
+    "id": "mz_cografya_654",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 54)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en derin yeri hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Mariana Çukuru",
+      "Porto Riko Çukuru",
+      "Gökova Çukuru",
+      "Java Çukuru"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 54)"
+    "correct": "Mariana Çukuru",
+    "wisdom": "Mariana Çukuru Pasifik'te 11 kilometredir."
   },
   {
-    "id": "mz_q_655",
+    "id": "mz_cografya_655",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 55)",
+    "question": "Coğrafya bilgilerimize göre, Yatay yönlü hava hareketine ne ad verilir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Kasırga",
+      "Yağmur",
+      "Nem",
+      "Rüzgar"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 55)"
+    "correct": "Rüzgar",
+    "wisdom": "Rüzgar basınç farkıyla oluşur."
   },
   {
-    "id": "mz_q_656",
+    "id": "mz_cografya_656",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 56)",
+    "question": "Coğrafya bilgilerimize göre, Sınırlarımız içindeki en uzun nehir hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Yeşilırmak",
+      "Fırat",
+      "Kızılırmak",
+      "Sakarya"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 56)"
+    "correct": "Kızılırmak",
+    "wisdom": "Kızılırmak Karadeniz'e dökülür."
   },
   {
-    "id": "mz_q_657",
+    "id": "mz_cografya_657",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 57)",
+    "question": "Coğrafya bilgilerimize göre, Türkiye'nin en büyük gölü hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Tuz Gölü",
+      "Beyşehir Gölü",
+      "Van Gölü",
+      "Eğirdir Gölü"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 57)"
+    "correct": "Van Gölü",
+    "wisdom": "Van gölü sodalı suyuyla bilinir."
   },
   {
-    "id": "mz_q_658",
+    "id": "mz_cografya_658",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 58)",
+    "question": "Coğrafya bilgilerimize göre, Sınırlarımız içinde kalan iç deniz hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Karadeniz",
+      "Marmara Denizi",
+      "Ege Denizi",
+      "Kızıldeniz"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 58)"
+    "correct": "Marmara Denizi",
+    "wisdom": "Marmara tamamen Türkiye'ye aittir."
   },
   {
-    "id": "mz_q_659",
+    "id": "mz_cografya_659",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 59)",
+    "question": "Coğrafya bilgilerimize göre, Güney kutbundaki buzlarla kaplı kıta hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Grönland",
+      "Avustralya",
+      "Kuzey Kutbu",
+      "Antarktika"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 59)"
+    "correct": "Antarktika",
+    "wisdom": "Antarktika'da kalıcı yerleşim yoktur."
   },
   {
-    "id": "mz_q_660",
+    "id": "mz_cografya_660",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 60)",
+    "question": "Coğrafya bilgilerimize göre, Deprem kuşağının en yoğun olduğu Pasifik çevresi ne olarak adlandırılır?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Hint Deprem Zonu",
+      "Pasifik Ateş Çemberi",
+      "Alp-Himalaya Kuşağı",
+      "Atlas Deprem Alanı"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 60)"
+    "correct": "Pasifik Ateş Çemberi",
+    "wisdom": "Depremlerin %90'ı burada gerçekleşir."
   },
   {
-    "id": "mz_q_661",
+    "id": "mz_cografya_661",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 61)",
+    "question": "Coğrafya bilgilerimize göre, Türkiye Cumhuriyeti'nin başkenti hangi şehirdir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Bursa",
+      "Ankara",
+      "İstanbul",
+      "İzmir"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 61)"
+    "correct": "Ankara",
+    "wisdom": "Ankara 1923'te başkent yapılmıştır."
   },
   {
-    "id": "mz_q_662",
+    "id": "mz_cografya_662",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 62)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en uzun nehri hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Nil Nehri",
+      "Fırat Nehri",
+      "Amazon Nehri",
+      "Yangtze Nehri"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 62)"
+    "correct": "Nil Nehri",
+    "wisdom": "Nil nehri Afrika'da yer alır."
   },
   {
-    "id": "mz_q_663",
+    "id": "mz_cografya_663",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 63)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en yüksek dağı hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Kilimanjaro Dağı",
+      "Everest Dağı",
+      "Ağrı Dağı",
+      "K2 Dağı"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 63)"
+    "correct": "Everest Dağı",
+    "wisdom": "Everest Himalayalar'da 8.848 metredir."
   },
   {
-    "id": "mz_q_664",
+    "id": "mz_cografya_664",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 64)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en büyük sıcak çölü hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Büyük Sahra Çölü",
+      "Kızılkum Çölü",
+      "Gobi Çölü",
+      "Kalahari Çölü"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 64)"
+    "correct": "Büyük Sahra Çölü",
+    "wisdom": "Büyük Sahra Kuzey Afrika'dadır."
   },
   {
-    "id": "mz_q_665",
+    "id": "mz_cografya_665",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 65)",
+    "question": "Coğrafya bilgilerimize göre, Asya ve Avrupa kıtalarını birbirine bağlayan boğazlar hangileridir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Bering Boğazı",
+      "Cebelitarık Boğazı",
+      "Süveyş Kanalı",
+      "İstanbul ve Çanakkale Boğazları"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 65)"
+    "correct": "İstanbul ve Çanakkale Boğazları",
+    "wisdom": "Türkiye boğazları jeopolitik öneme sahiptir."
   },
   {
-    "id": "mz_q_666",
+    "id": "mz_cografya_666",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 66)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en büyük gölü hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Victoria Gölü",
+      "Superior Gölü",
+      "Van Gölü",
+      "Hazar Denizi"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 66)"
+    "correct": "Hazar Denizi",
+    "wisdom": "Hazar Denizi kapalı havza gölüdür."
   },
   {
-    "id": "mz_q_667",
+    "id": "mz_cografya_667",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 67)",
+    "question": "Coğrafya bilgilerimize göre, Dünyayı iki eşit yarım küreye bölen hayali çizgi nedir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Paralel",
+      "Meridyen",
+      "Başlangıç Meridyeni",
+      "Ekvator"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 67)"
+    "correct": "Ekvator",
+    "wisdom": "Ekvator çizgisi dik güneş ışığı alır."
   },
   {
-    "id": "mz_q_668",
+    "id": "mz_cografya_668",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 68)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en kalabalık nüfuslu ülkesi hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Çin",
+      "Hindistan",
+      "ABD",
+      "Endonezya"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 68)"
+    "correct": "Hindistan",
+    "wisdom": "Hindistan nüfus lideridir."
   },
   {
-    "id": "mz_q_669",
+    "id": "mz_cografya_669",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 69)",
+    "question": "Coğrafya bilgilerimize göre, Yüzölçümü en büyük ülke hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Çin",
+      "ABD",
+      "Kanada",
+      "Rusya"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 69)"
+    "correct": "Rusya",
+    "wisdom": "Rusya dünyanın en geniş kara parçasına sahiptir."
   },
   {
-    "id": "mz_q_670",
+    "id": "mz_cografya_670",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 70)",
+    "question": "Coğrafya bilgilerimize göre, Akdeniz'i Kızıldeniz'e bağlayan yapay kanal hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Kiel Kanalı",
+      "Panama Kanalı",
+      "Korint Kanalı",
+      "Süveyş Kanalı"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 70)"
+    "correct": "Süveyş Kanalı",
+    "wisdom": "Süveyş kanalı deniz yollarını kısaltmıştır."
   },
   {
-    "id": "mz_q_671",
+    "id": "mz_cografya_671",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 71)",
+    "question": "Coğrafya bilgilerimize göre, Akdeniz'i Atlas Okyanusu'na bağlayan geçit hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Babülmendep Boğazı",
+      "Hürmüz Boğazı",
+      "Malakka Boğazı",
+      "Cebelitarık Boğazı"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 71)"
+    "correct": "Cebelitarık Boğazı",
+    "wisdom": "Cebelitarık adını Tarık bin Ziyad'dan alır."
   },
   {
-    "id": "mz_q_672",
+    "id": "mz_cografya_672",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 72)",
+    "question": "Coğrafya bilgilerimize göre, Yüzölçümü en küçük kıta hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Okyanusya (Avustralya)",
+      "Avrupa",
+      "Antarktika",
+      "Güney Amerika"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 72)"
+    "correct": "Okyanusya (Avustralya)",
+    "wisdom": "Okyanusya en küçük kıtadır."
   },
   {
-    "id": "mz_q_673",
+    "id": "mz_cografya_673",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 73)",
+    "question": "Coğrafya bilgilerimize göre, Basra Körfezi'ne dökülen nehirlerimiz hangileridir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Nil ve Kongo",
+      "Kızılırmak ve Yeşilırmak",
+      "Seyhan ve Ceyhan",
+      "Fırat ve Dicle"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 73)"
+    "correct": "Fırat ve Dicle",
+    "wisdom": "Mezopotamya bu iki nehir arasındadır."
   },
   {
-    "id": "mz_q_674",
+    "id": "mz_cografya_674",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 74)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en derin yeri hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Mariana Çukuru",
+      "Porto Riko Çukuru",
+      "Gökova Çukuru",
+      "Java Çukuru"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 74)"
+    "correct": "Mariana Çukuru",
+    "wisdom": "Mariana Çukuru Pasifik'te 11 kilometredir."
   },
   {
-    "id": "mz_q_675",
+    "id": "mz_cografya_675",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 75)",
+    "question": "Coğrafya bilgilerimize göre, Yatay yönlü hava hareketine ne ad verilir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Kasırga",
+      "Yağmur",
+      "Nem",
+      "Rüzgar"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 75)"
+    "correct": "Rüzgar",
+    "wisdom": "Rüzgar basınç farkıyla oluşur."
   },
   {
-    "id": "mz_q_676",
+    "id": "mz_cografya_676",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 76)",
+    "question": "Coğrafya bilgilerimize göre, Sınırlarımız içindeki en uzun nehir hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Yeşilırmak",
+      "Fırat",
+      "Kızılırmak",
+      "Sakarya"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 76)"
+    "correct": "Kızılırmak",
+    "wisdom": "Kızılırmak Karadeniz'e dökülür."
   },
   {
-    "id": "mz_q_677",
+    "id": "mz_cografya_677",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 77)",
+    "question": "Coğrafya bilgilerimize göre, Türkiye'nin en büyük gölü hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Tuz Gölü",
+      "Beyşehir Gölü",
+      "Van Gölü",
+      "Eğirdir Gölü"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 77)"
+    "correct": "Van Gölü",
+    "wisdom": "Van gölü sodalı suyuyla bilinir."
   },
   {
-    "id": "mz_q_678",
+    "id": "mz_cografya_678",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 78)",
+    "question": "Coğrafya bilgilerimize göre, Sınırlarımız içinde kalan iç deniz hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Karadeniz",
+      "Marmara Denizi",
+      "Ege Denizi",
+      "Kızıldeniz"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 78)"
+    "correct": "Marmara Denizi",
+    "wisdom": "Marmara tamamen Türkiye'ye aittir."
   },
   {
-    "id": "mz_q_679",
+    "id": "mz_cografya_679",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 79)",
+    "question": "Coğrafya bilgilerimize göre, Güney kutbundaki buzlarla kaplı kıta hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Grönland",
+      "Avustralya",
+      "Kuzey Kutbu",
+      "Antarktika"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 79)"
+    "correct": "Antarktika",
+    "wisdom": "Antarktika'da kalıcı yerleşim yoktur."
   },
   {
-    "id": "mz_q_680",
+    "id": "mz_cografya_680",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 80)",
+    "question": "Coğrafya bilgilerimize göre, Deprem kuşağının en yoğun olduğu Pasifik çevresi ne olarak adlandırılır?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Hint Deprem Zonu",
+      "Pasifik Ateş Çemberi",
+      "Alp-Himalaya Kuşağı",
+      "Atlas Deprem Alanı"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 80)"
+    "correct": "Pasifik Ateş Çemberi",
+    "wisdom": "Depremlerin %90'ı burada gerçekleşir."
   },
   {
-    "id": "mz_q_681",
+    "id": "mz_cografya_681",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 81)",
+    "question": "Coğrafya bilgilerimize göre, Türkiye Cumhuriyeti'nin başkenti hangi şehirdir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Bursa",
+      "Ankara",
+      "İstanbul",
+      "İzmir"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 81)"
+    "correct": "Ankara",
+    "wisdom": "Ankara 1923'te başkent yapılmıştır."
   },
   {
-    "id": "mz_q_682",
+    "id": "mz_cografya_682",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 82)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en uzun nehri hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Nil Nehri",
+      "Fırat Nehri",
+      "Amazon Nehri",
+      "Yangtze Nehri"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 82)"
+    "correct": "Nil Nehri",
+    "wisdom": "Nil nehri Afrika'da yer alır."
   },
   {
-    "id": "mz_q_683",
+    "id": "mz_cografya_683",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 83)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en yüksek dağı hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Kilimanjaro Dağı",
+      "Everest Dağı",
+      "Ağrı Dağı",
+      "K2 Dağı"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 83)"
+    "correct": "Everest Dağı",
+    "wisdom": "Everest Himalayalar'da 8.848 metredir."
   },
   {
-    "id": "mz_q_684",
+    "id": "mz_cografya_684",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 84)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en büyük sıcak çölü hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Büyük Sahra Çölü",
+      "Kızılkum Çölü",
+      "Gobi Çölü",
+      "Kalahari Çölü"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 84)"
+    "correct": "Büyük Sahra Çölü",
+    "wisdom": "Büyük Sahra Kuzey Afrika'dadır."
   },
   {
-    "id": "mz_q_685",
+    "id": "mz_cografya_685",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 85)",
+    "question": "Coğrafya bilgilerimize göre, Asya ve Avrupa kıtalarını birbirine bağlayan boğazlar hangileridir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Bering Boğazı",
+      "Cebelitarık Boğazı",
+      "Süveyş Kanalı",
+      "İstanbul ve Çanakkale Boğazları"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 85)"
+    "correct": "İstanbul ve Çanakkale Boğazları",
+    "wisdom": "Türkiye boğazları jeopolitik öneme sahiptir."
   },
   {
-    "id": "mz_q_686",
+    "id": "mz_cografya_686",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 86)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en büyük gölü hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Victoria Gölü",
+      "Superior Gölü",
+      "Van Gölü",
+      "Hazar Denizi"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 86)"
+    "correct": "Hazar Denizi",
+    "wisdom": "Hazar Denizi kapalı havza gölüdür."
   },
   {
-    "id": "mz_q_687",
+    "id": "mz_cografya_687",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 87)",
+    "question": "Coğrafya bilgilerimize göre, Dünyayı iki eşit yarım küreye bölen hayali çizgi nedir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Paralel",
+      "Meridyen",
+      "Başlangıç Meridyeni",
+      "Ekvator"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 87)"
+    "correct": "Ekvator",
+    "wisdom": "Ekvator çizgisi dik güneş ışığı alır."
   },
   {
-    "id": "mz_q_688",
+    "id": "mz_cografya_688",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 88)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en kalabalık nüfuslu ülkesi hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Çin",
+      "Hindistan",
+      "ABD",
+      "Endonezya"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 88)"
+    "correct": "Hindistan",
+    "wisdom": "Hindistan nüfus lideridir."
   },
   {
-    "id": "mz_q_689",
+    "id": "mz_cografya_689",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 89)",
+    "question": "Coğrafya bilgilerimize göre, Yüzölçümü en büyük ülke hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Çin",
+      "ABD",
+      "Kanada",
+      "Rusya"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 89)"
+    "correct": "Rusya",
+    "wisdom": "Rusya dünyanın en geniş kara parçasına sahiptir."
   },
   {
-    "id": "mz_q_690",
+    "id": "mz_cografya_690",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 90)",
+    "question": "Coğrafya bilgilerimize göre, Akdeniz'i Kızıldeniz'e bağlayan yapay kanal hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Kiel Kanalı",
+      "Panama Kanalı",
+      "Korint Kanalı",
+      "Süveyş Kanalı"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 90)"
+    "correct": "Süveyş Kanalı",
+    "wisdom": "Süveyş kanalı deniz yollarını kısaltmıştır."
   },
   {
-    "id": "mz_q_691",
+    "id": "mz_cografya_691",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 91)",
+    "question": "Coğrafya bilgilerimize göre, Akdeniz'i Atlas Okyanusu'na bağlayan geçit hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Babülmendep Boğazı",
+      "Hürmüz Boğazı",
+      "Malakka Boğazı",
+      "Cebelitarık Boğazı"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 91)"
+    "correct": "Cebelitarık Boğazı",
+    "wisdom": "Cebelitarık adını Tarık bin Ziyad'dan alır."
   },
   {
-    "id": "mz_q_692",
+    "id": "mz_cografya_692",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 92)",
+    "question": "Coğrafya bilgilerimize göre, Yüzölçümü en küçük kıta hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Okyanusya (Avustralya)",
+      "Avrupa",
+      "Antarktika",
+      "Güney Amerika"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 92)"
+    "correct": "Okyanusya (Avustralya)",
+    "wisdom": "Okyanusya en küçük kıtadır."
   },
   {
-    "id": "mz_q_693",
+    "id": "mz_cografya_693",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 93)",
+    "question": "Coğrafya bilgilerimize göre, Basra Körfezi'ne dökülen nehirlerimiz hangileridir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Nil ve Kongo",
+      "Kızılırmak ve Yeşilırmak",
+      "Seyhan ve Ceyhan",
+      "Fırat ve Dicle"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 93)"
+    "correct": "Fırat ve Dicle",
+    "wisdom": "Mezopotamya bu iki nehir arasındadır."
   },
   {
-    "id": "mz_q_694",
+    "id": "mz_cografya_694",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 94)",
+    "question": "Coğrafya bilgilerimize göre, Dünyanın en derin yeri hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Mariana Çukuru",
+      "Porto Riko Çukuru",
+      "Gökova Çukuru",
+      "Java Çukuru"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 94)"
+    "correct": "Mariana Çukuru",
+    "wisdom": "Mariana Çukuru Pasifik'te 11 kilometredir."
   },
   {
-    "id": "mz_q_695",
+    "id": "mz_cografya_695",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 95)",
+    "question": "Coğrafya bilgilerimize göre, Yatay yönlü hava hareketine ne ad verilir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Kasırga",
+      "Yağmur",
+      "Nem",
+      "Rüzgar"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 95)"
+    "correct": "Rüzgar",
+    "wisdom": "Rüzgar basınç farkıyla oluşur."
   },
   {
-    "id": "mz_q_696",
+    "id": "mz_cografya_696",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 96)",
+    "question": "Coğrafya bilgilerimize göre, Sınırlarımız içindeki en uzun nehir hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Yeşilırmak",
+      "Fırat",
+      "Kızılırmak",
+      "Sakarya"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 96)"
+    "correct": "Kızılırmak",
+    "wisdom": "Kızılırmak Karadeniz'e dökülür."
   },
   {
-    "id": "mz_q_697",
+    "id": "mz_cografya_697",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 97)",
+    "question": "Coğrafya bilgilerimize göre, Türkiye'nin en büyük gölü hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Tuz Gölü",
+      "Beyşehir Gölü",
+      "Van Gölü",
+      "Eğirdir Gölü"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 97)"
+    "correct": "Van Gölü",
+    "wisdom": "Van gölü sodalı suyuyla bilinir."
   },
   {
-    "id": "mz_q_698",
+    "id": "mz_cografya_698",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 98)",
+    "question": "Coğrafya bilgilerimize göre, Sınırlarımız içinde kalan iç deniz hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Karadeniz",
+      "Marmara Denizi",
+      "Ege Denizi",
+      "Kızıldeniz"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 98)"
+    "correct": "Marmara Denizi",
+    "wisdom": "Marmara tamamen Türkiye'ye aittir."
   },
   {
-    "id": "mz_q_699",
+    "id": "mz_cografya_699",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 99)",
+    "question": "Coğrafya bilgilerimize göre, Güney kutbundaki buzlarla kaplı kıta hangisidir?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Grönland",
+      "Avustralya",
+      "Kuzey Kutbu",
+      "Antarktika"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 99)"
+    "correct": "Antarktika",
+    "wisdom": "Antarktika'da kalıcı yerleşim yoktur."
   },
   {
-    "id": "mz_q_700",
+    "id": "mz_cografya_700",
     "category": "Coğrafya",
-    "question": "Aşağıdakilerden hangisi bir coğrafi terimdir ve yeryüzü şekillerini inceler? (Soru 100)",
+    "question": "Coğrafya bilgilerimize göre, Deprem kuşağının en yoğun olduğu Pasifik çevresi ne olarak adlandırılır?",
     "options": [
-      "Jeomorfoloji",
-      "Astronomi",
-      "Biyoloji",
-      "Sosyoloji"
+      "Hint Deprem Zonu",
+      "Pasifik Ateş Çemberi",
+      "Alp-Himalaya Kuşağı",
+      "Atlas Deprem Alanı"
     ],
-    "correct": "Jeomorfoloji",
-    "wisdom": "Jeomorfoloji, yeryüzü şekillerinin oluşumunu ve gelişimini inceleyen fiziki coğrafya dalıdır. (Coğrafya Soru 100)"
+    "correct": "Pasifik Ateş Çemberi",
+    "wisdom": "Depremlerin %90'ı burada gerçekleşir."
   },
   {
-    "id": "mz_q_701",
+    "id": "mz_tarih_701",
     "category": "Tarih",
-    "question": "Tarih çağlarını başlatan en önemli gelişme olan yazıyı icat eden ilk uygarlık hangisidir?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Yazıyı icat ederek tarih çağlarını başlatan uygarlık hangisidir?",
     "options": [
-      "Sümerler",
-      "Mısırlılar",
+      "Asurlar",
       "Babiller",
-      "Asurlar"
+      "Mısırlılar",
+      "Sümerler"
     ],
     "correct": "Sümerler",
-    "wisdom": "Sümerler, M.Ö. 3500'lerde çivi yazısını icat ederek tarihi çağları başlatmışlardır."
+    "wisdom": "Sümerler M.Ö. 3500'de yazıyı bulmuştur."
   },
   {
-    "id": "mz_q_702",
+    "id": "mz_tarih_702",
     "category": "Tarih",
-    "question": "Malazgirt Savaşı hangi yılda gerçekleşmiştir?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Malazgirt Meydan Muharebesi hangi yılda yapılmıştır?",
     "options": [
+      "1299",
       "1071",
       "1040",
-      "1299",
       "1453"
     ],
     "correct": "1071",
-    "wisdom": "1071 yılında Selçuklular Bizans'ı yenerek Anadolu'yu yurt edinmeye başlamıştır."
+    "wisdom": "1071'de Anadolu kapıları açılmıştır."
   },
   {
-    "id": "mz_q_703",
+    "id": "mz_tarih_703",
     "category": "Tarih",
-    "question": "Fatih Sultan Mehmet'in İstanbul'u fethettiği tarihi yıl hangisidir?",
+    "question": "Tarih araştırmaları bilgilerimize göre, İstanbul'un fetih yılı hangisidir?",
     "options": [
-      "1453",
       "1299",
+      "1453",
       "1517",
       "1071"
     ],
     "correct": "1453",
-    "wisdom": "İstanbul 29 Mayıs 1453'te fethedilmiştir."
+    "wisdom": "İstanbul 1453'te fethedilmiştir."
   },
   {
-    "id": "mz_q_704",
+    "id": "mz_tarih_704",
     "category": "Tarih",
-    "question": "Türkiye Cumhuriyeti hangi tarihte ilan edilmiştir?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Türkiye Cumhuriyeti hangi tarihte ilan edilmiştir?",
     "options": [
-      "29 Ekim 1923",
-      "23 Nisan 1920",
       "19 Mayıs 1919",
-      "30 Ağustos 1922"
+      "30 Ağustos 1922",
+      "23 Nisan 1920",
+      "29 Ekim 1923"
     ],
     "correct": "29 Ekim 1923",
-    "wisdom": "Cumhuriyet, TBMM tarafından 29 Ekim 1923'te resmen ilan edilmiştir."
+    "wisdom": "Cumhuriyet 29 Ekim 1923'te ilan edilmiştir."
   },
   {
-    "id": "mz_q_705",
+    "id": "mz_tarih_705",
     "category": "Tarih",
-    "question": "Ankara'da Türkiye Büyük Millet Meclisi hangi tarihte açılmıştır?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Türkiye Büyük Millet Meclisi hangi tarihte açılmıştır?",
     "options": [
       "23 Nisan 1920",
-      "29 Ekim 1923",
       "30 Ağustos 1922",
+      "29 Ekim 1923",
       "19 Mayıs 1919"
     ],
     "correct": "23 Nisan 1920",
-    "wisdom": "TBMM'nin açıldığı gün milli iradenin sembolü olarak çocuklara bayram ilan edilmiştir."
+    "wisdom": "23 Nisan ulusal egemenlik bayramıdır."
   },
   {
-    "id": "mz_q_706",
+    "id": "mz_tarih_706",
     "category": "Tarih",
-    "question": "Mustafa Kemal Atatürk, Kurtuluş Savaşı'nı başlatmak üzere Samsun'a hangi tarihte ayak basmıştır?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Mustafa Kemal Atatürk Samsun'a ne zaman çıkmıştır?",
     "options": [
+      "30 Ağustos 1922",
       "19 Mayıs 1919",
       "23 Nisan 1920",
-      "29 Ekim 1923",
-      "30 Ağustos 1922"
+      "29 Ekim 1923"
     ],
     "correct": "19 Mayıs 1919",
-    "wisdom": "19 Mayıs, Atatürk'ü Anma, Gençlik ve Spor Bayramı olarak kutlanır."
+    "wisdom": "19 Mayıs Kurtuluş Savaşı başlangıcıdır."
   },
   {
-    "id": "mz_q_707",
+    "id": "mz_tarih_707",
     "category": "Tarih",
-    "question": "Kurtuluş Savaşı'nın askeri safhasını zaferle bitiren ve her yıl bayram olarak kutlanan 30 Ağustos zaferi hangisidir?",
+    "question": "Tarih araştırmaları bilgilerimize göre, 30 Ağustos Zafer Bayramı hangi savaşın sonucudur?",
     "options": [
+      "İnönü",
       "Büyük Taarruz",
-      "Sakarya Meydan Muharebesi",
-      "Çanakkale Savaşı",
-      "I. İnönü Savaşı"
+      "Sakarya",
+      "Çanakkale"
     ],
     "correct": "Büyük Taarruz",
-    "wisdom": "30 Ağustos Zafer Bayramı, Başkomutanlık Meydan Muharebesi zaferini simgeler."
+    "wisdom": "30 Ağustos askeri zaferi taçlandırmıştır."
   },
   {
-    "id": "mz_q_708",
+    "id": "mz_tarih_708",
     "category": "Tarih",
-    "question": "Osmanlı Devleti'nin I. Dünya Savaşı'nda İtilaf Devletlerine karşı 'Çanakkale Geçilmez!' dediği tarihi zafer hangi yıldır?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Çanakkale Savaşı hangi yıl kazanılmıştır?",
     "options": [
-      "1915",
-      "1914",
       "1918",
-      "1920"
+      "1915",
+      "1920",
+      "1914"
     ],
     "correct": "1915",
-    "wisdom": "18 Mart 1915 Çanakkale Deniz Zaferi, milletimizin en büyük kahramanlık destanlarındandır."
+    "wisdom": "1915 deniz ve kara zaferleriyle destan yazılmıştır."
   },
   {
-    "id": "mz_q_709",
+    "id": "mz_tarih_709",
     "category": "Tarih",
-    "question": "Türk tarihinin ve edebiyatının ilk yazılı belgeleri kabul edilen Orhun Abideleri hangi devlet döneminde dikilmiştir?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Türklerin ilk yazılı abideleri hangileridir?",
     "options": [
-      "Göktürkler (II. Göktürk)",
-      "Uygurlar",
-      "Hunlar",
-      "Karahanlılar"
+      "Karabalgasun",
+      "Yenisey Yazıtları",
+      "Kutadgu Bilig",
+      "Orhun Abideleri"
     ],
-    "correct": "Göktürkler (II. Göktürk)",
-    "wisdom": "Orhun Abideleri; Bilge Kağan, Kültigin ve Vezir Tonyukuk adına dikilmiş yazılı taşlardır."
+    "correct": "Orhun Abideleri",
+    "wisdom": "Orhun abideleri Göktürkler dönemine aittir."
   },
   {
-    "id": "mz_q_710",
+    "id": "mz_tarih_710",
     "category": "Tarih",
-    "question": "Antik çağın en gizemli yapılarından olan Gize Piramitleri hangi antik uygarlığa aittir?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Gize Piramitleri hangi uygarlığa aittir?",
     "options": [
       "Antik Mısır",
-      "Sümerler",
       "Romalılar",
+      "Sümerler",
       "Persler"
     ],
     "correct": "Antik Mısır",
-    "wisdom": "Piramitler, firavunların mezarları olarak inşa edilmiş devasa taş yapılardır."
+    "wisdom": "Piramitler anıt mezarlardır."
   },
   {
-    "id": "mz_q_711",
+    "id": "mz_tarih_711",
     "category": "Tarih",
-    "question": "Tarihte bilinen ilk yazılı antlaşma olan Kadeş Antlaşması hangi iki uygarlık arasında imzalanmıştır?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Tarihte bilinen ilk yazılı antlaşma hangisidir?",
     "options": [
-      "Mısır ve Hitit",
-      "Sümer ve Babil",
-      "Asur ve Urartu",
-      "Roma ve Kartaca"
+      "Versay",
+      "Mondros",
+      "Kadeş Antlaşması",
+      "Lozan"
     ],
-    "correct": "Mısır ve Hitit",
-    "wisdom": "Kadeş Antlaşması M.Ö. 1280 civarında Hititler ile Mısırlılar arasında yapılmıştır."
+    "correct": "Kadeş Antlaşması",
+    "wisdom": "Mısır ve Hitit arasında yapılmıştır."
   },
   {
-    "id": "mz_q_712",
+    "id": "mz_tarih_712",
     "category": "Tarih",
-    "question": "Tarihte bilinen ilk Türk devleti olan Asya Hun İmparatorluğu'nun en parlak dönemini yaşatan hükümdar kimdir?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Asya Hun İmparatorluğu'na en parlak dönemi yaşatan hükümdar kimdir?",
     "options": [
-      "Mete Han",
-      "Teoman",
       "Bumin Kağan",
-      "Bilge Kağan"
+      "Bilge Kağan",
+      "Teoman",
+      "Mete Han"
     ],
     "correct": "Mete Han",
-    "wisdom": "Mete Han, Türk boylarını ilk kez tek çatı altında toplamış ve onlu askeri sistemi kurmuştur."
+    "wisdom": "Mete Han onlu ordu sistemini kurmuştur."
   },
   {
-    "id": "mz_q_713",
+    "id": "mz_tarih_713",
     "category": "Tarih",
-    "question": "Yerleşik hayata geçen, tarım ve matbaayla uğraşan ilk Türk devleti hangisidir?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Yerleşik hayata geçen ilk Türk devleti hangisidir?",
     "options": [
-      "Uygurlar",
       "Hunlar",
       "Göktürkler",
-      "Avarlar"
+      "Avarlar",
+      "Uygurlar"
     ],
     "correct": "Uygurlar",
-    "wisdom": "Uygurlar Maniheizm dinini kabul ederek savaşçılığı bırakmış ve kültürel faaliyetlere yönelmişlerdir."
+    "wisdom": "Uygurlar tarım ve matbaayla uğraşmıştır."
   },
   {
-    "id": "mz_q_714",
+    "id": "mz_tarih_714",
     "category": "Tarih",
-    "question": "Roma İmparatorluğu hangi yılda Doğu (Bizans) ve Batı olarak ikiye bölünmüştür?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Roma İmparatorluğu hangi yılda ikiye bölünmüştür?",
     "options": [
-      "395",
-      "476",
       "1453",
-      "330"
+      "476",
+      "330",
+      "395"
     ],
     "correct": "395",
-    "wisdom": "Kavimler Göçü'nün etkisiyle zayıflayan Roma İmparatorluğu 395 yılında ikiye ayrılmıştır."
+    "wisdom": "Kavimler Göçü sonucu ikiye ayrılmıştır."
   },
   {
-    "id": "mz_q_715",
+    "id": "mz_tarih_715",
     "category": "Tarih",
-    "question": "Balamir önderliğindeki Hunların batıya hareketiyle Avrupa'nın sosyal ve siyasi yapısını değiştiren tarihi olay hangisidir?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Avrupa'nın yapısını değiştiren büyük göç hareketi hangisidir?",
     "options": [
-      "Kavimler Göçü",
       "Haçlı Seferleri",
-      "Coğrafi Keşifler",
+      "Keşifler",
+      "Kavimler Göçü",
       "Rönesans"
     ],
     "correct": "Kavimler Göçü",
-    "wisdom": "Kavimler Göçü, İlk Çağ'ın kapanıp Orta Çağ'ın açılmasına neden olmuştur."
+    "wisdom": "Göç, Orta Çağ'ı başlatmıştır."
   },
   {
-    "id": "mz_q_716",
+    "id": "mz_tarih_716",
     "category": "Tarih",
-    "question": "İslam tarihinde Kudüs'ü ilk kez fethedip Hristiyan ve Yahudilere inanç özgürlüğü tanıyan halife kimdir?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Kudüs'ü ilk kez fetheden halife kimdir?",
     "options": [
       "Hz. Ömer (r.a.)",
-      "Hz. Ebu Bekir (r.a.)",
+      "Hz. Ali (r.a.)",
       "Hz. Osman (r.a.)",
-      "Hz. Ali (r.a.)"
+      "Hz. Ebu Bekir (r.a.)"
     ],
     "correct": "Hz. Ömer (r.a.)",
-    "wisdom": "Hz. Ömer Kudüs'e bizzat giderek teslim almış ve şehre adaletle hükmetmiştir."
+    "wisdom": "Hz. Ömer şehri barışla teslim almıştır."
   },
   {
-    "id": "mz_q_717",
+    "id": "mz_tarih_717",
     "category": "Tarih",
-    "question": "Müslümanların Mekke'yi kan dökmeden fethettiği tarihi yıl hangisidir?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Mekke'nin Fethi hangi yılda gerçekleşmiştir?",
     "options": [
-      "630",
-      "622",
       "632",
-      "610"
+      "610",
+      "622",
+      "630"
     ],
     "correct": "630",
-    "wisdom": "Mekke'nin Fethi 630 yılında gerçekleşmiş, Peygamberimiz genel af ilan etmiştir."
+    "wisdom": "630'da Mekke fethedilmiştir."
   },
   {
-    "id": "mz_q_718",
+    "id": "mz_tarih_718",
     "category": "Tarih",
-    "question": "Müslümanlar ile Mekkeli müşrikler arasında yapılan ilk büyük savaş hangisidir?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Müslümanların ilk büyük savaşı hangisidir?",
     "options": [
-      "Bedir Savaşı (624)",
-      "Uhud Savaşı",
+      "Mute Savaşı",
+      "Bedir Savaşı",
       "Hendek Savaşı",
-      "Mute Savaşı"
+      "Uhud Savaşı"
     ],
-    "correct": "Bedir Savaşı (624)",
-    "wisdom": "Bedir Savaşı, Müslümanların zaferiyle sonuçlanmış ve İslamiyet'in yayılmasını hızlandırmıştır."
+    "correct": "Bedir Savaşı",
+    "wisdom": "624 yılındaki Bedir zaferdir."
   },
   {
-    "id": "mz_q_719",
+    "id": "mz_tarih_719",
     "category": "Tarih",
-    "question": "Medine'yi savunmak için Selman-ı Farisi'nin önerisiyle şehrin etrafına hendekler kazılan savunma savaşı hangisidir?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Medine çevresine hendek kazılan savaş hangisidir?",
     "options": [
-      "Hendek Savaşı (627)",
+      "Hendek Savaşı",
       "Uhud Savaşı",
-      "Hayber'in Fethi",
-      "Tabuk Seferi"
+      "Hayber",
+      "Tebük"
     ],
-    "correct": "Hendek Savaşı (627)",
-    "wisdom": "Müşriklerin Medine'yi kuşatması hendekler ve Allah'ın yardımı fırtına ile başarısız olmuştur."
+    "correct": "Hendek Savaşı",
+    "wisdom": "627 yılında savunma yapılmıştır."
   },
   {
-    "id": "mz_q_720",
+    "id": "mz_tarih_720",
     "category": "Tarih",
-    "question": "Peygamber Efendimiz'in hicretin 10. yılında yüz binden fazla Müslümana hitap ettiği, insan hakları evrensel beyannamesi niteliğindeki konuşması nedir?",
+    "question": "Tarih araştırmaları bilgilerimize göre, Peygamberimiz'in insan hakları niteliğindeki son konuşması nedir?",
     "options": [
+      "Hudeybiye",
       "Veda Hutbesi",
-      "Akabe Biatı",
-      "Hudeybiye Antlaşması",
-      "Medine Sözleşmesi"
+      "Medine Anayasası",
+      "Akabe Biatı"
     ],
     "correct": "Veda Hutbesi",
-    "wisdom": "Veda Hutbesi'nde kan davaları, faiz ve ırkçılık ayaklar altına alınmış, kadın hakları vurgulanmıştır."
+    "wisdom": "Hutbede ırkçılık, faiz ve kan davaları yasaklanmıştır."
   },
   {
-    "id": "mz_q_721",
+    "id": "mz_tarih_721",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 21)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Yazıyı icat ederek tarih çağlarını başlatan uygarlık hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Asurlar",
+      "Babiller",
+      "Mısırlılar",
+      "Sümerler"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 21)"
+    "correct": "Sümerler",
+    "wisdom": "Sümerler M.Ö. 3500'de yazıyı bulmuştur."
   },
   {
-    "id": "mz_q_722",
+    "id": "mz_tarih_722",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 22)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Malazgirt Meydan Muharebesi hangi yılda yapılmıştır?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "1299",
+      "1071",
+      "1040",
+      "1453"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 22)"
+    "correct": "1071",
+    "wisdom": "1071'de Anadolu kapıları açılmıştır."
   },
   {
-    "id": "mz_q_723",
+    "id": "mz_tarih_723",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 23)",
+    "question": "Tarih araştırmaları bilgilerimize göre, İstanbul'un fetih yılı hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "1299",
+      "1453",
+      "1517",
+      "1071"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 23)"
+    "correct": "1453",
+    "wisdom": "İstanbul 1453'te fethedilmiştir."
   },
   {
-    "id": "mz_q_724",
+    "id": "mz_tarih_724",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 24)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Türkiye Cumhuriyeti hangi tarihte ilan edilmiştir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "19 Mayıs 1919",
+      "30 Ağustos 1922",
+      "23 Nisan 1920",
+      "29 Ekim 1923"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 24)"
+    "correct": "29 Ekim 1923",
+    "wisdom": "Cumhuriyet 29 Ekim 1923'te ilan edilmiştir."
   },
   {
-    "id": "mz_q_725",
+    "id": "mz_tarih_725",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 25)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Türkiye Büyük Millet Meclisi hangi tarihte açılmıştır?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "23 Nisan 1920",
+      "30 Ağustos 1922",
+      "29 Ekim 1923",
+      "19 Mayıs 1919"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 25)"
+    "correct": "23 Nisan 1920",
+    "wisdom": "23 Nisan ulusal egemenlik bayramıdır."
   },
   {
-    "id": "mz_q_726",
+    "id": "mz_tarih_726",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 26)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Mustafa Kemal Atatürk Samsun'a ne zaman çıkmıştır?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "30 Ağustos 1922",
+      "19 Mayıs 1919",
+      "23 Nisan 1920",
+      "29 Ekim 1923"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 26)"
+    "correct": "19 Mayıs 1919",
+    "wisdom": "19 Mayıs Kurtuluş Savaşı başlangıcıdır."
   },
   {
-    "id": "mz_q_727",
+    "id": "mz_tarih_727",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 27)",
+    "question": "Tarih araştırmaları bilgilerimize göre, 30 Ağustos Zafer Bayramı hangi savaşın sonucudur?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "İnönü",
+      "Büyük Taarruz",
+      "Sakarya",
+      "Çanakkale"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 27)"
+    "correct": "Büyük Taarruz",
+    "wisdom": "30 Ağustos askeri zaferi taçlandırmıştır."
   },
   {
-    "id": "mz_q_728",
+    "id": "mz_tarih_728",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 28)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Çanakkale Savaşı hangi yıl kazanılmıştır?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "1918",
+      "1915",
+      "1920",
+      "1914"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 28)"
+    "correct": "1915",
+    "wisdom": "1915 deniz ve kara zaferleriyle destan yazılmıştır."
   },
   {
-    "id": "mz_q_729",
+    "id": "mz_tarih_729",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 29)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Türklerin ilk yazılı abideleri hangileridir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Karabalgasun",
+      "Yenisey Yazıtları",
+      "Kutadgu Bilig",
+      "Orhun Abideleri"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 29)"
+    "correct": "Orhun Abideleri",
+    "wisdom": "Orhun abideleri Göktürkler dönemine aittir."
   },
   {
-    "id": "mz_q_730",
+    "id": "mz_tarih_730",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 30)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Gize Piramitleri hangi uygarlığa aittir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Antik Mısır",
+      "Romalılar",
+      "Sümerler",
+      "Persler"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 30)"
+    "correct": "Antik Mısır",
+    "wisdom": "Piramitler anıt mezarlardır."
   },
   {
-    "id": "mz_q_731",
+    "id": "mz_tarih_731",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 31)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Tarihte bilinen ilk yazılı antlaşma hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Versay",
+      "Mondros",
+      "Kadeş Antlaşması",
+      "Lozan"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 31)"
+    "correct": "Kadeş Antlaşması",
+    "wisdom": "Mısır ve Hitit arasında yapılmıştır."
   },
   {
-    "id": "mz_q_732",
+    "id": "mz_tarih_732",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 32)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Asya Hun İmparatorluğu'na en parlak dönemi yaşatan hükümdar kimdir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Bumin Kağan",
+      "Bilge Kağan",
+      "Teoman",
+      "Mete Han"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 32)"
+    "correct": "Mete Han",
+    "wisdom": "Mete Han onlu ordu sistemini kurmuştur."
   },
   {
-    "id": "mz_q_733",
+    "id": "mz_tarih_733",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 33)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Yerleşik hayata geçen ilk Türk devleti hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Hunlar",
+      "Göktürkler",
+      "Avarlar",
+      "Uygurlar"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 33)"
+    "correct": "Uygurlar",
+    "wisdom": "Uygurlar tarım ve matbaayla uğraşmıştır."
   },
   {
-    "id": "mz_q_734",
+    "id": "mz_tarih_734",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 34)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Roma İmparatorluğu hangi yılda ikiye bölünmüştür?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "1453",
+      "476",
+      "330",
+      "395"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 34)"
+    "correct": "395",
+    "wisdom": "Kavimler Göçü sonucu ikiye ayrılmıştır."
   },
   {
-    "id": "mz_q_735",
+    "id": "mz_tarih_735",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 35)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Avrupa'nın yapısını değiştiren büyük göç hareketi hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Haçlı Seferleri",
+      "Keşifler",
+      "Kavimler Göçü",
+      "Rönesans"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 35)"
+    "correct": "Kavimler Göçü",
+    "wisdom": "Göç, Orta Çağ'ı başlatmıştır."
   },
   {
-    "id": "mz_q_736",
+    "id": "mz_tarih_736",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 36)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Kudüs'ü ilk kez fetheden halife kimdir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Hz. Ömer (r.a.)",
+      "Hz. Ali (r.a.)",
+      "Hz. Osman (r.a.)",
+      "Hz. Ebu Bekir (r.a.)"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 36)"
+    "correct": "Hz. Ömer (r.a.)",
+    "wisdom": "Hz. Ömer şehri barışla teslim almıştır."
   },
   {
-    "id": "mz_q_737",
+    "id": "mz_tarih_737",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 37)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Mekke'nin Fethi hangi yılda gerçekleşmiştir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "632",
+      "610",
+      "622",
+      "630"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 37)"
+    "correct": "630",
+    "wisdom": "630'da Mekke fethedilmiştir."
   },
   {
-    "id": "mz_q_738",
+    "id": "mz_tarih_738",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 38)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Müslümanların ilk büyük savaşı hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Mute Savaşı",
+      "Bedir Savaşı",
+      "Hendek Savaşı",
+      "Uhud Savaşı"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 38)"
+    "correct": "Bedir Savaşı",
+    "wisdom": "624 yılındaki Bedir zaferdir."
   },
   {
-    "id": "mz_q_739",
+    "id": "mz_tarih_739",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 39)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Medine çevresine hendek kazılan savaş hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Hendek Savaşı",
+      "Uhud Savaşı",
+      "Hayber",
+      "Tebük"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 39)"
+    "correct": "Hendek Savaşı",
+    "wisdom": "627 yılında savunma yapılmıştır."
   },
   {
-    "id": "mz_q_740",
+    "id": "mz_tarih_740",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 40)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Peygamberimiz'in insan hakları niteliğindeki son konuşması nedir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Hudeybiye",
+      "Veda Hutbesi",
+      "Medine Anayasası",
+      "Akabe Biatı"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 40)"
+    "correct": "Veda Hutbesi",
+    "wisdom": "Hutbede ırkçılık, faiz ve kan davaları yasaklanmıştır."
   },
   {
-    "id": "mz_q_741",
+    "id": "mz_tarih_741",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 41)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Yazıyı icat ederek tarih çağlarını başlatan uygarlık hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Asurlar",
+      "Babiller",
+      "Mısırlılar",
+      "Sümerler"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 41)"
+    "correct": "Sümerler",
+    "wisdom": "Sümerler M.Ö. 3500'de yazıyı bulmuştur."
   },
   {
-    "id": "mz_q_742",
+    "id": "mz_tarih_742",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 42)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Malazgirt Meydan Muharebesi hangi yılda yapılmıştır?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "1299",
+      "1071",
+      "1040",
+      "1453"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 42)"
+    "correct": "1071",
+    "wisdom": "1071'de Anadolu kapıları açılmıştır."
   },
   {
-    "id": "mz_q_743",
+    "id": "mz_tarih_743",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 43)",
+    "question": "Tarih araştırmaları bilgilerimize göre, İstanbul'un fetih yılı hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "1299",
+      "1453",
+      "1517",
+      "1071"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 43)"
+    "correct": "1453",
+    "wisdom": "İstanbul 1453'te fethedilmiştir."
   },
   {
-    "id": "mz_q_744",
+    "id": "mz_tarih_744",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 44)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Türkiye Cumhuriyeti hangi tarihte ilan edilmiştir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "19 Mayıs 1919",
+      "30 Ağustos 1922",
+      "23 Nisan 1920",
+      "29 Ekim 1923"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 44)"
+    "correct": "29 Ekim 1923",
+    "wisdom": "Cumhuriyet 29 Ekim 1923'te ilan edilmiştir."
   },
   {
-    "id": "mz_q_745",
+    "id": "mz_tarih_745",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 45)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Türkiye Büyük Millet Meclisi hangi tarihte açılmıştır?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "23 Nisan 1920",
+      "30 Ağustos 1922",
+      "29 Ekim 1923",
+      "19 Mayıs 1919"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 45)"
+    "correct": "23 Nisan 1920",
+    "wisdom": "23 Nisan ulusal egemenlik bayramıdır."
   },
   {
-    "id": "mz_q_746",
+    "id": "mz_tarih_746",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 46)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Mustafa Kemal Atatürk Samsun'a ne zaman çıkmıştır?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "30 Ağustos 1922",
+      "19 Mayıs 1919",
+      "23 Nisan 1920",
+      "29 Ekim 1923"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 46)"
+    "correct": "19 Mayıs 1919",
+    "wisdom": "19 Mayıs Kurtuluş Savaşı başlangıcıdır."
   },
   {
-    "id": "mz_q_747",
+    "id": "mz_tarih_747",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 47)",
+    "question": "Tarih araştırmaları bilgilerimize göre, 30 Ağustos Zafer Bayramı hangi savaşın sonucudur?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "İnönü",
+      "Büyük Taarruz",
+      "Sakarya",
+      "Çanakkale"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 47)"
+    "correct": "Büyük Taarruz",
+    "wisdom": "30 Ağustos askeri zaferi taçlandırmıştır."
   },
   {
-    "id": "mz_q_748",
+    "id": "mz_tarih_748",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 48)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Çanakkale Savaşı hangi yıl kazanılmıştır?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "1918",
+      "1915",
+      "1920",
+      "1914"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 48)"
+    "correct": "1915",
+    "wisdom": "1915 deniz ve kara zaferleriyle destan yazılmıştır."
   },
   {
-    "id": "mz_q_749",
+    "id": "mz_tarih_749",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 49)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Türklerin ilk yazılı abideleri hangileridir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Karabalgasun",
+      "Yenisey Yazıtları",
+      "Kutadgu Bilig",
+      "Orhun Abideleri"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 49)"
+    "correct": "Orhun Abideleri",
+    "wisdom": "Orhun abideleri Göktürkler dönemine aittir."
   },
   {
-    "id": "mz_q_750",
+    "id": "mz_tarih_750",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 50)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Gize Piramitleri hangi uygarlığa aittir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Antik Mısır",
+      "Romalılar",
+      "Sümerler",
+      "Persler"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 50)"
+    "correct": "Antik Mısır",
+    "wisdom": "Piramitler anıt mezarlardır."
   },
   {
-    "id": "mz_q_751",
+    "id": "mz_tarih_751",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 51)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Tarihte bilinen ilk yazılı antlaşma hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Versay",
+      "Mondros",
+      "Kadeş Antlaşması",
+      "Lozan"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 51)"
+    "correct": "Kadeş Antlaşması",
+    "wisdom": "Mısır ve Hitit arasında yapılmıştır."
   },
   {
-    "id": "mz_q_752",
+    "id": "mz_tarih_752",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 52)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Asya Hun İmparatorluğu'na en parlak dönemi yaşatan hükümdar kimdir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Bumin Kağan",
+      "Bilge Kağan",
+      "Teoman",
+      "Mete Han"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 52)"
+    "correct": "Mete Han",
+    "wisdom": "Mete Han onlu ordu sistemini kurmuştur."
   },
   {
-    "id": "mz_q_753",
+    "id": "mz_tarih_753",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 53)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Yerleşik hayata geçen ilk Türk devleti hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Hunlar",
+      "Göktürkler",
+      "Avarlar",
+      "Uygurlar"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 53)"
+    "correct": "Uygurlar",
+    "wisdom": "Uygurlar tarım ve matbaayla uğraşmıştır."
   },
   {
-    "id": "mz_q_754",
+    "id": "mz_tarih_754",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 54)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Roma İmparatorluğu hangi yılda ikiye bölünmüştür?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "1453",
+      "476",
+      "330",
+      "395"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 54)"
+    "correct": "395",
+    "wisdom": "Kavimler Göçü sonucu ikiye ayrılmıştır."
   },
   {
-    "id": "mz_q_755",
+    "id": "mz_tarih_755",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 55)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Avrupa'nın yapısını değiştiren büyük göç hareketi hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Haçlı Seferleri",
+      "Keşifler",
+      "Kavimler Göçü",
+      "Rönesans"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 55)"
+    "correct": "Kavimler Göçü",
+    "wisdom": "Göç, Orta Çağ'ı başlatmıştır."
   },
   {
-    "id": "mz_q_756",
+    "id": "mz_tarih_756",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 56)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Kudüs'ü ilk kez fetheden halife kimdir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Hz. Ömer (r.a.)",
+      "Hz. Ali (r.a.)",
+      "Hz. Osman (r.a.)",
+      "Hz. Ebu Bekir (r.a.)"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 56)"
+    "correct": "Hz. Ömer (r.a.)",
+    "wisdom": "Hz. Ömer şehri barışla teslim almıştır."
   },
   {
-    "id": "mz_q_757",
+    "id": "mz_tarih_757",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 57)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Mekke'nin Fethi hangi yılda gerçekleşmiştir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "632",
+      "610",
+      "622",
+      "630"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 57)"
+    "correct": "630",
+    "wisdom": "630'da Mekke fethedilmiştir."
   },
   {
-    "id": "mz_q_758",
+    "id": "mz_tarih_758",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 58)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Müslümanların ilk büyük savaşı hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Mute Savaşı",
+      "Bedir Savaşı",
+      "Hendek Savaşı",
+      "Uhud Savaşı"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 58)"
+    "correct": "Bedir Savaşı",
+    "wisdom": "624 yılındaki Bedir zaferdir."
   },
   {
-    "id": "mz_q_759",
+    "id": "mz_tarih_759",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 59)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Medine çevresine hendek kazılan savaş hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Hendek Savaşı",
+      "Uhud Savaşı",
+      "Hayber",
+      "Tebük"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 59)"
+    "correct": "Hendek Savaşı",
+    "wisdom": "627 yılında savunma yapılmıştır."
   },
   {
-    "id": "mz_q_760",
+    "id": "mz_tarih_760",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 60)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Peygamberimiz'in insan hakları niteliğindeki son konuşması nedir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Hudeybiye",
+      "Veda Hutbesi",
+      "Medine Anayasası",
+      "Akabe Biatı"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 60)"
+    "correct": "Veda Hutbesi",
+    "wisdom": "Hutbede ırkçılık, faiz ve kan davaları yasaklanmıştır."
   },
   {
-    "id": "mz_q_761",
+    "id": "mz_tarih_761",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 61)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Yazıyı icat ederek tarih çağlarını başlatan uygarlık hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Asurlar",
+      "Babiller",
+      "Mısırlılar",
+      "Sümerler"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 61)"
+    "correct": "Sümerler",
+    "wisdom": "Sümerler M.Ö. 3500'de yazıyı bulmuştur."
   },
   {
-    "id": "mz_q_762",
+    "id": "mz_tarih_762",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 62)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Malazgirt Meydan Muharebesi hangi yılda yapılmıştır?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "1299",
+      "1071",
+      "1040",
+      "1453"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 62)"
+    "correct": "1071",
+    "wisdom": "1071'de Anadolu kapıları açılmıştır."
   },
   {
-    "id": "mz_q_763",
+    "id": "mz_tarih_763",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 63)",
+    "question": "Tarih araştırmaları bilgilerimize göre, İstanbul'un fetih yılı hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "1299",
+      "1453",
+      "1517",
+      "1071"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 63)"
+    "correct": "1453",
+    "wisdom": "İstanbul 1453'te fethedilmiştir."
   },
   {
-    "id": "mz_q_764",
+    "id": "mz_tarih_764",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 64)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Türkiye Cumhuriyeti hangi tarihte ilan edilmiştir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "19 Mayıs 1919",
+      "30 Ağustos 1922",
+      "23 Nisan 1920",
+      "29 Ekim 1923"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 64)"
+    "correct": "29 Ekim 1923",
+    "wisdom": "Cumhuriyet 29 Ekim 1923'te ilan edilmiştir."
   },
   {
-    "id": "mz_q_765",
+    "id": "mz_tarih_765",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 65)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Türkiye Büyük Millet Meclisi hangi tarihte açılmıştır?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "23 Nisan 1920",
+      "30 Ağustos 1922",
+      "29 Ekim 1923",
+      "19 Mayıs 1919"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 65)"
+    "correct": "23 Nisan 1920",
+    "wisdom": "23 Nisan ulusal egemenlik bayramıdır."
   },
   {
-    "id": "mz_q_766",
+    "id": "mz_tarih_766",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 66)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Mustafa Kemal Atatürk Samsun'a ne zaman çıkmıştır?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "30 Ağustos 1922",
+      "19 Mayıs 1919",
+      "23 Nisan 1920",
+      "29 Ekim 1923"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 66)"
+    "correct": "19 Mayıs 1919",
+    "wisdom": "19 Mayıs Kurtuluş Savaşı başlangıcıdır."
   },
   {
-    "id": "mz_q_767",
+    "id": "mz_tarih_767",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 67)",
+    "question": "Tarih araştırmaları bilgilerimize göre, 30 Ağustos Zafer Bayramı hangi savaşın sonucudur?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "İnönü",
+      "Büyük Taarruz",
+      "Sakarya",
+      "Çanakkale"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 67)"
+    "correct": "Büyük Taarruz",
+    "wisdom": "30 Ağustos askeri zaferi taçlandırmıştır."
   },
   {
-    "id": "mz_q_768",
+    "id": "mz_tarih_768",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 68)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Çanakkale Savaşı hangi yıl kazanılmıştır?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "1918",
+      "1915",
+      "1920",
+      "1914"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 68)"
+    "correct": "1915",
+    "wisdom": "1915 deniz ve kara zaferleriyle destan yazılmıştır."
   },
   {
-    "id": "mz_q_769",
+    "id": "mz_tarih_769",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 69)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Türklerin ilk yazılı abideleri hangileridir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Karabalgasun",
+      "Yenisey Yazıtları",
+      "Kutadgu Bilig",
+      "Orhun Abideleri"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 69)"
+    "correct": "Orhun Abideleri",
+    "wisdom": "Orhun abideleri Göktürkler dönemine aittir."
   },
   {
-    "id": "mz_q_770",
+    "id": "mz_tarih_770",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 70)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Gize Piramitleri hangi uygarlığa aittir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Antik Mısır",
+      "Romalılar",
+      "Sümerler",
+      "Persler"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 70)"
+    "correct": "Antik Mısır",
+    "wisdom": "Piramitler anıt mezarlardır."
   },
   {
-    "id": "mz_q_771",
+    "id": "mz_tarih_771",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 71)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Tarihte bilinen ilk yazılı antlaşma hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Versay",
+      "Mondros",
+      "Kadeş Antlaşması",
+      "Lozan"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 71)"
+    "correct": "Kadeş Antlaşması",
+    "wisdom": "Mısır ve Hitit arasında yapılmıştır."
   },
   {
-    "id": "mz_q_772",
+    "id": "mz_tarih_772",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 72)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Asya Hun İmparatorluğu'na en parlak dönemi yaşatan hükümdar kimdir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Bumin Kağan",
+      "Bilge Kağan",
+      "Teoman",
+      "Mete Han"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 72)"
+    "correct": "Mete Han",
+    "wisdom": "Mete Han onlu ordu sistemini kurmuştur."
   },
   {
-    "id": "mz_q_773",
+    "id": "mz_tarih_773",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 73)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Yerleşik hayata geçen ilk Türk devleti hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Hunlar",
+      "Göktürkler",
+      "Avarlar",
+      "Uygurlar"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 73)"
+    "correct": "Uygurlar",
+    "wisdom": "Uygurlar tarım ve matbaayla uğraşmıştır."
   },
   {
-    "id": "mz_q_774",
+    "id": "mz_tarih_774",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 74)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Roma İmparatorluğu hangi yılda ikiye bölünmüştür?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "1453",
+      "476",
+      "330",
+      "395"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 74)"
+    "correct": "395",
+    "wisdom": "Kavimler Göçü sonucu ikiye ayrılmıştır."
   },
   {
-    "id": "mz_q_775",
+    "id": "mz_tarih_775",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 75)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Avrupa'nın yapısını değiştiren büyük göç hareketi hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Haçlı Seferleri",
+      "Keşifler",
+      "Kavimler Göçü",
+      "Rönesans"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 75)"
+    "correct": "Kavimler Göçü",
+    "wisdom": "Göç, Orta Çağ'ı başlatmıştır."
   },
   {
-    "id": "mz_q_776",
+    "id": "mz_tarih_776",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 76)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Kudüs'ü ilk kez fetheden halife kimdir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Hz. Ömer (r.a.)",
+      "Hz. Ali (r.a.)",
+      "Hz. Osman (r.a.)",
+      "Hz. Ebu Bekir (r.a.)"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 76)"
+    "correct": "Hz. Ömer (r.a.)",
+    "wisdom": "Hz. Ömer şehri barışla teslim almıştır."
   },
   {
-    "id": "mz_q_777",
+    "id": "mz_tarih_777",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 77)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Mekke'nin Fethi hangi yılda gerçekleşmiştir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "632",
+      "610",
+      "622",
+      "630"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 77)"
+    "correct": "630",
+    "wisdom": "630'da Mekke fethedilmiştir."
   },
   {
-    "id": "mz_q_778",
+    "id": "mz_tarih_778",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 78)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Müslümanların ilk büyük savaşı hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Mute Savaşı",
+      "Bedir Savaşı",
+      "Hendek Savaşı",
+      "Uhud Savaşı"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 78)"
+    "correct": "Bedir Savaşı",
+    "wisdom": "624 yılındaki Bedir zaferdir."
   },
   {
-    "id": "mz_q_779",
+    "id": "mz_tarih_779",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 79)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Medine çevresine hendek kazılan savaş hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Hendek Savaşı",
+      "Uhud Savaşı",
+      "Hayber",
+      "Tebük"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 79)"
+    "correct": "Hendek Savaşı",
+    "wisdom": "627 yılında savunma yapılmıştır."
   },
   {
-    "id": "mz_q_780",
+    "id": "mz_tarih_780",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 80)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Peygamberimiz'in insan hakları niteliğindeki son konuşması nedir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Hudeybiye",
+      "Veda Hutbesi",
+      "Medine Anayasası",
+      "Akabe Biatı"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 80)"
+    "correct": "Veda Hutbesi",
+    "wisdom": "Hutbede ırkçılık, faiz ve kan davaları yasaklanmıştır."
   },
   {
-    "id": "mz_q_781",
+    "id": "mz_tarih_781",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 81)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Yazıyı icat ederek tarih çağlarını başlatan uygarlık hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Asurlar",
+      "Babiller",
+      "Mısırlılar",
+      "Sümerler"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 81)"
+    "correct": "Sümerler",
+    "wisdom": "Sümerler M.Ö. 3500'de yazıyı bulmuştur."
   },
   {
-    "id": "mz_q_782",
+    "id": "mz_tarih_782",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 82)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Malazgirt Meydan Muharebesi hangi yılda yapılmıştır?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "1299",
+      "1071",
+      "1040",
+      "1453"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 82)"
+    "correct": "1071",
+    "wisdom": "1071'de Anadolu kapıları açılmıştır."
   },
   {
-    "id": "mz_q_783",
+    "id": "mz_tarih_783",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 83)",
+    "question": "Tarih araştırmaları bilgilerimize göre, İstanbul'un fetih yılı hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "1299",
+      "1453",
+      "1517",
+      "1071"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 83)"
+    "correct": "1453",
+    "wisdom": "İstanbul 1453'te fethedilmiştir."
   },
   {
-    "id": "mz_q_784",
+    "id": "mz_tarih_784",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 84)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Türkiye Cumhuriyeti hangi tarihte ilan edilmiştir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "19 Mayıs 1919",
+      "30 Ağustos 1922",
+      "23 Nisan 1920",
+      "29 Ekim 1923"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 84)"
+    "correct": "29 Ekim 1923",
+    "wisdom": "Cumhuriyet 29 Ekim 1923'te ilan edilmiştir."
   },
   {
-    "id": "mz_q_785",
+    "id": "mz_tarih_785",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 85)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Türkiye Büyük Millet Meclisi hangi tarihte açılmıştır?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "23 Nisan 1920",
+      "30 Ağustos 1922",
+      "29 Ekim 1923",
+      "19 Mayıs 1919"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 85)"
+    "correct": "23 Nisan 1920",
+    "wisdom": "23 Nisan ulusal egemenlik bayramıdır."
   },
   {
-    "id": "mz_q_786",
+    "id": "mz_tarih_786",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 86)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Mustafa Kemal Atatürk Samsun'a ne zaman çıkmıştır?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "30 Ağustos 1922",
+      "19 Mayıs 1919",
+      "23 Nisan 1920",
+      "29 Ekim 1923"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 86)"
+    "correct": "19 Mayıs 1919",
+    "wisdom": "19 Mayıs Kurtuluş Savaşı başlangıcıdır."
   },
   {
-    "id": "mz_q_787",
+    "id": "mz_tarih_787",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 87)",
+    "question": "Tarih araştırmaları bilgilerimize göre, 30 Ağustos Zafer Bayramı hangi savaşın sonucudur?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "İnönü",
+      "Büyük Taarruz",
+      "Sakarya",
+      "Çanakkale"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 87)"
+    "correct": "Büyük Taarruz",
+    "wisdom": "30 Ağustos askeri zaferi taçlandırmıştır."
   },
   {
-    "id": "mz_q_788",
+    "id": "mz_tarih_788",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 88)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Çanakkale Savaşı hangi yıl kazanılmıştır?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "1918",
+      "1915",
+      "1920",
+      "1914"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 88)"
+    "correct": "1915",
+    "wisdom": "1915 deniz ve kara zaferleriyle destan yazılmıştır."
   },
   {
-    "id": "mz_q_789",
+    "id": "mz_tarih_789",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 89)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Türklerin ilk yazılı abideleri hangileridir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Karabalgasun",
+      "Yenisey Yazıtları",
+      "Kutadgu Bilig",
+      "Orhun Abideleri"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 89)"
+    "correct": "Orhun Abideleri",
+    "wisdom": "Orhun abideleri Göktürkler dönemine aittir."
   },
   {
-    "id": "mz_q_790",
+    "id": "mz_tarih_790",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 90)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Gize Piramitleri hangi uygarlığa aittir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Antik Mısır",
+      "Romalılar",
+      "Sümerler",
+      "Persler"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 90)"
+    "correct": "Antik Mısır",
+    "wisdom": "Piramitler anıt mezarlardır."
   },
   {
-    "id": "mz_q_791",
+    "id": "mz_tarih_791",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 91)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Tarihte bilinen ilk yazılı antlaşma hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Versay",
+      "Mondros",
+      "Kadeş Antlaşması",
+      "Lozan"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 91)"
+    "correct": "Kadeş Antlaşması",
+    "wisdom": "Mısır ve Hitit arasında yapılmıştır."
   },
   {
-    "id": "mz_q_792",
+    "id": "mz_tarih_792",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 92)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Asya Hun İmparatorluğu'na en parlak dönemi yaşatan hükümdar kimdir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Bumin Kağan",
+      "Bilge Kağan",
+      "Teoman",
+      "Mete Han"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 92)"
+    "correct": "Mete Han",
+    "wisdom": "Mete Han onlu ordu sistemini kurmuştur."
   },
   {
-    "id": "mz_q_793",
+    "id": "mz_tarih_793",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 93)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Yerleşik hayata geçen ilk Türk devleti hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Hunlar",
+      "Göktürkler",
+      "Avarlar",
+      "Uygurlar"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 93)"
+    "correct": "Uygurlar",
+    "wisdom": "Uygurlar tarım ve matbaayla uğraşmıştır."
   },
   {
-    "id": "mz_q_794",
+    "id": "mz_tarih_794",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 94)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Roma İmparatorluğu hangi yılda ikiye bölünmüştür?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "1453",
+      "476",
+      "330",
+      "395"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 94)"
+    "correct": "395",
+    "wisdom": "Kavimler Göçü sonucu ikiye ayrılmıştır."
   },
   {
-    "id": "mz_q_795",
+    "id": "mz_tarih_795",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 95)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Avrupa'nın yapısını değiştiren büyük göç hareketi hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Haçlı Seferleri",
+      "Keşifler",
+      "Kavimler Göçü",
+      "Rönesans"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 95)"
+    "correct": "Kavimler Göçü",
+    "wisdom": "Göç, Orta Çağ'ı başlatmıştır."
   },
   {
-    "id": "mz_q_796",
+    "id": "mz_tarih_796",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 96)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Kudüs'ü ilk kez fetheden halife kimdir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Hz. Ömer (r.a.)",
+      "Hz. Ali (r.a.)",
+      "Hz. Osman (r.a.)",
+      "Hz. Ebu Bekir (r.a.)"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 96)"
+    "correct": "Hz. Ömer (r.a.)",
+    "wisdom": "Hz. Ömer şehri barışla teslim almıştır."
   },
   {
-    "id": "mz_q_797",
+    "id": "mz_tarih_797",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 97)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Mekke'nin Fethi hangi yılda gerçekleşmiştir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "632",
+      "610",
+      "622",
+      "630"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 97)"
+    "correct": "630",
+    "wisdom": "630'da Mekke fethedilmiştir."
   },
   {
-    "id": "mz_q_798",
+    "id": "mz_tarih_798",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 98)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Müslümanların ilk büyük savaşı hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Mute Savaşı",
+      "Bedir Savaşı",
+      "Hendek Savaşı",
+      "Uhud Savaşı"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 98)"
+    "correct": "Bedir Savaşı",
+    "wisdom": "624 yılındaki Bedir zaferdir."
   },
   {
-    "id": "mz_q_799",
+    "id": "mz_tarih_799",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 99)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Medine çevresine hendek kazılan savaş hangisidir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Hendek Savaşı",
+      "Uhud Savaşı",
+      "Hayber",
+      "Tebük"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 99)"
+    "correct": "Hendek Savaşı",
+    "wisdom": "627 yılında savunma yapılmıştır."
   },
   {
-    "id": "mz_q_800",
+    "id": "mz_tarih_800",
     "category": "Tarih",
-    "question": "Tarih bilimi için en güvenilir bilgi kaynakları aşağıdakilerden hangisidir? (Soru 100)",
+    "question": "Tarih araştırmaları bilgilerimize göre, Peygamberimiz'in insan hakları niteliğindeki son konuşması nedir?",
     "options": [
-      "Birinci elden kaynaklar ve belgeler",
-      "Kulaktan dolma hikayeler",
-      "Efsaneler ve masallar",
-      "Kişisel tahminler"
+      "Hudeybiye",
+      "Veda Hutbesi",
+      "Medine Anayasası",
+      "Akabe Biatı"
     ],
-    "correct": "Birinci elden kaynaklar ve belgeler",
-    "wisdom": "Tarih, belgelere ve kanıtlara dayalı olarak nesnel bir şekilde incelenmesi gereken bir sosyal bilimdir. (Tarih Soru 100)"
+    "correct": "Veda Hutbesi",
+    "wisdom": "Hutbede ırkçılık, faiz ve kan davaları yasaklanmıştır."
   }
 ];
