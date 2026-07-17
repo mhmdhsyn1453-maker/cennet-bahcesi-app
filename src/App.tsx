@@ -11,7 +11,7 @@ import { SirAyeti } from './components/SirAyeti';
 import { SoruEditoru } from './components/SoruEditoru';
 import { BuzzerAndTimer } from './components/BuzzerAndTimer';
 import { playSound } from './components/BuzzerAndTimer';
-import { Info, Download, Compass, Sparkles, BookOpen, Clock, Trophy, Award, RotateCcw, Volume2, VolumeX, Shield, Hammer, Gamepad2, Landmark, BookOpenCheck, Home, Sun, Moon, Eye, EyeOff, Pencil, GraduationCap, Maximize2, Minimize2, Heart, X, Music } from 'lucide-react';
+import { Info, Download, LogOut, Compass, Sparkles, BookOpen, Clock, Trophy, Award, RotateCcw, Volume2, VolumeX, Shield, Hammer, Gamepad2, Landmark, BookOpenCheck, Home, Sun, Moon, Eye, EyeOff, Pencil, GraduationCap, Maximize2, Minimize2, Heart, X, Music } from 'lucide-react';
 import Lottie from 'lottie-react';
 import { motion } from 'motion/react';
 
@@ -192,6 +192,20 @@ export default function App() {
         setShowSplash(false);
       }, 1200);
     }, 4800);
+  };
+
+  // Bahçeden Çık butonu tıklandığında bütün müzik/tam ekran durumlarını resetleyip giriş ekranına geri döner
+  const handleExitApp = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(err => console.warn(err));
+    }
+    if (audioRef.current) {
+      audioRef.current.pause();
+    }
+    setIsMusicPlaying(false);
+    setCinematicPhase('welcome');
+    setShowSplash(true);
+    setFadeOutSplash(false);
   };
 
   // === DRAGGABLE SMART BOARD PEN STATES ===
@@ -1002,7 +1016,7 @@ export default function App() {
           className={`fixed inset-0 z-[100000] flex flex-col items-center justify-center p-6 select-none transition-colors duration-500 ${
             isDarkMode 
               ? 'bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#0a192f] text-slate-100' 
-              : 'bg-gradient-to-br from-[#e8f7f0] via-[#e1f0fa] to-[#fcf5e3] text-slate-800'
+              : 'bg-gradient-to-br from-[#bce6d0] via-[#d4f0df] to-[#ecf9f2] text-slate-800'
           }`}
           id="welcome-screen"
         >
@@ -1021,42 +1035,47 @@ export default function App() {
             .animate-scale-up {
               animation: scale-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
             }
-            @keyframes float-orb-1 {
-              0% { transform: translate3d(0, 0, 0) scale(1); }
-              33% { transform: translate3d(50px, -80px, 0) scale(1.1); }
-              66% { transform: translate3d(-30px, 40px, 0) scale(0.95); }
-              100% { transform: translate3d(0, 0, 0) scale(1); }
+            @keyframes rotate-circles {
+              0% { transform: translate3d(-50%, -50%, 0) rotate(0deg); }
+              100% { transform: translate3d(-50%, -50%, 0) rotate(360deg); }
             }
-            @keyframes float-orb-2 {
-              0% { transform: translate3d(0, 0, 0) scale(1); }
-              50% { transform: translate3d(-60px, 80px, 0) scale(0.9); }
-              100% { transform: translate3d(0, 0, 0) scale(1); }
-            }
-            @keyframes float-orb-3 {
-              0% { transform: translate3d(0, 0, 0) scale(1); }
-              40% { transform: translate3d(40px, 50px, 0) scale(1.05); }
-              80% { transform: translate3d(-50px, -30px, 0) scale(0.95); }
-              100% { transform: translate3d(0, 0, 0) scale(1); }
-            }
-            .animate-orb-1 {
-              animation: float-orb-1 25s infinite ease-in-out;
-              will-change: transform;
-            }
-            .animate-orb-2 {
-              animation: float-orb-2 30s infinite ease-in-out;
-              will-change: transform;
-            }
-            .animate-orb-3 {
-              animation: float-orb-3 28s infinite ease-in-out;
+            .bg-pattern-circles {
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              transform: translate3d(-50%, -50%, 0);
+              width: 140vmax;
+              height: 140vmax;
+              opacity: 0.65;
+              pointer-events: none;
+              z-index: 0;
+              animation: rotate-circles 120s linear infinite;
               will-change: transform;
             }
           `}</style>
 
-          {/* Floating Glassmorphic Orbs / Circles (High FPS GPU-accelerated) */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-            <div className="w-[30rem] h-[30rem] rounded-full absolute -top-40 -left-40 bg-emerald-500/10 dark:bg-emerald-500/8 blur-[120px] animate-orb-1" />
-            <div className="w-[30rem] h-[30rem] rounded-full absolute -bottom-40 -right-40 bg-indigo-500/10 dark:bg-indigo-500/8 blur-[120px] animate-orb-2" />
-            <div className="w-[24rem] h-[24rem] rounded-full absolute top-[30%] -right-20 bg-amber-500/8 dark:bg-amber-500/5 blur-[100px] animate-orb-3" />
+          {/* Concentric Tree Rings Pattern (From mysite website) */}
+          <div className="bg-pattern-circles">
+            <svg viewBox="0 0 1000 1000" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="wavy-rings">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.006" numOctaves="3" result="noise">
+                    <animate attributeName="baseFrequency" values="0.005;0.007;0.005" dur="30s" repeatCount="indefinite" />
+                  </feTurbulence>
+                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="55" xChannelSelector="R" yChannelSelector="G" />
+                </filter>
+              </defs>
+              <g
+                filter="url(#wavy-rings)"
+                fill="none"
+                stroke={isDarkMode ? "rgba(245, 238, 220, 0.03)" : "rgba(13, 34, 25, 0.15)"}
+                strokeWidth="1.5px"
+              >
+                {Array.from({ length: 32 }, (_, i) => (
+                  <circle key={i} cx="500" cy="500" r={30 + i * 30} />
+                ))}
+              </g>
+            </svg>
           </div>
 
           {/* Top-Right Control Toggles linked to main app state */}
@@ -1088,6 +1107,20 @@ export default function App() {
                 <Moon className="w-5.5 h-5.5 text-indigo-600 group-hover:-rotate-12 transition-transform duration-500 relative z-10" />
               )}
             </button>
+
+            {/* Sync Fullscreen Toggle */}
+            <button
+              onClick={toggleFullscreen}
+              className="group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-md hover:border-emerald-500/30 dark:hover:border-emerald-500/30"
+              title={isFullscreen ? "Tam Ekrandan Çık" : "Tam Ekran Yap"}
+            >
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              {isFullscreen ? (
+                <Minimize2 className="w-5.5 h-5.5 text-emerald-600 dark:text-emerald-450 relative z-10" />
+              ) : (
+                <Maximize2 className="w-5.5 h-5.5 text-emerald-700 dark:text-emerald-500 relative z-10" />
+              )}
+            </button>
           </div>
 
           {/* Subtle background particles */}
@@ -1095,7 +1128,7 @@ export default function App() {
             <div className="absolute top-[10%] left-[50%] -translate-x-1/2 w-[600px] h-[600px] rounded-full blur-[150px] bg-emerald-500/30" />
           </div>
 
-          <div className="w-full max-w-lg bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-white/40 dark:border-slate-800/80 p-8 rounded-[2.5rem] shadow-2xl flex flex-col items-center text-center relative overflow-hidden animate-scale-up z-10">
+          <div className="w-full max-w-lg bg-white/80 dark:bg-slate-900/70 backdrop-blur-md border border-white/40 dark:border-slate-800/80 p-8 rounded-[2.5rem] shadow-2xl flex flex-col items-center text-center relative overflow-hidden animate-scale-up z-10">
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent pointer-events-none" />
 
             {/* Logo */}
@@ -1138,11 +1171,11 @@ export default function App() {
 
             {/* Günün Sözü / Hadisi */}
             {welcomeQuote && (
-              <div className="relative z-10 w-full bg-slate-100/40 dark:bg-slate-950/20 border border-slate-200/30 dark:border-slate-800/30 rounded-2xl p-4 mb-6 text-center backdrop-blur-sm">
-                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 border border-emerald-250 dark:border-emerald-800 text-[9px] font-black tracking-widest text-emerald-800 dark:text-emerald-300 uppercase">
+              <div className="relative z-10 w-full bg-slate-100/40 dark:bg-slate-950/20 border border-slate-200/30 dark:border-slate-800/30 rounded-2xl pt-7 pb-4 px-4 mb-6 text-center backdrop-blur-sm">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 border border-emerald-250 dark:border-emerald-800 text-[9px] font-black tracking-widest text-emerald-800 dark:text-emerald-300 uppercase">
                   Günün Hayırlı Sözü
                 </span>
-                <p className="text-[11px] sm:text-xs text-slate-700 dark:text-slate-350 italic font-semibold leading-relaxed pt-1">
+                <p className="text-[11px] sm:text-xs text-slate-700 dark:text-slate-350 italic font-semibold leading-relaxed pt-2">
                   {welcomeQuote}
                 </p>
               </div>
@@ -1195,8 +1228,8 @@ export default function App() {
         <div className="fixed inset-0 z-[110000] flex items-center justify-center bg-black/60 backdrop-blur-md animate-fade-in p-4">
           <div className="w-full max-w-md p-8 rounded-3xl bg-white/80 dark:bg-slate-900/80 border border-white/20 dark:border-slate-800/80 shadow-2xl backdrop-blur-xl flex flex-col gap-6 text-center select-none animate-scale-up">
             <div className="flex flex-col items-center gap-2">
-              <div className="w-14 h-14 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-450 flex items-center justify-center shadow-inner">
-                <span className="text-2xl">🕌</span>
+              <div className="w-14 h-14 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-2 shadow-md flex items-center justify-center hover:scale-105 transition-transform duration-300">
+                <img src="./assets/logo.png" alt="Logo" className="w-full h-full object-contain" />
               </div>
               <h2 className="text-xl font-black text-slate-800 dark:text-slate-100 uppercase tracking-wider mt-2">
                 Cennet Bahçesi
@@ -1412,6 +1445,16 @@ export default function App() {
             ) : (
               <Maximize2 className="w-5.5 h-5.5 text-emerald-700 dark:text-emerald-500" />
             )}
+          </button>
+
+          {/* Bahçeden Çık (Exit Garden) Button */}
+          <button
+            onClick={handleExitApp}
+            className="group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border border-rose-200/50 dark:border-rose-900/50 bg-rose-500/10 dark:bg-rose-500/5 hover:bg-rose-500/20 dark:hover:bg-rose-500/10 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-rose-500/10 hover:border-rose-500/30 dark:hover:border-rose-500/30"
+            title="Bahçeden Çık (Giriş Ekranına Dön)"
+          >
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-rose-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <LogOut className="w-5.5 h-5.5 text-rose-600 dark:text-rose-450 relative z-10" />
           </button>
         </div>
       )}
