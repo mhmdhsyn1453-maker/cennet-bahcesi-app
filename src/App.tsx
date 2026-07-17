@@ -999,7 +999,11 @@ export default function App() {
       {/* 🌟 Welcome/Entry Screen */}
       {cinematicPhase === 'welcome' && (
         <div
-          className="fixed inset-0 z-[100000] flex flex-col items-center justify-center p-6 select-none transition-colors duration-500"
+          className={`fixed inset-0 z-[100000] flex flex-col items-center justify-center p-6 select-none transition-colors duration-500 ${
+            isDarkMode 
+              ? 'bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#0a192f] text-slate-100' 
+              : 'bg-gradient-to-br from-[#faf6ef] via-[#f5ede0] to-[#e8dec9] text-slate-800'
+          }`}
           id="welcome-screen"
         >
           <style>{`
@@ -1017,18 +1021,43 @@ export default function App() {
             .animate-scale-up {
               animation: scale-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
             }
+            @keyframes float-orb-1 {
+              0% { transform: translate3d(0, 0, 0) scale(1); }
+              33% { transform: translate3d(50px, -80px, 0) scale(1.1); }
+              66% { transform: translate3d(-30px, 40px, 0) scale(0.95); }
+              100% { transform: translate3d(0, 0, 0) scale(1); }
+            }
+            @keyframes float-orb-2 {
+              0% { transform: translate3d(0, 0, 0) scale(1); }
+              50% { transform: translate3d(-60px, 80px, 0) scale(0.9); }
+              100% { transform: translate3d(0, 0, 0) scale(1); }
+            }
+            @keyframes float-orb-3 {
+              0% { transform: translate3d(0, 0, 0) scale(1); }
+              40% { transform: translate3d(40px, 50px, 0) scale(1.05); }
+              80% { transform: translate3d(-50px, -30px, 0) scale(0.95); }
+              100% { transform: translate3d(0, 0, 0) scale(1); }
+            }
+            .animate-orb-1 {
+              animation: float-orb-1 25s infinite ease-in-out;
+              will-change: transform;
+            }
+            .animate-orb-2 {
+              animation: float-orb-2 30s infinite ease-in-out;
+              will-change: transform;
+            }
+            .animate-orb-3 {
+              animation: float-orb-3 28s infinite ease-in-out;
+              will-change: transform;
+            }
           `}</style>
 
-          {/* Background image reflecting with glass effect */}
-          <div
-            className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat transition-all duration-500"
-            style={{
-              backgroundImage: "url('./assets/bg-photo.png')"
-            }}
-          />
-          
-          {/* Glass blur overlay */}
-          <div className="fixed inset-0 z-0 bg-white/20 dark:bg-slate-900/40 backdrop-blur-[15px] pointer-events-none" />
+          {/* Floating Glassmorphic Orbs / Circles (High FPS GPU-accelerated) */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+            <div className="w-[30rem] h-[30rem] rounded-full absolute -top-40 -left-40 bg-emerald-500/10 dark:bg-emerald-500/8 blur-[120px] animate-orb-1" />
+            <div className="w-[30rem] h-[30rem] rounded-full absolute -bottom-40 -right-40 bg-indigo-500/10 dark:bg-indigo-500/8 blur-[120px] animate-orb-2" />
+            <div className="w-[24rem] h-[24rem] rounded-full absolute top-[30%] -right-20 bg-amber-500/8 dark:bg-amber-500/5 blur-[100px] animate-orb-3" />
+          </div>
 
           {/* Top-Right Control Toggles linked to main app state */}
           <div className="fixed top-6 right-6 z-[100005] flex gap-3">
