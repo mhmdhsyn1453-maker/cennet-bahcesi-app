@@ -1002,7 +1002,7 @@ export default function App() {
           className={`fixed inset-0 z-[100000] flex flex-col items-center justify-center p-6 select-none transition-colors duration-500 ${
             isDarkMode 
               ? 'bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#0a192f] text-slate-100' 
-              : 'bg-gradient-to-br from-[#faf6ef] via-[#f5ede0] to-[#e8dec9] text-slate-800'
+              : 'bg-gradient-to-br from-[#e8f7f0] via-[#e1f0fa] to-[#fcf5e3] text-slate-800'
           }`}
           id="welcome-screen"
         >
