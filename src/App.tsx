@@ -11,7 +11,7 @@ import { SirAyeti } from './components/SirAyeti';
 import { SoruEditoru } from './components/SoruEditoru';
 import { BuzzerAndTimer } from './components/BuzzerAndTimer';
 import { playSound } from './components/BuzzerAndTimer';
-import { Compass, Sparkles, BookOpen, Clock, Trophy, Award, RotateCcw, Volume2, VolumeX, Shield, Hammer, Gamepad2, Landmark, BookOpenCheck, Home, Sun, Moon, Eye, EyeOff, Pencil, GraduationCap, Maximize2, Minimize2, Heart, X, Music } from 'lucide-react';
+import { Info, Download, Compass, Sparkles, BookOpen, Clock, Trophy, Award, RotateCcw, Volume2, VolumeX, Shield, Hammer, Gamepad2, Landmark, BookOpenCheck, Home, Sun, Moon, Eye, EyeOff, Pencil, GraduationCap, Maximize2, Minimize2, Heart, X, Music } from 'lucide-react';
 import Lottie from 'lottie-react';
 import { motion } from 'motion/react';
 
@@ -55,6 +55,10 @@ export default function App() {
   });
 
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+  const [wantsMusic, setWantsMusic] = useState(true);
+  const [welcomeQuote, setWelcomeQuote] = useState('');
+  const [showWelcomeAbout, setShowWelcomeAbout] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
   const [isAnimatedBg, setIsAnimatedBg] = useState<boolean>(() => {
     return localStorage.getItem('cennet_bahcesi_animated_bg') !== 'false';
   });
@@ -180,7 +184,9 @@ export default function App() {
     safetyTimerRef.current = setTimeout(() => {
       setFadeOutSplash(true);
       setCinematicPhase('cinematic');
-      playBackgroundMusic(35);
+      if (wantsMusic) {
+        playBackgroundMusic(35);
+      }
 
       setTimeout(() => {
         setShowSplash(false);
@@ -330,6 +336,22 @@ export default function App() {
 
   // Load Basmala Lottie on mount
   useEffect(() => {
+    // Günün hadisini veya güzel sözünü seç
+    const quotes = [
+      "“Sizin en hayırlınız, Kur’an’ı öğrenen ve öğreteninizdir.” - Hadis-i Şerif",
+      "“Kolaylaştırınız, zorlaştırmayınız; müjdeleyiniz, nefret ettirmeyiniz.” - Hadis-i Şerif",
+      "“Güzel söz sadakadır.” - Hadis-i Şerif",
+      "“Hiçbir baba, çocuğuna güzel ahlaktan daha hayırlı bir miras bırakamaz.” - Hadis-i Şerif",
+      "“İman iki eşit parçadır; yarısı sabır, yarısı şükürdür.” - Hadis-i Şerif",
+      "“Temizlik imanın yarısıdır.” - Hadis-i Şerif",
+      "“Küçüklerimize merhamet etmeyen, büyüklerimize saygı göstermeyen bizden değildir.” - Hadis-i Şerif",
+      "“Rabbim, benim ilmimi ve anlayışımı artır, beni salihler arasına kat.” - Taha Suresi, 114. Ayet",
+      "“Bismillâhirrahmânirrahîm demek her hayrın başıdır.” - Güzel Söz",
+      "“Allah, güzeldir ve güzelliği sever.” - Hadis-i Şerif"
+    ];
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    setWelcomeQuote(quotes[randomIndex]);
+
     fetch('assets/lottie-basmala.json')
       .then((r) => r.json())
       .then((data) => {
@@ -340,10 +362,29 @@ export default function App() {
         setCinematicPhase('ready');
       });
 
+    // Listen for PWA install prompt
+    const handleBeforeInstallPrompt = (e: Event) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+    };
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+
     return () => {
       if (safetyTimerRef.current) clearTimeout(safetyTimerRef.current);
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     };
   }, []);
+
+  const handleInstallPWA = () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult: any) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the PWA install prompt');
+      }
+      setDeferredPrompt(null);
+    });
+  };
 
   // Cinematic timer: transition from 'cinematic' to 'ready' after 10 seconds
   useEffect(() => {
@@ -385,6 +426,7 @@ export default function App() {
     if (isMusicPlaying) {
       audioRef.current.pause();
       setIsMusicPlaying(false);
+      setWantsMusic(false);
     } else {
       // Make sure volume is audible before playing!
       if (audioRef.current.volume === 0) {
@@ -392,9 +434,11 @@ export default function App() {
       }
       audioRef.current.play().then(() => {
         setIsMusicPlaying(true);
+        setWantsMusic(true);
       }).catch((err) => {
         console.warn("Audio play blocked or file not found yet:", err);
         setIsMusicPlaying(false);
+        setWantsMusic(false);
       });
     }
    
@@ -960,8 +1004,8 @@ export default function App() {
         >
           <style>{`
             @keyframes pulse-slow {
-              0%, 100% { transform: scale(1); box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.3); }
-              50% { transform: scale(1.02); box-shadow: 0 15px 30px -5px rgba(16, 185, 129, 0.45); }
+              0%, 100% { transform: scale(1); box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.2); }
+              50% { transform: scale(1.02); box-shadow: 0 15px 30px -5px rgba(16, 185, 129, 0.35); }
             }
             .animate-pulse-slow {
               animation: pulse-slow 3s infinite ease-in-out;
@@ -977,17 +1021,48 @@ export default function App() {
 
           {/* Background image reflecting with glass effect */}
           <div
-            className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-all duration-500"
+            className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat transition-all duration-500"
             style={{
               backgroundImage: "url('./assets/bg-photo.png')"
             }}
           />
           
           {/* Glass blur overlay */}
-          <div className="absolute inset-0 z-0 bg-white/20 dark:bg-slate-900/40 backdrop-blur-[15px] pointer-events-none" />
+          <div className="fixed inset-0 z-0 bg-white/20 dark:bg-slate-900/40 backdrop-blur-[15px] pointer-events-none" />
+
+          {/* Top-Right Control Toggles linked to main app state */}
+          <div className="fixed top-6 right-6 z-[100005] flex gap-3">
+            {/* Sync Sound Toggle */}
+            <button
+              onClick={() => setWantsMusic(prev => !prev)}
+              className="group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-md hover:border-emerald-500/30 dark:hover:border-emerald-500/30"
+              title={wantsMusic ? "Arka Plan Sesi Kapat" : "Arka Plan Sesi Aç"}
+            >
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              {wantsMusic ? (
+                <Volume2 className="w-5.5 h-5.5 text-emerald-600 dark:text-emerald-450 relative z-10" />
+              ) : (
+                <VolumeX className="w-5.5 h-5.5 text-slate-500 relative z-10" />
+              )}
+            </button>
+
+            {/* Sync Dark/Light Mode Toggle */}
+            <button
+              onClick={toggleDarkMode}
+              className="group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md text-slate-700 dark:text-slate-200 shadow-md hover:border-emerald-500/30 dark:hover:border-emerald-500/30"
+              title={isDarkMode ? "Aydınlık Mod" : "Karanlık Mod"}
+            >
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              {isDarkMode ? (
+                <Sun className="w-5.5 h-5.5 text-amber-400 group-hover:rotate-45 transition-transform duration-500 relative z-10" />
+              ) : (
+                <Moon className="w-5.5 h-5.5 text-indigo-600 group-hover:-rotate-12 transition-transform duration-500 relative z-10" />
+              )}
+            </button>
+          </div>
 
           {/* Subtle background particles */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20 z-0">
+          <div className="fixed inset-0 overflow-hidden pointer-events-none opacity-20 z-0">
             <div className="absolute top-[10%] left-[50%] -translate-x-1/2 w-[600px] h-[600px] rounded-full blur-[150px] bg-emerald-500/30" />
           </div>
 
@@ -1006,35 +1081,126 @@ export default function App() {
             
             {/* Subtitle */}
             <p className="text-slate-750 dark:text-slate-350 font-extrabold text-[11px] sm:text-xs mt-2 uppercase tracking-[0.2em] relative z-10">
-              Eğlenceli Yaz Kur'an Kursu Oyun Portalı
+              Yaz Kur'an Kursu Portalı
             </p>
 
-            {/* Description */}
-            <p className="text-slate-700 dark:text-slate-300 text-xs mt-4 leading-relaxed max-w-sm font-semibold relative z-10">
-              Elif-Ba okumaları, ezber takipleri, eğlenceli yarışmalar ve dualar ile dolu dolu bir yaz dönemi oyun merkezi.
-            </p>
+            {/* Badges preview */}
+            <div className="grid grid-cols-3 gap-2.5 mt-4.5 relative z-10 w-full max-w-sm px-2">
+              {[
+                { icon: "📖", label: "Elif-Ba", color: "bg-amber-500/10 dark:bg-amber-500/5 text-amber-800 dark:text-amber-300 border-amber-500/20" },
+                { icon: "📗", label: "Kur'an", color: "bg-emerald-500/10 dark:bg-emerald-500/5 text-emerald-800 dark:text-emerald-300 border-emerald-500/20" },
+                { icon: "📜", label: "Ezber", color: "bg-sky-500/10 dark:bg-sky-500/5 text-sky-800 dark:text-sky-300 border-sky-500/20" },
+                { icon: "📝", label: "Dersler", color: "bg-indigo-500/10 dark:bg-indigo-500/5 text-indigo-800 dark:text-indigo-300 border-indigo-500/20" },
+                { icon: "🎮", label: "Oyunlar", color: "bg-teal-500/10 dark:bg-teal-500/5 text-teal-800 dark:text-teal-300 border-teal-500/20" },
+                { icon: "🎵", label: "İlahiler", color: "bg-rose-500/10 dark:bg-rose-500/5 text-rose-800 dark:text-rose-300 border-rose-500/20" }
+              ].map((badge, idx) => (
+                <span
+                  key={idx}
+                  className={`flex items-center justify-center gap-1 px-1 py-2.5 rounded-2xl text-[10px] font-black border backdrop-blur-sm shadow-sm transition-all hover:scale-105 select-none ${badge.color}`}
+                >
+                  <span className="shrink-0">{badge.icon}</span>
+                  <span className="truncate">{badge.label}</span>
+                </span>
+              ))}
+            </div>
 
             {/* Welcome Ayah / Text decoration */}
             <div className="w-32 h-px bg-slate-400 dark:bg-slate-650 my-6 relative z-10" />
 
-            {/* Enter Button with Pulse Animation */}
+            {/* Günün Sözü / Hadisi */}
+            {welcomeQuote && (
+              <div className="relative z-10 w-full bg-slate-100/40 dark:bg-slate-950/20 border border-slate-200/30 dark:border-slate-800/30 rounded-2xl p-4 mb-6 text-center backdrop-blur-sm">
+                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 border border-emerald-250 dark:border-emerald-800 text-[9px] font-black tracking-widest text-emerald-800 dark:text-emerald-300 uppercase">
+                  Günün Hayırlı Sözü
+                </span>
+                <p className="text-[11px] sm:text-xs text-slate-700 dark:text-slate-350 italic font-semibold leading-relaxed pt-1">
+                  {welcomeQuote}
+                </p>
+              </div>
+            )}
+
+            {/* Enter Button (Solid Color Emerald) */}
             <button
               onClick={handleEnterApp}
-              className="relative z-10 w-full py-4 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-650 text-white font-black text-sm uppercase tracking-widest shadow-xl shadow-emerald-500/20 hover:shadow-emerald-500/30 hover:scale-102 active:scale-98 transition-all cursor-pointer animate-pulse-slow rounded-2xl"
+              className="relative z-10 w-full py-4.5 bg-emerald-600 dark:bg-emerald-500 hover:bg-emerald-700 dark:hover:bg-emerald-600 text-white font-black text-sm uppercase tracking-widest shadow-xl shadow-emerald-500/10 active:scale-95 transition-all cursor-pointer animate-pulse-slow rounded-2xl border-none"
             >
-              Bahçeye Giriş Yap ➔
+              Cennet Bahçesine Gir ➔
             </button>
 
             {/* Footer warning */}
-            <p className="text-[10px] text-slate-500 dark:text-slate-450 font-black uppercase tracking-wider mt-5 relative z-10">
+            <p className="text-[10px] text-slate-550 dark:text-slate-400 font-black uppercase tracking-wider mt-5 relative z-10">
               🔊 En iyi deneyim için sesinizi açmayı unutmayın!
             </p>
+
+          </div>
+
+          {/* Left-Center Control Bar (Install & About Buttons Stacked Vertically) */}
+          <div className="fixed left-6 top-1/2 -translate-y-1/2 z-[100005] flex flex-col gap-3">
+            {/* Info Trigger Button */}
+            <button
+              onClick={() => setShowWelcomeAbout(true)}
+              className="group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border border-slate-300 dark:border-slate-800/80 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-md hover:border-emerald-500/50 dark:hover:border-emerald-500/50"
+              title="Portal Hakkında Bilgi"
+            >
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <Info className="w-5.5 h-5.5 text-emerald-600 dark:text-emerald-400 relative z-10" />
+            </button>
+
+            {/* PWA Download Button */}
+            {deferredPrompt && (
+              <button
+                onClick={handleInstallPWA}
+                className="group relative w-12 h-12 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 border border-slate-300 dark:border-slate-800/80 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-md hover:border-emerald-500/50 dark:hover:border-emerald-500/50"
+                title="Cihaza Uygulama Olarak Yükle"
+              >
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                <Download className="w-5.5 h-5.5 text-emerald-600 dark:text-emerald-400 relative z-10" />
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* ℹ️ Welcome Info Modal */}
+      {showWelcomeAbout && (
+        <div className="fixed inset-0 z-[110000] flex items-center justify-center bg-black/60 backdrop-blur-md animate-fade-in p-4">
+          <div className="w-full max-w-md p-8 rounded-3xl bg-white/80 dark:bg-slate-900/80 border border-white/20 dark:border-slate-800/80 shadow-2xl backdrop-blur-xl flex flex-col gap-6 text-center select-none animate-scale-up">
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-14 h-14 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-450 flex items-center justify-center shadow-inner">
+                <span className="text-2xl">🕌</span>
+              </div>
+              <h2 className="text-xl font-black text-slate-800 dark:text-slate-100 uppercase tracking-wider mt-2">
+                Cennet Bahçesi
+              </h2>
+              <span className="px-3 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 text-[10px] font-black uppercase tracking-wider">
+                Yaz Kur'an Kursu Portalı
+              </span>
+            </div>
+
+            <div className="text-xs text-slate-650 dark:text-slate-300 text-left bg-slate-50/50 dark:bg-slate-950/40 p-5 rounded-2xl border border-slate-100 dark:border-slate-800/50 flex flex-col gap-3.5 leading-relaxed font-semibold">
+              <p>
+                <strong>Cennet Bahçesi</strong>, çocuklarımızın Kur'an-ı Kerim okumayı öğrenmesini, dini bilgileri eğlenceli yarışmalarla pekiştirmesini ve ezber takibini kolaylaştırmak amacıyla geliştirilmiş <strong>ücretsiz ve reklamsız</strong> bir eğitim portalıdır.
+              </p>
+              <p>
+                Akıllı tahtalarla tam uyumlu çalışacak şekilde tasarlanan bu arayüz; Elif-Ba eğitim kartları, namaz sureleri, eğlenceli yarışmalar ve ezber listesi gibi modüller içerir.
+              </p>
+              <p className="text-[10px] text-slate-450 dark:text-slate-500 border-t border-slate-200/50 dark:border-slate-800/50 pt-2.5">
+                Geliştirici Notu: Eğitimde yenilikçi ve dijital çözümler üretmek amacıyla tamamen gönüllü olarak tasarlanmıştır. Dualarınızı bekleriz.
+              </p>
+            </div>
+
+            <button
+              onClick={() => setShowWelcomeAbout(false)}
+              className="w-full py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs uppercase tracking-widest shadow-md transition-all active:scale-95 cursor-pointer border-none"
+            >
+              Kapat
+            </button>
           </div>
         </div>
       )}
 
       {/* Splash Screen Fullscreen Overlay */}
-      {showSplash && basmalaData && (
+      {showSplash && basmalaData && cinematicPhase !== 'welcome' && (
         <div
           className={`fixed inset-0 z-[99999] ${isDarkMode ? 'bg-[#0a192f]/50 text-slate-100' : 'bg-[#faf6ef]/45 text-slate-800'} backdrop-blur-[12px] flex flex-col items-center justify-center select-none transition-all duration-1000 ease-in-out ${fadeOutSplash ? 'opacity-0 pointer-events-none' : 'opacity-100'
             }`}
@@ -1061,7 +1227,9 @@ export default function App() {
                   setFadeOutSplash(true);
                   setCinematicPhase('cinematic');
 
-                  playBackgroundMusic(35);
+                  if (wantsMusic) {
+                    playBackgroundMusic(35);
+                  }
 
                   setTimeout(() => {
                     setShowSplash(false);
