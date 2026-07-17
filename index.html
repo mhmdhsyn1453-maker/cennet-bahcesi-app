@@ -6,8 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="manifest" href="./manifest.json" />
     <title>Cennet Bahçesi - Yaz Kur'an Kursu Portalı</title>
   </head>
   <body>
@@ -16,7 +16,9 @@
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
+          // Get the base path dynamically (e.g. '/' or '/cennet-bahcesi-app/')
+          const base = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+          navigator.serviceWorker.register(base + 'sw.js')
             .then(reg => {
               console.log('ServiceWorker registered:', reg.scope);
               // Her 30 dakikada bir güncelleme kontrolü yap (sessizce)
