@@ -61,7 +61,7 @@ export default function App() {
   const [showSplash, setShowSplash] = useState(true);
   const [fadeOutSplash, setFadeOutSplash] = useState(false);
   const [basmalaData, setBasmalaData] = useState<any>(null);
-  const [cinematicPhase, setCinematicPhase] = useState<'splash' | 'cinematic' | 'ready'>('splash');
+  const [cinematicPhase, setCinematicPhase] = useState<'welcome' | 'splash' | 'cinematic' | 'ready'>('welcome');
   const [isFocused, setIsFocused] = useState<boolean>(false);
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
   const [visitedTabs, setVisitedTabs] = useState<string[]>(['home']);
@@ -154,39 +154,39 @@ export default function App() {
     }
   }, []);
 
-  // Web autoplay engeline karşı kullanıcı etkileşimiyle sesi başlatma dinleyicisi
-  useEffect(() => {
-    if (hasInteractedRef.current) return;
+  // Giriş butonuna basıldığında tam ekrana geçip Besmele sesini ve Lottie animasyonunu başlatır
+  const handleEnterApp = () => {
+    // 1. Tam ekrana geçiş isteği
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen()
+        .then(() => {
+          setIsFullscreen(true);
+        })
+        .catch(err => {
+          console.warn("Otomatik tam ekran engellendi veya başarısız oldu:", err);
+        });
+    }
 
-    const handleFirstUserInteraction = () => {
-      if (hasInteractedRef.current) return;
+    // 2. Besmele sesini çal
+    const introAudio = new Audio('assets/audio/basmala_intro.mp3');
+    introAudio.play().catch(e => console.warn("Besmele sesi başlatılamadı:", e));
 
-      // Auto fullscreen on first click
-      if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen()
-          .then(() => {
-            setIsFullscreen(true);
-          })
-          .catch(err => {
-            console.warn("Auto fullscreen failed or was blocked by browser:", err);
-          });
-      }
+    // 3. Animasyon aşamasını başlat
+    setCinematicPhase('splash');
+    hasInteractedRef.current = true;
 
-      if (cinematicPhase !== 'splash' && audioRef.current) {
-        hasInteractedRef.current = true;
-        playBackgroundMusic(0);
-        window.removeEventListener('click', handleFirstUserInteraction);
-        window.removeEventListener('touchstart', handleFirstUserInteraction);
-      }
-    };
+    // 4. Güvenlik zamanlayıcısını başlat (Lottie tamamlanmazsa diye)
+    if (safetyTimerRef.current) clearTimeout(safetyTimerRef.current);
+    safetyTimerRef.current = setTimeout(() => {
+      setFadeOutSplash(true);
+      setCinematicPhase('cinematic');
+      playBackgroundMusic(35);
 
-    window.addEventListener('click', handleFirstUserInteraction);
-    window.addEventListener('touchstart', handleFirstUserInteraction);
-    return () => {
-      window.removeEventListener('click', handleFirstUserInteraction);
-      window.removeEventListener('touchstart', handleFirstUserInteraction);
-    };
-  }, [cinematicPhase]);
+      setTimeout(() => {
+        setShowSplash(false);
+      }, 1200);
+    }, 4800);
+  };
 
   // === DRAGGABLE SMART BOARD PEN STATES ===
   const [penPos, setPenPos] = useState(() => {
@@ -328,22 +328,12 @@ export default function App() {
       });
   };
 
-  // Load Basmala Lottie on mount and set splash screen timer
+  // Load Basmala Lottie on mount
   useEffect(() => {
     fetch('assets/lottie-basmala.json')
       .then((r) => r.json())
       .then((data) => {
         setBasmalaData(data);
-        // Safety fallback timer in case onComplete is not triggered (reduced to 4.8s due to higher speed)
-        safetyTimerRef.current = setTimeout(() => {
-          setFadeOutSplash(true);
-          setCinematicPhase('cinematic');
-          playBackgroundMusic(35);
-
-          setTimeout(() => {
-            setShowSplash(false);
-          }, 1200);
-        }, 4800);
       })
       .catch(() => {
         setShowSplash(false);
@@ -961,6 +951,87 @@ export default function App() {
 
   return (
     <div className={`min-h-screen transition-colors duration-500 ${isDarkMode ? 'dark bg-[#0a192f] text-slate-100' : 'bg-[#c7b99a] text-slate-800'} flex flex-col justify-between relative overflow-hidden font-sans`} id="app-root-container">
+
+      {/* 🌟 Welcome/Entry Screen */}
+      {cinematicPhase === 'welcome' && (
+        <div
+          className="fixed inset-0 z-[100000] flex flex-col items-center justify-center p-6 select-none transition-colors duration-500"
+          id="welcome-screen"
+        >
+          <style>{`
+            @keyframes pulse-slow {
+              0%, 100% { transform: scale(1); box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.3); }
+              50% { transform: scale(1.02); box-shadow: 0 15px 30px -5px rgba(16, 185, 129, 0.45); }
+            }
+            .animate-pulse-slow {
+              animation: pulse-slow 3s infinite ease-in-out;
+            }
+            @keyframes scale-up {
+              0% { transform: scale(0.95); opacity: 0; }
+              100% { transform: scale(1); opacity: 1; }
+            }
+            .animate-scale-up {
+              animation: scale-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            }
+          `}</style>
+
+          {/* Background image reflecting with glass effect */}
+          <div
+            className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-all duration-500"
+            style={{
+              backgroundImage: "url('./assets/bg-photo.png')"
+            }}
+          />
+          
+          {/* Glass blur overlay */}
+          <div className="absolute inset-0 z-0 bg-white/20 dark:bg-slate-900/40 backdrop-blur-[15px] pointer-events-none" />
+
+          {/* Subtle background particles */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20 z-0">
+            <div className="absolute top-[10%] left-[50%] -translate-x-1/2 w-[600px] h-[600px] rounded-full blur-[150px] bg-emerald-500/30" />
+          </div>
+
+          <div className="w-full max-w-lg bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-white/40 dark:border-slate-800/80 p-8 rounded-[2.5rem] shadow-2xl flex flex-col items-center text-center relative overflow-hidden animate-scale-up z-10">
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent pointer-events-none" />
+
+            {/* Logo */}
+            <div className="w-24 h-24 rounded-3xl bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border-2 border-slate-200 dark:border-slate-700 p-2 shadow-lg mb-6 relative z-10 hover:scale-105 transition-transform duration-300">
+              <img src="./assets/logo.png" alt="Logo" className="w-full h-full object-contain" />
+            </div>
+
+            {/* Title */}
+            <h1 className="font-display font-black text-3xl sm:text-4xl tracking-wider text-emerald-800 dark:text-emerald-300 uppercase relative z-10">
+              Cennet Bahçesi
+            </h1>
+            
+            {/* Subtitle */}
+            <p className="text-slate-750 dark:text-slate-350 font-extrabold text-[11px] sm:text-xs mt-2 uppercase tracking-[0.2em] relative z-10">
+              Eğlenceli Yaz Kur'an Kursu Oyun Portalı
+            </p>
+
+            {/* Description */}
+            <p className="text-slate-700 dark:text-slate-300 text-xs mt-4 leading-relaxed max-w-sm font-semibold relative z-10">
+              Elif-Ba okumaları, ezber takipleri, eğlenceli yarışmalar ve dualar ile dolu dolu bir yaz dönemi oyun merkezi.
+            </p>
+
+            {/* Welcome Ayah / Text decoration */}
+            <div className="w-32 h-px bg-slate-400 dark:bg-slate-650 my-6 relative z-10" />
+
+            {/* Enter Button with Pulse Animation */}
+            <button
+              onClick={handleEnterApp}
+              className="relative z-10 w-full py-4 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-650 text-white font-black text-sm uppercase tracking-widest shadow-xl shadow-emerald-500/20 hover:shadow-emerald-500/30 hover:scale-102 active:scale-98 transition-all cursor-pointer animate-pulse-slow rounded-2xl"
+            >
+              Bahçeye Giriş Yap ➔
+            </button>
+
+            {/* Footer warning */}
+            <p className="text-[10px] text-slate-500 dark:text-slate-450 font-black uppercase tracking-wider mt-5 relative z-10">
+              🔊 En iyi deneyim için sesinizi açmayı unutmayın!
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* Splash Screen Fullscreen Overlay */}
       {showSplash && basmalaData && (
