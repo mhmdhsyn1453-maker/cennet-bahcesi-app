@@ -58,6 +58,7 @@ export default function App() {
   const [wantsMusic, setWantsMusic] = useState(true);
   const [welcomeQuote, setWelcomeQuote] = useState('');
   const [showWelcomeAbout, setShowWelcomeAbout] = useState(false);
+  const [showCopyToast, setShowCopyToast] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
   const [isAnimatedBg, setIsAnimatedBg] = useState<boolean>(() => {
     return localStorage.getItem('cennet_bahcesi_animated_bg') !== 'false';
@@ -206,6 +207,16 @@ export default function App() {
     setCinematicPhase('welcome');
     setShowSplash(true);
     setFadeOutSplash(false);
+  };
+
+  // E-posta adresini kopyalama ve uygulama içi alert (toast) gösterme işlevi
+  const handleCopyEmail = (e?: React.MouseEvent) => {
+    if (e) e.preventDefault();
+    navigator.clipboard.writeText("mhsynakb@gmail.com");
+    setShowCopyToast(true);
+    setTimeout(() => {
+      setShowCopyToast(false);
+    }, 3000);
   };
 
   // === DRAGGABLE SMART BOARD PEN STATES ===
@@ -899,17 +910,14 @@ export default function App() {
 
           <div className="flex items-center gap-2.5 shrink-0">
             <a
-              href="mailto:mhmdhsyn1453@gmail.com"
+              href="mailto:mhsynakb@gmail.com"
+              onClick={handleCopyEmail}
               className="px-4.5 py-2.5 bg-slate-800 hover:bg-slate-900 dark:bg-slate-200 dark:text-slate-950 text-white font-black text-xs rounded-xl shadow-md transition-all hover:scale-105 active:scale-95 cursor-pointer"
             >
-              mhmdhsyn1453@gmail.com
+              mhsynakb@gmail.com
             </a>
             <button
-              onClick={() => {
-                navigator.clipboard.writeText("mhmdhsyn1453@gmail.com");
-               
-                alert("E-posta adresi panoya kopyalandı!");
-              }}
+              onClick={handleCopyEmail}
               className="p-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 rounded-xl cursor-pointer shadow-sm hover:scale-105 active:scale-95 transition-all"
               title="Adresi Kopyala"
             >
@@ -1258,6 +1266,17 @@ export default function App() {
               Kapat
             </button>
           </div>
+        </div>
+      )}
+
+      {/* 📋 Custom Application Copy Toast Alert */}
+      {showCopyToast && (
+        <div className="fixed top-8 left-1/2 -translate-x-1/2 z-[120000] flex items-center gap-3 px-6 py-3.5 rounded-2xl bg-emerald-600 dark:bg-emerald-500 text-white font-extrabold text-xs sm:text-sm shadow-2xl backdrop-blur-md border border-white/20 animate-scale-up select-none">
+          <span className="w-6 h-6 rounded-xl bg-white/20 flex items-center justify-center text-xs font-black">
+            ✓
+          </span>
+          <span>E-posta adresi panoya kopyalandı!</span>
+          <span className="text-emerald-100 text-[11px] font-mono font-bold opacity-90">(mhsynakb@gmail.com)</span>
         </div>
       )}
 
