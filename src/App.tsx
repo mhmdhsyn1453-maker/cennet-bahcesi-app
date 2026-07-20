@@ -47,7 +47,13 @@ const LOCAL_STORAGE_KEY = 'cennet_bahcesi_gamedata';
 export default function App() {
   const [phase, setPhase] = useState<'intro' | 'map' | 'gameplay' | 'custom_editor' | 'victory'>('intro');
   const [activeZone, setActiveZone] = useState<GameZone | null>(null);
-  const [activeTab, setActiveTab] = useState<'home' | 'elifba' | 'quran' | 'lessons' | 'games' | 'ezber' | 'about' | 'ilahiler'>('home');
+  const [activeTab, setActiveTab] = useState<'home' | 'elifba' | 'quran' | 'lessons' | 'games' | 'ezber' | 'about' | 'ilahiler'>(() => {
+    const saved = localStorage.getItem('cennet_bahcesi_active_tab');
+    if (saved && ['home', 'elifba', 'quran', 'lessons', 'games', 'ezber', 'about', 'ilahiler'].includes(saved)) {
+      return saved as any;
+    }
+    return 'home';
+  });
   const [isIlahiPlaying, setIsIlahiPlaying] = useState<boolean>(false);
   const [showPenTool, setShowPenTool] = useState<boolean>(false);
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
@@ -63,13 +69,29 @@ export default function App() {
   const [isAnimatedBg, setIsAnimatedBg] = useState<boolean>(() => {
     return localStorage.getItem('cennet_bahcesi_animated_bg') !== 'false';
   });
-  const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState<boolean>(() => {
+    return localStorage.getItem('cennet_bahcesi_cinematic_phase') !== 'ready';
+  });
   const [fadeOutSplash, setFadeOutSplash] = useState(false);
   const [basmalaData, setBasmalaData] = useState<any>(null);
-  const [cinematicPhase, setCinematicPhase] = useState<'welcome' | 'splash' | 'cinematic' | 'ready'>('welcome');
+  const [cinematicPhase, setCinematicPhase] = useState<'welcome' | 'splash' | 'cinematic' | 'ready'>(() => {
+    return localStorage.getItem('cennet_bahcesi_cinematic_phase') === 'ready' ? 'ready' : 'welcome';
+  });
   const [isFocused, setIsFocused] = useState<boolean>(false);
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
   const [visitedTabs, setVisitedTabs] = useState<string[]>(['home']);
+
+  useEffect(() => {
+    if (cinematicPhase === 'ready') {
+      localStorage.setItem('cennet_bahcesi_cinematic_phase', 'ready');
+    } else if (cinematicPhase === 'welcome') {
+      localStorage.removeItem('cennet_bahcesi_cinematic_phase');
+    }
+  }, [cinematicPhase]);
+
+  useEffect(() => {
+    localStorage.setItem('cennet_bahcesi_active_tab', activeTab);
+  }, [activeTab]);
 
   useEffect(() => {
     if (!visitedTabs.includes(activeTab)) {
@@ -204,6 +226,9 @@ export default function App() {
       audioRef.current.pause();
     }
     setIsMusicPlaying(false);
+    localStorage.removeItem('cennet_bahcesi_cinematic_phase');
+    localStorage.removeItem('cennet_bahcesi_active_tab');
+    setActiveTab('home');
     setCinematicPhase('welcome');
     setShowSplash(true);
     setFadeOutSplash(false);

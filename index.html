@@ -13,6 +13,11 @@
     <meta name="description" content="Cennet Bahçesi - Yaz Kur'an Kursları için eğlenceli, interaktif ve eğitici oyunlar, kelime bulmacaları, yarışmalar portalı." />
     <meta name="keywords" content="cennet bahçesi, cennetbahçesi.org, cenetbahcesi.org, cennet bahçesi org, islami çocuk eğitimi, kuran kursu, kur'an kursu, dini oyunlar, tecvid, elifba, dini yarışmalar, yaz kuran kursu oyunları, çocuk dini etkinlikleri" />
 
+    <!-- Prevent aggressive disk caching of index.html -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://cennetbahcesi.org/" />
@@ -40,8 +45,9 @@
           navigator.serviceWorker.register(base + 'sw.js')
             .then(reg => {
               console.log('ServiceWorker registered:', reg.scope);
-              // Her 30 dakikada bir güncelleme kontrolü yap (sessizce)
-              setInterval(() => reg.update(), 30 * 60 * 1000);
+              // Sayfa açıldığında ve her 10 dakikada bir güncelleme kontrolü yap
+              reg.update();
+              setInterval(() => reg.update(), 10 * 60 * 1000);
             })
             .catch(err => console.log('ServiceWorker registration failed:', err));
         });

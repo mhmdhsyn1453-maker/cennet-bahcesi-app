@@ -4,7 +4,7 @@
 // ✅ Yeni sürüm varsa bir sonraki açılışta otomatik gelir
 // ✅ İnternet yoksa çevrimdışı çalışır
 
-const CACHE_NAME = 'cennet-bahcesi-v5';
+const CACHE_NAME = 'cennet-bahcesi-v6';
 
 // Tüm yolları göreceli (relative) yapıyoruz ki subdirectory'lerde (örn. /cennet-bahcesi-app/) 404 vermesin
 const PRECACHE_ASSETS = [
@@ -67,19 +67,17 @@ self.addEventListener('fetch', (e) => {
   if (request.method !== 'GET') return;
   if (!request.url.startsWith(self.location.origin)) return;
 
-  // --- STRATEJİ 1: HTML Navigation istekleri ---
+  // --- STRATEJİ 1: HTML Navigation istekleri (Network First -> Güncellemeleri anında çek) ---
   if (request.mode === 'navigate') {
     e.respondWith(
-      caches.match(request).then((cachedResponse) => {
-        const fetchPromise = fetch(request).then((networkResponse) => {
-          if (networkResponse && networkResponse.status === 200) {
-            const clone = networkResponse.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
-          }
-          return networkResponse;
-        }).catch(() => null);
-
-        return cachedResponse || fetchPromise;
+      fetch(request).then((networkResponse) => {
+        if (networkResponse && networkResponse.status === 200) {
+          const clone = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
+        }
+        return networkResponse;
+      }).catch(() => {
+        return caches.match(request);
       })
     );
     return;
